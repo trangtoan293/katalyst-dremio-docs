@@ -36,6 +36,7 @@
     "@dremio/dremio-js": "link:../../ui/dremio-js",
     "@dremio/semantic-search": "link:../../ui/semantic-search",
     "@e3m-io/batch-fn-calls": "1.0.5",
+    "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@formatjs/intl-utils": "^3.8.4",
