@@ -205,6 +205,40 @@ function MergeBranchDialog({
               </>
             )}
           </>
+          {mergeTo && (
+            <div style={{
+              margin: '16px 0',
+              padding: '16px',
+              background: 'var(--bg--secondary, #f8fafc)',
+              borderRadius: '8px',
+              border: '1px solid var(--border--neutral)',
+            }}>
+              <div style={{ fontWeight: 600, fontSize: '14px', marginBottom: '12px' }}>
+                Changes Preview
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--text--secondary)', marginBottom: '8px' }}>
+                Merging <strong>{mergeFrom.name}</strong> into <strong>{mergeTo.name}</strong> will include:
+              </div>
+              <ul style={{ fontSize: '13px', color: 'var(--text--secondary)', paddingLeft: '20px', margin: 0 }}>
+                <li>Schema changes from commits since branch point</li>
+                <li>Data changes (new/modified rows)</li>
+              </ul>
+              <div style={{ marginTop: '12px' }}>
+                <button
+                  style={{
+                    padding: '5px 12px',
+                    border: '1px solid var(--border--neutral)',
+                    background: '#fff',
+                    borderRadius: '4px',
+                    fontSize: '13px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  View full diff
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </DialogContent>
     </ModalContainer>
