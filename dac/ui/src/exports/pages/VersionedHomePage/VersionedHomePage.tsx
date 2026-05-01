@@ -45,6 +45,7 @@ import { PageTop } from "dremio-ui-common/components/PageTop.js";
 export type VersionedPageTabsType =
   | "data"
   | "commits"
+  | "diff"
   | "tags"
   | "branches"
   | "settings"
@@ -54,6 +55,7 @@ export type VersionedPageTabsType =
 export const versionedPageTabs: VersionedPageTabsType[] = [
   "data",
   "commits",
+  "diff",
   "tags",
   "branches",
   "settings",
