@@ -103,6 +103,7 @@ export function DiffTab({ datasetId }: DiffTabProps) {
       <div className={selectorClass}>
         <div style={{ flex: 1 }}>
           <label
+            htmlFor="diff-from"
             style={{
               display: "block",
               fontSize: "13px",
@@ -114,6 +115,7 @@ export function DiffTab({ datasetId }: DiffTabProps) {
             From
           </label>
           <select
+            id="diff-from"
             className={selectClass}
             value={fromHash}
             onChange={(e) => setFromHash(e.target.value)}
@@ -135,6 +137,7 @@ export function DiffTab({ datasetId }: DiffTabProps) {
         </div>
         <div style={{ flex: 1 }}>
           <label
+            htmlFor="diff-to"
             style={{
               display: "block",
               fontSize: "13px",
@@ -146,6 +149,7 @@ export function DiffTab({ datasetId }: DiffTabProps) {
             To
           </label>
           <select
+            id="diff-to"
             className={selectClass}
             value={toHash}
             onChange={(e) => setToHash(e.target.value)}
