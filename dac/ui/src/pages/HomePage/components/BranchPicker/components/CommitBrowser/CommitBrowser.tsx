@@ -22,11 +22,12 @@ import {
   LogEntryV2 as LogEntry,
   LogResponseV2 as LogResponse,
 } from "#oss/services/nessie/client";
-import { useCallback, useEffect, useMemo, useReducer } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useState } from "react";
 import InfiniteScroller from "../InfiniteScroller/InfiniteScroller";
 import CommitEntry from "./components/CommitEntry/CommitEntry";
 import { CommitBrowserReducer, formatQuery, initialState } from "./utils";
 import { Reference } from "#oss/types/nessie";
+import { CommitGraph } from "./CommitGraph";
 
 import "./CommitBrowser.less";
 
@@ -60,6 +61,8 @@ function CommitBrowser({
     CommitBrowserReducer,
     initialState,
   );
+
+  const [viewMode, setViewMode] = useState<"list" | "graph">("list");
 
   useEffect(() => {
     if (onDataChange && data) onDataChange(data);
@@ -106,30 +109,90 @@ function CommitBrowser({
             />
           </div>
         )}
-        <div className="commitBrowser-listWrapper">
-          <InfiniteScroller
-            key={search} // Reset when search changes
-            rowHeight={LIST_ITEM_HEIGHT}
-            data={logEntries}
-            loadData={loadMoreRows}
-            numRows={numRows}
-          >
-            {(index) => {
-              const curEntry = logEntries[index];
-              const curHash = curEntry?.commitMeta?.hash;
-              const isSelected = !!selectedHash && selectedHash === curHash;
-              return (
-                <CommitEntry
-                  logEntry={logEntries[index]}
-                  onClick={onClick}
-                  isSelected={isSelected}
-                  branch={branch}
-                  disabled={disabled}
-                />
-              );
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            marginBottom: "12px",
+            padding: "0 4px",
+          }}
+        >
+          <button
+            onClick={() => setViewMode("list")}
+            style={{
+              padding: "4px 12px",
+              border: "1px solid var(--border--neutral)",
+              background: viewMode === "list" ? "#2563eb" : "#fff",
+              color: viewMode === "list" ? "#fff" : "#475569",
+              borderRadius: "4px",
+              fontSize: "13px",
+              cursor: "pointer",
             }}
-          </InfiniteScroller>
+          >
+            List
+          </button>
+          <button
+            onClick={() => setViewMode("graph")}
+            style={{
+              padding: "4px 12px",
+              border: "1px solid var(--border--neutral)",
+              background: viewMode === "graph" ? "#2563eb" : "#fff",
+              color: viewMode === "graph" ? "#fff" : "#475569",
+              borderRadius: "4px",
+              fontSize: "13px",
+              cursor: "pointer",
+            }}
+          >
+            Graph
+          </button>
         </div>
+        {viewMode === "graph" ? (
+          <CommitGraph
+            nodes={logEntries.map((entry) => ({
+              hash: entry.commitMeta.hash || "",
+              message: entry.commitMeta.message,
+              author: entry.commitMeta.authors?.[0] || "",
+              timestamp: entry.commitMeta.commitTime
+                ? new Date(entry.commitMeta.commitTime).getTime()
+                : 0,
+              parentHashes: entry.commitMeta.parentCommitHashes || [],
+              branchNames: [],
+              tagNames: [],
+            }))}
+            selectedHash={selectedHash ?? undefined}
+            onSelect={(hash) => {
+              const entry = logEntries.find(
+                (e) => e.commitMeta.hash === hash,
+              );
+              if (entry && onClick) onClick(entry);
+            }}
+          />
+        ) : (
+          <div className="commitBrowser-listWrapper">
+            <InfiniteScroller
+              key={search} // Reset when search changes
+              rowHeight={LIST_ITEM_HEIGHT}
+              data={logEntries}
+              loadData={loadMoreRows}
+              numRows={numRows}
+            >
+              {(index) => {
+                const curEntry = logEntries[index];
+                const curHash = curEntry?.commitMeta?.hash;
+                const isSelected = !!selectedHash && selectedHash === curHash;
+                return (
+                  <CommitEntry
+                    logEntry={logEntries[index]}
+                    onClick={onClick}
+                    isSelected={isSelected}
+                    branch={branch}
+                    disabled={disabled}
+                  />
+                );
+              }}
+            </InfiniteScroller>
+          </div>
+        )}
       </div>
     </div>
   );
