@@ -1,0 +1,86 @@
+---
+url: /reference/sql/sql-functions/functions/SUM
+title: "SUM | Dremio Enterprise Documentation"
+depth: 3
+crawled_at: 64359.069111416
+---
+
+  * [Dremio Enterprise Home](/)
+  * [Reference](/reference)
+  * [SQL Reference](/reference/sql)
+  * [SQL Functions](/reference/sql/sql-functions)
+  * functions
+  * SUM
+
+Version: current [26.x]
+On this page
+**Categories** : [Aggregate](/reference/sql/sql-functions), [Window](/reference/sql/sql-functions)
+# SUM
+Returns the sum of non-NULL input expressions.
+## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
+### SUM(_col_name_ NUMERIC) → same as input except for INT, which returns BIGINT[​](/reference/sql/sql-functions#sumcol_name-numeric--same-as-input-except-for-int-which-returns-bigint "Direct link to sumcol_name-numeric--same-as-input-except-for-int-which-returns-bigint")
+  * col_name: The name of the column for which to return the sum. The values in the column must be numbers, such as INT, DOUBLE, or FLOAT.
+
+
+**Examples**
+SUM example: Aggregate function
+
+```
+SELECT SUM(trip_distance_mi) FROM Samples."samples.dremio.com"."NYC-taxi-trips";  
+-- 9.858134477692287E8  
+
+```
+
+SUM example: Window function
+
+```
+SELECT "tip_amount", "fare_amount", SUM("total_amount")  
+  OVER (partition by "tip_amount") as "sum_amount"  
+FROM Samples."samples.dremio.com"."NYC-taxi-trips" LIMIT 1;  
+-- tip_amount, fare_amount, sum_amount  
+-- -15.5, -2.5, -19.5  
+
+```
+
+SUM example: Window function with cumulative window frame
+
+```
+SELECT city, state, pop, SUM(pop)  
+  OVER (PARTITION BY state ORDER BY city RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)  
+FROM Samples."samples.dremio.com"."zips.json";  
+-- city, state, pop, EXPR$3  
+-- 98791, AK, 5345, 55043  
+-- AKHIOK, AK, 13309, 544698  
+-- AKIACHAK, AK, 481, 531389  
+-- ...  
+
+```
+
+SUM example: Window function with cumulative window frame
+
+```
+SELECT city, state, pop, SUM(pop)  
+  OVER (PARTITION BY state ORDER BY city ROWS BETWEEN 1 PRECEDING AND 2 FOLLOWING)  
+FROM Samples."samples.dremio.com"."zips.json";  
+-- city, state, pop, EXPR$3  
+-- 98791, AK, 5345, 19135  
+-- AKHIOK, AK, 13309, 19420  
+-- AKIACHAK, AK, 481, 14664  
+-- ...  
+
+```
+
+## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+The SUM function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions#window-functions) for more information and syntax.
+Was this page helpful?
+[Previous SUBSTRING_INDEX](/reference/sql/sql-functions)[Next SYSTEM_USER](/reference/sql/sql-functions)
+[Dremio Editions](/editions)
+[Dremio Cloud Classic](/dremio-cloud)
+[Dremio University](https://university.dremio.com)
+[Shared Responsibility Models](/responsibility)
+[Dremio Community](https://community.dremio.com)
+[Support Portal](https://support.dremio.com)
+[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+Copyright © 2026 Dremio, Inc.
+[Previous SUBSTRING_INDEX](/reference/sql/sql-functions)[Next SYSTEM_USER](/reference/sql/sql-functions)
+![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FSUM%2F&_biz_t=1777950679456&_biz_i=SUM%20%7C%20Dremio%20Documentation&_biz_n=696&rnd=706659&cdn_o=a&_biz_z=1777950679456)

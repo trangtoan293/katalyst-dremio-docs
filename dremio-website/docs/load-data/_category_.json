@@ -1,0 +1,8 @@
+{
+  "label": "Load Data",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Dremio documentation - Load Data"
+  }
+}

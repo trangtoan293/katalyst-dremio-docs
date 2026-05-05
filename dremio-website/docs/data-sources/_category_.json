@@ -1,0 +1,8 @@
+{
+  "label": "Manage Sources",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Dremio documentation - Manage Sources"
+  }
+}

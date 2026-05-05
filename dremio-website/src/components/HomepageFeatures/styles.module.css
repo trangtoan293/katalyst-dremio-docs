@@ -1,0 +1,85 @@
+.features {
+  padding: 0 0 4rem;
+  background: var(--ifm-background-color);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: clamp(2.25rem, 6vw, 5.5rem);
+  row-gap: 4.25rem;
+}
+
+.featureGroup {
+  min-width: 0;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1.45rem;
+  color: var(--dremio-icon-ink);
+}
+
+.featureIcon svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: var(--dremio-icon-fill);
+}
+
+.featureTitle {
+  margin: 0 0 1.25rem;
+  color: var(--dremio-ink);
+  font-size: clamp(1.25rem, 1.55vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.featureLinks {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featureLinks a {
+  color: var(--dremio-link);
+  font-size: clamp(0.98rem, 1.05vw, 1.12rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  text-decoration: none;
+}
+
+.featureLinks a:hover,
+.featureLinks a:focus-visible {
+  color: var(--dremio-link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+@media screen and (max-width: 996px) {
+  .features {
+    padding-bottom: 4rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3rem;
+    row-gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+}

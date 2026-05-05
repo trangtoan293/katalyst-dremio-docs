@@ -1,0 +1,8 @@
+{
+  "label": "Accelerate Queries",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Dremio documentation - Accelerate Queries"
+  }
+}

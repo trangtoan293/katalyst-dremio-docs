@@ -1,0 +1,20 @@
+.docsHeader {
+  padding: 3.5rem 0 3rem;
+  background: var(--ifm-background-color);
+}
+
+.docsTitle {
+  max-width: 880px;
+  margin: 0;
+  color: var(--dremio-ink);
+  font-size: clamp(2.45rem, 4vw, 3.45rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+@media screen and (max-width: 996px) {
+  .docsHeader {
+    padding: 2.75rem 0 2rem;
+  }
+}
