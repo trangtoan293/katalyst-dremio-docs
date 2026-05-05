@@ -55,20 +55,8 @@ const config: Config = {
             to: "/get-started",
           },
           {
-            from: "/query-and-manage/current-query-manage-querying-data",
-            to: "/query-and-manage",
-          },
-          {
-            from: "/reflections/current-reflections-best-practices",
-            to: "/reflections",
-          },
-          {
             from: "/security/current-security",
             to: "/security",
-          },
-          {
-            from: "/sonar/current-sonar-data-sources-object-gcs",
-            to: "/sonar",
           },
           {
             from: "/what-is-dremio/current-what-is-dremio",
