@@ -1,0 +1,100 @@
+.searchPage {
+  padding: 3.25rem 0 5rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  color: var(--dremio-ink);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.searchForm {
+  display: flex;
+  max-width: 720px;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.searchLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.searchForm input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--dremio-border);
+  border-radius: 0.45rem;
+  background: var(--dremio-search-bg);
+  color: var(--dremio-ink);
+  font: inherit;
+}
+
+.searchForm button {
+  padding: 0 1.25rem;
+  border: 0;
+  border-radius: 0.45rem;
+  background: var(--dremio-link);
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.resultCount {
+  margin: 0 0 1.5rem;
+  color: var(--dremio-muted);
+}
+
+.results {
+  display: grid;
+  max-width: 860px;
+  gap: 0.85rem;
+}
+
+.resultCard {
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--dremio-border);
+  border-radius: 0.55rem;
+  background: var(--ifm-background-surface-color, #ffffff);
+}
+
+.resultCard span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--dremio-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.resultCard h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.resultCard p {
+  margin: 0.35rem 0 0;
+  color: var(--dremio-muted);
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 640px) {
+  .searchForm {
+    flex-direction: column;
+  }
+
+  .searchForm button {
+    min-height: 2.75rem;
+  }
+}

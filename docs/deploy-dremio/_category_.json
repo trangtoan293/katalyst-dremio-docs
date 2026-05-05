@@ -1,0 +1,8 @@
+{
+  "label": "Deploy Dremio",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Dremio documentation - Deploy Dremio"
+  }
+}

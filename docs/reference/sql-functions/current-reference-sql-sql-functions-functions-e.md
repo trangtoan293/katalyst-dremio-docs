@@ -1,0 +1,42 @@
+---
+url: /reference/sql/sql-functions/functions/E
+title: "E | Dremio Enterprise Documentation"
+depth: 3
+crawled_at: 64311.01332575
+---
+
+  * [Dremio Enterprise Home](/)
+  * [Reference](/reference)
+  * [SQL Reference](/reference/sql)
+  * [SQL Functions](/reference/sql/sql-functions)
+  * functions
+  * E
+
+Version: current [26.x]
+On this page
+**Categories** : [Math](/reference/sql/sql-functions)
+# E
+Returns Euler's number, a constant approximately equal to 2.718281828459045.
+## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
+### E() → float[​](/reference/sql/sql-functions#e--float "Direct link to E\(\) → float")
+**Examples**
+E example
+
+```
+SELECT E()  
+-- 2.718281828459045  
+
+```
+
+Was this page helpful?
+[Previous DENSE_RANK](/reference/sql/sql-functions)[Next ENCODE](/reference/sql/sql-functions)
+[Dremio Editions](/editions)
+[Dremio Cloud Classic](/dremio-cloud)
+[Dremio University](https://university.dremio.com)
+[Shared Responsibility Models](/responsibility)
+[Dremio Community](https://community.dremio.com)
+[Support Portal](https://support.dremio.com)
+[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+Copyright © 2026 Dremio, Inc.
+[Previous DENSE_RANK](/reference/sql/sql-functions)[Next ENCODE](/reference/sql/sql-functions)
+![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FE%2F&_biz_t=1777950630241&_biz_i=E%20%7C%20Dremio%20Documentation&_biz_n=597&rnd=544847&cdn_o=a&_biz_z=1777950630241)
