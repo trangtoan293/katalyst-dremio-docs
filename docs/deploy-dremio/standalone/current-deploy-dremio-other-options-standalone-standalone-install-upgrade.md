@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/standalone-install-upgrade
+slug: /deploy-dremio/other-options/standalone/standalone-install-upgrade
 title: "Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64773.402682333

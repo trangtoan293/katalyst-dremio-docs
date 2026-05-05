@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/install/standalone-tarball
+slug: /deploy-dremio/other-options/standalone/install/standalone-tarball
 title: "Tarball Install and Upgrade | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64215.918775083
@@ -8,15 +9,15 @@ crawled_at: 64215.918775083
   * [Dremio Enterprise Home](/)
   * [Deploy Dremio](/deploy-dremio)
   * [Other Options](/deploy-dremio/other-options)
-  * [Dremio with Your Infrastructure](/deploy-dremio/other-options/standalone)
-  * [Installing and Upgrading](/deploy-dremio/other-options/standalone/install)
+  * Dremio with Your Infrastructure
+  * Installing and Upgrading
   * Tarball
 
 Version: current [26.x]
 On this page
 # Tarball Install and Upgrade
 This topic describes how to install and upgrade Dremio using a Tarball package.
-## Installing Dremio[​](/deploy-dremio/other-options/standalone/install/standalone-tarball#installing-dremio "Direct link to Installing Dremio")
+## Installing Dremio​
 Perform these steps on each node of your Dremio cluster:
   1. Create a `dremio` group.
 Create dremio group
@@ -87,10 +88,10 @@ sudo systemctl enable dremio
 
 ```
 
-  7. Configure Dremio. See [Dremio Configuration](/deploy-dremio/other-options/standalone/dremio-config) for more information.
+  7. Configure Dremio. See Dremio Configuration for more information.
 
 
-### Sample Service Configuration[​](/deploy-dremio/other-options/standalone/install/standalone-tarball#sample-service-configuration "Direct link to Sample Service Configuration")
+### Sample Service Configuration​
 The following snippet shows the configuration in the ``DREMIO_HOME`/share/dremio.service` file:
 Sample service configuration
 
@@ -117,7 +118,7 @@ WantedBy=multi-user.target
 
 ```
 
-## Upgrading Dremio[​](/deploy-dremio/other-options/standalone/install/standalone-tarball#upgrading-dremio "Direct link to Upgrading Dremio")
+## Upgrading Dremio​
 This topic provides upgrade instructions for Tarball-based installations.
 Before you begin, do the following:
   * While Dremio is still running, [create a backup](/reference/admin-cli/backup) of your Dremio cluster.
@@ -133,8 +134,8 @@ Shutting down Dremio
 
 ```
 
-     * See the [Shutting Down with YARN Deployments](/help-support/advanced-topics/start-stop/#shutting-down-with-yarn-deployments) section.
-     * See the [Shutting Down with non-YARN Deployments](/help-support/advanced-topics/start-stop/#shutting-down-with-non-yarn-deployments) section.
+     * See the [Shutting Down with YARN Deployments](/help-support/advanced-topics/start-stop/) section.
+     * See the [Shutting Down with non-YARN Deployments](/help-support/advanced-topics/start-stop/) section.
      * See the shutdown commands in the topic about [Start, Stop, and Status](/help-support/advanced-topics/start-stop).
   3. On each Dremio node in your cluster, move your old Dremio installation to another location. For example:
 Move Dremio installation
@@ -209,20 +210,20 @@ Start Dremio provisioned nodes
 
 ```
 
-     * See the [Starting Up with YARN Deployments](/help-support/advanced-topics/start-stop/#starting-up-with-yarn-deployments) section.
-     * See the [Starting Up with non-YARN Deployments](/help-support/advanced-topics/start-stop/#starting-up-with-non-yarn-deployments) section.
+     * See the [Starting Up with YARN Deployments](/help-support/advanced-topics/start-stop/) section.
+     * See the [Starting Up with non-YARN Deployments](/help-support/advanced-topics/start-stop/) section.
      * See the startup commands in the topic about [Start, Stop, and Status](/help-support/advanced-topics/start-stop).
   9. Backup your new Dremio cluster. See [Create a backup](/reference/admin-cli/backup) for more information.
 
 
 Was this page helpful?
-[Previous RPM](/deploy-dremio/other-options/standalone/install/standalone-rpm)[Next Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous RPMNext Cluster Configuration
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous RPM](/deploy-dremio/other-options/standalone/install/standalone-rpm)[Next Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
+Previous RPMNext Cluster Configuration

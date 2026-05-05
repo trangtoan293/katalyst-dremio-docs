@@ -1,5 +1,6 @@
 ---
 url: /help-support/knowledge-base/g1-garbage-collection
+slug: /help-support/knowledge-base/g1-garbage-collection
 title: "Implementing Garbage-First (G1) Garbage Collection | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64223.044681125
@@ -14,7 +15,7 @@ Version: current [26.x]
 On this page
 # Implementing Garbage-First (G1) Garbage Collection
 This topic describes how to implement Garbage-First (G1) garbage collection. G1 is a server-style garbage collector for multi-processor machines with large memories.
-## Scenario: Dremio executors are _not_ deployed on Yarn[​](/help-support/knowledge-base/g1-garbage-collection/#scenario-dremio-executors-are-not-deployed-on-yarn "Direct link to scenario-dremio-executors-are-not-deployed-on-yarn")
+## Scenario: Dremio executors are _not_ deployed on Yarn[​](/help-support/knowledge-base/g1-garbage-collection/)
 To implement G1 garbage collection and heap dump flags when Dremio executors are _not_ on Yarn,  
 add the following property to the `dremio-env` file on all Dremio coordinator and executor nodes.
 Property to add to the `dremio-env` file
@@ -48,7 +49,7 @@ By default, the GC logs and heap dumps are stored under the Dremio log folder. T
 
 ```
 
-## Scenario: Dremio executors _are_ deployed on Yarn[​](/help-support/knowledge-base/g1-garbage-collection/#scenario-dremio-executors-are-deployed-on-yarn "Direct link to scenario-dremio-executors-are-deployed-on-yarn")
+## Scenario: Dremio executors _are_ deployed on Yarn[​](/help-support/knowledge-base/g1-garbage-collection/)
 To implement G1 garbage collection and heap dump flags when Dremio executors _are_ deployed on Yarn,  
 add the following properties to the data source via the **Dremio UI &gt; Advanced Options &gt; Connection Properties**.  
 | Property Type  | Name  | Value  |  
@@ -69,13 +70,13 @@ add the following properties to the data source via the **Dremio UI &gt; Advance
 &gt;  For Kubernetes-based deployments, garbage collection is done via the Helm charts.
 Was this page helpful?
 [Previous Apache Log4j Vulnerability: Dremio Is Not Affected](/help-support/knowledge-base/apache-log4j-vulnerability)[Next Kubernetes Troubleshooting](/help-support/knowledge-base/k8s-trouble)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Apache Log4j Vulnerability: Dremio Is Not Affected](/help-support/knowledge-base/apache-log4j-vulnerability)[Next Kubernetes Troubleshooting](/help-support/knowledge-base/k8s-trouble)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fhelp-support%2Fkeyboard-shortcuts%2F&_biz_t=1777950544504&_biz_i=Keyboard%20Shortcuts%20%7C%20Dremio%20Documentation&_biz_n=437&rnd=893002&cdn_o=a&_biz_z=1777950544513)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fhelp-support%2Fknowledge-base%2Fg1-garbage-collection%2F&_biz_t=1777950544513&_biz_i=Implementing%20Garbage-First%20\(G1\)%20Garbage%20Collection%20%7C%20Dremio%20Documentation&_biz_n=438&rnd=651035&cdn_o=a&_biz_z=1777950544513)
+!!%20Garbage%20Collection%20%7C%20Dremio%20Documentation&_biz_n=438&rnd=651035&cdn_o=a&_biz_z=1777950544513)

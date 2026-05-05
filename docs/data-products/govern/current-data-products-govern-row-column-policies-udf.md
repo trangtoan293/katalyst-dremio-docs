@@ -1,5 +1,6 @@
 ---
 url: /data-products/govern/row-column-policies-udf
+slug: /data-products/govern/row-column-policies-udf
 title: "Row-Access and Column-Masking Policies | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64200.030501958
@@ -22,7 +23,7 @@ When adding a new Hive source, you have the following options for Hive authoriza
   * Ranger-Based
 
 
-## Requirements[​](/data-products/govern/row-column-policies-udf#requirements "Direct link to Requirements")
+## Requirements​
 The following [source types](/data-sources) are supported:
   * **Object Storage** - S3, Azure Storage, GCS, HDFS
   * **Metastores** - AWS Glue, Hive Metastore
@@ -39,10 +40,10 @@ The following restrictions apply:
   * Use of the `is_member` function shown in the examples below is not currently available to organizations using SSO role authentication.
 
 
-## Column-Masking[​](/data-products/govern/row-column-policies-udf#column-masking "Direct link to Column-Masking")
+## Column-Masking​
 Column-masking is a way to mask—or scramble—private data at the column-level dynamically prior to query execution. For example, the owner of a table or view may apply a policy to a column to only display the year of a date or the last four digits of a credit card.
 Column-masking policies may be any UDF with a scalar return type that is identical to the data type of the column on which it is applied. However, only one column-masking policy may be applied to each column.
-In the following [example of a user-defined function](/data-products/govern/row-column-policies-udf#examples-of-udfs), only users within in the Accounting department in the state of California (CA) may see an entry's social security number (ssn) if the record lists an income above $10,000, otherwise the SSN value is masked with XXX-XX-.
+In the following example of a user-defined function, only users within in the Accounting department in the state of California (CA) may see an entry's social security number (ssn) if the record lists an income above $10,000, otherwise the SSN value is masked with XXX-XX-.
 Column-masking
 
 ```
@@ -54,7 +55,7 @@ CREATE FUNCTION protect_ssn (ssn VARCHAR(11))
 
 ```
 
-## Row-Access[​](/data-products/govern/row-column-policies-udf#row-access "Direct link to Row-Access")
+## Row-Access​
 Row-access policies are a way to control which records in a table or view are returned for specific users and roles. For example, the owner of a table or view may apply a policy that filters out customers from a specific country unless the user running the query has a specific role.
 Row-access
 
@@ -66,7 +67,7 @@ CREATE FUNCTION country_filter (country VARCHAR)
 ```
 
 Row-access policies may be any boolean UDF applied to the table or view. The return value of the UDF is treated logically in a query as an AND operator included in a WHERE clause. The return type of the UDF must be BOOLEAN, otherwise Dremio will give an error at execution time.
-## User-Defined Functions[​](/data-products/govern/row-column-policies-udf#user-defined-functions "Direct link to User-Defined Functions")
+## User-Defined Functions​
 A [user-defined function (UDF)](/reference/sql/commands/functions) is a callable routine that accepts input parameters, executes the function body, and returns a single value or a set of rows.
 The UDFs which serve as the basis for filtering and masking policies must be defined independently of your sources. Not only does this allow organizations to use a single policy for multiple tables and views, but this also restricts user access to policies and prevents unauthorized tampering. Modifying a single UDF automatically updates the policy in the context of any tables or views using that access or mask policy.
 The following process describes how policies are enforced with Dremio:
@@ -76,18 +77,18 @@ The following process describes how policies are enforced with Dremio:
 
 
 You can create and attach security policies with [SQL commands](/reference/sql/commands/functions). Policies are applied prior to execution during the query planning phase. At this point, Dremio checks first the table/view for a row-access policy and then each column accessed for a column-masking policy. If any policies are found, they are automatically applied to the policy's scope using the associated UDF in the query plan.
-### Query Substitutions[​](/data-products/govern/row-column-policies-udf#query-substitutions "Direct link to Query Substitutions")
+### Query Substitutions​
 Row-access and column-masking function act as an "implicit view," replacing a table/view reference in an SQL statement prior to processing the query. This implicit view is created through an examination of each policy applied to a table, view, or column.
 For example, SELECT access to table_1. However, the column-masking policy protect_ssn is set for the column_1 column with a UDF to replace all but the last four digits of a social security number with X for anyone that is not a member of the Accounting department, or this user. When they run a query in Dremio that includes this column-masking policy, the following occurs:
   1. During the SQL Planning phase, Dremio identifies which tables, views, and columns are being accessed (table_1) and whether security policies must be enforced.
-  2. The engine searches for any security policies set to the associated objects, such as protect_ssn (see [Examples of UDFs below](/data-products/govern/row-column-policies-udf#examples-of-udfs)).
+  2. The engine searches for any security policies set to the associated objects, such as protect_ssn (see Examples of UDFs below).
   3. When the protect_ssn policy is found for the object affected by the query, the query planner immediately modifies the execution path to incorporate the masking function.
   4. Query execution proceeds as normal with the associated UDF included within the execution path.
 
 
-## Listing Existing UDFs[​](/data-products/govern/row-column-policies-udf#listing-existing-udfs "Direct link to Listing Existing UDFs")
-To view all existing UDFs created in Dremio, use the [SHOW FUNCTIONS](/reference/sql/commands/functions#showing-a-function) SQL command.
-## Listing Existing Policies[​](/data-products/govern/row-column-policies-udf#listing-existing-policies "Direct link to Listing Existing Policies")
+## Listing Existing UDFs​
+To view all existing UDFs created in Dremio, use the [SHOW FUNCTIONS](/reference/sql/commands/functions) SQL command.
+## Listing Existing Policies​
 To view row-access and column-masking policies, use a [SELECT statement](/reference/sql/commands) with the target table/view, system table, and policies specified.
 List existing policies
 
@@ -97,8 +98,8 @@ SELECT table_name, masking_policies, row_access_policies FROM sys."tables";
 
 ```
 
-To view all column-masking policies set for a given table, use the [DESCRIBE TABLE command](/reference/sql/commands/tables#describe-table).
-## Setting a Policy[​](/data-products/govern/row-column-policies-udf#setting-a-policy "Direct link to Setting a Policy")
+To view all column-masking policies set for a given table, use the [DESCRIBE TABLE command](/reference/sql/commands/tables).
+## Setting a Policy​
 To create a row-access or column-masking policy, you must perform the following steps using the associated SQL commands:
   1. Create a new UDF or replace an existing one using the [CREATE [OR REPLACE] FUNCTION](/reference/sql/commands/functions#creating-a-function) command.
 Create or replace UDF
@@ -114,7 +115,7 @@ RETURN SELECT id = 1;
 
 ```
 
-  2. Create a policy to apply the function using either [ADD ROW ACCESS POLICY](/reference/sql/commands/row-column-policies#adding-a-row-access-policy) for row-level access or [SET MASKING POLICY](/reference/sql/commands/row-column-policies#setting-a-masking-policy) for column-masking. These may be used with the CREATE TABLE, CREATE VIEW, ALTER TABLE, and ALTER VIEW commands.
+  2. Create a policy to apply the function using either [ADD ROW ACCESS POLICY](/reference/sql/commands/row-column-policies) for row-level access or [SET MASKING POLICY](/reference/sql/commands/row-column-policies) for column-masking. These may be used with the CREATE TABLE, CREATE VIEW, ALTER TABLE, and ALTER VIEW commands.
 Create policy to apply function
 
 ```
@@ -147,8 +148,8 @@ state_col VARCHAR)
 
 
 Both row-access and column-masking UDFs may be applied in a single security policy, or set individually.
-## Dropping a Policy[​](/data-products/govern/row-column-policies-udf#dropping-a-policy "Direct link to Dropping a Policy")
-To remove a security policy from a table, view, or row, use the [UNSET MASKING POLICY](/reference/sql/commands/row-column-policies#unset-a-masking-policy) or [DROP ROW ACCESS POLICY](/reference/sql/commands/row-column-policies#dropping-a-row-access-policy) syntax with ALTER TABLE/VIEW.
+## Dropping a Policy​
+To remove a security policy from a table, view, or row, use the [UNSET MASKING POLICY](/reference/sql/commands/row-column-policies) or [DROP ROW ACCESS POLICY](/reference/sql/commands/row-column-policies) syntax with ALTER TABLE/VIEW.
 Drop policy
 
 ```
@@ -157,10 +158,10 @@ ALTER VIEW e.employees_view MODIFY COLUMN ssn_col UNSET MASKING POLICY protect_s
 
 ```
 
-## Examples of UDFs[​](/data-products/govern/row-column-policies-udf#examples-of-udfs "Direct link to Examples of UDFs")
+## Examples of UDFs​
 The following are examples of user-defined functions that you may create with Dremio.
-### Column-Masking[​](/data-products/govern/row-column-policies-udf#column-masking-1 "Direct link to Column-Masking")
-#### Redacting SSN[​](/data-products/govern/row-column-policies-udf#redacting-ssn "Direct link to Redacting SSN")
+### Column-Masking​
+#### Redacting SSN​
 Redact SSN
 
 ```
@@ -177,7 +178,7 @@ CREATE FUNCTION
 
 ```
 
-#### Using Masking & Access Policies[​](/data-products/govern/row-column-policies-udf#using-masking--access-policies "Direct link to Using Masking & Access Policies")
+#### Using Masking & Access Policies​
 Use masking and access policies
 
 ```
@@ -205,7 +206,7 @@ CREATE FUNCTION salary_range (salary FLOAT, id INTEGER)
 
 ```
 
-#### Using STRUCT[​](/data-products/govern/row-column-policies-udf#using-struct "Direct link to Using STRUCT")
+#### Using STRUCT​
 Use STRUCT
 
 ```
@@ -217,7 +218,7 @@ ALTER TABLE nas.struct_demo MODIFY COLUMN emp_info SET MASKING POLICY "@dremio".
 
 ```
 
-#### Using List[​](/data-products/govern/row-column-policies-udf#using-list "Direct link to Using List")
+#### Using List​
 Use list
 
 ```
@@ -226,8 +227,8 @@ ALTER TABLE "test.json" MODIFY COLUMN country SET MASKING POLICY "@dremio".hello
 
 ```
 
-### Row-Access[​](/data-products/govern/row-column-policies-udf#row-access-1 "Direct link to Row-Access")
-#### Using Simple Filter Expressions[​](/data-products/govern/row-column-policies-udf#using-simple-filter-expressions "Direct link to Using Simple Filter Expressions")
+### Row-Access​
+#### Using Simple Filter Expressions​
 Use simple filter expressions
 
 ```
@@ -237,7 +238,7 @@ CREATE FUNCTION country_filter (country VARCHAR)
 
 ```
 
-#### Matching Users[​](/data-products/govern/row-column-policies-udf#matching-users "Direct link to Matching Users")
+#### Matching Users​
 Match users
 
 ```
@@ -250,7 +251,7 @@ CREATE FUNCTION query_1(my_value varchar)
 
 ```
 
-#### Table-Driven Policy Using a Subquery[​](/data-products/govern/row-column-policies-udf#table-driven-policy-using-a-subquery "Direct link to Table-Driven Policy Using a Subquery")
+#### Table-Driven Policy Using a Subquery​
 Use a subquery as a table-driven policy
 
 ```
@@ -292,7 +293,7 @@ SELECT * FROM $<catalog-name>.revenue;
 
 ```
 
-## Using Reflections on Datasets with Policies[​](/data-products/govern/row-column-policies-udf#using-reflections-on-datasets-with-policies "Direct link to Using Reflections on Datasets with Policies")
+## Using Reflections on Datasets with Policies​
 Dremio supports Reflection creation on views and tables with row-access and column-masking policies defined on any of the underlying anchor datasets. See the following examples.
 Example of a view with a row-access policy and a raw Reflection
 
@@ -328,13 +329,13 @@ SELECT * FROM myView2;
 ```
 
 After running the last query, the Reflection is used to accelerate the query as shown in the results below:
-![](https://docs.dremio.com/assets/images/rcac_reflection_accelerated-31f0960f65be2a237384c0bd0956681f.png)
+!
 The `Query1` results show that the row-access policy has been applied successfully:
-![](https://docs.dremio.com/assets/images/rcac_reflection_policy-e386c1d9134a00081efd62fe472e3edb.png)
+!
 The `Query2` results do not appear to those who are not members of HR:
-![](https://docs.dremio.com/assets/images/rcac_reflection_accelerated_nonmember-28eade94013c96a7ec2ba42c29b2b67d.png)
+!
 The `Query2` results appear to those who are members of HR:
-![](https://docs.dremio.com/assets/images/rcac_reflection_accelerated_member-9c4fd2be39fe181162620c678e99766c.png)
+!
 Example of a table with a row-access policy and an aggregation Reflection
 
 ```
@@ -347,16 +348,16 @@ SELECT MIN(SALARY) FROM NAS.rcac.employee
 
 ```
 
-### Limitations[​](/data-products/govern/row-column-policies-udf#limitations "Direct link to Limitations")
+### Limitations​
 See the following limitations where datasets with row-access and/or column-masking policies cannot support Reflections:
-  * [Policies with Multiple Arguments](/data-products/govern/row-column-policies-udf#policies-with-multiple-arguments)
-  * [Aggregates on Masked Columns](/data-products/govern/row-column-policies-udf#aggregates-on-masked-columns)
-  * [SET Operations](/data-products/govern/row-column-policies-udf#set-operations)
-  * [NULL Generating JOINs](/data-products/govern/row-column-policies-udf#null-generating-joins)
-  * [Trimming Projects](/data-products/govern/row-column-policies-udf#trimming-projects)
+  * Policies with Multiple Arguments
+  * Aggregates on Masked Columns
+  * SET Operations
+  * NULL Generating JOINs
+  * Trimming Projects
 
 
-#### Policies with Multiple Arguments[​](/data-products/govern/row-column-policies-udf#policies-with-multiple-arguments "Direct link to Policies with Multiple Arguments")
+#### Policies with Multiple Arguments​
 If a policy on an anchor dataset contains multiple columns, the Reflection created on the view containing the policy fails. See the following example:
 Example of the limitation
 
@@ -402,7 +403,7 @@ ALTER DATASET job_salary_in_the_usa
 ```
 
 In the above example, the `job_salary_drr` Reflection fails to materialize due to the multi-argument policy on `test.tables.employees::salary`.
-#### Aggregates on Masked Columns[​](/data-products/govern/row-column-policies-udf#aggregates-on-masked-columns "Direct link to Aggregates on Masked Columns")
+#### Aggregates on Masked Columns​
 You cannot create a raw Reflection on the view if there is a policy defined on the masked column.
 Example of the limitation
 
@@ -414,7 +415,7 @@ CREATE OR REPLACE VIEW myView AS
 ```
 
 In the above example, there is a policy defined on `salary`, so you cannot create a Reflection on this view.
-#### NULL Generating JOINs[​](/data-products/govern/row-column-policies-udf#null-generating-joins "Direct link to NULL Generating JOINs")
+#### NULL Generating JOINs​
 You can only apply the policy if it's on the “join side” of the join, such as:
   * Left side of LEFT JOIN
   * Right side of RIGHT JOIN
@@ -435,7 +436,7 @@ CREATE OR REPLACE VIEW myView AS
 ```
 
 In the above example, there is a policy defined on the `employees` table, which is on the left side of the RIGHT JOIN, so you cannot create a Reflection on this view.
-#### SET Operations[​](/data-products/govern/row-column-policies-udf#set-operations "Direct link to SET Operations")
+#### SET Operations​
 The policy must be defined on all UNION datasets and on the same field.
 Example of the limitation
 
@@ -448,7 +449,7 @@ CREATE OR REPLACE VIEW myView AS
 ```
 
 In the above example, there is a policy defined on the `employees` table, so you cannot create a Reflection on this view.
-#### Trimming Projects[​](/data-products/govern/row-column-policies-udf#trimming-projects "Direct link to Trimming Projects")
+#### Trimming Projects​
 In order to create a Reflection on a view, the view should reference all the fields that are part of the row-access and column-masking policies.
 Example of the limitation
 
@@ -480,12 +481,12 @@ CREATE OR REPLACE VIEW myView3 AS
 In the above example, you can create a Reflection on `myView2` but not on `myView3` since it trims the `state` column from the view which has a policy defined on it.
 Was this page helpful?
 [Previous Govern Data](/data-products/govern)[Next Lineage](/data-products/govern/lineage)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Govern Data](/data-products/govern)[Next Lineage](/data-products/govern/lineage)

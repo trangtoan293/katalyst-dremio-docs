@@ -2,7 +2,7 @@
   "label": "Advanced",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Advanced"
+    "type": "doc",
+    "id": "help-and-support/advanced/current-help-support-advanced-topics"
   }
 }

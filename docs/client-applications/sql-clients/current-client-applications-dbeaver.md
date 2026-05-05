@@ -1,5 +1,6 @@
 ---
 url: /client-applications/dbeaver
+slug: /client-applications/dbeaver
 title: "DBeaver | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64026.057923
@@ -13,14 +14,14 @@ Version: current [26.x]
 On this page
 # DBeaver
 You can run SQL from 
-## Supported Authentication Methods[​](/client-applications/dbeaver#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
 You can use your Dremio username and password, or you can use a personal access token (PAT) that you obtained from Dremio.
-## Prerequisites[​](/client-applications/dbeaver#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
   * Download the [Arrow Flight SQL JDBC driver](https://www.dremio.com/drivers/jdbc/).
-  * If you want to authenticate your connection to Dremio by using a personal access token, see [Creating a PAT](/security/authentication/personal-access-tokens#creating-a-pat) for the steps to obtain one.
+  * If you want to authenticate your connection to Dremio by using a personal access token, see [Creating a PAT](/security/authentication/personal-access-tokens) for the steps to obtain one.
 
 
-## Connecting to Dremio[​](/client-applications/dbeaver#connecting-to-dremio "Direct link to Connecting to Dremio")
+## Connecting to Dremio​
   1. In DBeaver, add the JDBC driver as a new driver. You need to do this only once, and can skip this step if DBeaver already lists this driver in its Driver Manager dialog:
 a. In the menubar, select **Database** &gt; **Driver Manager**.
 b. In the Driver Manager dialog, click **New**.
@@ -50,13 +51,13 @@ g. Click **Finish**.
 
 Was this page helpful?
 [Previous DataGrip](/client-applications/datagrip)[Next DbVisualizer](/client-applications/dbvisualizer)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DataGrip](/client-applications/datagrip)[Next DbVisualizer](/client-applications/dbvisualizer)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fadmin%2Fworkloads%2Fworkload-management%2F&_biz_t=1777950345634&_biz_i=Workload%20Management%20%7C%20Dremio%20Documentation&_biz_n=49&rnd=116515&cdn_o=a&_biz_z=1777950345687)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fdbeaver%2F&_biz_t=1777950345687&_biz_i=DBeaver%20%7C%20Dremio%20Documentation&_biz_n=50&rnd=472794&cdn_o=a&_biz_z=1777950345687)
+!!

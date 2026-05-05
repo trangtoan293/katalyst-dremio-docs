@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/information-schema/columns
+slug: /reference/sql/information-schema/columns
 title: "INFORMATION_SCHEMA.COLUMNS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64264.137057333
@@ -24,7 +25,7 @@ FROM INFORMATION_SCHEMA.COLUMNS
 ```
 
 The list of columns for tables is determined by the metadata caching policy on individual sources. The columns are not refreshed if the data is expired.
-## Example Output[​](/reference/sql/information-schema/columns#example-output "Direct link to Example Output")  
+## Example Output​  
 | TABLE_CATALOG  | TABLE_SCHEMA  | TABLE_NAME  | COLUMN_NAME  | ORDINAL_POSITION  | COLUMN_DEFAULT  | IS_NULLABLE  | DATA_TYPE  | COLUMN_SIZE  | CHARACTER_MAXIMUM_LENGTH  | CHARACTER_OCTET_LENGTH  | NUMERIC_PRECISION  | NUMERIC_PRECISION_RADIX  | NUMERIC_SCALE  | DATETIME_PRECISION  | INTERVAL_TYPE  | INTERVAL_PRECISION  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | DREMIO  | INFORMATION_SCHEMA  | CATALOGS  | CATALOG_NAME  | 1  | null  | YES  | CHARACTER VARYING  | 65536  | 65536  | 262144  | null  | null  | null  | null  | null  | null  |  
@@ -37,7 +38,7 @@ The list of columns for tables is determined by the metadata caching policy on i
 | DREMIO  | INFORMATION_SCHEMA  | COLUMNS  | ORDINAL_POSITION  | 5  | null  | YES  | INTEGER  | 32  | null  | null  | 32  | 2  | 0  | null  | null  | null  |  
 | DREMIO  | INFORMATION_SCHEMA  | COLUMNS  | COLUMN_DEFAULT  | 6  | null  | YES  | CHARACTER VARYING  | 65536  | 65536  | 262144  | null  | null  | null  | null  | null  | null  |  
 | DREMIO  | INFORMATION_SCHEMA  | COLUMNS  | IS_NULLABLE  | 7  | null  | YES  | CHARACTER  | VARYING  | 65536  | 65536  | 262144  | null  | null  | null  | null  | null  |  
-## Fields[​](/reference/sql/information-schema/columns#fields "Direct link to Fields")  
+## Fields​  
 | Field  | Data Type  | Description  |  
 | --- | --- | --- |  
 | TABLE_CATALOG  | varchar  | The name of the catalog, which is always DREMIO.  |  
@@ -59,13 +60,13 @@ The list of columns for tables is determined by the metadata caching policy on i
 | INTERVAL_PRECISION  | integer  | If the data type is interval, then the declared precision is displayed. Otherwise null is returned.  |  
 Was this page helpful?
 [Previous INFORMATION_SCHEMA.CATALOGS](/reference/sql/information-schema/catalogs)[Next INFORMATION_SCHEMA.SCHEMATA](/reference/sql/information-schema/schemata)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous INFORMATION_SCHEMA.CATALOGS](/reference/sql/information-schema/catalogs)[Next INFORMATION_SCHEMA.SCHEMATA](/reference/sql/information-schema/schemata)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Finformation-schema%2Fschemata%2F&_biz_t=1777950583628&_biz_i=INFORMATION_SCHEMA.SCHEMATA%20%7C%20Dremio%20Documentation&_biz_n=517&rnd=561613&cdn_o=a&_biz_z=1777950583648)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Finformation-schema%2Fcolumns%2F&_biz_t=1777950583648&_biz_i=INFORMATION_SCHEMA.COLUMNS%20%7C%20Dremio%20Documentation&_biz_n=518&rnd=970341&cdn_o=a&_biz_z=1777950583649)
+!!

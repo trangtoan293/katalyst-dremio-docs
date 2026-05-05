@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ENCRYPT
+slug: /reference/sql/sql-functions/functions/ENCRYPT
 title: "ENCRYPT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64310.992556125
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Cryptography](/reference/sql/sql-functions)
 # ENCRYPT
 Encrypts data using AES encryption. Supported modes include `AES-ECB`, `AES-CBC`, and `AES-GCM`.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ENCRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR) → VARBINARY[​](/reference/sql/sql-functions#encryptdata-varbinary-key-varbinary-mode-varchar--varbinary "Direct link to encryptdata-varbinary-key-varbinary-mode-varchar--varbinary")
+## Syntax
+### ENCRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR) → VARBINARY[​](/reference/sql/sql-functions)
   * data: The data to encrypt.
   * key: The encryption key. Must be 16, 24, or 32 bytes.
   * mode: The encryption mode. Supported modes: `AES-ECB` (defaults to `PKCS7` padding), `AES-ECB-PKCS7`, `AES-ECB-NONE`, `AES-CBC` (defaults to `PKCS7` padding), `AES-CBC-PKCS7`, `AES-CBC-NONE`, `AES-GCM`. The `AES-ECB` mode is vulnerable and should not be used for secure encryption.
@@ -40,7 +41,7 @@ FROM
 
 ```
 
-### ENCRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions#encryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary--varbinary "Direct link to encryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary--varbinary")
+### ENCRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions)
   * data: The data to encrypt.
   * key: The encryption key. Must be 16, 24, or 32 bytes.
   * mode: The encryption mode. Supported modes: `AES-ECB` (defaults to `PKCS7` padding), `AES-ECB-PKCS7`, `AES-ECB-NONE`, `AES-CBC` (defaults to `PKCS7` padding), `AES-CBC-PKCS7`, `AES-CBC-NONE`, `AES-GCM`. The `AES-ECB` mode is vulnerable and should not be used for secure encryption.
@@ -66,7 +67,7 @@ FROM
 
 ```
 
-### ENCRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY, _aad_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions#encryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary-aad-varbinary--varbinary "Direct link to encryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary-aad-varbinary--varbinary")
+### ENCRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY, _aad_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions)
   * data: The data to encrypt.
   * key: The encryption key. Must be 16, 24, or 32 bytes.
   * mode: Must be `AES-GCM`. The `AES-ECB` mode is vulnerable and should not be used for secure encryption.
@@ -92,7 +93,7 @@ FROM
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
   * Retrieve keys at runtime rather than hardcoding them in queries.
   * Rotate keys periodically according to your organization's security policies.
   * Use different keys for different data classifications or tenants.
@@ -101,13 +102,13 @@ FROM
 
 Was this page helpful?
 [Previous ENCODE](/reference/sql/sql-functions)[Next ENDS_WITH](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ENCODE](/reference/sql/sql-functions)[Next ENDS_WITH](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FE%2F&_biz_t=1777950630241&_biz_i=E%20%7C%20Dremio%20Documentation&_biz_n=597&rnd=544847&cdn_o=a&_biz_z=1777950630260)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FENCRYPT%2F&_biz_t=1777950630259&_biz_i=ENCRYPT%20%7C%20Dremio%20Documentation&_biz_n=598&rnd=320442&cdn_o=a&_biz_z=1777950630260)
+!!

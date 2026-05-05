@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/apache-iceberg-tables
+slug: /reference/sql/commands/apache-iceberg-tables
 title: "SQL Commands for Apache Iceberg Tables | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.405738458
@@ -21,32 +22,32 @@ Before you attempt to run SQL commands on Iceberg tables, follow these prerequis
   * Ensure that any existing Apache Iceberg tables that you want to use in your datasource are at Apache Iceberg version 2.
 
 
-## Supported SQL commands[​](/reference/sql/commands/apache-iceberg-tables#supported-sql-commands "Direct link to Supported SQL commands")
+## Supported SQL commands​
   * [ALTER](/reference/sql/commands/alter-table)
   * [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)
   * [CREATE](/reference/sql/commands/create-table)
-  * [DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-  * [DROP](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
+  * DELETE
+  * DROP
   * [INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
-  * [MERGE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
+  * MERGE
   * [OPTIMIZE](/reference/sql/commands/apache-iceberg-tables/optimize-table)
   * [ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
   * [SELECT](/reference/sql/commands)
   * [TRUNCATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-truncate)
-  * [UPDATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-update)
+  * UPDATE
   * [VACUUM](/reference/sql/commands/apache-iceberg-tables/vacuum-table)
   * [SHOW TBLPROPERTIES](/reference/sql/commands/show-table-properties)
 
 
 Was this page helpful?
 [Previous SQL Commands](/reference/sql/commands)[Next COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SQL Commands](/reference/sql/commands)[Next COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fapache-iceberg-tables%2F&_biz_t=1777950570459&_biz_i=SQL%20Commands%20for%20Apache%20Iceberg%20Tables%20%7C%20Dremio%20Documentation&_biz_n=485&rnd=796838&cdn_o=a&_biz_z=1777950570459)
+!

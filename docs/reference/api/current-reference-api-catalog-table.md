@@ -1,5 +1,6 @@
 ---
 url: /reference/api/catalog/table
+slug: /reference/api/catalog/table
 title: "Table | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64237.582512291
@@ -14,7 +15,7 @@ crawled_at: 64237.582512291
 Version: current [26.x]
 On this page
 # Table
-Use the Catalog API to retrieve [tables](/what-is-dremio/key-concepts#tables-and-views), format files and folders as tables, update and refresh tables, and revert tables to files and folders.
+Use the Catalog API to retrieve [tables](/what-is-dremio/key-concepts), format files and folders as tables, update and refresh tables, and revert tables to files and folders.
 Table Object
 
 ```
@@ -229,7 +230,7 @@ Table Object
 
 ```
 
-## Table Attributes[​](/reference/api/catalog/table#table-attributes "Direct link to Table Attributes")
+## Table Attributes​
 entityType String
 Type of the catalog object. For tables, the entityType is `dataset`.
 Example: dataset
@@ -254,7 +255,7 @@ tag String (UUID)
 Unique identifier of the version of the table. Dremio changes the tag whenever the table changes and uses the tag to ensure that PUT requests apply to the most recent version of the table.
 Example: cb2905bb-39c0-497f-ae74-4c310d534f25
 * * *
-[accelerationRefreshPolicy](/reference/api/catalog/table#attributes-of-the-accelerationrefreshpolicy-object) String
+accelerationRefreshPolicy String
 Attributes that define the acceleration refresh policy for the table.
 * * *
 isMetadataExpired Boolean
@@ -268,10 +269,10 @@ lastMetadataRefreshAt String
 Date and time that the table metadata was last refreshed. In UTC format. If NULL, the metadata has never yet been refreshed.
 Example: 2024-01-31T09:50:01.012Z
 * * *
-[format](/reference/api/catalog/table#attributes-of-the-format-object) Object
+format Object
 Table format attributes.
 * * *
-[accessControlList](/reference/api/catalog/table#attributes-of-the-accesscontrollist-object) Object
+accessControlList Object
 Enterprise only. Information about users and roles with access to the table and the specific privileges each user or role has. May include an array of users, an array of roles, or both, depending on the configured access and privileges. The accessControlList array is empty if table-specific access control privileges are not set.
 Example: {'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3","permissions": ["SELECT","ALTER"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "30fca499-4abc-4469-7142-fc8dd29acac8","permissions": ["SELECT","ALTER","MANAGE_GRANTS"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "76a9884b-aea5-46d5-a73a-000edf23f390","permissions": ["SELECT","ALTER"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -279,15 +280,15 @@ permissions Array of String
 Enterprise-only. List of the privileges that you have on the table. Only appears in the response if the request URL includes the `permissions` query parameter. For more information, read [Privileges](/security/rbac/privileges).
 Example: ["READ","WRITE","ALTER_REFLECTION","SELECT","ALTER","VIEW_REFLECTION","MODIFY","MANAGE_GRANTS","CREATE_TABLE","DROP","EXTERNAL_QUERY","INSERT","TRUNCATE","DELETE","UPDATE","EXECUTE","CREATE_SOURCE","ALL"]
 * * *
-[owner](/reference/api/catalog/table#attributes-of-the-owner-object) String
+owner String
 Information about the table's owner.
 * * *
-[fields](/reference/api/catalog/table#attributes-of-objects-in-the-fields-array) Object
+fields Object
 Attributes that represent the table schema.
 approximateStatisticsAllowed Boolean
 If true, `COUNT DISTINCT` queries run on the table return approximate results. Otherwise, false.
 Example: {'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"ownerId": "30fca499-4abc-4469-7142-fc8dd29acac8","ownerType": "USER"{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
-#### Attributes of the `accelerationRefreshPolicy` Object[​](/reference/api/catalog/table#attributes-of-the-accelerationrefreshpolicy-object "Direct link to attributes-of-the-accelerationrefreshpolicy-object")
+#### Attributes of the `accelerationRefreshPolicy` Object​
 activePolicyType String
 Option to set the policy for refreshing Reflections that are defined on the source. For this option to take effect, `neverRefresh` must be set to `false`.
 The possible values are:
@@ -348,7 +349,7 @@ Example: false
 * * *
 sourceRefreshOnDataChanges Boolean
 If the table's source is configured so that Reflections on tables in Iceberg format in the source will refresh when new snapshots are created after an update, `true`. Otherwise, `false`.
-#### Attributes of the `format` Object[​](/reference/api/catalog/table#attributes-of-the-format-object "Direct link to attributes-of-the-format-object")
+#### Attributes of the `format` Object​
 type String
 Type of data in the table.
 Enum: Delta, Excel, Iceberg, JSON, Parquet, Text, Unknown, XLS
@@ -382,7 +383,7 @@ metaStoreType String
 Not used. Has the value `HDFS`.
 Example: HDFS
 * * *
-[parquetDataFormat](/reference/api/catalog/table#attributes-of-the-parquetdataformat-object) Object
+parquetDataFormat Object
 Information about data format for Parquet tables.
 * * *
 dataFormatTypeList Array of String
@@ -431,15 +432,15 @@ Example: true
 autoCorrectCorruptDates Boolean
 If Dremio automatically corrects corrupted date fields in the table, the value is `true`. Otherwise, the value is `false`.
 Example: true
-#### Attributes of the `accessControlList` Object[​](/reference/api/catalog/table#attributes-of-the-accesscontrollist-object "Direct link to attributes-of-the-accesscontrollist-object")
-[users](/reference/api/catalog/table#attributes-of-objects-in-the-users-and-roles-arrays) Array of Object
+#### Attributes of the `accessControlList` Object​
+users Array of Object
 Enterprise only. List of users with access to the table and the specific privileges each user should have.
 Example: [{'{'}'{'{'}'{'}'}"id": "c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3","permissions": ["SELECT", "ALTER"]{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'}"id": "30fca499-4abc-4469-7142-fc8dd29acac8","permissions": ["SELECT", "ALTER", "MANAGE_GRANTS"]{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/table#attributes-of-objects-in-the-users-and-roles-arrays) Array of Object
+roles Array of Object
 Enterprise only. List of roles whose members have access to the table and the specific privileges each role has.
 Example: [{'{'}'{'{'}'{'}'}"id": "76a9884b-aea5-46d5-a73a-000edf23f390","permissions": ["SELECT", "ALTER"]{'{'}'{'}'}'{'}'}]
-##### Attributes of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/table#attributes-of-objects-in-the-users-and-roles-arrays "Direct link to attributes-of-objects-in-the-users-and-roles-arrays")
+##### Attributes of Objects in the `users` and `roles` Arrays​
 id String
 Enterprise only. Unique identifier of the user or role with access to the table.
 Example: c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3
@@ -447,7 +448,7 @@ Example: c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3
 permissions Array of String
 Enterprise only. List of privileges the user or role has on the table. For more information, read [Privileges](/security/rbac/privileges).
 Example: ["SELECT", "ALTER"]
-#### Attributes of the `owner` Object[​](/reference/api/catalog/table#attributes-of-the-owner-object "Direct link to attributes-of-the-owner-object")
+#### Attributes of the `owner` Object​
 ownerId String (UUID)
 Unique identifier of the table's owner.
 Example: 30fca499-4abc-4469-7142-fc8dd29acac8
@@ -456,14 +457,14 @@ ownerType String
 Type of owner of the table.
 Enum: USER, ROLE
 Example: USER
-#### Attributes of Objects in the `fields` Array[​](/reference/api/catalog/table#attributes-of-objects-in-the-fields-array "Direct link to attributes-of-objects-in-the-fields-array")
+#### Attributes of Objects in the `fields` Array​
 name String
 Name of the table field.
 Example: review_count
 * * *
-[type](/reference/api/catalog/table#attributes-of-the-type-object) Object
+type Object
 Information about the table field.
-##### Attributes of the `type` Object[​](/reference/api/catalog/table#attributes-of-the-type-object "Direct link to attributes-of-the-type-object")
+##### Attributes of the `type` Object​
 name String
 Name of the table field's type.
 Enum: STRUCT, LIST, UNION, INTEGER, BIGINT, FLOAT, DOUBLE, VARCHAR, VARBINARY, BOOLEAN, DECIMAL, TIME, DATE, TIMESTAMP, INTERVAL DAY TO SECOND, INTERVAL YEAR TO MONTH
@@ -477,9 +478,9 @@ scale Integer
 Number of digits to the right of the decimal point. Included only for the `DECIMAL` type.
 Example: 0
 * * *
-[subSchema](/reference/api/catalog/table#attributes-of-objects-in-the-subschema-array) Array of Object
+subSchema Array of Object
 List of objects that represent the field's composition. For example, a field composed of data about a restaurant might have a subSchema with an object for parking options, another for payment methods, and so on. subSchemas may be nested within other subSchemas. subSchema appears only for the `STRUCT`, `LIST`, and `UNION` types.
-##### Attributes of Objects in the `subSchema` Array[​](/reference/api/catalog/table#attributes-of-objects-in-the-subschema-array "Direct link to attributes-of-objects-in-the-subschema-array")
+##### Attributes of Objects in the `subSchema` Array​
 name String
 Name for the subSchema object.
 Example: Parking
@@ -487,7 +488,7 @@ Example: Parking
 type Object
 Object that contains a `name` attribute that provides the field's type.
 Example: {'{'}'{'{'}'{'}'}"name": "BOOLEAN"{'{'}'{'}'}'{'}'}
-#### Attributes of the `parquetDataFormat` Object[​](/reference/api/catalog/table#attributes-of-the-parquetdataformat-object "Direct link to attributes-of-the-parquetdataformat-object")
+#### Attributes of the `parquetDataFormat` Object​
 type String
 Type of data in the table. Within the parquetDataFormat object, the only valid type is `Parquet`.
 Example: Parquet
@@ -503,7 +504,7 @@ Example: true
 autoCorrectCorruptDates Boolean
 If the value is `true`, Dremio automatically corrects corrupted date fields in the table. Otherwise, the value is `false`.
 Example: true
-## Format a File or Folder as a Table[​](/reference/api/catalog/table#format-a-file-or-folder-as-a-table "Direct link to Format a File or Folder as a Table")
+## Format a File or Folder as a Table​
 Format a file or folder as a table so that you can query the data in Dremio.
 To format a folder, all files in the folder must be the same format.
 Method and URL
@@ -513,7 +514,7 @@ POST /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/table#parameters "Direct link to Parameters")
+### Parameters​
 id Path String
 Unique identifier of the file or folder you want to format. The ID can be a UUID or a text path. If the ID is a text path, use URL encoding to replace special characters with their UTF-8-equivalent characters: `%3A` for a colon; `%2F` for a forward slash, and `%20` for a space. For example, if the ID value is `dremio:/Samples/samples.dremio.com/Dremio University`, the URI-encoded ID is `dremio%3A%2FSamples%2Fsamples.dremio.com%2FDremio%20University`.
 Example: c590ed7f-7142-4e1f-ba7d-94173afdc9a3
@@ -528,16 +529,16 @@ Example: ["Samples", "samples.dremio.com", "Dremio University", "restaurant_revi
 type Body String
 Type of dataset. For tables, the type is `PHYSICAL_DATASET`.
 * * *
-[accelerationRefreshPolicy](/reference/api/catalog/table#parameters-of-the-accelerationrefreshpolicy-object) Object
+accelerationRefreshPolicy Object
 Attributes that define the acceleration refresh policy for the table.
 * * *
-[format](/reference/api/catalog/table#parameters-of-the-format-object) Body String
+format Body String
 Parameters that describe how to format the file or folder.
 * * *
-[accessControlList](/reference/api/catalog/table#parameters-of-the-accesscontrollist-object) Body Object Optional
+accessControlList Body Object Optional
 Enterprise only. Object used to specify which users and roles should have access to the table and the specific privileges each user or role should have. May include an array of users, an array of roles, or both.
 Example: {'{'}'{'{'}'{'}'}"users": [{'{'}'{'{'}'{'}'}"id": "c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3","permissions": ["SELECT", "ALTER"]{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'}"id": "30fca499-4abc-4469-7142-fc8dd29acac8","permissions": ["SELECT", "ALTER", "MANAGE_GRANTS"]{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'}"id": "76a9884b-aea5-46d5-a73a-000edf23f390","permissions": ["SELECT", "ALTER"]{'{'}'{'}'}'{'}'}]{'{'}'{'}'}'{'}'}
-#### Parameters of the `accelerationRefreshPolicy` Object[​](/reference/api/catalog/table#parameters-of-the-accelerationrefreshpolicy-object "Direct link to parameters-of-the-accelerationrefreshpolicy-object")
+#### Parameters of the `accelerationRefreshPolicy` Object​
 activePolicyType Body String
 Policy to use for refreshing Reflections that are defined on the source. For this option to take effect, the neverRefresh parameter must be set to `false`.
 The possible values are:
@@ -603,7 +604,7 @@ Example: false
 neverRefresh Body Boolean
 If the Reflection should never refresh, `true`. Otherwise, `false`.
 Example: false
-#### Parameters of the `format` Object[​](/reference/api/catalog/table#parameters-of-the-format-object "Direct link to parameters-of-the-format-object")
+#### Parameters of the `format` Object​
 type Body String
 Type of data in the file or folder. All files in the folder must be the same format.
 Enum: Delta, Excel, Iceberg, JSON, Parquet, Text, Unknown, XLS
@@ -650,15 +651,15 @@ Example: true
 trimHeader Body Boolean Optional
 If Dremio should trim column names to a specific number of characters when creating the table, set to `true`. Otherwise, set to `false` (default). Optional for files or folders of the Text type.
 Example: true
-#### Parameters of the `accessControlList` Object[​](/reference/api/catalog/table#parameters-of-the-accesscontrollist-object "Direct link to parameters-of-the-accesscontrollist-object")
-[users](/reference/api/catalog/table#parameters-of-objects-in-the-users-and-roles-arrays) Body Array of Object Optional
+#### Parameters of the `accessControlList` Object​
+users Body Array of Object Optional
 Enterprise only. List of users who should have access to the table and the specific privileges each user should have.
 Example: [{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3","permissions": ["SELECT","ALTER"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "30fca499-4abc-4469-7142-fc8dd29acac8","permissions": ["SELECT","ALTER","MANAGE_GRANTS"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/table#parameters-of-objects-in-the-users-and-roles-arrays) Body Array of Object Optional
+roles Body Array of Object Optional
 Enterprise only. List of roles whose members should have access to the table and the specific privileges each role should have.
 Example: [{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "76a9884b-aea5-46d5-a73a-000edf23f390","permissions": ["SELECT", "ALTER"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-##### Parameters of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/table#parameters-of-objects-in-the-users-and-roles-arrays "Direct link to parameters-of-objects-in-the-users-and-roles-arrays")
+##### Parameters of Objects in the `users` and `roles` Arrays​
 id Body String Optional
 Enterprise only. Unique identifier of the user or role who should have access to the table.
 Example: c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3
@@ -666,7 +667,7 @@ Example: c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3
 permissions Body Array of String Optional
 Enterprise only. List of privileges the user or role should have on the table. For more information, read [Privileges](/security/rbac/privileges).
 Example: ["SELECT", "ALTER"]
-### Example[​](/reference/api/catalog/table#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -966,7 +967,7 @@ curl -X POST 'https://{hostname}/api/v3/catalog/6ba3bd6e-fd27-4572-a535-77e15482
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/table#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -980,7 +981,7 @@ curl -X POST 'https://{hostname}/api/v3/catalog/6ba3bd6e-fd27-4572-a535-77e15482
 500 Internal Server Error   
   
 
-## Retrieve a Table by ID[​](/reference/api/catalog/table#retrieve-a-table-by-id "Direct link to Retrieve a Table by ID")
+## Retrieve a Table by ID​
 Retrieve a table by specifying the table's `id` value.
 Method and URL
 
@@ -989,15 +990,15 @@ GET /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/table#parameters-1 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the table that you want to retrieve.
 Example: c9c11d32-0576-4200-5a5b-8c7229cb3d72
 * * *
 include Query String Optional
-Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
-### Example[​](/reference/api/catalog/table#example-1 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1201,7 +1202,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/table#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -1213,7 +1214,7 @@ Response
 404 Not Found   
   
 
-## Retrieve a Table by Path[​](/reference/api/catalog/table#retrieve-a-table-by-path "Direct link to Retrieve a Table by Path")
+## Retrieve a Table by Path​
 Retrieve a table by specifying the table's path.
 Method and URL
 
@@ -1222,15 +1223,15 @@ GET /api/v3/catalog/by-path/{path}
 
 ```
 
-### Parameters[​](/reference/api/catalog/table#parameters-2 "Direct link to Parameters")
+### Parameters​
 path Path String
 Table's location within Dremio, using forward slashes as separators. For example, for the "NYC-taxi-trips" table in the "samples.dremio.com" folder within the source "Samples," the path is `Samples/samples.dremio.com/NYC-taxi-trips`. If the name of any component in the path includes special characters for URLs, such as spaces, use URL encoding to replace the special characters with their UTF-8-equivalent characters. For example, "Dremio University" should be `Dremio%20University` in the URL path.
 Example: Samples/samples.dremio.com/Dremio%20University/restaurant_reviews.parquet
 * * *
 include Query String Optional
-Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
-### Example[​](/reference/api/catalog/table#example-2 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1434,7 +1435,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/table#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -1446,7 +1447,7 @@ Response
 404 Not Found   
   
 
-## Update a Table[​](/reference/api/catalog/table#update-a-table "Direct link to Update a Table")
+## Update a Table​
 Update the specified table in Dremio.
 Method and URL
 
@@ -1455,7 +1456,7 @@ PUT /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/table#parameters-3 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the table that you want to update.
 Example: c9c11d32-0576-4200-5a5b-8c7229cb3d72
@@ -1479,17 +1480,17 @@ type Body String
 Type of dataset. For tables, the type is `PHYSICAL_DATASET`.
 Example:
 * * *
-[accelerationRefreshPolicy](/reference/api/catalog/table#parameters-of-the-accelerationrefreshpolicy-object-1) Object
+accelerationRefreshPolicy Object
 Attributes that define the acceleration refresh policy for the table.
 * * *
-[format](/reference/api/catalog/table#parameters-of-the-format-object-1) Body String
+format Body String
 Parameters that describe the table's format.
 * * *
-[accessControlList](/reference/api/catalog/table#parameters-of-the-accesscontrollist-object-1) Body String Optional
+accessControlList Body String Optional
 Enterprise only. Object used to specify which users and roles should have access to the table and the specific privileges each user or role should have. May include an array of users, an array of roles, or both.
 Example: {'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3","permissions": ["SELECT","ALTER"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "30fca499-4abc-4469-7142-fc8dd29acac8","permissions": ["SELECT","ALTER","MANAGE_GRANTS"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'})"id": "76a9884b-aea5-46d5-a73a-000edf23f390","permissions": ["SELECT","ALTER"]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'})'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'{'}'{'}'}'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
-#### Parameters of the `accelerationRefreshPolicy` Object[​](/reference/api/catalog/table#parameters-of-the-accelerationrefreshpolicy-object-1 "Direct link to parameters-of-the-accelerationrefreshpolicy-object-1")
+#### Parameters of the `accelerationRefreshPolicy` Object​
 activePolicyType Body String
 Policy to use for refreshing Reflections that are defined on the source. For this option to take effect, the neverRefresh parameter must be set to `false`.
 The possible values are:
@@ -1555,7 +1556,7 @@ Example: false
 neverRefresh Body Boolean
 If the Reflection should never refresh, `true`. Otherwise, `false`.
 Example: false
-#### Parameters of the `format` Object[​](/reference/api/catalog/table#parameters-of-the-format-object-1 "Direct link to parameters-of-the-format-object-1")
+#### Parameters of the `format` Object​
 type Body String
 Type of data in the table.
 Enum: Delta, Excel, Iceberg, JSON, Parquet, Text, Unknown, XLS
@@ -1595,15 +1596,15 @@ Example: true
 trimHeader Body Boolean Optional
 If Dremio should trim column names to a specific number of characters when updating the table, set to `true`. Otherwise, set to `false` (default). Optional for tables created from files or folders of the Text type.
 Example: true
-#### Parameters of the `accessControlList` Object[​](/reference/api/catalog/table#parameters-of-the-accesscontrollist-object-1 "Direct link to parameters-of-the-accesscontrollist-object-1")
-[users](/reference/api/catalog/table#parameters-of-objects-in-the-users-and-roles-arrays-1) Body Array of Object Optional
+#### Parameters of the `accessControlList` Object​
+users Body Array of Object Optional
 Enterprise only. List of users who should have access to the table and the specific privileges each user should have.
 Example: [{'{'}'{'{'}'{'}'}"id": "c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3","permissions": ["SELECT","ALTER"]{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'}"id": "30fca499-4abc-4469-7142-fc8dd29acac8","permissions": ["SELECT","ALTER","MANAGE_GRANTS"]{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/table#parameters-of-objects-in-the-users-and-roles-arrays-1) Body Array of Object Optional
+roles Body Array of Object Optional
 Enterprise only. List of roles whose members should have access to the table and the specific privileges each role should have.
 Example: [{'{'}'{'{'}'{'}'}"id": "76a9884b-aea5-46d5-a73a-000edf23f390","permissions": ["SELECT","ALTER"]{'{'}'{'}'}'{'}'}]
-##### Parameters of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/table#parameters-of-objects-in-the-users-and-roles-arrays-1 "Direct link to parameters-of-objects-in-the-users-and-roles-arrays-1")
+##### Parameters of Objects in the `users` and `roles` Arrays​
 id Body String
 Enterprise only. Unique identifier of the user or role that should have access to the table.
 Example: c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3
@@ -1611,7 +1612,7 @@ Example: c590ed7f-b2b4-4e1f-ba7d-94173afdc9a3
 permissions Body Array of String
 Enterprise only. List of privileges the user or role should have on the table. For more information, read [Privileges](/security/rbac/privileges).
 Example: ["SELECT", "ALTER"]
-### Example[​](/reference/api/catalog/table#example-3 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1728,7 +1729,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/table#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -1742,7 +1743,7 @@ Response
 500 Internal Server Error   
   
 
-## Refresh the Reflections on a Table[​](/reference/api/catalog/table#refresh-the-reflections-on-a-table "Direct link to Refresh the Reflections on a Table")
+## Refresh the Reflections on a Table​
 Refresh the Reflections associated with the specified table.
 Refreshing a table's Reflections does not refresh its metadata. Read [Refreshing Metadata](/help-support/advanced-topics/metadata-caching) to learn how to refresh table metadata. Read [Refreshing Reflections](/acceleration/manual-reflections/refreshing-reflections) for more information about refreshing Reflections.
 Method and URL
@@ -1752,11 +1753,11 @@ POST /api/v3/catalog/{id}/refresh
 
 ```
 
-### Parameters[​](/reference/api/catalog/table#parameters-4 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the table that you want to refresh.
 Example: c9c11d32-0576-4200-5a5b-8c7229cb3d72
-### Example[​](/reference/api/catalog/table#example-4 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1773,7 +1774,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/table#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 
@@ -1789,7 +1790,7 @@ No response
 404 Not Found   
   
 
-## Revert a Table to a File or Folder[​](/reference/api/catalog/table#revert-a-table-to-a-file-or-folder "Direct link to Revert a Table to a File or Folder")
+## Revert a Table to a File or Folder​
 Revert a table in a source to change the data in the table back to its original format, file or folder. For more information, read [Formatting Data to a Table](/developer/data-formats/table) and [Removing Formatting on Data](/developer/data-formats/table)
 If a table is saved in your home space, the revert request will delete the table entirely. The revert endpoint only changes a table back to a file or folder if the table is saved in a source.
 Method and URL
@@ -1799,11 +1800,11 @@ DELETE /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/table#parameters-5 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the table that you want to revert to a file or folder.
 Example: c9c11d32-0576-4200-5a5b-8c7229cb3d72
-### Example[​](/reference/api/catalog/table#example-5 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1820,7 +1821,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/table#response-status-codes-5 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 400 Bad Request   
@@ -1834,13 +1835,13 @@ No response
 
 Was this page helpful?
 [Previous File](/reference/api/catalog/file)[Next User-Defined Function](/reference/api/catalog/user-defined-function)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous File](/reference/api/catalog/file)[Next User-Defined Function](/reference/api/catalog/user-defined-function)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fcatalog%2Ftable%2F&_biz_t=1777950557468&_biz_i=Table%20%7C%20Dremio%20Documentation&_biz_n=457&rnd=267363&cdn_o=a&_biz_z=1777950557468)
+!

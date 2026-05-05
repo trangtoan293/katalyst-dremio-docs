@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/datasets
+slug: /reference/sql/commands/datasets
 title: "Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64804.316156166

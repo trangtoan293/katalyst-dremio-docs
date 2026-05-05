@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/apache-iceberg-tables/optimize-table
+slug: /reference/sql/commands/apache-iceberg-tables/optimize-table
 title: "OPTIMIZE TABLE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.47739425
@@ -32,7 +33,7 @@ OPTIMIZE TABLE <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#parameters "Direct link to Parameters")
+## Parameters​
 `table_name` String
 The path of the Iceberg table that you want to optimize.
 * * *
@@ -57,14 +58,14 @@ Selects specific partitions for optimizing data files when using `REWRITE DATA`.
 
 
 The ``predicate`` can be any combination of logical and mathematical conditions. However, the supported predicate syntax differs depending on whether the table uses identity or non-identity partitions.
-### Identity Partitions[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#identity-partitions "Direct link to Identity Partitions")
+### Identity Partitions​
 For tables using identity partitions (partitioned directly on a column, such as `PARTITION BY name`), you can use equality conditions and expressions:
   * `column_1=1`: Optimizes all data files in the partition where `column_1` equals 1.
   * `column_2 LIKE 'a%'`: Optimizes all data files in the partition where `column_2` values start with the letter "a".
   * `date_column >= '2024-01-01'`: Optimizes the `date_column` partition with dates on or after January 1, 2024.
 
 
-### Non-Identity Partitions[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#non-identity-partitions "Direct link to Non-Identity Partitions")
+### Non-Identity Partitions​
 For tables using non-identity partitions (partitioned using a transformation on a column, such as `PARTITION BY (MONTH(ts))`), only equality conditions on the source column are supported. Expressions that reference the partition transformation directly are not allowed and will result in an error.
 **Supported equality conditions:**  
 | Partition Definition  | Supported Predicate  | Description  |  
@@ -91,7 +92,7 @@ Dremio's manifest file sizing:
   * Files larger than the maximum range: Will be split into smaller files
 
 
-## Optimizing Clustered Data Tables[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#optimizing-clustered-data-tables "Direct link to Optimizing Clustered Data Tables")
+## Optimizing Clustered Data Tables​
 When working with clustered data tables, you may need to run multiple `OPTIMIZE TABLE` operations to achieve optimal data layout.
   * Start with `OPTIMIZE TABLE` to initiate reclustering of all records.
   * Use `SELECT * FROM TABLE(clustering_information('table_name'))` to check the resulting clustering depth.
@@ -99,11 +100,11 @@ When working with clustered data tables, you may need to run multiple `OPTIMIZE 
   * Continue this process until the clustering depth falls below your target threshold or until successive runs show minimal improvement.
 
 
-### Data Table Parameters[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#data-table-parameters "Direct link to Data Table Parameters")
-To optimize the logical data layout of the table, `OPTIMIZE TABLE` uses the `dremio.clustering` [table properties](/developer/data-formats/apache-iceberg/table-properties) from the target table. The default values can be overridden by [support keys](/help-support/support-settings/#support-keys) of the same names.
-### Configuring Compaction[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#configuring-compaction "Direct link to Configuring Compaction")
-To optimize physical file management and compaction, `OPTIMIZE TABLE` also uses the `dremio.iceberg.auto.clustering.compact.files.enabled` [support key](/help-support/support-settings/#support-keys) to control file compaction. When true (the default), small files are combined with their closest cluster, and large files are rewritten into appropriate sizes while maintaining proper data organization according to the clustering keys.
-## Examples[​](/reference/sql/commands/apache-iceberg-tables/optimize-table#examples "Direct link to Examples")
+### Data Table Parameters​
+To optimize the logical data layout of the table, `OPTIMIZE TABLE` uses the `dremio.clustering` [table properties](/developer/data-formats/apache-iceberg/table-properties) from the target table. The default values can be overridden by [support keys](/help-support/support-settings/) of the same names.
+### Configuring Compaction​
+To optimize physical file management and compaction, `OPTIMIZE TABLE` also uses the `dremio.iceberg.auto.clustering.compact.files.enabled` [support key](/help-support/support-settings/) to control file compaction. When true (the default), small files are combined with their closest cluster, and large files are rewritten into appropriate sizes while maintaining proper data organization according to the clustering keys.
+## Examples​
 Rewrite data files and manifests to Dremio's optimal size
 
 ```
@@ -137,14 +138,14 @@ OPTIMIZE TABLE demo.example_table
 ```
 
 Was this page helpful?
-[Previous MERGE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)[Next ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous MERGE[Next ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous MERGE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)[Next ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fapache-iceberg-tables%2Foptimize-table%2F&_biz_t=1777950570958&_biz_i=OPTIMIZE%20TABLE%20%7C%20Dremio%20Documentation&_biz_n=489&rnd=494202&cdn_o=a&_biz_z=1777950570959)
+Previous MERGE[Next ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
+!

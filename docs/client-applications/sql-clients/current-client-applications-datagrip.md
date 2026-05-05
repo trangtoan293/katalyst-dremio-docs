@@ -1,5 +1,6 @@
 ---
 url: /client-applications/datagrip
+slug: /client-applications/datagrip
 title: "DataGrip | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64026.1346585
@@ -13,13 +14,13 @@ Version: current [26.x]
 On this page
 # DataGrip
 You can run SQL from 
-## Supported Versions[​](/client-applications/datagrip#supported-versions "Direct link to Supported Versions")
+## Supported Versions​
 Dremio connectivity is supported from DataGrip running on Windows, macOS, or Linux. It is recommended that you use the latest available version of DataGrip.
-## Supported Authentication Methods[​](/client-applications/datagrip#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
 You can authenticate your connection to Dremio using your Dremio username and password.
-## Prerequisites[​](/client-applications/datagrip#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
 Download the [Arrow Flight SQL JDBC driver](https://www.dremio.com/drivers/jdbc/).
-## Connecting to Dremio[​](/client-applications/datagrip#connecting-to-dremio "Direct link to Connecting to Dremio")
+## Connecting to Dremio​
 Follow the steps below to connect to Dremio:
   1. Create a project in DataGrip (see 
   2. Open the Database Explorer, click the **+** icon, then click **Driver and Data Source**.
@@ -33,7 +34,7 @@ Follow the steps below to connect to Dremio:
   5. At the bottom of the Data Sources and Drivers panel, click **Create Data Source**.
   6. Ensure that the driver you just created is selected under **Project Data Sources**.
   7. For Authentication, select **User & Password**, and provide the Dremio username and password to send for authentication.
-  8. For URL, follow the guidance under [Connecting to Databases](/client-applications/drivers/arrow-flight-sql-jdbc-driver#connecting-to-databases).
+  8. For URL, follow the guidance under [Connecting to Databases](/client-applications/drivers/arrow-flight-sql-jdbc-driver).
 The following is an example URL for a local Dremio installation that does not use an encrypted flight port:
 Example Flight SQL URL
 
@@ -52,13 +53,13 @@ When querying tables and views in Dremio, ensure you are using the fully qualifi
 
 Was this page helpful?
 [Previous Apache Superset](/client-applications/superset)[Next DBeaver](/client-applications/dbeaver)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Apache Superset](/client-applications/superset)[Next DBeaver](/client-applications/dbeaver)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fdatagrip%2F&_biz_t=1777950346043&_biz_i=DataGrip%20%7C%20Dremio%20Documentation&_biz_n=51&rnd=232200&cdn_o=a&_biz_z=1777950346043)
+!

@@ -1,17 +1,18 @@
 ---
 url: /reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete
+slug: /reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete
 title: "DELETE | Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64797.808097208
 ---
 
-[Skip to main content](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete#__docusaurus_skipToContent_fallback)
+Skip to main content
 [![Dremio Documentation Home Page](https://docs.dremio.com/images/Dremio-wordmark-light.svg) **Documentation**](/)
-[](/dremio-cloud)
-[](/)
+
+
 [current [26.x]](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
   * [current [26.x]](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-  * [25.x](/25.x/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
+  * 25.x
 
 
 [Start for Free](https://www.dremio.com/get-started/)
@@ -36,14 +37,14 @@ Search`⌘``K`
       * [SQL Commands](/reference/sql/commands)
         * [SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)
           * [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)
-          * [DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-          * [DROP](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
+          * DELETE
+          * DROP
           * [INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
-          * [MERGE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
+          * MERGE
           * [OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table)
           * [ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
           * [TRUNCATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-truncate)
-          * [UPDATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-update)
+          * UPDATE
           * [VACUUM TABLE](/reference/sql/commands/apache-iceberg-tables/vacuum-table)
         * [SQL Commands for Nessie](/reference/sql/commands/nessie)
         * [SELECT](/reference/sql/commands)
@@ -61,7 +62,7 @@ Search`⌘``K`
         * [CREATE VIEW](/reference/sql/commands/create-view)
         * [DESCRIBE PIPE](/reference/sql/commands/describe-pipe)
         * [DROP PIPE](/reference/sql/commands/drop-pipe)
-        * [DROP SPACE](/reference/sql/commands/drop-space)
+        * DROP SPACE
         * [DROP VIEW](/reference/sql/commands/drop-view)
         * [Privileges](/reference/sql/commands/rbac)
         * [Reflections](/reference/sql/commands/acceleration)
@@ -113,7 +114,7 @@ DELETE FROM <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete#parameters "Direct link to Parameters")
+## Parameters​
 `table_name` String
 The name of the table with data that you want to delete.
 * * *
@@ -132,7 +133,7 @@ When a `WHERE` clause contains a `JOIN` between source tables in the `USING` cla
 * * *
 WHERE where_conditions String Optional
 The filter for specifying which rows of the table to delete.
-## Example[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete#example "Direct link to Example")
+## Example​
 Example DELETE command using USING and WHERE
 
 ```
@@ -161,17 +162,17 @@ delete from orders
 ```
 
 Was this page helpful?
-[Previous COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)[Next DROP](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Previous COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)Next DROP
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)[Next DROP](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
-  * [Parameters](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete#parameters)
-  * [Example](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete#example)
+[Previous COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)Next DROP
+  * Parameters
+  * Example
 
 

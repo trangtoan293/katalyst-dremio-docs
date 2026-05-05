@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ENCODE
+slug: /reference/sql/sql-functions/functions/ENCODE
 title: "ENCODE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64310.943597458
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Binary](/reference/sql/sql-functions), [Conversion](/reference/sql/sql-functions)
 # ENCODE
 Encodes the input expression using the specified charSet character encoding.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ENCODE(_expression_ string, _charSet_type_ string) → varbinary[​](/reference/sql/sql-functions#encodeexpression-string-charset_type-string--varbinary "Direct link to encodeexpression-string-charset_type-string--varbinary")
+## Syntax
+### ENCODE(_expression_ string, _charSet_type_ string) → varbinary[​](/reference/sql/sql-functions)
   * expression: The expression to be encoded.
   * charSet_type: The charSet type to use for the conversion.
 
@@ -40,7 +41,7 @@ SELECT ENCODE('Dremio', 'UTF-16BE')
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 The charset must be one of (case-insensitive):
   * US-ASCII
   * ISO-8859-1
@@ -52,12 +53,12 @@ The charset must be one of (case-insensitive):
 
 Was this page helpful?
 [Previous E](/reference/sql/sql-functions)[Next ENCRYPT](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous E](/reference/sql/sql-functions)[Next ENCRYPT](/reference/sql/sql-functions)

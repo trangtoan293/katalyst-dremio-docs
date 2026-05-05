@@ -1,5 +1,6 @@
 ---
 url: /reference/api/catalog
+slug: /reference/api/catalog
 title: "Catalog | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64062.134462666
@@ -126,10 +127,10 @@ Catalog Object
 
 ```
 
-## Catalog Attributes[​](/reference/api/catalog#catalog-attributes "Direct link to Catalog Attributes")
-[data](/reference/api/catalog#attributes-of-objects-in-the-data-array) Array of Object
+## Catalog Attributes​
+data Array of Object
 List of catalog objects in the Dremio organization.
-#### Attributes of Objects in the `data` Array[​](/reference/api/catalog#attributes-of-objects-in-the-data-array "Direct link to attributes-of-objects-in-the-data-array")
+#### Attributes of Objects in the `data` Array​
 id String (UUID)
 Unique identifier of the catalog object.
 Example: ed1013cb-4fea-6552-8d43-015215a38bcc
@@ -151,8 +152,8 @@ For catalog objects with the type CONTAINER, the type of container.
 Enum: SPACE, SOURCE, FOLDER, HOME
 Example: SPACE
 * * *
-[stats](/reference/api/catalog#attributes-of-the-stats-object) Object
-Information about the number of datasets in the catalog object and whether the dataset count is bounded. Appears in the response only if the request URL includes the [datasetCount](/reference/api/catalog#parameters) query parameter.
+stats Object
+Information about the number of datasets in the catalog object and whether the dataset count is bounded. Appears in the response only if the request URL includes the datasetCount query parameter.
 Example: {'{'})'{'{'})'{'}'})"datasetCount": 18,"datasetCountBounded": false{'{'})'{'}'}'{'}'}
 * * *
 createdAt String
@@ -162,7 +163,7 @@ Example: 2023-02-14T19:28:40.840Z
 permissions Array of String
 Enterprise-only. List of the privileges that you have on the catalog object. Only appears in the response if the request URL includes the `permissions` query parameter. For more information, read [Privileges](/security/rbac/privileges).
 Example: ["READ,"WRITE","ALTER_REFLECTION","SELECT","ALTER","VIEW_REFLECTION","MODIFY","MANAGE_GRANTS","CREATE_TABLE","DROP","EXTERNAL_QUERY","INSERT","TRUNCATE","DELETE","UPDATE","EXECUTE","CREATE_SOURCE","ALL"]
-##### Attributes of the `stats` Object[​](/reference/api/catalog#attributes-of-the-stats-object "Direct link to attributes-of-the-stats-object")
+##### Attributes of the `stats` Object​
 datasetCount Integer
 Number of datasets the catalog object contains.
 Example: 18
@@ -170,7 +171,7 @@ Example: 18
 datasetCountBounded Boolean
 If the dataset count is bounded, the value is `true`. Otherwise, the value is `false`.
 Example: false
-## Retrieve a Catalog[​](/reference/api/catalog#retrieve-a-catalog "Direct link to Retrieve a Catalog")
+## Retrieve a Catalog​
 Retrieve the catalog for the current Dremio instance.
 Method and URL
 
@@ -179,11 +180,11 @@ GET /api/v3/catalog
 
 ```
 
-### Parameters[​](/reference/api/catalog#parameters "Direct link to Parameters")
+### Parameters​
 include Query String Optional
-Include a non-default attribute in the response. The available values for the include query parameter are `permissions` (Enterprise-only) and `datasetCount`. Specify `permissions` to include each catalog object's permissions array in the response. Specify `datasetCount` to include the [stats object](/reference/api/catalog#attributes-of-the-stats-object) in the response. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available values for the include query parameter are `permissions` (Enterprise-only) and `datasetCount`. Specify `permissions` to include each catalog object's permissions array in the response. Specify `datasetCount` to include the stats object in the response. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
-### Example[​](/reference/api/catalog#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -232,7 +233,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -244,13 +245,13 @@ Response
 
 Was this page helpful?
 [Previous API Reference](/reference/api)[Next Source](/reference/api/catalog/source)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous API Reference](/reference/api)[Next Source](/reference/api/catalog/source)
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)

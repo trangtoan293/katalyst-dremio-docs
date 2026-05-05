@@ -1,5 +1,6 @@
 ---
 url: /release-notes/unsupported-releases/version-220-release
+slug: /release-notes/unsupported-releases/version-220-release
 title: "22.x Release Notes | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64385.223151666
@@ -14,13 +15,13 @@ Version: current [26.x]
 On this page
 # 22.x Release Notes
 Releases are listed in reverse order, starting with the latest release of Dremio 22.x.
-## 22.2.3 (January 2024) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2223-january-2024-enterprise "Direct link to 2223-january-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new "Direct link to What's New")
+## 22.2.3 (January 2024) Enterprise​
+### What's New​
   * Added the option to force parallelism in write queries by using a round-robin exchange before the writer, even when input is only single-threaded. Enable this option by enabling the support key `planner.writer.round_robin`. 
 DX-64388
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed "Direct link to Issues Fixed")
+### Issues Fixed​
   * Changing the size of an existing EC2 engine in Dremio's AWS Edition no longer resets the engine type. 
 DX-54590
   * Split assignment for tables in Delta Lake format no longer result in a NullPointerException. 
@@ -51,15 +52,15 @@ DX-84620
 DX-84755
 
 
-## 22.2.2 (October 2023) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2222-october-2023-enterprise "Direct link to 2222-october-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-1 "Direct link to What's New")
+## 22.2.2 (October 2023) Enterprise​
+### What's New​
   * When run by `PUBLIC` users, the data returned by the `apiv2/user/`userid`` internal API is limited to only information that is required to search users and assign privileges. 
 DX-82605
   * Added support for full outer joins that resolve to a `true` join condition. 
 DX-59222
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-1 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Metadata on AWS Glue sources was not being refreshed according to the schedule defined on the source. In some cases, new data was only seen after running `ALTER TABLE `table` REFRESH METADATA`. 
 DX-82900
   * In some cases, running `ALTER TABLE `table_path` FORGET METADATA` against a view could result in the view being deleted instead of the command failing with an error. 
@@ -96,8 +97,8 @@ DX-71937
 DX-41291
 
 
-## 22.2.1 )July 2023) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2221-july-2023-enterprise "Direct link to 2221-july-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-2 "Direct link to What's New")
+## 22.2.1 )July 2023) Enterprise​
+### What's New​
   * This release includes some changes to improve logical planning performance and query planning times in certain scenarios.
 
 
@@ -107,7 +108,7 @@ DX-41291
   * For Azure Blob Storage and Data Lake Gen 2 sources, you can now enable checksum-based verification to ensure data integrity during network transfers. To enable this option, set the `store.azure.checksum` support key to `true`.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-2 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Resolved a frequent internal hash collision in the C3 eviction path that disabled the cloud columnar cache (C3), potentially causing performance degradation. Dremio now expands this internal range to make this collision extremely rare. In addition, C3 service is always kept operational in spite of this extremely rare scenario.
 
 
@@ -144,8 +145,8 @@ DX-41291
   * For some queries, all available memory was getting consumed in the planning phase, resulting in allocation failures and causing all other queries to fail.
 
 
-## 22.2.0 (June 2023) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2220-june-2023-enterprise "Direct link to 2220-june-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-3 "Direct link to Issues Fixed")
+## 22.2.0 (June 2023) Enterprise​
+### Issues Fixed​
   * Added more security around DML permission checks to ensure that users can access data only according to their privileges. 
 DX-64746 
   * Improved permission validation around view-based query execution. 
@@ -154,8 +155,8 @@ DX-64688
 DX-63531 
 
 
-## 22.1.30 (April 2023) Enterprise[​](/release-notes/unsupported-releases/version-220-release#22130-april-2023-enterprise "Direct link to 22130-april-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-4 "Direct link to Issues Fixed")
+## 22.1.30 (April 2023) Enterprise​
+### Issues Fixed​
   * Pushdowns were not working for `UUID` data types on a PostgresSQL source. This change maps PostgresSQL's `UUID` type to Dremio's `VARCHAR`. Comparison operators (=, &gt;, &lt;, &lt;=, &gt;=, !=) between a UUID and a UUID and between a `UUID` and a `VARCHAR` will now be pushed down. 
 DX-62978 
   * In some cases, using the `CONCAT` function with non-string operands would yield results that were truncated incorrectly. 
@@ -182,15 +183,15 @@ DX-48015
 DX-20318 
 
 
-## 22.1.20 (March 2023) Enterprise[​](/release-notes/unsupported-releases/version-220-release#22120-march-2023-enterprise "Direct link to 22120-march-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-3 "Direct link to What's New")
+## 22.1.20 (March 2023) Enterprise​
+### What's New​
   * This release adds support for reading `TIME` and `TIMESTAMP` microseconds in Parquet files. Microseconds are truncated and the value is stored as milliseconds. 
 DX-34989 
   * Added support for `timestamp` to `bigint` coercion in Hive-Parquet tables. 
 DX-60456 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-5 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Following the upgrade to Dremio 22.1.7, Power BI Desktop and Gateway may not have been able to connect to Dremio via Azure Active Directory. 
 DX-60942 
   * In some cases, XML responses from AWS Glue were not being handled properly and causing queries to fail. 
@@ -219,8 +220,8 @@ DX-56347
 DX-37150 
 
 
-## 22.1.7 (December 2022) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2217-december-2022-enterprise "Direct link to 2217-december-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-6 "Direct link to Issues Fixed")
+## 22.1.7 (December 2022) Enterprise​
+### Issues Fixed​
   * Fixed an issue that was affecting fragment scheduling efficiency under heavy workloads, resulting in high sleep times for some queries. 
 DX-57579 
   * After offloading a column with type `DOUBLE` and offloading again to change the type to `VARCHAR`, the column type was still `DOUBLE` and read operations on the table failed with an exception. 
@@ -233,8 +234,8 @@ DX-57398
 DX-53755 
 
 
-## 22.1.5 (November 2022) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2215-november-2022-enterprise "Direct link to 2215-november-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-7 "Direct link to Issues Fixed")
+## 22.1.5 (November 2022) Enterprise​
+### Issues Fixed​
   * The `queries.log` file was showing zero values for `inputRecords`, `inputBytes`, `outputRecords`, `outputBytes`, and `metadataRetrieval`, even though valid values were included in the job profile. 
 DX-58499 
   * For Parquet sources on Amazon S3, files were being automatically formatted/promoted even though the auto-promote setting had been disabled. 
@@ -277,8 +278,8 @@ DX-28211
 DX-55460 
 
 
-## 22.1.4 (October 2022) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2214-october-2022-enterprise "Direct link to 2214-october-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-8 "Direct link to Issues Fixed")
+## 22.1.4 (October 2022) Enterprise​
+### Issues Fixed​
   * In some cases, queries against a table that was promoted from text files containing Windows (CRLF) line endings were failing or producing an `Only one data line detected` error. 
 DX-57713 
   * Following the upgrade to Dremio 22.1.2, when promoting JSON files to tables and building views from those tables, queries against the views were failing with a `NullPointerException`. 
@@ -297,13 +298,13 @@ DX-53358
 DX-40559 
 
 
-## 22.1.2 (October 2022) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2212-october-2022-enterprise "Direct link to 2212-october-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-4 "Direct link to What's New")
+## 22.1.2 (October 2022) Enterprise​
+### What's New​
   * Added a new Admin CLI command, `dremio-admin remove-duplicate-roles`, that will remove duplicate LDAP groups or local roles and consolidate them into a single role. For more information, see [Remove Duplicate Roles](/reference/admin-cli/remove-roles). 
 SW Only DX-51484 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-9 "Direct link to Issues Fixed")
+### Issues Fixed​
   * After upgrading to Dremio 22.1.1, some coordinator nodes failed to start due to a failure in connecting to S3-compatible storage (sources or distributed storage configuration) that required path style access. 
 DX-57044 
   * Following the upgrade to Dremio 22, Support Keys of type `DOUBLE` would no longer accept decimal values. 
@@ -346,11 +347,11 @@ DX-40891
 DX-22966 
 
 
-## 22.1.1 (August 2022)[​](/release-notes/unsupported-releases/version-220-release#2211-august-2022 "Direct link to 22.1.1 \(August 2022\)")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-5 "Direct link to What's New")
+## 22.1.1 (August 2022)​")
+### What's New​
 DX-32718 
   * Dremio now supports connecting to Amazon S3 sources using an AWS PrivateLink URL. For more information, see [Amazon S3](/data-sources/object/s3).
-  * In this release, embedded Nessie historical data that is not used by Dremio is purged on a periodic basis to improve performance and avoid future upgrade issues. The maintenance interval can be modified with the `nessie.kvversionstore.maintenance.period_minutes` [support key](/help-support/support-settings/#support-keys), and you can perform maintenance manually using the `nessie-maintenance` [admin CLI](/reference/admin-cli/nessie-maintenance) command. 
+  * In this release, embedded Nessie historical data that is not used by Dremio is purged on a periodic basis to improve performance and avoid future upgrade issues. The maintenance interval can be modified with the `nessie.kvversionstore.maintenance.period_minutes` [support key](/help-support/support-settings/), and you can perform maintenance manually using the `nessie-maintenance` [admin CLI](/reference/admin-cli/nessie-maintenance) command. 
 DX-53159 
 
 
@@ -368,7 +369,7 @@ DX-45895
   * This release enables non-partition column runtime filters with row level pruning.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-10 "Direct link to Issues Fixed")
+### Issues Fixed​
   * The `fields` parameter was not returned for tables in external sources when fetching table details via `/api/v3/catalog{id}` if the table had not been queried. 
 DX-50330 
   * Dremio was failing to parse queries on a view when the query originated from Power BI, or another JDBC/ODBC client, that had the `quoting` connection property set to a non-default value. 
@@ -456,8 +457,8 @@ DX-40130
 DX-50242 
 
 
-## 22.0.3 (July 2022) Enterprise[​](/release-notes/unsupported-releases/version-220-release#2203-july-2022-enterprise "Direct link to 2203-july-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-6 "Direct link to What's New")
+## 22.0.3 (July 2022) Enterprise​
+### What's New​
 DX-53574 
   * Amazon OpenSearch is now supported as a source on Dremio's AWS Edition. For more information, see [Amazon OpenSearch Service](/data-sources/databases/opensearch).
 
@@ -470,8 +471,8 @@ DX-51828
   * Elasticsearch is now supported as a source on Dremio's AWS Edition. For more information, see [Elasticsearch](/data-sources/databases/elasticsearch).
 
 
-## 22.0.0 (June 2022)[​](/release-notes/unsupported-releases/version-220-release#2200-june-2022 "Direct link to 22.0.0 \(June 2022\)")
-### What's New[​](/release-notes/unsupported-releases/version-220-release#whats-new-7 "Direct link to What's New")
+## 22.0.0 (June 2022)​")
+### What's New​
   * This release adds support for SQL scalar [user-defined functions](/reference/sql/commands/functions) (UDFs), which are callable routines that make it easier for you to write and reuse SQL logic across queries. UDFs let you extend the capabilities of Dremio SQL, provide a layer of abstraction to simplify query construction, encapsulate business logic, and support row and column policies for access control.
   * Dremio now supports [row-access and column-masking policies](/data-products/govern/row-column-policies-udf) for row and column controls over user query access to sensitive tables, views, and columns. This allows administrators to dynamically exclude or mask private data at the column and row levels prior to query execution and without physically altering the original values.
   * This release adds to existing Iceberg DML capabilities allows users to run `DELETE`, `UPDATE`, `MERGE`, and `TRUNCATE` statements against Iceberg tables. See [SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables) for more information.
@@ -480,7 +481,7 @@ DX-51828
 
 DX-48667 
   * Autocomplete is now available in the SQL Editor. When enabled, autocomplete lets you view and insert possible completions in the editor using the mouse or the arrow keys with **Tab** or **Enter**. Autocomplete can provide suggestions for SQL keywords, catalog objects, and functions while you are constructing SQL statements. Suggestions depend on the current context. The autocomplete feature can be enabled or disabled for all users under **Settings &gt; SQL**.
-  * The SQL Runner now allows you to save your SQL as a script. See [Querying Your Data](/query-manage/querying-data) for more information.
+  * The SQL Runner now allows you to save your SQL as a script.
     * Script owners are indicated with a small orange flag next their username. Script owners cannot be removed or have their privileges changed.
     * You can share scripts with others in your organization by adding users and assigning privileges to **View** , **Modify** , **Manage Grants** , or **Delete**.
     * When adding or modifying script privileges, the `View` privilege is enabled automatically if any of the other privileges are enabled
@@ -600,13 +601,13 @@ DX-48365
 
 DX-48714 
   * User can now see the wiki for a folder if they can access the folder, even if implicitly via a shared dataset that is nested inside.
-  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information. 
+  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See Clean Metadata for more information. 
 DX-49772 
   * Users who have been granted the `CREATE ROLE` privilege can view and update role members. 
 DX-50981 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-220-release#issues-fixed-11 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Fixed a number of issues that could cause the _"An Unexpected Error Occurred"_ dialog box to be displayed in Dremio, providing no potential solution except to call Dremio Support. 
 DX-43130 
   * Running `ALTER PDS` to refresh metadata on a Hive source was resulting in the following error: `PLAN ERROR: NullPointerException`
@@ -667,7 +668,7 @@ DX-48002
   * When Iceberg features were enabled, the location in the API was incorrect for some tables in S3 sources.
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-220-release#known-issues "Direct link to Known Issues")
+### Known Issues​
   * Azure Data Explorer and Microsoft Azure Synapse Analytics sources are not supported and cannot be added in the MapR edition of Dremio 22. 
 DX-51248 
   * When multiple SQL statements are executed in the SQL Runner, any jobs that may have failed are not listed in the job summary below the SQL Editor. 
@@ -680,13 +681,13 @@ DX-52443
 
 Was this page helpful?
 [Previous 23.x Release Notes](/release-notes/unsupported-releases/version-230-release)[Next 21.x Release Notes](/release-notes/unsupported-releases/version-210-release)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous 23.x Release Notes](/release-notes/unsupported-releases/version-230-release)[Next 21.x Release Notes](/release-notes/unsupported-releases/version-210-release)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Frelease-notes%2Funsupported-releases%2Fversion-220-release%2F&_biz_t=1777950703960&_biz_i=22.x%20Release%20Notes%20%7C%20Dremio%20Documentation&_biz_n=745&rnd=426002&cdn_o=a&_biz_z=1777950703960)
+!

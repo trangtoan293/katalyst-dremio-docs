@@ -2,7 +2,7 @@
   "label": "Govern",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Govern"
+    "type": "doc",
+    "id": "data-products/govern/current-data-products-govern"
   }
 }

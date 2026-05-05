@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/azure-synapse-analytics
+slug: /data-sources/databases/azure-synapse-analytics
 title: "Microsoft Azure Synapse Analytics | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64039.850472708
@@ -14,25 +15,25 @@ Version: current [26.x]
 On this page
 # Microsoft Azure Synapse Analytics
 Dremio supports integrations with organizations using Azure Synapse Analytics dedicated SQL pools via the external source.
-## Requirements[​](/data-sources/databases/azure-synapse-analytics#requirements "Direct link to Requirements")
+## Requirements​
   * [Dremio v19.3+](/release-notes/unsupported-releases/version-1900-release-notes)
 
 
-## Configuring Synapse Analytics as a Source[​](/data-sources/databases/azure-synapse-analytics#configuring-synapse-analytics-as-a-source "Direct link to Configuring Synapse Analytics as a Source")
+## Configuring Synapse Analytics as a Source​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select **Microsoft Azure Synapse Analytics**.
 
 
-### General[​](/data-sources/databases/azure-synapse-analytics#general "Direct link to General")
+### General​
 Under **Name** , enter the name to identify the data source in Dremio. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
-#### Connection[​](/data-sources/databases/azure-synapse-analytics#connection "Direct link to Connection")
+#### Connection​
 Describe the Synapse Analytics SQL Server workspace used in this connection.
   * Under **Host** , enter the URL for your dedicated SQL pool, which typically ends in `.sql.azuresynapse.net`.
   * Under **Port (optional)** , enter the port required to access the data source.
   * Under **Database** , enter the database's name. Only this database is accessed by Dremio.
 
 
-#### Authentication[​](/data-sources/databases/azure-synapse-analytics#authentication "Direct link to Authentication")
+#### Authentication​
 Select an authentication option:
   * **No Authentication** : Dremio does not attempt to provide any authentication when connecting with the SQL pool.
   * **Master Credentials** : Dremio must provide a specified username and password in order to access the SQL pool.
@@ -59,7 +60,7 @@ Select an authentication option:
 
 
 Select the **Encrypt connection** option to encrypt the connection to Microsoft Azure Synapse Analytics. Clear the checkbox to disable encryption.
-### Advanced Options[​](/data-sources/databases/azure-synapse-analytics#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 The following settings control more advanced functionalities in Dremio.
   * **Advanced Options**
     * **Show only the initial database used for connecting -** This restricts Dremio's access only to a default database as specified on the **General** table.
@@ -75,7 +76,7 @@ The following settings control more advanced functionalities in Dremio.
     * **Value -** The value associated with the custom property.
 
 
-### Reflection Refresh[​](/data-sources/databases/azure-synapse-analytics#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
 This tab controls the frequency of Reflection refreshes or the timespan for expiration for any queries performed using this data source.
   * **Never refresh -** Prevents any query Reflections associated with this source from refreshing.
   * **Refresh every -** Sets the time interval by which Reflections for this source are refreshed. This may be set to hours, days, and weeks.
@@ -83,7 +84,7 @@ This tab controls the frequency of Reflection refreshes or the timespan for expi
   * **Expire after -** Sets the time after a Reflection is created that it then expires and can no longer be used for queries. This may be set to hours, days, and weeks.
 
 
-### Metadata[​](/data-sources/databases/azure-synapse-analytics#metadata "Direct link to Metadata")
+### Metadata​
 This tab offers settings that control how dataset details are fetched and refreshed.
   * **Dataset Handling**
     * **Remove dataset definitions if underlying data is unavailable -** If this box is not checked and the underlying files under a folder are removed or the folder/source is not accessible, Dremio does not remove the dataset definitions. This option is useful in cases when files are temporarily deleted and put back in place with new sets of files.
@@ -96,22 +97,22 @@ This tab offers settings that control how dataset details are fetched and refres
       * **Expire after -** Specifies the timespan for when dataset details expire after a dataset is queried. This can be set by minutes, hours, days, and weeks.
 
 
-### Privileges[​](/data-sources/databases/azure-synapse-analytics#privileges "Direct link to Privileges")
+### Privileges​
 On the Privileges tab, you can grant privileges to specific users or roles. See [Access Controls](/security/rbac) for additional information about privileges. All privileges are optional.
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
   3. Click **Save** after setting the configuration.
 
 
-## Updating a Microsoft Azure Synapse Analytics Source[​](/data-sources/databases/azure-synapse-analytics#updating-a-microsoft-azure-synapse-analytics-source "Direct link to Updating a Microsoft Azure Synapse Analytics Source")
+## Updating a Microsoft Azure Synapse Analytics Source​
 To update a Microsoft Azure Synapse Analytics source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
-  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see [Configuring Synapse Analytics as a Source](/data-sources/databases/azure-synapse-analytics#configuring-synapse-analytics-as-a-source).
+  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see Configuring Synapse Analytics as a Source.
   4. Click **Save**.
 
 
-## Deleting a Microsoft Azure Synapse Analytics Source[​](/data-sources/databases/azure-synapse-analytics#deleting-a-microsoft-azure-synapse-analytics-source "Direct link to Deleting a Microsoft Azure Synapse Analytics Source")
+## Deleting a Microsoft Azure Synapse Analytics Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 To delete a Microsoft Azure Synapse Analytics source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -121,7 +122,7 @@ To delete a Microsoft Azure Synapse Analytics source, perform these steps:
 
 
 Deleting a source causes all downstream views that depend on objects in the source to break.
-## Predicate Pushdowns[​](/data-sources/databases/azure-synapse-analytics#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Dremio delegates the execution of these expressions and functions to the database being queried, often dramatically improving query performance. It can also offload entire SQL queries that include one or more of these expressions and functions.
 `%`, `*`, `+`, `-`, `/`  
 `<`, `<=`, `<>`, `=`, `>`, `>=`, `!=`  
@@ -224,17 +225,17 @@ UCASE
 UPPER  
 YEAR  
 
-## Running Queries Directly on Azure Synapse Analytics Through Dremio[​](/data-sources/databases/azure-synapse-analytics#running-queries-directly-on-azure-synapse-analytics-through-dremio "Direct link to Running Queries Directly on Azure Synapse Analytics Through Dremio")
+## Running Queries Directly on Azure Synapse Analytics Through Dremio​
 Dremio users can pass queries through Dremio to run on Azure Synapse Analytics. Doing so can sometimes decrease query execution times. For more information, see [Querying Relational-Database Sources Directly](/help-support/advanced-topics/external-queries).
 Was this page helpful?
 [Previous Microsoft Azure Data Explorer](/data-sources/databases/azure-data-explorer)[Next Microsoft SQL Server](/data-sources/databases/sql-server)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Microsoft Azure Data Explorer](/data-sources/databases/azure-data-explorer)[Next Microsoft SQL Server](/data-sources/databases/sql-server)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Fazure-synapse-analytics%2F&_biz_t=1777950359675&_biz_i=Microsoft%20Azure%20Synapse%20Analytics%20%7C%20Dremio%20Documentation&_biz_n=81&rnd=977333&cdn_o=a&_biz_z=1777950359675)
+!

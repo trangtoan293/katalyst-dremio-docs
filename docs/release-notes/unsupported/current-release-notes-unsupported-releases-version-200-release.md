@@ -1,17 +1,18 @@
 ---
 url: /release-notes/unsupported-releases/version-200-release
+slug: /release-notes/unsupported-releases/version-200-release
 title: "20.x Release Notes | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64381.489848416
 ---
 
-[Skip to main content](/release-notes/unsupported-releases/version-200-release#__docusaurus_skipToContent_fallback)
+Skip to main content
 [![Dremio Documentation Home Page](https://docs.dremio.com/images/Dremio-wordmark-light.svg) **Documentation**](/)
-[](/dremio-cloud)
-[](/)
+
+
 [current [26.x]](/release-notes/unsupported-releases/version-200-release)
   * [current [26.x]](/release-notes/unsupported-releases/version-200-release)
-  * [25.x](/25.x)
+  * 25.x
 
 
 [Start for Free](https://www.dremio.com/get-started/)
@@ -38,11 +39,11 @@ Search`⌘``K`
     * [Legacy Dremio JDBC Release Notes](/release-notes/jdbc)
     * [Dependencies and Licenses](/release-notes/dependencies)
     * [Unsupported Releases](/release-notes/unsupported-releases)
-      * [24.x Release Notes](/release-notes/unsupported-releases/version-240-release)
+      * 24.x Release Notes
       * [23.x Release Notes](/release-notes/unsupported-releases/version-230-release)
       * [22.x Release Notes](/release-notes/unsupported-releases/version-220-release)
       * [21.x Release Notes](/release-notes/unsupported-releases/version-210-release)
-      * [20.x Release Notes](/release-notes/unsupported-releases/version-200-release)
+      * 20.x Release Notes
       * [19.x Release Notes](/release-notes/unsupported-releases/version-1900-release-notes)
       * [18.x Release Notes](/release-notes/unsupported-releases/version-1800-release-notes)
       * [17.x Release Notes](/release-notes/unsupported-releases/version-1700-release-notes)
@@ -57,21 +58,21 @@ Version: current [26.x]
 On this page
 # 20.x Release Notes
 Releases are listed in reverse order, starting with the latest release of Dremio 20.x.
-## 20.9.0 (June 2023) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2090-june-2023-enterprise "Direct link to 2090-june-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed "Direct link to Issues Fixed")
+## 20.9.0 (June 2023) Enterprise​
+### Issues Fixed​
   * Improved permission validation around view-based query execution. 
 DX-64688
   * In this release, the plan cache is user-specific for increased security, and it will be utilized when the same query is executed by the same user. 
 DX-63531
 
 
-## 20.8.0 (November 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2080-november-2022-enterprise "Direct link to 2080-november-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-200-release#whats-new "Direct link to What's New")
+## 20.8.0 (November 2022) Enterprise​
+### What's New​
   * Added support key `store.parquet.async.enable_timestamp_check` with the default value set to `true`. Setting this key to `false` disables the timestamp check for asynchronous reads. 
 DX-46882
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-1 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Following the upgrade to Dremio 20.x, `is_member(table.column)` was returning zero results on views that used row-level security. 
 DX-57690
   * Improved reading of double values from ElasticSearch to maintain precision. 
@@ -80,8 +81,8 @@ DX-57534
 DX-40512
 
 
-## 20.7.0 (October 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2070-october-2022-enterprise "Direct link to 2070-october-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-2 "Direct link to Issues Fixed")
+## 20.7.0 (October 2022) Enterprise​
+### Issues Fixed​
 DX-57713
   * In some cases, queries against a table that was promoted from text files containing Windows (CRLF) line endings were failing or producing an `Only one data line detected` error.
 
@@ -126,8 +127,8 @@ DX-37600
   * Following upgrades to Dremio 18, promotion of HDFS-based datasets was failing if both unlimited splits and the use of Iceberg tables were enabled.
 
 
-## 20.6.0 (August 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2060-august-2022-enterprise "Direct link to 2060-august-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-3 "Direct link to Issues Fixed")
+## 20.6.0 (August 2022) Enterprise​
+### Issues Fixed​
 DX-54176, DX-54174
   * This release includes two fixes to resolve potential security issues.
 
@@ -156,13 +157,13 @@ DX-36794
   * In some cases, after adding a new file to a promoted folder on an HDFS source, the file was not reflected in new queries following a refresh.
 
 
-## 20.5.0 (July 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2050-july-2022-enterprise "Direct link to 2050-july-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-200-release#whats-new-1 "Direct link to What's New")
+## 20.5.0 (July 2022) Enterprise​
+### What's New​
 DX-51484
   * Added a new Admin CLI command, `dremio-admin remove-duplicate-roles`, that will remove duplicate LDAP groups or local roles and consolidate them into a single role. For more information, see [Remove Duplicate Roles](/reference/admin-cli/remove-roles).
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-4 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-52061
   * The `dremio-admin clean` CLI parameter `-d` (or `--delete-orphan-datasetversions`) was deleting named dataset versions during clean-up. With this release, only temporary `tmp.UNTITLED` dataset versions will be deleted.
 
@@ -179,29 +180,29 @@ DX-40559
   * JDBC clients could not see parent objects (folders, spaces, etc.) unless they had explicit `SELECT` privileges on those objects, even if they had permissions on a child object.
 
 
-## 20.4.2 (December 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2042-december-2022-enterprise "Direct link to 2042-december-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-5 "Direct link to Issues Fixed")
+## 20.4.2 (December 2022) Enterprise​
+### Issues Fixed​
 DX-57579
   * Fixed an issue that was affecting fragment scheduling efficiency under heavy workloads, resulting in high sleep times for some queries.
 
 
-## 20.4.1 (June 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2041-june-2022-enterprise "Direct link to 2041-june-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-6 "Direct link to Issues Fixed")
+## 20.4.1 (June 2022) Enterprise​
+### Issues Fixed​
 DX-52061
   * The `dremio-admin clean` CLI parameter `-d` (or `--delete-orphan-datasetversions`) was deleting named dataset versions during clean-up. With this release, only temporary `tmp.UNTITLED` dataset versions will be deleted.
 
 
-## 20.4.0 (May 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2040-may-2022-enterprise "Direct link to 2040-may-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-200-release#whats-new-2 "Direct link to What's New")
+## 20.4.0 (May 2022) Enterprise​
+### What's New​
 DX-49772
-  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information.
+  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See Clean Metadata for more information.
 
 
 DX-47557
-  * The `-j` argument of the `dremio-admin clean` CLI command has been extended to purge temporary dataset versions associated with deleted jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information.
+  * The `-j` argument of the `dremio-admin clean` CLI command has been extended to purge temporary dataset versions associated with deleted jobs. See Clean Metadata for more information.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-7 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-48818
   * Updated the Postgres JDBC driver from version 42.2.18 to version 42.3.4 to address 
 
@@ -242,8 +243,8 @@ DX-36355
   * When attempting to download certain query results as JSON or Parquet files, the downloaded file size was zero bytes and resulted in an `IndexOutofBounds` exception.
 
 
-## 20.3.1 (May 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2031-may-2022-enterprise "Direct link to 2031-may-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-8 "Direct link to Issues Fixed")
+## 20.3.1 (May 2022) Enterprise​
+### Issues Fixed​
 DX-48001
   * Fixed an upgrade issue related to RBAC that was generating an unknown error when clicking the **Privileges** tab on a file system source.
 
@@ -256,8 +257,8 @@ DX-49417
   * Some IdPs were missing the `expires_in` field in the /token endpoint response. Dremio will fall back to the `exp` claim in the JWT. If this claim is missing from the JWT, the default expiration timeout will be set to 3600 seconds.
 
 
-## 20.3.0 (May 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2030-may-2022-enterprise "Direct link to 2030-may-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-9 "Direct link to Issues Fixed")
+## 20.3.0 (May 2022) Enterprise​
+### Issues Fixed​
 DX-48914
   * When a `CASE` was used in a `WHERE` filter with an `AND` or an `OR`, it would be incorrectly wrapped in a `CAST`, resulting in the following error: `DATA_READ ERROR: Source 'sqlGrip' returned error 'Incorrect syntax near the keyword 'AS'.'`
 
@@ -314,8 +315,8 @@ DX-36544
   * Running `ALTER PDS` to refresh metadata on a Hive source was resulting in the following error: `PLAN ERROR: NullPointerException`*
 
 
-## 20.2.3 (April 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2023-april-2022-enterprise "Direct link to 2023-april-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-10 "Direct link to Issues Fixed")
+## 20.2.3 (April 2022) Enterprise​
+### Issues Fixed​
 DX-47931
   * Fixed an issue that could result in duplicate column names being written by the planner when an expression in the project included a field named `*`.
 
@@ -324,8 +325,8 @@ DX-48001
   * Fixed an upgrade issue related to RBAC that was generating an unknown error when clicking the **Privileges** tab on a filesystem-based source.
 
 
-## 20.2.2 (March 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2022-march-2022-enterprise "Direct link to 2022-march-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-11 "Direct link to Issues Fixed")
+## 20.2.2 (March 2022) Enterprise​
+### Issues Fixed​
 DX-47112
   * When running a specific query with a `HashJoin`, executor nodes were stopping unexpectedly with the following error: `SYSTEM ERROR: ExecutionSetupException`
 
@@ -334,8 +335,8 @@ DX-47076
   * Resolved an issue with dropping `float` columns for ElasticSearch data sources when **Force Double Precision** was enabled.
 
 
-## 20.2.1 (March 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2021-march-2022-enterprise "Direct link to 2021-march-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-12 "Direct link to Issues Fixed")
+## 20.2.1 (March 2022) Enterprise​
+### Issues Fixed​
 DX-39697
   * The `IS_MEMBER()` function was not working with internal roles, returning `false` when it should have been returning `true`.
 
@@ -344,13 +345,13 @@ DX-39442
   * Accelerated queries were not being written to queries.json.
 
 
-## 20.2.0 (March 2022) Enterprise[​](/release-notes/unsupported-releases/version-200-release#2020-march-2022-enterprise "Direct link to 2020-march-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-200-release#whats-new-3 "Direct link to What's New")
+## 20.2.0 (March 2022) Enterprise​
+### What's New​
 DX-42480
   * In this release, Dremio is now pushing down computation for extra hash join conditions.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-13 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-42552
   * After upgrading from 18.x or 19.x to 20.x, users encountered the error `Failed to get iceberg metadata` when querying datasets. This issue occurred because of how the user's metadata had been stored in Iceberg prior to the upgrade.
 
@@ -399,8 +400,8 @@ DX-46105
   * When formatting GCS data at a folder level into a table or when selecting data from an existing table built on GCS, if any data values in the partitioning field included a space, the action would fail with: `RuntimeException: the specified key does not exist`
 
 
-## 20.1.0 (January 2022)[​](/release-notes/unsupported-releases/version-200-release#2010-january-2022 "Direct link to 20.1.0 \(January 2022\)")
-### What's New[​](/release-notes/unsupported-releases/version-200-release#whats-new-4 "Direct link to What's New")
+## 20.1.0 (January 2022)​")
+### What's New​
 DX-40944
   * `PageHeaderWithOffset` objects will be excluded from the heap when reading Dremio Parquet files. Instead, column indexes will be used to optimize performance and reduce heap usage when generating page headers and stats.
 
@@ -409,7 +410,7 @@ DX-39489
   * This release adds a new support key, `authorizer.auth.cache.expiration_ms`, for overriding the default authorization expiry for sources using a Table Authorizer plugin. For sources that support impersonation, the global default expiration is 24 hours and can be changed in the UI. For plugins that do not support impersonation, however, the new support key is the only way to modify the authorization expiry.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-14 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-42893
   * In some cases, if a Parquet file in a Delta Lake table had many row groups, `count(*)` queries were failing due to a `divide by 0` exception.
 
@@ -438,18 +439,18 @@ DX-40116
   * Non-admin users who had been granted view permissions for job history could view jobs from other users, but the **User** filter was not available. In this release, non-admin users with permission to view job history can access the **User** filter on the Jobs page.
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-200-release#known-issues "Direct link to Known Issues")
+### Known Issues​
 DX-42552
 **Issue:**  
 After upgrading from 18.x or 19.x to 20.1, users encountered the error "Failed to get iceberg metadata" when querying datasets. This issue occurs because of how the user's metadata was stored in Iceberg prior to the upgrade.
 **Workaround:**  
 After the upgrade to 20.1 is complete, do the following for all affected datasets:
-  1. Use `ALTER PDS` to forget the metadata for affected datasets (see [Forgetting Table Metadata](/reference/sql/commands/datasets#forgetting-table-metadata)).
-  2. Use `ALTER PDS` to refresh the metadata for affected datasets (see [Refreshing Table Metadata](/reference/sql/commands/datasets#refreshing-table-metadata)).
+  1. Use `ALTER PDS` to forget the metadata for affected datasets (see [Forgetting Table Metadata](/reference/sql/commands/datasets)).
+  2. Use `ALTER PDS` to refresh the metadata for affected datasets (see [Refreshing Table Metadata](/reference/sql/commands/datasets)).
 
 
-## 20.0.0 (December 2021)[​](/release-notes/unsupported-releases/version-200-release#2000-december-2021 "Direct link to 20.0.0 \(December 2021\)")
-### What's New[​](/release-notes/unsupported-releases/version-200-release#whats-new-5 "Direct link to What's New")
+## 20.0.0 (December 2021)​")
+### What's New​
 ### Elasticsearch Connector - Does not require documentation
   * Audit Logging: 
 DX-24075
@@ -469,7 +470,7 @@ DX-38370
 Support now exists for [using an organization's Power BI credentials](/security/authentication/application-authentication/power-bi-aad-config) with Azure Active Directory (AAD) as an identity provider (IdP). As part of this functionality, AAD gives the Dremio service a JSON web token (JWT) at the end of the Azure AD OAuth flow, after which Dremio verifies the token and authorizes a user session until its associated expiration. 
   * Ranger Row Filtering & Column-Masking: 
 DX-39582
-For Hive sources with Apache Ranger authorization configured, Dremio now offers full support of [external column-masking and row-filtering via Ranger security policies](/security/integrations/row-column-policies-ranger#using-apache-ranger-security-policies). This functionality offers row and column controls over the previous whole-table/view access controls, local row permissions, and column-masking in queries offered historically. Using the Ranger external security service, Dremio now enforces external policies at query runtime. 
+For Hive sources with Apache Ranger authorization configured, Dremio now offers full support of [external column-masking and row-filtering via Ranger security policies](/security/integrations/row-column-policies-ranger). This functionality offers row and column controls over the previous whole-table/view access controls, local row permissions, and column-masking in queries offered historically. Using the Ranger external security service, Dremio now enforces external policies at query runtime. 
 
 
 The following filtering/masking options are supported:
@@ -504,7 +505,7 @@ CS-9357
 
 
 DX-37092
-  * Dremio users may now create [nested roles](/security/rbac/roles#roles-tab), or child roles assigned to a parent role. These nested roles inherit of the privileges set at the parent level in addition to those granted specifically to the nested role. This allows for even more fine-grain access management for users based on role type. Currently, this may only be done via the SQL editor using the [GRANT ROLE TO ROLE command](/reference/sql/commands/roles#grant-role-to-role). 
+  * Dremio users may now create [nested roles](/security/rbac/roles), or child roles assigned to a parent role. These nested roles inherit of the privileges set at the parent level in addition to those granted specifically to the nested role. This allows for even more fine-grain access management for users based on role type. Currently, this may only be done via the SQL editor using the [GRANT ROLE TO ROLE command](/reference/sql/commands/roles). 
 DX-37770
   * For organizations using ADLS v2 sources, Dremio now supports adding whitelisted containers using AAD credentials without the need for Azure role-based access control (IAM role). Only permissions to access the container (read and write) must be set. From the source's **Settings** dialog, under the **Advanced Options** tab, users may set a specific directory inside a container using AAD credentials wherein subdirectories of that path may be accessed using only read permissions or read/write access (read/write must be granted at the container levels at minimum, or also the end directory to add sources). The path must follow the format of `container_name/dir0/.../dir_name`. 
 DX-34486
@@ -525,12 +526,12 @@ DX-35518, removed from 20.0
 * Support has been added for `UserAdmin` role assignment using SCIM APIs. Organizations may use this role to provision users and groups without requiring admin status in Dremio.
 DX-40509
 CS-10324
-  * Added a new [environment variable](/deploy-dremio/other-options/standalone/dremio-config/dremio-env) to the `dremio-env` file (`DREMIO_GC_LOG_TO_CONSOLE="no"`) to configure whether garbage collection sends messages only to the console or logs. If set to `"yes"`, the `DREMIO_LOG_DIR` environmental variable is ignored and GC logs are sent only to the console. If set to `no`, logs are instead sent to the log file. 
+  * Added a new environment variable to the `dremio-env` file (`DREMIO_GC_LOG_TO_CONSOLE="no"`) to configure whether garbage collection sends messages only to the console or logs. If set to `"yes"`, the `DREMIO_LOG_DIR` environmental variable is ignored and GC logs are sent only to the console. If set to `no`, logs are instead sent to the log file. 
 DX-39471
   * Updated Dremio's supported version of the `Azure.Storage.Common` library to v12.14.1, at the recommendation of Microsoft. Organizations using older versions of Azure storage libraries occasionally encountered data corruption issues, which is addressed with the newer SDK version.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-200-release#issues-fixed-15 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-38496
 CS-11765
 **_Users attempting to obtain Oracle row counts noticed a significant delay._**  
@@ -582,7 +583,7 @@ This has been addressed by not projecting any fields in Dremio with a `NULL` val
 DX-36237
 **_Organizations with 1000+ users encountered noticeable load delays when attempting to use the user filter drop-down from the Jobs screen._**   
 This has been addressed by optimizing the drop-down so that users are loaded rapidly without any performance issues.
-### Breaking Changes[​](/release-notes/unsupported-releases/version-200-release#breaking-changes "Direct link to Breaking Changes")
+### Breaking Changes​
   * The `sys.dependencies` system table, which contains metadata for Reflection dependencies in Dremio, has been renamed to `sys.reflection_dependencies`.
 
 
@@ -596,67 +597,67 @@ CS-9544
 [In v18.0](/release-notes/version-1800-release-notes), support for mixed data types became deprecated. However, the support key to continue using mixed types was left active for users to prepare more fully for this transition. As of Dremio 20.0, the support key for mixed data types is disabled and may no longer be used from the Support Keys page.
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-200-release#known-issues-1 "Direct link to Known Issues")
+### Known Issues​
 DX-42552
 **Issue:**  
 After upgrading from 18.x or 19.x to 20.0, users encountered the error "Failed to get iceberg metadata" when querying datasets. This issue occurs because of how the user's metadata was stored in Iceberg prior to the upgrade.
 **Workaround:**  
 After the upgrade to 20.0 is complete, do the following for all affected datasets:
-  1. Use `ALTER PDS` to forget the metadata for affected datasets (see [Forgetting Table Metadata](/reference/sql/commands/datasets#forgetting-table-metadata)).
-  2. Use `ALTER PDS` to refresh the metadata for affected datasets (see [Refreshing Table Metadata](/reference/sql/commands/datasets#refreshing-table-metadata)).
+  1. Use `ALTER PDS` to forget the metadata for affected datasets (see [Forgetting Table Metadata](/reference/sql/commands/datasets)).
+  2. Use `ALTER PDS` to refresh the metadata for affected datasets (see [Refreshing Table Metadata](/reference/sql/commands/datasets)).
 
 
 Was this page helpful?
 [Previous 21.x Release Notes](/release-notes/unsupported-releases/version-210-release)[Next 19.x Release Notes](/release-notes/unsupported-releases/version-1900-release-notes)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous 21.x Release Notes](/release-notes/unsupported-releases/version-210-release)[Next 19.x Release Notes](/release-notes/unsupported-releases/version-1900-release-notes)
-  * [20.9.0 (June 2023) Enterprise](/release-notes/unsupported-releases/version-200-release#2090-june-2023-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed)
-  * [20.8.0 (November 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2080-november-2022-enterprise)
-    * [What's New](/release-notes/unsupported-releases/version-200-release#whats-new)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-1)
-  * [20.7.0 (October 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2070-october-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-2)
-  * [20.6.0 (August 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2060-august-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-3)
-  * [20.5.0 (July 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2050-july-2022-enterprise)
-    * [What's New](/release-notes/unsupported-releases/version-200-release#whats-new-1)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-4)
-  * [20.4.2 (December 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2042-december-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-5)
-  * [20.4.1 (June 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2041-june-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-6)
-  * [20.4.0 (May 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2040-may-2022-enterprise)
-    * [What's New](/release-notes/unsupported-releases/version-200-release#whats-new-2)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-7)
-  * [20.3.1 (May 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2031-may-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-8)
-  * [20.3.0 (May 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2030-may-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-9)
-  * [20.2.3 (April 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2023-april-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-10)
-  * [20.2.2 (March 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2022-march-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-11)
-  * [20.2.1 (March 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2021-march-2022-enterprise)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-12)
-  * [20.2.0 (March 2022) Enterprise](/release-notes/unsupported-releases/version-200-release#2020-march-2022-enterprise)
-    * [What's New](/release-notes/unsupported-releases/version-200-release#whats-new-3)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-13)
-  * [20.1.0 (January 2022)](/release-notes/unsupported-releases/version-200-release#2010-january-2022)
-    * [What's New](/release-notes/unsupported-releases/version-200-release#whats-new-4)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-14)
-    * [Known Issues](/release-notes/unsupported-releases/version-200-release#known-issues)
-  * [20.0.0 (December 2021)](/release-notes/unsupported-releases/version-200-release#2000-december-2021)
-    * [What's New](/release-notes/unsupported-releases/version-200-release#whats-new-5)
-    * [Issues Fixed](/release-notes/unsupported-releases/version-200-release#issues-fixed-15)
-    * [Breaking Changes](/release-notes/unsupported-releases/version-200-release#breaking-changes)
-    * [Known Issues](/release-notes/unsupported-releases/version-200-release#known-issues-1)
+  * 20.9.0 (June 2023) Enterprise
+    * Issues Fixed
+  * 20.8.0 (November 2022) Enterprise
+    * What's New
+    * Issues Fixed
+  * 20.7.0 (October 2022) Enterprise
+    * Issues Fixed
+  * 20.6.0 (August 2022) Enterprise
+    * Issues Fixed
+  * 20.5.0 (July 2022) Enterprise
+    * What's New
+    * Issues Fixed
+  * 20.4.2 (December 2022) Enterprise
+    * Issues Fixed
+  * 20.4.1 (June 2022) Enterprise
+    * Issues Fixed
+  * 20.4.0 (May 2022) Enterprise
+    * What's New
+    * Issues Fixed
+  * 20.3.1 (May 2022) Enterprise
+    * Issues Fixed
+  * 20.3.0 (May 2022) Enterprise
+    * Issues Fixed
+  * 20.2.3 (April 2022) Enterprise
+    * Issues Fixed
+  * 20.2.2 (March 2022) Enterprise
+    * Issues Fixed
+  * 20.2.1 (March 2022) Enterprise
+    * Issues Fixed
+  * 20.2.0 (March 2022) Enterprise
+    * What's New
+    * Issues Fixed
+  * 20.1.0 (January 2022)
+    * What's New
+    * Issues Fixed
+    * Known Issues
+  * 20.0.0 (December 2021)
+    * What's New
+    * Issues Fixed
+    * Breaking Changes
+    * Known Issues
 
 

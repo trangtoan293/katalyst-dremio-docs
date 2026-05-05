@@ -1,17 +1,18 @@
 ---
 url: /reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop
+slug: /reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop
 title: "DROP | Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64797.852608
 ---
 
-[Skip to main content](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop#__docusaurus_skipToContent_fallback)
+Skip to main content
 [![Dremio Documentation Home Page](https://docs.dremio.com/images/Dremio-wordmark-light.svg) **Documentation**](/)
-[](/dremio-cloud)
-[](/)
+
+
 [current [26.x]](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
   * [current [26.x]](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
-  * [25.x](/25.x/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
+  * 25.x
 
 
 [Start for Free](https://www.dremio.com/get-started/)
@@ -36,14 +37,14 @@ Search`⌘``K`
       * [SQL Commands](/reference/sql/commands)
         * [SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)
           * [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)
-          * [DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-          * [DROP](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
+          * DELETE
+          * DROP
           * [INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
-          * [MERGE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
+          * MERGE
           * [OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table)
           * [ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
           * [TRUNCATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-truncate)
-          * [UPDATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-update)
+          * UPDATE
           * [VACUUM TABLE](/reference/sql/commands/apache-iceberg-tables/vacuum-table)
         * [SQL Commands for Nessie](/reference/sql/commands/nessie)
         * [SELECT](/reference/sql/commands)
@@ -61,7 +62,7 @@ Search`⌘``K`
         * [CREATE VIEW](/reference/sql/commands/create-view)
         * [DESCRIBE PIPE](/reference/sql/commands/describe-pipe)
         * [DROP PIPE](/reference/sql/commands/drop-pipe)
-        * [DROP SPACE](/reference/sql/commands/drop-space)
+        * DROP SPACE
         * [DROP VIEW](/reference/sql/commands/drop-view)
         * [Privileges](/reference/sql/commands/rbac)
         * [Reflections](/reference/sql/commands/acceleration)
@@ -110,24 +111,24 @@ DROP TABLE [ IF EXISTS ] <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop#parameters "Direct link to Parameters")
+## Parameters​
 [ IF EXISTS ] Optional
 When included, the command will succeed regardless of whether the table existed. If this clause is not specified, the command will fail if the table to be dropped does not exist.
 * * *
 `table_name` String
 The name of the table that you want to drop.
 Was this page helpful?
-[Previous DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)[Next INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous DELETE[Next INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)[Next INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
-  * [Parameters](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop#parameters)
+Previous DELETE[Next INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
+  * Parameters
 
 
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fapache-iceberg-tables%2Fapache-iceberg-drop%2F&_biz_t=1777951117858&_biz_i=DROP%20%7C%20Dremio%20Documentation&_biz_n=1562&rnd=229108&cdn_o=a&_biz_z=1777951117858)
+!

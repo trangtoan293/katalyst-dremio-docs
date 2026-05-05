@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/user-defined-functions
+slug: /reference/sql/system-tables/user-defined-functions
 title: "SYS.USER_DEFINED_FUNCTIONS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64377.979726041
@@ -24,14 +25,14 @@ FROM sys.user_defined_functions
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/user-defined-functions#example-output "Direct link to Example Output")  
+## Example Output​  
 | argList  | name  | sql  | returnType  | createdAt  | modifiedAt  |  
 | --- | --- | --- | --- | --- | --- |  
 | [FunctionArg{'{'})'{'{'})'{'}'})name=salary, rawDataType=&lt;ByteString@55362274 size=116&gt;{'{'})'{'}'}'{'}'}]  | "@dremio".get_salary  | SELECT CASE WHEN QUERY_USER() = 'noone' THEN "salary" ELSE 0 END  | ReturnType{'{'})'{'{'})'{'}'})rawDataType=&lt;ByteString@1b0f0d85 size=116&gt;{'{'})'{'}'}'{'}'}  | 2022-06-05 21:35:21.405  | 1970-01-01 00:00:00.000  |  
 | [FunctionArg{'{'})'{'{'})'{'}'})name=id, rawDataType=&lt;ByteString@ad3e1e8 size=120&gt;{'{'})'{'}'}'{'}'}]  | "@dremio".id_filter  | SELECT QUERY_USER() = 'dremio' AND "id" % 2 = 0  | ReturnType{'{'})'{'{'})'{'}'})rawDataType=&lt;ByteString@6953a612 size=108&gt;{'{'})'{'}'}'{'}'}  | 2022-06-13 18:43:27.020  | 1970-01-01 00:00:00.000  |  
 | null  | "@dremio".hello  | SELECT 'Hello World!'  | ReturnType{'{'})'{'{'})'{'}'})rawDataType=&lt;ByteString@2baec0f6 size=108&gt;{'{'})'{'}'}'{'}'}  | 2022-06-17 15:08:57.059  | 2022-07-01 17:04:09.032  |  
 | null  | cy.hello  | SELECT 'Hello World!'  | ReturnType{'{'})'{'{'})'{'}'})rawDataType=&lt;ByteString@5fb990a7 size=108&gt;{'{'})'{'}'}'{'}'}  | 2022-06-17 15:09:49.505  | 1970-01-01 00:00:00.000  |  
-## Columns[​](/reference/sql/system-tables/user-defined-functions#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | argList  | varchar  | The ordered list of arguments for this UDF. The value will be `null` if there are no arguments.  |  
@@ -42,12 +43,12 @@ FROM sys.user_defined_functions
 | modifiedAt  | timestamp  | The timestamp for when the UDF was last modified.  |  
 Was this page helpful?
 [Previous SYS.TIMEZONE_NAMES](/reference/sql/system-tables/timezone-names)[Next SYS.USERS](/reference/sql/system-tables/users)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.TIMEZONE_NAMES](/reference/sql/system-tables/timezone-names)[Next SYS.USERS](/reference/sql/system-tables/users)

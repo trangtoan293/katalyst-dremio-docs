@@ -2,7 +2,7 @@
   "label": "Kubernetes",
   "position": 4,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Kubernetes"
+    "type": "doc",
+    "id": "administration/kubernetes/current-admin-admin-dremio-kubernetes"
   }
 }

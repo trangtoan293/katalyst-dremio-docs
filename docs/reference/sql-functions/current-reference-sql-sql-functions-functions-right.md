@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/RIGHT
+slug: /reference/sql/sql-functions/functions/RIGHT
 title: "RIGHT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64351.030060333
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions)
 # RIGHT
 Returns the right-most substring. The function name must be enclosed in double quotes ("RIGHT").
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### RIGHT(_string_ varchar, _length_ int64) → varchar[​](/reference/sql/sql-functions#rightstring-varchar-length-int64--varchar "Direct link to rightstring-varchar-length-int64--varchar")
+## Syntax
+### RIGHT(_string_ varchar, _length_ int64) → varchar[​](/reference/sql/sql-functions)
   * string: String input parameter.
   * length: Number of characters on the right to return.
 
@@ -34,12 +35,12 @@ SELECT "RIGHT"('Dremio - SQL Engine', 6)
 
 Was this page helpful?
 [Previous REVERSE](/reference/sql/sql-functions)[Next ROUND](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous REVERSE](/reference/sql/sql-functions)[Next ROUND](/reference/sql/sql-functions)

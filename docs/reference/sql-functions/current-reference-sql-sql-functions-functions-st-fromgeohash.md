@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ST_FROMGEOHASH
+slug: /reference/sql/sql-functions/functions/ST_FROMGEOHASH
 title: "ST_FROMGEOHASH | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64358.973181375
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions), [Geospatial](/reference/sql/sql-functions), [Conversion](/reference/sql/sql-functions)
 # ST_FROMGEOHASH
 Returns the latitude and longitude coordinates of the center of the given geohash.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ST_FROMGEOHASH(_geohash_ varchar) → struct&lt;latitude: double, longitude: double&gt;[​](/reference/sql/sql-functions#st_fromgeohashgeohash-varchar--structlatitude-double-longitude-double "Direct link to st_fromgeohashgeohash-varchar--structlatitude-double-longitude-double")
+## Syntax
+### ST_FROMGEOHASH(_geohash_ varchar) → struct&lt;latitude: double, longitude: double&gt;[​](/reference/sql/sql-functions)
   * geohash: The geohash string to decode.
 
 
@@ -57,13 +58,13 @@ SELECT ST_FROMGEOHASH ('ezs42')['longitude']
 
 Was this page helpful?
 [Previous STRPOS](/reference/sql/sql-functions)[Next ST_GEOHASH](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous STRPOS](/reference/sql/sql-functions)[Next ST_GEOHASH](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FST_FROMGEOHASH%2F&_biz_t=1777950678469&_biz_i=ST_FROMGEOHASH%20%7C%20Dremio%20Documentation&_biz_n=689&rnd=737192&cdn_o=a&_biz_z=1777950678470)
+!

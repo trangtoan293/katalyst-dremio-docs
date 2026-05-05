@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/data-types/mappings
+slug: /reference/sql/data-types/mappings
 title: "Mappings for External Sources | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.418123
@@ -28,12 +29,12 @@ For a breakdown of the mappings from Dremio to the supported data sources, see t
 
 Was this page helpful?
 [Previous Data Types](/reference/sql/data-types)[Next Amazon Redshift Data Types](/reference/sql/data-types/mappings/amazon-redshift)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Data Types](/reference/sql/data-types)[Next Amazon Redshift Data Types](/reference/sql/data-types/mappings/amazon-redshift)

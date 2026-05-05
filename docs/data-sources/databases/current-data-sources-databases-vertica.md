@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/vertica
+slug: /data-sources/databases/vertica
 title: "Vertica | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64046.252292541
@@ -13,27 +14,27 @@ crawled_at: 64046.252292541
 Version: current [26.x]
 On this page
 # Vertica
-## Prerequisites[​](/data-sources/databases/vertica#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
 Ensure that you have the following details before configuring Vertica as a source:
   * Database name
   * Hostname or IP address
   * Port
 
 
-## Configuring Vertica as a Source[​](/data-sources/databases/vertica#configuring-vertica-as-a-source "Direct link to Configuring Vertica as a Source")
+## Configuring Vertica as a Source​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select **Vertica**.
 
 
-### General[​](/data-sources/databases/vertica#general "Direct link to General")
+### General​
 For **Name** , enter the name to identify the data source in Dremio. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
-#### Connection[​](/data-sources/databases/vertica#connection "Direct link to Connection")  
+#### Connection​  
 | Name  | Description  |  
 | --- | --- |  
 | Host  | Vertica host name.  |  
 | Port  | Vertica port number. Defaults to 5433.  |  
 | Database  | Service name of your database.  |  
-#### Authentication[​](/data-sources/databases/vertica#authentication "Direct link to Authentication")
+#### Authentication​
 Select an authentication option:
   * Username: Vertica username
   * Password: Select the password store from the dropdown menu:
@@ -43,7 +44,7 @@ Select an authentication option:
     * [HashiCorp Vault](/security/secrets-management/hashicorp-vault): Select your HashiCorp secrets engine from the dropdown and enter the password reference in the required format.
 
 
-### Advanced Options[​](/data-sources/databases/vertica#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 Specify advanced options with the following settings.
   * **Record fetch size** : Number of records to fetch at once. Set to 0 (zero) to have Dremio automatically decide. By default, this is set to **10**.
   * **Maximum idle connections** : The total number of connections allowed to be idle at a given time. By default, this is set to **8**.
@@ -52,7 +53,7 @@ Specify advanced options with the following settings.
   * **Connection Properties** : Connection properties and values for the data source.
 
 
-### Reflection Refresh[​](/data-sources/databases/vertica#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
 You can set the policy that controls how often Reflections are scheduled to be refreshed automatically, as well as the time limit after which Reflections expire and are removed.   
   
   
@@ -63,14 +64,14 @@ You can set the policy that controls how often Reflections are scheduled to be r
 | **Set refresh schedule**  | Specify the daily or weekly schedule.  |  
 | **Never expire**  | Select to prevent Reflections from expiring, default is to automatically expire after the time limit below.  |  
 | **Expire after**  | The time limit after which Reflections expire and are removed from Dremio, specified in hours, days or weeks. This option is ignored if **Never expire** is selected.  |  
-### Metadata[​](/data-sources/databases/vertica#metadata "Direct link to Metadata")
+### Metadata​
 Specifying metadata options is handled with the following settings.
-#### Dataset Handling[​](/data-sources/databases/vertica#dataset-handling "Direct link to Dataset Handling")
+#### Dataset Handling​
   * Remove dataset definitions if underlying data is unavailable (Default).
   * If this box is _not_ checked and the underlying files under a folder are removed or the folder/source is not accessible, Dremio does not remove the dataset definitions. This option is useful in cases when files are temporarily deleted and put back in place with new sets of files.
 
 
-#### Metadata Refresh[​](/data-sources/databases/vertica#metadata-refresh "Direct link to Metadata Refresh")
+#### Metadata Refresh​
 These are the optional **Metadata Refresh** parameters:
   * **Dataset Discovery** : The refresh interval for fetching top-level source object names such as databases and tables. Set the time interval using this parameter.  
 | Parameter  | Description  |  
@@ -84,22 +85,22 @@ These are the optional **Metadata Refresh** parameters:
 | **Expire after**  | You can choose to set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.  |  
 
 
-### Privileges[​](/data-sources/databases/vertica#privileges "Direct link to Privileges")
+### Privileges​
 On the Privileges tab, you can grant privileges to specific users or roles. See [Access Controls](/security/rbac) for additional information about privileges. All privileges are optional.
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
   3. Click **Save** after setting the configuration.
 
 
-## Updating a Vertica Source[​](/data-sources/databases/vertica#updating-a-vertica-source "Direct link to Updating a Vertica Source")
+## Updating a Vertica Source​
 To update a Vertica source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
-  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see [Configuring Vertica as a Source](/data-sources/databases/vertica#configuring-vertica-as-a-source).
+  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see Configuring Vertica as a Source.
   4. Click **Save**.
 
 
-## Deleting a Vertica Source[​](/data-sources/databases/vertica#deleting-a-vertica-source "Direct link to Deleting a Vertica Source")
+## Deleting a Vertica Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 To delete a Vertica source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -109,7 +110,7 @@ To delete a Vertica source, perform these steps:
 
 
 Deleting a source causes all downstream views that depend on objects in the source to break.
-## Predicate Pushdowns[​](/data-sources/databases/vertica#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Dremio delegates the execution of these expressions and functions to the database being queried, often dramatically improving query performance. It can also offload entire SQL queries that include one or more of these expressions and functions.
 `*`, `+`, `-`, `/`, `%`  
 `<`, `<=`, `<>`, `=`, `>`, `>=`, `!=`  
@@ -229,12 +230,12 @@ VARIANCE
 
 Was this page helpful?
 [Previous Teradata](/data-sources/databases/teradata)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Teradata](/data-sources/databases/teradata)

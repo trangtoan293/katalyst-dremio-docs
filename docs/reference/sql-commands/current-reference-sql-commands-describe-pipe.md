@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/describe-pipe
+slug: /reference/sql/commands/describe-pipe
 title: "DESCRIBE PIPE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.572953208
@@ -22,10 +23,10 @@ DESCRIBE PIPE <pipe_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/describe-pipe#parameters "Direct link to Parameters")
+## Parameters​
 `pipe_name` String
 The unique name of the pipe that you are describing.
-## Example[​](/reference/sql/commands/describe-pipe#example "Direct link to Example")
+## Example​
 Describe a pipe
 
 ```
@@ -36,7 +37,7 @@ DESCRIBE PIPE Example_pipe
 | pipe_name  | pipe_id  | source_path  | target_table  | target_branch  | dedup_lookback_period_days  | file_format  | format_options  | copy_options  | pipe_status  | error_message  | created_at  | last_updated_at  | created_by  | last_updated_by  | notification_provider  | notification_queue_ref  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | test_pipe  | 525ffe04-97bb-473e-8e76-fa559faa7d0d  | @s3/ingestion-test  | s3."ingestion-test".pipe_sink_table  | main  | 14  | CSV  | {'{'})'{'{'})'{'}'})"DATE_FORMAT":"YYYY-MM-DD\"T\"HH24:MI:SS.FFF","RECORD_DELIMITER":"\n","FIELD_DELIMITER":","{'{'})'{'}'}'{'}'}  | {'{'})'{'{'})'{'}'})"ON_ERROR":"SKIP_FILE"{'{'})'{'}'}'{'}'}  | STOPPED_STORAGE_LOCATION_ALTERED  | Resource not found at path @s3/ingestion-test  | 2024-08-05T13:39:41.167Z  | 2024-08-05T13:39:41.167Z  | dremio  | dremio  | AWS_SQS  | arn:aws:sqs:us-west-2:123243142826:data_ingestion_queue  |  
-## Columns[​](/reference/sql/commands/describe-pipe#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | pipe_name  | varchar  | The name of the autoingest pipe.  |  
@@ -68,13 +69,13 @@ DESCRIBE PIPE Example_pipe
 | notification_queue_ref  | varchar  | The unique identifier of the event notification queue.  |  
 Was this page helpful?
 [Previous CREATE VIEW](/reference/sql/commands/create-view)[Next DROP PIPE](/reference/sql/commands/drop-pipe)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CREATE VIEW](/reference/sql/commands/create-view)[Next DROP PIPE](/reference/sql/commands/drop-pipe)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fcreate-table%2F&_biz_t=1777950571449&_biz_i=CREATE%20TABLE%20%7C%20Dremio%20Documentation&_biz_n=493&rnd=779938&cdn_o=a&_biz_z=1777950571483)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fdescribe-pipe%2F&_biz_t=1777950571483&_biz_i=DESCRIBE%20PIPE%20%7C%20Dremio%20Documentation&_biz_n=494&rnd=52222&cdn_o=a&_biz_z=1777950571484)
+!!

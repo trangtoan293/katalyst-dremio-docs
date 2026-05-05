@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/DATEDIFF
+slug: /reference/sql/sql-functions/functions/DATEDIFF
 title: "DATEDIFF | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64304.346166416
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Date/Time](/reference/sql/sql-functions)
 # DATEDIFF
 Compares two dates or timestamps and returns the difference in days.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### DATEDIFF(_endDate_ string, _startDate_ string) → integer[​](/reference/sql/sql-functions#datediffenddate-string-startdate-string--integer "Direct link to datediffenddate-string-startdate-string--integer")
+## Syntax
+### DATEDIFF(_endDate_ string, _startDate_ string) → integer[​](/reference/sql/sql-functions)
   * endDate: A `DATE` or `TIMESTAMP` expression.
   * startDate: A `DATE` or `TIMESTAMP` expression.
 
@@ -40,16 +41,16 @@ SELECT DATEDIFF('2005-04-09 12:05:55', '2003-02-01 11:43:22')
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 If `endDate` is before `startDate` the result is negative.
 Was this page helpful?
 [Previous CURRENT_TIMESTAMP](/reference/sql/sql-functions)[Next DATETYPE](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CURRENT_TIMESTAMP](/reference/sql/sql-functions)[Next DATETYPE](/reference/sql/sql-functions)

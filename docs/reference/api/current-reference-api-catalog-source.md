@@ -1,5 +1,6 @@
 ---
 url: /reference/api/catalog/source
+slug: /reference/api/catalog/source
 title: "Source | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64067.941631958
@@ -152,12 +153,12 @@ Source Object
 
 ```
 
-## Source Attributes[​](/reference/api/catalog/source#source-attributes "Direct link to Source Attributes")
+## Source Attributes​
 entityType String
 Type of the catalog object. For sources, the entityType is `source`.
 Example: source
 * * *
-[config](/reference/api/catalog/source#attributes-of-the-config-object) Object
+config Object
 Configuration settings for the source. The available parameters in the config object are different for different source types. For more information, read [Source Configuration](/reference/api/catalog/source/container-source-config).
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"accessKey": "EXAMPLE78HT89VS4YJEL","accessSecret": "$DREMIO_EXISTING_VALUE$","secure": true,"rootPath": "/","enableAsync": true,"compatibilityMode": false,"isCachingEnabled": true,"maxCacheSpacePct": 100,"requesterPays": false,"enableFileStatusCheck": true,"defaultCtasFormat": "ICEBERG","isPartitionInferenceEnabled": false,"credentialType": "ACCESS_KEY"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -171,7 +172,7 @@ Example: T0/Zr1FOY3A=
 * * *
 type String
 Type of source.
-Valid values: [`ADX`](/reference/api/catalog/source/container-source-config#microsoft-azure-data-explorer), [`AMAZONELASTIC`](/reference/api/catalog/source/container-source-config#amazon-opensearch-service), [`AWSGLUE`](/reference/api/catalog/source/container-source-config#aws-glue-data-catalog), [`AZURE_STORAGE`](/reference/api/catalog/source/container-source-config#azure-storage), [`BIGQUERY`](/reference/api/catalog/source/container-source-config#google-bigquery), [`DB2`](/reference/api/catalog/source/container-source-config#ibm-db2), [`DREMIOTODREMIO`](/reference/api/catalog/source/container-source-config#dremio-to-dremio), [`DREMIO_CATALOG_EXTERNAL_V1`](/reference/api/catalog/source/container-source-config#open-catalog-external), [`ELASTIC`](/reference/api/catalog/source/container-source-config#elasticsearch), [`GCS`](/reference/api/catalog/source/container-source-config#google-cloud-storage), [`HDFS`](/reference/api/catalog/source/container-source-config#hadoop-distributed-file-system-hdfs), [`HIVE3`](/reference/api/catalog/source/container-source-config#hive-3), [`HIVE`](/reference/api/catalog/source/container-source-config#hive-2), [`MONGO`](/reference/api/catalog/source/container-source-config#mongodb), [`MSSQL`](/reference/api/catalog/source/container-source-config#microsoft-sql-server), [`MYSQL`](/reference/api/catalog/source/container-source-config#mysql), [`NAS`](/reference/api/catalog/source/container-source-config#network-attached-storage-nas), [`NESSIE`](/reference/api/catalog/source/container-source-config#nessie), [`ORACLE`](/reference/api/catalog/source/container-source-config#oracle), [`POSTGRES`](/reference/api/catalog/source/container-source-config#postgresql), [`REDSHIFT`](/reference/api/catalog/source/container-source-config#amazon-redshift), [`RESTCATALOG`](/reference/api/catalog/source/container-source-config#iceberg-rest-catalog), [`S3`](/reference/api/catalog/source/container-source-config#amazon-s3), [`SAPHANA`](/reference/api/catalog/source/container-source-config#sap-hana), [`SNOWFLAKEOPENCATALOG`](/reference/api/catalog/source/container-source-config#snowflake-open-catalog), [`SNOWFLAKE`](/reference/api/catalog/source/container-source-config#snowflake), [`SYNAPSE`](/reference/api/catalog/source/container-source-config#microsoft-azure-synapse-analytics), [`TERADATA`](/reference/api/catalog/source/container-source-config#teradata), [`UNITY`](/reference/api/catalog/source/container-source-config#unity-catalog), [`VERTICA`](/reference/api/catalog/source/container-source-config#vertica).
+Valid values: [`ADX`](/reference/api/catalog/source/container-source-config), [`AMAZONELASTIC`](/reference/api/catalog/source/container-source-config), [`AWSGLUE`](/reference/api/catalog/source/container-source-config), [`AZURE_STORAGE`](/reference/api/catalog/source/container-source-config), [`BIGQUERY`](/reference/api/catalog/source/container-source-config), [`DB2`](/reference/api/catalog/source/container-source-config), [`DREMIOTODREMIO`](/reference/api/catalog/source/container-source-config), [`DREMIO_CATALOG_EXTERNAL_V1`](/reference/api/catalog/source/container-source-config), [`ELASTIC`](/reference/api/catalog/source/container-source-config), [`GCS`](/reference/api/catalog/source/container-source-config), [`HDFS`](/reference/api/catalog/source/container-source-config), [`HIVE3`](/reference/api/catalog/source/container-source-config), [`HIVE`](/reference/api/catalog/source/container-source-config), [`MONGO`](/reference/api/catalog/source/container-source-config), [`MSSQL`](/reference/api/catalog/source/container-source-config), [`MYSQL`](/reference/api/catalog/source/container-source-config), [`NAS`](/reference/api/catalog/source/container-source-config), [`NESSIE`](/reference/api/catalog/source/container-source-config), [`ORACLE`](/reference/api/catalog/source/container-source-config), [`POSTGRES`](/reference/api/catalog/source/container-source-config), [`REDSHIFT`](/reference/api/catalog/source/container-source-config), [`RESTCATALOG`](/reference/api/catalog/source/container-source-config), [`S3`](/reference/api/catalog/source/container-source-config), [`SAPHANA`](/reference/api/catalog/source/container-source-config), [`SNOWFLAKEOPENCATALOG`](/reference/api/catalog/source/container-source-config), [`SNOWFLAKE`](/reference/api/catalog/source/container-source-config), [`SYNAPSE`](/reference/api/catalog/source/container-source-config), [`TERADATA`](/reference/api/catalog/source/container-source-config), [`UNITY`](/reference/api/catalog/source/container-source-config), [`VERTICA`](/reference/api/catalog/source/container-source-config).
 The Iceberg [`RESTCATALOG`](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) source type provides support for several catalogs including Apache Polaris OSS, Nessie with Iceberg REST, AWS Glue Iceberg REST, S3 Tables, Confluent Tableflow, and [Microsoft OneLake](/data-sources/lakehouse-catalogs/onelake).
 Example: S3
 * * *
@@ -183,7 +184,7 @@ createdAt String
 Date and time that the source was created, in UTC format.
 Example: 2023-02-17T14:32:20.640Z
 * * *
-[metadataPolicy](/reference/api/catalog/source#attributes-of-the-metadatapolicy-object) Object
+metadataPolicy Object
 Information about the metadata policy for the source.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"authTTLMs": 86400000,"namesRefreshMs": 3600000,"datasetRefreshAfterMs": 3600000,"datasetExpireAfterMs": 10800000,"datasetUpdateMode": "PREFETCH_QUERIED","deleteUnavailableDatasets": true,"autoPromoteDatasets": false{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -229,7 +230,7 @@ A cron expression that sets the schedule, in UTC time, according to which the Re
 | -  | Used to specify ranges in the `Days of week` field. For example, `1-3` is equivalent to `Sunday, Monday, and Tuesday`.  |  
 Examples: `0 0 0 * * ?` : Refreshes every day at midnight. `0 45 15 * * 1,4,7` : Refreshes at 15:45 on Sunday, Wednesday, and Saturday. `0 15 7 ? * 2-6` : Refreshes at 7:15 on Monday and Friday.
 * * *
-[children](/reference/api/catalog/source#attributes-of-objects-in-the-children-array) Array of Object
+children Array of Object
 Information about each catalog object in the source.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "dremio:/AWS-S3_testgroup/archive.dremio.com","path": ["AWS-S3_testgroup","archive.dremio.com"],"type": "CONTAINER","containerType": "FOLDER"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "dremio:/AWS-S3_testgroup/logs_east-1","path": ["AWS-S3_testgroup","logs_east-1"],"type": "CONTAINER","containerType": "FOLDER"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "dremio:/AWS-S3_testgroup/logs_west-1","path": ["AWS-S3_testgroup","logs_west-1"],"type": "CONTAINER","containerType": "FOLDER"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
@@ -242,7 +243,7 @@ To disable the check for expired metadata and require users to refresh manually,
 The disableMetadataValidityCheck attribute is not supported by default. Contact Dremio Support to enable it.
 Example: false
 * * *
-[accessControlList](/reference/api/catalog/source#attributes-of-the-accesscontrollist-object) Object
+accessControlList Object
 Enterprise only. Information about users and roles with access to the source and the specific privileges each user or role has. May include an array of users, an array of roles, or both, depending on the configured access and privileges. The accessControlList array is empty if source-specific access control privileges are not set.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "ebe519ab-20e3-43ff-9b4c-b3ec590c7e65","permissions": ["VIEW_REFLECTION","SELECT" ]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "c45ff4d8-e910-4f85-89db-9b8c29188a56","permissions": ["ALTER","CREATE_TABLE","DROP","INSERT","DELETE","UPDATE","TRUNCATE","VIEW_REFLECTION","ALTER_REFLECTION","MODIFY","MANAGE_GRANTS","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -254,15 +255,15 @@ checkTableAuthorizer Boolean
 Not used. Has the value `true`.
 Example: true
 * * *
-[owner](/reference/api/catalog/source#attributes-of-the-owner-object) Object
+owner Object
 Information about the source's owner.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"ownerId": "4fb93af3-acc2-4b10-ad4b-64dd7070d365","ownerType": "USER"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
 accelerationRefreshOnDataChanges Boolean
 If Reflections automatically refresh for underlying tables that are in Iceberg format when new snapshots are created after an update, `true`. Otherwise, `false`.
-#### Attributes of the `config` Object[​](/reference/api/catalog/source#attributes-of-the-config-object "Direct link to attributes-of-the-config-object")
+#### Attributes of the `config` Object​
 The `config` object attributes vary for different source types. Read [Source Configuration](/reference/api/catalog/source/container-source-config) for information about the available parameters in the `config` object for each supported source type.
-#### Attributes of the `metadataPolicy` Object[​](/reference/api/catalog/source#attributes-of-the-metadatapolicy-object "Direct link to attributes-of-the-metadatapolicy-object")
+#### Attributes of the `metadataPolicy` Object​
 authTTLMs Integer
 Length of time to cache the privileges that the user has on the source, in milliseconds. For example, if authTTLMs is set to `28800000` (8 hours), Dremio checks the user's permission status once every 8 hours. Default is `86400000` (24 hours). Minimum is `60000` (1 minute).
 Example: 86400000
@@ -294,7 +295,7 @@ Example: true
 autoPromoteDatasets Boolean
 If Dremio automatically formats files into tables when a user issues a query, set to `true`. Otherwise, set to `false` (default). Available only for datalake sources, such as Amazon S3 and Hive.
 Example: false
-#### Attributes of Objects in the `children` Array[​](/reference/api/catalog/source#attributes-of-objects-in-the-children-array "Direct link to attributes-of-objects-in-the-children-array")
+#### Attributes of Objects in the `children` Array​
 id String
 Unique identifier of the child catalog object. The ID can be a UUID like `1acab7b3-ee82-44c1-abcc-e86d56078d4d` or a text path like `dremio:/Samples/samples.dremio.com/zip_lookup.csv`.
 Example: dremio:/AWS-S3_testgroup/archive.dremio.com
@@ -316,15 +317,15 @@ datasetType String
 For catalog objects with the type `DATASET`, the type of dataset. If the dataset is from an external source such as PostgreSQL, the datasetType is `DIRECT`. For tables, the datasetType is `PROMOTED`. For views, the datasetType is `VIRTUAL`.
 Enum: DIRECT, PROMOTED, VIRTUAL
 Example: VIRTUAL
-#### Attributes of the `accessControlList` Object[​](/reference/api/catalog/source#attributes-of-the-accesscontrollist-object "Direct link to attributes-of-the-accesscontrollist-object")
-[users](/reference/api/catalog/source#attributes-of-objects-in-the-users-and-roles-arrays) Array of Object
+#### Attributes of the `accessControlList` Object​
+users Array of Object
 Enterprise only. List of users with access to the source and the specific privileges each user has.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "ebe519ab-20e3-43ff-9b4c-b3ec590c7e65","permissions": ["VIEW_REFLECTION","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/source#attributes-of-objects-in-the-users-and-roles-arrays) Array of Object
+roles Array of Object
 Enterprise only. List of roles whose members have access to the source and the specific privileges each role has.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "c45ff4d8-e910-4f85-89db-9b8c29188a56","permissions": ["ALTER", "CREATE_TABLE", "DROP", "INSERT", "DELETE", "UPDATE", "TRUNCATE", "VIEW_REFLECTION", "ALTER_REFLECTION", "MODIFY", "MANAGE_GRANTS", "SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-#### Attributes of the `owner` Object[​](/reference/api/catalog/source#attributes-of-the-owner-object "Direct link to attributes-of-the-owner-object")
+#### Attributes of the `owner` Object​
 ownerId String (UUID)
 Unique identifier of the source's owner.
 Example: 4fb93af3-acc2-4b10-ad4b-64dd7070d365
@@ -333,7 +334,7 @@ ownerType String
 Type of owner of the source.
 Enum: USER, ROLE
 Example: USER
-#### Attributes of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/source#attributes-of-objects-in-the-users-and-roles-arrays "Direct link to attributes-of-objects-in-the-users-and-roles-arrays")
+#### Attributes of Objects in the `users` and `roles` Arrays​
 id String (UUID)
 Enterprise only. Unique identifier of the user or role with access to the source.
 Example: ebe519ab-20e3-43ff-9b4c-b3ec590c7e65
@@ -342,7 +343,7 @@ permissions Array of String
 Enterprise only. List of privileges the user or role has on the source. For more information, read [Privileges](/security/rbac/privileges).
 Enum: ALL, VIEW_REFLECTION, TRUNCATE, UPDATE, DELETE, DROP, MANAGE_GRANTS, EXTERNAL_QUERY, EXECUTE, ALTER, INSERT, MODIFY, SELECT, CREATE_SOURCE, WRITE, CREATE_TABLE, ALTER_REFLECTION, READ
 Example: ["VIEW_REFLECTION","SELECT"]
-## Create a Source[​](/reference/api/catalog/source#create-a-source "Direct link to Create a Source")
+## Create a Source​
 Create a new source.
 Method and URL
 
@@ -351,18 +352,18 @@ POST /api/v3/catalog
 
 ```
 
-### Parameters[​](/reference/api/catalog/source#parameters "Direct link to Parameters")
+### Parameters​
 entityType Body String
 Type of the catalog object to create. For sources, the entityType is `source`.
 Example: source
 * * *
-[config](/reference/api/catalog/source#parameters-of-the-config-object) Body Object
+config Body Object
 Configuration settings for the source. The available parameters in the config object are different for different source types. For more information, read [Source Configuration](/reference/api/catalog/source/container-source-config).
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"accessKey": "EXAMPLE78HT89VS4YJEL","accessSecret": "EXAMPLEe3bcpKnAwgJ2WBpX8d9kEdhMz24guiR7L","secure": true,"rootPath": "/","enableAsync": true,"compatibilityMode": false,"isCachingEnabled": true,"maxCacheSpacePct": 100,"requesterPays": false,"enableFileStatusCheck": true,"defaultCtasFormat": "ICEBERG","isPartitionInferenceEnabled": false,"credentialType": "ACCESS_KEY"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
 type Body String
 Type of source to create.
-Valid values: [`ADX`](/reference/api/catalog/source/container-source-config#microsoft-azure-data-explorer), [`AMAZONELASTIC`](/reference/api/catalog/source/container-source-config#amazon-opensearch-service), [`AWSGLUE`](/reference/api/catalog/source/container-source-config#aws-glue-data-catalog), [`AZURE_STORAGE`](/reference/api/catalog/source/container-source-config#azure-storage), [`BIGQUERY`](/reference/api/catalog/source/container-source-config#google-bigquery), [`DB2`](/reference/api/catalog/source/container-source-config#ibm-db2), [`DREMIOTODREMIO`](/reference/api/catalog/source/container-source-config#dremio-to-dremio), [`DREMIO_CATALOG_EXTERNAL_V1`](/reference/api/catalog/source/container-source-config#open-catalog-external), [`ELASTIC`](/reference/api/catalog/source/container-source-config#elasticsearch), [`GCS`](/reference/api/catalog/source/container-source-config#google-cloud-storage), [`HDFS`](/reference/api/catalog/source/container-source-config#hadoop-distributed-file-system-hdfs), [`HIVE3`](/reference/api/catalog/source/container-source-config#hive-3), [`HIVE`](/reference/api/catalog/source/container-source-config#hive-2), [`MONGO`](/reference/api/catalog/source/container-source-config#mongodb), [`MSSQL`](/reference/api/catalog/source/container-source-config#microsoft-sql-server), [`MYSQL`](/reference/api/catalog/source/container-source-config#mysql), [`NAS`](/reference/api/catalog/source/container-source-config#network-attached-storage-nas), [`NESSIE`](/reference/api/catalog/source/container-source-config#nessie), [`ORACLE`](/reference/api/catalog/source/container-source-config#oracle), [`POSTGRES`](/reference/api/catalog/source/container-source-config#postgresql), [`REDSHIFT`](/reference/api/catalog/source/container-source-config#amazon-redshift), [`RESTCATALOG`](/reference/api/catalog/source/container-source-config#iceberg-rest-catalog), [`S3`](/reference/api/catalog/source/container-source-config#amazon-s3), [`SAPHANA`](/reference/api/catalog/source/container-source-config#sap-hana), [`SNOWFLAKEOPENCATALOG`](/reference/api/catalog/source/container-source-config#snowflake-open-catalog), [`SNOWFLAKE`](/reference/api/catalog/source/container-source-config#snowflake), [`SYNAPSE`](/reference/api/catalog/source/container-source-config#microsoft-azure-synapse-analytics), [`TERADATA`](/reference/api/catalog/source/container-source-config#teradata), [`UNITY`](/reference/api/catalog/source/container-source-config#unity-catalog), [`VERTICA`](/reference/api/catalog/source/container-source-config#vertica).
+Valid values: [`ADX`](/reference/api/catalog/source/container-source-config), [`AMAZONELASTIC`](/reference/api/catalog/source/container-source-config), [`AWSGLUE`](/reference/api/catalog/source/container-source-config), [`AZURE_STORAGE`](/reference/api/catalog/source/container-source-config), [`BIGQUERY`](/reference/api/catalog/source/container-source-config), [`DB2`](/reference/api/catalog/source/container-source-config), [`DREMIOTODREMIO`](/reference/api/catalog/source/container-source-config), [`DREMIO_CATALOG_EXTERNAL_V1`](/reference/api/catalog/source/container-source-config), [`ELASTIC`](/reference/api/catalog/source/container-source-config), [`GCS`](/reference/api/catalog/source/container-source-config), [`HDFS`](/reference/api/catalog/source/container-source-config), [`HIVE3`](/reference/api/catalog/source/container-source-config), [`HIVE`](/reference/api/catalog/source/container-source-config), [`MONGO`](/reference/api/catalog/source/container-source-config), [`MSSQL`](/reference/api/catalog/source/container-source-config), [`MYSQL`](/reference/api/catalog/source/container-source-config), [`NAS`](/reference/api/catalog/source/container-source-config), [`NESSIE`](/reference/api/catalog/source/container-source-config), [`ORACLE`](/reference/api/catalog/source/container-source-config), [`POSTGRES`](/reference/api/catalog/source/container-source-config), [`REDSHIFT`](/reference/api/catalog/source/container-source-config), [`RESTCATALOG`](/reference/api/catalog/source/container-source-config), [`S3`](/reference/api/catalog/source/container-source-config), [`SAPHANA`](/reference/api/catalog/source/container-source-config), [`SNOWFLAKEOPENCATALOG`](/reference/api/catalog/source/container-source-config), [`SNOWFLAKE`](/reference/api/catalog/source/container-source-config), [`SYNAPSE`](/reference/api/catalog/source/container-source-config), [`TERADATA`](/reference/api/catalog/source/container-source-config), [`UNITY`](/reference/api/catalog/source/container-source-config), [`VERTICA`](/reference/api/catalog/source/container-source-config).
 The Iceberg [`RESTCATALOG`](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) source type provides support for several catalogs including Apache Polaris OSS, Nessie with Iceberg REST, AWS Glue Iceberg REST, S3 Tables, Confluent Tableflow, and [Microsoft OneLake](/data-sources/lakehouse-catalogs/onelake).
 Example: S3
 * * *
@@ -370,7 +371,7 @@ name Body String
 Name for the source. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
 Example: AWS-S3_testgroup
 * * *
-[metadataPolicy](/reference/api/catalog/source#parameters-of-the-metadatapolicy-object) Body Object Optional
+metadataPolicy Body Object Optional
 Information about the metadata policy for the source.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"authTTLMs": 86400000,"namesRefreshMs": 3600000,"datasetRefreshAfterMs": 3600000,"datasetExpireAfterMs": 10800000,"datasetUpdateMode": "PREFETCH_QUERIED","deleteUnavailableDatasets": true,"autoPromoteDatasets": false{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -428,12 +429,12 @@ Example: false
 accelerationRefreshOnDataChanges Body Boolean
 To refresh Reflections on underlying tables that are in Iceberg format in the source when new snapshots are created after an update, `true`. Otherwise, `false`. Reflections that are automatically updated based on Iceberg source table changes also update according to the source-level policy as the minimum refresh frequency. For this option to take effect, the source must support Iceberg table format, the accelerationNeverRefresh parameter must be set to `false`, and the accelerationActivePolicyType parameter must be set to either `PERIOD` or `SCHEDULE`.
 * * *
-[accessControlList](/reference/api/catalog/source#attributes-of-the-accesscontrollist-object) Body Object Optional
+accessControlList Body Object Optional
 Enterprise only. Information about users and roles that should have access to the source and the specific privileges each user or role should have. May include an array of users, an array of roles, or both, depending on the configured access and privileges.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "ebe519ab-20e3-43ff-9b4c-b3ec590c7e65","permissions": [ "VIEW_REFLECTION","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "c45ff4d8-e910-4f85-89db-9b8c29188a56","permissions": ["ALTER","CREATE_TABLE","DROP","INSERT","DELETE","UPDATE","TRUNCATE","VIEW_REFLECTION","ALTER_REFLECTION","MODIFY","MANAGE_GRANTS","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
-#### Parameters of the `config` Object[​](/reference/api/catalog/source#parameters-of-the-config-object "Direct link to parameters-of-the-config-object")
+#### Parameters of the `config` Object​
 The `config` object's parameters vary for different source types. Read [Source Configuration](/reference/api/catalog/source/container-source-config) for information about the available parameters in the `config` object for each supported source type.
-#### Parameters of the `metadataPolicy` Object[​](/reference/api/catalog/source#parameters-of-the-metadatapolicy-object "Direct link to parameters-of-the-metadatapolicy-object")
+#### Parameters of the `metadataPolicy` Object​
 authTTLMs Body Integer
 Length of time to cache the privileges that the user has on the source, in milliseconds. For example, if authTTLMs is set to `28800000` (8 hours), Dremio checks the user's permission status once every 8 hours. Default is `86400000` (24 hours). Minimum is `60000` (1 minute).
 Example: 86400000
@@ -465,15 +466,15 @@ Example: true
 autoPromoteDatasets Body Boolean Optional
 If Dremio should automatically format files into tables using default options when users issue queries, set to `true`. Otherwise, set to `false` (default). Available only for datalake sources, such as Amazon S3 and Hive.
 Example: false
-#### Parameters of the `accessControlList` Object[​](/reference/api/catalog/source#parameters-of-the-accesscontrollist-object "Direct link to parameters-of-the-accesscontrollist-object")
-[users](/reference/api/catalog/source#parameters-of-objects-in-the-users-and-roles-arrays) Body Array of Object Optional
+#### Parameters of the `accessControlList` Object​
+users Body Array of Object Optional
 Enterprise only. List of users who should have access to the source and the specific privileges each user should have.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "ebe519ab-20e3-43ff-9b4c-b3ec590c7e65", "permissions": ["VIEW_REFLECTION","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/source#parameters-of-objects-in-the-users-and-roles-arrays) Body Array of Object Optional
+roles Body Array of Object Optional
 List of roles whose members should have access to the source and the specific privileges each role should have.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "c45ff4d8-e910-4f85-89db-9b8c29188a56", "permissions": ["ALTER","CREATE_TABLE","DROP","INSERT","DELETE","UPDATE","TRUNCATE","VIEW_REFLECTION","ALTER_REFLECTION","MODIFY","MANAGE_GRANTS","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-#### Parameters of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/source#parameters-of-objects-in-the-users-and-roles-arrays "Direct link to parameters-of-objects-in-the-users-and-roles-arrays")
+#### Parameters of Objects in the `users` and `roles` Arrays​
 id Body String (UUID) Optional
 Unique identifier of the user or role who should have access to the source.
 Example: ebe519ab-20e3-43ff-9b4c-b3ec590c7e65
@@ -482,7 +483,7 @@ permissions Body Array of String Optional
 List of privileges the user or role should have on the source. For more information, read [Privileges](/security/rbac/privileges).
 Enum: ALL, VIEW_REFLECTION, TRUNCATE, UPDATE, DELETE, DROP, MANAGE_GRANTS, EXTERNAL_QUERY, EXECUTE, ALTER, INSERT, MODIFY, SELECT, CREATE_SOURCE, WRITE, CREATE_TABLE, ALTER_REFLECTION, READ
 Example: ["VIEW_REFLECTION","SELECT"]
-### Example[​](/reference/api/catalog/source#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -694,7 +695,7 @@ Recommended action to take, if any, based on the status of the created source.
 * * *
 messages Array of String
 Status message, if any, for the created source.
-### Response Status Codes[​](/reference/api/catalog/source#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -708,7 +709,7 @@ Status message, if any, for the created source.
 409 Conflict   
   
 
-## Retrieve a Source by ID[​](/reference/api/catalog/source#retrieve-a-source-by-id "Direct link to Retrieve a Source by ID")
+## Retrieve a Source by ID​
 Retrieve a source and information about its contents by specifying the source's ID.
 Method and URL
 
@@ -717,29 +718,29 @@ GET /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/source#parameters-1 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the source that you want to retrieve.
 Example: 2b1be882-7012-4a99-8d6c-82e32e4562e4
 * * *
 include Query String Optional
-Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
 * * *
 exclude Query String Optional
-Exclude a default attribute from the response. The available value for the exclude query parameter is `children`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Exclude a default attribute from the response. The available value for the exclude query parameter is `children`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?exclude=children
 * * *
 maxChildren Query Integer Optional
-Specify the maximum number of child objects to include in each page of results. Use in concert with the [pageToken query parameter](/reference/api/catalog/source#pagetokenqueryparam) to split large sets of results into multiple pages. For more information, read [maxChildren Query Parameter](/reference/api#maxchildren-query-parameter).
+Specify the maximum number of child objects to include in each page of results. Use in concert with the pageToken query parameter to split large sets of results into multiple pages. For more information, read [maxChildren Query Parameter](/reference/api).
 **NOTE:** The maxChildren query parameter is not supported for filesystem sources.
 Example: ?maxChildren=25
 * * *
 pageToken Query String Optional
-Specify the token for retrieving the next page of results. Must be used in concert with the [maxChildren query parameter](/reference/api/catalog/source#maxchildrenqueryparam): the first request URL includes maxChildren set to the maximum number of child objects to include in each page of results. If the source has more child objects than the specified maxChildren value, the response includes a nextPageToken attribute. Add the pageToken query parameter with the nextPageToken value to the request URL to retrieve the next page of results. Do not remove or change the maxChildren query parameter when you add pageToken to the request URL. Read [pageToken Query Parameter: User-Specified Maximum](/reference/api#user-specified-maximum) for more information.
+Specify the token for retrieving the next page of results. Must be used in concert with the maxChildren query parameter: the first request URL includes maxChildren set to the maximum number of child objects to include in each page of results. If the source has more child objects than the specified maxChildren value, the response includes a nextPageToken attribute. Add the pageToken query parameter with the nextPageToken value to the request URL to retrieve the next page of results. Do not remove or change the maxChildren query parameter when you add pageToken to the request URL. Read [pageToken Query Parameter: User-Specified Maximum](/reference/api) for more information.
 **NOTE:** Dremio ignores the pageToken query parameter for filesystem sources.
 Example: ?pageToken=cHAAFLceQCKsTVpwaEVisqgjDntZJUCuTqVNghPdkyBDUNoJvwrEXAMPLE
-### Example[​](/reference/api/catalog/source#example-1 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -865,7 +866,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/source#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -877,7 +878,7 @@ Response
 404 Not Found   
   
 
-## Retrieve a Source by Path[​](/reference/api/catalog/source#retrieve-a-source-by-path "Direct link to Retrieve a Source by Path")
+## Retrieve a Source by Path​
 Retrieve a source and information about its contents by specifying the source's path.
 Method and URL
 
@@ -886,29 +887,29 @@ GET /api/v3/catalog/by-path/{path}
 
 ```
 
-### Parameters[​](/reference/api/catalog/source#parameters-2 "Direct link to Parameters")
+### Parameters​
 path Path String
 Name of the source that you want to retrieve. If the name of any component in the path includes special characters for URLs, such as spaces, use URL encoding to replace the special characters with their UTF-8-equivalent characters. For example, "Dremio University" should be `Dremio%20University` in the URL path.
 Example: AWS-S3_testgroup
 * * *
 include Query String Optional
-Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
 * * *
 exclude Query String Optional
-Exclude a default attribute from the response. The available value for the exclude query parameter is `children`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Exclude a default attribute from the response. The available value for the exclude query parameter is `children`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?exclude=children
 * * *
 maxChildren Query Integer Optional
-Specify the maximum number of child objects to include in each page of results. Use in concert with the [pageToken query parameter](/reference/api/catalog/source#pagetokenqueryparam1) to split large sets of results into multiple pages. For more information, read [maxChildren Query Parameter](/reference/api#maxchildren-query-parameter).
+Specify the maximum number of child objects to include in each page of results. Use in concert with the pageToken query parameter to split large sets of results into multiple pages. For more information, read [maxChildren Query Parameter](/reference/api).
 **NOTE:** The maxChildren query parameter is not supported for filesystem sources.
 Example: ?maxChildren=25
 * * *
 pageToken Query String Optional
-Specify the token for retrieving the next page of results. Must be used in concert with the [maxChildren query parameter](/reference/api/catalog/source#maxchildrenqueryparam1): the first request URL includes maxChildren set to the maximum number of child objects to include in each page of results. If the source has more child objects than the specified maxChildren value, the response includes a nextPageToken attribute. Add the pageToken query parameter with the nextPageToken value to the request URL to retrieve the next page of results. Do not remove or change the maxChildren query parameter when you add pageToken to the request URL. Read [pageToken Query Parameter: User-Specified Maximum](/reference/api#user-specified-maximum) for more information.
+Specify the token for retrieving the next page of results. Must be used in concert with the maxChildren query parameter: the first request URL includes maxChildren set to the maximum number of child objects to include in each page of results. If the source has more child objects than the specified maxChildren value, the response includes a nextPageToken attribute. Add the pageToken query parameter with the nextPageToken value to the request URL to retrieve the next page of results. Do not remove or change the maxChildren query parameter when you add pageToken to the request URL. Read [pageToken Query Parameter: User-Specified Maximum](/reference/api) for more information.
 **NOTE:** Dremio ignores the pageToken query parameter for filesystem sources.
 Example: ?pageToken=cHAAFLceQCKsTVpwaEVisqgjDntZJUCuTqVNghPdkyBDUNoJvwrEXAMPLE
-### Example[​](/reference/api/catalog/source#example-2 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1034,7 +1035,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/source#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -1046,7 +1047,7 @@ Response
 404 Not Found   
   
 
-## Update a Source[​](/reference/api/catalog/source#update-a-source "Direct link to Update a Source")
+## Update a Source​
 Update the specified source.
 Method and URL
 
@@ -1055,7 +1056,7 @@ PUT /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/source#parameters-3 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the source to update.
 Example: 2b1be882-7012-4a99-8d6c-82e32e4562e4
@@ -1064,7 +1065,7 @@ entityType Body String
 Type of the catalog object to update. For sources, the entityType is `source`.
 Example: source
 * * *
-[config](/reference/api/catalog/source#parameters-of-the-config-object-1) Body Object
+config Body Object
 Configuration settings for the source. The available parameters in the config object are different for different source types. For more information, read [Source Configuration](/reference/api/catalog/source/container-source-config).
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"accessKey": "EXAMPLE78HT89VS4YJEL","accessSecret": "EXAMPLEe3bcpKnAwgJ2WBpX8d9kEdhMz24guiR7L","secure": true,"rootPath": "/","enableAsync": true,"compatibilityMode": false,"isCachingEnabled": true,"maxCacheSpacePct": 100,"requesterPays": false,"enableFileStatusCheck": true,"defaultCtasFormat": "ICEBERG","isPartitionInferenceEnabled": false,"credentialType": "ACCESS_KEY"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -1078,7 +1079,7 @@ Example: T0/Zr1FOY3A=
 * * *
 type Body String
 Type of the source.
-Valid values: [`ADX`](/reference/api/catalog/source/container-source-config#microsoft-azure-data-explorer), [`AMAZONELASTIC`](/reference/api/catalog/source/container-source-config#amazon-opensearch-service), [`AWSGLUE`](/reference/api/catalog/source/container-source-config#aws-glue-data-catalog), [`AZURE_STORAGE`](/reference/api/catalog/source/container-source-config#azure-storage), [`BIGQUERY`](/reference/api/catalog/source/container-source-config#google-bigquery), [`DB2`](/reference/api/catalog/source/container-source-config#ibm-db2), [`DREMIOTODREMIO`](/reference/api/catalog/source/container-source-config#dremio-to-dremio), [`DREMIO_CATALOG_EXTERNAL_V1`](/reference/api/catalog/source/container-source-config#open-catalog-external), [`ELASTIC`](/reference/api/catalog/source/container-source-config#elasticsearch), [`GCS`](/reference/api/catalog/source/container-source-config#google-cloud-storage), [`HDFS`](/reference/api/catalog/source/container-source-config#hadoop-distributed-file-system-hdfs), [`HIVE3`](/reference/api/catalog/source/container-source-config#hive-3), [`HIVE`](/reference/api/catalog/source/container-source-config#hive-2), [`MONGO`](/reference/api/catalog/source/container-source-config#mongodb), [`MSSQL`](/reference/api/catalog/source/container-source-config#microsoft-sql-server), [`MYSQL`](/reference/api/catalog/source/container-source-config#mysql), [`NAS`](/reference/api/catalog/source/container-source-config#network-attached-storage-nas), [`NESSIE`](/reference/api/catalog/source/container-source-config#nessie), [`ORACLE`](/reference/api/catalog/source/container-source-config#oracle), [`POSTGRES`](/reference/api/catalog/source/container-source-config#postgresql), [`REDSHIFT`](/reference/api/catalog/source/container-source-config#amazon-redshift), [`RESTCATALOG`](/reference/api/catalog/source/container-source-config#iceberg-rest-catalog), [`S3`](/reference/api/catalog/source/container-source-config#amazon-s3), [`SAPHANA`](/reference/api/catalog/source/container-source-config#sap-hana), [`SNOWFLAKEOPENCATALOG`](/reference/api/catalog/source/container-source-config#snowflake-open-catalog), [`SNOWFLAKE`](/reference/api/catalog/source/container-source-config#snowflake), [`SYNAPSE`](/reference/api/catalog/source/container-source-config#microsoft-azure-synapse-analytics), [`TERADATA`](/reference/api/catalog/source/container-source-config#teradata), [`UNITY`](/reference/api/catalog/source/container-source-config#unity-catalog), [`VERTICA`](/reference/api/catalog/source/container-source-config#vertica).
+Valid values: [`ADX`](/reference/api/catalog/source/container-source-config), [`AMAZONELASTIC`](/reference/api/catalog/source/container-source-config), [`AWSGLUE`](/reference/api/catalog/source/container-source-config), [`AZURE_STORAGE`](/reference/api/catalog/source/container-source-config), [`BIGQUERY`](/reference/api/catalog/source/container-source-config), [`DB2`](/reference/api/catalog/source/container-source-config), [`DREMIOTODREMIO`](/reference/api/catalog/source/container-source-config), [`DREMIO_CATALOG_EXTERNAL_V1`](/reference/api/catalog/source/container-source-config), [`ELASTIC`](/reference/api/catalog/source/container-source-config), [`GCS`](/reference/api/catalog/source/container-source-config), [`HDFS`](/reference/api/catalog/source/container-source-config), [`HIVE3`](/reference/api/catalog/source/container-source-config), [`HIVE`](/reference/api/catalog/source/container-source-config), [`MONGO`](/reference/api/catalog/source/container-source-config), [`MSSQL`](/reference/api/catalog/source/container-source-config), [`MYSQL`](/reference/api/catalog/source/container-source-config), [`NAS`](/reference/api/catalog/source/container-source-config), [`NESSIE`](/reference/api/catalog/source/container-source-config), [`ORACLE`](/reference/api/catalog/source/container-source-config), [`POSTGRES`](/reference/api/catalog/source/container-source-config), [`REDSHIFT`](/reference/api/catalog/source/container-source-config), [`RESTCATALOG`](/reference/api/catalog/source/container-source-config), [`S3`](/reference/api/catalog/source/container-source-config), [`SAPHANA`](/reference/api/catalog/source/container-source-config), [`SNOWFLAKEOPENCATALOG`](/reference/api/catalog/source/container-source-config), [`SNOWFLAKE`](/reference/api/catalog/source/container-source-config), [`SYNAPSE`](/reference/api/catalog/source/container-source-config), [`TERADATA`](/reference/api/catalog/source/container-source-config), [`UNITY`](/reference/api/catalog/source/container-source-config), [`VERTICA`](/reference/api/catalog/source/container-source-config).
 The Iceberg [`RESTCATALOG`](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) source type provides support for several catalogs including Apache Polaris OSS, Nessie with Iceberg REST, AWS Glue Iceberg REST, S3 Tables, Confluent Tableflow, and [Microsoft OneLake](/data-sources/lakehouse-catalogs/onelake).
 Example: S3
 * * *
@@ -1086,7 +1087,7 @@ name Body String
 Name of the source that you want to update.
 Example: AWS-S3_testgroup
 * * *
-[metadataPolicy](/reference/api/catalog/source#parameters-of-the-metadatapolicy-object-1) Body Object Optional
+metadataPolicy Body Object Optional
 Information about the metadata policy for the source.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"authTTLMs": 86400000,"namesRefreshMs": 3600000,"datasetRefreshAfterMs": 3600000,"datasetExpireAfterMs": 10800000,"datasetUpdateMode": "PREFETCH_QUERIED","deleteUnavailableDatasets": true,"autoPromoteDatasets": false{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
@@ -1149,12 +1150,12 @@ Example: false
 accelerationRefreshOnDataChanges Body Boolean
 To refresh Reflections on underlying tables that are in Iceberg format in the source when new snapshots are created after an update, `true`. Otherwise, `false`. Reflections that are automatically updated based on Iceberg source table changes also update according to the source-level policy as the minimum refresh frequency. For this option to take effect, the source must support Iceberg table format, the accelerationNeverRefresh parameter must be set to `false`, and the accelerationActivePolicyType parameter must be set to either `PERIOD` or `SCHEDULE`.
 * * *
-[accessControlList](/reference/api/catalog/source#attributes-of-the-accesscontrollist-object) Body String Optional
+accessControlList Body String Optional
 Enterprise only. Information about users and roles that should have access to the source and the specific privileges each user or role should have. May include an array of users, an array of roles, or both, depending on the configured access and privileges. To keep existing accessControlList settings while making other updates, duplicate the existing accessControlList object in the PUT request.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "ebe519ab-20e3-43ff-9b4c-b3ec590c7e65", "permissions": ["VIEW_REFLECTION","SELECT" ]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "c45ff4d8-e910-4f85-89db-9b8c29188a56", "permissions": ["ALTER","CREATE_TABLE","DROP","INSERT","DELETE","UPDATE","TRUNCATE","VIEW_REFLECTION","ALTER_REFLECTION","MODIFY","MANAGE_GRANTS","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
-#### Parameters of the `config` Object[​](/reference/api/catalog/source#parameters-of-the-config-object-1 "Direct link to parameters-of-the-config-object-1")
+#### Parameters of the `config` Object​
 The `config` object's parameters vary for different source types. Read [Source Configuration](/reference/api/catalog/source/container-source-config) for information about the available parameters in the `config` object for each supported source type.
-#### Parameters of the `metadataPolicy` Object[​](/reference/api/catalog/source#parameters-of-the-metadatapolicy-object-1 "Direct link to parameters-of-the-metadatapolicy-object-1")
+#### Parameters of the `metadataPolicy` Object​
 authTTLMs Body Integer Optional
 Length of time to cache the privileges that the user has on the source, in milliseconds. For example, if authTTLMs is set to `28800000` (8 hours), Dremio checks the user's privilege status once every 8 hours. Default is `86400000` (24 hours). Minimum is `60000` (1 minute).
 Example: 86400000
@@ -1186,15 +1187,15 @@ Example: true
 autoPromoteDatasets Body Boolean Optional
 If Dremio should automatically format files into tables when a user issues a query, set to `true`. Otherwise, set to `false` (default). Available only for datalake sources, such as Amazon S3 and Hive.
 Example: false
-#### Parameters of the `accessControlList` Object[​](/reference/api/catalog/source#parameters-of-the-accesscontrollist-object-1 "Direct link to parameters-of-the-accesscontrollist-object-1")
-[users](/reference/api/catalog/source#parameters-of-objects-in-the-users-and-roles-arrays-1) Body Array of Object Optional
+#### Parameters of the `accessControlList` Object​
+users Body Array of Object Optional
 Enterprise only. List of users who should have access to the source and the specific privileges each user should have.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "ebe519ab-20e3-43ff-9b4c-b3ec590c7e65","permissions": ["VIEW_REFLECTION","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/source#parameters-of-objects-in-the-users-and-roles-arrays-1) Body Array of Object Optional
+roles Body Array of Object Optional
 Enterprise only. List of roles whose members should have access to the source and the specific privileges each role should have.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "c45ff4d8-e910-4f85-89db-9b8c29188a56","permissions": ["ALTER","CREATE_TABLE","DROP","INSERT","DELETE","UPDATE","TRUNCATE","VIEW_REFLECTION","ALTER_REFLECTION","MODIFY","MANAGE_GRANTS","SELECT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-#### Parameters of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/source#parameters-of-objects-in-the-users-and-roles-arrays-1 "Direct link to parameters-of-objects-in-the-users-and-roles-arrays-1")
+#### Parameters of Objects in the `users` and `roles` Arrays​
 id Body String Optional
 Enterprise only. Unique identifier of the user or role who should have access to the source.
 Example: ebe519ab-20e3-43ff-9b4c-b3ec590c7e65
@@ -1203,7 +1204,7 @@ permissions Body Array of String Optional
 Enterprise only. List of privileges the user or role should have on the source. For more information, read [Privileges](/security/rbac/privileges).
 Enum: ALL, VIEW_REFLECTION, TRUNCATE, UPDATE, DELETE, DROP, MANAGE_GRANTS, EXTERNAL_QUERY, EXECUTE, ALTER, INSERT, MODIFY, SELECT, CREATE_SOURCE, WRITE, CREATE_TABLE, ALTER_REFLECTION, READ
 Example: ["VIEW_REFLECTION","SELECT"]
-### Example[​](/reference/api/catalog/source#example-3 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1405,7 +1406,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/source#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -1419,7 +1420,7 @@ Response
 409 Conflict   
   
 
-## Delete a Source[​](/reference/api/catalog/source#delete-a-source "Direct link to Delete a Source")
+## Delete a Source​
 Delete the specified source, including all of the source's contents.
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 Method and URL
@@ -1429,11 +1430,11 @@ DELETE /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/source#parameters-4 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the source that you want to delete.
 Example: 2b1be882-7012-4a99-8d6c-82e32e4562e4
-### Example[​](/reference/api/catalog/source#example-4 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -1450,7 +1451,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/source#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 
@@ -1465,13 +1466,13 @@ No response
 
 Was this page helpful?
 [Previous Catalog](/reference/api/catalog)[Next Source Configuration](/reference/api/catalog/source/container-source-config)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Catalog](/reference/api/catalog)[Next Source Configuration](/reference/api/catalog/source/container-source-config)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fcatalog%2Fsource%2F&_biz_t=1777950386848&_biz_i=Source%20%7C%20Dremio%20Documentation&_biz_n=144&rnd=146055&cdn_o=a&_biz_z=1777950386848)
+!

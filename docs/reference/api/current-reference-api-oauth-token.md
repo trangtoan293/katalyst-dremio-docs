@@ -1,5 +1,6 @@
 ---
 url: /reference/api/oauth-token
+slug: /reference/api/oauth-token
 title: "OAuth Token | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64067.746339041
@@ -29,7 +30,7 @@ OAuth Token Object
 
 ```
 
-## Object Attributes[​](/reference/api/oauth-token#object-attributes "Direct link to Object Attributes")
+## Object Attributes​
 access_token String
 The returned access token. A client application passes this token when connecting with Dremio.
 Example: `eyJz93a...k4laUWw`
@@ -51,7 +52,7 @@ Example: `dremio.all offline_access`
 refresh_token String Optional
 An optional OAuth `scope` includes `offline_access`.
 Example: `ism9f1nf68lre2salj0tq0btor`
-## Obtain Tokens via Client ID and Client Secret[​](/reference/api/oauth-token#obtain-tokens-via-client-id-and-client-secret "Direct link to Obtain Tokens via Client ID and Client Secret")
+## Obtain Tokens via Client ID and Client Secret​
 The Client ID and Client Secret are used to obtain a short-lived access token that provides secure, time-limited access to resources.
 See [User Management](/security/authentication/users) to create service users for machine-to-machine applications.
 Method and URL
@@ -61,9 +62,9 @@ POST /{hostname}/oauth/token
 
 ```
 
-### Parameters[​](/reference/api/oauth-token#parameters "Direct link to Parameters")
+### Parameters​
 client_id Body String
-The unique identifier for your [service user](/security/authentication/users#service-users), assigned by Dremio.
+The unique identifier for your [service user](/security/authentication/users), assigned by Dremio.
 Example: `d3821306-1f75-4233-9c42-1a295f219850`
 * * *
 client_secret Body String
@@ -75,7 +76,7 @@ Valid value is `client_credentials`.
 * * *
 scope Body String
 Defines the level of access being requested. The scope must be set to `dremio.all`, which grants full access to Dremio resources.
-### Example[​](/reference/api/oauth-token#example "Direct link to Example")
+### Example​
   * cURL
   * Python
 
@@ -151,7 +152,7 @@ token = client.get_token()
 ```
 
 The lifetime of this token is one hour.
-### Response Status Codes[​](/reference/api/oauth-token#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -161,7 +162,7 @@ The lifetime of this token is one hour.
 403 Forbidden  
   
 
-## Obtain Tokens via Username and Password[​](/reference/api/oauth-token#obtain-tokens-via-username-and-password "Direct link to Obtain Tokens via Username and Password")
+## Obtain Tokens via Username and Password​
 For users authenticated locally or with an enterprise LDAP server, Dremio can provide OAuth access tokens using your username and password.
 Method and URL
 
@@ -170,7 +171,7 @@ POST /{hostname}/oauth/token
 
 ```
 
-### Parameters[​](/reference/api/oauth-token#parameters-1 "Direct link to Parameters")
+### Parameters​
 username Body String
 The username that will be embedded in the token.
 Example: `dremio_user`
@@ -185,7 +186,7 @@ The type of authentication method. For this method, the grant_type is `password`
 scope Body String
 Must contain `dremio.all`. If the scope also contains `offline_access`, Dremio will return a refresh token with the access token.
 Example: `dremio.all offline_access`
-### Example[​](/reference/api/oauth-token#example-1 "Direct link to Example")
+### Example​
   * cURL
   * Python
 
@@ -244,7 +245,7 @@ else:
 ```
 
 The lifetime of this token is one hour.
-### Response Status Codes[​](/reference/api/oauth-token#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -256,7 +257,7 @@ The lifetime of this token is one hour.
 500 Internal Server Error  
   
 
-## Exchange a Refresh Token[​](/reference/api/oauth-token#exchange-a-refresh-token "Direct link to Exchange a Refresh Token")
+## Exchange a Refresh Token​
 If a refresh token was requested with the OAuth access token using the `offline_access` scope, the refresh token can be exchanged for fresh access tokens until the refresh token expires. Each refresh token has a lifetime of 30 days.
 Method and URL
 
@@ -265,7 +266,7 @@ POST /{hostname}/oauth/token
 
 ```
 
-### Parameters[​](/reference/api/oauth-token#parameters-2 "Direct link to Parameters")
+### Parameters​
 grant_type Body String
 The type of token being exchanged. For a token refresh, the grant_type is `refresh_token`.
 * * *
@@ -276,7 +277,7 @@ Example: `dremio_user`
 refresh_token Body String
 The refresh token returned with the original token request.
 Example: `ism9f1nf68lre2salj0tq0btor`
-### Example[​](/reference/api/oauth-token#example-2 "Direct link to Example")
+### Example​
   * cURL
   * Python
 
@@ -331,7 +332,7 @@ else:
 ```
 
 The lifetime of this token is one hour.
-### Response Status Codes[​](/reference/api/oauth-token#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -343,7 +344,7 @@ The lifetime of this token is one hour.
 500 Internal Server Error  
   
 
-## Exchange an External JWT[​](/reference/api/oauth-token#exchange-an-external-jwt "Direct link to Exchange an External JWT")
+## Exchange an External JWT​
 Clients who authenticate with an OIDC external token provider can exchange their JWT for an OAuth access token that can be used to create connections to Dremio.
 Method and URL
 
@@ -352,7 +353,7 @@ POST /{hostname}/oauth/token
 
 ```
 
-### Parameters[​](/reference/api/oauth-token#parameters-3 "Direct link to Parameters")
+### Parameters​
 subject_token Body String
 The external JWT obtained from an OIDC provider like Microsoft Entra ID.
 Example: `eyJ0eXAiOiJKV1QiLCJhbGciOiJSUz...DYynR2lK6xB8xrAprgPA`
@@ -365,7 +366,7 @@ The type being granted. For a token exchange, the grant_type is `urn:ietf:params
 * * *
 scope Body String
 The scope of the request. For a token exchange, the scope is `dremio.all`.
-### Example[​](/reference/api/oauth-token#example-3 "Direct link to Example")
+### Example​
   * cURL
   * Python
 
@@ -422,7 +423,7 @@ else:
 ```
 
 The lifetime of this token is the time remaining on the external JWT, up to one hour.
-### Response Status Codes[​](/reference/api/oauth-token#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -434,7 +435,7 @@ The lifetime of this token is the time remaining on the external JWT, up to one 
 500 Internal Server Error  
   
 
-## Exchange a PAT[​](/reference/api/oauth-token#exchange-a-pat "Direct link to Exchange a PAT")
+## Exchange a PAT​
 Exchanging a [personal access token (PAT)](/security/authentication/personal-access-tokens) for an OAuth access token provides the security benefit of a shorter token lifetime while allowing a client application to access protected resources with a more controlled access mechanism. OAuth access tokens also perform better due to faster validation time than PATs.
 Method and URL
 
@@ -443,7 +444,7 @@ POST /{hostname}/oauth/token
 
 ```
 
-### Parameters[​](/reference/api/oauth-token#parameters-4 "Direct link to Parameters")
+### Parameters​
 subject_token Body String
 The personal access token to be exchanged.
 Example: `wPTsz2YrTVWQ7fw436Ec...911rJzUm6Xs1XrvU+w==`
@@ -456,7 +457,7 @@ The type being granted. For a token exchange, the grant_type is `urn:ietf:params
 * * *
 scope Body String
 The scope of the request. For a token exchange, the scope is `dremio.all`.
-### Example[​](/reference/api/oauth-token#example-4 "Direct link to Example")
+### Example​
   * cURL
   * Python
 
@@ -513,7 +514,7 @@ else:
 ```
 
 The lifetime of this token is the remaining lifetime of the PAT used in the exchange, up to one hour.
-### Response Status Codes[​](/reference/api/oauth-token#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -525,7 +526,7 @@ The lifetime of this token is the remaining lifetime of the PAT used in the exch
 500 Internal Server Error  
   
 
-## Exchange a PAT with User Impersonation[​](/reference/api/oauth-token#exchange-a-pat-with-user-impersonation "Direct link to Exchange a PAT with User Impersonation")
+## Exchange a PAT with User Impersonation​
 Dremio's [inbound user impersonation](/security/rbac/inbound-impersonation) feature allows a privileged user, called a proxy user, to run queries on Dremio as a second target user using the target user's privileges. The privileged user obtains the necessary privileges to impersonate a second target user from an inbound impersonation policy created by the Dremio administrator. Once the inbound impersonation policy is in place, the proxy user runs queries as the target user as allowed by the target user's privileges.
 Inbound Impersonation Policy
 
@@ -550,7 +551,7 @@ POST /{hostname}/oauth/token
 
 ```
 
-### Parameters[​](/reference/api/oauth-token#parameters-5 "Direct link to Parameters")
+### Parameters​
 subject_token Body String
 The target principal's username.
 Example: `sharedaccessuser`
@@ -570,7 +571,7 @@ The type being granted. For a token exchange, the grant_type is `urn:ietf:params
 * * *
 scope Body String
 The scope of the request. For a token exchange, the scope is `dremio.all`.
-### Example[​](/reference/api/oauth-token#example-5 "Direct link to Example")
+### Example​
   * cURL
   * Python
 
@@ -632,7 +633,7 @@ else:
 ```
 
 The lifetime of this token is the remaining lifetime of the PAT used in the exchange, up to one hour.
-### Response Status Codes[​](/reference/api/oauth-token#response-status-codes-5 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -646,13 +647,13 @@ The lifetime of this token is the remaining lifetime of the PAT used in the exch
 
 Was this page helpful?
 [Previous Node Collections](/reference/api)[Next Personal Access Token](/reference/api/personal-access-token)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Node Collections](/reference/api)[Next Personal Access Token](/reference/api/personal-access-token)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Foauth-token%2F&_biz_t=1777950386935&_biz_i=OAuth%20Token%20%7C%20Dremio%20Documentation&_biz_n=146&rnd=79838&cdn_o=a&_biz_z=1777950386935)
+!

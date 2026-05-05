@@ -2,7 +2,7 @@
   "label": "Compliance",
   "position": 7,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Compliance"
+    "type": "doc",
+    "id": "security/compliance/current-security-compliance"
   }
 }

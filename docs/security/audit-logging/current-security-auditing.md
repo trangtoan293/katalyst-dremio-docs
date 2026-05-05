@@ -1,5 +1,6 @@
 ---
 url: /security/auditing
+slug: /security/auditing
 title: "Audit Logging | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64075.913362333
@@ -14,9 +15,9 @@ On this page
 # Audit Logging Enterprise
 For organizations subject to compliance and regulation where auditing is regularly required, Dremio offers full audit logging, wherein all user activities performed within Dremio are tracked and traceable via the `audit.json` file. Each time a user performs an action within Dremio, such as logging in or creating a view, the audit log captures the user's ID and username, objects affected, action performed, event type, SQL statements used, and more.
 Audit logging is enabled by default and is available only to users with administrative rights at the System level.
-## Audit Log Location[​](/security/auditing#audit-log-location "Direct link to Audit Log Location")
-The log-file location may be configured via the `dremio.log.path` property in the [`dremio-env` file](/deploy-dremio/other-options/standalone/dremio-config/dremio-env). You can specify their location, size, and rotation schedule.
-## Tracked Events and Actions[​](/security/auditing#tracked-events-and-actions "Direct link to Tracked Events and Actions")
+## Audit Log Location​
+The log-file location may be configured via the `dremio.log.path` property in the `dremio-env` file. You can specify their location, size, and rotation schedule.
+## Tracked Events and Actions​
 Dremio supports audit logging for the following objects (event types) and actions:  
 | Event Type  | Actions  |  
 | --- | --- |  
@@ -41,7 +42,7 @@ Dremio supports audit logging for the following objects (event types) and action
 | USER_ACCOUNT  | CREATE, UPDATE, DELETE  |  
 | VIRTUAL_DATASET  | CREATE, RENAME, UPDATE, DELETE  |  
 | WIKI  | CREATE, EDIT, DELETE  |  
-## Audit Log Format[​](/security/auditing#audit-log-format "Direct link to Audit Log Format")
+## Audit Log Format​
 Audit logs include the following information in JSON format:  
 | Key  | Value  |  
 | --- | --- |  
@@ -55,7 +56,7 @@ The following values are placeholders that represent internal system users, whic
 This varies based on the `eventType`, but most often would be `CREATE`, `DELETE`, and `UPDATE`.  |  
 | `details`  | The data altered or created.   
 This varies based on the `eventType`.  |  
-### Audit Log Examples[​](/security/auditing#audit-log-examples "Direct link to Audit Log Examples")
+### Audit Log Examples​
 The following examples show the types of audit records that Dremio captures and the information included in an audit entry for each event type.
   * AUTHENTICATION
   * ENGINE
@@ -212,13 +213,13 @@ View (virtual dataset) log
 
 Was this page helpful?
 [Previous HashiCorp Vault](/security/secrets-management/hashicorp-vault)[Next Idle Session Timeout](/security/idle-session-timeout)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous HashiCorp Vault](/security/secrets-management/hashicorp-vault)[Next Idle Session Timeout](/security/idle-session-timeout)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fsecurity%2Fauditing%2F&_biz_t=1777950395396&_biz_i=Audit%20Logging%20%7C%20Dremio%20Enterprise%20Documentation&_biz_n=157&rnd=116045&cdn_o=a&_biz_z=1777950395396)
+!

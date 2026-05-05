@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/show-create-table
+slug: /reference/sql/commands/show-create-table
 title: "SHOW CREATE TABLE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64256.840695875
@@ -26,7 +27,7 @@ SHOW CREATE TABLE <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/show-create-table#parameters "Direct link to Parameters")
+## Parameters​
 `table_name` String
 The name of the table whose definition you want to see.
 * * *
@@ -38,7 +39,7 @@ Specify the reference for which you want to show the table definition:
   * `COMMIT`: Identifies the commit for the table for which you want to show the available definition. Commit hashes must be enclosed in double quotes (for example, `“ff2fe50fef5a030c4fc8e61b252bdc33c72e2b6f929d813833d998b8368302e2”`).
 
 
-## Examples[​](/reference/sql/commands/show-create-table#examples "Direct link to Examples")
+## Examples​
 Show the definition of a Nessie table in a specified branch
 
 ```
@@ -49,12 +50,12 @@ SHOW CREATE TABLE "company_data".employees
 
 Was this page helpful?
 [Previous Row-Access & Column-Masking](/reference/sql/commands/row-column-policies)[Next SHOW CREATE VIEW](/reference/sql/commands/show-create-view)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Row-Access & Column-Masking](/reference/sql/commands/row-column-policies)[Next SHOW CREATE VIEW](/reference/sql/commands/show-create-view)

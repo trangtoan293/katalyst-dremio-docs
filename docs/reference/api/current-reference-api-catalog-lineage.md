@@ -1,5 +1,6 @@
 ---
 url: /reference/api/catalog/lineage
+slug: /reference/api/catalog/lineage
 title: "Lineage | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64236.543838458
@@ -73,19 +74,19 @@ Lineage Object
 
 ```
 
-## Lineage Attributes[​](/reference/api/catalog/lineage#lineage-attributes "Direct link to Lineage Attributes")
-[sources](/reference/api/catalog/lineage#attributes-of-objects-in-the-sources-array) Array of Object
+## Lineage Attributes​
+sources Array of Object
 Information about the sources the dataset uses. Each object in the sources array represents one source.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "21077e5d-fe6f-4a29-843f-58fa3acb17c2","path": ["Samples"],"tag": "Iz1v71CeTQY=","type": "CONTAINER","containerType": "SOURCE","createdAt": "2023-02-14T21:57:48.794Z"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[parents](/reference/api/catalog/lineage#attributes-of-objects-in-the-parents-array) Array of Object
+parents Array of Object
 Information about the parent objects for the dataset. Each object in the parents array represents one parent object. If a view represents a join of two other datsets, the parents array includes the two joined datasets. The parents array is empty if the dataset does not have parent objects.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "3419fa3a-b5b3-4438-b864-a27ec4e18752","path": ["Samples","samples.dremio.com","zips.json"],"tag": "MAntohVzwLw=","type": "DATASET","datasetType": "PROMOTED","createdAt": "2023-01-18T18:49:09.669Z"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[children](/reference/api/catalog/lineage#attributes-of-objects-in-the-children-array) Array of Object
+children Array of Object
 Information about other catalog objects that reference the dataset. Each object in the children array represents one child object. The children array is empty if the dataset does not have child objects.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "170e211e-4235-4d8d-acb5-3d4dbfe99c75","path": ["@dremio","NYC_zip"],"tag": "OWKrfpEKzW4=","type": "DATASET","datasetType": "VIRTUAL","createdAt": "2023-01-25T02:11:46.344Z"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "7f79c068-a3c3-4af7-8cd4-35896ef0a0e0","path": ["@dremio","Chicago_zip"],"tag": "gsaDW5h4GCs=","type": "DATASET","datasetType": "VIRTUAL","createdAt": "2023-01-25T00:09:12.461Z"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-#### Attributes of Objects in the `sources` Array[​](/reference/api/catalog/lineage#attributes-of-objects-in-the-sources-array "Direct link to attributes-of-objects-in-the-sources-array")
+#### Attributes of Objects in the `sources` Array​
 id String (UUID)
 Unique identifier of the source associated with the dataset.
 Example: 21077e5d-fe6f-4a29-843f-58fa3acb17c2
@@ -110,7 +111,7 @@ Example: SOURCE
 createdAt String
 Date and time that the source was created, in UTC format. Not included for sources with the containerType `HOME`.
 Example: 2022-02-14T21:57:48.794Z
-#### Attributes of Objects in the `parents` Array[​](/reference/api/catalog/lineage#attributes-of-objects-in-the-parents-array "Direct link to attributes-of-objects-in-the-parents-array")
+#### Attributes of Objects in the `parents` Array​
 id String (UUID)
 Unique identifier of the parent object.
 Example: 3419fa3a-b5b3-4438-b864-a27ec4e18752
@@ -135,7 +136,7 @@ Example: PROMOTED
 createdAt String
 Date and time that the parent object was created, in UTC format.
 Example: 2023-01-18T18:49:09.669Z
-#### Attributes of Objects in the `children` Array[​](/reference/api/catalog/lineage#attributes-of-objects-in-the-children-array "Direct link to attributes-of-objects-in-the-children-array")
+#### Attributes of Objects in the `children` Array​
 id String (UUID)
 Unique identifier of the child object.
 Example: 170e211e-4235-4d8d-acb5-3d4dbfe99c75
@@ -159,7 +160,7 @@ Example: VIRTUAL
 createdAt String
 Date and time that the child object was created, in UTC format.
 Example: 2023-01-25T02:11:46.344Z
-## Retrieve Lineage Information About a Dataset[​](/reference/api/catalog/lineage#retrieve-lineage-information-about-a-dataset "Direct link to Retrieve Lineage Information About a Dataset")
+## Retrieve Lineage Information About a Dataset​
 Retrieve lineage information about the specified dataset.
 Method and URL
 
@@ -168,11 +169,11 @@ GET /api/v3/catalog/{id}/graph
 
 ```
 
-### Parameters[​](/reference/api/catalog/lineage#parameters "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the dataset whose lineage you want to retrieve.
 Example: d69b25a3-31c8-4d55-a7cc-dfee2290779b
-### Example[​](/reference/api/catalog/lineage#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -240,7 +241,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/lineage#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -252,13 +253,13 @@ Response
 
 Was this page helpful?
 [Previous View](/reference/api/catalog/view)[Next Tag](/reference/api/catalog/tag)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous View](/reference/api/catalog/view)[Next Tag](/reference/api/catalog/tag)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fcatalog%2Flineage%2F&_biz_t=1777950556231&_biz_i=Lineage%20%7C%20Dremio%20Documentation&_biz_n=453&rnd=401173&cdn_o=a&_biz_z=1777950556231)
+!

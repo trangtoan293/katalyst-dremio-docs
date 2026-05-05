@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/DATE_TIME
+slug: /reference/sql/sql-functions/DATE_TIME
 title: "Date/Time | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64271.6974815
@@ -52,7 +53,7 @@ On this page
 | [WEEK](/reference/sql/sql-functions)  | Extracts the week number (from 0 to 53) for a given date or timestamp.  |  
 | [WEEKOFYEAR](/reference/sql/sql-functions)  | Returns the week of year of the date or timestamp.  |  
 | [YEAR](/reference/sql/sql-functions)  | Extracts the year for a given date or timestamp.  |  
-## Date/Time Formatting[​](/reference/sql/sql-functions#datetime-formatting "Direct link to Date/Time Formatting")  
+## Date/Time Formatting[​](/reference/sql/sql-functions)  
 | Format Element  | Description  | Example  |  
 | --- | --- | --- |  
 | AD/BC  | Era indicator  | AD, BC  |  
@@ -80,13 +81,13 @@ Only the following characters are allowed in a format pattern: `- / , . ; :`. If
 If you convert a date to text, numeric values are zero padded for you. For example, `MM` returns `04` for April.
 Was this page helpful?
 [Previous Datatype](/reference/sql/sql-functions)[Next Directory](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Datatype](/reference/sql/sql-functions)[Next Directory](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2FDATE_TIME%2F&_biz_t=1777950591308&_biz_i=Date%2FTime%20%7C%20Dremio%20Documentation&_biz_n=529&rnd=221165&cdn_o=a&_biz_z=1777950591309)
+!

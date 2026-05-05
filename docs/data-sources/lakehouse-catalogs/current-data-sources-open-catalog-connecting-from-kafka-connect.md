@@ -1,5 +1,6 @@
 ---
 url: /data-sources/open-catalog/connecting-from-kafka-connect
+slug: /data-sources/open-catalog/connecting-from-kafka-connect
 title: "Connect to Open Catalog from Apache Kafka Connect | Dremio Documentation"
 depth: 4
 crawled_at: 64772.573362083
@@ -14,7 +15,7 @@ Version: current [26.x]
 On this page
 # Connect to Open Catalog from Apache Kafka Connect
 You can use the 
-## Prerequisites[​](/data-sources/open-catalog/connecting-from-kafka-connect#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
   * Java 17 or later for the Kafka Connect runtime.
   * Docker and Docker Compose installed and running.
   * The 
@@ -22,9 +23,9 @@ You can use the
 
 
 You must use the `authmgr-oauth2-standalone` JAR variant (not `authmgr-oauth2-runtime`) because this variant does not relocate Iceberg packages, which is required for compatibility with the Iceberg Kafka Sink Connector.
-## Setting Up Kafka and Kafka Connect[​](/data-sources/open-catalog/connecting-from-kafka-connect#setting-up-kafka-and-kafka-connect "Direct link to Setting Up Kafka and Kafka Connect")
+## Setting Up Kafka and Kafka Connect​
 Kafka Connect runs as a separate process that connects to a Kafka broker. The following steps use Docker Compose to run both a Kafka broker and a Kafka Connect worker.
-### Step 1: Create the Project Directory[​](/data-sources/open-catalog/connecting-from-kafka-connect#step-1-create-the-project-directory "Direct link to Step 1: Create the Project Directory")
+### Step 1: Create the Project Directory​
 Create the project directory
 
 ```
@@ -33,7 +34,7 @@ cd kafka-iceberg
 
 ```
 
-### Step 2: Create the Dockerfile for Kafka Connect[​](/data-sources/open-catalog/connecting-from-kafka-connect#step-2-create-the-dockerfile-for-kafka-connect "Direct link to Step 2: Create the Dockerfile for Kafka Connect")
+### Step 2: Create the Dockerfile for Kafka Connect​
 Create a `Dockerfile` that extends the Confluent Kafka Connect image with the Iceberg Sink Connector and the Dremio Auth Manager JAR:
 Kafka Connect Dockerfile
 
@@ -50,7 +51,7 @@ ADD --chown=appuser:appuser --chmod=644 \
 
 ```
 
-### Step 3: Create the Docker Compose File[​](/data-sources/open-catalog/connecting-from-kafka-connect#step-3-create-the-docker-compose-file "Direct link to Step 3: Create the Docker Compose File")
+### Step 3: Create the Docker Compose File​
 Create a `docker-compose.yml` file that runs both a Kafka broker and the Kafka Connect worker:
 Kafka Connect docker-compose.yml
 
@@ -109,7 +110,7 @@ services:
 
 ```
 
-### Step 4: Build and Start the Cluster[​](/data-sources/open-catalog/connecting-from-kafka-connect#step-4-build-and-start-the-cluster "Direct link to Step 4: Build and Start the Cluster")
+### Step 4: Build and Start the Cluster​
 Build and start the Kafka cluster
 
 ```
@@ -126,7 +127,7 @@ curl -s http://localhost:8083/ | jq .
 
 ```
 
-## Deploying a Connector[​](/data-sources/open-catalog/connecting-from-kafka-connect#deploying-a-connector "Direct link to Deploying a Connector")
+## Deploying a Connector​
 Connectors are deployed by submitting a JSON configuration file to the Kafka Connect REST API. The sections below provide example configurations for PAT and identity provider (IdP) authentication. To deploy a connector:
   1. Save the desired configuration to a file, for example `connector-config.json`.
   2. Replace the placeholder values in the file with your actual values.
@@ -150,7 +151,7 @@ curl -s http://localhost:8083/connectors/iceberg-sink/status | jq .
 
 ```
 
-## Authenticating with Dremio Using Dremio PAT[​](/data-sources/open-catalog/connecting-from-kafka-connect#authenticating-with-dremio-using-dremio-pat "Direct link to Authenticating with Dremio Using Dremio PAT")
+## Authenticating with Dremio Using Dremio PAT​
 Below is an example connector configuration that writes data from a Kafka topic to an Iceberg table in Open Catalog, using a personal access token (PAT) for authentication:
 Kafka Connector configuration with PAT authentication
 
@@ -186,7 +187,7 @@ Replace:
   * ``personal_access_token`` with your Dremio PAT.
 
 
-## Authenticating with Dremio Using OAuth2 (External Identity Provider)[​](/data-sources/open-catalog/connecting-from-kafka-connect#authenticating-with-dremio-using-oauth2-external-identity-provider "Direct link to Authenticating with Dremio Using OAuth2 \(External Identity Provider\)")
+## Authenticating with Dremio Using OAuth2 (External Identity Provider)​")
 Below is an example connector configuration that uses an external IdP for user authentication. The Dremio Auth Manager obtains a JSON Web Token (JWT) from the IdP using the `client_credentials` grant type, then exchanges it for a Dremio OAuth access token.
 Kafka Connector configuration with IdP authentication
 
@@ -235,12 +236,12 @@ Replace:
 
 Was this page helpful?
 [Previous Connect to Open Catalog from Apache Spark](/data-sources/open-catalog/connecting-from-spark)[Next Lakehouse Catalogs](/data-sources/lakehouse-catalogs)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Connect to Open Catalog from Apache Spark](/data-sources/open-catalog/connecting-from-spark)[Next Lakehouse Catalogs](/data-sources/lakehouse-catalogs)

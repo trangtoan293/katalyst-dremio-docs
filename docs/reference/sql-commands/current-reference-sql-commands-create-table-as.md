@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/create-table-as
+slug: /reference/sql/commands/create-table-as
 title: "CREATE TABLE AS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.597897625
@@ -31,7 +32,7 @@ CREATE TABLE [ IF NOT EXISTS ] <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/create-table-as#parameters "Direct link to Parameters")
+## Parameters​
 IF NOT EXISTS Optional
 Causes Dremio to run the statement only if a table with the same name in the same path does not already exist.
 * * *
@@ -52,7 +53,7 @@ After a source table has been created, the Dremio console displays the following
 
 
   * For additional security, access can be further controlled by selecting specifically restricted filesystem sub-directories when you initially create your Dremio source.
-  * CTAS functionality is enabled on a per source basis. To use the `CREATE TABLE AS` (CTAS) command on a source, you must grant [source privileges](/security/rbac/privileges#source-privileges) to the appropriate users.
+  * CTAS functionality is enabled on a per source basis. To use the `CREATE TABLE AS` (CTAS) command on a source, you must grant [source privileges](/security/rbac/privileges) to the appropriate users.
 
 
 * * *
@@ -64,7 +65,7 @@ Uses one of the following keywords to specify whether the column can contain `NU
 
 
 If you don't specify a keyword, the column allows `NULL` values by default. However, if you specify `NOT NULL`, the `CREATE TABLE AS` command succeeds only if the corresponding column in the source table contains no `NULL` values.
-To specify nullability and assign a data type to the new column that differs from the source column's data type, use type coercions similar to those used in `CREATE TABLE` followed by `INSERT INTO`. See [Examples](/reference/sql/commands/create-table-as#examples).
+To specify nullability and assign a data type to the new column that differs from the source column's data type, use type coercions similar to those used in `CREATE TABLE` followed by `INSERT INTO`. See Examples.
 * * *
 PARTITION BY ( {'{'})'{'{'})'{'}'}) `column_name` | `partition_transform` {'{'})'{'}'}'{'}'} [ , ... ] ) String Optional
 When you designate column(s) using this clause, Dremio will store the rows containing the same hash partition values in their own Parquet files. Using this clause provides speed optimization for when your `WHERE` clause matches your `PARTITION BY` clause.
@@ -103,7 +104,7 @@ Sets one or more table properties for controlling the behavior of the table. See
 AS `select_statement` String
 Use the `SELECT` statement to populate the new table using data from an existing table or view.
 * * *
-## Examples[​](/reference/sql/commands/create-table-as#examples "Direct link to Examples")
+## Examples​
 Create a table as SELECT * from another table
 
 ```
@@ -148,13 +149,13 @@ CREATE TABLE age_table (age INT NOT NULL)
 
 Was this page helpful?
 [Previous CREATE TABLE](/reference/sql/commands/create-table)[Next CREATE VIEW](/reference/sql/commands/create-view)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CREATE TABLE](/reference/sql/commands/create-table)[Next CREATE VIEW](/reference/sql/commands/create-view)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fcreate-table-as%2F&_biz_t=1777950571684&_biz_i=CREATE%20TABLE%20AS%20%7C%20Dremio%20Documentation&_biz_n=495&rnd=855910&cdn_o=a&_biz_z=1777950571684)
+!

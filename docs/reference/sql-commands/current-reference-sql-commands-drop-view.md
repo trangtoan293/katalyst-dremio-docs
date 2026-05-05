@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/drop-view
+slug: /reference/sql/commands/drop-view
 title: "DROP VIEW | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64254.283869666
@@ -22,13 +23,13 @@ DROP VIEW [ IF EXISTS ] <view_name>
 
 ```
 
-#### Parameters[​](/reference/sql/commands/drop-view#parameters "Direct link to Parameters")
+#### Parameters​
 [ IF EXISTS ] Optional
 When included, the command will succeed regardless of whether the view existed. If this clause is not specified, the command will fail if the view to be dropped does not exist.
 * * *
 `view_name` String
 The path of the view that you want to drop.
-## Examples[​](/reference/sql/commands/drop-view#examples "Direct link to Examples")
+## Examples​
 Drop a view
 
 ```
@@ -44,13 +45,13 @@ DROP VIEW Weather.SFWeatherElevation"Weather Conditions"
 ```
 
 Was this page helpful?
-[Previous DROP SPACE](/reference/sql/commands/drop-space)[Next Privileges](/reference/sql/commands/rbac)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous DROP SPACE[Next Privileges](/reference/sql/commands/rbac)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous DROP SPACE](/reference/sql/commands/drop-space)[Next Privileges](/reference/sql/commands/rbac)
+Previous DROP SPACE[Next Privileges](/reference/sql/commands/rbac)

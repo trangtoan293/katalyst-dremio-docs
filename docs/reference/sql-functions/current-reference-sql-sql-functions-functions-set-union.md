@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/SET_UNION
+slug: /reference/sql/sql-functions/functions/SET_UNION
 title: "SET_UNION | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64351.507351458
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Semi-Structured Data](/reference/sql/sql-functions)
 # SET_UNION
 Given two arrays, returns a single array that includes all of the elements in the given arrays, without duplicates.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### SET_UNION(_array1_ LIST, _array2_ LIST) → LIST[​](/reference/sql/sql-functions#set_unionarray1-list-array2-list--list "Direct link to set_unionarray1-list-array2-list--list")
+## Syntax
+### SET_UNION(_array1_ LIST, _array2_ LIST) → LIST[​](/reference/sql/sql-functions)
   * array1: The first input array to participate in the union.
   * array2: The second input array to participate in the union.
 
@@ -40,16 +41,16 @@ SELECT SET_UNION(ARRAY[1, 1, 2], ARRAY[3, 3, 4]);
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 The elements in the returned array are not listed in any particular order.
 Was this page helpful?
 [Previous SESSION_USER](/reference/sql/sql-functions)[Next SHA256](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SESSION_USER](/reference/sql/sql-functions)[Next SHA256](/reference/sql/sql-functions)

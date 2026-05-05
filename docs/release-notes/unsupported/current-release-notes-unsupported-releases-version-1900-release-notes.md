@@ -1,5 +1,6 @@
 ---
 url: /release-notes/unsupported-releases/version-1900-release-notes
+slug: /release-notes/unsupported-releases/version-1900-release-notes
 title: "19.x Release Notes | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64379.56152875
@@ -14,16 +15,16 @@ Version: current [26.x]
 On this page
 # 19.x Release Notes
 Releases are listed in reverse order, starting with the latest release of Dremio 19.x.
-## 19.12.0 (June 2023) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#19120-june-2023-enterprise "Direct link to 19120-june-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed "Direct link to Issues Fixed")
+## 19.12.0 (June 2023) Enterprise​
+### Issues Fixed​
   * Improved permission validation around view-based query execution. 
 DX-64688 
   * In this release, the plan cache is user-specific for increased security, and it will be utilized when the same query is executed by the same user. 
 DX-63531 
 
 
-## 19.11.0 (September 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#19110-september-2022-enterprise "Direct link to 19110-september-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-1 "Direct link to Issues Fixed")
+## 19.11.0 (September 2022) Enterprise​
+### Issues Fixed​
 DX-54176, DX-54174, DX-54214, DX-55844 
   * This release includes a number of fixes that resolve potential security issues.
 
@@ -48,14 +49,14 @@ DX-37600
   * Following upgrades to Dremio 18, promotion of HDFS-based datasets was failing if both unlimited splits and the use of Iceberg tables were enabled.
 
 
-## 19.10.0 (August 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#19100-august-2022-enterprise "Direct link to 19100-august-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-2 "Direct link to Issues Fixed")
+## 19.10.0 (August 2022) Enterprise​
+### Issues Fixed​
 DX-51465 
   * Objects whose names included non-latin characters were not behaving as expected in Dremio. For example, folders could not be promoted and views were not visible in the home space.
 
 
-## 19.9.0 (July 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1990-july-2022-enterprise "Direct link to 1990-july-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-3 "Direct link to Issues Fixed")
+## 19.9.0 (July 2022) Enterprise​
+### Issues Fixed​
 DX-52061 
   * The `dremio-admin clean` CLI parameter `-d` (or `--delete-orphan-datasetversions`) was deleting named dataset versions during clean-up. With this release, only temporary `tmp.UNTITLED` dataset versions will be deleted.
 
@@ -72,23 +73,23 @@ DX-40559
   * JDBC clients could not see parent objects (folders, spaces, etc.) unless they had explicit `SELECT` privileges on those objects, even if they had permissions on a child object.
 
 
-## 19.8.1 (June 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1981-june-2022-enterprise "Direct link to 1981-june-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-4 "Direct link to Issues Fixed")
+## 19.8.1 (June 2022) Enterprise​
+### Issues Fixed​
 DX-52061 
   * The `dremio-admin clean` CLI parameter `-d` (or `--delete-orphan-datasetversions`) was deleting named dataset versions during clean-up. With this release, only temporary `tmp.UNTITLED` dataset versions will be deleted.
 
 
-## 19.8.0 (May 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1980-may-2022-enterprise "Direct link to 1980-may-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new "Direct link to What's New")
+## 19.8.0 (May 2022) Enterprise​
+### What's New​
 DX-49772 
-  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information.
+  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See Clean Metadata for more information.
 
 
 DX-47557 
-  * The `-j` argument of the `dremio-admin clean` CLI command has been extended to purge temporary dataset versions associated with deleted jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information.
+  * The `-j` argument of the `dremio-admin clean` CLI command has been extended to purge temporary dataset versions associated with deleted jobs. See Clean Metadata for more information.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-5 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-48818 
   * Updated the Postgres JDBC driver from version 42.2.18 to version 42.3.4 to address 
 
@@ -129,8 +130,8 @@ DX-42388
   * An issue with plan serialization was causing longer than usual planning times.
 
 
-## 19.7.0 (May 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1970-may-2022-enterprise "Direct link to 1970-may-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-6 "Direct link to Issues Fixed")
+## 19.7.0 (May 2022) Enterprise​
+### Issues Fixed​
 DX-48914 
   * When a `CASE` was used in a `WHERE` filter with an `AND` or an `OR`, it would be incorrectly wrapped in a `CAST`, resulting in the following error: `DATA_READ ERROR: Source 'sqlGrip' returned error 'Incorrect syntax near the keyword 'AS'.'`
 
@@ -155,35 +156,35 @@ DX-36544
   * Running `ALTER PDS` to refresh metadata on a Hive source was resulting in the following error: `PLAN ERROR: NullPointerException`
 
 
-## 19.6.3 (May 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1963-may-2022-enterprise "Direct link to 1963-may-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new-1 "Direct link to What's New")
+## 19.6.3 (May 2022) Enterprise​
+### What's New​
 DX-49772 
-  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information.
+  * This release includes a new argument for the `dremio-admin clean` CLI command to purge dataset version entries that are not linked to existing jobs. See Clean Metadata for more information.
 
 
 DX-47557 
-  * The `-j` argument of the `dremio-admin clean` CLI command has been extended to purge temporary dataset versions associated with deleted jobs. See [Clean Metadata](/reference/admin-cli/metadata-cleanup) for more information.
+  * The `-j` argument of the `dremio-admin clean` CLI command has been extended to purge temporary dataset versions associated with deleted jobs. See Clean Metadata for more information.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-7 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-48914 
   * When a `CASE` was used in a `WHERE` filter with an `AND` or an `OR`, it would be incorrectly wrapped in a `CAST`, resulting in the following error: `DATA_READ ERROR: Source 'sqlGrip' returned error 'Incorrect syntax near the keyword 'AS'.'`
 
 
-## 19.6.1 (April 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1961-april-2022-enterprise "Direct link to 1961-april-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-8 "Direct link to Issues Fixed")
+## 19.6.1 (April 2022) Enterprise​
+### Issues Fixed​
 DX-47820 
   * The `is_member` SQL function was failing with `UnsupportedOperationException` when concatenating with a table column.
 
 
-## 19.6.2 (April 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1962-april-2022-enterprise "Direct link to 1962-april-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-9 "Direct link to Issues Fixed")
+## 19.6.2 (April 2022) Enterprise​
+### Issues Fixed​
 DX-36544 
   * Running `ALTER PDS` to refresh metadata on a Hive source was resulting in the following error: `PLAN ERROR: NullPointerException`.
 
 
-## 19.6.0 (April 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1960-april-2022-enterprise "Direct link to 1960-april-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-10 "Direct link to Issues Fixed")
+## 19.6.0 (April 2022) Enterprise​
+### Issues Fixed​
 DX-47720 
   * Some `CASE` queries that ran successfully in previous versions were failing with `FUNCTION ERROR: Cannot parse input: Not Available with pattern : #`.
 
@@ -200,19 +201,19 @@ DX-44619
   * `CAST` operations were added to pushdown queries for RDBMS sources to ensure consistent data types, and specifically for numeric types where precision and scale were unknown. In some cases, however, adding `CAST` operations at lower levels of the query was disabling the use of indexes in `WHERE` clauses in some databases. Dremio now ensures that `CAST` operations are added as high up in the query as possible.
 
 
-## 19.5.1 (March 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1951-march-2022-enterprise "Direct link to 1951-march-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-11 "Direct link to Issues Fixed")
+## 19.5.1 (March 2022) Enterprise​
+### Issues Fixed​
 DX-47112 
   * When running a specific query with a `HashJoin`, executor nodes were stopping unexpectedly with the following error: `SYSTEM ERROR: ExecutionSetupException`
 
 
-## 19.5.0 (March 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1950-march-2022-enterprise "Direct link to 1950-march-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new-2 "Direct link to What's New")
+## 19.5.0 (March 2022) Enterprise​
+### What's New​
 DX-42480 
   * In this release, Dremio is now pushing down computation for extra hash join conditions.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-12 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-40744 
   * Reflection refreshes that were initially successful would stop working after some time. If a request for a Reflection refresh was submitted (scheduled, via the UI, or via REST API calls), no job appeared in the jobs queue because the job was never started.
 
@@ -261,13 +262,13 @@ DX-46105
   * When formatting GCS data at a folder level into a table or when selecting data from an existing table built on GCS, if any data values in the partitioning field included a space, the action would fail with: `RuntimeException: the specified key does not exist`
 
 
-## 19.4.1 (February 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1941-february-2022-enterprise "Direct link to 1941-february-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new-3 "Direct link to What's New")
+## 19.4.1 (February 2022) Enterprise​
+### What's New​
 DX-42833 
   * This release improves Sql-To-Rel performance by eliminating slower single-use maps and using lambda functions.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-13 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-42947 
   * Some fields were not getting trimmed after the logical phase during queries, resulting in degraded performance.
 
@@ -276,8 +277,8 @@ DX-42389, DX-42388
   * Plan serialization time was not being accounted for in the Sql-To-Rel conversion phase, resulting in planning time missing from profiles as well as longer than usual planning times.
 
 
-## 19.4.0 (January 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1940-january-2022-enterprise "Direct link to 1940-january-2022-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-14 "Direct link to Issues Fixed")
+## 19.4.0 (January 2022) Enterprise​
+### Issues Fixed​
   * In cases involving multiple tables in joins along with filters, RDBMS query pushdown could result in queries that ambiguously reference columns, resulting in `invalid identifier` errors.
 
 
@@ -293,29 +294,29 @@ DX-42389, DX-42388
   * In some cases, certain `SELECT` queries that included an `ORDER BY` statement were returning the following error: `Serialization is only allowed for SelectionVectorMode.NONE`
 
 
-## 19.3.0 (January 2022) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1930-january-2022-enterprise "Direct link to 1930-january-2022-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new-4 "Direct link to What's New")
+## 19.3.0 (January 2022) Enterprise​
+### What's New​
 DX-41416 
-#### Microsoft Azure Synapse Analytics Support[​](/release-notes/unsupported-releases/version-1900-release-notes#microsoft-azure-synapse-analytics-support "Direct link to Microsoft Azure Synapse Analytics Support")
+#### Microsoft Azure Synapse Analytics Support​
 An ARP connector is now available on Dremio that allows for integration with Azure Synapse Analytics dedicated SQL pools. This option is available for immediate use by adding a new [External Source](/data-sources/databases/azure-synapse-analytics) from the Dremio interface.
 DX-41070 
-#### Logback Updated[​](/release-notes/unsupported-releases/version-1900-release-notes#logback-updated "Direct link to Logback Updated")
+#### Logback Updated​
 Logback was updated to v1.2.9 to mitigate CVE-2021-44228. This utilizes a new version of the library, which disables certain JNDI features known to cause issues with log4j 2.x. While Dremio is not vulnerable due to logback configurations being inaccessible externally and not using JNDI/JDBC features, this was done as a general security best practice.
-#### Updated Azure Storage Library[​](/release-notes/unsupported-releases/version-1900-release-notes#updated-azure-storage-library "Direct link to Updated Azure Storage Library")
+#### Updated Azure Storage Library​
 DX-39471 
 Updated Dremio's supported version of the `Azure.Storage.Common` library to v12.14.1, at the recommendation of Microsoft. Organizations using older versions of Azure storage libraries occasionally encountered data corruption issues, which is addressed with the newer SDK version.
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-15 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-41028 
 **_The`FilesystemScanDrel` operator could skip printing out partition-filtering information, which caused Dremio's query planner to utilize incorrect operators in later phases of the query execution._** This issue has been addressed by forcing all information to print out with the `FilesystemScanDrel` operator.
 DX-39851 
 **_Users encountered an`AssertionError` when attempting to add expressions of different types to a set._** This issue has been addressed by updating the version of Calcite used (CALCITE-2946).
 **_Users encounter issues with data sources with`BIT` columns mapped to `BOOLEAN`, as pushdowns are disabled for such columns._** This issue has been addressed for sources that do not support booleans by expanding boolean columns into integer comparisons (e.g., `COL = 1`).
-## 19.2.0 (November 2021) Enterprise[​](/release-notes/unsupported-releases/version-1900-release-notes#1920-november-2021-enterprise "Direct link to 1920-november-2021-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new-5 "Direct link to What's New")
+## 19.2.0 (November 2021) Enterprise​
+### What's New​
 DX-15697 
-#### Min/Max on Variable-Length Columns moved to VectorizedHashAgg Spill Operator[​](/release-notes/unsupported-releases/version-1900-release-notes#minmax-on-variable-length-columns-moved-to-vectorizedhashagg-spill-operator "Direct link to Min/Max on Variable-Length Columns moved to VectorizedHashAgg Spill Operator")
+#### Min/Max on Variable-Length Columns moved to VectorizedHashAgg Spill Operator​
 When a query used min/max on a varlength column or ndv accumulator, it was serviced by a no-spill operator. This functionality has been moved to a new `VectorizedHashAgg` spill operator so that in the event of out-of-memory (OOM) exceptions, the operator continues to spill onto the disk until the query completes rather than forcing a query rewrite.
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-16 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-38832 
 **_When debugging runtime filters, users encountered insufficient information from the operator details about which runtime filter a Scan Operator received or dropped._**   
 This issue has been addressed by adding runtime filter information to Scan Operator details.
@@ -337,8 +338,8 @@ This issue has been addressed by enhancing aggregated Reflection matching by tri
 DX-28298 
 **_User queries encountered Gandiva exceptions indicating that Dremio "could not allocate memory for output string."_**   
 This issue has been addressed by fixing an unexpected behavior within the `SPLIT_PART` function.
-## 19.1.0 (November 2021)[​](/release-notes/unsupported-releases/version-1900-release-notes#1910-november-2021 "Direct link to 19.1.0 \(November 2021\)")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-17 "Direct link to Issues Fixed")
+## 19.1.0 (November 2021)​")
+### Issues Fixed​
 DX-38539 
 **_When attempting to perform reporting based upon tag names, users encountered issues where the AWS tag`Role` was already being used by the executors having the tag value `Executor`._** This issue has been addressed by modifying the `Role` tag to `dremio_role` in its place. Coordinators will continue to not use this tag.
 DX-38831 
@@ -371,8 +372,8 @@ This issue has been addressed by adding failsafe logic to fix the cluster state 
 DX-38431 
 **_Users encountered issues with the PUT`api/v3/reflection/{reflectionId}` API when Dremio encountered unknown fields._**  
 This issue has been addressed by altering the API to not return errors when a payload includes `canView` and `canAlter` fields. Changes to these fields' values will be ignored.
-## 19.0.0 (October 2021)[​](/release-notes/unsupported-releases/version-1900-release-notes#1900-october-2021 "Direct link to 19.0.0 \(October 2021\)")
-### What's New[​](/release-notes/unsupported-releases/version-1900-release-notes#whats-new-6 "Direct link to What's New")
+## 19.0.0 (October 2021)​")
+### What's New​
   * Simplified Navigation Bar: The original top navigation bar has been replaced with a new side navigation bar along the left-hand side of the Dremio interface. Links to Datasets, SQL Runner, Jobs, and account settings have been replaced with icons for the SQL Editor, Job Visualizer, project, and profile.
 
 ![This image shows the new left-hand navigation menu in Dremio.](https://docs.dremio.com/images/rn-190-leftnav.png)
@@ -399,20 +400,20 @@ DX-31443
 Dremio now honors permission configurations made from AWS Lake Formation for Glue sources at the database and table levels. This entails integrating with Dremio as described in our [Lake Formation configuration guide](/security/integrations/lake-formation).
 
 
-  * Administrators may grant internal/external groups (e.g., AD) administrative access to an organization's full cluster with the [GRANT SQL command](/reference/sql/commands/rbac#granting-the-role-admin-privilege). To add this privilege to a role, navigate to the SQL Editor and run the query, `GRANT ROLE ADMIN TO ROLE groupName`. Run `SELECT * FROM sys.membership` to verify the new record exists. 
+  * Administrators may grant internal/external groups (e.g., AD) administrative access to an organization's full cluster with the [GRANT SQL command](/reference/sql/commands/rbac). To add this privilege to a role, navigate to the SQL Editor and run the query, `GRANT ROLE ADMIN TO ROLE groupName`. Run `SELECT * FROM sys.membership` to verify the new record exists. 
 DX-37044 
 
 
 DX-37179 
   * Dividing a float by `0` now returns `NaN` if [Gandiva-based execution](/help-support/advanced-topics/gandiva) is enabled. If disabled, Dremio will follow the standard SQL behavior for dividing by `0`, which is to display an exception error message.
   * IEEE-754 divide semantics has also been added, which is activated through the `planner.ieee_754_divide_semantics` support key. When a positive/zero/negative float is divided by zero, then infinity, NaN or negative infinity is returned.
-  * Jobs & Job Detail New UI On By Default: The new Jobs and Job Details pages first introduced in [Dremio v18.0](/release-notes/version-1800-release-notes#new-job-history--job-details-screens) is now activated by default for all customers that upgrade to v19.0+. Previously, this functionality required manual enablement via support keys to access.
+  * Jobs & Job Detail New UI On By Default: The new Jobs and Job Details pages first introduced in [Dremio v18.0](/release-notes/version-1800-release-notes) is now activated by default for all customers that upgrade to v19.0+. Previously, this functionality required manual enablement via support keys to access.
   * Removal of Mixed Data Types Support Key: 
 DX-37357 
-The support key that allowed customers to enable mixed types despite the [deprecation implemented in Dremio v18.0](/release-notes/version-1800-release-notes#mixed-type-removal) has now been removed. 
+The support key that allowed customers to enable mixed types despite the [deprecation implemented in Dremio v18.0](/release-notes/version-1800-release-notes) has now been removed. 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-1900-release-notes#issues-fixed-18 "Direct link to Issues Fixed")
+### Issues Fixed​
 **_After upgrading to Dremio 18.0, the interface became slow and responsive as a result of access control migrations._**  
 This issue has been addressed so that the interface is more responsive while migrations are taking place.
 **_After upgrading to 18.0, customers began experiencing permissions issues when attempting to use HDFS-based sources._**  
@@ -491,11 +492,11 @@ This issue has been addressed by adding a socket call to the API.
 DX-38810 
 DX-12608 
 **_When attempting numerous concurrent metadata refreshes for AWS, S3, and GCS sources, these would fail due to service rate limits._**  
-This issue has been addressed by implementing an exponential back-off policy that performs up to 10 retries upon encountering throttling errors from cloud sources. Should such errors persist beyond the retry limit, review the workaround documented under [Known Issues](/release-notes/unsupported-releases/version-1900-release-notes#known-issues).
+This issue has been addressed by implementing an exponential back-off policy that performs up to 10 retries upon encountering throttling errors from cloud sources. Should such errors persist beyond the retry limit, review the workaround documented under Known Issues.
 DX-38951 
 **_With the new Jobs UI activated, upon clicking the View Details button, users could not bookmark or save the page for a single job._**  
 This issue has been addressed by allowing users to open a job's details from the same browser tab as the **View Details** button was clicked on.
-### Known Issues[​](/release-notes/unsupported-releases/version-1900-release-notes#known-issues "Direct link to Known Issues")
+### Known Issues​
 The following are known issues with Dremio v19.0 and will be resolved in future maintenance releases:
   * HDP-2 and HDP-3 installations not yet certified for Dremio v19.0. Any changes to this status will be made known here.
   * Some queries may encounter an error for `org.apache.iceberg.exceptions.CommitFailedException`. This only occurs under high concurrency metadata refresh and Reflection refresh operations. To avoid this issue, it is recommended that administrators enable the `nessie.kvversionstore.max_retries` support key and increase the default value.
@@ -507,14 +508,14 @@ DX-39769
 
 
 Was this page helpful?
-[Previous 20.x Release Notes](/release-notes/unsupported-releases/version-200-release)[Next 18.x Release Notes](/release-notes/unsupported-releases/version-1800-release-notes)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous 20.x Release Notes[Next 18.x Release Notes](/release-notes/unsupported-releases/version-1800-release-notes)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous 20.x Release Notes](/release-notes/unsupported-releases/version-200-release)[Next 18.x Release Notes](/release-notes/unsupported-releases/version-1800-release-notes)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Frelease-notes%2Funsupported-releases%2Fversion-1900-release-notes%2F&_biz_t=1777950700507&_biz_i=19.x%20Release%20Notes%20%7C%20Dremio%20Documentation&_biz_n=740&rnd=521930&cdn_o=a&_biz_z=1777950700508)
+Previous 20.x Release Notes[Next 18.x Release Notes](/release-notes/unsupported-releases/version-1800-release-notes)
+!

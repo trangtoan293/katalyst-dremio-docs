@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/nessie/vacuum-catalog
+slug: /reference/sql/commands/nessie/vacuum-catalog
 title: "VACUUM CATALOG | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64254.646432666
@@ -28,8 +29,8 @@ VACUUM CATALOG <source_name>
 
 ```
 
-Before you can manually run the `VACUUM CATALOG` SQL command, you must complete the prerequisite tasks listed in [Table Cleanup with Vacuum](/developer/data-formats/apache-iceberg/table-maintenance-optimization/table-cleanup-vacuum#prerequisites).
-## Parameters[​](/reference/sql/commands/nessie/vacuum-catalog#parameters "Direct link to Parameters")
+Before you can manually run the `VACUUM CATALOG` SQL command, you must complete the prerequisite tasks listed in [Table Cleanup with Vacuum](/developer/data-formats/apache-iceberg/table-maintenance-optimization/table-cleanup-vacuum).
+## Parameters​
 `source_name` String
 The name of the Nessie catalog source to vacuum.
 * * *
@@ -51,7 +52,7 @@ References help identify the table. After the table is identified, the exclusion
 * * *
 AS OF `timestamp` String Optional
 Available for Iceberg table queries only. Changes the commit reference point to the most recent Iceberg snapshot as of the provided timestamp. ``timestamp`` may be any SQL expression that resolves to a single timestamp type value. For example, `CAST( DATE_SUB(CURRENT_DATE,1) AS TIMESTAMP )` or `TIMESTAMP '2022-07-01 01:30:00.000'`.
-## Examples[​](/reference/sql/commands/nessie/vacuum-catalog#examples "Direct link to Examples")
+## Examples​
 Vacuum a catalog
 
 ```
@@ -125,13 +126,13 @@ VACUUM CATALOG arctic_catalog
 
 Was this page helpful?
 [Previous SHOW TAGS](/reference/sql/commands/nessie/show-tags)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SHOW TAGS](/reference/sql/commands/nessie/show-tags)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fnessie%2Fvacuum-catalog%2F&_biz_t=1777950574534&_biz_i=VACUUM%20CATALOG%20%7C%20Dremio%20Documentation&_biz_n=497&rnd=250175&cdn_o=a&_biz_z=1777950574534)
+!

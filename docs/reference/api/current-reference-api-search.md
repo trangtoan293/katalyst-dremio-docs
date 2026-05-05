@@ -1,5 +1,6 @@
 ---
 url: /reference/api/search
+slug: /reference/api/search
 title: "Search | Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64791.072682666
@@ -43,7 +44,7 @@ Search Object
 
 ```
 
-## Search Attributes[​](/reference/api/search#search-attributes "Direct link to Search Attributes")
+## Search Attributes​
 sessionId String
 Session identifier to correlate API calls during feedback collection.
 Example: "210be060-b680-43ab-8333-f519847802dd"
@@ -53,9 +54,9 @@ Token of the next page of results to fetch in a paginated response.
 Example: "eyJwYWdlVG9rZW4iOiI1MCIsInF1ZXJ5Ijoiam9iIiwiZmlsdGVyIjoiIn0"
 * * *
 results Array of Object
-Array of search results. Each result object can contain a [catalogObject](/reference/api/search#catalogobject-object), [jobObject](/reference/api/search#jobobject-object), [scriptObject](/reference/api/search#scriptobject-object), or [reflectionObject](/reference/api/search#reflectionobject-object).
+Array of search results. Each result object can contain a catalogObject, jobObject, scriptObject, or reflectionObject.
 * * *
-## Perform a Search[​](/reference/api/search#perform-a-search "Direct link to Perform a Search")
+## Perform a Search​
 Search for indexed entities such as tables, views, Reflections, jobs, functions, scripts, and folders.
 Method and URL
 
@@ -64,7 +65,7 @@ POST /api/v3/search
 
 ```
 
-### Parameters[​](/reference/api/search#parameters "Direct link to Parameters")
+### Parameters​
 query Body String
 Search string.
 Example: "views with date columns"
@@ -80,7 +81,7 @@ Example: "eyJwYWdlVG9rZW4iOiI1MCIsInF1ZXJ5Ijoiam9iIiwiZmlsdGVyIjoiIn0"
 maxResults Body Integer Optional
 Maximum number of results to return per page.
 Example: 10
-### Example[​](/reference/api/search#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -142,7 +143,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/search#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -153,7 +154,7 @@ Response
   
 
 * * *
-## Retrieve Search Infrastructure Status[​](/reference/api/search#retrieve-search-infrastructure-status "Direct link to Retrieve Search Infrastructure Status")
+## Retrieve Search Infrastructure Status​
 Method and URL
 
 ```
@@ -162,7 +163,7 @@ GET /api/v3/search/status
 ```
 
 Retrieves the current state of the search system, including OpenSearch health and indexing status.
-### Example Response[​](/reference/api/search#example-response "Direct link to Example Response")
+### Example Response​
 
 ```
 {  
@@ -193,7 +194,7 @@ Retrieves the current state of the search system, including OpenSearch health an
 
 ```
 
-### Response Status Codes[​](/reference/api/search#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 400 Bad Request  
@@ -204,7 +205,7 @@ Retrieves the current state of the search system, including OpenSearch health an
   
 
 * * *
-## Remove All Search Documents[​](/reference/api/search#remove-all-search-documents "Direct link to Remove All Search Documents")
+## Remove All Search Documents​
 Method and URL
 
 ```
@@ -214,7 +215,7 @@ POST /api/v3/search/recovery/removeDocuments
 
 Triggers removal of all indexed documents and artifacts. OpenSearch cluster reinitialization is triggered asynchronously.
 &gt; _Caution:_ Use only if index corruption or inconsistency is diagnosed.
-### Response Status Codes[​](/reference/api/search#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK  
   
 401 Unauthorized  
@@ -222,7 +223,7 @@ Triggers removal of all indexed documents and artifacts. OpenSearch cluster rein
 500 Internal Server Error  
   
 
-### Example Response[​](/reference/api/search#example-response-1 "Direct link to Example Response")
+### Example Response​
 
 ```
 {  
@@ -232,8 +233,8 @@ Triggers removal of all indexed documents and artifacts. OpenSearch cluster rein
 ```
 
 * * *
-## Object Schemas[​](/reference/api/search#object-schemas "Direct link to Object Schemas")
-### searchResultObject Object[​](/reference/api/search#searchresultobject-object "Direct link to searchresultobject-object")
+## Object Schemas​
+### searchResultObject Object​
 Search result object. One of the following fields will be populated based on the result type.
 category String
 The type of the result object.
@@ -255,7 +256,7 @@ scriptObject Object Optional
 If the result is a script, this field contains the SearchScriptObject.
 Example: {'{'})'{'{'})'{'}'}) "id": "1b53bf6c-dd9b-4f16-90e2-23b3c4cfd04f", "name": "test", "owner": {'{'})'{'{'})'{'}'}) "id": "67f66278-d464-4b7f-b564-e3d58a85bbaf", "type": "USER", "username": "internal" {'{'})'{'}'}'{'}'}, "content": "SELECT * FROM\nSamples."samples.dremio.com"."NYC-taxi-trips-iceberg" w\n\n", "createdAt": "2025-04-14T20:48:29.470Z", "modifiedAt": "2025-04-15T08:14:45.724Z" {'{'})'{'}'}'{'}'}
 * * *
-### catalogObject Object[​](/reference/api/search#catalogobject-object "Direct link to catalogobject-object")
+### catalogObject Object​
 Attributes for folders, tables, functions, and views.
 path Array of String
 Namespace path to the object.
@@ -318,7 +319,7 @@ SELECT a + b
 ```
 
 * * *
-### jobObject Object[​](/reference/api/search#jobobject-object "Direct link to jobobject-object")
+### jobObject Object​
 Attributes for jobs.
 id String
 Unique identifier for the job.
@@ -356,7 +357,7 @@ error String Optional
 Error message if the job failed.
 Example: "Object 'Samples.samples.dremio.com.NYC-taxi-trips' not found. Please check that it exists in the selected context."
 * * *
-### scriptObject Object[​](/reference/api/search#scriptobject-object "Direct link to scriptobject-object")
+### scriptObject Object​
 Attributes for SQL scripts.
 id String
 Script identifier.
@@ -390,7 +391,7 @@ modifiedAt DateTime
 Last modified timestamp.
 Example: "2025-04-14T16:47:03.981Z"
 * * *
-### reflectionObject Object[​](/reference/api/search#reflectionobject-object "Direct link to reflectionobject-object")
+### reflectionObject Object​
 Attributes for Reflections.
 id String
 Reflection ID.
@@ -419,7 +420,7 @@ Example: "2025-04-14T16:47:03.981Z"
 modifiedAt DateTime
 Last modified time.
 * * *
-### UserOrRole Object[​](/reference/api/search#userorrole-object "Direct link to userorrole-object")
+### UserOrRole Object​
 Used in owner or user fields.
 id String
 Unique ID of the user or role.
@@ -436,13 +437,13 @@ Present for ROLE.
 Example: "ADMIN"
 Was this page helpful?
 [Previous Scripts](/reference/api/scripts)[Next Source](/reference/api/source)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Scripts](/reference/api/scripts)[Next Source](/reference/api/source)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fsearch%2F&_biz_t=1777951110877&_biz_i=Search%20%7C%20Dremio%20Documentation&_biz_n=1546&rnd=233847&cdn_o=a&_biz_z=1777951110878)
+!

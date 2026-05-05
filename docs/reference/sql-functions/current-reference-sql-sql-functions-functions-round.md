@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ROUND
+slug: /reference/sql/sql-functions/functions/ROUND
 title: "ROUND | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64351.531434541
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Math](/reference/sql/sql-functions)
 # ROUND
 Returns the rounded value for the inputted value. If no scale is specified, the closest whole number is returned.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ROUND(_numeric_expression_ decimal(0,0), _scale_ int32) → decimal(0,0)[​](/reference/sql/sql-functions#roundnumeric_expression-decimal00-scale-int32--decimal00 "Direct link to roundnumeric_expression-decimal00-scale-int32--decimal00")
+## Syntax
+### ROUND(_numeric_expression_ decimal(0,0), _scale_ int32) → decimal(0,0)[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
   * scale: The decimal place to round.
 
@@ -40,7 +41,7 @@ SELECT ROUND(24.35, 1)
 
 ```
 
-### ROUND(_numeric_expression_ int32, _scale_ int32) → int32[​](/reference/sql/sql-functions#roundnumeric_expression-int32-scale-int32--int32 "Direct link to roundnumeric_expression-int32-scale-int32--int32")
+### ROUND(_numeric_expression_ int32, _scale_ int32) → int32[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
   * scale: The decimal place to round.
 
@@ -62,7 +63,7 @@ SELECT ROUND(-24, -1)
 
 ```
 
-### ROUND(_numeric_expression_ int32) → int32[​](/reference/sql/sql-functions#roundnumeric_expression-int32--int32 "Direct link to roundnumeric_expression-int32--int32")
+### ROUND(_numeric_expression_ int32) → int32[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
 
 
@@ -75,7 +76,7 @@ SELECT ROUND(24)
 
 ```
 
-### ROUND(_numeric_expression_ double) → double[​](/reference/sql/sql-functions#roundnumeric_expression-double--double "Direct link to roundnumeric_expression-double--double")
+### ROUND(_numeric_expression_ double) → double[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
 
 
@@ -88,7 +89,7 @@ SELECT ROUND(24.35)
 
 ```
 
-### ROUND(_numeric_expression_ decimal(0,0)) → decimal(0,0)[​](/reference/sql/sql-functions#roundnumeric_expression-decimal00--decimal00 "Direct link to roundnumeric_expression-decimal00--decimal00")
+### ROUND(_numeric_expression_ decimal(0,0)) → decimal(0,0)[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
 
 
@@ -101,7 +102,7 @@ SELECT ROUND(99.567)
 
 ```
 
-### ROUND(_numeric_expression_ float) → float[​](/reference/sql/sql-functions#roundnumeric_expression-float--float "Direct link to roundnumeric_expression-float--float")
+### ROUND(_numeric_expression_ float) → float[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
 
 
@@ -114,7 +115,7 @@ SELECT ROUND(CAST(24.56 AS FLOAT))
 
 ```
 
-### ROUND(_numeric_expression_ int64) → int64[​](/reference/sql/sql-functions#roundnumeric_expression-int64--int64 "Direct link to roundnumeric_expression-int64--int64")
+### ROUND(_numeric_expression_ int64) → int64[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
 
 
@@ -127,7 +128,7 @@ SELECT ROUND(CAST(9223372036854775 AS BIGINT))
 
 ```
 
-### ROUND(_numeric_expression_ int64, _scale_ int32) → int64[​](/reference/sql/sql-functions#roundnumeric_expression-int64-scale-int32--int64 "Direct link to roundnumeric_expression-int64-scale-int32--int64")
+### ROUND(_numeric_expression_ int64, _scale_ int32) → int64[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
   * scale: The decimal place to round.
 
@@ -141,7 +142,7 @@ SELECT ROUND(CAST(12345 AS BIGINT), -2)
 
 ```
 
-### ROUND(_numeric_expression_ double, _scale_ int32) → double[​](/reference/sql/sql-functions#roundnumeric_expression-double-scale-int32--double "Direct link to roundnumeric_expression-double-scale-int32--double")
+### ROUND(_numeric_expression_ double, _scale_ int32) → double[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
   * scale: The decimal place to round.
 
@@ -155,7 +156,7 @@ SELECT ROUND(123.456, 2)
 
 ```
 
-### ROUND(_numeric_expression_ float, _scale_ int32) → float[​](/reference/sql/sql-functions#roundnumeric_expression-float-scale-int32--float "Direct link to roundnumeric_expression-float-scale-int32--float")
+### ROUND(_numeric_expression_ float, _scale_ int32) → float[​](/reference/sql/sql-functions)
   * numeric_expression: Numeric value to round.
   * scale: The decimal place to round.
 
@@ -171,12 +172,12 @@ SELECT ROUND(CAST(78.567 AS FLOAT), 1)
 
 Was this page helpful?
 [Previous RIGHT](/reference/sql/sql-functions)[Next ROW_NUMBER](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous RIGHT](/reference/sql/sql-functions)[Next ROW_NUMBER](/reference/sql/sql-functions)

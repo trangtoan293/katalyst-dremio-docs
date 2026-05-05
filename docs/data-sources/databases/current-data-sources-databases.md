@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases
+slug: /data-sources/databases
 title: "Databases | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64200.49365675
@@ -23,7 +24,7 @@ The following databases are supported:
   * [Microsoft Azure Data Explorer](/data-sources/databases/azure-data-explorer)
   * [Microsoft Azure Synapse Analytics](/data-sources/databases/azure-synapse-analytics)
   * [Microsoft SQL Server](/data-sources/databases/sql-server)
-  * [MongoDB](/data-sources/databases/mongo)
+  * MongoDB
   * [MySQL](/data-sources/databases/mysql)
   * [Oracle](/data-sources/databases/oracle)
   * [PostgreSQL](/data-sources/databases/postgres)
@@ -35,12 +36,12 @@ The following databases are supported:
 
 Was this page helpful?
 [Previous Object Storage](/data-sources/object)[Next Amazon OpenSearch Service](/data-sources/databases/opensearch)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Object Storage](/data-sources/object)[Next Amazon OpenSearch Service](/data-sources/databases/opensearch)

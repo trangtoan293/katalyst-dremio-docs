@@ -1,5 +1,6 @@
 ---
 url: /security/authentication/application-authentication/power-bi-aad-config
+slug: /security/authentication/application-authentication/power-bi-aad-config
 title: "Microsoft Power BI | Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64929.111916041
@@ -15,11 +16,11 @@ Version: current [26.x]
 On this page
 # Microsoft Power BI
 This topic describes configuring authorization of Power BI to Dremio with Microsoft Entra ID. With this authorization option, Dremio is able to handle secure user authorization with an identity provider using 
-### Requirements[​](/security/authentication/application-authentication/power-bi-aad-config#requirements "Direct link to Requirements")
+### Requirements​
   * [Microsoft Power BI Desktop (December 2021+)](/client-applications/microsoft-power-bi), which includes Dremio as a Certified Connector
 
 
-### Configuring Microsoft Entra ID for Power BI[​](/security/authentication/application-authentication/power-bi-aad-config#configuring-microsoft-entra-id-for-power-bi "Direct link to Configuring Microsoft Entra ID for Power BI")
+### Configuring Microsoft Entra ID for Power BI​
   1. From Dremio, click the **Settings** (gear) icon at the bottom-left corner of the screen. Click **Settings** from the menu.
   2. Click **BI Applications &gt; Authorization** from the left sidebar.
   3. Select **Enable single sign on for Power BI**.
@@ -31,7 +32,7 @@ The **User Claim Mapping (Legacy)** field is for use with Power BI October 2022 
   6. Click **Save**.
 
 
-#### Disabling Microsoft Entra ID for Power BI[​](/security/authentication/application-authentication/power-bi-aad-config#disabling-microsoft-entra-id-for-power-bi "Direct link to Disabling Microsoft Entra ID for Power BI")
+#### Disabling Microsoft Entra ID for Power BI​
 Perform the following steps to disable the Microsoft Entra ID configuration for Power BI:
   1. From Dremio, click the **Settings** (gear) icon at the bottom-left corner of the screen. Click **Settings** from the menu.
   2. Click **BI Applications &gt; Authorization** from the left sidebar.
@@ -41,13 +42,13 @@ Perform the following steps to disable the Microsoft Entra ID configuration for 
 
 Was this page helpful?
 [Previous Application Authentication](/security/authentication/application-authentication)[Next External Token Providers](/security/authentication/application-authentication/external-token)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Application Authentication](/security/authentication/application-authentication)[Next External Token Providers](/security/authentication/application-authentication/external-token)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fsecurity%2Fauthentication%2Fldap%2F&_biz_t=1777951248848&_biz_i=Dremio%20Documentation&_biz_n=1800&rnd=463754&cdn_o=a&_biz_z=1777951248856)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fsecurity%2Fauthentication%2Fapplication-authentication%2Fpower-bi-aad-config%2F&_biz_t=1777951248856&_biz_i=Microsoft%20Power%20BI%20%7C%20Dremio%20Documentation&_biz_n=1801&rnd=317202&cdn_o=a&_biz_z=1777951248856)
+!!

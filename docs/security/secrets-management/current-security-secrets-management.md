@@ -1,5 +1,6 @@
 ---
 url: /security/secrets-management
+slug: /security/secrets-management
 title: "Secrets Management | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64081.123933166
@@ -20,12 +21,12 @@ Dremio supports the following secrets management providers:
 
 Was this page helpful?
 [Previous Apache Ranger](/security/integrations/row-column-policies-ranger)[Next AWS Secrets Manager](/security/secrets-management/aws-secrets-manager)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Apache Ranger](/security/integrations/row-column-policies-ranger)[Next AWS Secrets Manager](/security/secrets-management/aws-secrets-manager)

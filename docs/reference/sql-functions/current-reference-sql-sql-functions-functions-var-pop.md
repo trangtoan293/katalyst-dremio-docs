@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/VAR_POP
+slug: /reference/sql/sql-functions/functions/VAR_POP
 title: "VAR_POP | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64365.921390833
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Aggregate](/reference/sql/sql-functions), [Window](/reference/sql/sql-functions)
 # VAR_POP
 Returns the population variance of non-NULL records.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### VAR_POP(_col_name_ NUMERIC) → NUMERIC[​](/reference/sql/sql-functions#var_popcol_name-numeric--numeric "Direct link to var_popcol_name-numeric--numeric")
+## Syntax
+### VAR_POP(_col_name_ NUMERIC) → NUMERIC[​](/reference/sql/sql-functions)
   * col_name: The name of the column for which to return the population variance. The values in the column must be numbers, such as INT, DOUBLE, or FLOAT.
 
 
@@ -67,19 +68,19 @@ FROM Samples."samples.dremio.com"."zips.json";
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 For single record inputs, VAR_POP returns 0.  
   
-The VAR_POP function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions#window-functions) for more information and syntax.
+The VAR_POP function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions) for more information and syntax.
 Was this page helpful?
 [Previous USER](/reference/sql/sql-functions)[Next VAR_SAMP](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous USER](/reference/sql/sql-functions)[Next VAR_SAMP](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FVAR_POP%2F&_biz_t=1777950687726&_biz_i=VAR_POP%20%7C%20Dremio%20Documentation&_biz_n=718&rnd=339160&cdn_o=a&_biz_z=1777950687727)
+!

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/use
+slug: /reference/sql/commands/use
 title: "USE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64257.148446041
@@ -14,7 +15,7 @@ crawled_at: 64257.148446041
 Version: current [26.x]
 On this page
 # USE
-Specify or clear the context for the query session. A Nessie source needs to be configured for this command to work. For information, see [Adding a Nessie Source](/data-sources/lakehouse-catalogs/nessie#configuring-nessie-as-a-source).
+Specify or clear the context for the query session. A Nessie source needs to be configured for this command to work. For information, see [Adding a Nessie Source](/data-sources/lakehouse-catalogs/nessie).
 In the SQL Runner, the USE command only works with multi-statement SQL commands and scripts. USE also does not apply to table references in saved views.
 Syntax
 
@@ -24,7 +25,7 @@ USE [ { <path> | { REF[ERENCE] | BRANCH | TAG | COMMIT } <reference_name> }
 
 ```
 
-## Parameters[​](/reference/sql/commands/use#parameters "Direct link to Parameters")
+## Parameters​
 `path` String Optional
 The path that you want to use. By not specifying any parameters, you can clear the context for the query session.
 * * *
@@ -39,7 +40,7 @@ You can also use these Nessie references to inform the session:
 * * *
 IN `source_name` String Optional
 The name of the Nessie source where the reference exists. When this parameter is omitted, the current Nessie source in the query context is used.
-## Examples[​](/reference/sql/commands/use#examples "Direct link to Examples")
+## Examples​
 Clear the context for the query session
 
 ```
@@ -64,12 +65,12 @@ USE BRANCH myBranch
 
 Was this page helpful?
 [Previous SET TAG](/reference/sql/commands/set-tag)[Next Users](/reference/sql/commands/users)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SET TAG](/reference/sql/commands/set-tag)[Next Users](/reference/sql/commands/users)

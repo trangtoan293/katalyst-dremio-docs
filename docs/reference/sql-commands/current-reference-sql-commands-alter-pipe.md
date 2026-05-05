@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/alter-pipe
+slug: /reference/sql/commands/alter-pipe
 title: "ALTER PIPE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64248.86099375
@@ -69,7 +70,7 @@ parquet_format_options
 
 ```
 
-## Parameters[​](/reference/sql/commands/alter-pipe#parameters "Direct link to Parameters")
+## Parameters​
 `pipe_name` String
 The unique name of the autoingest pipe that you are altering. The name cannot be modified.
 * * *
@@ -96,17 +97,17 @@ Autoingest pipes can only ingest data from Amazon S3 sources in Dremio.
 The format of the file or files to copy data from. FILE_FORMAT must be specified, and all files loaded in the COPY INTO operation must be of the same file format.
 You can use uncompressed or compressed CSV and JSON files. Compressed files must be in the gzip format, using the .gz extension, or in the bzip2 format, using the .bz2 extension.
 * * *
-[csv_format_options](/reference/sql/commands/alter-pipe#csv-format-options) String
+csv_format_options String
 Options that describe the formats and other characteristics of the source `CSV` file or files.
 * * *
-[json_format_options](/reference/sql/commands/alter-pipe#json-format-options) String
+json_format_options String
 Options that describe the formats and other characteristics of the source `JSON` file or files.
 * * *
-[parquet_options](/reference/sql/commands/alter-pipe#parquet-format-options) String
+parquet_options String
 Options that describe the formats and other characteristics of the source `PARQUET` file or files.
 Only the `ON ERROR` option is supported for Parquet source files.
 * * *
-### CSV Format Options[​](/reference/sql/commands/alter-pipe#csv-format-options "Direct link to CSV Format Options")
+### CSV Format Options​
 DATE_FORMAT '`string`' String Optional
 String that defines the format of date values in the data files to be loaded. If a value is not specified, YYYY-MM-DD is used. See [Date/Time Formatting](/reference/sql/sql-functions) for more format elements.
 * * *
@@ -129,7 +130,7 @@ ON_ERROR 'skip_file' String Optional
 Specifies that the COPY INTO operation should stop processing the input file at the first error it encounters during the loading process.
 ON_ERROR 'skip_file' is on by default for all autoingest pipes. No other ON_ERROR options are supported.
 The first potential error is registered in the [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) table, which you can query to get information about the job that ran the COPY INTO operation.
-To get information about rejected records in particular files, query the `sys.copy_errors_history` table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To get information about rejected records in particular files, query the `sys.copy_errors_history` table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
 The 'skip_file' option does not insert any rows from an input file that contains an error and only registers the first error in an input file and stops processing. As a result, the 'skip_file' option requires extra processing on the input files, regardless of the number of errors the input files contain. Skipping large files due to a small number of errors can delay the COPY INTO operation.
 * * *
 QUOTE_CHAR '`character`' String Optional
@@ -149,7 +150,7 @@ String that defines the format of timestamp values in the data files to be loade
 * * *
 TRIM_SPACE [ '`boolean`' ] String Optional
 Boolean that specifies whether or not to remove leading and trailing white space from strings. The default is FALSE.
-### JSON Format Options[​](/reference/sql/commands/alter-pipe#json-format-options "Direct link to JSON Format Options")
+### JSON Format Options​
 DATE_FORMAT '`string`' String Optional
 String that defines the format of date values in the data files to be loaded. If a value is not specified, YYYY-MM-DD is used. See [Date/Time Formatting](/reference/sql/sql-functions) for more format elements.
 * * *
@@ -163,7 +164,7 @@ ON_ERROR 'skip_file' String Optional
 Specifies that the COPY INTO operation should stop processing the input file at the first error it encounters during the loading process.
 ON_ERROR 'skip_file' is on by default for all autoingest pipes. No other ON_ERROR options are supported.
 The first potential error is registered in the [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) table, which you can query to get information about the job that ran the COPY INTO operation.
-To get information about rejected records in particular files, query the `sys.copy_errors_history` table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To get information about rejected records in particular files, query the `sys.copy_errors_history` table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
 The 'skip_file' option does not insert any rows from an input file that contains an error and only registers the first error in an input file and stops processing. As a result, the 'skip_file' option requires extra processing on the input files, regardless of the number of errors the input files contain. Skipping large files due to a small number of errors can delay the COPY INTO operation.
 * * *
 TIME_FORMAT '`string`' String Optional
@@ -174,14 +175,14 @@ String that defines the format of timestamp values in the data files to be loade
 * * *
 TRIM_SPACE [ '`boolean`' ] String Optional
 Boolean that specifies whether or not to remove leading and trailing white space from strings. The default is FALSE.
-### Parquet Format Options[​](/reference/sql/commands/alter-pipe#parquet-format-options "Direct link to Parquet Format Options")
+### Parquet Format Options​
 ON_ERROR 'skip_file' String Optional
 Specifies that the COPY INTO operation should stop processing the input file at the first error it encounters during the loading process.
 ON_ERROR 'skip_file' is on by default for all autoingest pipes. No other ON_ERROR options are supported.
 The first potential error is registered in the [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) table, which you can query to get information about the job that ran the COPY INTO operation.
-To get information about rejected records in particular files, query the `sys.copy_errors_history` table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To get information about rejected records in particular files, query the `sys.copy_errors_history` table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
 The 'skip_file' option does not insert any rows from an input file that contains an error and only registers the first error in an input file and stops processing. As a result, the 'skip_file' option requires extra processing on the input files, regardless of the number of errors the input files contain. Skipping large files due to a small number of errors can delay the COPY INTO operation.
-## Examples[​](/reference/sql/commands/alter-pipe#examples "Direct link to Examples")
+## Examples​
 Pause the autoingest pipe to send a COPY INTO statement
 
 ```
@@ -202,12 +203,12 @@ ALTER PIPE test_pipe
 
 Was this page helpful?
 [Previous ALTER FOLDER](/reference/sql/commands/alter-folder)[Next ALTER SOURCE](/reference/sql/commands/alter-source)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ALTER FOLDER](/reference/sql/commands/alter-folder)[Next ALTER SOURCE](/reference/sql/commands/alter-source)

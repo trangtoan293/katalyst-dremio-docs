@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands
+slug: /reference/sql/commands
 title: "SQL Commands | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.352407416
@@ -29,12 +30,12 @@ Dremio provides comprehensive SQL access to your data, no matter where it is sto
   * [CREATE VIEW](/reference/sql/commands/create-view)
   * [DESCRIBE PIPE](/reference/sql/commands/describe-pipe)
   * [DROP PIPE](/reference/sql/commands/drop-pipe)
-  * [DROP SPACE](/reference/sql/commands/drop-space)
+  * DROP SPACE
   * [DROP VIEW](/reference/sql/commands/drop-view)
   * [DROP TABLE](/reference/sql/commands/tables)
   * [GRANT/REVOKE Privileges](/reference/sql/commands/rbac)
   * [CREATE, ALTER, UNSET, DROP Row-Access & Column-Masking](/reference/sql/commands/functions) (Dremio 22.0+)
-  * [SELECT](/reference/sql/commands)
+  * SELECT
   * [SHOW TBLPROPERTIES](/reference/sql/commands/show-table-properties)
   * [SHOW, CREATE, DESCRIBE, DROP User-Defined Functions](/reference/sql/commands/functions) (Dremio 22.0+)
   * [USE](/reference/sql/commands/use)
@@ -47,12 +48,12 @@ Dremio provides comprehensive SQL access to your data, no matter where it is sto
 
 Was this page helpful?
 [Previous Coercions](/reference/sql/data-types/coercions)[Next SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Coercions](/reference/sql/data-types/coercions)[Next SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)

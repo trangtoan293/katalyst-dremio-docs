@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/AVG
+slug: /reference/sql/sql-functions/functions/AVG
 title: "AVG | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64287.3093145
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Aggregate](/reference/sql/sql-functions), [Window](/reference/sql/sql-functions)
 # AVG
 Computes the average of a set of values.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### AVG(_numeric_expression_ NUMERIC) → DOUBLE[​](/reference/sql/sql-functions#avgnumeric_expression-numeric--double "Direct link to avgnumeric_expression-numeric--double")
+## Syntax
+### AVG(_numeric_expression_ NUMERIC) → DOUBLE[​](/reference/sql/sql-functions)
   * numeric_expression: The values for which to compute the average. Values can be type DOUBLE, NUMERIC, INTEGER, INTERVAL_DATE, or INTERVAL_YEAR.
 
 
@@ -67,17 +68,17 @@ FROM Samples."samples.dremio.com"."zips.json";
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
-The AVG function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions#window-functions) for more information and syntax.
+## Usage Notes[​](/reference/sql/sql-functions)
+The AVG function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions) for more information and syntax.
 Was this page helpful?
 [Previous ATAN2](/reference/sql/sql-functions)[Next BASE64](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ATAN2](/reference/sql/sql-functions)[Next BASE64](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FAVG%2F&_biz_t=1777950607289&_biz_i=AVG%20%7C%20Dremio%20Documentation&_biz_n=561&rnd=829261&cdn_o=a&_biz_z=1777950607289)
+!

@@ -1,5 +1,6 @@
 ---
 url: /developer/data-formats/apache-iceberg/copy-into-transformations
+slug: /developer/data-formats/apache-iceberg/copy-into-transformations
 title: "Transforming Data on Load | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64216.564800708
@@ -22,10 +23,10 @@ Common use cases for this functionality include:
   * Applying simple elementwise functions, which would require additional processing later.
 
 
-## Supported File Formats[​](/developer/data-formats/apache-iceberg/copy-into-transformations#supported-file-formats "Direct link to Supported File Formats")
+## Supported File Formats​
 Dremio's `COPY INTO` SQL command with transformations supports Parquet and CSV file formats.
 # Select a Subset of Columns
-Imagine we receive a file that contains the available inventory in each store every day; however, the file also includes item details that we don't need. We need to load only a subset of the data and exclude information that does not help build our data product. Since the provided CSV file does not include headers, we must set `EXTRACT_HEADER` to `FALSE` (see [file_column_number](/reference/sql/commands/apache-iceberg-tables/copy-into-table#parameters) for more information). This then allows us to reference the columns by their order in the file using the following query:
+Imagine we receive a file that contains the available inventory in each store every day; however, the file also includes item details that we don't need. We need to load only a subset of the data and exclude information that does not help build our data product. Since the provided CSV file does not include headers, we must set `EXTRACT_HEADER` to `FALSE` (see [file_column_number](/reference/sql/commands/apache-iceberg-tables/copy-into-table) for more information). This then allows us to reference the columns by their order in the file using the following query:
 
 ```
 COPY INTO inventory(store_id, stock_date,  item_id, amount)  
@@ -57,7 +58,7 @@ COPY INTO dim_customer(cust_id, name, address, age)
 
 ```
 
-## Supported Functions[​](/developer/data-formats/apache-iceberg/copy-into-transformations#supported-functions "Direct link to Supported Functions")
+## Supported Functions​
   * [ARRAY_APPEND](/reference/sql/sql-functions)
   * [ARRAY_CAT](/reference/sql/sql-functions)
   * [ARRAY_COMPACT](/reference/sql/sql-functions)
@@ -196,7 +197,7 @@ COPY INTO dim_customer(cust_id, name, address, age)
   * [YEAR](/reference/sql/sql-functions)
 
 
-## Unsupported Capabilities[​](/developer/data-formats/apache-iceberg/copy-into-transformations#unsupported-capabilities "Direct link to Unsupported Capabilities")
+## Unsupported Capabilities​
 The `SELECT` statement used for transforming data in the `COPY INTO` SQL command has the following restrictions:
   * `WHERE` clause
   * `ORDER BY` statement
@@ -205,17 +206,17 @@ The `SELECT` statement used for transforming data in the `COPY INTO` SQL command
   * aggregate and window functions
 
 
-## Unsupported file types[​](/developer/data-formats/apache-iceberg/copy-into-transformations#unsupported-file-types "Direct link to Unsupported file types")
+## Unsupported file types​
 The `COPY INTO` with transformations capability does not support JSON, AVRO, or ORC file types.
 Was this page helpful?
 [Previous Optimize Tables](/developer/data-formats/apache-iceberg/table-maintenance-optimization/optimizing)[Next Parquet](/developer/data-formats/parquet)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Optimize Tables](/developer/data-formats/apache-iceberg/table-maintenance-optimization/optimizing)[Next Parquet](/developer/data-formats/parquet)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeveloper%2Fdata-formats%2Fapache-iceberg%2Fconcurrency%2F&_biz_t=1777950536645&_biz_i=Concurrency%20in%20Iceberg%20Tables%20%7C%20Dremio%20Documentation&_biz_n=415&rnd=888992&cdn_o=a&_biz_z=1777950536683)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeveloper%2Fdata-formats%2Fapache-iceberg%2Fcopy-into-transformations%2F&_biz_t=1777950536683&_biz_i=Dremio%20Documentation&_biz_n=416&rnd=715155&cdn_o=a&_biz_z=1777950536683)
+!!

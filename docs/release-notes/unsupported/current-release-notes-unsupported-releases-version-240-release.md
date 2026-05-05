@@ -1,5 +1,6 @@
 ---
 url: /release-notes/unsupported-releases/version-240-release
+slug: /release-notes/unsupported-releases/version-240-release
 title: "24.x Release Notes | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64385.61650825
@@ -14,29 +15,29 @@ Version: current [26.x]
 On this page
 # 24.x Release Notes
 Releases are listed in reverse order, starting with the latest release of Dremio 24.x.
-## 24.3.21 (August 2025) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24321-august-2025-enterprise "Direct link to 24321-august-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#improvements-and-issues-fixed "Direct link to Improvements and Issues Fixed")
+## 24.3.21 (August 2025) Enterprise​
+### Improvements and Issues Fixed​
   * Queries no longer fail due to a ConcurrentModificationException when runtime filters are present. 
 DX-91670
 
 
-## 24.3.20 (June 2025) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24320-june-2025-enterprise "Direct link to 24320-june-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#improvements-and-issues-fixed-1 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/unsupported-releases/version-240-release#general-updates "Direct link to General Updates")
+## 24.3.20 (June 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Resolved an issue with row count estimates in Delta Lake tables that could lead to suboptimal query plans. 
 DX-103030
   * Added the `delete-source` command to the `dremio-admin` CLI to delete a source. 
 DX-102752
 
 
-## 24.3.19 (April 2025) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24319-april-2025-enterprise "Direct link to 24319-april-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#improvements-and-issues-fixed-2 "Direct link to Improvements and Issues Fixed")
+## 24.3.19 (April 2025) Enterprise​
+### Improvements and Issues Fixed​
   * CVE-2025-30065 has been fixed by backporting the related fix from the Apache parquet-java project to Dremio's internal fork and using this latest build in the Dremio release. 
 DX-102461
 
 
-## 24.3.16 (December 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24316-december-2024-enterprise "Direct link to 24316-december-2024-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#improvements-and-issues-fixed-3 "Direct link to Improvements and Issues Fixed")
+## 24.3.16 (December 2024) Enterprise​
+### Improvements and Issues Fixed​
   * Fixed an issue where a duplicated table schema could be written to its metadata file. 
 DX-97502
   * Fixed an issue that could occur due the fact that non-default support key settings cannot be read/validated in the executor, causing Nessie sources not to work intermittently. During plugin startup, the support key validation now occurs only in the coordinator. 
@@ -45,15 +46,15 @@ DX-97157
 DX-98355
 
 
-## 24.3.15 (November 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24315-november-2024-enterprise "Direct link to 24315-november-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new "Direct link to What's New")
+## 24.3.15 (November 2024) Enterprise​
+### What's New​
   * Added a new SQL function `TRY_CONVERT_FROM` to support converting a JSON to a user-specified type. `NULL` is returned when the JSON cannot be converted. 
 DX-94338
   * The SQL function `CONVERT_FROM` for JSON now supports nested fields in `ROW` and `STRUCT` data types as input. 
 DX-94336
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed "Direct link to Issues Fixed")
+### Issues Fixed​
   * Creating a Parquet table containing a mixed type column with a typeless child list no longer fails with an `IndexOutOfBoundsException`. Before writing the Parquet table, typeless child lists in mixed-type columns are now filtered out, because Parquet requires all lists to be strongly typed. 
 DX-89811
   * Changed dataset owners now correctly appear in the Details panel. 
@@ -66,16 +67,16 @@ DX-87232
 DX-88577
 
 
-## 24.3.14 (October 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24314-october-2024-enterprise "Direct link to 24314-october-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-1 "Direct link to Issues Fixed")
+## 24.3.14 (October 2024) Enterprise​
+### Issues Fixed​
   * Fixed an issue where queries could be stuck in planning and accumulate until a coordinator restart is required. 
 DX-94146
   * Incompatible runtime filters are now ignored so as to avoid an `UnsupportedOperationException` while setting up Parquet readers. 
 DX-90910
 
 
-## 24.3.13 (October 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24313-october-2024-enterprise "Direct link to 24313-october-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-2 "Direct link to Issues Fixed")
+## 24.3.13 (October 2024) Enterprise​
+### Issues Fixed​
   * Fixed an issue that could cause an "Unable to find the reference field" error during query planning due to Common Subexpression Elimination (CSE). 
 DX-90660
   * Fixed an issue that could cause some queries against INFORMATION_SCHEMA tables to fail when filtering columns by LOWER, UPPER, LCASE, or UCASE expressions. 
@@ -84,16 +85,16 @@ DX-93900
 DX-96251
 
 
-## 24.3.12 (September 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24312-september-2024-enterprise "Direct link to 24312-september-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-1 "Direct link to What's New")
+## 24.3.12 (September 2024) Enterprise​
+### What's New​
   * SELECT queries in CREATE TABLE AS and INSERT/SELECT statements now use Reflections to accelerate the queries. 
 DX-94311
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-3 "Direct link to Issues Fixed")
+### Issues Fixed​
   * The option to enable single sign-on for Tableau is now disabled by default. 
 DX-93910
-  * Fixed a performance issue for Iceberg tables that could occur when Dremio reads [position delete files](/developer/data-formats/apache-iceberg/table-maintenance-optimization/optimizing#optimizing-tables-with-position-delete-files). Previously, a position delete file could be accessed multiple times by different scan threads. Now all delete rows are read once and joined with the data files. 
+  * Fixed a performance issue for Iceberg tables that could occur when Dremio reads [position delete files](/developer/data-formats/apache-iceberg/table-maintenance-optimization/optimizing). Previously, a position delete file could be accessed multiple times by different scan threads. Now all delete rows are read once and joined with the data files. 
 DX-92450
   * Fixed the NullPointerException in RowGroups querying Parquet files with incomplete stats. 
 DX-95188
@@ -101,34 +102,34 @@ DX-95188
 DX-94944
 
 
-## 24.3.11 (August 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24311-august-2024-enterprise "Direct link to 24311-august-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-4 "Direct link to Issues Fixed")
+## 24.3.11 (August 2024) Enterprise​
+### Issues Fixed​
   * Fixed an issue that could cause VACUUM CATALOG to fail with a `ContainerNotFoundException` exception. Also fixed a bug that could cause VACUUM CATALOG to fail with `IllegalArgumentException` if a view is created in a Nessie catalog. 
 DX-93461, DX-94427
   * Added limits for option manager cache size and set expiration for items in the cache. 
 DX-91244
 
 
-## 24.3.10 (August 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24310-august-2024-enterprise "Direct link to 24310-august-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-2 "Direct link to What's New")
+## 24.3.10 (August 2024) Enterprise​
+### What's New​
   * Dremio now assigns `999` as the group ID (GID) and user ID (UID) for dremio:dremio at Docker image build time. 
 DX-94444
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-5 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Fixed an issue that could prevent partition columns from being applied in INSERT and CREATE TABLE AS statements. 
 DX-83067
   * Fixed an issue when reading Delta Lake checkpoint files for partitioned tables that could result in 0 rows returned. 
 DX-92976
 
 
-## 24.3.9 (August 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2439-august-2024-enterprise "Direct link to 2439-august-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-3 "Direct link to What's New")
+## 24.3.9 (August 2024) Enterprise​
+### What's New​
   * Dremio now supports the newline character `\n` in regular expression (regex) matching for the [LIKE](/reference/sql/sql-functions) SQL function. 
 DX-82992
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-6 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Queries no longer fail if an underlying default raw Reflection becomes invalid for substitution against the view. 
 DX-85139
   * Reflections with complex type fields no longer show an unavailable status after a successful refresh. 
@@ -153,13 +154,13 @@ DX-90854
 DX-93643
 
 
-## 24.3.8 (July 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2438-july-2024-enterprise "Direct link to 2438-july-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-4 "Direct link to What's New")
+## 24.3.8 (July 2024) Enterprise​
+### What's New​
   * Added a new Dataset API endpoint, `POST /dataset/{id}/reflection/recommendation/{type}`, for retrieving Reflection recommendations by Reflection type for a dataset. 
 DX-89497
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-7 "Direct link to Issues Fixed")
+### Issues Fixed​
   * The query planner no longer fails for queries that use experimental settings related to the bushy join optimizer. 
 DX-91859
   * To prevent unexpected out-of-memory errors, the Parquet vectorized reader allocates only the necessary amount of memory for scanning deeply nested structures. 
@@ -182,14 +183,14 @@ DX-89497
 DX-87317 DX-92284
   * Fixed a rare NPE that could occur when accessing large Delta Lake tables in metastore sources. 
 DX-67629
-  * In the Workload Management API, the default rule is now included in responses to requests to [retrieve all rules](/reference/api/wlm/rule#retrieve-all-rules) for new clusters. 
+  * In the Workload Management API, the default rule is now included in responses to requests to [retrieve all rules](/reference/api/wlm/rule) for new clusters. 
 DX-90072
   * Fixed an issue that could cause queries to fail during planning with the error "Job was canceled because the query is too complex". 
 DX-92283
 
 
-## 24.3.7 (June 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2437-june-2024-enterprise "Direct link to 2437-june-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-8 "Direct link to Issues Fixed")
+## 24.3.7 (June 2024) Enterprise​
+### Issues Fixed​
   * Updated the following library to address potential security issues: 
 DX-91055
     * org.postgresql:postgresql to version 42.4.5 [CVE-2024-1597]
@@ -207,8 +208,8 @@ DX-71027
 DX-90879
 
 
-## 24.3.6 (May 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2436-may-2024-enterprise "Direct link to 2436-may-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-9 "Direct link to Issues Fixed")
+## 24.3.6 (May 2024) Enterprise​
+### Issues Fixed​
   * For MapR deployments, removed configuration properties `MAPR_MAX_RA_STREAMS` and `MAPR_IMPALA_RA_THROTTLE` from the `dremio start` script and from the code responsible for Yarn configuration. 
 DX-88701
   * Fixed a bug that could result in an "out of memory" error when running `dremio-admin clean -o`. 
@@ -225,8 +226,8 @@ DX-90906
 DX-90105
 
 
-## 24.3.5 (April 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2435-april-2024-enterprise "Direct link to 2435-april-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-10 "Direct link to Issues Fixed")
+## 24.3.5 (April 2024) Enterprise​
+### Issues Fixed​
   * When users update a Reflection using the Reflections API, the `createdAt` value is no longer updated. 
 DX-89278
   * The view owner is now properly listed in the Dremio console when it is changed. 
@@ -245,16 +246,16 @@ DX-87000
 DX-89390
 
 
-## 24.3.4 (March 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2434-march-2024-enterprise "Direct link to 2434-march-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-5 "Direct link to What's New")
+## 24.3.4 (March 2024) Enterprise​
+### What's New​
   * Dremio is compatible with Arrow Flight JDBC 15. You can download it from the [JDBC driver downloads page](https://www.dremio.com/drivers/jdbc/).
 DOCS-1319
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-11 "Direct link to Issues Fixed")
+### Issues Fixed​
   * SQL functions now work properly in queries on system tables. 
 DX-52626
-  * When you open a table from the SQL Runner by clicking ![](https://docs.dremio.com/images/icons/go-to-table.png), Dremio now displays the correct table definition. 
+  * When you open a table from the SQL Runner by clicking !, Dremio now displays the correct table definition. 
 DX-87438
   * On the Queues page under **Settings** &gt; **Queues** , alphabetical sorting for the Engine Name column now works properly. 
 DX-87086
@@ -296,13 +297,13 @@ DX-88043
 DX-88293
 
 
-## 24.3.3 (February 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2433-february-2024-enterprise "Direct link to 2433-february-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-6 "Direct link to What's New")
+## 24.3.3 (February 2024) Enterprise​
+### What's New​
   * The [ARRAY_INSERT](/reference/sql/sql-functions) SQL function is now supported. 
 DX-86130
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-12 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Creating user-defined functions (UDFs) that reference UDFs outside of the root context no longer fails with the error `UnsupportedOperationException: Failed to match SQL Operators for: `UDF_NAME``. 
 DX-86836
   * [Automatic Nessie maintenance and the manual `dremio-admin nessie-maintenance` command](/reference/admin-cli/nessie-maintenance) are now available in Dremio AWSE. 
@@ -339,9 +340,9 @@ DX-66628
 DX-85876
 
 
-## 24.3.2 (January 2024)[​](/release-notes/unsupported-releases/version-240-release#2432-january-2024 "Direct link to 24.3.2 \(January 2024\)")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-13 "Direct link to Issues Fixed")
-  * The [known issue for AWSE deployments](/release-notes/version-240-release#known-issues-3) described in the 24.3.1 release notes is now resolved. 
+## 24.3.2 (January 2024)​")
+### Issues Fixed​
+  * The [known issue for AWSE deployments](/release-notes/version-240-release) described in the 24.3.1 release notes is now resolved. 
 DX-86442
   * In the [`sys.jobs_recent`](/reference/sql/system-tables) system table, the `error_msg` column now contains any applicable error summaries. Also, the `final_state_epoch_millis` and `final_state_ts` columns contain the correct values for jobs that reach a final state. 
 DX-83529
@@ -358,13 +359,13 @@ DX-86012
 DX-69752
 
 
-## 24.3.1 (January 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2431-january-2024-enterprise "Direct link to 2431-january-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-14 "Direct link to Issues Fixed")
+## 24.3.1 (January 2024) Enterprise​
+### Issues Fixed​
   * Reflections now accelerate properly after upgrade. 
 DX-85167
   * Reflections with the `UNIX_TIMESTAMP` SQL function no longer result in an exception. 
 DX-85994
-  * The Go to Table (![](https://docs.dremio.com/images/icons/go-to-table.png)) icon now appears on the Datasets page for tables and views when the **Query on click** preference is disabled. 
+  * The Go to Table (!) icon now appears on the Datasets page for tables and views when the **Query on click** preference is disabled. 
 DX-85964
   * Fixed an issue where queries containing correlated subqueries in the join condition could return duplicate rows. 
 DX-83748
@@ -378,7 +379,7 @@ DX-85208
 DX-68144
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-240-release#known-issues "Direct link to Known Issues")
+### Known Issues​
   * Creating user-defined functions (UDFs) that reference UDFs outside of the root context fails with the error `UnsupportedOperationException: Failed to match SQL Operators for: `UDF_NAME``.
   * For **AWSE deployments** , if you upgrade to 24.3.1 from any 24.2.x release, you may encounter the following error:
 Error Message: AWSE Deployments Upgrading from a 24.2.x Release
@@ -413,8 +414,8 @@ paths.copyintoerrors = "dremioS3:///dremio-xxxxxxxxxx/dremio/copyintoerrors"
 If you do not have a backup, contact Dremio technical support to discuss the steps outlined in the knowledge-base article [AWSE upgrade fails with "The following properties were invalid: paths.copyintoerror"](https://support.dremio.com/hc/en-us/articles/21994393029659-AWSE-upgrade-fails-with-The-following-properties-were-invalid-paths-copyintoerror-).
 
 
-## 24.3.0 (December 2023)[​](/release-notes/unsupported-releases/version-240-release#2430-december-2023 "Direct link to 24.3.0 \(December 2023\)")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-7 "Direct link to What's New")
+## 24.3.0 (December 2023)​")
+### What's New​
   * The new system table `sys.jobs_recent` shows the metadata for jobs that ran in the Dremio instance during the previous number of days specified by the support key `jobs.max.age_in_days`. For more information, see [SYS.JOBS_RECENT](/reference/sql/system-tables). 
 DX-51926
   * You can now use the `ON_ERROR` option in the `COPY INTO` command to specify what to do (abort or continue) if an error is encountered during the loading process when you are loading data from CSV or JSON files. 
@@ -465,9 +466,9 @@ DX-68717
 DX-68730
   * Improved the visual profiler by including information, such as data skew, estimation accuracy, and disk spilling, that can be useful for diagnostics. 
 DX-68851
-  * You can now use [tabs](/query-manage/querying-data/#6-sql-editor) in the SQL Runner to work on multiple tasks simultaneously. All of your work in each tab is autosaved. 
+  * You can now use tabs in the SQL Runner to work on multiple tasks simultaneously. All of your work in each tab is autosaved. 
 DX-68951
-  * You can [see a view definition](/data-products/develop#retrieve-a-view-definition) or [Nessie table definition](/data-sources/lakehouse-catalogs/nessie#retrieving-a-table-definition) if you have the `SELECT` privilege, although [editing a view definition](/data-products/develop#edit-a-view) requires further privileges. 
+  * You can [see a view definition](/data-products/develop) or [Nessie table definition](/data-sources/lakehouse-catalogs/nessie) if you have the `SELECT` privilege, although [editing a view definition](/data-products/develop) requires further privileges. 
 DX-68952
   * Support has been added for `SHOW CREATE VIEW` to see a view definition and `SHOW CREATE TABLE` to see a table definition. For more information, see [SHOW CREATE VIEW](/reference/sql/commands/show-create-view) and [SHOW CREATE TABLE](/reference/sql/commands/show-create-table). 
 DX-68952
@@ -475,7 +476,7 @@ DX-68952
 DX-71973
   * Dremio Arctic and all of its related features are no longer in preview mode. 
 DX-82613
-  * You can now see syntax errors in your SQL query as you enter the query into the SQL editor. Each error is automatically detected with a red wavy underline and contains information about the type of error. For more information, see [Syntax Error Highlighting](/query-manage/querying-data/#syntax-error-highlighting). 
+  * You can now see syntax errors in your SQL query as you enter the query into the SQL editor. Each error is automatically detected with a red wavy underline and contains information about the type of error. 
 DX-82679
   * The dataset details panel in the SQL runner no longer overlays the right side of the SQL runner and the catalog page. Whenever it is opened, the width of the page is reduced so that controls are not hidden. 
 DX-82691
@@ -498,7 +499,7 @@ DX-85280
   * These terms were added to the list of reserved keywords: `JSON_ARRAY`, `JSON_ARRAYAGG`, `JSON_EXISTS`, `JSON_OBJECT`, `JSON_OBJECTAGG`, `JSON_QUERY`, and `JSON_VALUE`.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-15 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Dremio now reads invalid values in date and timestamp partition columns as null in conformity with Hive. 
 DX-24014
   * Fixed an issue with the default Jobs results cleanup path that was resulting in disk space issues and unexpected restarts on some cluster nodes. 
@@ -593,14 +594,14 @@ DX-85189
 DX-60356
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-240-release#known-issues-1 "Direct link to Known Issues")
-  * If you have the **Query on click** preference disabled, the Go to Table (![](https://docs.dremio.com/images/icons/go-to-table.png)) icon is missing from the Datasets page for tables and views. To query the dataset, click the ellipsis (...) and select Query, or go directly to the SQL Runner by clicking ![](https://docs.dremio.com/images/sql-runner-icon.png) in the left navigation panel.
+### Known Issues​
+  * If you have the **Query on click** preference disabled, the Go to Table (!) icon is missing from the Datasets page for tables and views. To query the dataset, click the ellipsis (...) and select Query, or go directly to the SQL Runner by clicking ! in the left navigation panel.
   * The following words were incorrectly made reserved keywords: `ABSENT`, `CONDITIONAL`, `ENCODING`, `ERROR`, `FORMAT`, `PASSING`, `RETURNING`, `SCALAR`, `UNCONDITIONAL`, `UTF8`, `UTF16`, `UTF32`.
   * Creating user-defined functions (UDFs) that reference UDFs outside of the root context fails with the error `UnsupportedOperationException: Failed to match SQL Operators for: `UDF_NAME``.
 
 
-## 24.2.11 (April 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24211-april-2024-enterprise "Direct link to 24211-april-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-16 "Direct link to Issues Fixed")
+## 24.2.11 (April 2024) Enterprise​
+### Issues Fixed​
   * In the Dremio console, when you run a query in the SQL runner, the page no longer briefly displays the previous query's results. 
 DX-83509
   * Promoted datasets with inconsistent partition depth no longer occasionally throw an `ArrayIndexOutOfBoundsException` when filtering against deeper partitions. 
@@ -609,8 +610,8 @@ DX-88365
 DX-87660
 
 
-## 24.2.10 (January 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#24210-january-2024-enterprise "Direct link to 24210-january-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-17 "Direct link to Issues Fixed")
+## 24.2.10 (January 2024) Enterprise​
+### Issues Fixed​
   * [Automatic Nessie maintenance and the manual `dremio-admin nessie-maintenance` command](/reference/admin-cli/nessie-maintenance) are now available in Dremio AWSE. 
 DX-56534
   * In the Dremio console, when you navigate to the SQL Runner page, clicking the browser's back button now returns to the previous page from which you navigated to SQL Runner. 
@@ -618,16 +619,16 @@ DX-64993
 DX-85405
 
 
-## 24.2.8 (January 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2428-january-2024-enterprise "Direct link to 2428-january-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-18 "Direct link to Issues Fixed")
+## 24.2.8 (January 2024) Enterprise​
+### Issues Fixed​
   * Unneeded columns are now trimmed from JDBC pushdowns. 
 DX-85187
   * Fixed an issue that caused queries to fail with the error `IllegalArgumentException: No decimal present`. 
 DX-85876
 
 
-## 24.2.7 (January 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2427-january-2024-enterprise "Direct link to 2427-january-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-19 "Direct link to Issues Fixed")
+## 24.2.7 (January 2024) Enterprise​
+### Issues Fixed​
   * Changing the size of an existing EC2 engine in Dremio's AWS Edition no longer resets the engine type. 
 DX-54590
 DX-71086
@@ -647,8 +648,8 @@ DX-85679
 DX-84516
 
 
-## 24.2.6 (November 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2426-november-2023-enterprise "Direct link to 2426-november-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-20 "Direct link to Issues Fixed")
+## 24.2.6 (November 2023) Enterprise​
+### Issues Fixed​
   * Metadata refresh queries now succeed for Parquet tables that contain one or more columns whose names include a dot character, such as `column.name`. 
 DX-66623
   * Resolved an issue that caused missing manifest files when using [unlimited splits](/admin/metadata-caching). 
@@ -665,15 +666,15 @@ DX-84620
 DX-84755
 
 
-## 24.2.5 (November 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2425-november-2023-enterprise "Direct link to 2425-november-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-8 "Direct link to What's New")
+## 24.2.5 (November 2023) Enterprise​
+### What's New​
   * Improved the ability to delegate to sources the processing of predicates in queries on Iceberg tables when the predicates include date-time filters that use functions that reference a column. 
 DX-65078
   * Added the option to force parallelism in write queries by using a round-robin exchange before the writer, even when input is only single-threaded. Enable this option by enabling the support key `planner.writer.round_robin`. 
 DX-64388
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-21 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Upgrading from Dremio `19.0.0` to `24.2.0` could cause duplicate and triplicate results from MongoDB. 
 DX-83100
   * Upgrading from early Dremio `24.x.x` versions to Dremio AWSE `24.2.2` caused Glue source regions to change. 
@@ -688,13 +689,13 @@ DX-84083
 DX-69646
 
 
-## 24.2.3 (October 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2423-october-2023-enterprise "Direct link to 2423-october-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-9 "Direct link to What's New")
+## 24.2.3 (October 2023) Enterprise​
+### What's New​
   * In this release, Reflection and query plan caches are cleared when they are disabled to ensure that queries do not use a deprecated Reflection. 
 DX-83117
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-22 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Fixed an issue that was causing certain queries to fail when using hash joins, leading to an unexpected restart of an executor. 
 DX-63029
   * Dremio was unable to read and query AWS Glue table partitions if partition column names or partition values contained spaces or other special characters. 
@@ -713,8 +714,8 @@ DX-41291
 DX-69726
 
 
-## 24.2.1 (September 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2421-september-2023-enterprise "Direct link to 2421-september-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-23 "Direct link to Issues Fixed")
+## 24.2.1 (September 2023) Enterprise​
+### Issues Fixed​
   * Following the upgrade to Dremio 24.2.0, an issue with external group membership evaluation when using Azure Active Directory was preventing users from accessing some datasets if more than 100 direct or indirect groups were in use. 
 DX-79881
   * In some cases, if a deployment had a large number of sources, the SQL Runner was considerably unresponsive when loading the page or typing in the editor. 
@@ -741,15 +742,15 @@ DX-61258
 DX-56702
 
 
-## 24.2.2 (September 2023)[​](/release-notes/unsupported-releases/version-240-release#2422-september-2023 "Direct link to 24.2.2 \(September 2023\)")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-10 "Direct link to What's New")
+## 24.2.2 (September 2023)​")
+### What's New​
   * This release includes a number of changes to improve performance and row count estimates when working with Delta Lake tables. 
 DX-65077
   * Plans for queries containing `CONVERT_FROM(JSON)` can now be cached. 
 DX-82619
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-24 "Direct link to Issues Fixed")
+### Issues Fixed​
   * When run by PUBLIC users, the data returned by the internal API `apiv2/user/`userid`` is limited to only information that is required to search users and assign privileges. 
 DX-82783
   * Following the upgrade to 24.2.0, results from MongoDB sources were being returned in duplicate or triplicate. 
@@ -770,8 +771,8 @@ DX-68202
 DX-67967
 
 
-## 24.2.1 (September 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2421-september-2023-enterprise-1 "Direct link to 2421-september-2023-enterprise-1")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-25 "Direct link to Issues Fixed")
+## 24.2.1 (September 2023) Enterprise​
+### Issues Fixed​
   * Following the upgrade to Dremio 24.2.0, an issue with external group membership evaluation when using Azure Active Directory was preventing users from accessing some datasets if more than 100 direct or indirect groups were in use. 
 DX-79881
   * In some cases, if a deployment had a large number of sources, the SQL Runner was considerably unresponsive when loading the page or typing in the editor. 
@@ -798,8 +799,8 @@ DX-61258
 DX-56702
 
 
-## 24.2.0 (September 2023)[​](/release-notes/unsupported-releases/version-240-release#2420-september-2023 "Direct link to 24.2.0 \(September 2023\)")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-11 "Direct link to What's New")
+## 24.2.0 (September 2023)​")
+### What's New​
   * This release adds support for the following SQL functions:
     * [APPROX_PERCENTILE](/reference/sql/sql-functions)
 DX-62151
@@ -815,35 +816,35 @@ DX-65324
 DX-65324
     * [NORMALIZE_STRING](/reference/sql/sql-functions)
 DX-68631
-  * Clicking on a linked job in the [execution state](/query-manage/querying-data/#9-execution-state) opens the Job Details page in a new tab. 
+  * Clicking on a linked job in the execution state opens the Job Details page in a new tab. 
 DX-65146
   * The [lineage graph](/data-products/govern/lineage) now includes the name and type for data sources. 
 DX-65146
-  * [Dataset settings](/get-started/quick_tour/#opening-datasets) has been added to the edit dataset page. Clicking ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) opens a dialog for editing the format, Reflections, Reflection refresh, and privileges of the dataset. 
+  * Dataset settings has been added to the edit dataset page. Clicking ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) opens a dialog for editing the format, Reflections, Reflection refresh, and privileges of the dataset. 
 DX-65146
   * This release provides performance improvements in the [Jobs listing page](/admin/monitoring/jobs), and any user with sufficient privileges can now view Reflection jobs in the table. 
 DX-64196
-  * Autocomplete has been improved to provide better and faster context-aware suggestions for [SQL keywords](/query-manage/querying-data/#7-sql-editor), catalog objects, and functions while you are constructing SQL statements. 
+  * Autocomplete has been improved to provide better and faster context-aware suggestions for SQL keywords, catalog objects, and functions while you are constructing SQL statements. 
 DX-53191
-  * [Reflection hints](/reflections/using-reflection-hints) are now available to control which Reflections are considered, excluded, and chosen for a query or session. 
+  * Reflection hints are now available to control which Reflections are considered, excluded, and chosen for a query or session. 
 DX-67225
-  * You can use [partition transforms in Reflections](/help-support/well-architected-framework/performance/#horizontally-partition-reflections-that-have-many-rows) to specify transformations to apply to partition columns to produce partition values. For example, if you choose to partition on a column of timestamps, you can set partition transforms that produce partition values that are the years, months, days, or hours in those timestamps. 
+  * You can use [partition transforms in Reflections](/help-support/well-architected-framework/performance/) to specify transformations to apply to partition columns to produce partition values. For example, if you choose to partition on a column of timestamps, you can set partition transforms that produce partition values that are the years, months, days, or hours in those timestamps. 
 DX-64015
-  * This release includes a new table function, `SYS.RECOMMEND_REFLECTIONS`, that recommends aggregation Reflections to accelerate existing SQL queries. For more information, see [Reflection Recommendations](/reflections/reflection-recommendations). 
+  * This release includes a new table function, `SYS.RECOMMEND_REFLECTIONS`, that recommends aggregation Reflections to accelerate existing SQL queries. For more information, see Reflection Recommendations. 
 DX-61857
-  * Snapshot-based incremental refresh of Reflections are now supported when the base table is Apache Iceberg and is updated by appends. Additionally, a new algorithm is supported for determining which method of refresh to use for such Reflections. For more information, see [Horizontally Partition Reflections that Have Many Rows](/reflections/best-practices/#horizontally-partition-reflections-that-have-many-rows). 
+  * Snapshot-based incremental refresh of Reflections are now supported when the base table is Apache Iceberg and is updated by appends. Additionally, a new algorithm is supported for determining which method of refresh to use for such Reflections. 
 DX-61855
-  * Partition-based incremental refresh of Reflections are now supported when the base table is Apache Iceberg and is updated by DML operations. Additionally, a new algorithm is supported for determining which method of refresh to use for such Reflections. For more information, see [Horizontally Partition Reflections that Have Many Rows](/reflections/best-practices/#horizontally-partition-reflections-that-have-many-rows). 
+  * Partition-based incremental refresh of Reflections are now supported when the base table is Apache Iceberg and is updated by DML operations. Additionally, a new algorithm is supported for determining which method of refresh to use for such Reflections. 
 DX-54576
-  * You can now build Reflections on versioned tables and views in a Nessie source. For more information, see [Using Reflections in Nessie Source Branches](/reflections/using-nessie-branches-with-reflections). 
+  * You can now build Reflections on versioned tables and views in a Nessie source. 
 DX-55148
-  * This release includes support for `ARRAY` literal syntax. For more information, see [LIST](/reference/sql/data-types#list). 
+  * This release includes support for `ARRAY` literal syntax. For more information, see [LIST](/reference/sql/data-types). 
 DX-62152
   * Added a new Credentials property list to all [Hive sources](/data-sources/lakehouse-catalogs/hive), found under Advanced Options when configuring the source. The Credentials list mimics the behavior of the Connection Properties list, enabling users to insert masked name:value pairs for Hive sources. 
 DX-65187
-  * Additional events are now captured in audit logs, including engine configuration, workload management queues, and support key changes. For more information, see [Events and Actions Tracked](/security/auditing#events-and-actions-tracked). 
+  * Additional events are now captured in audit logs, including engine configuration, workload management queues, and support key changes. For more information, see [Events and Actions Tracked](/security/auditing). 
 DX-64423
-  * Hive 2 dependent plugins have been upgraded to Hive 3 for communicating with Hive 2 sources to mitigate vulnerabilities in Hive 2. See [24.2.0 Upgrade Notes](/deploy-dremio/other-options/standalone/standalone-install-upgrade#2420-upgrade-notes) for more information. 
+  * Hive 2 dependent plugins have been upgraded to Hive 3 for communicating with Hive 2 sources to mitigate vulnerabilities in Hive 2. See 24.2.0 Upgrade Notes for more information. 
 DX-65446
   * Row-level access, column masking, and cell-level security are now supported in [AWS Lake Formation](/security/integrations/lake-formation). 
 DX-65106
@@ -883,7 +884,7 @@ DX-54837
 DX-46607
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-26 "Direct link to Issues Fixed")
+### Issues Fixed​
   * In some cases, default raw Reflection matching was not working as expected for users not assigned to the `ADMIN` role. 
 DX-70893
   * At times, users were unable to scroll to the bottom of the Settings &gt; Node Activity page. 
@@ -956,14 +957,14 @@ DX-67936
 DX-60428
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-240-release#known-issues-2 "Direct link to Known Issues")
+### Known Issues​
   * Due to changes made in the Dremio query optimizer, you may observe an increased number of Reflections being marked for refresh after upgrading to this release. You may wish to manually trigger some Reflections to refresh in case their specified refresh period is large and a Reflection has been marked as "cannot accelerate" (fixed in 24.2.2). 
 DX-71973
 
 
-## 24.1.4 (August 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2414-august-2023-enterprise "Direct link to 2414-august-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-12 "Direct link to What's New")
-  * This release supports the relocation of distributed storage and metadata for Parquet tables (internal Iceberg tables). For more information, see [Relocating Distributed Storage and Metadata](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#relocating-distributed-storage-and-metadata). 
+## 24.1.4 (August 2023) Enterprise​
+### What's New​
+  * This release supports the relocation of distributed storage and metadata for Parquet tables (internal Iceberg tables). For more information, see Relocating Distributed Storage and Metadata. 
 DX-64615
   * Added support for the following regions to the AWS Glue source:
     * ap-south-2: Asia Pacific (Hyderabad)
@@ -975,15 +976,15 @@ DX-64615
 DX-69347
 
 
-## 24.1.3 (July 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2413-july-2023-enterprise "Direct link to 2413-july-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-13 "Direct link to What's New")
+## 24.1.3 (July 2023) Enterprise​
+### What's New​
   * The `COL_LIKE` SQL function has been updated to improve performance. 
 DX-66586
   * Dremio will avoid a full data scan for simple aggregations on partition columns, reading the manifest metadata instead, which improves performance for queries on very large tables. 
 DX-66029
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-27 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Fixed an issue that was causing an occasional memory leak during planning for queries that used partition stats. 
 DX-68518
   * The use of the `WHERE` clause in queries against Delta Lake tables in Hive sources is now supported. 
@@ -992,15 +993,15 @@ DX-67647
 DX-67183
 
 
-## 24.1.2 (July 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2412-july-2023-enterprise "Direct link to 2412-july-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-14 "Direct link to What's New")
+## 24.1.2 (July 2023) Enterprise​
+### What's New​
   * This release includes some changes to improve logical planning performance and query planning times in certain scenarios. 
 DX-66473
   * The `/sql` REST API endpoint now supports specifying version references on a per-source basis. 
 DX-61908
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-28 "Direct link to Issues Fixed")
+### Issues Fixed​
   * `GRANT` commands on catalog entities were failing with `Role/User `ID` not found` if existing user or role grantees were no longer present in the system. 
 DX-65364
   * Fixed an issue that was causing an exception in the `BRIDGE_FILE_READER_RECEIVER` SQL operator for some queries. 
@@ -1015,14 +1016,14 @@ DX-61654
 DX-60647
 
 
-## 24.1.1 (June 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2411-june-2023-enterprise "Direct link to 2411-june-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-29 "Direct link to Issues Fixed")
+## 24.1.1 (June 2023) Enterprise​
+### Issues Fixed​
   * In Dremio 24.1.0, an issue with Tableau Desktop using OAuth and Power BI SSO was leading to authentication failures.
 
 
-## 24.1.0 (June 2023)[​](/release-notes/unsupported-releases/version-240-release#2410-june-2023 "Direct link to 24.1.0 \(June 2023\)")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-15 "Direct link to What's New")
-  * Dremio now supports Nessie as a source to manage your Iceberg tables and views. Nessie also enables a Git-like experience for easier data collaboration, quality assurance, and multi-statement transactions on the data lake. For more information about using Nessie as a source, see [Nessie](/query-manage/managing-data/nessie).
+## 24.1.0 (June 2023)​")
+### What's New​
+  * Dremio now supports Nessie as a source to manage your Iceberg tables and views. Nessie also enables a Git-like experience for easier data collaboration, quality assurance, and multi-statement transactions on the data lake.
 Limitations when using Nessie as a source in this initial release:
 DX-56331 
     * Dremio audit logs are not available for tables and views that are created in a Nessie source. Some of this information is available directly in the Nessie commit history. 
@@ -1042,7 +1043,7 @@ DX-64209
 DX-63782 
   * In this release, Dremio supports Zstandard (`zstd`) compression for reading and writing Parquet files. 
 DX-61800 
-  * You can use the `table_partitions()` function to return partition-related statistics for Apache Iceberg tables. See [Querying a Table’s Partition Metadata](/reference/sql/commands#querying-a-tables-partition-metadata). 
+  * You can use the `table_partitions()` function to return partition-related statistics for Apache Iceberg tables. See [Querying a Table’s Partition Metadata](/reference/sql/commands). 
 DX-61957
   * You can remove snapshots and their associated files that you no longer need using the `VACUUM` command with `EXPIRE SNAPSHOTS`. For more information, see [Expiring Snapshots of Apache Iceberg Tables](/developer/data-formats/apache-iceberg/expiring-snapshots). 
 DX-58057 
@@ -1084,7 +1085,7 @@ DX-59839
 DX-60794 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-30 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Made an update to ensure that custom (whitelabel) logos will be left-aligned on the Dremio login page. 
 DX-65948 
   * Fixed an issue where Helm charts could terminate the coordinator before start up completed due to large KV stores. To help address this issue and enable more flexible tuning, `readinessProbe` and `startupProbe` variables are now configurable in `values.yaml`. 
@@ -1168,24 +1169,24 @@ DX-60494
 DX-60170 
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-240-release#known-issues-3 "Direct link to Known Issues")
+### Known Issues​
   * In Dremio 24.1.0, there is an issue with Tableau Desktop using OAuth and Power BI SSO, which is leading to authentication failures (fixed in Dremio 24.1.1).
 
 
-## 24.0.3 (June 2024) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2403-june-2024-enterprise "Direct link to 2403-june-2024-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-31 "Direct link to Issues Fixed")
+## 24.0.3 (June 2024) Enterprise​
+### Issues Fixed​
   * Fixed an issue that could cause the Reflection summary page in the Dremio console to load incorrectly. 
 DX-62949
 
 
-## 24.0.2 (May 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2402-may-2023-enterprise "Direct link to 2402-may-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-32 "Direct link to Issues Fixed")
+## 24.0.2 (May 2023) Enterprise​
+### Issues Fixed​
   * In Dremio 24.0.0 AWS Edition, if _core-site.xml_ was used to specify distributed storage, restoring a backup was resulting in an exception. 
 DX-63776 
 
 
-## 24.0.1 (March 2023) Enterprise[​](/release-notes/unsupported-releases/version-240-release#2401-march-2023-enterprise "Direct link to 2401-march-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-16 "Direct link to What's New")
+## 24.0.1 (March 2023) Enterprise​
+### What's New​
   * This release includes a new SQL function, `COL_LIKE`, which tests whether an expression column matches a pattern column. For more information, see [COL_LIKE](/reference/sql/sql-functions). 
 DX-60811 
   * This release adds support for reading `TIME` and `TIMESTAMP` microseconds in Parquet files. Microseconds are truncated and the value is stored as milliseconds. 
@@ -1194,7 +1195,7 @@ DX-34989
 DX-61981 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-33 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Pushdowns were not working for UUID data types on a PostgresSQL source. This change maps PostgresSQL's UUID type to Dremio's VARCHAR. Comparison operators (=, &gt;, &lt;, &lt;=, &gt;=, !=) between a UUID and a UUID and between a UUID and a VARCHAR will now be pushed down. 
 DX-62978 
   * Fixed an issue that was causing the planner to attempt to add implicit casting for identical data types, causing an error. 
@@ -1233,28 +1234,28 @@ DX-51964
 DX-60439 
 
 
-## 24.0.0 (February 2023)[​](/release-notes/unsupported-releases/version-240-release#2400-february-2023 "Direct link to 24.0.0 \(February 2023\)")
-### What's New[​](/release-notes/unsupported-releases/version-240-release#whats-new-17 "Direct link to What's New")
-  * This release adds support for Sign-On (SSO) with Microsoft Power BI. For more information, see [Enabling Single Sign-On](/client-applications/microsoft-power-bi/working-from-datasets/administrators/administering-connectivity#enabling-single-sign-on).
+## 24.0.0 (February 2023)​")
+### What's New​
+  * This release adds support for Sign-On (SSO) with Microsoft Power BI. For more information, see [Enabling Single Sign-On](/client-applications/microsoft-power-bi/working-from-datasets/administrators/administering-connectivity).
   * You can optimize Iceberg tables to maximize the speed and efficiency of data retrieval. Rewrite data files using a compaction process to combine small files into larger files or split large files to reduce metadata overhead and runtime file open costs. For more information, see [Optimizing Tables](/developer/data-formats/apache-iceberg/table-maintenance-optimization/optimizing). 
 DX-55479 
-  * You can roll back to a previous state of an Iceberg table using either a snapshot ID or a timestamp reference. For more information, see [Rolling Back Tables](/developer/data-formats/apache-iceberg/rolling-back). 
+  * You can roll back to a previous state of an Iceberg table using either a snapshot ID or a timestamp reference. For more information, see Rolling Back Tables. 
 DX-54159 
   * Dremio’s new `COPY INTO` SQL command makes it even easier and faster to load data into Apache Iceberg tables, which are a foundational component data lakehouses. With one command, you can now copy data from CSV and JSON stored in Amazon S3, Azure Data Lake Storage (ADLS), HDFS, and other supported data sources into Apache Iceberg tables using the columnar Parquet file format for performance. Dremio efficiently distributes the copy operation across the entire engine to load data more quickly. For more information, see [Copying Data Into Apache Iceberg Tables](/developer/data-formats/apache-iceberg/copying-data-into-tables). 
 DX-46107 
-  * In the SQL editor, you can now format your SQL using the _Format SQL_ shortcut (Cmd + Shift + f or Ctrl + Shift + f). As long as the current syntax is valid, the SQL formatter applies a conventional style to your query by aligning commands for readability. For more information, see [SQL Editor](/query-manage/querying-data/#7-sql-editor). 
+  * In the SQL editor, you can now format your SQL using the _Format SQL_ shortcut (Cmd + Shift + f or Ctrl + Shift + f). As long as the current syntax is valid, the SQL formatter applies a conventional style to your query by aligning commands for readability. 
 DX-40727 
-  * This release supports the use of `BROADCAST` hints in queries to distribute data across all executor nodes. For more information, see [Distributing Data Evenly Across Executor Nodes During Joins](/reference/sql/commands#distributing-data-evenly-across-executor-nodes-during-joins). 
+  * This release supports the use of `BROADCAST` hints in queries to distribute data across all executor nodes. For more information, see [Distributing Data Evenly Across Executor Nodes During Joins](/reference/sql/commands). 
 DX-56572 
   * The `LIKE` SQL function now supports the `ANY`, `SOME`, and `ALL` keywords. For more information, see [LIKE](/reference/sql/sql-functions). 
 DX-56364 
   * If you specify an alias for a column or expression in the `SELECT` clause, you can now refer to that alias elsewhere in a query. For more information, see [Table SQL Statements](/reference/sql/commands/tables). 
 DX-56363 
-  * This release implements a new operator for vectorized hash-join that supports spilling to disk if a query runs out of memory. Spill support for hash-join queries can be turned on by enabling the `exec.op.join.spill` [support key](/help-support/support-settings/#support-keys). 
+  * This release implements a new operator for vectorized hash-join that supports spilling to disk if a query runs out of memory. Spill support for hash-join queries can be turned on by enabling the `exec.op.join.spill` [support key](/help-support/support-settings/). 
 DX-37267 
   * Dremio now includes a new connector for adding IBM Db2 databases as sources. For more information, see [IBM DB2](/data-sources/databases/ibm-db2). 
 DX-45152 
-  * The [MongoDB](/data-sources/databases/mongo) source configuration contains a new setting under Advanced Options to treat field names as case insensitive. When enabled, Dremio will record all known variations of a field name when learning the schema and use all known variations when pushing an operation down to Mongo. 
+  * The MongoDB source configuration contains a new setting under Advanced Options to treat field names as case insensitive. When enabled, Dremio will record all known variations of a field name when learning the schema and use all known variations when pushing an operation down to Mongo. 
 DX-34571 
   * The Reflections page under **Settings &gt; Reflections** now provides real-time observability for Reflections, including status, refresh, and usage information. You can use this page to monitor Reflections in real time and take advantage of usage metrics to identify and trim Reflections that are not accelerating queries. 
 DX-56576 
@@ -1271,7 +1272,7 @@ DX-60456
   * Password/Secrets encryption in Dremio Enterprise config files DX-47701
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-240-release#issues-fixed-34 "Direct link to Issues Fixed")
+### Issues Fixed​
   * In some cases, the JVM's direct memory allocator was triggering garbage collection when there was sustained and high usage of direct memory, which was causing performance issues. 
 DX50135 
   * Following the upgrade to Dremio 22.1.7, Power BI Desktop and Gateway may not have been able to connect to Dremio via Azure Active Directory. 
@@ -1337,8 +1338,8 @@ DX-54034
 DX-49001 
 
 
-### Breaking Changes[​](/release-notes/unsupported-releases/version-240-release#breaking-changes "Direct link to Breaking Changes")
-#### Mixing Implicit and Explicit Joins[​](/release-notes/unsupported-releases/version-240-release#mixing-implicit-and-explicit-joins "Direct link to Mixing Implicit and Explicit Joins")
+### Breaking Changes​
+#### Mixing Implicit and Explicit Joins​
 If you mix implicit and explicit joins, only the last of the implicitly joined tables can be in the `ON` clause. Otherwise you will receive a "Table not found" error. For example, the following query results in the error `Table 'c' not found`.
 
 ```
@@ -1367,9 +1368,9 @@ from
 ```
 
 This is functionally equivalent since implicit joins implement a cross product of the two tables.
-#### Broadcast Table Hints[​](/release-notes/unsupported-releases/version-240-release#broadcast-table-hints "Direct link to Broadcast Table Hints")
-Dremio v24 supports `BROADCAST` hints in queries. Hints must be entered as `/*+ `hint` */`, which is standard across data warehouses. In previous versions of Dremio, text enclosed in `/*  */` was treated as a comment. Dremio will continue to treat text enclosed in `/*  */` as a comment unless the first character is `+`. The use of unrecognized hints will result in an error. For more information, see [Distributing Data Evenly Across Executor Nodes During Joins](/reference/sql/commands#distributing-data-evenly-across-executor-nodes-during-joins).
-### Known Issues[​](/release-notes/unsupported-releases/version-240-release#known-issues-4 "Direct link to Known Issues")
+#### Broadcast Table Hints​
+Dremio v24 supports `BROADCAST` hints in queries. Hints must be entered as `/*+ `hint` */`, which is standard across data warehouses. In previous versions of Dremio, text enclosed in `/*  */` was treated as a comment. Dremio will continue to treat text enclosed in `/*  */` as a comment unless the first character is `+`. The use of unrecognized hints will result in an error. For more information, see [Distributing Data Evenly Across Executor Nodes During Joins](/reference/sql/commands).
+### Known Issues​
   * This version of Dremio does not support Iceberg tables written with equality deletes. 
 DX-52677
   * DML operations (`INSERT`, `UPDATE`, `DELETE`, `MERGE`) are not supported on tables with `MAP` columns. `CTAS` **is** supported on tables with `MAP` columns. 
@@ -1380,12 +1381,12 @@ DX-19162
 
 Was this page helpful?
 [Previous Unsupported Releases](/release-notes/unsupported-releases)[Next 23.x Release Notes](/release-notes/unsupported-releases/version-230-release)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Unsupported Releases](/release-notes/unsupported-releases)[Next 23.x Release Notes](/release-notes/unsupported-releases/version-230-release)

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/LIST_FILES
+slug: /reference/sql/sql-functions/functions/LIST_FILES
 title: "LIST_FILES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64325.471418833
@@ -17,8 +18,8 @@ On this page
 **Categories** : [AI](/reference/sql/sql-functions), [Directory](/reference/sql/sql-functions)
 # LIST_FILES
 Lists files recursively from a source directory, adhering to the `COPY INTO` security model. Returns structured information about each file for use with AI functions and data processing workflows.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### LIST_FILES( _source_path_ VARCHAR ) → TABLE[​](/reference/sql/sql-functions#list_files-source_path-varchar---table "Direct link to list_files-source_path-varchar---table")
+## Syntax
+### LIST_FILES( _source_path_ VARCHAR ) → TABLE[​](/reference/sql/sql-functions)
   * source_path: Path to the source directory to list files from. Must follow the format `'@source_name/path/to/directory'`. Adheres to `COPY INTO` security model.
 
 
@@ -65,13 +66,13 @@ SELECT file['path'] AS recipe_file,
 
 Was this page helpful?
 [Previous LISTAGG](/reference/sql/sql-functions)[Next LN](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous LISTAGG](/reference/sql/sql-functions)[Next LN](/reference/sql/sql-functions)
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)

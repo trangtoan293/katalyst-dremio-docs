@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/nessie/drop-tag
+slug: /reference/sql/commands/nessie/drop-tag
 title: "DROP TAG | Dremio Enterprise Documentation"
 depth: 5
 crawled_at: 65347.4605275
@@ -25,7 +26,7 @@ DROP TAG [ IF EXISTS ] <tag_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/nessie/drop-tag#parameters "Direct link to Parameters")
+## Parameters​
 [ IF EXISTS ] Optional
 If you include this optional clause, the command succeeds regardless of whether the tag existed. If this clause is not specified, the command fails if the tag to be dropped does not exist.
 * * *
@@ -38,7 +39,7 @@ Use the `FORCE` parameter when you want to drop the tag even if it has been chan
 * * *
 IN `source_name` String Optional
 The name of the source containing the tag that you want to drop. If not specified, the current source in the query context is used.
-## Examples[​](/reference/sql/commands/nessie/drop-tag#examples "Direct link to Examples")
+## Examples​
 Drop a tag at the specified commit
 
 ```
@@ -57,13 +58,13 @@ DROP TAG myTag
 
 Was this page helpful?
 [Previous DROP BRANCH](/reference/sql/commands/nessie/drop-branch)[Next MERGE BRANCH](/reference/sql/commands/nessie/merge-branch)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DROP BRANCH](/reference/sql/commands/nessie/drop-branch)[Next MERGE BRANCH](/reference/sql/commands/nessie/merge-branch)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fnessie%2Fdrop-tag%2F&_biz_t=1777951667849&_biz_i=DROP%20TAG%20%7C%20Dremio%20Documentation&_biz_n=2719&rnd=926415&cdn_o=a&_biz_z=1777951667850)
+!

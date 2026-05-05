@@ -1,5 +1,6 @@
 ---
 url: /admin/monitoring
+slug: /admin/monitoring
 title: "Monitoring | Dremio Enterprise Documentation"
 depth: 1
 crawled_at: 64000.522020375
@@ -12,9 +13,9 @@ crawled_at: 64000.522020375
 Version: current [26.x]
 On this page
 # Monitoring
-As an administrator, you can monitor [logs](/admin/monitoring/#logs), [usage](/admin/monitoring/#usage), [system telemetry](/admin/monitoring/#system-telemetry), [jobs](/admin/monitoring/jobs), and [Dremio nodes](/admin/monitoring/dremio-nodes).
-As the [Dremio Shared Responsibility Models](/responsibility) outline, monitoring is a shared responsibility between Dremio and you. The Shared Responsibility Models lay out Dremio's responsibilities for providing monitoring technologies and logs and your responsibilities for implementation and use.
-## Logs[​](/admin/monitoring/#logs "Direct link to Logs")
+As an administrator, you can monitor [logs](/admin/monitoring/), [usage](/admin/monitoring/), [system telemetry](/admin/monitoring/), [jobs](/admin/monitoring/jobs), and [Dremio nodes](/admin/monitoring/dremio-nodes).
+As the [Dremio Shared Responsibility Models](https://www.dremio.com/responsibility) outline, monitoring is a shared responsibility between Dremio and you. The Shared Responsibility Models lay out Dremio's responsibilities for providing monitoring technologies and logs and your responsibilities for implementation and use.
+## Logs[​](/admin/monitoring/)
 Logs are primarily for troubleshooting issues and monitoring the health of the deployment.
 By default, Dremio uses the following locations to write logs:
   * Tarball - ``DREMIO_HOME`/log`
@@ -22,7 +23,7 @@ By default, Dremio uses the following locations to write logs:
   * Kubernetes - `/opt/dremio/log`
 
 
-### Log Types[​](/admin/monitoring/#log-types "Direct link to Log Types")  
+### Log Types[​](/admin/monitoring/)  
 | Log Type  | Description  |  
 | --- | --- |  
 | Audit  | The `audit.json` file tracks all activities that users perform within Dremio. For details, see [Audit Logging](/security/auditing).  |  
@@ -47,14 +48,14 @@ By default, Dremio uses the following locations to write logs:
 
 The query log may contain additional information depending on your Dremio configuration.  |  
 | Warning  | The `hive.deprecated.function.warning.log` file contains warnings for Hive functions that have been deprecated. To resolve warnings that are listed in this file, replace deprecated functions with a [supported function](/reference/sql/sql-functions). For example, to resolve a warning that mentions `NVL`, replace `NVL` with `COALESCE`.  |  
-### Retrieving Logs from the Dremio Console Enterprise[​](/admin/monitoring/#retrieving-logs-from-the-dremio-console-enterprise "Direct link to retrieving-logs-from-the-dremio-console-enterprise")
+### Retrieving Logs from the Dremio Console Enterprise[​](/admin/monitoring/)
 Retrieve logs for Kubernetes deployments in the Dremio console at **Settings** &gt; **Support** &gt; **Download Logs**.
-#### Prerequisites[​](/admin/monitoring/#prerequisites "Direct link to Prerequisites")
+#### Prerequisites[​](/admin/monitoring/)
   * You must be using Dremio 25.1+. Log collection is powered by Dremio Diagnostics Collector (DDC).
   * You must have the EXPORT DIAGNOSTICS privilege to view **Download Logs** options in **Settings** &gt; **Support**.
 
 
-#### Downloading Logs[​](/admin/monitoring/#downloading-logs "Direct link to Downloading Logs")
+#### Downloading Logs[​](/admin/monitoring/)
 To download logs:
   1. In the Dremio console, navigate to **Settings** &gt; **Support** &gt; **Download Logs** and click **Start collecting data**.
 
@@ -64,10 +65,10 @@ We recommend the default `Light` collection, which provides 7 days of logs and c
   1. When Dremio completes log collection, the log bundle appears in a list below **Start collecting data**. To download a log bundle, click **Download** next to the applicable bundle. Log bundles are available to download for 24 hours.
 
 
-### Logging in Kubernetes[​](/admin/monitoring/#logging-in-kubernetes "Direct link to Logging in Kubernetes")
+### Logging in Kubernetes[​](/admin/monitoring/)
 By default, all logs are written to a persisted volume mounted at `/opt/dremio/log`.
 To disable logging, set `writeLogsToFile: false` in the `values-overrides.yaml` configuration file either globally or individually for each `coordinator` and `executor` parent. For more information, see [Configuring Your Values](/deploy-dremio/configuring-kubernetes).
-#### Using the Container Console[​](/admin/monitoring/#using-the-container-console "Direct link to Using the Container Console")
+#### Using the Container Console[​](/admin/monitoring/)
 All logs are written to the container's console (stdout) simultaneously. These logs can be monitored using a `kubectl` command:
 Command for viewing logs using kubectl logs
 
@@ -78,7 +79,7 @@ kubectl logs [-f] [container-name]
 
 Use the `-f` flag to continuously print new log entries to your terminal as they are generated.
 You can also write logs to a file on disk in addition to stdout. Read 
-#### Using the AKS Container[​](/admin/monitoring/#using-the-aks-container "Direct link to Using the AKS Container")
+#### Using the AKS Container[​](/admin/monitoring/)
 Azure provides integration with AKS clusters and Azure Log Analytics to monitor container logs. This is a standard practice that puts infrastructure in place to aggregate logs from containers into a central log store to analyze them.
 AKS log monitoring is useful for the following reasons:
   * Monitoring logs across lots of pods can be overwhelming.
@@ -87,22 +88,22 @@ AKS log monitoring is useful for the following reasons:
 
 
 For more information regarding AKS, see 
-#### Enabling Log Monitoring[​](/admin/monitoring/#enabling-log-monitoring "Direct link to Enabling Log Monitoring")
+#### Enabling Log Monitoring[​](/admin/monitoring/)
 You can enable log monitoring when creating an AKS cluster or after the cluster has been created.
 Once logging is enabled, all your container `stdout` and `stderr` logs are collected by the infrastructure for you to analyze.
   1. While creating an AKS cluster, enable container monitoring. You can use an existing Log Analytics workspace or create a new one.
   2. In an existing AKS cluster where monitoring was not enabled during creation, go to **Logs on the AKS cluster** and enable it.
 
 
-#### Viewing Container Logs[​](/admin/monitoring/#viewing-container-logs "Direct link to Viewing Container Logs")
+#### Viewing Container Logs[​](/admin/monitoring/)
 To view all the container logs:
   1. Go to **Monitoring** &gt; **Logs**.
   2. Use the filter option to see the logs from the containers that you are interested in.
 
 
-## Usage[​](/admin/monitoring/#usage "Direct link to Usage")
+## Usage[​](/admin/monitoring/)
 Monitoring usage across your cluster makes it easier to observe patterns, analyze the resources being consumed by your data platform, and understand the impact on your users.
-### Catalog Usage Enterprise[​](/admin/monitoring/#catalog-usage-enterprise "Direct link to catalog-usage-enterprise")
+### Catalog Usage Enterprise[​](/admin/monitoring/)
 Go to **Settings** &gt; **Monitor** to view your catalog usage. You must be a member of the `ADMIN` role to access the Monitor page. When you open the Monitor page, you are directed to the Catalog Usage tab by default where you can see the following metrics:
   * Top 10 most queried datasets and how often the jobs on the dataset were accelerated
   * Top 10 most queried spaces and source folders
@@ -111,35 +112,35 @@ Go to **Settings** &gt; **Monitor** to view your catalog usage. You must be a me
 A source can be listed in the top 10 most queried spaces and source folders if the source contains a child dataset that was used in the query (for example, `postgres.accounts`). Queries of datasets in sub-folders (for example, `s3.mybucket.iceberg_table`) are classified by the sub-folder and not the source.
 All datasets are assessed in the metrics on the Monitor page except for datasets in the [system tables](/reference/sql/system-tables), the [information schema](/reference/sql/information-schema), and home spaces.
 The metrics on the Monitor page analyze only user queries. Refreshes of data Reflections and metadata refreshes are excluded.
-### Jobs Enterprise[​](/admin/monitoring/#jobs-enterprise "Direct link to jobs-enterprise")
+### Jobs Enterprise[​](/admin/monitoring/)
 Go to **Settings** &gt; **Monitor** &gt; **Jobs** to open the Jobs tab. You must be a member of the `ADMIN` role to access the Monitor page. The Jobs tab shows an aggregate view of the following metrics for the jobs that are running on your cluster:
   * Total job count over the last 24 hours and the relative rate of failure/cancelation
   * Top 10 most active users based on the number of jobs they ran
   * Total jobs accelerated, total job time saved, and average job speedup from Autonomous Reflections over the past month.
   * Total number of jobs accelerated by autonomous and manual Reflections over time
   * Total number of completed and failed jobs over time
-  * Jobs (completed and failed) grouped by the [queue](/admin/workloads/workload-management/#default-queues) they ran on
-  * Percentage of time that jobs spent in each [state](/admin/monitoring/jobs/#job-states-and-statuses)
+  * Jobs (completed and failed) grouped by the [queue](/admin/workloads/workload-management/) they ran on
+  * Percentage of time that jobs spent in each [state](/admin/monitoring/jobs/)
   * Top 10 longest running jobs
 
 
 To view all jobs and the details of specific jobs, see [Viewing Jobs](/admin/monitoring/jobs).
-### Resources Enterprise[​](/admin/monitoring/#resources-enterprise "Direct link to resources-enterprise")
+### Resources Enterprise[​](/admin/monitoring/)
 Go to **Settings** &gt; **Monitor** &gt; **Resources** to open the Resources tab. You must be a member of the `ADMIN` role to access the Monitor page. The Resources tab shows an aggregate view of the following metrics for the jobs and nodes running on your cluster:
   * Percentage of CPU and memory utilization for each coordinator and executor node
   * Top 10 most CPU and memory intensive jobs
   * Number of running executors
 
 
-### Cluster Usage[​](/admin/monitoring/#cluster-usage "Direct link to Cluster Usage")
+### Cluster Usage[​](/admin/monitoring/)
 Dremio displays the number of unique users who executed jobs on that day and the number of executed jobs.
   1. Hover over ![Icon represents help](https://docs.dremio.com/images/icons/help.png) in the side navigation bar.
   2. Click **About Dremio** in the menu.
   3. Click the **Cluster Usage Data** tab.
 
-![](https://docs.dremio.com/images/cluster-usage.png)
-## System Telemetry[​](/admin/monitoring/#system-telemetry "Direct link to System Telemetry")
-Dremio exposes system telemetry metrics in Prometheus format by default. It is not necessary to configure an exporter to collect the metrics. Instead, you can specify the host and port number where metrics are exposed in the [dremio.conf](/deploy-dremio/other-options/standalone/dremio-config) file and scrape the metrics with any Prometheus-compliant tool.
+!
+## System Telemetry[​](/admin/monitoring/)
+Dremio exposes system telemetry metrics in Prometheus format by default. It is not necessary to configure an exporter to collect the metrics. Instead, you can specify the host and port number where metrics are exposed in the dremio.conf file and scrape the metrics with any Prometheus-compliant tool.
 To specify the host and port number where metrics are exposed, add these two properties to the `dremio.conf` file:
   * `services.web-admin.host`: set to the desired host address (typically `0.0.0.0` or the IP address of the host where Dremio is running).
   * `services.web-admin.port`: set to any desired value that is greater than `1024`.
@@ -159,13 +160,13 @@ Access the exported Dremio system telemetry metrics at `http://`yourHost`:`yourP
 For more information about Prometheus metrics, read 
 Was this page helpful?
 [Previous Workload Management](/admin/workloads/workload-management)[Next Viewing Jobs](/admin/monitoring/jobs)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Workload Management](/admin/workloads/workload-management)[Next Viewing Jobs](/admin/monitoring/jobs)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2F&_biz_t=1777950320402&_biz_i=Dremio%20Documentation&_biz_n=3&rnd=53957&cdn_o=a&_biz_z=1777950320503)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fadmin%2Fmonitoring%2F&_biz_t=1777950320502&_biz_i=Monitoring%20%7C%20Dremio%20Documentation&_biz_n=4&rnd=376506&cdn_o=a&_biz_z=1777950320503)
+!!

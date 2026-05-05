@@ -2,7 +2,7 @@
   "label": "Drivers",
   "position": 4,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Drivers"
+    "type": "doc",
+    "id": "client-applications/drivers/current-client-applications-drivers"
   }
 }

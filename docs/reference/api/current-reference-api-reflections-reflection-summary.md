@@ -178,8 +178,8 @@ Reflection Summary Object
 
 ```
 
-## Reflection Summary Attributes[​](/reference/api/reflections/reflection-summary#reflection-summary-attributes "Direct link to Reflection Summary Attributes")
-[data](/reference/api/reflections/reflection-summary#attributes-of-objects-in-the-data-array) Array of Object
+## Reflection Summary Attributes[​](/reference/api/reflections/reflection-summary)
+[data](/reference/api/reflections/reflection-summary) Array of Object
 List of Reflection-summary objects for each Reflection in the Dremio instance.
 * * *
 nextPageToken String
@@ -189,7 +189,7 @@ Example: CiQxNjc0MjhlYi03OTM2LTRlYTItYTFmYi0yM2IxYWM2ZTk0NTQSAA==
 isCanAlterReflections Boolean
 If the current user has project-level privileges to alter Reflections, the value is `true`. Otherwise, the value is `false`.
 Example: true
-#### Attributes of Objects in the `data` Array[​](/reference/api/reflections/reflection-summary#attributes-of-objects-in-the-data-array "Direct link to attributes-of-objects-in-the-data-array")
+#### Attributes of Objects in the `data` Array[​](/reference/api/reflections/reflection-summary)
 createdAt String
 Date and time that the Reflection was created, in UTC format.
 Example: 2022-07-05T19:19:40.244Z
@@ -203,7 +203,7 @@ Unique identifier of the Reflection.
 Example: 27077c03-ae49-454c-a7bb-a9a8b5eca224
 * * *
 reflectionType String
-Reflection type. For more information, read [Types of Reflections](/acceleration#types).
+Reflection type. For more information, read [Types of Reflections](/acceleration).
 Enum: RAW, AGGREGATION
 Example: AGGREGATION
 * * *
@@ -236,7 +236,7 @@ datasetPath String
 Path to the anchor dataset that is associated with the Reflection within Dremio, expressed in an array. The path consists of the source or space, followed by any folder and subfolders, followed by the name of the dataset itself as the last item in the array.
 Example: ["Samples","samples.dremio.com","NYC Taxi Trips"]
 * * *
-[status](/reference/api/reflections/reflection-summary#attributes-of-the-status-object) Object
+[status](/reference/api/reflections/reflection-summary) Object
 Information about the status of the Reflection.
 Example: {'{'})'{'{'})'{'}'})\n "configStatus": "OK",\n "refreshStatus": "MANUAL",\n "availabilityStatus": "AVAILABLE",\n "combinedStatus": "CAN_ACCELERATE",\n "refreshMethod": "FULL",\n "failureCount": 0,\n "lastDataFetchAt": "2023-01-13T19:05:03.532Z",\n "expiresAt": "3022-05-16T19:46:02.342Z",\n "lastRefreshDurationMillis": 46387\n {'{'})'{'}'}'{'}'}
 * * *
@@ -279,7 +279,7 @@ Example: true
 isEnabled Boolean
 If the Reflection is available for accelerating queries, the value is `true`. Otherwise, the value is `false`.
 Example: true
-#### Attributes of the `status` Object[​](/reference/api/reflections/reflection-summary#attributes-of-the-status-object "Direct link to attributes-of-the-status-object")
+#### Attributes of the `status` Object[​](/reference/api/reflections/reflection-summary)
 configStatus String
 Status of the Reflection configuration. If the value is `OK`, the Reflection configuration is free of errors. If the value is `INVALID`, the Reflection configuration contains one or more errors.
 Enum: OK, INVALID
@@ -342,7 +342,7 @@ Example: 3022-05-16T19:46:02.342Z
 lastRefreshDurationMillis Integer
 Duration of the most recent refresh for the Reflection. In milliseconds.
 Example: 46387
-## Retrieve a Reflection Summary[​](/reference/api/reflections/reflection-summary#retrieve-a-reflection-summary "Direct link to Retrieve a Reflection Summary")
+## Retrieve a Reflection Summary[​](/reference/api/reflections/reflection-summary)
 Retrieve a summary of the raw and aggregation Reflections in the Dremio instance.
 Method and URL
 
@@ -351,12 +351,12 @@ GET /api/v3/reflection-summary
 
 ```
 
-### Parameters[​](/reference/api/reflections/reflection-summary#parameters "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections/reflection-summary)
 pageToken Query String Optional
-Token for retrieving the next page of Reflection summary results. If the Dremio instance has more Reflection summary results than the maximum per page (default 50), the response includes a nextPageToken after the data array. Use the nextPageToken value in your request URL as the pageToken value. Do not change any other query parameters included in the request URL when you use pageToken. For more information, read [pageToken Query Parameter](/reference/api#pagetoken-query-parameter).
+Token for retrieving the next page of Reflection summary results. If the Dremio instance has more Reflection summary results than the maximum per page (default 50), the response includes a nextPageToken after the data array. Use the nextPageToken value in your request URL as the pageToken value. Do not change any other query parameters included in the request URL when you use pageToken. For more information, read [pageToken Query Parameter](/reference/api).
 * * *
 maxResults Query Integer Optional
-Maximum number of Reflection summaries to return in the response. Maximum valid value is `100`. Default is `50`. For more information, read [maxResults Query Parameter](/reference/api#maxresults-query-parameter).
+Maximum number of Reflection summaries to return in the response. Maximum valid value is `100`. Default is `50`. For more information, read [maxResults Query Parameter](/reference/api).
 * * *
 filter Query Object Optional
 Filters for Reflection name, dataset name, availability status, and refresh status. Value is a URL-encoded string that represents a JSON object. The JSON object specifies the attributes to filter on and the values to match for each attribute. Available filter attributes:
@@ -369,10 +369,10 @@ Filters for Reflection name, dataset name, availability status, and refresh stat
   * reflectionIds: IDs of Reflections to retrieve (array of string); must be used alone, with no other filters or query parameters
 
 
-For more information, read [filter Query Parameter](/reference/api#filter-query-parameter).
+For more information, read [filter Query Parameter](/reference/api).
 * * *
 orderBy Query String Optional
-Organize the response in ascending (default) or descending order by reflectionName, datasetName, or reflectionType. To specify descending order, precede the orderBy value with a `-` character. For more information, read [orderBy Query Parameter](/reference/api#orderby-query-parameter).
+Organize the response in ascending (default) or descending order by reflectionName, datasetName, or reflectionType. To specify descending order, precede the orderBy value with a `-` character. For more information, read [orderBy Query Parameter](/reference/api).
 Example Request Without Query Parameters
 
 ```
@@ -382,7 +382,7 @@ curl -X GET 'https://{hostname}/api/v3/reflection-summary'
 
 ```
 
-### Example Response[​](/reference/api/reflections/reflection-summary#example-response "Direct link to Example Response")
+### Example Response[​](/reference/api/reflections/reflection-summary)
 
 ```
 {  
@@ -543,7 +543,7 @@ curl -X GET 'https://{hostname}/api/v3/reflection-summary'
 
 ```
 
-This endpoint supports [query parameters](/reference/api/reflections/reflection-summary#parameters) that you can add to the request URL to include only specific types of Reflections in the Reflection summary, specify the maximum number of results to return, and sort the response to list Reflections in ascending or descending order.
+This endpoint supports [query parameters](/reference/api/reflections/reflection-summary) that you can add to the request URL to include only specific types of Reflections in the Reflection summary, specify the maximum number of results to return, and sort the response to list Reflections in ascending or descending order.
 For example, to order the Reflections within the summary in ascending order by reflectionName, add `?orderBy=reflectionName` to the request URL. For descending order, add a `-` character before the attribute name: `?orderBy=-reflectionName`.
 In the same request, you can add the `filter` query parameter to retrieve only the raw Reflections that are refreshed manually or by schedule, are enabled, and apply to datasets with `samples.dremio.com` in their paths. The JSON object for such a filter would look like this:
 Example JSON Object for Filter
@@ -577,7 +577,7 @@ curl -X GET 'https://{hostname}/api/v3/reflection-summary?orderBy=reflectionName
 ```
 
 For this request, the Reflection summary in the response will include only raw Reflections that are refreshed manually or by schedule, are enabled, and apply to datasets with `samples.dremio.com` in their paths, and the Reflections will be listed in ascending order by reflectionName.
-### Response Status Codes[​](/reference/api/reflections/reflection-summary#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections/reflection-summary)
 200 OK   
   
 401 Unauthorized   
@@ -589,13 +589,13 @@ For this request, the Reflection summary in the response will include only raw R
 
 Was this page helpful?
 [Previous Recommendations](/reference/api/reflections/reflection-recommendations)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Recommendations](/reference/api/reflections/reflection-recommendations)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Freflections%2Freflection-summary%2F&_biz_t=1777950387178&_biz_i=Reflection%20Summary%20%7C%20Dremio%20Documentation&_biz_n=147&rnd=357421&cdn_o=a&_biz_z=1777950387179)
+!

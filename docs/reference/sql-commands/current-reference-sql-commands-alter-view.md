@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/alter-view
+slug: /reference/sql/commands/alter-view
 title: "ALTER VIEW | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.658178291
@@ -42,7 +43,7 @@ ALTER VIEW <view_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/alter-view#parameters "Direct link to Parameters")
+## Parameters​
 `view_name` String
 The name of the view that you want to create. The name of the view should be unique.
 * * *
@@ -124,11 +125,11 @@ DROP REFLECTION String Optional
 Drops the specified Reflection defined on the view.
 * * *
 REFRESH REFLECTIONS String Optional
-For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections#triggering-refreshes-by-using-the-reflection-api-the-catalog-api-or-an-sql-command).
+For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections).
 * * *
 ROUTE REFLECTIONS TO {'{'})'{'{'})'{'}'}) DEFAULT QUEUE | QUEUE {'{'})'{'{'})'{'}'}) `queue_name` | `queue_uuid` {'{'})'{'}'}'{'}'} {'{'})'{'}'}'{'}'} String
 Use the queue name or unique identifier to specify the queue on which to run jobs that create and refresh Reflections that are defined on the view. If a queue name or unique identifier is not specified, the default queue is used. You can also directly specify the default queue.
-## Examples[​](/reference/sql/commands/alter-view#examples "Direct link to Examples")
+## Examples​
 Create a raw Reflection that sorts customers by last name and partitions them by country
 
 ```
@@ -172,13 +173,13 @@ ALTER VIEW "View 3" ROUTE REFLECTIONS TO QUEUE "QUEUE 1";
 
 Was this page helpful?
 [Previous ALTER TABLE](/reference/sql/commands/alter-table)[Next ANALYZE TABLE](/reference/sql/commands/analyze-table)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ALTER TABLE](/reference/sql/commands/alter-table)[Next ANALYZE TABLE](/reference/sql/commands/analyze-table)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Falter-view%2F&_biz_t=1777950570344&_biz_i=ALTER%20VIEW%20%7C%20Dremio%20Documentation&_biz_n=484&rnd=758811&cdn_o=a&_biz_z=1777950570344)
+!

@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config
+slug: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config
 title: "Configuring ZooKeeper | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64209.159835916
@@ -8,9 +9,9 @@ crawled_at: 64209.159835916
   * [Dremio Enterprise Home](/)
   * [Deploy Dremio](/deploy-dremio)
   * [Other Options](/deploy-dremio/other-options)
-  * [Dremio with Your Infrastructure](/deploy-dremio/other-options/standalone)
-  * [Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
-  * [Services](/deploy-dremio/other-options/standalone/dremio-config)
+  * Dremio with Your Infrastructure
+  * Cluster Configuration
+  * Services
   * ZooKeeper
 
 Version: current [26.x]
@@ -23,7 +24,7 @@ To configure ZooKeeper, the `zookeeper` property with the hostname and port must
 | Single-Node cluster  | The ZooKeeper property is _**not**_ added to the `dremio.conf` file with a single node cluster.  |  
 | Multi-node cluster  | The ZooKeeper property _**must**_ be added to the `dremio.conf` file on each coordinator and executor node in the Dremio cluster.  |  
 There are _no_ spaces between the comma-separated list of ZooKeeper nodes. If there are extra spaces, you may receive an error message similar to the following: `Error: java.net.UnknownHostException: 11.22.33.142: Name or service not known`.
-## Property Syntax[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config#property-syntax "Direct link to Property Syntax")
+## Property Syntax​
 Syntax for ZooKeeper property
 
 ```
@@ -38,7 +39,7 @@ The `zookeeper` host is the hostname (or IP address) where ZooKeeper is located.
 `zookeeper: "<zookeeper-host1>:2181,<zookeeper-host2>:2181"`
 
 
-## Embedded ZooKeeper Examples[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config#embedded-zookeeper-examples "Direct link to Embedded ZooKeeper Examples")
+## Embedded ZooKeeper Examples​
 The following examples illustrate how to configure an embedded ZooKeeper according to different deployment variables.
   * If you have one coordinator node (mainA) with an embedded ZooKeeper and multiple executor nodes, then you specify that main coordinator node with the ZooKeeper property in the `dremio.conf` file on every node in the Dremio cluster.
 One coordinator node with embedded ZooKeeper and multiple executor nodes
@@ -59,7 +60,7 @@ services.coordinator.master.embedded-zookeeper.port: <port>
 The term `master` is a legacy label used in this property. We now refer to this as the main coordinator.
 
 
-## External ZooKeeper Examples[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config#external-zookeeper-examples "Direct link to External ZooKeeper Examples")
+## External ZooKeeper Examples​
 To use your own external ZooKeeper cluster rather than Dremio's embedded ZooKeeper, modify the `zookeeper` property in the `dremio.conf` file. If no ZooKeeper path is specified, Dremio defaults to `/dremio`.
 The `dremio.conf` file must be updated on every Dremio coordinator and executor node in the cluster.
 The following example shows the default property and syntax:
@@ -100,7 +101,7 @@ zookeeper: "<host1>:2181/dremioprod,<host2>:2181/dremioprod,<host3>:2181/dremiop
 
 
 
-### ZooKeeper 3.5 Support[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config#zookeeper-35-support "Direct link to ZooKeeper 3.5 Support")
+### ZooKeeper 3.5 Support​
 If you use an external ZooKeeper 3.5 cluster, add the system property `-Dcurator-cache-bridge-force-tree-cache=true` to `dremio-env` as shown in the following example:
 Example for ZooKeeper 3.5 clusters
 
@@ -110,17 +111,17 @@ export DREMIO_JAVA_SERVER_EXTRA_OPTS="-<otherProperties> -Dcurator-cache-bridge-
 ```
 
 Was this page helpful?
-[Previous Wire Encryption](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config)[Next High Availability](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous Wire EncryptionNext High Availability
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous Wire Encryption](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config)[Next High Availability](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fother-options%2Fstandalone%2Fdremio-config%2Fdremio-conf%2Fzookeeper-config%2F&_biz_t=1777950532754&_biz_i=Configuring%20ZooKeeper%20%7C%20Dremio%20Documentation&_biz_n=411&rnd=247887&cdn_o=a&_biz_z=1777950532755)
+Previous Wire EncryptionNext High Availability
+!
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)
 ## Privacy Preference Center
 When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.   

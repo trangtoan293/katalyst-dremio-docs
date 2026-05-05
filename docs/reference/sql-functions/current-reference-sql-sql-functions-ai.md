@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/AI
+slug: /reference/sql/sql-functions/AI
 title: "AI | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.468633333
@@ -21,12 +22,12 @@ Version: current [26.x]
 | [LIST_FILES](/reference/sql/sql-functions)  | Lists files recursively from a source directory, adhering to the `COPY INTO` security model. Returns structured information about each file for use with AI functions and data processing workflows.  |  
 Was this page helpful?
 [Previous Aggregate](/reference/sql/sql-functions)[Next Binary](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Aggregate](/reference/sql/sql-functions)[Next Binary](/reference/sql/sql-functions)

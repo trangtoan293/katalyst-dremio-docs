@@ -248,13 +248,13 @@ Reflection Object (External Reflection)
 
 ```
 
-## Reflection Attributes[​](/reference/api/reflections#reflection-attributes "Direct link to Reflection Attributes")
+## Reflection Attributes[​](/reference/api/reflections)
 id String (UUID)
 Unique identifier of the Reflection.
 Example: 95dda9dd-2371-467f-b68d-fc4c5ea57a8b
 * * *
 type String
-Reflection type. For more information, read [Types of Reflections](/acceleration#types).
+Reflection type. For more information, read [Types of Reflections](/acceleration).
 Enum: RAW, AGGREGATION
 Example: AGGREGATION
 * * *
@@ -323,32 +323,32 @@ acceleratedCount Integer
 Number of jobs accelerated by the Reflection. For new Reflections, the acceleratedCount value is `0`.
 Example: `352`
 * * *
-[status](/reference/api/reflections#attributes-of-the-status-object) Object
+[status](/reference/api/reflections) Object
 Information about the status of the Reflection.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"config": "OK","refresh": "SCHEDULED","availability": "AVAILABLE","combinedStatus": "CAN_ACCELERATE","refreshMethod": "INCREMENTAL", ""failureCount": 0,"lastDataFetch": "2023-01-10T17:12:40.244Z","expiresAt": "3022-07-05T19:19:40.244Z","lastRefreshDurationMillis": 3183,"lastRefreshFinished": "2025-11-09T17:12:03.027Z"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
-[displayFields](/reference/api/reflections#attributes-of-objects-in-the-displayfields-array) Array of Object
+[displayFields](/reference/api/reflections) Array of Object
 Information about the fields displayed from the anchor dataset. Each displayFields object contains one attribute: name. Valid only for raw Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fare_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "tip_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[dimensionFields](/reference/api/reflections#attributes-of-objects-in-the-dimensionfields-array) Array of Object
+[dimensionFields](/reference/api/reflections) Array of Object
 Information about the dimension fields from the anchor dataset used in the Reflection. Dimension fields are the fields you expect to group by when analyzing data. Each dimensionFields object contains two attributes: name and granularity. Valid only for aggregation Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_date","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "dropoff_date","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "dropoff_datetime","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[measureFields](/reference/api/reflections#attributes-of-objects-in-the-measurefields-array) Array of Object
+[measureFields](/reference/api/reflections) Array of Object
 Information about the measure fields from the anchor dataset used in the Reflection. Measure fields are the fields you expect to use for calculations when analyzing the data. Each measureFields object contains two attributes: name and measureTypeList. Valid only for aggregation Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fare_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "surcharge","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "tip_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[distributionFields](/reference/api/reflections#attributes-of-objects-in-the-distributionfields-array) Array of Object
+[distributionFields](/reference/api/reflections) Array of Object
 Information about the distribution fields from the anchor dataset used in the Reflection. Distribution fields allow data from multiple datasets to be co-located and co-partitioned across nodes to minimize data movement during join operations. Each distributionFields object contains one attribute: name.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[partitionFields](/reference/api/reflections#attributes-of-objects-in-the-partitionfields-array) Array of Object
-Information about the fields from the anchor dataset used to partition data in the Reflection. Each field name is listed as an individual object. For more information, read [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/#horizontally-partition-reflections-that-have-many-rows).
+[partitionFields](/reference/api/reflections) Array of Object
+Information about the fields from the anchor dataset used to partition data in the Reflection. Each field name is listed as an individual object. For more information, read [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/).
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "dropoff_date"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[sortFields](/reference/api/reflections#attributes-of-objects-in-the-sortfields-array) Array of Object
-Information about the fields from the anchor dataset used for sorting in the Reflection. Each sortFields object contains one attribute: name. For more information, read [Sort Reflections on High-Cardinality Fields](/help-support/well-architected-framework/performance/#sort-reflections-on-high-cardinality-fields).
+[sortFields](/reference/api/reflections) Array of Object
+Information about the fields from the anchor dataset used for sorting in the Reflection. Each sortFields object contains one attribute: name. For more information, read [Sort Reflections on High-Cardinality Fields](/help-support/well-architected-framework/performance/).
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 partitionDistributionStrategy String
@@ -371,7 +371,7 @@ Example: reflection
 externalReflection String
 Full path to the target dataset. The field will be populated if the Reflection is an external Reflection.
 Example: `postgres.public.listings`
-#### Attributes of the `status` Object[​](/reference/api/reflections#attributes-of-the-status-object "Direct link to attributes-of-the-status-object")
+#### Attributes of the `status` Object[​](/reference/api/reflections)
 config String
 Status of the Reflection configuration. If the value is `OK`, the Reflection configuration is free of errors. If the value is `INVALID`, the Reflection configuration contains one or more errors.
 Enum: OK, INVALID
@@ -432,11 +432,11 @@ Example: `3080`
 lastRefreshFinished String
 Date and time that the last Reflection refresh job attempt finished, in UTC format. For new Reflections, the lastRefreshFinished value is `1969-12-31T23:59:59.999Z`.
 Example: `2025-10-05T12:39:45.034Z`
-#### Attributes of Objects in the `displayFields` Array[​](/reference/api/reflections#attributes-of-objects-in-the-displayfields-array "Direct link to attributes-of-objects-in-the-displayfields-array")
+#### Attributes of Objects in the `displayFields` Array[​](/reference/api/reflections)
 name String
 Name of the field from the anchor dataset that is displayed in the raw Reflection.
 Example: passenger_count
-#### Attributes of Objects in the `dimensionFields` Array[​](/reference/api/reflections#attributes-of-objects-in-the-dimensionfields-array "Direct link to attributes-of-objects-in-the-dimensionfields-array")
+#### Attributes of Objects in the `dimensionFields` Array[​](/reference/api/reflections)
 name String
 Name of the field from the anchor dataset that is configured as a dimension for the Reflection.
 Example: pickup_date
@@ -445,7 +445,7 @@ granularity String
 Grouping used for the dimension field. When timestamp and date fields are configured as dimensions, Dremio can automatically extract and use the day-level date value (`DATE`) or use the field's original value (`NORMAL`).
 Enum: DATE, NORMAL
 Example: DATE
-#### Attributes of Objects in the `measureFields` Array[​](/reference/api/reflections#attributes-of-objects-in-the-measurefields-array "Direct link to attributes-of-objects-in-the-measurefields-array")
+#### Attributes of Objects in the `measureFields` Array[​](/reference/api/reflections)
 name String
 Name of the field from the anchor dataset that is configured as a measure for the Reflection.
 Example: passenger_count
@@ -454,11 +454,11 @@ measureTypeList Array of String
 Types of calculations for which Dremio uses the specified measure field.
 Enum: APPROX_COUNT_DISTINCT, MIN, MAX, UNKNOWN, SUM, COUNT
 Example: ["SUM","COUNT"]
-#### Attributes of Objects in the `distributionFields` Array[​](/reference/api/reflections#attributes-of-objects-in-the-distributionfields-array "Direct link to attributes-of-objects-in-the-distributionfields-array")
+#### Attributes of Objects in the `distributionFields` Array[​](/reference/api/reflections)
 name String
 Name of the field from the anchor dataset that is used for co-locating and co-partitioning data from multiple datasets across nodes.
 Example: trip_distance_mi
-#### Attributes of Objects in the `partitionFields` Array[​](/reference/api/reflections#attributes-of-objects-in-the-partitionfields-array "Direct link to attributes-of-objects-in-the-partitionfields-array")
+#### Attributes of Objects in the `partitionFields` Array[​](/reference/api/reflections)
 name String
 Name of the field from the anchor dataset on which the rows in the Reflection are to be partitioned. If a column is listed as a partition column, it cannot also be listed as a sort column for the same Reflection. In aggregation Reflections, each column specified as a partition column or used in transform must also be listed as a dimension column. In raw Reflections, each column specified as a partition column or used in transform must also be listed as a display column.
 Example: trip_distance_mi
@@ -566,11 +566,11 @@ TRUNCATE Example
 
 ```
 
-#### Attributes of Objects in the `sortFields` Array[​](/reference/api/reflections#attributes-of-objects-in-the-sortfields-array "Direct link to attributes-of-objects-in-the-sortfields-array")
+#### Attributes of Objects in the `sortFields` Array[​](/reference/api/reflections)
 name String
 Name of the field from the anchor dataset that is used for sorting in the Reflection.
 Example: dropoff_date
-## Create a Reflection[​](/reference/api/reflections#create-a-reflection "Direct link to Create a Reflection")
+## Create a Reflection[​](/reference/api/reflections)
 Create a new raw or aggregation Reflection.
 Method and URL
 
@@ -579,9 +579,9 @@ POST /api/v3/reflection
 
 ```
 
-### Parameters[​](/reference/api/reflections#parameters "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections)
 type Body String
-Reflection type. For more information, read [Types of Reflections](/acceleration#types).
+Reflection type. For more information, read [Types of Reflections](/acceleration).
 Enum: RAW, AGGREGATION
 Example: AGGREGATION
 * * *
@@ -601,28 +601,28 @@ arrowCachingEnabled Body Boolean Optional
 If Dremio should convert data from the Reflection's Parquet files to Apache Arrow format when copying that data to executor nodes, set to `true`. Otherwise, set to `false` (default).
 Example: false
 * * *
-[displayFields](/reference/api/reflections#parameters-of-objects-in-the-displayfields-array) Body Array of Object Optional
+[displayFields](/reference/api/reflections) Body Array of Object Optional
 Information about the fields to display from the anchor dataset. The displayfields array must list every field in the anchor dataset or the Reflection fails. Each displayFields object contains one attribute: name. Valid only for raw Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fare_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "tip_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[dimensionFields](/reference/api/reflections#parameters-of-objects-in-the-dimensionfields-array) Body Array of Object Optional
+[dimensionFields](/reference/api/reflections) Body Array of Object Optional
 Information about the dimension fields from the anchor dataset to use in the Reflection. Dimension fields are the fields you expect to group by when analyzing data. Each dimensionFields object contains two attributes: name and granularity. Valid only for aggregation Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[measureFields](/reference/api/reflections#parameters-of-objects-in-the-measurefields-array) Body Array of Object Optional
+[measureFields](/reference/api/reflections) Body Array of Object Optional
 Information about the measure fields from the anchor dataset to use in the Reflection. Measure fields are the fields you expect to use for calculations when analyzing the data. Each measureFields object contains two attributes: name and measureTypeList. Valid only for aggregation Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fare_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "tip_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[distributionFields](/reference/api/reflections#parameters-of-objects-in-the-distributionfields-array) Body Array of Object Optional
+[distributionFields](/reference/api/reflections) Body Array of Object Optional
 Information about the distribution fields from the anchor dataset to use for co-locating and co-partitioning data from multiple datasets across nodes. Each distributionFields object contains one attribute: name.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[partitionFields](/reference/api/reflections#parameters-of-objects-in-the-partitionfields-array) Body Array of Object Optional
-Information about the fields from the anchor dataset to use to partition data in the Reflection. Each field name is listed as an individual object. For more information, read [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/#horizontally-partition-reflections-that-have-many-rows).
+[partitionFields](/reference/api/reflections) Body Array of Object Optional
+Information about the fields from the anchor dataset to use to partition data in the Reflection. Each field name is listed as an individual object. For more information, read [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/).
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[sortFields](/reference/api/reflections#parameters-of-objects-in-the-sortfields-array) Body Array of Object Optional
-Information about the fields from the anchor dataset to use for sorting in the Reflection. Each sortFields object contains one attribute: name. For more information, read [Sort Reflections on High-Cardinality Fields](/help-support/well-architected-framework/performance/#sort-reflections-on-high-cardinality-fields).
+[sortFields](/reference/api/reflections) Body Array of Object Optional
+Information about the fields from the anchor dataset to use for sorting in the Reflection. Each sortFields object contains one attribute: name. For more information, read [Sort Reflections on High-Cardinality Fields](/help-support/well-architected-framework/performance/).
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 partitionDistributionStrategy Body String Optional
@@ -641,11 +641,11 @@ Example: true
 entityType Body String Optional
 Type of the object. For Reflection objects, the entityType is `reflection`.
 Example: reflection
-#### Parameters of Objects in the `displayFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-displayfields-array "Direct link to parameters-of-objects-in-the-displayfields-array")
+#### Parameters of Objects in the `displayFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field to display from the anchor dataset.
 Example: "name": "pickup_datetime"
-#### Parameters of Objects in the `dimensionFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-dimensionfields-array "Direct link to parameters-of-objects-in-the-dimensionfields-array")
+#### Parameters of Objects in the `dimensionFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset to configure as a dimension for the Reflection.
 Example: "name": "pickup_datetime"
@@ -654,7 +654,7 @@ granularity Body String
 Grouping to use for the dimension field. If Dremio should automatically extract the day-level date value and use it as the grouping value in the Reflection, `DATE`. If Dremio should use the original value for grouping, `NORMAL`.
 Enum: DATE, NORMAL
 Example: "granularity": "DATE"
-#### Parameters of Objects in the `measureFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-measurefields-array "Direct link to parameters-of-objects-in-the-measurefields-array")
+#### Parameters of Objects in the `measureFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset that you expect to use in calculations. Fields of types `LIST`, `MAP`, and `UNION` are not valid measureFields.
 Example: "name": "passenger_count"
@@ -663,11 +663,11 @@ measureTypeList Body Array of String
 Name of the field from the anchor dataset to use for co-locating and co-partitioning data from multiple datasets across nodes. In aggregation Reflections, every field listed as a distribution field must also be listed as a dimension field.
 Enum: APPROX_COUNT_DISTINCT, MIN, MAX, UNKNOWN, SUM, COUNT
 Example: ["SUM", "COUNT"]
-#### Parameters of Objects in the `distributionFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-distributionfields-array "Direct link to parameters-of-objects-in-the-distributionfields-array")
+#### Parameters of Objects in the `distributionFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset to use for co-locating and co-partitioning data from multiple datasets across nodes. In aggregation Reflections, every field listed as a distribution field must also be listed as a dimension field.
 Example: "name": "trip_distance_mi"
-#### Parameters of Objects in the `partitionFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-partitionfields-array "Direct link to parameters-of-objects-in-the-partitionfields-array")
+#### Parameters of Objects in the `partitionFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset on which you want to be able to partition rows. If you are creating an aggregation Reflection, every field listed as a partition field must also be listed as a dimension field. If you list a field as a partition field, you cannot list the same field as a sort field in the same Reflection.
 Example: "name": "pickup_datetime"
@@ -775,11 +775,11 @@ TRUNCATE Example
 
 ```
 
-#### Parameters of Objects in the `sortFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-sortfields-array "Direct link to parameters-of-objects-in-the-sortfields-array")
+#### Parameters of Objects in the `sortFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset to use for sorting in the Reflection. Every field listed as a sort field must also be listed as a dimension field. If you list a field as a sort field, you cannot list the same field as a partition field in the same Reflection.
 Example: "name": "trip_distance_mi"
-### Example[​](/reference/api/reflections#example "Direct link to Example")
+### Example[​](/reference/api/reflections)
 Request
 
 ```
@@ -985,7 +985,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 401 Unauthorized   
@@ -997,7 +997,7 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve All Reflections Enterprise[​](/reference/api/reflections#retrieve-all-reflections-enterprise "Direct link to retrieve-all-reflections-enterprise")
+## Retrieve All Reflections Enterprise[​](/reference/api/reflections)
 Retrieve a list of Reflection objects that includes all raw, aggregation, and external Reflections in the Dremio instance.
 Method and URL
 
@@ -1006,7 +1006,7 @@ GET /api/v3/reflection
 
 ```
 
-### Example[​](/reference/api/reflections#example-1 "Direct link to Example")
+### Example[​](/reference/api/reflections)
 Request
 
 ```
@@ -1355,7 +1355,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 401 Unauthorized   
@@ -1365,7 +1365,7 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve a Reflection[​](/reference/api/reflections#retrieve-a-reflection "Direct link to Retrieve a Reflection")
+## Retrieve a Reflection[​](/reference/api/reflections)
 Retrieve the specified Reflection. This can be a raw, aggregation, or external Reflection.
 Method and URL
 
@@ -1374,11 +1374,11 @@ GET /api/v3/reflection/{id}
 
 ```
 
-### Parameters[​](/reference/api/reflections#parameters-1 "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections)
 id Path String (UUID)
 Unique identifier of the Reflection that you want to retrieve.
 Example: 95dda9dd-2371-467f-b68d-fc4c5ea57a8b
-### Example[​](/reference/api/reflections#example-2 "Direct link to Example")
+### Example[​](/reference/api/reflections)
 Request
 
 ```
@@ -1519,7 +1519,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 401 Unauthorized   
@@ -1529,7 +1529,7 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve All Reflections for a Dataset[​](/reference/api/reflections#retrieve-all-reflections-for-a-dataset "Direct link to Retrieve All Reflections for a Dataset")
+## Retrieve All Reflections for a Dataset[​](/reference/api/reflections)
 Retrieve all raw and aggregation Reflections for the specified dataset.
 Method and URL
 
@@ -1538,11 +1538,11 @@ GET /api/v3/dataset/{datasetId}/reflection
 
 ```
 
-### Parameters[​](/reference/api/reflections#parameters-2 "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections)
 datasetId Path String (UUID)
 Unique identifier of the dataset whose Reflections you want to retrieve.
 Example: 3cbab7b3-ee82-44c1-abcc-e86d56078d4d
-### Example[​](/reference/api/reflections#example-3 "Direct link to Example")
+### Example[​](/reference/api/reflections)
 Request
 
 ```
@@ -1693,7 +1693,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 401 Unauthorized   
@@ -1705,8 +1705,8 @@ Response
 500 Internal Server Error   
   
 
-## Refresh a Reflection[​](/reference/api/reflections#refresh-a-reflection "Direct link to Refresh a Reflection")
-Refresh the specified Reflection. This can be a raw or aggregation Reflection. For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections#triggering-refreshes-by-using-the-reflection-api-the-catalog-api-or-an-sql-command).
+## Refresh a Reflection[​](/reference/api/reflections)
+Refresh the specified Reflection. This can be a raw or aggregation Reflection. For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections).
 Method and URL
 
 ```
@@ -1714,11 +1714,11 @@ POST /api/v3/reflection/{id}/refresh
 
 ```
 
-### Parameters[​](/reference/api/reflections#parameters-3 "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections)
 id Path String (UUID)
 Unique identifier for the Reflection that you want to base the refresh action on.
 Example: 836eae91-306e-487b-a687-31c999653a86
-### Response Status Codes[​](/reference/api/reflections#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 400 Not supported   
@@ -1732,7 +1732,7 @@ Example: 836eae91-306e-487b-a687-31c999653a86
 500 Internal Server Error   
   
 
-## Update a Reflection[​](/reference/api/reflections#update-a-reflection "Direct link to Update a Reflection")
+## Update a Reflection[​](/reference/api/reflections)
 Update the specified Reflection. This can be a raw or aggregation Reflection.
 Method and URL
 
@@ -1741,13 +1741,13 @@ PUT /api/v3/reflection/{id}
 
 ```
 
-### Parameters[​](/reference/api/reflections#parameters-4 "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections)
 id Path String (UUID)
 Unique identifier of the Reflection that you want to update.
 Example: 836eae91-306e-487b-a687-31c999653a86
 * * *
 type Body String
-Reflection type. For more information, read [Types of Reflections](/acceleration#types).
+Reflection type. For more information, read [Types of Reflections](/acceleration).
 Enum: RAW, AGGREGATION
 Example: AGGREGATION
 * * *
@@ -1771,40 +1771,40 @@ arrowCachingEnabled Body Boolean Optional
 If Dremio should convert data from the Reflection's Parquet files to Apache Arrow format when copying that data to executor nodes, set to `true`. Otherwise, set to `false` (default).
 Example: true
 * * *
-[displayFields](/reference/api/reflections#parameters-of-objects-in-the-displayfields-array-1) Body Array of Object
+[displayFields](/reference/api/reflections) Body Array of Object
 Information about the fields to display from the anchor dataset. The displayfields array must list every field in the anchor dataset or the Reflection fails. Each displayFields object contains one attribute: name. Valid only for raw Reflections.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fare_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "tip_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[dimensionFields](/reference/api/reflections#parameters-of-objects-in-the-dimensionfields-array-1) Body Array of Object
+[dimensionFields](/reference/api/reflections) Body Array of Object
 Information about the dimension fields from the anchor dataset to use in the Reflection. Dimension fields are the fields you expect to group by when analyzing data. Each dimensionFields object contains two attributes: name and granularity. Valid only for aggregation Reflections. If you omit the dimensionFields object in a PUT request, Dremio removes all existing dimension fields from the Reflection. To keep existing dimension fields while making other updates, duplicate the existing dimensionFields array in the PUT request.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi","granularity": "DATE"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[measureFields](/reference/api/reflections#parameters-of-objects-in-the-measurefields-array-1) Body Array of Object
+[measureFields](/reference/api/reflections) Body Array of Object
 Information about the measure fields from the anchor dataset to use in the Reflection. Measure fields are the fields you expect to use for calculations when analyzing the data. Each measureFields object contains two attributes: name and measureTypeList. Valid only for aggregation Reflections. If you omit the measureFields object in a PUT request, Dremio removes all existing measure fields from the Reflection. To keep existing measure fields while making other updates, duplicate the existing measureFields array in the PUT request.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fare_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "tip_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount","measureTypeList": ["SUM", "COUNT"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[distributionFields](/reference/api/reflections#parameters-of-objects-in-the-distributionfields-array-1) Body Array of Object Optional
+[distributionFields](/reference/api/reflections) Body Array of Object Optional
 Information about the distribution fields from the anchor dataset to use for co-locating and co-partitioning data from multiple datasets across nodes. Each distributionFields object contains one attribute: name.  
 If you omit the distributionFields object in a PUT request, Dremio removes all existing distribution fields from the Reflection. To keep existing distribution fields while making other updates, duplicate the existing distributionFields array in the PUT request.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "trip_distance_mi"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "total_amount"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[partitionFields](/reference/api/reflections#parameters-of-objects-in-the-partitionfields-array-1) Body Array of Object Optional
-Information about the fields from the anchor dataset to use to partition data in the Reflection. Each field name is listed as an individual object. If you omit the partitionFields object in a PUT request, Dremio removes all existing partition fields from the Reflection. To keep existing partition fields while making other updates, duplicate the existing partitionFields array in the PUT request. For more information, read [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/#horizontally-partition-reflections-that-have-many-rows).
+[partitionFields](/reference/api/reflections) Body Array of Object Optional
+Information about the fields from the anchor dataset to use to partition data in the Reflection. Each field name is listed as an individual object. If you omit the partitionFields object in a PUT request, Dremio removes all existing partition fields from the Reflection. To keep existing partition fields while making other updates, duplicate the existing partitionFields array in the PUT request. For more information, read [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/).
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "pickup_datetime"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'},{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passenger_count"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[sortFields](/reference/api/reflections#parameters-of-objects-in-the-sortfields-array-1) Body Array of Object
-Information about the fields from the anchor dataset to use for sorting in the Reflection. Each sortFields object contains one attribute: name. If you omit the sortFields object in a PUT request, Dremio removes all existing sort fields from the Reflection. To keep existing sort fields while making other updates, duplicate the existing sortFields array in the PUT request. For more information, read [Sort Reflections on High-Cardinality Fields](/help-support/well-architected-framework/performance/#sort-reflections-on-high-cardinality-fields).
+[sortFields](/reference/api/reflections) Body Array of Object
+Information about the fields from the anchor dataset to use for sorting in the Reflection. Each sortFields object contains one attribute: name. If you omit the sortFields object in a PUT request, Dremio removes all existing sort fields from the Reflection. To keep existing sort fields while making other updates, duplicate the existing sortFields array in the PUT request. For more information, read [Sort Reflections on High-Cardinality Fields](/help-support/well-architected-framework/performance/).
 Example: "name": "trip_distance_mi"
 * * *
 partitionDistributionStrategy Body String Optional
 Method to use to optimize data compression when executing Reflections. If set to `CONSOLIDATED` (default), Dremio minimizes the number of files produced. If set to `STRIPED`, Dremio minimizes the time required to refresh the Reflection.
 Enum: CONSOLIDATED, STRIPED
 Example: CONSOLIDATED
-#### Parameters of Objects in the `displayFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-displayfields-array-1 "Direct link to parameters-of-objects-in-the-displayfields-array-1")
+#### Parameters of Objects in the `displayFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field to display from the anchor dataset.
 Example: "name": "pickup_datetime"
-#### Parameters of Objects in the `dimensionFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-dimensionfields-array-1 "Direct link to parameters-of-objects-in-the-dimensionfields-array-1")
+#### Parameters of Objects in the `dimensionFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset to configure as a dimension for the Reflection.
 Example: "name": "pickup_datetime"
@@ -1813,7 +1813,7 @@ granularity Body String
 Grouping to use for the dimension field. If Dremio should automatically extract the day-level date value and use it as the grouping value in the Reflection, `DATE`. If Dremio should use the original value for grouping, `NORMAL`.
 Enum: DATE, NORMAL
 Example: "granularity": "DATE"
-#### Parameters of Objects in the `measureFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-measurefields-array-1 "Direct link to parameters-of-objects-in-the-measurefields-array-1")
+#### Parameters of Objects in the `measureFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset that you expect to use in calculations. Fields of types `LIST`, `MAP`, and `UNION` are not valid measureFields.
 Example: "name": "passenger_count"
@@ -1822,11 +1822,11 @@ measureTypeList Body Array of String
 Name of the field from the anchor dataset to use for co-locating and co-partitioning data from multiple datasets across nodes. Every field listed as a distribution field must also be listed as a dimension field.
 Enum: APPROX_COUNT_DISTINCT, MIN, MAX, UNKNOWN, SUM, COUNT
 Example: ["SUM", "COUNT"]
-#### Parameters of Objects in the `distributionFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-distributionfields-array-1 "Direct link to parameters-of-objects-in-the-distributionfields-array-1")
+#### Parameters of Objects in the `distributionFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset to use for co-locating and co-partitioning data from multiple datasets across nodes. In aggregation Reflections, every field listed as a distribution field must also be listed as a dimension field.
 Example: "name": "pickup_datetime"
-#### Parameters of Objects in the `partitionFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-partitionfields-array-1 "Direct link to parameters-of-objects-in-the-partitionfields-array-1")
+#### Parameters of Objects in the `partitionFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset on which the rows in the Reflection are to be partitioned. If a column is listed as a partition column, it cannot also be listed as a sort column for the same Reflection. In aggregation Reflections, each column specified as a partition column or used in transform must also be listed as a dimension column. In raw Reflections, each column specified as a partition column or used in transform must also be listed as a display column.
 Example: "name": "dropoff_date"
@@ -1934,11 +1934,11 @@ TRUNCATE Example
 
 ```
 
-#### Parameters of Objects in the `sortFields` Array[​](/reference/api/reflections#parameters-of-objects-in-the-sortfields-array-1 "Direct link to parameters-of-objects-in-the-sortfields-array-1")
+#### Parameters of Objects in the `sortFields` Array[​](/reference/api/reflections)
 name Body String
 Name of the field from the anchor dataset to use for sorting in the Reflection. Every field listed as a sort field must also be listed as a dimension field. If you list a field as a sort field, you cannot list the same field as a partition field in the same Reflection.
 Example: "name": "pickup_datetime"
-### Example[​](/reference/api/reflections#example-4 "Direct link to Example")
+### Example[​](/reference/api/reflections)
 Request
 
 ```
@@ -2145,7 +2145,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections#response-status-codes-5 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 401 Unauthorized   
@@ -2157,7 +2157,7 @@ Response
 500 Internal Server Error   
   
 
-## Delete a Reflection[​](/reference/api/reflections#delete-a-reflection "Direct link to Delete a Reflection")
+## Delete a Reflection[​](/reference/api/reflections)
 Delete the specified Reflection. This can be a raw or aggregation Reflection.
 Method and URL
 
@@ -2166,11 +2166,11 @@ DELETE /api/v3/reflection/{id}
 
 ```
 
-### Parameters[​](/reference/api/reflections#parameters-5 "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections)
 id Path String (UUID)
 Unique identifier of the Reflection that you want to delete.
 Example: 95dda9dd-2371-467f-b68d-fc4c5ea57a8b
-### Example[​](/reference/api/reflections#example-5 "Direct link to Example")
+### Example[​](/reference/api/reflections)
 Request
 
 ```
@@ -2187,7 +2187,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections#response-status-codes-6 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections)
 200 OK   
   
 401 Unauthorized   
@@ -2199,13 +2199,13 @@ No response
 
 Was this page helpful?
 [Previous Personal Access Token](/reference/api/personal-access-token)[Next Recommendations](/reference/api/reflections/reflection-recommendations)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Personal Access Token](/reference/api/personal-access-token)[Next Recommendations](/reference/api/reflections/reflection-recommendations)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Freflections%2F&_biz_t=1777950561846&_biz_i=Reflection%20%7C%20Dremio%20Documentation&_biz_n=465&rnd=123900&cdn_o=a&_biz_z=1777950561847)
+!

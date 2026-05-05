@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ARRAY_POSITION
+slug: /reference/sql/sql-functions/functions/ARRAY_POSITION
 title: "ARRAY_POSITION | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64286.696370625
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Semi-Structured Data](/reference/sql/sql-functions)
 # ARRAY_POSITION
 Returns the index of the first occurrence of an element in an array.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ARRAY_POSITION(_element_ ANY, _arr_ LIST) → numeric[​](/reference/sql/sql-functions#array_positionelement-any-arr-list--numeric "Direct link to array_positionelement-any-arr-list--numeric")
+## Syntax
+### ARRAY_POSITION(_element_ ANY, _arr_ LIST) → numeric[​](/reference/sql/sql-functions)
   * element: Element to find in the array.
   * arr: The array to search.
 
@@ -58,13 +59,13 @@ SELECT ARRAY_POSITION(ARRAY[2,3], ARRAY[ARRAY[1,2], ARRAY[2,3]])
 
 Was this page helpful?
 [Previous ARRAY_MIN](/reference/sql/sql-functions)[Next ARRAY_PREPEND](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ARRAY_MIN](/reference/sql/sql-functions)[Next ARRAY_PREPEND](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FARRAY_POSITION%2F&_biz_t=1777950606039&_biz_i=ARRAY_POSITION%20%7C%20Dremio%20Documentation&_biz_n=551&rnd=927449&cdn_o=a&_biz_z=1777950606040)
+!

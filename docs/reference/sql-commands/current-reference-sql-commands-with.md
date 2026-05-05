@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/with
+slug: /reference/sql/commands/with
 title: "WITH | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64257.945331541
@@ -25,7 +26,7 @@ SELECT ...
 
 ```
 
-## Parameters[​](/reference/sql/commands/with#parameters "Direct link to Parameters")
+## Parameters​
 [ WITH `cte_name` [ ( `cte_column1`, `cte_column2`, ... ) ] AS ( `query` ) ] String Optional
 A temporary named result set for use in the statement that defines the CTE.
   * ``cte_name``: The name of the CTE you are defining. The CTE must have a unique name within a given query.
@@ -33,7 +34,7 @@ A temporary named result set for use in the statement that defines the CTE.
   * `AS `query``: The query (`SELECT`) statement that defines the CTE.
 
 
-## Examples[​](/reference/sql/commands/with#examples "Direct link to Examples")
+## Examples​
 Query an existing table using a CTE clause
 
 ```
@@ -50,12 +51,12 @@ FROM cte_quantity
 
 Was this page helpful?
 [Previous Users](/reference/sql/commands/users)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Users](/reference/sql/commands/users)

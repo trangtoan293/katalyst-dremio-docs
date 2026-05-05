@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/pipe_summary
+slug: /reference/sql/system-tables/pipe_summary
 title: "SYS.PIPE_SUMMARY | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.524601625
@@ -22,11 +23,11 @@ SELECT * FROM sys.pipe_summary
 
 ```
 
-## Example Output[​](/reference/sql/system-tables#example-output "Direct link to Example Output")  
+## Example Output[​](/reference/sql/system-tables)  
 | pipe_name  | pipe_id  | jobs_count  | files_loaded_count  | files_skipped_count  | files_partially_loaded_count  | pipe_status  | error_message  | last_updated_at  | total_records_count  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | test_pipe  | f0336bf3-f082-4c89-9753-7dcf66ce2472  | 10  | 100  | 2  | 0  | RUNNING  | _empty text_  | 2024-07-08 22:07:42.995  | 100150  |  
-## Columns[​](/reference/sql/system-tables#columns "Direct link to Columns")  
+## Columns[​](/reference/sql/system-tables)  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | pipe_name  | varchar  | The name of the pipe.  |  
@@ -59,13 +60,13 @@ SELECT * FROM sys.pipe_summary
 | total_records_count  | integer  | The number of records processed by the pipe.  |  
 Was this page helpful?
 [Previous SYS.HISTORY.MODEL_USAGE](/reference/sql/system-tables/model-usage)[Next SYS.PIPES](/reference/sql/system-tables/pipes)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.HISTORY.MODEL_USAGE](/reference/sql/system-tables/model-usage)[Next SYS.PIPES](/reference/sql/system-tables/pipes)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fmaterializations%2F&_biz_t=1777950693284&_biz_i=SYS.MATERIALIZATIONS%20%7C%20Dremio%20Documentation&_biz_n=720&rnd=78458&cdn_o=a&_biz_z=1777950693316)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fpipe_summary%2F&_biz_t=1777950693316&_biz_i=SYS.PIPE_SUMMARY%20%7C%20Dremio%20Documentation&_biz_n=721&rnd=379608&cdn_o=a&_biz_z=1777950693317)
+!!

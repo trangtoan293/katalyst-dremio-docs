@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ASIN
+slug: /reference/sql/sql-functions/functions/ASIN
 title: "ASIN | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64286.877804041
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Math](/reference/sql/sql-functions)
 # ASIN
 Computes the arcsine (inverse sine) of a value in radians.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ASIN(_numeric_expression_ NUMERIC) → FLOAT[​](/reference/sql/sql-functions#asinnumeric_expression-numeric--float "Direct link to asinnumeric_expression-numeric--float")
+## Syntax
+### ASIN(_numeric_expression_ NUMERIC) → FLOAT[​](/reference/sql/sql-functions)
   * numeric_expression: The number in radians. This must be DOUBLE, INTEGER, or FLOAT.
 
 
@@ -49,13 +50,13 @@ SELECT ASIN(-1)
 
 Was this page helpful?
 [Previous ASCII](/reference/sql/sql-functions)[Next ATAN](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ASCII](/reference/sql/sql-functions)[Next ATAN](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FASIN%2F&_biz_t=1777950606537&_biz_i=ASIN%20%7C%20Dremio%20Documentation&_biz_n=555&rnd=244479&cdn_o=a&_biz_z=1777950606538)
+!

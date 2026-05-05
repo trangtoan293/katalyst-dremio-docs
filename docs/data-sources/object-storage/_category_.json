@@ -2,7 +2,7 @@
   "label": "Object Storage",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Object Storage"
+    "type": "doc",
+    "id": "data-sources/object-storage/current-data-sources-object"
   }
 }

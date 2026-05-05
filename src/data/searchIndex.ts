@@ -33,7 +33,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Autonomous Reflections",
-    "href": "/acceleration/autonomous-reflections",
+    "href": "/acceleration/general/current-acceleration-autonomous-reflections",
     "section": "Acceleration",
     "keywords": [
       "Skip",
@@ -58,7 +58,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Manually Manage Reflections",
-    "href": "/acceleration/manual-reflections",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections",
     "section": "Acceleration",
     "keywords": [
       "Dremio",
@@ -83,7 +83,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Refresh Reflections",
-    "href": "/acceleration/manual-reflections/refreshing-reflections",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections-refreshing-reflections",
     "section": "Acceleration",
     "keywords": [
       "Dremio",
@@ -108,7 +108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Use Reflection Hints",
-    "href": "/acceleration/manual-reflections/using-reflection-hints",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections-using-reflection-hints",
     "section": "Acceleration",
     "keywords": [
       "Dremio",
@@ -133,7 +133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Use Reflections in Nessie Source Branches",
-    "href": "/acceleration/manual-reflections/using-nessie-branches-with-reflections",
+    "href": "/acceleration/general/current-acceleration-manual-reflections-using-nessie-branches-with-reflections",
     "section": "Acceleration",
     "keywords": [
       "Skip",
@@ -158,7 +158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "View Reflection Details",
-    "href": "/acceleration/manual-reflections/viewing-info-about-reflections",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections-viewing-info-about-reflections",
     "section": "Acceleration",
     "keywords": [
       "Dremio",
@@ -183,7 +183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "View Whether Queries Used Reflections",
-    "href": "/acceleration/manual-reflections/info-about-queries",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections-info-about-queries",
     "section": "Acceleration",
     "keywords": [
       "Dremio",
@@ -208,7 +208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Administer Dremio on Kubernetes",
-    "href": "/admin/admin-dremio-kubernetes",
+    "href": "/administration/kubernetes/current-admin-admin-dremio-kubernetes",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -233,7 +233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Administration",
-    "href": "/admin",
+    "href": "/administration",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -258,7 +258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Amazon S3 and Azure Blob Storage | Dremio Documentation",
-    "href": "/admin/monitoring/exporting/aws-azure-storage",
+    "href": "/administration/aws/current-admin-monitoring-exporting-aws-azure-storage",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -283,7 +283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Automated Backup",
-    "href": "/admin/automated-backups",
+    "href": "/administration/general/current-admin-automated-backups",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -308,7 +308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configure AWS Bedrock as a Model Provider",
-    "href": "/admin/model-providers/aws-bedrock",
+    "href": "/administration/aws/current-admin-model-providers-aws-bedrock",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -333,7 +333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configure Model Providers",
-    "href": "/admin/model-providers",
+    "href": "/administration/general/current-admin-model-providers",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -358,7 +358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Datadog | Dremio Documentation",
-    "href": "/admin/monitoring/exporting/datadog",
+    "href": "/administration/monitoring/current-admin-monitoring-exporting-datadog",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -383,7 +383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Usage on Kubernetes",
-    "href": "/admin/licensing/usage",
+    "href": "/administration/licensing/current-admin-licensing-usage",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -408,7 +408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Exporting Logs",
-    "href": "/admin/monitoring/exporting",
+    "href": "/administration/monitoring/current-admin-monitoring-exporting",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -433,7 +433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Job History & Job Details | Dremio Documentation",
-    "href": "/admin/workloads/jobs",
+    "href": "/administration/workloads/current-admin-workloads-jobs",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -458,7 +458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Licensing",
-    "href": "/admin/licensing",
+    "href": "/administration/licensing/current-admin-licensing",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -483,7 +483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Managing Job Workloads",
-    "href": "/admin/workloads",
+    "href": "/administration/workloads/current-admin-workloads",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -508,7 +508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Monitoring",
-    "href": "/admin/monitoring",
+    "href": "/administration/monitoring/current-admin-monitoring",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -533,7 +533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Monitoring Dremio Nodes",
-    "href": "/admin/monitoring/dremio-nodes",
+    "href": "/administration/monitoring/current-admin-monitoring-dremio-nodes",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -558,7 +558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Open Catalog Backup and Restore",
-    "href": "/admin/open-catalog-backuprestore",
+    "href": "/administration/general/current-admin-open-catalog-backuprestore",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -583,7 +583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Overview",
-    "href": "/admin/monitoring/jobs/overview",
+    "href": "/administration/monitoring/current-admin-monitoring-jobs-overview",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -608,7 +608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Queue Control",
-    "href": "/admin/workloads/job-queues",
+    "href": "/administration/workloads/current-admin-workloads-job-queues",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -633,7 +633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Queue Routing",
-    "href": "/admin/workloads/queue-routing",
+    "href": "/administration/workloads/current-admin-workloads-queue-routing",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -658,7 +658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Refreshing Metadata | Dremio Documentation",
-    "href": "/admin/metadata-caching",
+    "href": "/administration/general/current-admin-metadata-caching",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -683,7 +683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL | Dremio Documentation",
-    "href": "/admin/monitoring/jobs/sql",
+    "href": "/administration/general/current-admin-monitoring-jobs-sql",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -708,7 +708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Service Telemetry for Kubernetes Deployments",
-    "href": "/admin/service-telemetry-kubernetes",
+    "href": "/administration/kubernetes/current-admin-service-telemetry-kubernetes",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -733,7 +733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Splunk",
-    "href": "/admin/monitoring/exporting/splunk",
+    "href": "/administration/monitoring/current-admin-monitoring-exporting-splunk",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -758,7 +758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Support Settings | Dremio Documentation",
-    "href": "/admin/support-settings",
+    "href": "/administration/general/current-admin-support-settings",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -783,7 +783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Upgrade Dremio on Kubernetes",
-    "href": "/admin/admin-dremio-kubernetes/upgrade",
+    "href": "/administration/kubernetes/current-admin-admin-dremio-kubernetes-upgrade",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -808,7 +808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Upgrading with Custom Sources | Dremio Documentation",
-    "href": "/admin/upgrade/custom-arp",
+    "href": "/administration/general/current-admin-upgrade-custom-arp",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -833,7 +833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Viewing Jobs",
-    "href": "/admin/monitoring/jobs",
+    "href": "/administration/monitoring/current-admin-monitoring-jobs",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -858,7 +858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Viewing Profiles",
-    "href": "/admin/monitoring/jobs/view-profiles",
+    "href": "/administration/monitoring/current-admin-monitoring-jobs-view-profiles",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -883,7 +883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Visual Profile | Dremio Documentation",
-    "href": "/admin/monitoring/jobs/viewing-query-profiles",
+    "href": "/administration/monitoring/current-admin-monitoring-jobs-viewing-query-profiles",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -908,7 +908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Workload Management",
-    "href": "/admin/workloads/workload-management",
+    "href": "/administration/workloads/current-admin-workloads-workload-management",
     "section": "Admin",
     "keywords": [
       "Dremio",
@@ -933,7 +933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Alteryx Designer",
-    "href": "/client-applications/alteryx-designer",
+    "href": "/client-applications/analytics/current-client-applications-alteryx-designer",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -958,7 +958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Apache Superset",
-    "href": "/client-applications/superset",
+    "href": "/client-applications/analytics/current-client-applications-superset",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -983,7 +983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Arrow Flight SQL JDBC",
-    "href": "/client-applications/drivers/arrow-flight-sql-jdbc-driver",
+    "href": "/client-applications/drivers/current-client-applications-drivers",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1008,7 +1008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Arrow Flight SQL ODBC",
-    "href": "/client-applications/drivers/arrow-flight-sql-odbc-driver",
+    "href": "/client-applications/drivers/current-client-applications-drivers",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1058,7 +1058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DBeaver",
-    "href": "/client-applications/dbeaver",
+    "href": "/client-applications/sql-clients/current-client-applications-dbeaver",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1083,7 +1083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DataGrip",
-    "href": "/client-applications/datagrip",
+    "href": "/client-applications/sql-clients/current-client-applications-datagrip",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1108,7 +1108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DbVisualizer",
-    "href": "/client-applications/dbvisualizer",
+    "href": "/client-applications/sql-clients/current-client-applications-dbvisualizer",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1133,7 +1133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Domo",
-    "href": "/client-applications/domo",
+    "href": "/client-applications/analytics/current-client-applications-domo",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1158,7 +1158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/client-applications/microsoft-power-bi/working-from-datasets/administrators/administering-connectivity",
+    "href": "/client-applications/general/current-client-applications-microsoft-power-bi-working-from-datasets-administrators-administering-connectivity",
     "section": "Client Applications",
     "keywords": [
       "Page",
@@ -1183,7 +1183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio JDBC Driver (Legacy)",
-    "href": "/client-applications/drivers/jdbc",
+    "href": "/client-applications/drivers/current-client-applications-drivers",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1208,7 +1208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Drivers",
-    "href": "/client-applications/drivers",
+    "href": "/client-applications/drivers/current-client-applications-drivers",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1233,7 +1233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IBM Cognos Analytics",
-    "href": "/client-applications/cognos",
+    "href": "/client-applications/bi-tools/current-client-applications-cognos",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1258,7 +1258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Looker",
-    "href": "/client-applications/looker",
+    "href": "/client-applications/bi-tools/current-client-applications-looker",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1283,7 +1283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Excel",
-    "href": "/client-applications/microsoft-excel",
+    "href": "/client-applications/general/current-client-applications-microsoft-excel",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1308,7 +1308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Excel PowerPivot",
-    "href": "/client-applications/microsoft-excel/microsoft-excel-powerpivot",
+    "href": "/client-applications/general/current-client-applications-microsoft-excel-microsoft-excel-powerpivot",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1333,7 +1333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Power BI",
-    "href": "/client-applications/microsoft-power-bi",
+    "href": "/client-applications/general/current-client-applications-microsoft-power-bi",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1358,7 +1358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microstrategy Workstation",
-    "href": "/client-applications/microstrategy",
+    "href": "/client-applications/bi-tools/current-client-applications-microstrategy",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1383,7 +1383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Preset",
-    "href": "/client-applications/preset",
+    "href": "/client-applications/analytics/current-client-applications-preset",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1408,7 +1408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SAP Business Objects",
-    "href": "/client-applications/business-objects",
+    "href": "/client-applications/bi-tools/current-client-applications-business-objects",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1433,7 +1433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Tableau",
-    "href": "/client-applications/tableau",
+    "href": "/client-applications/bi-tools/current-client-applications-tableau",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1458,7 +1458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ThoughtSpot",
-    "href": "/client-applications/thoughtspot",
+    "href": "/client-applications/bi-tools/current-client-applications-thoughtspot",
     "section": "Client Applications",
     "keywords": [
       "Dremio",
@@ -1483,7 +1483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Data Privacy | Dremio Documentation",
-    "href": "/data-privacy",
+    "href": "https://www.dremio.com/data-privacy",
     "section": "Data Privacy",
     "keywords": [
       "Data",
@@ -1533,7 +1533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Deploy with dbt",
-    "href": "/data-products/deploy-with-dbt",
+    "href": "/data-products/general/current-data-products-deploy-with-dbt",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1558,7 +1558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Develop Data Products",
-    "href": "/data-products/develop",
+    "href": "/data-products/general/current-data-products-develop",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1583,7 +1583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Discover Data | Dremio Documentation",
-    "href": "/data-products/discover",
+    "href": "/data-products/discover/current-data-products-discover",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1608,7 +1608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Explore Using AI Agent",
-    "href": "/data-products/ai-agent",
+    "href": "/data-products/general/current-data-products-ai-agent",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1633,7 +1633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Govern Data",
-    "href": "/data-products/govern",
+    "href": "/data-products/govern/current-data-products-govern",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1658,7 +1658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Lineage",
-    "href": "/data-products/govern/lineage",
+    "href": "/data-products/govern/current-data-products-govern-lineage",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1683,7 +1683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Row-Access and Column-Masking Policies",
-    "href": "/data-products/govern/row-column-policies-udf",
+    "href": "/data-products/govern/current-data-products-govern-row-column-policies-udf",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1708,7 +1708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Searching for Dremio Objects",
-    "href": "/data-products/discover/semantic-search",
+    "href": "/data-products/discover/current-data-products-discover-semantic-search",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1733,7 +1733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Star Objects",
-    "href": "/data-products/discover/bookmarks",
+    "href": "/data-products/discover/current-data-products-discover-bookmarks",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1758,7 +1758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "View Metadata of a Dataset",
-    "href": "/data-products/discover/metadata",
+    "href": "/data-products/discover/current-data-products-discover-metadata",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1783,7 +1783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Wikis and Tags",
-    "href": "/data-products/govern/wikis-tags",
+    "href": "/data-products/govern/current-data-products-govern-wikis-tags",
     "section": "Data Products",
     "keywords": [
       "Dremio",
@@ -1808,7 +1808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AWS Glue Data Catalog",
-    "href": "/data-sources/lakehouse-catalogs/aws-glue-catalog",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-aws-glue-catalog",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1833,7 +1833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Amazon OpenSearch Service",
-    "href": "/data-sources/databases/opensearch",
+    "href": "/data-sources/databases/current-data-sources-databases-opensearch",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1858,7 +1858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Amazon Redshift",
-    "href": "/data-sources/databases/redshift",
+    "href": "/data-sources/databases/current-data-sources-databases-redshift",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1883,7 +1883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Amazon S3",
-    "href": "/data-sources/object/s3",
+    "href": "/data-sources/object-storage/current-data-sources-object",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1908,7 +1908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Apache Druid",
-    "href": "/data-sources/databases/apache-druid",
+    "href": "/data-sources/databases/current-data-sources-databases-apache-druid",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1933,7 +1933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Azure Storage",
-    "href": "/data-sources/object/azure-storage",
+    "href": "/data-sources/object-storage/current-data-sources-object-azure-storage",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1958,7 +1958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Connect to Open Catalog from Apache Kafka Connect | Dremio Documentation",
-    "href": "/data-sources/open-catalog/connecting-from-kafka-connect",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-open-catalog-connecting-from-kafka-connect",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -1983,7 +1983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Connect to Open Catalog from Apache Spark",
-    "href": "/data-sources/open-catalog/connecting-from-spark",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-open-catalog-connecting-from-spark",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2008,7 +2008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Databases",
-    "href": "/data-sources/databases",
+    "href": "/data-sources/databases/current-data-sources-databases",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2033,7 +2033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Cluster",
-    "href": "/data-sources/databases/dremio",
+    "href": "/data-sources/databases/current-data-sources-databases-dremio",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2058,7 +2058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/data-sources/lakehouse-catalogs/hive/hive-ranger",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-hive-hive-ranger",
     "section": "Data Sources",
     "keywords": [
       "Page",
@@ -2083,7 +2083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/data-sources/object/azure-data-lake-store",
+    "href": "/data-sources/object-storage/current-data-sources-object-azure-data-lake-store",
     "section": "Data Sources",
     "keywords": [
       "Page",
@@ -2108,7 +2108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Elasticsearch",
-    "href": "/data-sources/databases/elasticsearch",
+    "href": "/data-sources/databases/current-data-sources-databases-elasticsearch",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2133,7 +2133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Google BigQuery",
-    "href": "/data-sources/databases/google-bigquery",
+    "href": "/data-sources/databases/current-data-sources-databases-google-bigquery",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2158,7 +2158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Google Cloud Storage (GCS)",
-    "href": "/data-sources/object/gcs",
+    "href": "/data-sources/object-storage/current-data-sources-object-gcs",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2183,7 +2183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "HDFS",
-    "href": "/data-sources/object/hdfs",
+    "href": "/data-sources/object-storage/current-data-sources-object-hdfs",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2208,7 +2208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Hive",
-    "href": "/data-sources/lakehouse-catalogs/hive",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-hive",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2233,7 +2233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IBM Db2",
-    "href": "/data-sources/databases/ibm-db2",
+    "href": "/data-sources/databases/current-data-sources-databases-ibm-db2",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2258,7 +2258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Iceberg REST Catalog",
-    "href": "/data-sources/lakehouse-catalogs/iceberg-rest-catalog",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-iceberg-rest-catalog",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2283,7 +2283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Lakehouse Catalogs",
-    "href": "/data-sources/lakehouse-catalogs",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2333,7 +2333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Azure Data Explorer",
-    "href": "/data-sources/databases/azure-data-explorer",
+    "href": "/data-sources/databases/current-data-sources-databases-azure-data-explorer",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2358,7 +2358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Azure Synapse Analytics",
-    "href": "/data-sources/databases/azure-synapse-analytics",
+    "href": "/data-sources/databases/current-data-sources-databases-azure-synapse-analytics",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2383,7 +2383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft OneLake",
-    "href": "/data-sources/lakehouse-catalogs/onelake",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-onelake",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2408,7 +2408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft SQL Server",
-    "href": "/data-sources/databases/sql-server",
+    "href": "/data-sources/databases/current-data-sources-databases-sql-server",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2433,7 +2433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MongoDB",
-    "href": "/data-sources/databases/mongo",
+    "href": "/data-sources/databases/current-data-sources-databases-mongo",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2458,7 +2458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MySQL",
-    "href": "/data-sources/databases/mysql",
+    "href": "/data-sources/databases/current-data-sources-databases-mysql",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2483,7 +2483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NAS",
-    "href": "/data-sources/object/nas",
+    "href": "/data-sources/object-storage/current-data-sources-object-nas",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2508,7 +2508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Nessie",
-    "href": "/data-sources/lakehouse-catalogs/nessie",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-nessie",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2533,7 +2533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Object Storage",
-    "href": "/data-sources/object",
+    "href": "/data-sources/object-storage/current-data-sources-object",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2558,7 +2558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Open Catalog",
-    "href": "/data-sources/open-catalog",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-open-catalog",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2583,7 +2583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Open Catalog (External)",
-    "href": "/data-sources/lakehouse-catalogs/open-catalog-external",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-open-catalog-external",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2608,7 +2608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Oracle",
-    "href": "/data-sources/databases/oracle",
+    "href": "/data-sources/databases/current-data-sources-databases-oracle",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2633,7 +2633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PostgreSQL",
-    "href": "/data-sources/databases/postgres",
+    "href": "/data-sources/databases/current-data-sources-databases-postgres",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2658,7 +2658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SAP HANA",
-    "href": "/data-sources/databases/sap-hana",
+    "href": "/data-sources/databases/current-data-sources-databases-sap-hana",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2683,7 +2683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Snowflake",
-    "href": "/data-sources/databases/snowflake",
+    "href": "/data-sources/databases/current-data-sources-databases-snowflake",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2708,7 +2708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Snowflake Open Catalog",
-    "href": "/data-sources/lakehouse-catalogs/snowflake-open",
+    "href": "/data-sources/databases/current-data-sources-lakehouse-catalogs-snowflake-open",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2733,7 +2733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Teradata",
-    "href": "/data-sources/databases/teradata",
+    "href": "/data-sources/databases/current-data-sources-databases-teradata",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2758,7 +2758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Unity Catalog",
-    "href": "/data-sources/lakehouse-catalogs/unity",
+    "href": "/data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs-unity",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2783,7 +2783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Upload Files",
-    "href": "/data-sources/file-upload",
+    "href": "/data-sources/general/current-data-sources-file-upload",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2808,7 +2808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Vertica",
-    "href": "/data-sources/databases/vertica",
+    "href": "/data-sources/databases/current-data-sources-databases-vertica",
     "section": "Data Sources",
     "keywords": [
       "Dremio",
@@ -2833,7 +2833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AWS Edition (Deprecated)",
-    "href": "/deploy-dremio/other-options/aws-edition",
+    "href": "/deploy-dremio/general/current-deploy-dremio",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -2858,7 +2858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Cluster Configuration",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -2883,7 +2883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuring Cloud Cache",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/cloud-cache-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf-cloud-cache-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -2908,7 +2908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuring Distributed Storage",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf-dist-store-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -2933,7 +2933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuring Metadata Storage",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/metadata-store-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf-metadata-store-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -2958,7 +2958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuring Wire Encryption",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf-wire-encryption-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Skip",
@@ -2983,7 +2983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuring Your Values to Deploy Dremio to Kubernetes",
-    "href": "/deploy-dremio/configuring-kubernetes",
+    "href": "/deploy-dremio/kubernetes/current-deploy-dremio-configuring-kubernetes",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3008,7 +3008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuring ZooKeeper",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf-zookeeper-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3058,7 +3058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Deploy Dremio on Kubernetes | Dremio Documentation",
-    "href": "/deploy-dremio/deploy-on-kubernetes",
+    "href": "/deploy-dremio/kubernetes/current-deploy-dremio-configuring-kubernetes",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3083,7 +3083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Deploying Dremio with Hadoop | Dremio Documentation",
-    "href": "/deploy-dremio/other-options/yarn-hadoop",
+    "href": "/deploy-dremio/general/current-deploy-dremio-other-options-yarn-hadoop",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3108,7 +3108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Deploying Dremio with Your Infrastructure",
-    "href": "/deploy-dremio/other-options/standalone",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone",
     "section": "Deploy Dremio",
     "keywords": [
       "Skip",
@@ -3133,7 +3133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/deploy-dremio/other-options/standalone/standalone-install-upgrade",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-standalone-install-upgrade",
     "section": "Deploy Dremio",
     "keywords": [
       "Page",
@@ -3158,7 +3158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Environment Configuration",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-env",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-env",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3183,7 +3183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Services Configuration",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3208,7 +3208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "High Availability",
-    "href": "/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-dremio-config-dremio-conf-high-availability-config",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3233,7 +3233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Installing and Upgrading",
-    "href": "/deploy-dremio/other-options/standalone/install",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-install",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3258,7 +3258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Kubernetes Environments for Dremio",
-    "href": "/deploy-dremio/kubernetes-environments",
+    "href": "/deploy-dremio/kubernetes/current-deploy-dremio-kubernetes-environments",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3283,7 +3283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Managing Engines in Kubernetes",
-    "href": "/deploy-dremio/managing-engines-kubernetes",
+    "href": "/deploy-dremio/kubernetes/current-deploy-dremio-managing-engines-kubernetes",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3308,7 +3308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Other Deployment Options",
-    "href": "/deploy-dremio/other-options",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3333,7 +3333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RPM Install and Upgrade",
-    "href": "/deploy-dremio/other-options/standalone/install/standalone-rpm",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-install-standalone-rpm",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3358,7 +3358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "System Requirements",
-    "href": "/deploy-dremio/other-options/standalone/system-requirements",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-system-requirements",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3383,7 +3383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Tarball Install and Upgrade",
-    "href": "/deploy-dremio/other-options/standalone/install/standalone-tarball",
+    "href": "/deploy-dremio/standalone/current-deploy-dremio-other-options-standalone-install-standalone-tarball",
     "section": "Deploy Dremio",
     "keywords": [
       "Dremio",
@@ -3408,7 +3408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Add a Custom Source with ARP Framework",
-    "href": "/developer/arp-connector",
+    "href": "/developer/general/current-developer-arp-connector",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3433,7 +3433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Apache Iceberg",
-    "href": "/developer/data-formats/apache-iceberg",
+    "href": "/developer/iceberg/current-developer-data-formats-apache-iceberg",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3458,7 +3458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Automated Maintenance with the Open Catalog",
-    "href": "/developer/data-formats/apache-iceberg/table-maintenance-optimization/automated-maintenance",
+    "href": "/developer/optimization/current-developer-data-formats-apache-iceberg-table-maintenance-optimization-automated-maintenance",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3483,7 +3483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Concurrency in Iceberg Tables",
-    "href": "/developer/data-formats/apache-iceberg/concurrency",
+    "href": "/developer/iceberg/current-developer-data-formats-apache-iceberg-concurrency",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3508,7 +3508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Copying Data Into Apache Iceberg Tables | Dremio Documentation",
-    "href": "/developer/data-formats/apache-iceberg/copying-data-into-tables",
+    "href": "/developer/general/current-developer-data-formats-apache-iceberg-copying-data-into-tables",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3533,7 +3533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Delta Lake",
-    "href": "/developer/data-formats/delta-lake",
+    "href": "/developer/general/current-developer-data-formats-delta-lake",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3558,7 +3558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Develop Applications with Arrow Flight",
-    "href": "/developer/arrow-flight",
+    "href": "/developer/general/current-developer-arrow-flight",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3583,7 +3583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Develop Applications with Arrow Flight SQL | Dremio Documentation",
-    "href": "/developer/arrow-flight-sql",
+    "href": "/developer/general/current-developer-arrow-flight-sql",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3608,7 +3608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Develop Applications with Python",
-    "href": "/developer/python",
+    "href": "/developer/general/current-developer-python",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3658,7 +3658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio MCP Server",
-    "href": "/developer/mcp-server",
+    "href": "/developer/general/current-developer-mcp-server",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3683,7 +3683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Expiring Snapshots of Apache Iceberg Tables | Dremio Documentation",
-    "href": "/developer/data-formats/apache-iceberg/expiring-snapshots",
+    "href": "/developer/iceberg/current-developer-data-formats-apache-iceberg-expiring-snapshots",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3708,7 +3708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "File and Table Formats",
-    "href": "/developer/data-formats",
+    "href": "/developer/data/current-developer-data-formats",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3733,7 +3733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Formatting Data to a Table",
-    "href": "/developer/data-formats/table",
+    "href": "/developer/data/current-developer-data-formats-table",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3758,7 +3758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Optimize Tables",
-    "href": "/developer/data-formats/apache-iceberg/table-maintenance-optimization/optimizing",
+    "href": "/developer/optimization/current-developer-data-formats-apache-iceberg-table-maintenance-optimization-optimizing",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3783,7 +3783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Parquet",
-    "href": "/developer/data-formats/parquet",
+    "href": "/developer/data/current-developer-data-formats-parquet",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3808,7 +3808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Rolling Back Tables",
-    "href": "/developer/data-formats/apache-iceberg/rolling-back",
+    "href": "/developer/iceberg/current-developer-data-formats-apache-iceberg-rolling-back",
     "section": "Developer",
     "keywords": [
       "Skip",
@@ -3833,7 +3833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Supported Properties of Apache Iceberg Tables | Dremio Documentation",
-    "href": "/developer/data-formats/apache-iceberg/table-properties",
+    "href": "/developer/iceberg/current-developer-data-formats-apache-iceberg-table-properties",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3858,7 +3858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Table Cleanup with Vacuum | Dremio Documentation",
-    "href": "/developer/data-formats/apache-iceberg/table-maintenance-optimization/table-cleanup-vacuum",
+    "href": "/developer/optimization/current-developer-data-formats-apache-iceberg-table-maintenance-optimization-table-cleanup-vacuum",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3883,7 +3883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Table Maintenance and Optimization | Dremio Documentation",
-    "href": "/developer/data-formats/apache-iceberg/table-maintenance-optimization",
+    "href": "/developer/optimization/current-developer-data-formats-apache-iceberg-table-maintenance-optimization",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3908,7 +3908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Transforming Data on Load",
-    "href": "/developer/data-formats/apache-iceberg/copy-into-transformations",
+    "href": "/developer/iceberg/current-developer-data-formats-apache-iceberg-copy-into-transformations",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3933,7 +3933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Visual Studio Code | Dremio Documentation",
-    "href": "/developer/vs-code",
+    "href": "/developer/general/current-developer-vs-code",
     "section": "Developer",
     "keywords": [
       "Dremio",
@@ -3958,7 +3958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "A Dremio License is required",
-    "href": "/downloads/values-overrides.yaml",
+    "href": "https://docs.dremio.com/downloads/values-overrides.yaml",
     "section": "Downloads",
     "keywords": [
       "Dremio",
@@ -3983,7 +3983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "This file contains overrides for OpenShift-specific configuration and should be combined with other overrides",
-    "href": "/downloads/values-openshift-overrides.yaml",
+    "href": "https://docs.dremio.com/downloads/values-openshift-overrides.yaml",
     "section": "Downloads",
     "keywords": [
       "This",
@@ -26533,7 +26533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Editions | Dremio Documentation",
-    "href": "/editions",
+    "href": "https://www.dremio.com/editions",
     "section": "Editions",
     "keywords": [
       "Dremio",
@@ -26558,7 +26558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Deploy Dremio on Kubernetes",
-    "href": "/get-started/cluster-deployments/deployment-models/azure-deployments",
+    "href": "/get-started/current-get-started-cluster-deployments-deployment-models-azure-deployments",
     "section": "Get Started",
     "keywords": [
       "Dremio",
@@ -26608,7 +26608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Get Started with the Community Edition on Docker | Dremio Documentation",
-    "href": "/get-started/docker",
+    "href": "/get-started/current-get-started-docker",
     "section": "Get Started",
     "keywords": [
       "Dremio",
@@ -26633,7 +26633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Get Started with the Enterprise Edition Free Trial",
-    "href": "/get-started/kubernetes-trial",
+    "href": "/get-started/current-get-started-kubernetes-trial",
     "section": "Get Started",
     "keywords": [
       "Dremio",
@@ -26658,7 +26658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Quick Tour of the Console",
-    "href": "/get-started/quick_tour",
+    "href": "/get-started/current-get-started-quick-tour",
     "section": "Get Started",
     "keywords": [
       "Skip",
@@ -26683,7 +26683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Advanced Topics",
-    "href": "/help-support/advanced-topics",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26708,7 +26708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Apache Log4j Vulnerability: Dremio Is Not Affected",
-    "href": "/help-support/knowledge-base/apache-log4j-vulnerability",
+    "href": "/help-and-support/knowledge/current-help-support-knowledge-base-apache-log4j-vulnerability",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26733,7 +26733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Capacity Planning and Scaling",
-    "href": "/help-support/well-architected-framework/operations/capacity-planning",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-operations-capacity-planning",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26758,7 +26758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Configuration Files",
-    "href": "/help-support/advanced-topics/configuration-files",
+    "href": "/help-and-support/general/current-help-support-advanced-topics-configuration-files",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26783,7 +26783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Connect to a Ranger host using SSL",
-    "href": "/help-support/advanced-topics/hive-ranger-ssl",
+    "href": "/help-and-support/hive/current-help-support-advanced-topics-hive-ranger-ssl",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26808,7 +26808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Cost Optimization",
-    "href": "/help-support/well-architected-framework/cost",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-cost",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26833,7 +26833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Creating and Querying Wide Tables",
-    "href": "/help-support/advanced-topics/wide-tables",
+    "href": "/help-and-support/general/current-help-support-advanced-topics-wide-tables",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26858,7 +26858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Preferences",
-    "href": "/help-support/advanced-topics/dremio-preferences",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-dremio-preferences",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26883,7 +26883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Enabling Dremio Ranger SSL with Kerberos",
-    "href": "/help-support/knowledge-base/ranger-ssl-kerberos",
+    "href": "/help-and-support/knowledge/current-help-support-knowledge-base-ranger-ssl-kerberos",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26908,7 +26908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Gandiva-based Execution",
-    "href": "/help-support/advanced-topics/gandiva",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-gandiva",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26933,7 +26933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Hash Aggregation Spilling",
-    "href": "/help-support/advanced-topics/hash-agg-spilling",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-hash-agg-spilling",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26958,7 +26958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Help and Support",
-    "href": "/help-support",
+    "href": "/help-and-support",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -26983,7 +26983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Implementing Garbage-First (G1) Garbage Collection",
-    "href": "/help-support/knowledge-base/g1-garbage-collection",
+    "href": "/help-and-support/knowledge/current-help-support-knowledge-base-g1-garbage-collection",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27008,7 +27008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Initial Workload Management Settings",
-    "href": "/help-support/well-architected-framework/reliability/wlm-init",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-reliability-wlm-init",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27033,7 +27033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Kerberos Setup and Troubleshooting",
-    "href": "/help-support/knowledge-base/kerberos-trouble",
+    "href": "/help-and-support/knowledge/current-help-support-knowledge-base-kerberos-trouble",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27058,7 +27058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Keyboard Shortcuts",
-    "href": "/help-support/keyboard-shortcuts",
+    "href": "/help-and-support/general/current-help-support-keyboard-shortcuts",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27083,7 +27083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Knowledge Base",
-    "href": "/help-support/knowledge-base",
+    "href": "/help-and-support/knowledge/current-help-support-knowledge-base",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27108,7 +27108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Kubernetes Troubleshooting",
-    "href": "/help-support/knowledge-base/k8s-trouble",
+    "href": "/help-and-support/knowledge/current-help-support-knowledge-base-k8s-trouble",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27133,7 +27133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Limits",
-    "href": "/help-support/limits",
+    "href": "/help-and-support/general/current-help-support-limits",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27158,7 +27158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Operational Excellence",
-    "href": "/help-support/well-architected-framework/operations",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-operations",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27183,7 +27183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Optimize Metadata Refresh Frequency",
-    "href": "/help-support/well-architected-framework/cost/optimize-refresh",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-cost-optimize-refresh",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27208,7 +27208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Performance Efficiency",
-    "href": "/help-support/well-architected-framework/performance",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27233,7 +27233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Querying Relational-Database Sources Directly",
-    "href": "/help-support/advanced-topics/external-queries",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-external-queries",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27258,7 +27258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Ranger-Based Authorization",
-    "href": "/help-support/advanced-topics/hive-ranger",
+    "href": "/help-and-support/hive/current-help-support-advanced-topics-hive-ranger",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27283,7 +27283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Refreshing Metadata",
-    "href": "/help-support/advanced-topics/metadata-caching",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-metadata-caching",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27308,7 +27308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reliability",
-    "href": "/help-support/lakehouse-arch/reliability",
+    "href": "/help-and-support/general/current-help-support-lakehouse-arch-reliability",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27333,7 +27333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reliability",
-    "href": "/help-support/well-architected-framework/reliability",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-reliability",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27358,7 +27358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Runtime Filtering",
-    "href": "/help-support/advanced-topics/runtime-filtering",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-runtime-filtering",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27383,7 +27383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "S3 on Amazon EMR Configuration",
-    "href": "/help-support/advanced-topics/hive-s3",
+    "href": "/help-and-support/hive/current-help-support-advanced-topics-hive-s3",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27408,7 +27408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Security",
-    "href": "/help-support/well-architected-framework/security",
+    "href": "/help-and-support/general/current-help-support-well-architected-framework-security",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27433,7 +27433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Self-Service Semantic Layer",
-    "href": "/help-support/well-architected-framework/semantic",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework-semantic",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27458,7 +27458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Start, Stop, and Status",
-    "href": "/help-support/advanced-topics/start-stop",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-start-stop",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27483,7 +27483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Support Settings",
-    "href": "/help-support/support-settings",
+    "href": "/administration/general/current-admin-support-settings",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27508,7 +27508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Upgrading with Custom Sources",
-    "href": "/help-support/advanced-topics/custom-arp",
+    "href": "/help-and-support/advanced/current-help-support-advanced-topics-custom-arp",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27533,7 +27533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Well-Architected Framework",
-    "href": "/help-support/well-architected-framework",
+    "href": "/help-and-support/well/current-help-support-well-architected-framework",
     "section": "Help Support",
     "keywords": [
       "Dremio",
@@ -27558,7 +27558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Documentation",
-    "href": "/llms.txt",
+    "href": "https://www.dremio.com/llms.txt",
     "section": "Llms.Txt",
     "keywords": [
       "Dremio",
@@ -27583,7 +27583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Autoingest Data into Apache Iceberg",
-    "href": "/load-data/autoingestion",
+    "href": "/load-data/current-load-data-autoingestion",
     "section": "Load Data",
     "keywords": [
       "Dremio",
@@ -27608,7 +27608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Clustering",
-    "href": "/load-data/clustering",
+    "href": "/load-data/current-load-data-clustering",
     "section": "Load Data",
     "keywords": [
       "Dremio",
@@ -27658,7 +27658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/query-manage/managing-data/data-curation",
+    "href": "/data-products/general/current-data-products",
     "section": "Query Manage",
     "keywords": [
       "Page",
@@ -27683,7 +27683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/query-manage/managing-data/nessie",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-show-logs",
     "section": "Query Manage",
     "keywords": [
       "Page",
@@ -27708,7 +27708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/query-manage/querying-data",
+    "href": "/reference/sql-commands/current-reference-sql-commands",
     "section": "Query Manage",
     "keywords": [
       "Page",
@@ -27733,7 +27733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2023-07-22-01",
-    "href": "/reference/bulletins/2023-07-22-01",
+    "href": "/reference/bulletins/current-reference-bulletins-2023-07-22-01",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27758,7 +27758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2023-07-22-02",
-    "href": "/reference/bulletins/2023-07-22-02",
+    "href": "/reference/bulletins/current-reference-bulletins-2023-07-22-02",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27783,7 +27783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2023-07-22-03",
-    "href": "/reference/bulletins/2023-07-22-03",
+    "href": "/reference/bulletins/current-reference-bulletins-2023-07-22-03",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27808,7 +27808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2024-01-09-01",
-    "href": "/reference/bulletins/2024-01-09-01",
+    "href": "/reference/bulletins/current-reference-bulletins-2024-01-09-01",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27833,7 +27833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2024-01-12-01",
-    "href": "/reference/bulletins/2024-01-12-01",
+    "href": "/reference/bulletins/current-reference-bulletins-2024-01-12-01",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27858,7 +27858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2024-02-07-01",
-    "href": "/reference/bulletins/2024-02-07-01",
+    "href": "/reference/bulletins/current-reference-bulletins-2024-02-07-01",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27883,7 +27883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "2025-04-21-01",
-    "href": "/reference/bulletins/2025-04-21-01",
+    "href": "/reference/bulletins/current-reference-bulletins-2025-04-21-01",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27908,7 +27908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ABS",
-    "href": "/reference/sql/sql-functions/functions/ABS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-abs",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27933,7 +27933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ACOS",
-    "href": "/reference/sql/sql-functions/functions/ACOS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-acos",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27958,7 +27958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AES_DECRYPT",
-    "href": "/reference/sql/sql-functions/functions/AES_DECRYPT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-aes-decrypt",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -27983,7 +27983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AES_ENCRYPT",
-    "href": "/reference/sql/sql-functions/functions/AES_ENCRYPT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-aes-encrypt",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28008,7 +28008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AI",
-    "href": "/reference/sql/sql-functions/AI",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-ai",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28033,7 +28033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AI_CLASSIFY",
-    "href": "/reference/sql/sql-functions/functions/AI_CLASSIFY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ai-classify",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28058,7 +28058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AI_COMPLETE",
-    "href": "/reference/sql/sql-functions/functions/AI_COMPLETE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ai-complete",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28083,7 +28083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AI_GENERATE",
-    "href": "/reference/sql/sql-functions/functions/AI_GENERATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ai-generate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28108,7 +28108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER BRANCH",
-    "href": "/reference/sql/commands/nessie/alter-branch",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-alter-branch",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28133,7 +28133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER FOLDER",
-    "href": "/reference/sql/commands/alter-folder",
+    "href": "/reference/sql-commands/current-reference-sql-commands-alter-folder",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28158,7 +28158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER PIPE",
-    "href": "/reference/sql/commands/alter-pipe",
+    "href": "/reference/sql-commands/current-reference-sql-commands-alter-pipe",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28183,7 +28183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER SOURCE",
-    "href": "/reference/sql/commands/alter-source",
+    "href": "/reference/sql-commands/current-reference-sql-commands-alter-source",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28208,7 +28208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER SPACE",
-    "href": "/reference/sql/commands/alter-space",
+    "href": "/reference/sql-commands/current-reference-sql-commands-alter-space",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28233,7 +28233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER TABLE",
-    "href": "/reference/sql/commands/alter-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-alter-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28258,7 +28258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER TAG",
-    "href": "/reference/sql/commands/nessie/alter-tag",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-alter-tag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28283,7 +28283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ALTER VIEW",
-    "href": "/reference/sql/commands/alter-view",
+    "href": "/reference/sql-commands/current-reference-sql-commands-alter-view",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28308,7 +28308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ANALYZE TABLE",
-    "href": "/reference/sql/commands/analyze-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-analyze-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28333,7 +28333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "API Reference",
-    "href": "/reference/api",
+    "href": "/reference/api/current-reference-api-catalog",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28358,7 +28358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "APPROX_COUNT_DISTINCT",
-    "href": "/reference/sql/sql-functions/functions/APPROX_COUNT_DISTINCT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-approx-count-distinct",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28383,7 +28383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "APPROX_PERCENTILE",
-    "href": "/reference/sql/sql-functions/functions/APPROX_PERCENTILE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-approx-percentile",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28408,7 +28408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAYS_OVERLAP",
-    "href": "/reference/sql/sql-functions/functions/ARRAYS_OVERLAP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-arrays-overlap",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28433,7 +28433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_AGG",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_AGG",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-agg",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28458,7 +28458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_APPEND",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_APPEND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-append",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28483,7 +28483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_AVG",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_AVG",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-avg",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28508,7 +28508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_CAT",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_CAT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-cat",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28533,7 +28533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_COMPACT",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_COMPACT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-compact",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28558,7 +28558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_CONTAINS",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_CONTAINS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-contains",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28583,7 +28583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_DISTINCT",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_DISTINCT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-distinct",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28608,7 +28608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_FREQUENCY",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_FREQUENCY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-frequency",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28633,7 +28633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_GENERATE_RANGE",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_GENERATE_RANGE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-generate-range",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28658,7 +28658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_INSERT",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_INSERT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-insert",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28683,7 +28683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_MAX",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_MAX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-max",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28708,7 +28708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_MIN",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_MIN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-min",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28733,7 +28733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_POSITION",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_POSITION",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-position",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28758,7 +28758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_PREPEND",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_PREPEND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-prepend",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28783,7 +28783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_REMOVE",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_REMOVE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-remove",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28808,7 +28808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_REMOVE_AT",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_REMOVE_AT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-remove-at",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28833,7 +28833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_SIZE",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_SIZE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-size",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28858,7 +28858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_SLICE",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_SLICE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-slice",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28883,7 +28883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_SUM",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_SUM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-sum",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28908,7 +28908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ARRAY_TO_STRING",
-    "href": "/reference/sql/sql-functions/functions/ARRAY_TO_STRING",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-array-to-string",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28933,7 +28933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ASCII",
-    "href": "/reference/sql/sql-functions/functions/ASCII",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ascii",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28958,7 +28958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ASIN",
-    "href": "/reference/sql/sql-functions/functions/ASIN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-asin",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -28983,7 +28983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ATAN",
-    "href": "/reference/sql/sql-functions/functions/ATAN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-atan",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29008,7 +29008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ATAN2",
-    "href": "/reference/sql/sql-functions/functions/ATAN2",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-atan2",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29033,7 +29033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AVG",
-    "href": "/reference/sql/sql-functions/functions/AVG",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-avg",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29058,7 +29058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Admin CLI",
-    "href": "/reference/admin-cli",
+    "href": "/reference/admin-cli/current-reference-admin-cli",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29083,7 +29083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Aggregate",
-    "href": "/reference/sql/sql-functions/AGGREGATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-aggregate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29108,7 +29108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "All Functions",
-    "href": "/reference/sql/sql-functions/ALL_FUNCTIONS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-all-functions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29133,7 +29133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Amazon Redshift Data Types",
-    "href": "/reference/sql/data-types/mappings/amazon-redshift",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-amazon-redshift",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29158,7 +29158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BASE64",
-    "href": "/reference/sql/sql-functions/functions/BASE64",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-base64",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29183,7 +29183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BIN",
-    "href": "/reference/sql/sql-functions/functions/BIN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bin",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29208,7 +29208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BINARY_STRING",
-    "href": "/reference/sql/sql-functions/functions/BINARY_STRING",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-binary-string",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29233,7 +29233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BITWISE_AND",
-    "href": "/reference/sql/sql-functions/functions/BITWISE_AND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bitwise-and",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29258,7 +29258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BITWISE_NOT",
-    "href": "/reference/sql/sql-functions/functions/BITWISE_NOT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bitwise-not",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29283,7 +29283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BITWISE_OR",
-    "href": "/reference/sql/sql-functions/functions/BITWISE_OR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bitwise-or",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29308,7 +29308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BITWISE_XOR",
-    "href": "/reference/sql/sql-functions/functions/BITWISE_XOR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bitwise-xor",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29333,7 +29333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BIT_AND",
-    "href": "/reference/sql/sql-functions/functions/BIT_AND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bit-and",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29358,7 +29358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BIT_LENGTH",
-    "href": "/reference/sql/sql-functions/functions/BIT_LENGTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bit-length",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29383,7 +29383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BIT_OR",
-    "href": "/reference/sql/sql-functions/functions/BIT_OR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bit-or",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29408,7 +29408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BOOL_AND",
-    "href": "/reference/sql/sql-functions/functions/BOOL_AND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bool-and",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29433,7 +29433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BOOL_OR",
-    "href": "/reference/sql/sql-functions/functions/BOOL_OR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bool-or",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29458,7 +29458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BROUND",
-    "href": "/reference/sql/sql-functions/functions/BROUND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-bround",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29483,7 +29483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "BTRIM",
-    "href": "/reference/sql/sql-functions/functions/BTRIM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-btrim",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29508,7 +29508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Back up Dremio",
-    "href": "/reference/admin-cli/backup",
+    "href": "/reference/admin-cli/current-reference-admin-cli-nessie-maintenance",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29533,7 +29533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Binary",
-    "href": "/reference/sql/sql-functions/BINARY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-binary",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29558,7 +29558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Bitwise",
-    "href": "/reference/sql/sql-functions/BITWISE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-bitwise",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29583,7 +29583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Boolean",
-    "href": "/reference/sql/sql-functions/BOOLEAN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-boolean",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29608,7 +29608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CARDINALITY",
-    "href": "/reference/sql/sql-functions/functions/CARDINALITY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cardinality",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29633,7 +29633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CASE",
-    "href": "/reference/sql/sql-functions/functions/CASE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-case",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29658,7 +29658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CAST",
-    "href": "/reference/sql/sql-functions/functions/CAST",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cast",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29683,7 +29683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CBRT",
-    "href": "/reference/sql/sql-functions/functions/CBRT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cbrt",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29708,7 +29708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CEILING",
-    "href": "/reference/sql/sql-functions/functions/CEILING",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ceiling",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29733,7 +29733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CHARACTER_LENGTH",
-    "href": "/reference/sql/sql-functions/functions/CHARACTER_LENGTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-character-length",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29758,7 +29758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CHAR_LENGTH",
-    "href": "/reference/sql/sql-functions/functions/CHAR_LENGTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-char-length",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29783,7 +29783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CHR",
-    "href": "/reference/sql/sql-functions/functions/CHR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-chr",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29808,7 +29808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COALESCE",
-    "href": "/reference/sql/sql-functions/functions/COALESCE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-coalesce",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29833,7 +29833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COL_LIKE",
-    "href": "/reference/sql/sql-functions/functions/COL_LIKE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-col-like",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29858,7 +29858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONCAT",
-    "href": "/reference/sql/sql-functions/functions/CONCAT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-concat",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29883,7 +29883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONCAT_WS",
-    "href": "/reference/sql/sql-functions/functions/CONCAT_WS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-concat-ws",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29908,7 +29908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONTAINS",
-    "href": "/reference/sql/sql-functions/functions/CONTAINS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-contains",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29933,7 +29933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONVERT_FROM",
-    "href": "/reference/sql/sql-functions/functions/CONVERT_FROM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-convert-from",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29958,7 +29958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONVERT_REPLACEUTF8",
-    "href": "/reference/sql/sql-functions/functions/CONVERT_REPLACEUTF8",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-convert-replaceutf8",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -29983,7 +29983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONVERT_TIMEZONE",
-    "href": "/reference/sql/sql-functions/functions/CONVERT_TIMEZONE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-convert-timezone",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30008,7 +30008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CONVERT_TO",
-    "href": "/reference/sql/sql-functions/functions/CONVERT_TO",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-convert-to",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30033,7 +30033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COPY INTO",
-    "href": "/reference/sql/commands/apache-iceberg-tables/copy-into-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-copy-into-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30058,7 +30058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CORR",
-    "href": "/reference/sql/sql-functions/functions/CORR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-corr",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30083,7 +30083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COS",
-    "href": "/reference/sql/sql-functions/functions/COS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cos",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30108,7 +30108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COSH",
-    "href": "/reference/sql/sql-functions/functions/COSH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cosh",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30133,7 +30133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COT",
-    "href": "/reference/sql/sql-functions/functions/COT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cot",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30158,7 +30158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COUNT",
-    "href": "/reference/sql/sql-functions/functions/COUNT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-count",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30183,7 +30183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COVAR_POP",
-    "href": "/reference/sql/sql-functions/functions/COVAR_POP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-covar-pop",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30208,7 +30208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "COVAR_SAMP",
-    "href": "/reference/sql/sql-functions/functions/COVAR_SAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-covar-samp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30233,7 +30233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CRC32",
-    "href": "/reference/sql/sql-functions/functions/CRC32",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-crc32",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30258,7 +30258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE BRANCH",
-    "href": "/reference/sql/commands/nessie/create-branch",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-create-branch",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30283,7 +30283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE FOLDER",
-    "href": "/reference/sql/commands/nessie/create-folder",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-create-folder",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30308,7 +30308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE PIPE",
-    "href": "/reference/sql/commands/create-pipe",
+    "href": "/reference/sql-commands/current-reference-sql-commands-create-pipe",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30333,7 +30333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE SPACE",
-    "href": "/reference/sql/commands/create-space",
+    "href": "/reference/sql-commands/current-reference-sql-commands-create-space",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30358,7 +30358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE TABLE",
-    "href": "/reference/sql/commands/create-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-create-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30383,7 +30383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE TABLE AS",
-    "href": "/reference/sql/commands/create-table-as",
+    "href": "/reference/sql-commands/current-reference-sql-commands-create-table-as",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30408,7 +30408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE TAG",
-    "href": "/reference/sql/commands/nessie/create-tag",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-create-tag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30433,7 +30433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CREATE VIEW",
-    "href": "/reference/sql/commands/create-view",
+    "href": "/reference/sql-commands/current-reference-sql-commands-create-view",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30458,7 +30458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CUME_DIST",
-    "href": "/reference/sql/sql-functions/functions/CUME_DIST",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-cume-dist",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30483,7 +30483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CURRENT_DATE",
-    "href": "/reference/sql/sql-functions/functions/CURRENT_DATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-current-date",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30508,7 +30508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CURRENT_DATE_UTC",
-    "href": "/reference/sql/sql-functions/functions/CURRENT_DATE_UTC",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-current-date-utc",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30533,7 +30533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CURRENT_SCHEMA",
-    "href": "/reference/sql/sql-functions/functions/CURRENT_SCHEMA",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-current-schema",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30558,7 +30558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CURRENT_TIME",
-    "href": "/reference/sql/sql-functions/functions/CURRENT_TIME",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-current-time",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30583,7 +30583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "CURRENT_TIMESTAMP",
-    "href": "/reference/sql/sql-functions/functions/CURRENT_TIMESTAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-current-timestamp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30608,7 +30608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Catalog",
-    "href": "/reference/api/catalog",
+    "href": "/reference/api/current-reference-api-catalog",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30633,7 +30633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Clean Metadata",
-    "href": "/reference/admin-cli/metadata-cleanup",
+    "href": "/reference/admin-cli/current-reference-admin-cli-metadata-cleanup",
     "section": "Reference",
     "keywords": [
       "Skip",
@@ -30658,7 +30658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Coercions",
-    "href": "/reference/sql/data-types/coercions",
+    "href": "/reference/data-types/current-reference-sql-data-types-coercions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30683,7 +30683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Conditional",
-    "href": "/reference/sql/sql-functions/CONDITIONAL",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-conditional",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30708,7 +30708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Conversion",
-    "href": "/reference/sql/sql-functions/CONVERSION",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-conversion",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30733,7 +30733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Credentials",
-    "href": "/reference/api/user/credentials",
+    "href": "/reference/api/current-reference-api-user-credentials",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30758,7 +30758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Cryptography",
-    "href": "/reference/sql/sql-functions/CRYPTOGRAPHY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-cryptography",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30783,7 +30783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATEDIFF",
-    "href": "/reference/sql/sql-functions/functions/DATEDIFF",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-datediff",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30808,7 +30808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATETYPE",
-    "href": "/reference/sql/sql-functions/functions/DATETYPE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-datetype",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30833,7 +30833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATE_ADD",
-    "href": "/reference/sql/sql-functions/functions/DATE_ADD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-date-add",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30858,7 +30858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATE_DIFF",
-    "href": "/reference/sql/sql-functions/functions/DATE_DIFF",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-date-diff",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30883,7 +30883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATE_PART",
-    "href": "/reference/sql/sql-functions/functions/DATE_PART",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-date-part",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30908,7 +30908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATE_SUB",
-    "href": "/reference/sql/sql-functions/functions/DATE_SUB",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-date-sub",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30933,7 +30933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DATE_TRUNC",
-    "href": "/reference/sql/sql-functions/functions/DATE_TRUNC",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-date-trunc",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30958,7 +30958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DAY",
-    "href": "/reference/sql/sql-functions/functions/DAY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-day",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -30983,7 +30983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DAYOFMONTH",
-    "href": "/reference/sql/sql-functions/functions/DAYOFMONTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-dayofmonth",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31008,7 +31008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DAYOFWEEK",
-    "href": "/reference/sql/sql-functions/functions/DAYOFWEEK",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-dayofweek",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31033,7 +31033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DAYOFYEAR",
-    "href": "/reference/sql/sql-functions/functions/DAYOFYEAR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-dayofyear",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31058,7 +31058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DECRYPT",
-    "href": "/reference/sql/sql-functions/functions/DECRYPT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-decrypt",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31083,7 +31083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DEGREES",
-    "href": "/reference/sql/sql-functions/functions/DEGREES",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-degrees",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31108,7 +31108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DELETE",
-    "href": "/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-apache-iceberg-delete",
     "section": "Reference",
     "keywords": [
       "Skip",
@@ -31133,7 +31133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DENSE_RANK",
-    "href": "/reference/sql/sql-functions/functions/DENSE_RANK",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-dense-rank",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31158,7 +31158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DESCRIBE PIPE",
-    "href": "/reference/sql/commands/describe-pipe",
+    "href": "/reference/sql-commands/current-reference-sql-commands-describe-pipe",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31183,7 +31183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DROP",
-    "href": "/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-apache-iceberg-drop",
     "section": "Reference",
     "keywords": [
       "Skip",
@@ -31208,7 +31208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DROP BRANCH",
-    "href": "/reference/sql/commands/nessie/drop-branch",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-drop-branch",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31233,7 +31233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DROP PIPE",
-    "href": "/reference/sql/commands/drop-pipe",
+    "href": "/reference/sql-commands/current-reference-sql-commands-drop-pipe",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31258,7 +31258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DROP SPACE",
-    "href": "/reference/sql/commands/drop-space",
+    "href": "/reference/sql-commands/current-reference-sql-commands-drop-space",
     "section": "Reference",
     "keywords": [
       "Skip",
@@ -31283,7 +31283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DROP TAG",
-    "href": "/reference/sql/commands/nessie/drop-tag",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-drop-tag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31308,7 +31308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "DROP VIEW",
-    "href": "/reference/sql/commands/drop-view",
+    "href": "/reference/sql-commands/current-reference-sql-commands-drop-view",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31333,7 +31333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Data Types",
-    "href": "/reference/sql/data-types",
+    "href": "/reference/data-types/current-reference-sql-data-types",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31358,7 +31358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dataset",
-    "href": "/reference/api/datasets",
+    "href": "/reference/api/current-reference-api-datasets",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31383,7 +31383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Datatype",
-    "href": "/reference/sql/sql-functions/DATATYPE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-datatype",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31408,7 +31408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Date/Time",
-    "href": "/reference/sql/sql-functions/DATE_TIME",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-date-time",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31433,7 +31433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Directory",
-    "href": "/reference/sql/sql-functions/DIRECTORY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-directory",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31458,7 +31458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reference/sql/commands/datasets",
+    "href": "/reference/sql-commands/current-reference-sql-commands-datasets",
     "section": "Reference",
     "keywords": [
       "Page",
@@ -31483,7 +31483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reference/sql/commands/queue-routing-sql",
+    "href": "/reference/sql-commands/current-reference-sql-commands-queue-routing-sql",
     "section": "Reference",
     "keywords": [
       "Page",
@@ -31508,7 +31508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reference/sql/sql-functions/functions/WINDOW",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-window",
     "section": "Reference",
     "keywords": [
       "Page",
@@ -31533,7 +31533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "E",
-    "href": "/reference/sql/sql-functions/functions/E",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-e",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31558,7 +31558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ENCODE",
-    "href": "/reference/sql/sql-functions/functions/ENCODE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-encode",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31583,7 +31583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ENCRYPT",
-    "href": "/reference/sql/sql-functions/functions/ENCRYPT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-encrypt",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31608,7 +31608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ENDS_WITH",
-    "href": "/reference/sql/sql-functions/functions/ENDS_WITH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ends-with",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31633,7 +31633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "EXP",
-    "href": "/reference/sql/sql-functions/functions/EXP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-exp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31658,7 +31658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "EXTRACT",
-    "href": "/reference/sql/sql-functions/functions/EXTRACT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-extract",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31683,7 +31683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Elasticsearch Data Types",
-    "href": "/reference/sql/data-types/mappings/elasticsearch",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-elasticsearch",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31708,7 +31708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Encrypt Credentials",
-    "href": "/reference/admin-cli/encryption",
+    "href": "/reference/admin-cli/current-reference-admin-cli-nessie-maintenance",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31733,7 +31733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Engine Configuration Options",
-    "href": "/reference/api/engine-management/engine-configuration-options",
+    "href": "/reference/api/current-reference-api-engine-management-engine-configuration-options",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31758,7 +31758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Engine Management",
-    "href": "/reference/api/engine-management",
+    "href": "/reference/api/current-reference-api-engine-management",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31783,7 +31783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Export Profiles",
-    "href": "/reference/admin-cli/export-profiles",
+    "href": "/reference/admin-cli/current-reference-admin-cli-export-profiles",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31808,7 +31808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Export and Import PATs",
-    "href": "/reference/admin-cli/export-import-pat",
+    "href": "/reference/admin-cli/current-reference-admin-cli-export-import-pat",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31833,7 +31833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "External Token Providers",
-    "href": "/reference/api/external-token-providers",
+    "href": "/reference/api/current-reference-api-external-token-providers",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31858,7 +31858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "FACTORIAL",
-    "href": "/reference/sql/sql-functions/functions/FACTORIAL",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-factorial",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31883,7 +31883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "FIRST_VALUE",
-    "href": "/reference/sql/sql-functions/functions/FIRST_VALUE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-first-value",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31908,7 +31908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "FLATTEN",
-    "href": "/reference/sql/sql-functions/functions/FLATTEN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-flatten",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31933,7 +31933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "FLOOR",
-    "href": "/reference/sql/sql-functions/functions/FLOOR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-floor",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31958,7 +31958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "FROM_HEX",
-    "href": "/reference/sql/sql-functions/functions/FROM_HEX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-from-hex",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -31983,7 +31983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "File",
-    "href": "/reference/api/catalog/file",
+    "href": "/reference/api/current-reference-api-catalog-file",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32008,7 +32008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Folder",
-    "href": "/reference/api/catalog/container-folder",
+    "href": "/reference/api/current-reference-api-catalog-container-folder",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32033,7 +32033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "GEO_BEYOND",
-    "href": "/reference/sql/sql-functions/functions/GEO_BEYOND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-geo-beyond",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32058,7 +32058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "GEO_DISTANCE",
-    "href": "/reference/sql/sql-functions/functions/GEO_DISTANCE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-geo-distance",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32083,7 +32083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "GEO_NEARBY",
-    "href": "/reference/sql/sql-functions/functions/GEO_NEARBY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-geo-nearby",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32108,7 +32108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "GREATEST",
-    "href": "/reference/sql/sql-functions/functions/GREATEST",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-greatest",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32133,7 +32133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Geospatial",
-    "href": "/reference/sql/sql-functions/GEOSPATIAL",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-geospatial",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32158,7 +32158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Grants",
-    "href": "/reference/api/catalog/grants",
+    "href": "/reference/api/current-reference-api-catalog-grants",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32183,7 +32183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "HASH",
-    "href": "/reference/sql/sql-functions/functions/HASH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-hash",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32208,7 +32208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "HASH64",
-    "href": "/reference/sql/sql-functions/functions/HASH64",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-hash64",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32233,7 +32233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "HEX",
-    "href": "/reference/sql/sql-functions/functions/HEX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-hex",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32258,7 +32258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "HOUR",
-    "href": "/reference/sql/sql-functions/functions/HOUR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-hour",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32283,7 +32283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Hive Data Types",
-    "href": "/reference/sql/data-types/mappings/hive",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-hive",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32308,7 +32308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Home",
-    "href": "/reference/api/catalog/container-home",
+    "href": "/reference/api/current-reference-api-catalog-container-home",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32333,7 +32333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IBM Db2 Data Types",
-    "href": "/reference/sql/data-types/mappings/db2",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-db2",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32358,7 +32358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ILIKE",
-    "href": "/reference/sql/sql-functions/functions/ILIKE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ilike",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32383,7 +32383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IMAXDIR",
-    "href": "/reference/sql/sql-functions/functions/IMAXDIR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-imaxdir",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32408,7 +32408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IMINDIR",
-    "href": "/reference/sql/sql-functions/functions/IMINDIR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-imindir",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32433,7 +32433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INFORMATION_SCHEMA.CATALOGS",
-    "href": "/reference/sql/information-schema/catalogs",
+    "href": "/reference/information-schema/current-reference-sql-information-schema-catalogs",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32458,7 +32458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INFORMATION_SCHEMA.COLUMNS",
-    "href": "/reference/sql/information-schema/columns",
+    "href": "/reference/information-schema/current-reference-sql-information-schema-columns",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32483,7 +32483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INFORMATION_SCHEMA.SCHEMATA",
-    "href": "/reference/sql/information-schema/schemata",
+    "href": "/reference/information-schema/current-reference-sql-information-schema-schemata",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32508,7 +32508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INFORMATION_SCHEMA.VIEWS",
-    "href": "/reference/sql/information-schema/views",
+    "href": "/reference/information-schema/current-reference-sql-information-schema-views",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32533,7 +32533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INFORMATION_SCHEMA.\\\"TABLES\\\"",
-    "href": "/reference/sql/information-schema/tables",
+    "href": "/reference/information-schema/current-reference-sql-information-schema-tables",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32558,7 +32558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INITCAP",
-    "href": "/reference/sql/sql-functions/functions/INITCAP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-initcap",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32583,7 +32583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INSERT",
-    "href": "/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-apache-iceberg-insert",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32608,7 +32608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "INSTR",
-    "href": "/reference/sql/sql-functions/functions/INSTR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-instr",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32633,7 +32633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ISDATE",
-    "href": "/reference/sql/sql-functions/functions/ISDATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-isdate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32658,7 +32658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ISNUMERIC",
-    "href": "/reference/sql/sql-functions/functions/ISNUMERIC",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-isnumeric",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32683,7 +32683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS_BIGINT",
-    "href": "/reference/sql/sql-functions/functions/IS_BIGINT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-bigint",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32708,7 +32708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS_INT",
-    "href": "/reference/sql/sql-functions/functions/IS_INT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-int",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32733,7 +32733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS_MEMBER",
-    "href": "/reference/sql/sql-functions/functions/IS_MEMBER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-member",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32758,7 +32758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS_SUBSTR",
-    "href": "/reference/sql/sql-functions/functions/IS_SUBSTR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-substr",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32783,7 +32783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS_UTF8",
-    "href": "/reference/sql/sql-functions/functions/IS_UTF8",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-utf8",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32808,7 +32808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS_VARCHAR",
-    "href": "/reference/sql/sql-functions/functions/IS_VARCHAR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-varchar",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32833,7 +32833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS__NOT__DISTINCT_FROM",
-    "href": "/reference/sql/sql-functions/functions/IS__NOT__DISTINCT_FROM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-not-distinct-from",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32858,7 +32858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS__NOT__FALSE",
-    "href": "/reference/sql/sql-functions/functions/IS__NOT__FALSE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-not-false",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32883,7 +32883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS__NOT__NULL",
-    "href": "/reference/sql/sql-functions/functions/IS__NOT__NULL",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-not-null",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32908,7 +32908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "IS__NOT__TRUE",
-    "href": "/reference/sql/sql-functions/functions/IS__NOT__TRUE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-is-not-true",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32933,7 +32933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Information Schema",
-    "href": "/reference/sql/information-schema",
+    "href": "/reference/information-schema/current-reference-sql-information-schema",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32958,7 +32958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Job",
-    "href": "/reference/api/job",
+    "href": "/reference/api/current-reference-api-job",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -32983,7 +32983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LAG",
-    "href": "/reference/sql/sql-functions/functions/LAG",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-lag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33008,7 +33008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LAST_DAY",
-    "href": "/reference/sql/sql-functions/functions/LAST_DAY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-last-day",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33033,7 +33033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LAST_QUERY_ID",
-    "href": "/reference/sql/sql-functions/functions/LAST_QUERY_ID",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-last-query-id",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33058,7 +33058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LAST_VALUE",
-    "href": "/reference/sql/sql-functions/functions/LAST_VALUE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-last-value",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33083,7 +33083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LCASE",
-    "href": "/reference/sql/sql-functions/functions/LCASE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-lcase",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33108,7 +33108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LDAP User Cache",
-    "href": "/reference/api/ldap-authorization",
+    "href": "/reference/api/current-reference-api-ldap-authorization",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33133,7 +33133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LEAD",
-    "href": "/reference/sql/sql-functions/functions/LEAD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-lead",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33158,7 +33158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LEAST",
-    "href": "/reference/sql/sql-functions/functions/LEAST",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-least",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33183,7 +33183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LEFT",
-    "href": "/reference/sql/sql-functions/functions/LEFT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-left",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33208,7 +33208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LENGTH",
-    "href": "/reference/sql/sql-functions/functions/LENGTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-length",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33233,7 +33233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LEVENSHTEIN",
-    "href": "/reference/sql/sql-functions/functions/LEVENSHTEIN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-levenshtein",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33258,7 +33258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LIKE",
-    "href": "/reference/sql/sql-functions/functions/LIKE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-like",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33283,7 +33283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LISTAGG",
-    "href": "/reference/sql/sql-functions/functions/LISTAGG",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-listagg",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33308,7 +33308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LIST_FILES",
-    "href": "/reference/sql/sql-functions/functions/LIST_FILES",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-list-files",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33333,7 +33333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LN",
-    "href": "/reference/sql/sql-functions/functions/LN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ln",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33358,7 +33358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LOCALTIME",
-    "href": "/reference/sql/sql-functions/functions/LOCALTIME",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-localtime",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33383,7 +33383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LOCALTIMESTAMP",
-    "href": "/reference/sql/sql-functions/functions/LOCALTIMESTAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-localtimestamp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33408,7 +33408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LOCATE",
-    "href": "/reference/sql/sql-functions/functions/LOCATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-locate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33433,7 +33433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LOG",
-    "href": "/reference/sql/sql-functions/functions/LOG",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-log",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33458,7 +33458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LOG10",
-    "href": "/reference/sql/sql-functions/functions/LOG10",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-log10",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33483,7 +33483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LOWER",
-    "href": "/reference/sql/sql-functions/functions/LOWER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-lower",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33508,7 +33508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LPAD",
-    "href": "/reference/sql/sql-functions/functions/LPAD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-lpad",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33533,7 +33533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LSHIFT",
-    "href": "/reference/sql/sql-functions/functions/LSHIFT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-lshift",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33558,7 +33558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LTRIM",
-    "href": "/reference/sql/sql-functions/functions/LTRIM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ltrim",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33583,7 +33583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Lineage",
-    "href": "/reference/api/catalog/lineage",
+    "href": "/reference/api/current-reference-api-catalog-lineage",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33608,7 +33608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MAP_KEYS",
-    "href": "/reference/sql/sql-functions/functions/MAP_KEYS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-map-keys",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33633,7 +33633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MAP_VALUES",
-    "href": "/reference/sql/sql-functions/functions/MAP_VALUES",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-map-values",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33658,7 +33658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MASK",
-    "href": "/reference/sql/sql-functions/functions/MASK",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mask",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33683,7 +33683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MASK_FIRST_N",
-    "href": "/reference/sql/sql-functions/functions/MASK_FIRST_N",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mask-first-n",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33708,7 +33708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MASK_HASH",
-    "href": "/reference/sql/sql-functions/functions/MASK_HASH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mask-hash",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33733,7 +33733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MASK_LAST_N",
-    "href": "/reference/sql/sql-functions/functions/MASK_LAST_N",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mask-last-n",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33758,7 +33758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MASK_SHOW_FIRST_N",
-    "href": "/reference/sql/sql-functions/functions/MASK_SHOW_FIRST_N",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mask-show-first-n",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33783,7 +33783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MASK_SHOW_LAST_N",
-    "href": "/reference/sql/sql-functions/functions/MASK_SHOW_LAST_N",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mask-show-last-n",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33808,7 +33808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MAX",
-    "href": "/reference/sql/sql-functions/functions/MAX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-max",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33833,7 +33833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MAXDIR",
-    "href": "/reference/sql/sql-functions/functions/MAXDIR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-maxdir",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33858,7 +33858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MD5",
-    "href": "/reference/sql/sql-functions/functions/MD5",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-md5",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33883,7 +33883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MEDIAN",
-    "href": "/reference/sql/sql-functions/functions/MEDIAN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-median",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33908,7 +33908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MERGE",
-    "href": "/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-apache-iceberg-merge",
     "section": "Reference",
     "keywords": [
       "Skip",
@@ -33933,7 +33933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MERGE BRANCH",
-    "href": "/reference/sql/commands/nessie/merge-branch",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-merge-branch",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33958,7 +33958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MIN",
-    "href": "/reference/sql/sql-functions/functions/MIN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-min",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -33983,7 +33983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MINDIR",
-    "href": "/reference/sql/sql-functions/functions/MINDIR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mindir",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34008,7 +34008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MINUTE",
-    "href": "/reference/sql/sql-functions/functions/MINUTE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-minute",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34033,7 +34033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MOD",
-    "href": "/reference/sql/sql-functions/functions/MOD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-mod",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34058,7 +34058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MONTH",
-    "href": "/reference/sql/sql-functions/functions/MONTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-month",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34083,7 +34083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MONTHS_BETWEEN",
-    "href": "/reference/sql/sql-functions/functions/MONTHS_BETWEEN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-months-between",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34108,7 +34108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Mappings for External Sources",
-    "href": "/reference/sql/data-types/mappings",
+    "href": "/reference/data-types/current-reference-sql-data-types",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34133,7 +34133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Math",
-    "href": "/reference/sql/sql-functions/MATH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-math",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34158,7 +34158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft SQL Server Data Types",
-    "href": "/reference/sql/data-types/mappings/microsoft-sql-server",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-microsoft-sql-server",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34183,7 +34183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MongoDB Data Types",
-    "href": "/reference/sql/data-types/mappings/mongo",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-mongo",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34208,7 +34208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "MySQL Data Types",
-    "href": "/reference/sql/data-types/mappings/mysql",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-mysql",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34233,7 +34233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NDV",
-    "href": "/reference/sql/sql-functions/functions/NDV",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ndv",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34258,7 +34258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NEXT_DAY",
-    "href": "/reference/sql/sql-functions/functions/NEXT_DAY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-next-day",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34283,7 +34283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NORMALIZE_STRING",
-    "href": "/reference/sql/sql-functions/functions/NORMALIZE_STRING",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-normalize-string",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34308,7 +34308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NOW",
-    "href": "/reference/sql/sql-functions/functions/NOW",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-now",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34333,7 +34333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NTILE",
-    "href": "/reference/sql/sql-functions/functions/NTILE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ntile",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34358,7 +34358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NULLIF",
-    "href": "/reference/sql/sql-functions/functions/NULLIF",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-nullif",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34383,7 +34383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "NVL",
-    "href": "/reference/sql/sql-functions/functions/NVL",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-nvl",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34408,7 +34408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Node Collections",
-    "href": "/reference/api/nodeCollections",
+    "href": "/reference/api/current-reference-api-nodecollections",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34433,7 +34433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "OAuth Token",
-    "href": "/reference/api/oauth-token",
+    "href": "/reference/api/current-reference-api-oauth-token",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34458,7 +34458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "OCTET_LENGTH",
-    "href": "/reference/sql/sql-functions/functions/OCTET_LENGTH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-octet-length",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34483,7 +34483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "OPTIMIZE TABLE",
-    "href": "/reference/sql/commands/apache-iceberg-tables/optimize-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-optimize-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34508,7 +34508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "OVERLAPS",
-    "href": "/reference/sql/sql-functions/functions/OVERLAPS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-overlaps",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34533,7 +34533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Oracle Data Types",
-    "href": "/reference/sql/data-types/mappings/oracle",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-oracle",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34558,7 +34558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PARSE_URL",
-    "href": "/reference/sql/sql-functions/functions/PARSE_URL",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-parse-url",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34583,7 +34583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PERCENTILE_CONT",
-    "href": "/reference/sql/sql-functions/functions/PERCENTILE_CONT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-percentile-cont",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34608,7 +34608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PERCENTILE_DISC",
-    "href": "/reference/sql/sql-functions/functions/PERCENTILE_DISC",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-percentile-disc",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34633,7 +34633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PERCENT_RANK",
-    "href": "/reference/sql/sql-functions/functions/PERCENT_RANK",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-percent-rank",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34658,7 +34658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PI",
-    "href": "/reference/sql/sql-functions/functions/PI",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-pi",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34683,7 +34683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PMOD",
-    "href": "/reference/sql/sql-functions/functions/PMOD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-pmod",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34708,7 +34708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "POSITION",
-    "href": "/reference/sql/sql-functions/functions/POSITION",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-position",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34733,7 +34733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "POW__POWER",
-    "href": "/reference/sql/sql-functions/functions/POW__POWER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-pow-power",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34758,7 +34758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Percentile",
-    "href": "/reference/sql/sql-functions/PERCENTILE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-percentile",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34783,7 +34783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Perform Nessie Maintenance",
-    "href": "/reference/admin-cli/nessie-maintenance",
+    "href": "/reference/admin-cli/current-reference-admin-cli-nessie-maintenance",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34808,7 +34808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Personal Access Token",
-    "href": "/reference/api/personal-access-token",
+    "href": "/reference/api/current-reference-api-personal-access-token",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34833,7 +34833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "PostgreSQL Data Types",
-    "href": "/reference/sql/data-types/mappings/postgres",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-postgres",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34858,7 +34858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Privileges",
-    "href": "/reference/sql/commands/rbac",
+    "href": "/reference/sql-commands/current-reference-sql-commands-row-column-policies",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34883,7 +34883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "QUARTER",
-    "href": "/reference/sql/sql-functions/functions/QUARTER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-quarter",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34908,7 +34908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "QUERY_USER",
-    "href": "/reference/sql/sql-functions/functions/QUERY_USER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-query-user",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34933,7 +34933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "QUOTE",
-    "href": "/reference/sql/sql-functions/functions/QUOTE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-quote",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34958,7 +34958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Queue",
-    "href": "/reference/api/wlm/queue",
+    "href": "/reference/api/current-reference-api-wlm-queue",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -34983,7 +34983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RADIANS",
-    "href": "/reference/sql/sql-functions/functions/RADIANS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-radians",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35008,7 +35008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RANDOM",
-    "href": "/reference/sql/sql-functions/functions/RANDOM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-random",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35033,7 +35033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RANK",
-    "href": "/reference/sql/sql-functions/functions/RANK",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-rank",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35058,7 +35058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REGEXP_COL_LIKE",
-    "href": "/reference/sql/sql-functions/functions/REGEXP_COL_LIKE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-regexp-col-like",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35083,7 +35083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REGEXP_EXTRACT",
-    "href": "/reference/sql/sql-functions/functions/REGEXP_EXTRACT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-regexp-extract",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35108,7 +35108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REGEXP_LIKE",
-    "href": "/reference/sql/sql-functions/functions/REGEXP_LIKE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-regexp-like",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35133,7 +35133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REGEXP_MATCHES",
-    "href": "/reference/sql/sql-functions/functions/REGEXP_MATCHES",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-regexp-matches",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35158,7 +35158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REGEXP_REPLACE",
-    "href": "/reference/sql/sql-functions/functions/REGEXP_REPLACE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-regexp-replace",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35183,7 +35183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REGEXP_SPLIT",
-    "href": "/reference/sql/sql-functions/functions/REGEXP_SPLIT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-regexp-split",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35208,7 +35208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REPEAT",
-    "href": "/reference/sql/sql-functions/functions/REPEAT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-repeat",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35233,7 +35233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REPEATSTR",
-    "href": "/reference/sql/sql-functions/functions/REPEATSTR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-repeatstr",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35258,7 +35258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REPLACE",
-    "href": "/reference/sql/sql-functions/functions/REPLACE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-replace",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35283,7 +35283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RESET QUEUE",
-    "href": "/reference/sql/commands/reset-queue",
+    "href": "/reference/sql-commands/current-reference-sql-commands-reset-queue",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35308,7 +35308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RESET TAG",
-    "href": "/reference/sql/commands/reset-tag",
+    "href": "/reference/sql-commands/current-reference-sql-commands-reset-tag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35333,7 +35333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "REVERSE",
-    "href": "/reference/sql/sql-functions/functions/REVERSE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-reverse",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35358,7 +35358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RIGHT",
-    "href": "/reference/sql/sql-functions/functions/RIGHT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-right",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35383,7 +35383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ROLLBACK | Dremio Documentation",
-    "href": "/reference/sql/commands/apache-iceberg-tables/rollback-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-rollback-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35408,7 +35408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ROUND",
-    "href": "/reference/sql/sql-functions/functions/ROUND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-round",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35433,7 +35433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ROW_NUMBER",
-    "href": "/reference/sql/sql-functions/functions/ROW_NUMBER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-row-number",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35458,7 +35458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RPAD",
-    "href": "/reference/sql/sql-functions/functions/RPAD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-rpad",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35483,7 +35483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RSHIFT",
-    "href": "/reference/sql/sql-functions/functions/RSHIFT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-rshift",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35508,7 +35508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "RTRIM",
-    "href": "/reference/sql/sql-functions/functions/RTRIM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-rtrim",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35533,7 +35533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Recommendations",
-    "href": "/reference/api/current-reference-api-reflections-reflection-recommendations",
+    "href": "/reference/api/reflections/reflection-recommendations",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35583,7 +35583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reflection",
-    "href": "/reference/api/current-reference-api-reflections",
+    "href": "/reference/api/reflections",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35608,7 +35608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reflection Summary",
-    "href": "/reference/api/current-reference-api-reflections-reflection-summary",
+    "href": "/reference/api/reflections/reflection-summary",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35633,7 +35633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reflections",
-    "href": "/reference/sql/commands/acceleration",
+    "href": "/reference/sql-commands/current-reference-sql-commands-acceleration",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35658,7 +35658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Regular Expressions",
-    "href": "/reference/sql/sql-functions/REGULAR_EXPRESSIONS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-regular-expressions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35683,7 +35683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Remove Duplicate Roles",
-    "href": "/reference/admin-cli/remove-roles",
+    "href": "/reference/admin-cli/current-reference-admin-cli-remove-roles",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35708,7 +35708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Repair ACLS",
-    "href": "/reference/admin-cli/repair-acls",
+    "href": "/reference/admin-cli/current-reference-admin-cli-repair-acls",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35733,7 +35733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reserved Words",
-    "href": "/reference/sql/reserved-keywords",
+    "href": "/reference/general/current-reference-sql-reserved-keywords",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35758,7 +35758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Reset Password",
-    "href": "/reference/admin-cli/reset-password",
+    "href": "/reference/admin-cli/current-reference-admin-cli-reset-password",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35783,7 +35783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Restore Dremio",
-    "href": "/reference/admin-cli/restore",
+    "href": "/reference/admin-cli/current-reference-admin-cli-restore",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35808,7 +35808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Role",
-    "href": "/reference/api/roles",
+    "href": "/reference/api/current-reference-api-roles",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35833,7 +35833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Role Privileges",
-    "href": "/reference/api/roles/privilege",
+    "href": "/reference/api/current-reference-api-roles-privilege",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35858,7 +35858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Roles",
-    "href": "/reference/sql/commands/roles",
+    "href": "/reference/sql-commands/current-reference-sql-commands-roles",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35883,7 +35883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Row-Access & Column-Masking",
-    "href": "/reference/sql/commands/row-column-policies",
+    "href": "/reference/sql-commands/current-reference-sql-commands-row-column-policies",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35908,7 +35908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Rule",
-    "href": "/reference/api/wlm/rule",
+    "href": "/reference/api/current-reference-api-wlm-rule",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35933,7 +35933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SECOND",
-    "href": "/reference/sql/sql-functions/functions/SECOND",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-second",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35958,7 +35958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SELECT",
-    "href": "/reference/sql/commands/SELECT-statements",
+    "href": "/reference/sql-commands/current-reference-sql-commands-select-statements",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -35983,7 +35983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SESSION_USER",
-    "href": "/reference/sql/sql-functions/functions/SESSION_USER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-session-user",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36008,7 +36008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SET QUEUE",
-    "href": "/reference/sql/commands/set-queue",
+    "href": "/reference/sql-commands/current-reference-sql-commands-set-queue",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36033,7 +36033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SET TAG",
-    "href": "/reference/sql/commands/set-tag",
+    "href": "/reference/sql-commands/current-reference-sql-commands-set-tag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36058,7 +36058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SET_UNION",
-    "href": "/reference/sql/sql-functions/functions/SET_UNION",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-set-union",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36083,7 +36083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHA256",
-    "href": "/reference/sql/sql-functions/functions/SHA256",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sha256",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36108,7 +36108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHA512",
-    "href": "/reference/sql/sql-functions/functions/SHA512",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sha512",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36133,7 +36133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHA__SHA1",
-    "href": "/reference/sql/sql-functions/functions/SHA__SHA1",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sha-sha1",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36158,7 +36158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHOW BRANCHES",
-    "href": "/reference/sql/commands/nessie/show-branches",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-show-branches",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36183,7 +36183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHOW CREATE TABLE",
-    "href": "/reference/sql/commands/show-create-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-show-create-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36208,7 +36208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHOW CREATE VIEW",
-    "href": "/reference/sql/commands/show-create-view",
+    "href": "/reference/sql-commands/current-reference-sql-commands-show-create-view",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36233,7 +36233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHOW LOGS",
-    "href": "/reference/sql/commands/nessie/show-logs",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-show-logs",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36258,7 +36258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHOW TAGS",
-    "href": "/reference/sql/commands/nessie/show-tags",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-show-tags",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36283,7 +36283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SHOW TBLPROPERTIES",
-    "href": "/reference/sql/commands/show-table-properties",
+    "href": "/reference/sql-commands/current-reference-sql-commands-show-table-properties",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36308,7 +36308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SIGN",
-    "href": "/reference/sql/sql-functions/functions/SIGN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sign",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36333,7 +36333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SIMILAR_TO",
-    "href": "/reference/sql/sql-functions/functions/SIMILAR_TO",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-similar-to",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36358,7 +36358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SIN",
-    "href": "/reference/sql/sql-functions/functions/SIN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sin",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36383,7 +36383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SINH",
-    "href": "/reference/sql/sql-functions/functions/SINH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sinh",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36408,7 +36408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SIZE",
-    "href": "/reference/sql/sql-functions/functions/SIZE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-size",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36433,7 +36433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SOUNDEX",
-    "href": "/reference/sql/sql-functions/functions/SOUNDEX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-soundex",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36458,7 +36458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SPLIT_PART",
-    "href": "/reference/sql/sql-functions/functions/SPLIT_PART",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-split-part",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36483,7 +36483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL",
-    "href": "/reference/api/sql",
+    "href": "/reference/api/current-reference-api-sql",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36508,7 +36508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL Commands",
-    "href": "/reference/sql/commands",
+    "href": "/reference/sql-commands/current-reference-sql-commands",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36533,7 +36533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL Commands for Apache Iceberg Tables",
-    "href": "/reference/sql/commands/apache-iceberg-tables",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36558,7 +36558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL Commands for Nessie",
-    "href": "/reference/sql/commands/nessie",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-show-logs",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36583,7 +36583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL Functions",
-    "href": "/reference/sql/sql-functions",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36608,7 +36608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQL Reference",
-    "href": "/reference/sql",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36633,7 +36633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SQRT",
-    "href": "/reference/sql/sql-functions/functions/SQRT",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sqrt",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36658,7 +36658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "STARTS_WITH",
-    "href": "/reference/sql/sql-functions/functions/STARTS_WITH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-starts-with",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36683,7 +36683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "STDDEV",
-    "href": "/reference/sql/sql-functions/functions/STDDEV",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-stddev",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36708,7 +36708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "STDDEV_POP",
-    "href": "/reference/sql/sql-functions/functions/STDDEV_POP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-stddev-pop",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36733,7 +36733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "STDDEV_SAMP",
-    "href": "/reference/sql/sql-functions/functions/STDDEV_SAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-stddev-samp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36758,7 +36758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "STRING_BINARY",
-    "href": "/reference/sql/sql-functions/functions/STRING_BINARY",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-string-binary",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36783,7 +36783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "STRPOS",
-    "href": "/reference/sql/sql-functions/functions/STRPOS",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-strpos",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36808,7 +36808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ST_FROMGEOHASH",
-    "href": "/reference/sql/sql-functions/functions/ST_FROMGEOHASH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-st-fromgeohash",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36833,7 +36833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "ST_GEOHASH",
-    "href": "/reference/sql/sql-functions/functions/ST_GEOHASH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-st-geohash",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36858,7 +36858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SUBLIST",
-    "href": "/reference/sql/sql-functions/functions/SUBLIST",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sublist",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36883,7 +36883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SUBSTR",
-    "href": "/reference/sql/sql-functions/functions/SUBSTR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-substr",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36908,7 +36908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SUBSTRING",
-    "href": "/reference/sql/sql-functions/functions/SUBSTRING",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-substring",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36933,7 +36933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SUBSTRING_INDEX",
-    "href": "/reference/sql/sql-functions/functions/SUBSTRING_INDEX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-substring-index",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36958,7 +36958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SUM",
-    "href": "/reference/sql/sql-functions/functions/SUM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-sum",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -36983,7 +36983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.COPY_ERRORS_HISTORY",
-    "href": "/reference/sql/system-tables/copy-errors-history",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-copy-errors-history",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37008,7 +37008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.COPY_FILE_HISTORY",
-    "href": "/reference/sql/system-tables/copy-file-history",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-copy-file-history",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37033,7 +37033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.ENGINES",
-    "href": "/reference/sql/system-tables/engines",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-engines",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37058,7 +37058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.HISTORY.AUTONOMOUS_REFLECTIONS",
-    "href": "/reference/sql/system-tables/autonomous-reflections-historical",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-autonomous-reflections-historical",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37083,7 +37083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.HISTORY.MODEL_USAGE",
-    "href": "/reference/sql/system-tables/model-usage",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-model-usage",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37108,7 +37108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.JOBS",
-    "href": "/reference/sql/system-tables/jobs",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-jobs",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37133,7 +37133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.JOBS_RECENT",
-    "href": "/reference/sql/system-tables/jobs_recent",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-jobs-recent",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37158,7 +37158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.MATERIALIZATIONS",
-    "href": "/reference/sql/system-tables/materializations",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-materializations",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37183,7 +37183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.MEMBERSHIP",
-    "href": "/reference/sql/system-tables/membership",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-membership",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37208,7 +37208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.PIPES",
-    "href": "/reference/sql/system-tables/pipes",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-pipes",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37233,7 +37233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.PIPE_SUMMARY",
-    "href": "/reference/sql/system-tables/pipe_summary",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-pipe-summary",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37258,7 +37258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.PRIVILEGES",
-    "href": "/reference/sql/system-tables/privileges",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-privileges",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37283,7 +37283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.RECOMMEND_REFLECTIONS",
-    "href": "/reference/sql/table-functions/recommend-reflections",
+    "href": "/reference/general/current-reference-sql-table-functions-recommend-reflections",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37308,7 +37308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.REFLECTIONS",
-    "href": "/reference/sql/system-tables/reflections",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-reflections",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37333,7 +37333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.REFLECTION_DEPENDENCIES",
-    "href": "/reference/sql/system-tables/reflection-dependencies",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-reflection-dependencies",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37358,7 +37358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.REFLECTION_LINEAGE",
-    "href": "/reference/sql/table-functions/reflection-lineage",
+    "href": "/reference/general/current-reference-sql-table-functions-reflection-lineage",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37383,7 +37383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.REFLECTION_REFRESH_SETTINGS",
-    "href": "/reference/sql/table-functions/reflection-refresh-settings",
+    "href": "/reference/general/current-reference-sql-table-functions-reflection-refresh-settings",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37408,7 +37408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.RESULTS_CACHE",
-    "href": "/reference/sql/system-tables/results-cache",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-results-cache",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37433,7 +37433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.ROLES",
-    "href": "/reference/sql/system-tables/roles",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-roles",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37458,7 +37458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.TIMEZONE_NAMES",
-    "href": "/reference/sql/system-tables/timezone-names",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-timezone-names",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37483,7 +37483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.USERS",
-    "href": "/reference/sql/system-tables/users",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-users",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37508,7 +37508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.USER_DEFINED_FUNCTIONS",
-    "href": "/reference/sql/system-tables/user-defined-functions",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-user-defined-functions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37533,7 +37533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.VERSION",
-    "href": "/reference/sql/system-tables/version",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-version",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37558,7 +37558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.VIEWS",
-    "href": "/reference/sql/system-tables/views",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-views",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37583,7 +37583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYS.\\\"TABLES\\\"",
-    "href": "/reference/sql/system-tables/tables",
+    "href": "/reference/system-tables/current-reference-sql-system-tables-tables",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37608,7 +37608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SYSTEM_USER",
-    "href": "/reference/sql/sql-functions/functions/SYSTEM_USER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-system-user",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37633,7 +37633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Scripts",
-    "href": "/reference/api/scripts",
+    "href": "/reference/api/current-reference-api-scripts",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37658,7 +37658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Search",
-    "href": "/reference/api/search",
+    "href": "/reference/api/current-reference-api-search",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37683,7 +37683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Security Bulletins",
-    "href": "/reference/bulletins",
+    "href": "/reference/bulletins/current-reference-bulletins",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37708,7 +37708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Semi-Structured Data",
-    "href": "/reference/sql/sql-functions/SEMI-STRUCTURED_DATA",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-semi-structured-data",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37733,7 +37733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Source",
-    "href": "/reference/api/catalog/source",
+    "href": "/reference/api/current-reference-api-catalog-source",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37758,7 +37758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Source",
-    "href": "/reference/api/source",
+    "href": "/reference/api/current-reference-api-source",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37783,7 +37783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Source Configuration",
-    "href": "/reference/api/catalog/source/container-source-config",
+    "href": "/reference/api/current-reference-api-catalog-source-container-source-config",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37808,7 +37808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Sources",
-    "href": "/reference/sql/commands/sources",
+    "href": "/reference/sql-commands/current-reference-sql-commands-sources",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37833,7 +37833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Space",
-    "href": "/reference/api/catalog/container-space",
+    "href": "/reference/api/current-reference-api-catalog-container-space",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37858,7 +37858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "String",
-    "href": "/reference/sql/sql-functions/STRING",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-string",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37883,7 +37883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "System",
-    "href": "/reference/sql/sql-functions/SYSTEM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-system",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37908,7 +37908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "System Tables",
-    "href": "/reference/sql/system-tables",
+    "href": "/reference/system-tables/current-reference-sql-system-tables",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37933,7 +37933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TAN",
-    "href": "/reference/sql/sql-functions/functions/TAN",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-tan",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37958,7 +37958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TANH",
-    "href": "/reference/sql/sql-functions/functions/TANH",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-tanh",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -37983,7 +37983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TIMESTAMPADD",
-    "href": "/reference/sql/sql-functions/functions/TIMESTAMPADD",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-timestampadd",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38008,7 +38008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TIMESTAMPDIFF",
-    "href": "/reference/sql/sql-functions/functions/TIMESTAMPDIFF",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-timestampdiff",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38033,7 +38033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TIMESTAMPTYPE",
-    "href": "/reference/sql/sql-functions/functions/TIMESTAMPTYPE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-timestamptype",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38058,7 +38058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TOASCII",
-    "href": "/reference/sql/sql-functions/functions/TOASCII",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-toascii",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38083,7 +38083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TO_CHAR",
-    "href": "/reference/sql/sql-functions/functions/TO_CHAR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-to-char",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38108,7 +38108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TO_DATE",
-    "href": "/reference/sql/sql-functions/functions/TO_DATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-to-date",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38133,7 +38133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TO_HEX",
-    "href": "/reference/sql/sql-functions/functions/TO_HEX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-to-hex",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38158,7 +38158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TO_NUMBER",
-    "href": "/reference/sql/sql-functions/functions/TO_NUMBER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-to-number",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38183,7 +38183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TO_TIME",
-    "href": "/reference/sql/sql-functions/functions/TO_TIME",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-to-time",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38208,7 +38208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TO_TIMESTAMP",
-    "href": "/reference/sql/sql-functions/functions/TO_TIMESTAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-to-timestamp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38233,7 +38233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TRANSACTION_TIMESTAMP",
-    "href": "/reference/sql/sql-functions/functions/TRANSACTION_TIMESTAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-transaction-timestamp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38258,7 +38258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TRANSLATE",
-    "href": "/reference/sql/sql-functions/functions/TRANSLATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-translate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38283,7 +38283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TRIM",
-    "href": "/reference/sql/sql-functions/functions/TRIM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-trim",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38308,7 +38308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TRUNCATE",
-    "href": "/reference/sql/sql-functions/functions/TRUNCATE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-truncate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38333,7 +38333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TRUNCATE | Dremio Documentation",
-    "href": "/reference/sql/commands/apache-iceberg-tables/apache-iceberg-truncate",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-apache-iceberg-truncate",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38358,7 +38358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TRY_CONVERT_FROM",
-    "href": "/reference/sql/sql-functions/functions/TRY_CONVERT_FROM",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-try-convert-from",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38383,7 +38383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "TYPEOF",
-    "href": "/reference/sql/sql-functions/functions/TYPEOF",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-typeof",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38408,7 +38408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Table",
-    "href": "/reference/api/catalog/table",
+    "href": "/reference/api/current-reference-api-catalog-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38433,7 +38433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Table Functions",
-    "href": "/reference/sql/table-functions",
+    "href": "/reference/general/current-reference-sql-table-functions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38458,7 +38458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Tables",
-    "href": "/reference/sql/commands/tables",
+    "href": "/reference/sql-commands/current-reference-sql-commands-datasets",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38483,7 +38483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Tag",
-    "href": "/reference/api/catalog/tag",
+    "href": "/reference/api/current-reference-api-catalog-tag",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38508,7 +38508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Teradata Data Types",
-    "href": "/reference/sql/data-types/mappings/teradata",
+    "href": "/reference/data-types/current-reference-sql-data-types-mappings-teradata",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38533,7 +38533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Time Zone Support",
-    "href": "/reference/sql/data-types/time-zone-support",
+    "href": "/reference/data-types/current-reference-sql-data-types-time-zone-support",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38558,7 +38558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "UCASE",
-    "href": "/reference/sql/sql-functions/functions/UCASE",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-ucase",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38583,7 +38583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "UNBASE64",
-    "href": "/reference/sql/sql-functions/functions/UNBASE64",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-unbase64",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38608,7 +38608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "UNHEX",
-    "href": "/reference/sql/sql-functions/functions/UNHEX",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-unhex",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38633,7 +38633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "UNIX_TIMESTAMP",
-    "href": "/reference/sql/sql-functions/functions/UNIX_TIMESTAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-unix-timestamp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38658,7 +38658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "UPDATE",
-    "href": "/reference/sql/commands/apache-iceberg-tables/apache-iceberg-update",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-apache-iceberg-update",
     "section": "Reference",
     "keywords": [
       "Skip",
@@ -38683,7 +38683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "UPPER",
-    "href": "/reference/sql/sql-functions/functions/UPPER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-upper",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38708,7 +38708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "USE",
-    "href": "/reference/sql/commands/use",
+    "href": "/reference/sql-commands/current-reference-sql-commands-use",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38733,7 +38733,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "USER",
-    "href": "/reference/sql/sql-functions/functions/USER",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-user",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38758,7 +38758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Upgrade KV Store",
-    "href": "/reference/admin-cli/upgrade-KVstore",
+    "href": "/reference/admin-cli/current-reference-admin-cli-upgrade-kvstore",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38783,7 +38783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "User",
-    "href": "/reference/api/user",
+    "href": "/reference/api/current-reference-api-user",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38808,7 +38808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "User Privileges",
-    "href": "/reference/api/user/privilege",
+    "href": "/reference/api/current-reference-api-user-privilege",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38833,7 +38833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "User-Defined Function",
-    "href": "/reference/api/catalog/user-defined-function",
+    "href": "/reference/api/current-reference-api-catalog-user-defined-function",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38858,7 +38858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "User-Defined Functions",
-    "href": "/reference/sql/commands/functions",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38883,7 +38883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Users",
-    "href": "/reference/sql/commands/users",
+    "href": "/reference/sql-commands/current-reference-sql-commands-users",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38908,7 +38908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "VACUUM CATALOG",
-    "href": "/reference/sql/commands/nessie/vacuum-catalog",
+    "href": "/reference/sql-commands/current-reference-sql-commands-nessie-vacuum-catalog",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38933,7 +38933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "VACUUM TABLE | Dremio Documentation",
-    "href": "/reference/sql/commands/apache-iceberg-tables/vacuum-table",
+    "href": "/reference/sql-commands/current-reference-sql-commands-apache-iceberg-tables-vacuum-table",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38958,7 +38958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "VAR_POP",
-    "href": "/reference/sql/sql-functions/functions/VAR_POP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-var-pop",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -38983,7 +38983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "VAR_SAMP",
-    "href": "/reference/sql/sql-functions/functions/VAR_SAMP",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-var-samp",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39008,7 +39008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "View",
-    "href": "/reference/api/catalog/view",
+    "href": "/reference/api/current-reference-api-catalog-view",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39033,7 +39033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "WEEK",
-    "href": "/reference/sql/sql-functions/functions/WEEK",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-week",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39058,7 +39058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "WEEKOFYEAR",
-    "href": "/reference/sql/sql-functions/functions/WEEKOFYEAR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-weekofyear",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39083,7 +39083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "WITH",
-    "href": "/reference/sql/commands/with",
+    "href": "/reference/sql-commands/current-reference-sql-commands-with",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39108,7 +39108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Wiki",
-    "href": "/reference/api/catalog/wiki",
+    "href": "/reference/api/current-reference-api-catalog-wiki",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39133,7 +39133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Window",
-    "href": "/reference/sql/sql-functions/WINDOW",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-window",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39158,7 +39158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Workload Management",
-    "href": "/reference/api/wlm",
+    "href": "/reference/api/current-reference-api-wlm",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39183,7 +39183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "XOR",
-    "href": "/reference/sql/sql-functions/functions/XOR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-xor",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39208,7 +39208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "YEAR",
-    "href": "/reference/sql/sql-functions/functions/YEAR",
+    "href": "/reference/sql-functions/current-reference-sql-sql-functions-functions-year",
     "section": "Reference",
     "keywords": [
       "Dremio",
@@ -39233,7 +39233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reflections/reflection-recommendations",
+    "href": "/reference/api/reflections/reflection-recommendations",
     "section": "Reflections",
     "keywords": [
       "Page",
@@ -39258,7 +39258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reflections/using-nessie-branches-with-reflections",
+    "href": "/acceleration/general/current-acceleration-manual-reflections-using-nessie-branches-with-reflections",
     "section": "Reflections",
     "keywords": [
       "Page",
@@ -39283,7 +39283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reflections/using-reflection-hints",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections-using-reflection-hints",
     "section": "Reflections",
     "keywords": [
       "Page",
@@ -39308,7 +39308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/reflections/best-practices",
+    "href": "/acceleration/manual/current-acceleration-manual-reflections",
     "section": "Reflections",
     "keywords": [
       "Page",
@@ -39333,7 +39333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "17.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-1700-release-notes",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-1700-release-notes",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39358,7 +39358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "18.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-1800-release-notes",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-1800-release-notes",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39383,7 +39383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "19.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-1900-release-notes",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-1900-release-notes",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39408,7 +39408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "20.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-200-release",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-200-release",
     "section": "Release Notes",
     "keywords": [
       "Skip",
@@ -39433,7 +39433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "21.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-210-release",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-210-release",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39458,7 +39458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "22.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-220-release",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-220-release",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39483,7 +39483,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "23.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-230-release",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-230-release",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39508,7 +39508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "24.x Release Notes",
-    "href": "/release-notes/unsupported-releases/version-240-release",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases-version-240-release",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39533,7 +39533,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "25.x Release Notes",
-    "href": "/release-notes/version-250-release",
+    "href": "/release-notes/version/current-release-notes-version-250-release",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39558,7 +39558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "26.x Release Notes",
-    "href": "/release-notes/version-260-release",
+    "href": "/release-notes/version/current-release-notes-version-260-release",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39583,7 +39583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Arrow Flight SQL JDBC Release Notes",
-    "href": "/release-notes/arrow-flight-sql-jdbc",
+    "href": "/release-notes/sql/current-release-notes-arrow-flight-sql-jdbc",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39608,7 +39608,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Arrow Flight SQL ODBC Release Notes",
-    "href": "/release-notes/arrow-flight-sql-odbc",
+    "href": "/release-notes/sql/current-release-notes-arrow-flight-sql-odbc",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39633,7 +39633,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dependencies and Licenses",
-    "href": "/release-notes/dependencies",
+    "href": "/release-notes/general/current-release-notes-dependencies",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39658,7 +39658,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/release-notes/version-1800-release-notes",
+    "href": "/release-notes/version/current-release-notes-version-1800-release-notes",
     "section": "Release Notes",
     "keywords": [
       "Page",
@@ -39683,7 +39683,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/release-notes/version-240-release",
+    "href": "/release-notes/version/current-release-notes-version-240-release",
     "section": "Release Notes",
     "keywords": [
       "Page",
@@ -39708,7 +39708,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Legacy Dremio JDBC Release Notes",
-    "href": "/release-notes/jdbc",
+    "href": "/release-notes/general/current-release-notes-jdbc",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39758,7 +39758,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Unsupported Releases",
-    "href": "/release-notes/unsupported-releases",
+    "href": "/release-notes/unsupported/current-release-notes-unsupported-releases",
     "section": "Release Notes",
     "keywords": [
       "Dremio",
@@ -39783,7 +39783,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Shared Responsibility Models | Dremio Documentation",
-    "href": "/responsibility",
+    "href": "https://www.dremio.com/responsibility",
     "section": "Responsibility",
     "keywords": [
       "Shared",
@@ -39808,7 +39808,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AWS Lake Formation",
-    "href": "/security/integrations/lake-formation",
+    "href": "/security/integrations/current-security-integrations-lake-formation",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39833,7 +39833,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "AWS Secrets Manager",
-    "href": "/security/secrets-management/aws-secrets-manager",
+    "href": "/security/secrets-management/current-security-secrets-management-aws-secrets-manager",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39858,7 +39858,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Access Control",
-    "href": "/security/rbac",
+    "href": "/security/access-control/current-security-rbac",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39883,7 +39883,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Apache Ranger",
-    "href": "/security/integrations/row-column-policies-ranger",
+    "href": "/security/integrations/current-security-integrations-row-column-policies-ranger",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39908,7 +39908,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Application Authentication",
-    "href": "/security/authentication/application-authentication",
+    "href": "/security/authentication/current-security-authentication-application-authentication",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39933,7 +39933,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Audit Logging",
-    "href": "/security/auditing",
+    "href": "/security/audit-logging/current-security-auditing",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39958,7 +39958,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Authentication",
-    "href": "/security/authentication",
+    "href": "/security/authentication/current-security-authentication",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -39983,7 +39983,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Azure Key Vault",
-    "href": "/security/secrets-management/azure-key-vault",
+    "href": "/security/secrets-management/current-security-secrets-management-azure-key-vault",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40008,7 +40008,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Compliance",
-    "href": "/security/compliance",
+    "href": "/security/compliance/current-security-compliance",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40033,7 +40033,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Dremio Enterprise Documentation",
-    "href": "/security/authentication/ldap",
+    "href": "/security/authentication/current-security-authentication-ldap",
     "section": "Security",
     "keywords": [
       "Page",
@@ -40058,7 +40058,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "External Token Providers",
-    "href": "/security/authentication/application-authentication/external-token",
+    "href": "/security/authentication/current-security-authentication-application-authentication-external-token",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40083,7 +40083,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "HashiCorp Vault",
-    "href": "/security/secrets-management/hashicorp-vault",
+    "href": "/security/secrets-management/current-security-secrets-management-hashicorp-vault",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40108,7 +40108,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Identity Providers",
-    "href": "/security/authentication/identity-providers",
+    "href": "/security/authentication/current-security-authentication-identity-providers",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40133,7 +40133,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Idle Session Timeout",
-    "href": "/security/idle-session-timeout",
+    "href": "/security/idle-session-timeout/current-security-idle-session-timeout",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40158,7 +40158,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Inbound Impersonation",
-    "href": "/security/rbac/inbound-impersonation",
+    "href": "/security/access-control/current-security-rbac-inbound-impersonation",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40183,7 +40183,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Integrations",
-    "href": "/security/integrations",
+    "href": "/security/integrations/current-security-integrations",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40208,7 +40208,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "LDAP",
-    "href": "/security/authentication/identity-providers/ldap",
+    "href": "/security/authentication/current-security-authentication-identity-providers-ldap",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40233,7 +40233,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Manage Users",
-    "href": "/security/authentication/users",
+    "href": "/security/authentication/current-security-authentication-users",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40258,7 +40258,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Entra ID",
-    "href": "/security/authentication/identity-providers/microsoft-entra-id",
+    "href": "/security/authentication/current-security-authentication-identity-providers-microsoft-entra-id",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40283,7 +40283,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Microsoft Power BI",
-    "href": "/security/authentication/application-authentication/power-bi-aad-config",
+    "href": "/security/authentication/current-security-authentication-application-authentication-power-bi-aad-config",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40308,7 +40308,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "OpenID",
-    "href": "/security/authentication/identity-providers/oidc",
+    "href": "/security/authentication/current-security-authentication-identity-providers-oidc",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40333,7 +40333,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Personal Access Tokens",
-    "href": "/security/authentication/personal-access-tokens",
+    "href": "/security/authentication/current-security-authentication-personal-access-tokens",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40358,7 +40358,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Privacera",
-    "href": "/security/integrations/privacera",
+    "href": "/security/integrations/current-security-integrations-privacera",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40383,7 +40383,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Privileges",
-    "href": "/security/rbac/privileges",
+    "href": "/security/access-control/current-security-rbac-privileges",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40408,7 +40408,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Role Management",
-    "href": "/security/rbac/roles",
+    "href": "/security/access-control/current-security-rbac-roles",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40433,7 +40433,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "SCIM",
-    "href": "/security/authentication/identity-providers/scim",
+    "href": "/security/authentication/current-security-authentication-identity-providers-scim",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40458,7 +40458,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Secrets Management",
-    "href": "/security/secrets-management",
+    "href": "/security/secrets-management/current-security-secrets-management",
     "section": "Security",
     "keywords": [
       "Dremio",
@@ -40508,7 +40508,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Refreshing Metadata",
-    "href": "/software/advanced-administration/metadata-caching",
+    "href": "/administration/general/current-admin-metadata-caching",
     "section": "Software",
     "keywords": [
       "Dremio",
@@ -40558,7 +40558,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Architecture",
-    "href": "/what-is-dremio/architecture",
+    "href": "/what-is-dremio/current-what-is-dremio-architecture",
     "section": "What Is Dremio",
     "keywords": [
       "Dremio",
@@ -40583,7 +40583,7 @@ export const SearchEntries: SearchEntry[] = [
   },
   {
     "title": "Key Concepts",
-    "href": "/what-is-dremio/key-concepts",
+    "href": "/what-is-dremio/current-what-is-dremio-key-concepts",
     "section": "What Is Dremio",
     "keywords": [
       "Dremio",

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/SUM
+slug: /reference/sql/sql-functions/functions/SUM
 title: "SUM | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64359.069111416
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Aggregate](/reference/sql/sql-functions), [Window](/reference/sql/sql-functions)
 # SUM
 Returns the sum of non-NULL input expressions.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### SUM(_col_name_ NUMERIC) → same as input except for INT, which returns BIGINT[​](/reference/sql/sql-functions#sumcol_name-numeric--same-as-input-except-for-int-which-returns-bigint "Direct link to sumcol_name-numeric--same-as-input-except-for-int-which-returns-bigint")
+## Syntax
+### SUM(_col_name_ NUMERIC) → same as input except for INT, which returns BIGINT[​](/reference/sql/sql-functions)
   * col_name: The name of the column for which to return the sum. The values in the column must be numbers, such as INT, DOUBLE, or FLOAT.
 
 
@@ -70,17 +71,17 @@ FROM Samples."samples.dremio.com"."zips.json";
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
-The SUM function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions#window-functions) for more information and syntax.
+## Usage Notes[​](/reference/sql/sql-functions)
+The SUM function supports optional `PARTITION BY`, `ORDER_BY`, and cumulative and sliding window frame subclauses. See [Window Functions](/reference/sql/sql-functions) for more information and syntax.
 Was this page helpful?
 [Previous SUBSTRING_INDEX](/reference/sql/sql-functions)[Next SYSTEM_USER](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SUBSTRING_INDEX](/reference/sql/sql-functions)[Next SYSTEM_USER](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FSUM%2F&_biz_t=1777950679456&_biz_i=SUM%20%7C%20Dremio%20Documentation&_biz_n=696&rnd=706659&cdn_o=a&_biz_z=1777950679456)
+!

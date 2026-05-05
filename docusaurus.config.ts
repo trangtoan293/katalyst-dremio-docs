@@ -41,31 +41,7 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      "@docusaurus/plugin-client-redirects",
-      {
-        redirects: [
-          {
-            from: "/load-data/current-load-data",
-            to: "/load-data",
-          },
-          {
-            from: "/get-started/current-get-started",
-            to: "/get-started",
-          },
-          {
-            from: "/security/current-security",
-            to: "/security",
-          },
-          {
-            from: "/what-is-dremio/current-what-is-dremio",
-            to: "/what-is-dremio",
-          },
-        ],
-      },
-    ],
-  ],
+  plugins: [],
 
   themeConfig: {
     image: "img/docusaurus-social-card.jpg",

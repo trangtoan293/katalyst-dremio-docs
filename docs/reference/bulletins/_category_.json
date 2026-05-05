@@ -2,7 +2,7 @@
   "label": "Bulletins",
   "position": 8,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Bulletins"
+    "type": "doc",
+    "id": "reference/bulletins/current-reference-bulletins"
   }
 }

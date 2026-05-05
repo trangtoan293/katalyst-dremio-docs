@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/jobs_recent
+slug: /reference/sql/system-tables/jobs_recent
 title: "SYS.JOBS_RECENT | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64075.208142041
@@ -23,11 +24,11 @@ FROM sys.jobs_recent
 
 ```
 
-## Example Output[​](/reference/sql/system-tables#example-output "Direct link to Example Output")  
+## Example Output[​](/reference/sql/system-tables)  
 | job_id  | status  | query_type  | user_name  | queried_datasets  | scanned_datasets  | attempt_count  | submitted_ts  | attempt_started_ts  | metadata_retrieval_ts  | planning_start_ts  | query_enqueued_ts  | engine_start_ts  | execution_planning_ts  | execution_start_ts  | final_state_ts  | submitted_epoch_millis  | attempt_started_epoch_millis  | metadata_retrieval_epoch_millis  | planning_start_epoch_millis  | query_enqueued_epoch_millis  | engine_start_epoch_millis  | execution_planning_epoch_millis  | execution_start_epoch_millis  | final_state_epoch_millis  | planner_estimated_cost  | rows_scanned  | bytes_scanned  | rows_returned  | bytes_returned  | accelerated  | queue_name  | engine  | error_msg  | query  | is_profile_incomplete  | execution_allocated_bytes  | execution_cpu_time_millis  | query_cost  | memory_allocated  | setup_time_ns  | wait_time_ns  | execution_cpu_time_ns  | context  | rule_name  | rule_content  | rule_action  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 1d3091b1-d0be-0169-8ace-e43f562c7000  | RUNNING  | UI_RUN  | dremio  | [Samples.samples.dremio.com.NYC-taxi-trips-iceberg]  | [NYC-taxi-trips-iceberg]  | 1  | 2024-06-12 16:15:29.834  | 2024-06-12 16:15:29.834  | 2024-06-12 16:15:29.834  | 2024-06-12 16:15:29.842  | 2024-06-12 16:15:29.991  | 2024-06-12 16:15:29.991  | 2024-06-12 16:15:29.998  | 2024-06-12 16:15:30.286  | 2024-06-12 16:15:35.077  | 1718208929834  | 1718208929834  | 1718208929834  | 1718208929842  | 1718208929991  | 1718208929991  | 1718208929998  | 1718208930286  | 1718208935077  | 1.3877935193058197E9  | 71424  | 3481920  | 60000  | 2925000  | FALSE  | Low Cost User Queries  | _empty text_  | _empty text_  | SELECT * FROM "NYC-taxi-trips-iceberg"  | false  | 21630908  | 864  | 3.38373777E8  | 201296896  | 2192224950  | 8919515067  | 7848800304  | [Samples, samples.dremio.com]  | UI Previews  | query_type() = 'UI Previews'  | PLACE  |  
-## Columns[​](/reference/sql/system-tables#columns "Direct link to Columns")  
+## Columns[​](/reference/sql/system-tables)  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | job_id  | varchar  | The UUID to identify the job.  |  
@@ -82,13 +83,13 @@ Enum: `ACCELERATOR_CREATE`, `ACCELERATOR_DROP`, `ACCELERATOR_EXPLAIN`, `FLIGHT`,
 | rule_action  | varchar  | The `REJECT` or `PLACE` action taken by the routing rule (available as of Dremio 25.2.19+).  |  
 Was this page helpful?
 [Previous SYS.JOBS](/reference/sql/system-tables/jobs)[Next SYS.MATERIALIZATIONS](/reference/sql/system-tables/materializations)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.JOBS](/reference/sql/system-tables/jobs)[Next SYS.MATERIALIZATIONS](/reference/sql/system-tables/materializations)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fjobs_recent%2F&_biz_t=1777950395022&_biz_i=SYS.JOBS_RECENT%20%7C%20Dremio%20Documentation&_biz_n=153&rnd=684241&cdn_o=a&_biz_z=1777950395023)
+!

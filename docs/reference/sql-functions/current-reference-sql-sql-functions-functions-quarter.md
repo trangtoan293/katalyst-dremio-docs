@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/QUARTER
+slug: /reference/sql/sql-functions/functions/QUARTER
 title: "QUARTER | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64344.761473958
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Date/Time](/reference/sql/sql-functions)
 # QUARTER
 Extracts the quarter number (from 1 to 4) for a given date or timestamp.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### EXTRACT(QUARTER FROM _date_timestamp_expression_ string) → bigint[​](/reference/sql/sql-functions#extractquarter-from-date_timestamp_expression-string--bigint "Direct link to extractquarter-from-date_timestamp_expression-string--bigint")
+## Syntax
+### EXTRACT(QUARTER FROM _date_timestamp_expression_ string) → bigint[​](/reference/sql/sql-functions)
   * date_timestamp_expression: A `DATE` or `TIMESTAMP` expression.
 
 
@@ -47,16 +48,16 @@ SELECT EXTRACT(QUARTER FROM CAST('2019-08-12 01:00:00' AS TIMESTAMP))
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 This function uses the [`EXTRACT`](/reference/sql/sql-functions) function. When using the [`CAST`](/reference/sql/sql-functions) function, timestamps containing milliseconds are not allowed.
 Was this page helpful?
 [Previous POW__POWER](/reference/sql/sql-functions)[Next QUERY_USER](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous POW__POWER](/reference/sql/sql-functions)[Next QUERY_USER](/reference/sql/sql-functions)

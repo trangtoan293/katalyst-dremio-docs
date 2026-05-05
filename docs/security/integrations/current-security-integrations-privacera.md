@@ -1,5 +1,6 @@
 ---
 url: /security/integrations/privacera
+slug: /security/integrations/privacera
 title: "Privacera | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64078.155555125
@@ -20,23 +21,23 @@ Dremio and Privacera have partnered to provide an integration that allows organi
 
 
 When using the Privacera plugin for Dremio, no additional or external tools should be used for the policy synchronization between Privacera and Dremio.
-## Prerequisites[​](/security/integrations/privacera#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
 Ensure that you meet the following prerequisites before you begin the integration:
   * An on-premise or SaaS Privacera Manager host that is running Privacera services
   * A deployment of Dremio Enterprise Edition 24.1 or later -- Community Edition and Dremio Cloud _are not_ supported at this time
 
 
-## Installation[​](/security/integrations/privacera#installation "Direct link to Installation")
+## Installation​
 Refer to the 
 After installing the Privacera plugin, ensure that the **Enable external authorization plugin** option is selected under **Settings &gt; Advanced Options** on all sources that should utilize the integration with Privacera. After updating any source configurations, restart Dremio.
 Was this page helpful?
 [Previous AWS Lake Formation](/security/integrations/lake-formation)[Next Apache Ranger](/security/integrations/row-column-policies-ranger)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous AWS Lake Formation](/security/integrations/lake-formation)[Next Apache Ranger](/security/integrations/row-column-policies-ranger)

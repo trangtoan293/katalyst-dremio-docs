@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/SELECT-statements
+slug: /reference/sql/commands/SELECT-statements
 title: "SELECT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64244.477173583
@@ -14,10 +15,10 @@ crawled_at: 64244.477173583
 Version: current [26.x]
 On this page
 # SELECT
-Dremio supports querying using standard `SELECT` statements. You can query tables and views that are contained in Dremio's [space](/what-is-dremio/key-concepts#spaces-and-folders) entity (including your home space) and in the sources that are connected to Dremio (such as Amazon S3 and Oracle).
+Dremio supports querying using standard `SELECT` statements. You can query tables and views that are contained in Dremio's [space](/what-is-dremio/key-concepts) entity (including your home space) and in the sources that are connected to Dremio (such as Amazon S3 and Oracle).
 When working with Apache Iceberg tables, you can query a table's metadata as well as run queries by snapshot ID.
 Dremio supports reading positional deletes and equality deletes for Apache Iceberg v2 tables. Dremio performs writes using copy-on-write by default and supports writes using merge-on-read if specified in the [Iceberg table properties](/developer/data-formats/apache-iceberg/table-properties).
-## Querying a Table's Data[​](/reference/sql/commands#querying-a-tables-data "Direct link to Querying a Table's Data")
+## Querying a Table's Data[​](/reference/sql/commands)
 Syntax
 
 ```
@@ -40,7 +41,7 @@ SELECT [ ALL | DISTINCT ]
 
 ```
 
-### Parameters[​](/reference/sql/commands#parameters "Direct link to Parameters")
+### Parameters[​](/reference/sql/commands)
 [ WITH ... ] String Optional
 Defines a common table expression (CTE), which is a named subquery. For more information, read [WITH](/reference/sql/commands/with).
 * * *
@@ -164,7 +165,7 @@ Specifies a reference for the current SQL session. When this parameter is omitte
   * ``timestamp``: Available for Iceberg table queries only. Changes the commit reference point to the most recent Iceberg snapshot as of the provided timestamp. ``timestamp`` may be any SQL expression that resolves to a single timestamp type value, for example: `CAST( DATE_SUB(CURRENT_DATE,1) AS TIMESTAMP )` or `TIMESTAMP '2022-07-001:30:00.000'`.
 
 
-### Examples[​](/reference/sql/commands#examples "Direct link to Examples")
+### Examples[​](/reference/sql/commands)
 Query an existing table in a data lake source
 
 ```
@@ -341,7 +342,7 @@ FROM nessiesource.orders at branch devbranch;
 
 ```
 
-### Examples for Iceberg Tables[​](/reference/sql/commands#examples-for-iceberg-tables "Direct link to Examples for Iceberg Tables")
+### Examples for Iceberg Tables[​](/reference/sql/commands)
 Time travel query on an Iceberg table using a timestamp
 
 ```
@@ -376,7 +377,7 @@ GROUP BY snapshot_id
 
 ```
 
-## Forcing an Even Distribution of Build-Side Join Data Across All Executor Nodes[​](/reference/sql/commands#forcing-an-even-distribution-of-build-side-join-data-across-all-executor-nodes "Direct link to Forcing an Even Distribution of Build-Side Join Data Across All Executor Nodes")
+## Forcing an Even Distribution of Build-Side Join Data Across All Executor Nodes[​](/reference/sql/commands)
 SQL hints generally are instructions to the query planner about how to execute queries. You can use a `BROADCAST` SQL hint if a query profile indicates that data involved in a join of two tables is heavily skewed and overloading one or more executor nodes. The hint forces an even distribution of the build-side join data across all executor nodes.
 These hints are ignored for nested-loop joins and are not supported on views.
 A `BROADCAST` hint must be used immediately after the name of a table.
@@ -407,7 +408,7 @@ SELECT *
 
 ```
 
-## Querying Relational-Database Sources with External Queries[​](/reference/sql/commands#querying-relational-database-sources-with-external-queries "Direct link to Querying Relational-Database Sources with External Queries")
+## Querying Relational-Database Sources with External Queries[​](/reference/sql/commands)
 For information about what external queries are and the privilege needed to run them, see [Querying Relational-Database Sources Directly](/help-support/advanced-topics/external-queries).
 External queries use the following syntax:
 Syntax of external queries
@@ -449,7 +450,7 @@ source_b.sales AS b
 
   
 
-## Querying information about rejected records in files used by a COPY INTO operation for which ON_ERROR was set to 'continue' or 'skip_file'[​](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file "Direct link to Querying information about rejected records in files used by a COPY INTO operation for which ON_ERROR was set to 'continue' or 'skip_file'")
+## Querying information about rejected records in files used by a COPY INTO operation for which ON_ERROR was set to 'continue' or 'skip_file'[​](/reference/sql/commands)
 Queries use the `copy_errors()` function.
 Syntax
 
@@ -477,13 +478,13 @@ The records returned consist of these fields:
 | error  | string  | A message describing the error.  |  
 Was this page helpful?
 [Previous SQL Commands for Nessie](/reference/sql/commands/nessie)[Next ALTER FOLDER](/reference/sql/commands/alter-folder)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SQL Commands for Nessie](/reference/sql/commands/nessie)[Next ALTER FOLDER](/reference/sql/commands/alter-folder)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2FSELECT-statements%2F&_biz_t=1777950564909&_biz_i=SELECT%20%7C%20Dremio%20Documentation&_biz_n=476&rnd=539491&cdn_o=a&_biz_z=1777950564909)
+!

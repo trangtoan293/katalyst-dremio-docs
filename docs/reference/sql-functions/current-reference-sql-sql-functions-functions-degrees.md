@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/DEGREES
+slug: /reference/sql/sql-functions/functions/DEGREES
 title: "DEGREES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64310.825449416
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Math](/reference/sql/sql-functions)
 # DEGREES
 Converts radians to degrees.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### DEGREES(_numeric_expression_ NUMERIC) → FLOAT[​](/reference/sql/sql-functions#degreesnumeric_expression-numeric--float "Direct link to degreesnumeric_expression-numeric--float")
+## Syntax
+### DEGREES(_numeric_expression_ NUMERIC) → FLOAT[​](/reference/sql/sql-functions)
   * numeric_expression: The number of radians. This must be an DOUBLE, INTEGER, or FLOAT.
 
 
@@ -49,12 +50,12 @@ SELECT DEGREES(1)
 
 Was this page helpful?
 [Previous DECRYPT](/reference/sql/sql-functions)[Next DENSE_RANK](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DECRYPT](/reference/sql/sql-functions)[Next DENSE_RANK](/reference/sql/sql-functions)

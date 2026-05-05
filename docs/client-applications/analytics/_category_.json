@@ -2,7 +2,7 @@
   "label": "Analytics",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Analytics"
+    "type": "doc",
+    "id": "client-applications/analytics/current-client-applications-domo"
   }
 }

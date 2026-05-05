@@ -1,5 +1,6 @@
 ---
 url: /data-products/discover/metadata
+slug: /data-products/discover/metadata
 title: "View Metadata of a Dataset | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64033.175918833
@@ -17,11 +18,11 @@ To view the metadata, hover over a dataset to see a metadata card appear with de
 ![This screenshot is displaying the metadata card.](https://docs.dremio.com/images/software-metadata-card.png)  
 | Location  | Description  |  
 | --- | --- |  
-| 1  | Icon represents the dataset format as a table ![](https://docs.dremio.com/images/icons/PhysicalDataset.svg) or a view ![](https://docs.dremio.com/images/icons/VirtualDataset.svg).  |  
+| 1  | Icon represents the dataset format as a table ! or a view !.  |  
 | 2  | Card title displays the dataset name.  |  
-| 3  |  ![](https://docs.dremio.com/images/software-reflection-icon.png) will appear if the dataset has a Reflection.  |  
-| 4  | Click ![](https://docs.dremio.com/images/cloud/dataset-sql-runner-icon.png) to query the dataset.  |  
-| 5  | Click either ![](https://docs.dremio.com/images/icons/edit.png) to edit or ![](https://docs.dremio.com/images/icons/go-to-table.png) to view the dataset. The option that you see depends on your dataset privileges.  |  
+| 3  |  ! will appear if the dataset has a Reflection.  |  
+| 4  | Click ! to query the dataset.  |  
+| 5  | Click either ! to edit or ! to view the dataset. The option that you see depends on your dataset privileges.  |  
 | 6  | The path where the dataset is located.  |  
 | 7  | Displays any labels that have been applied to the dataset.  |  
 | 8  |  **Jobs** : The number of jobs run on the dataset in the last 30 days, which links to the Jobs page.  |  
@@ -36,13 +37,13 @@ To view the metadata, hover over a dataset to see a metadata card appear with de
 When viewing a metadata card in the SQL Runner's data panel, the **Columns** section at the bottom of the card is not displayed because columns can be displayed by expanding the dataset.
 Was this page helpful?
 [Previous Searching for Dremio Objects](/data-products/discover/semantic-search)[Next Star Objects](/data-products/discover/bookmarks)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Searching for Dremio Objects](/data-products/discover/semantic-search)[Next Star Objects](/data-products/discover/bookmarks)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-products%2Fdiscover%2Fmetadata%2F&_biz_t=1777950353802&_biz_i=View%20Metadata%20of%20a%20Dataset%20%7C%20Dremio%20Documentation&_biz_n=73&rnd=595479&cdn_o=a&_biz_z=1777950353802)
+!

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/functions
+slug: /reference/sql/commands/functions
 title: "User-Defined Functions | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64254.513197833
@@ -18,7 +19,7 @@ A user-defined function (UDF) is a callable routine that accepts input parameter
 UDFs are supported in Dremio 22.0.0+.
 A UDF can serve as a policy on multiple objects, which means you can change the behavior in one place and have the change reflected in multiple places. You may likewise replace or drop a UDF that is being used as a policy, but if you drop the UDF without replacement, the table or view will become unreadable until you remove the policy or create a new UDF for the policy.
 To run a UDF, the user must have the [EXECUTE privilege](/security/rbac/privileges) on that function.
-## Showing a Function[​](/reference/sql/commands/functions#showing-a-function "Direct link to Showing a Function")
+## Showing a Function​
 Syntax
 
 ```
@@ -26,10 +27,10 @@ SHOW FUNCTIONS [ LIKE { pattern } ]
 
 ```
 
-### Parameters[​](/reference/sql/commands/functions#parameters "Direct link to Parameters")
+### Parameters​
 pattern Optional
 A `LIKE` pattern that is used to filter the results of the statement. The leading and trailing blanks are trimmed in the input pattern before processing. The pattern match is case-insensitive.
-### Examples[​](/reference/sql/commands/functions#examples "Direct link to Examples")
+### Examples​
 Show all existing functions
 
 ```
@@ -51,7 +52,7 @@ SHOW FUNCTIONS LIKE 'protect_%';
 
 ```
 
-## Creating a Function[​](/reference/sql/commands/functions#creating-a-function "Direct link to Creating a Function")
+## Creating a Function​
 Syntax
 
 ```
@@ -62,7 +63,7 @@ CREATE [ OR REPLACE ] FUNCTION [ IF NOT EXISTS ]
 
 ```
 
-### Parameters[​](/reference/sql/commands/functions#parameters-1 "Direct link to Parameters")
+### Parameters​
 [ OR REPLACE ] String Optional
 If specified, the function with the same name is replaced. You cannot specify this parameter with `IF NOT EXISTS`.
 * * *
@@ -95,7 +96,7 @@ The body of the function. For a scalar function, it can either be a query or an 
   * DDL statements such as `CREATE` and `DROP`.
 
 
-### Examples[​](/reference/sql/commands/functions#examples-1 "Direct link to Examples")
+### Examples​
 Create a function with no parameters
 
 ```
@@ -110,14 +111,14 @@ CREATE FUNCTION multiply (x INT, y INT) RETURNS INT RETURN SELECT x * y;
 
 ```
 
-### Naming Best Practices[​](/reference/sql/commands/functions#naming-best-practices "Direct link to Naming Best Practices")
+### Naming Best Practices​
 When creating a function:
   * Choose a name that best describes the function.
   * Avoid using [reserved keywords](/reference/sql/reserved-keywords).
   * Avoid using spaces and special characters.
 
 
-## Describing a Function[​](/reference/sql/commands/functions#describing-a-function "Direct link to Describing a Function")
+## Describing a Function​
 Syntax
 
 ```
@@ -125,7 +126,7 @@ Syntax
 
 ```
 
-### Parameters[​](/reference/sql/commands/functions#parameters-2 "Direct link to Parameters")
+### Parameters​
 `function_name` String
 The name of an existing user-defined function. This commands returns the following:
   * `Name` - The name of the function.
@@ -137,7 +138,7 @@ The name of an existing user-defined function. This commands returns the followi
   * `Body` - The body of the function, namely, expression or query from the `CREATE FUNCTION … RETURN` clause.
 
 
-### Example[​](/reference/sql/commands/functions#example "Direct link to Example")
+### Example​
 Display the metadata associated with an existing function
 
 ```
@@ -145,7 +146,7 @@ DESCRIBE FUNCTION protect_ssn;
 
 ```
 
-## Dropping a Function[​](/reference/sql/commands/functions#dropping-a-function "Direct link to Dropping a Function")
+## Dropping a Function​
 Only the owner of a UDF may drop it.
 Syntax
 
@@ -154,13 +155,13 @@ DROP FUNCTION [ IF EXISTS ] function_name
 
 ```
 
-### Parameters[​](/reference/sql/commands/functions#parameters-3 "Direct link to Parameters")
+### Parameters​
 [ IF EXISTS ] String Optional
 If specified, prevents an exception when the function does not exist.
 * * *
 `function_name` String
 The name of an existing user-defined function.
-### Example[​](/reference/sql/commands/functions#example-1 "Direct link to Example")
+### Example​
 Remove an existing function with the exact name `redact_ssn`
 
 ```
@@ -177,12 +178,12 @@ DROP FUNCTION IF EXISTS redact_ssn;
 
 Was this page helpful?
 [Previous Tables](/reference/sql/commands/tables)[Next RESET QUEUE](/reference/sql/commands/reset-queue)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Tables](/reference/sql/commands/tables)[Next RESET QUEUE](/reference/sql/commands/reset-queue)

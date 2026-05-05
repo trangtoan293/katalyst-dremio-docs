@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ARRAY_PREPEND
+slug: /reference/sql/sql-functions/functions/ARRAY_PREPEND
 title: "ARRAY_PREPEND | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64286.764990833
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Semi-Structured Data](/reference/sql/sql-functions)
 # ARRAY_PREPEND
 Prepends an element to the beginning of an array.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ARRAY_PREPEND(_element_ ANY, _array_ LIST) → LIST[​](/reference/sql/sql-functions#array_prependelement-any-array-list--list "Direct link to array_prependelement-any-array-list--list")
+## Syntax
+### ARRAY_PREPEND(_element_ ANY, _array_ LIST) → LIST[​](/reference/sql/sql-functions)
   * element: The element to prepend to the array.
   * array: The array to prepend to.
 
@@ -34,12 +35,12 @@ SELECT ARRAY_PREPEND(1, ARRAY[2, 3]);
 
 Was this page helpful?
 [Previous ARRAY_POSITION](/reference/sql/sql-functions)[Next ARRAY_REMOVE](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ARRAY_POSITION](/reference/sql/sql-functions)[Next ARRAY_REMOVE](/reference/sql/sql-functions)

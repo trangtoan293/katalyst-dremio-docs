@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/LEFT
+slug: /reference/sql/sql-functions/functions/LEFT
 title: "LEFT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64324.478541625
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions)
 # LEFT
 Returns the left-most substring. The function name must be enclosed in double quotes ("LEFT").
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### LEFT(_expression_ varchar, _length_ int64) → varchar[​](/reference/sql/sql-functions#leftexpression-varchar-length-int64--varchar "Direct link to leftexpression-varchar-length-int64--varchar")
+## Syntax
+### LEFT(_expression_ varchar, _length_ int64) → varchar[​](/reference/sql/sql-functions)
   * expression: String input parameter
   * length: Number of characters on the left to return.
 
@@ -42,13 +43,13 @@ SELECT "LEFT"('Dremio - SQL Engine', 6)
 
 Was this page helpful?
 [Previous LEAST](/reference/sql/sql-functions)[Next LENGTH](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous LEAST](/reference/sql/sql-functions)[Next LENGTH](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FLEFT%2F&_biz_t=1777950644575&_biz_i=LEFT%20%7C%20Dremio%20Documentation&_biz_n=626&rnd=803937&cdn_o=a&_biz_z=1777950644576)
+!

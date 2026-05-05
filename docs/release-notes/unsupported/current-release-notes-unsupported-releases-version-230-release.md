@@ -1,5 +1,6 @@
 ---
 url: /release-notes/unsupported-releases/version-230-release
+slug: /release-notes/unsupported-releases/version-230-release
 title: "23.x Release Notes | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64385.261394166
@@ -14,13 +15,13 @@ Version: current [26.x]
 On this page
 # 23.x Release Notes
 Releases are listed in reverse order, starting with the latest release of Dremio 23.x.
-## 23.2.4 (January 2024) Enterprise[​](/release-notes/unsupported-releases/version-230-release#2324-january-2024-enterprise "Direct link to 2324-january-2024-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new "Direct link to What's New")
+## 23.2.4 (January 2024) Enterprise​
+### What's New​
   * Added the option to force parallelism in write queries by using a round-robin exchange before the writer, even when input is only single-threaded. Enable this option by enabling the support key `planner.writer.round_robin`. 
 DX-64388
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed "Direct link to Issues Fixed")
+### Issues Fixed​
   * Changing the size of an existing EC2 engine in Dremio's AWS Edition no longer resets the engine type. 
 DX-54590
   * Split assignment for tables in Delta Lake format no longer result in a NullPointerException. 
@@ -53,15 +54,15 @@ DX-83289
 DX-84081
 
 
-## 23.2.3 (October 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#2323-october-2023-enterprise "Direct link to 2323-october-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-1 "Direct link to What's New")
+## 23.2.3 (October 2023) Enterprise​
+### What's New​
   * When run by `PUBLIC` users, the data returned by the `apiv2/user/`userid`` internal API is limited to only information that is required to search users and assign privileges. 
 DX-82605
   * In this release, the `NOT IN` clause is supported with correlated subqueries. 
 DX-57298
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-1 "Direct link to Issues Fixed")
+### Issues Fixed​
   * In some cases, if a deployment had a large number of sources, the SQL Runner was considerably unresponsive when loading the page or typing in the editor. 
 DX-72618
   * Removed stack trace information from REST API payload JSON parsing error message. 
@@ -94,13 +95,13 @@ DX-59151
 DX-41291
 
 
-## 23.2.2 (July 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#2322-july-2023-enterprise "Direct link to 2322-july-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-2 "Direct link to What's New")
+## 23.2.2 (July 2023) Enterprise​
+### What's New​
   * Added support for full outer joins that resolve to a `true` join condition. 
 DX-59222
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-2 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Top-level `CASE` statements intended to return a boolean were not being rewritten correctly, resulting in an error for some SQL Server queries. 
 DX-67527
   * Fixed an issue that was causing invalid SQL comparison syntaxes in SQL Server queries if nested `CASE` statements were encountered. 
@@ -121,8 +122,8 @@ DX-51394
 DX-47931
 
 
-## 23.2.1 (July 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#2321-july-2023-enterprise "Direct link to 2321-july-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-3 "Direct link to What's New")
+## 23.2.1 (July 2023) Enterprise​
+### What's New​
   * The `COL_LIKE` SQL function has been updated to improve performance. 
 DX-66586 
   * This release includes some changes to improve logical planning performance and query planning times in certain scenarios. 
@@ -131,7 +132,7 @@ DX-66473
 DX-63026 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-3 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Privilege changes for entities via SQL were not being captured in the audit log. 
 DX-66643 
   * Made an update to ensure that custom (whitelabel) logos will be left-aligned on the Dremio login page. 
@@ -164,8 +165,8 @@ DX-57773
 DX-66251
 
 
-## 23.2.0 (June 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#2320-june-2023-enterprise "Direct link to 2320-june-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-4 "Direct link to Issues Fixed")
+## 23.2.0 (June 2023) Enterprise​
+### Issues Fixed​
   * Added more security around DML permission checks to ensure that users can access data only according to their privileges. 
 DX-64746 
   * Improved permission validation around view-based query execution. 
@@ -174,8 +175,8 @@ DX-64688
 DX-63531 
 
 
-## 23.1.50 (April 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#23150-april-2023-enterprise "Direct link to 23150-april-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-5 "Direct link to Issues Fixed")
+## 23.1.50 (April 2023) Enterprise​
+### Issues Fixed​
   * In some cases, the JVM's direct memory allocator was triggering garbage collection when there was sustained and high usage of direct memory, which was causing performance issues. 
 DX50135
   * Container probes have been updated to support Kubernetes versions greater than 1.20. Dremio V2 helm charts did not have `timeoutSeconds` configured for readiness probes and were failing if the check took more than one second. 
@@ -208,13 +209,13 @@ DX-48015
 DX-20318 
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-230-release#known-issues "Direct link to Known Issues")
+### Known Issues​
   * In some cases, if a deployment has a large number of sources, the SQL Runner can be considerably unresponsive when loading the page or typing in the editor. 
 DX-72618
 
 
-## 23.1.40 (March 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#23140-march-2023-enterprise "Direct link to 23140-march-2023-enterprise")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-6 "Direct link to Issues Fixed")
+## 23.1.40 (March 2023) Enterprise​
+### Issues Fixed​
   * Fixed an issue where the planner would attempt to add implicit casting for identical data types, causing an error. 
 DX-62799 
   * In some cases, allocator information was not being included in the profile for queries running into out of memory errors. 
@@ -229,8 +230,8 @@ DX-60604
 DX-55064 
 
 
-## 23.1.30 (March 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#23130-march-2023-enterprise "Direct link to 23130-march-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-4 "Direct link to What's New")
+## 23.1.30 (March 2023) Enterprise​
+### What's New​
   * This release includes a new SQL function, `COL_LIKE`, which tests whether an expression column matches a pattern column. For more information, see [COL_LIKE](/reference/sql/sql-functions). 
 DX-60811 
   * In this release, Dremio supports reading Parquet files using ZSTD compression. 
@@ -239,7 +240,7 @@ DX-61332
 DX-34989 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-7 "Direct link to Issues Fixed")
+### Issues Fixed​
   * When trying to share a SQL script with another user in Dremio's AWS Edition, sharing failed with a generic _"Something went wrong"_ error. 
 DX-61254 
   * In some cases, XML responses from AWS Glue were not being handled properly and causing queries to fail. 
@@ -256,13 +257,13 @@ DX-37150
 DX-58777 
 
 
-## 23.1.2 (January 2023) Enterprise[​](/release-notes/unsupported-releases/version-230-release#2312-january-2023-enterprise "Direct link to 2312-january-2023-enterprise")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-5 "Direct link to What's New")
+## 23.1.2 (January 2023) Enterprise​
+### What's New​
   * Added support for `timestamp` to `bigint` coercion in Hive-Parquet tables. 
 DX-60456 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-8 "Direct link to Issues Fixed")
+### Issues Fixed​
   * Some queries using multiple `CONVERT_FROM` functions on different JSON data type columns were failing to read with an `Unable to find the referenced field` error. 
 DX-61434 
   * In some queries, the `ConvertFromJson` operator was invoked multiple times on the same column, resulting in slow query performance. 
@@ -303,8 +304,8 @@ DX-56347
 DX-55302 
 
 
-## 23.1.0 (November 2022)[​](/release-notes/unsupported-releases/version-230-release#2310-november-2022 "Direct link to 23.1.0 \(November 2022\)")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-6 "Direct link to What's New")
+## 23.1.0 (November 2022)​")
+### What's New​
   * Table location (`locationUri`) for Hive and Glue sources is now supported for Iceberg Tables. See [Creating Apache Iceberg Tables](/reference/sql/commands/create-table) for more information. 
 DX-55376 
   * This release includes a new SQL function, `ARRAY_CONTAINS` which returns whether a list contains a given value. For more information, see [ARRAY_CONTAINS](/reference/sql/sql-functions).
@@ -316,7 +317,7 @@ DX-55376
 DX-56250 
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-9 "Direct link to Issues Fixed")
+### Issues Fixed​
   * The `queries.log` file was showing zero values for `inputRecords`, `inputBytes`, `outputRecords`, `outputBytes`, and `metadataRetrieval`, even though valid values were included in the job profile. 
 DX-58499 
   * For Parquet sources on Amazon S3, files were being automatically formatted/promoted even though the auto-promote setting had been disabled. 
@@ -371,18 +372,18 @@ DX-40512
 DX-28211 
 
 
-### Breaking Changes[​](/release-notes/unsupported-releases/version-230-release#breaking-changes "Direct link to Breaking Changes")
+### Breaking Changes​
   * If you previously installed the community Snowflake connector from Dremio Hub, you must remove it and the existing driver. For more information, see [Snowflake](/data-sources/databases/snowflake).
 
 
-## 23.0.1 (October 2022)[​](/release-notes/unsupported-releases/version-230-release#2301-october-2022 "Direct link to 23.0.1 \(October 2022\)")
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-10 "Direct link to Issues Fixed")
+## 23.0.1 (October 2022)​")
+### Issues Fixed​
   * In some cases, queries against a table that was promoted from text files containing Windows (CRLF) line endings were failing or producing an `Only one data line detected` error. 
 DX-57713 
 
 
-## 23.0.0 (October 2022)[​](/release-notes/unsupported-releases/version-230-release#2300-october-2022 "Direct link to 23.0.0 \(October 2022\)")
-### What's New[​](/release-notes/unsupported-releases/version-230-release#whats-new-7 "Direct link to What's New")
+## 23.0.0 (October 2022)​")
+### What's New​
   * This release of Dremio supports a semi-structured `MAP` data type that allows you to query map data from Apache Parquet files, Apache Iceberg, and Delta Lake. The `MAP` data type is a collection of key-value pairs and is useful for holding sparse data. See [Data Types](/reference/sql/data-types) for more information. 
 DX-44950 
   * Dremio now supports `LISTAGG`, which is an aggregate function that concatenates a list of strings and places a separator between them. See [LISTAGG](/reference/sql/sql-functions) for more information. 
@@ -406,7 +407,7 @@ DX-51484
 
 DX-32718 
   * Dremio now supports connecting to Amazon S3 sources using an AWS PrivateLink URL. For more information, see [Amazon S3](/data-sources/object/s3).
-  * Similar to [Encrypting the LDAP Bind Password](/security/authentication/ldap#encrypting-the-ldap-bind-password), Dremio now supports the same encryption mechanism for wire encryption setup for the following fields in `dremio.conf`: `keyStorePassword`, `keyPassword`, and `trustStorePassword`
+  * Similar to [Encrypting the LDAP Bind Password](/security/authentication/ldap), Dremio now supports the same encryption mechanism for wire encryption setup for the following fields in `dremio.conf`: `keyStorePassword`, `keyPassword`, and `trustStorePassword`
 DX-37191 
 
 
@@ -420,7 +421,7 @@ DX-47275
   * Added a button that allows you to quickly copy the ID of a job on the job details page.
 
 
-### Issues Fixed[​](/release-notes/unsupported-releases/version-230-release#issues-fixed-11 "Direct link to Issues Fixed")
+### Issues Fixed​
 DX-52271 
   * When multiple metadata refresh jobs ran concurrently on the same dataset, one or more jobs could fail with `ConcurrentModificationException`.
 
@@ -613,7 +614,7 @@ DX-50707
   * Updated com.google.code.gson:gson to version 2.9.0.
 
 
-### Breaking Changes[​](/release-notes/unsupported-releases/version-230-release#breaking-changes-1 "Direct link to Breaking Changes")
+### Breaking Changes​
 DX-43049 
   * Dremio 23.0.0+ supports **only** MapR 6.2.0. If you are running MapR 5.2.x or 6.1.x, you must upgrade to MapR 6.2.0 before upgrading to Dremio 23. Dremio releases up to and including 22.x do not support MapR 6.2.0, only MapR 5.2.x and 6.1.x are supported in releases prior to Dremio 23.
 **NOTE:** MapR 6.2.0 supports only **JDK 11**. JDK8 is not supported.
@@ -623,7 +624,7 @@ DX-47450
   * In previous releases, Dremio supported a maximum of 800 leaf columns in a table, though that value was configurable with the support key `store.plugin.max_metadata_leaf_columns`. If you used this support key and have upgraded to v23.0, reset the key so that you can use the maximum of 6,400 that is enabled with wide table support. See [Creating and Querying Wide Tables](/help-support/advanced-topics/wide-tables) for more information and limitations.
 
 
-### Known Issues[​](/release-notes/unsupported-releases/version-230-release#known-issues-1 "Direct link to Known Issues")
+### Known Issues​
   * In this release, Dremio does not support Iceberg tables written with equality deletes. 
 DX-52677 
   * DML operations (`INSERT`, `UPDATE`, `DELETE`, `MERGE`) are not supported on tables with `MAP` columns. `CTAS` **is** supported on tables with `MAP` columns. 
@@ -634,14 +635,14 @@ DX-56632
 
 DX-55884 - expanded view and default Reflections
 Was this page helpful?
-[Previous 24.x Release Notes](/release-notes/unsupported-releases/version-240-release)[Next 22.x Release Notes](/release-notes/unsupported-releases/version-220-release)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous 24.x Release Notes[Next 22.x Release Notes](/release-notes/unsupported-releases/version-220-release)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous 24.x Release Notes](/release-notes/unsupported-releases/version-240-release)[Next 22.x Release Notes](/release-notes/unsupported-releases/version-220-release)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Frelease-notes%2Funsupported-releases%2Fversion-230-release%2F&_biz_t=1777950703879&_biz_i=23.x%20Release%20Notes%20%7C%20Dremio%20Documentation&_biz_n=744&rnd=691233&cdn_o=a&_biz_z=1777950703879)
+Previous 24.x Release Notes[Next 22.x Release Notes](/release-notes/unsupported-releases/version-220-release)
+!

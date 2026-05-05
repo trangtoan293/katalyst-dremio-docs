@@ -1,5 +1,6 @@
 ---
 url: /help-support/advanced-topics
+slug: /help-support/advanced-topics
 title: "Advanced Topics | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64059.518757666
@@ -29,12 +30,12 @@ This section contains a set of topics about advanced usage scenarios with Dremio
 
 Was this page helpful?
 [Previous Support Settings](/help-support/support-settings)[Next Configuration Files](/help-support/advanced-topics/configuration-files)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Support Settings](/help-support/support-settings)[Next Configuration Files](/help-support/advanced-topics/configuration-files)

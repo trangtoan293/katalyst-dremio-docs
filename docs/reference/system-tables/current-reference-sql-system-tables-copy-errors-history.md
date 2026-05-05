@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/copy-errors-history
+slug: /reference/sql/system-tables/copy-errors-history
 title: "SYS.COPY_ERRORS_HISTORY | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64371.909160875
@@ -23,7 +24,7 @@ SELECT * FROM SYS.COPY_ERRORS_HISTORY
 ```
 
 Results display information only about COPY INTO operations that were initiated by the querying user.
-## Example Output[​](/reference/sql/system-tables/copy-errors-history#example-output "Direct link to Example Output")  
+## Example Output​  
 | executed_at  | job_id  | table_name  | user_name  | base_snapshot_id  | storage_location  | file_path  | file_state  | records_loaded_count  | records_rejected_count  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 2023-11-14 10:39:56.535  | 1aacb195-ca94-ec4c-2b01-ecddac81a900  | "my-location"."test".my-folder.ice_tbl_types  | user_1  | 8234571992740262000  | "my-location"."test".my-folder.source-data.json."data/"  | /test/my-folder/source-data/json/data/test.json  | SKIPPED  | 0  | 1  |  
@@ -31,7 +32,7 @@ Results display information only about COPY INTO operations that were initiated 
 | 2023-11-18 22:24:53.411  | 1aa6c65f-ff9f-d4c5-4625-c8489898e900  | "my-location"."test".my-folder.ice_tbl_types  | user_1  | 8234571992740262000  | "my-location"."test".my-folder.source-data.csv."data/"  | /test/my-folder/source-data/csv/data/test_4.csv  | SKIPPED  | 0  | 1  |  
 | 2023-11-18 22:24:53.411  | 1aa6c65f-ff9f-d4c5-4625-c8489898e900  | "my-location"."test".my-folder.ice_tbl_types  | user_1  | 8234571992740262000  | "my-location"."test".my-folder.source-data.csv."data/"  | /test/my-folder/source-data/csv/data/test_0.csv  | PARTIALLY_LOADED  | 8  | 1  |  
 | 2023-11-18 22:24:53.411  | 1aa6c65f-ff9f-d4c5-4625-c8489898e900  | "my-location"."test".my-folder.ice_tbl_types  | user_1  | 8234571992740262000  | "my-location"."test".my-folder.source-data.csv."data/"  | /test/my-folder/source-data/csv/data/test_3.csv  | PARTIALLY_LOADED  | 8  | 1  |  
-## Columns[​](/reference/sql/system-tables/copy-errors-history#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | executed_at  | timestamptz  | The timestamp in milliseconds when the current row was written to the system table.  |  
@@ -55,12 +56,12 @@ Depending on how often COPY INTO jobs with the `ON_ERROR 'continue'` or `ON_ERRO
 
 Was this page helpful?
 [Previous SYS.HISTORY.AUTONOMOUS_REFLECTIONS](/reference/sql/system-tables/autonomous-reflections-historical)[Next SYS.COPY_FILE_HISTORY](/reference/sql/system-tables/copy-file-history)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.HISTORY.AUTONOMOUS_REFLECTIONS](/reference/sql/system-tables/autonomous-reflections-historical)[Next SYS.COPY_FILE_HISTORY](/reference/sql/system-tables/copy-file-history)

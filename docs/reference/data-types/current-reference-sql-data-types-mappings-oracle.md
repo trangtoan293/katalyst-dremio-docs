@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/data-types/mappings/oracle
+slug: /reference/sql/data-types/mappings/oracle
 title: "Oracle Data Types | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64263.644212708
@@ -35,13 +36,13 @@ Dremio supports Oracle data types, as shown in the following table which provide
 | VARCHAR2  | VARCHAR  |  
 Was this page helpful?
 [Previous MySQL Data Types](/reference/sql/data-types/mappings/mysql)[Next PostgreSQL Data Types](/reference/sql/data-types/mappings/postgres)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous MySQL Data Types](/reference/sql/data-types/mappings/mysql)[Next PostgreSQL Data Types](/reference/sql/data-types/mappings/postgres)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fdata-types%2Fmappings%2Foracle%2F&_biz_t=1777950583250&_biz_i=Oracle%20Data%20Types%20%7C%20Dremio%20Documentation&_biz_n=513&rnd=359532&cdn_o=a&_biz_z=1777950583250)
+!

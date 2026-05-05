@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/engines
+slug: /reference/sql/system-tables/engines
 title: "SYS.ENGINES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.428154791
@@ -23,11 +24,11 @@ FROM sys.engines
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/engines#example-output "Direct link to Example Output")  
+## Example Output​  
 | engine_id  | engine_name  | state  | start_time  | stop_time  | engine_size  | resource_allocation_offset  | target_cpu_capacity  | spill_storage_size  | c3_storage_size  | autostart  | auto_stop_delay_secs  | last_query_timestamp  | nodes  | metadata  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 5e433222-aaba-4db4-9462-2fa9270a6956  | my-engine  | RUNNING  | 2025-07-10 13:17:34.204  | 2025-07-10 12:55:05.483  | Small  | reserve-2-8  | 8C  | 40GB  | 40GB  | true  | 900  | 2025-07-10 13:47:25.725  | dremio-executor-my-engine-000-0.dremio-cluster-pod.dremio.svc.cluster.local  | {'{'})'{'{'})'{'}'})"labels":{'{'})'{'{'})'{'}'}){'{'})'{'}'}'{'}'},"annotations":{'{'})'{'{'})'{'}'}){'{'})'{'}'}'{'}'},"nodeSelectors":{'{'})'{'{'})'{'}'}){'{'})'{'}'}'{'}'},"tolerations":[]{'{'})'{'}'}'{'}'}  |  
-## Columns[​](/reference/sql/system-tables/engines#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | engine_id  | string  | The UUID to identify the engine.  |  
@@ -56,12 +57,12 @@ For example, `reserve-2-8`.  |
  |  
 Was this page helpful?
 [Previous SYS.COPY_FILE_HISTORY](/reference/sql/system-tables/copy-file-history)[Next SYS.JOBS](/reference/sql/system-tables/jobs)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.COPY_FILE_HISTORY](/reference/sql/system-tables/copy-file-history)[Next SYS.JOBS](/reference/sql/system-tables/jobs)

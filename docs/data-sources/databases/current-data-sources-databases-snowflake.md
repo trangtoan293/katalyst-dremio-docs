@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/snowflake
+slug: /data-sources/databases/snowflake
 title: "Snowflake | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64042.239443833
@@ -13,11 +14,11 @@ crawled_at: 64042.239443833
 Version: current [26.x]
 On this page
 # Snowflake
-## Prerequisite[​](/data-sources/databases/snowflake#prerequisite "Direct link to Prerequisite")
+## Prerequisite​
   * Ensure that your Dremio cluster is at version 23.1 or later.
 
 
-## User Impersonation[​](/data-sources/databases/snowflake#user-impersonation "Direct link to User Impersonation")
+## User Impersonation​
 Dremio supports OAuth with impersonation for Snowflake. This allows Dremio users to authenticate via external OAuth and map to Snowflake roles securely. For reference, see 
 Reflections are not supported on data sources with user impersonation enabled to ensure that all security and governance policies defined in the underlying data source are enforced. Reflections created prior to enabling user impersonation must be manually dropped, as they will fail to refresh once impersonation is active.
 Before configuring a Snowflake source with user impersonation, perform the following steps:
@@ -76,12 +77,12 @@ ALTER SECURITY INTEGRATION snowflake_imp SET EXTERNAL_OAUTH_ANY_ROLE_MODE = 'ENA
 
 
 
-## Configuring Snowflake as a Source[​](/data-sources/databases/snowflake#configuring-snowflake-as-a-source "Direct link to Configuring Snowflake as a Source")
+## Configuring Snowflake as a Source​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select **Snowflake**.
 
 
-### General[​](/data-sources/databases/snowflake#general "Direct link to General")
+### General​
   1. In the **Name** field, specify the name by which you want the Snowflake source to appear in the **Databases** section. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
   2. Under **Connection** , follow these steps:
 The optional connection parameters are case-sensitive. For example, if the name of a warehouse uses upper case only (e.g., WAREHOUSE1), specify it the same way in the **Warehouse** field.
@@ -110,11 +111,11 @@ It is not necessary to restart the Dremio coordinator when you rotate secrets st
      * **OAuth with impersonation** : This allows Dremio users to authenticate via external OAuth and map to Snowflake roles securely. If you have not already, complete the steps in [User Impersonation](#user-impersonation] for configuring a Snowflake source with user impersonation.
        * Choose one of the two user impersonation role modes:
          1. Any role: Allows users to assume any role they have access to in Snowflake.
-         2. User-defined role: Restricts users to specific predefined roles. The username configured in the Dremio source must be present in the `EXTERNAL_OAUTH_ALLOWED_ROLES_LIST` specified in Step 2 under [User Impersonation](/data-sources/databases/snowflake#user-impersonation).
+         2. User-defined role: Restricts users to specific predefined roles. The username configured in the Dremio source must be present in the `EXTERNAL_OAUTH_ALLOWED_ROLES_LIST` specified in Step 2 under User Impersonation.
        * Set the JWT `audience` parameter to match Snowflake’s `EXTERNAL_OAUTH_AUDIENCE_LIST`. This ensures proper token validation and role mapping between Dremio and Snowflake.
 
 
-### Advanced Options[​](/data-sources/databases/snowflake#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 On the Advanced Options page, you can set values for these non-required options:  
 | Option  | Description  |  
 | --- | --- |  
@@ -122,7 +123,7 @@ On the Advanced Options page, you can set values for these non-required options:
 | **Connection Idle Time**  | The amount of time (in seconds) allowed for a connection to remain idle before the connection is terminated. The default connection idle time is 60 seconds.  |  
 | **Query Timeout**  | The amount of time (in seconds) allowed to wait for the results of a query. If this time expires, the connection being used is returned to an idle state.  |  
 | **Record Fetch Size**  | The maximum number of records to allow a single query to fetch. This setting prevents queries from using too many resources.  |  
-### Reflection Refresh[​](/data-sources/databases/snowflake#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
 On the Reflection Refresh page, set the policy that controls how often Reflections are scheduled to be refreshed automatically, as well as the time limit after which Reflections expire and are removed.   
   
   
@@ -132,14 +133,14 @@ On the Reflection Refresh page, set the policy that controls how often Reflectio
 | **Refresh every**  | How often to refresh Reflections, specified in hours, days or weeks. This option is ignored if **Never refresh** is selected.  |  
 | **Never expire**  | Select to prevent Reflections from expiring, default is to automatically expire after the time limit below.  |  
 | **Expire after**  | The time limit after which Reflections expire and are removed from Dremio, specified in hours, days or weeks. This option is ignored if **Never expire** is selected.  |  
-### Metadata[​](/data-sources/databases/snowflake#metadata "Direct link to Metadata")
+### Metadata​
 On the Metadata page, you can configure settings to refresh metadata and handle datasets.
-#### Dataset Handling[​](/data-sources/databases/snowflake#dataset-handling "Direct link to Dataset Handling")
+#### Dataset Handling​
 These are the optional **Dataset Handling** parameters.  
 | Parameter  | Description  |  
 | --- | --- |  
 | **Remove dataset definitions if underlying data is unavailable**  | By default, Dremio removes dataset definitions if underlying data is unavailable. Useful when files are temporarily deleted and added back in the same location with new sets of files.  |  
-#### Metadata Refresh[​](/data-sources/databases/snowflake#metadata-refresh "Direct link to Metadata Refresh")
+#### Metadata Refresh​
 These are the optional **Metadata Refresh** parameters:
   * **Dataset Discovery** : The refresh interval for fetching top-level source object names such as databases and tables. Set the time interval using this parameter.  
 | Parameter  | Description  |  
@@ -153,22 +154,22 @@ These are the optional **Metadata Refresh** parameters:
 | **Expire after**  | You can choose to set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.  |  
 
 
-### Privileges[​](/data-sources/databases/snowflake#privileges "Direct link to Privileges")
+### Privileges​
 On the Privileges tab, you can grant privileges to specific users or roles. See [Access Controls](/security/rbac) for additional information about privileges. All privileges are optional.
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
   3. Click **Save** after setting the configuration.
 
 
-## Updating a Snowflake Source[​](/data-sources/databases/snowflake#updating-a-snowflake-source "Direct link to Updating a Snowflake Source")
+## Updating a Snowflake Source​
 To update a Snowflake source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
-  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see [Configuring Snowflake as a Source](/data-sources/databases/snowflake#configuring-snowflake-as-a-source).
+  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see Configuring Snowflake as a Source.
   4. Click **Save**.
 
 
-## Deleting a Snowflake Source[​](/data-sources/databases/snowflake#deleting-a-snowflake-source "Direct link to Deleting a Snowflake Source")
+## Deleting a Snowflake Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 To delete a Snowflake source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -178,7 +179,7 @@ To delete a Snowflake source, perform these steps:
 
 
 Deleting a source causes all downstream views that depend on objects in the source to break.
-## Upgrading from Dremio Hub's Community Snowflake Plugin[​](/data-sources/databases/snowflake#upgrading-from-dremio-hubs-community-snowflake-plugin "Direct link to Upgrading from Dremio Hub's Community Snowflake Plugin")
+## Upgrading from Dremio Hub's Community Snowflake Plugin​
 Removing a Snowflake source will drop all tables in the source. If you have any Reflections configured on tables or table-level ACLs (customized privileges) in your Snowflake sources, copy the details of those items before you remove any sources. After upgrading and re-adding your sources, you will need to recreate those Reflections and ACLs.  
   
 Views are not affected by removing and re-adding Snowflake sources, provided the sources are re-added with the same names.
@@ -192,7 +193,7 @@ If you are upgrading an older version of Dremio to version 23.1 or later, you mu
   6. Recreate any table-level Reflections and ACLs on your Snowflake sources.
 
 
-## Predicate Pushdowns[​](/data-sources/databases/snowflake#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Dremio delegates the execution of these expressions and functions to the database being queried, often dramatically improving query performance. It can also offload entire SQL queries that include one or more of these expressions and functions.
 `||`, AND, OR  
 `+`, `-`, `/`, `*`  
@@ -275,16 +276,16 @@ TRUNC
 TRUNCATE  
 UPPER  
 
-## Running Queries Directly on Snowflake Through Dremio[​](/data-sources/databases/snowflake#running-queries-directly-on-snowflake-through-dremio "Direct link to Running Queries Directly on Snowflake Through Dremio")
+## Running Queries Directly on Snowflake Through Dremio​
 Dremio users can run pass queries through Dremio to run on Snowflake. Doing so can sometimes decrease query execution times. For more information, see [Querying Relational-Database Sources Directly](/help-support/advanced-topics/external-queries).
 Was this page helpful?
 [Previous SAP HANA](/data-sources/databases/sap-hana)[Next Teradata](/data-sources/databases/teradata)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SAP HANA](/data-sources/databases/sap-hana)[Next Teradata](/data-sources/databases/teradata)

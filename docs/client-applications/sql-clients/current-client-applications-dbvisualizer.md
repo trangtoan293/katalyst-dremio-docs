@@ -1,5 +1,6 @@
 ---
 url: /client-applications/dbvisualizer
+slug: /client-applications/dbvisualizer
 title: "DbVisualizer | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64025.944842625
@@ -12,16 +13,16 @@ crawled_at: 64025.944842625
 Version: current [26.x]
 On this page
 # DbVisualizer
-## Supported Versions[​](/client-applications/dbvisualizer#supported-versions "Direct link to Supported Versions")
+## Supported Versions​
 You can use any version of DbVisualizer, as long as you use Dremio 21 or later.
-## Supported Authentication Methods[​](/client-applications/dbvisualizer#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
 You can use your Dremio username and password, or you can use a personal access token (PAT) that you obtained from Dremio.
-## Prerequisites[​](/client-applications/dbvisualizer#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
   * Download the [Arrow Flight SQL JDBC driver](https://www.dremio.com/drivers/jdbc/).
-  * If you want to authenticate your connection to Dremio by using a personal access token, see [Creating a PAT](/security/authentication/personal-access-tokens#creating-a-pat) for the steps to obtain one.
+  * If you want to authenticate your connection to Dremio by using a personal access token, see [Creating a PAT](/security/authentication/personal-access-tokens) for the steps to obtain one.
 
 
-## Connecting to Dremio[​](/client-applications/dbvisualizer#connecting-to-dremio "Direct link to Connecting to Dremio")
+## Connecting to Dremio​
   1. Add the Arrow Flight SQL JDBC driver to DbVisualizer's Driver Manager. You need to do this only once, and can skip this step if DbVisualizer already lists this driver in its Driver Manager dialog:
 a. Select **Tools** &gt; **Driver Manager**.
 b. Above the **Driver Name** list of the **Driver Manager** dialog, click the plus (+) symbol.
@@ -54,13 +55,13 @@ f. Click **Finish**.
 DbVisualizer creates the connection and opens it.
 Was this page helpful?
 [Previous DBeaver](/client-applications/dbeaver)[Next Domo](/client-applications/domo)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DBeaver](/client-applications/dbeaver)[Next Domo](/client-applications/domo)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fdatagrip%2F&_biz_t=1777950346043&_biz_i=DataGrip%20%7C%20Dremio%20Documentation&_biz_n=51&rnd=232200&cdn_o=a&_biz_z=1777950346056)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fdbvisualizer%2F&_biz_t=1777950346056&_biz_i=DbVisualizer%20%7C%20Dremio%20Documentation&_biz_n=52&rnd=648142&cdn_o=a&_biz_z=1777950346056)
+!!

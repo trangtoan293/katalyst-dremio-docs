@@ -1,5 +1,6 @@
 ---
 url: /client-applications/domo
+slug: /client-applications/domo
 title: "Domo | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64026.267858625
@@ -12,12 +13,12 @@ crawled_at: 64026.267858625
 Version: current [26.x]
 On this page
 # Domo
-## Supported Authentication Methods[​](/client-applications/domo#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
   * Use the username and password of an account in your Dremio cluster.
-  * Use a username and a personal access token (PAT). To create one, see [Creating a PAT](/security/authentication/personal-access-tokens#creating-a-pat).
+  * Use a username and a personal access token (PAT). To create one, see [Creating a PAT](/security/authentication/personal-access-tokens).
 
 
-## Creating a Cloud Integration with Dremio Enterprise[​](/client-applications/domo#creating-a-cloud-integration-with-dremio-enterprise "Direct link to Creating a Cloud Integration with Dremio Enterprise")
+## Creating a Cloud Integration with Dremio Enterprise​
   1. Click the **Data** tab to open the Datasets page.
   2. Click the **Federated** tab to open the **Amplify existing cloud warehouses** dialog.
   3. Next to **Native integration** , click **Dremio**.
@@ -36,7 +37,7 @@ jdbc:arrow-flight-sql://<hostname>:32010
 
 ```
 
-To disable encryption, append `?useEncryption=false`. Encryption is enabled by default. See the configuration of client TLS for [Dremio on Kubernetes](/deploy-dremio/configuring-kubernetes#transport-level-security) or [Dremio standalone clusters](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config#arrow-flight-and-arrow-flight-sql-jdbc-and-odbc-enterprise) for more information.
+To disable encryption, append `?useEncryption=false`. Encryption is enabled by default. See the configuration of client TLS for [Dremio on Kubernetes](/deploy-dremio/configuring-kubernetes) or Dremio standalone clusters for more information.
     2. In the **Username** field, specify the username of the Dremio account that you want to use for authenticating to Dremio.
     3. In the **Password** field, specify either the password for the Dremio account or a PAT.
   8. Click **Next**.
@@ -47,13 +48,13 @@ To disable encryption, append `?useEncryption=false`. Encryption is enabled by d
 Datasets are created from the tables, though no data is moved or copied. Datasets in Domo are connections to data in data sources.
 Was this page helpful?
 [Previous DbVisualizer](/client-applications/dbvisualizer)[Next IBM Cognos Analytics](/client-applications/cognos)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DbVisualizer](/client-applications/dbvisualizer)[Next IBM Cognos Analytics](/client-applications/cognos)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fdomo%2F&_biz_t=1777950347102&_biz_i=Dremio%20Documentation&_biz_n=58&rnd=260344&cdn_o=a&_biz_z=1777950347102)
+!

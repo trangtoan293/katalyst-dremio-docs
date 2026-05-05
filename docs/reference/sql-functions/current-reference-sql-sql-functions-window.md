@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/WINDOW
+slug: /reference/sql/sql-functions/WINDOW
 title: "Window | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64272.103592666
@@ -38,10 +39,10 @@ On this page
 | [SUM](/reference/sql/sql-functions)  | Returns the sum of non-NULL input expressions.  |  
 | [VAR_POP](/reference/sql/sql-functions)  | Returns the population variance of non-NULL records.  |  
 | [VAR_SAMP](/reference/sql/sql-functions)  | Returns the sample variance of non-NULL records.  |  
-## Window Functions[​](/reference/sql/sql-functions#window-functions "Direct link to Window Functions")
+## Window Functions[​](/reference/sql/sql-functions)
 A window function performs a calculation across a set of table rows that has some relationship to the current row. This is comparable to how an aggregate function can run a calculation. The difference is that a window function does not group rows into a single output row. With a window function, the rows retain their separate identities.
 For more information about window functions, see 
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
+## Syntax
 Window function queries use the `OVER()` clause directly following the window function name and argument. The `OVER()` clause may use the following optional arguments:
   * `PARTITION BY`: A subclause that groups rows into partitions. You can specify a single expression or a comma-separated list of expressions, such as `PARTITION BY column1, column3, column4`.
   * `ORDER BY`: A subclause that specifies the order of the rows within each partition of the result set. Required if using a cumulative or sliding window frame.
@@ -74,7 +75,7 @@ Sliding frame syntax
 
 ```
 
-## Examples[​](/reference/sql/sql-functions#examples "Direct link to Examples")
+## Examples[​](/reference/sql/sql-functions)
 The following examples use the sample table `transactions` and the `SUM` function to demonstrate window function queries with no frame, a cumulative frame, and a sliding frame. Refer to each [window function's page](/reference/sql/sql-functions) for function-specific examples.
 **Sample Table`transactions`**  
 | product_id  | branch  | amount  |  
@@ -144,13 +145,13 @@ FROM transactions
 
 Was this page helpful?
 [Previous System](/reference/sql/sql-functions)[Next ABS](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous System](/reference/sql/sql-functions)[Next ABS](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2FWINDOW%2F&_biz_t=1777950591803&_biz_i=Window%20%7C%20Dremio%20Documentation&_biz_n=537&rnd=222495&cdn_o=a&_biz_z=1777950591804)
+!

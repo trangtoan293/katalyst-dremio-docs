@@ -2,7 +2,7 @@
   "label": "Workloads",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Workloads"
+    "type": "doc",
+    "id": "administration/workloads/current-admin-workloads"
   }
 }

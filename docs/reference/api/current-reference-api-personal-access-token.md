@@ -1,5 +1,6 @@
 ---
 url: /reference/api/personal-access-token
+slug: /reference/api/personal-access-token
 title: "Personal Access Token | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64067.589246958
@@ -14,7 +15,7 @@ Version: current [26.x]
 On this page
 # Personal Access Token Enterprise
 Use the API to create and retrieve personal access tokens (PATs) for the current Dremio user and delete PATs for any Dremio user.
-You must [enable the use of PATs](/security/authentication/personal-access-tokens#enabling-the-use-of-pats) prior to using these requests.
+You must [enable the use of PATs](/security/authentication/personal-access-tokens) prior to using these requests.
 Personal Access Token Object
 
 ```
@@ -28,7 +29,7 @@ Personal Access Token Object
 
 ```
 
-## Attributes[​](/reference/api/personal-access-token#attributes "Direct link to Attributes")
+## Attributes​
 tid String (UUID)
 Unique identifier of the PAT.
 Example: 98ec8f42-7764-4d9d-af5a-693f1f1cc444
@@ -48,7 +49,7 @@ Example: 2023-02-19T15:41:15.323Z
 expiresAt String
 Date and time that the PAT will expire, in UTC format.
 Example: 2023-03-21T15:41:15.323Z
-## Listing All PATs for One User[​](/reference/api/personal-access-token#listing-all-pats-for-one-user "Direct link to Listing All PATs for One User")
+## Listing All PATs for One User​
 List all PATs for the specified user. Users can retrieve only their own PAT metadata. The `ADMIN` role is required to retrieve PAT metadata owned by other users.
 Method and URL
 
@@ -57,11 +58,11 @@ GET /api/v3/user/{user-id}/token
 
 ```
 
-### Parameters[​](/reference/api/personal-access-token#parameters "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Dremio identifier of the named user.
 Example: b9dbebc7-bc3b-4d56-9154-31762ab65a43
-### Example[​](/reference/api/personal-access-token#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -102,7 +103,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/personal-access-token#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -112,7 +113,7 @@ Response
 405 Method Not Allowed   
   
 
-## Create a PAT[​](/reference/api/personal-access-token#create-a-pat "Direct link to Create a PAT")
+## Create a PAT​
 Create a personal access token. Users can create only their own PATs and only use the PATs they create. Administrators cannot create PATs for other users or distribute PATs to other users.
 Method and URL
 
@@ -121,7 +122,7 @@ POST /api/v3/user/{user-id}/token
 
 ```
 
-### Parameters[​](/reference/api/personal-access-token#parameters-1 "Direct link to Parameters")
+### Parameters​
 user-id Path String (UUID)
 Your Dremio user identifier.
 Example: b9dbebc7-bc3b-4d56-9154-31762ab65a43
@@ -153,7 +154,7 @@ EXAMPLETOKEN7TjB3mfPS6AZQ5aPcXPmJS2ofXpLL86dmpDXRbKKi52BQdthnk==
 
 ```
 
-### Response Status Codes[​](/reference/api/personal-access-token#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -165,7 +166,7 @@ EXAMPLETOKEN7TjB3mfPS6AZQ5aPcXPmJS2ofXpLL86dmpDXRbKKi52BQdthnk==
 405 Method Not Allowed   
   
 
-## Deleting a Single PAT[​](/reference/api/personal-access-token#deleting-a-single-pat "Direct link to Deleting a Single PAT")
+## Deleting a Single PAT​
 Delete a single PAT for the specified user. Users can delete only their own PATs. The `ADMIN` role is required to delete PATs owned by other users.
 Method and URL
 
@@ -174,7 +175,7 @@ DELETE /api/v3/user/{user-id}/token/{token-id}
 
 ```
 
-### Parameters[​](/reference/api/personal-access-token#parameters-2 "Direct link to Parameters")
+### Parameters​
 user-id Path String (UUID)
 Unique identifier of the user whose PAT will be deleted.
 Example: b9dbebc7-bc3b-4d56-9154-31762ab65a43
@@ -182,7 +183,7 @@ Example: b9dbebc7-bc3b-4d56-9154-31762ab65a43
 token-id Path String (UUID)
 Unique identifier of the PAT you want to delete.
 Example: 98ec8f42-7764-4d9d-af5a-693f1f1cc444
-### Example Request[​](/reference/api/personal-access-token#example-request "Direct link to Example Request")
+### Example Request​
 
 ```
 curl -X DELETE 'https://{hostname}/api/v3/user/b9dbebc7-bc3b-4d56-9154-31762ab65a43/token/98ec8f42-7764-4d9d-af5a-693f1f1cc444' \  
@@ -192,7 +193,7 @@ curl -X DELETE 'https://{hostname}/api/v3/user/b9dbebc7-bc3b-4d56-9154-31762ab65
 ```
 
 Dremio does not provide a response to this command.
-### Response Status Codes[​](/reference/api/personal-access-token#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 401 Unauthorized   
@@ -202,7 +203,7 @@ Dremio does not provide a response to this command.
 405 Method Not Allowed   
   
 
-## Delete All PATs for One User[​](/reference/api/personal-access-token#delete-all-pats-for-one-user "Direct link to Delete All PATs for One User")
+## Delete All PATs for One User​
 Delete all PATs for the specified user. Users can delete only their own PATs. The `ADMIN` role is required to delete PATs owned by other users.
 Method and URL
 
@@ -211,11 +212,11 @@ DELETE /api/v3/user/{user-id}/token
 
 ```
 
-### Parameters[​](/reference/api/personal-access-token#parameters-3 "Direct link to Parameters")
+### Parameters​
 user-id Path String (UUID)
 Unique identifier of the user whose PATs will be deleted.
 Example: b9dbebc7-bc3b-4d56-9154-31762ab65a43
-### Example Request[​](/reference/api/personal-access-token#example-request-1 "Direct link to Example Request")
+### Example Request​
 
 ```
 curl -X DELETE \  
@@ -226,7 +227,7 @@ curl -X DELETE \
 ```
 
 Dremio does not provide a response to this command.
-### Response Status Codes[​](/reference/api/personal-access-token#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 401 Unauthorized   
@@ -236,7 +237,7 @@ Dremio does not provide a response to this command.
 405 Method Not Allowed   
   
 
-## Delete All PATs[​](/reference/api/personal-access-token#delete-all-pats "Direct link to Delete All PATs")
+## Delete All PATs​
 Delete all PATs in the system for all users, including users with the `ADMIN` role. The user invoking the command must be in the `ADMIN` role.
 This command deletes all PATs for all users in the system. This action cannot be undone.
 Method and URL
@@ -246,7 +247,7 @@ DELETE /api/v3/token
 
 ```
 
-### Example Request[​](/reference/api/personal-access-token#example-request-2 "Direct link to Example Request")
+### Example Request​
 
 ```
 curl -X DELETE 'https://{hostname}/api/v3/token' \  
@@ -255,7 +256,7 @@ curl -X DELETE 'https://{hostname}/api/v3/token' \
 
 ```
 
-### Response Status Codes[​](/reference/api/personal-access-token#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 401 Unauthorized   
@@ -265,13 +266,13 @@ curl -X DELETE 'https://{hostname}/api/v3/token' \
 
 Was this page helpful?
 [Previous OAuth Token](/reference/api/oauth-token)[Next Reflection](/reference/api/reflections)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous OAuth Token](/reference/api/oauth-token)[Next Reflection](/reference/api/reflections)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fpersonal-access-token%2F&_biz_t=1777950386883&_biz_i=Personal%20Access%20Token%20%7C%20Dremio%20Documentation&_biz_n=145&rnd=158215&cdn_o=a&_biz_z=1777950386883)
+!

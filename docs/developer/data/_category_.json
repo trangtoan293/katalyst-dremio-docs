@@ -2,7 +2,7 @@
   "label": "Data",
   "position": 4,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Data"
+    "type": "doc",
+    "id": "developer/data/current-developer-data-formats"
   }
 }

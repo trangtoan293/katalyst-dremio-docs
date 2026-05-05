@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/REPLACE
+slug: /reference/sql/sql-functions/functions/REPLACE
 title: "REPLACE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64345.008861416
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions)
 # REPLACE
 Removes all occurrences of a specified substring and replaces them with another string.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### REPLACE(_string_expression_ varchar, _pattern_ varchar, _replacement_ varchar) → varchar[​](/reference/sql/sql-functions#replacestring_expression-varchar-pattern-varchar-replacement-varchar--varchar "Direct link to replacestring_expression-varchar-pattern-varchar-replacement-varchar--varchar")
+## Syntax
+### REPLACE(_string_expression_ varchar, _pattern_ varchar, _replacement_ varchar) → varchar[​](/reference/sql/sql-functions)
   * string_expression: String expression in which to do the replacements.
   * pattern: The substring you want replaced in the string_expression.
   * replacement: The string to replace the occurrences of the pattern substring with.
@@ -35,12 +36,12 @@ SELECT REPLACE('THE CATATONIC CAT', 'CAT', 'DOG')
 
 Was this page helpful?
 [Previous REPEATSTR](/reference/sql/sql-functions)[Next REVERSE](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous REPEATSTR](/reference/sql/sql-functions)[Next REVERSE](/reference/sql/sql-functions)

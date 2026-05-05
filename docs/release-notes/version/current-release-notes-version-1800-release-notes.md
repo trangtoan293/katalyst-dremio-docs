@@ -1,5 +1,6 @@
 ---
 url: /release-notes/version-1800-release-notes
+slug: /release-notes/version-1800-release-notes
 title: "Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64927.565726541

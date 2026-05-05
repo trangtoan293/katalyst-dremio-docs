@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/pipes
+slug: /reference/sql/system-tables/pipes
 title: "SYS.PIPES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.793921375
@@ -23,11 +24,11 @@ FROM sys.pipes
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/pipes#example-output "Direct link to Example Output")  
+## Example Output​  
 | pipe_id  | pipe_name  | source_path  | target_table  | target_branch  | dedup_lookback_period_days  | file_format  | format_options  | pipe_status  | error_message  | notification_provider  | notification_queue_ref  | created_at  | last_updated_at  | created_by  | last_updated_by  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 525ffe04-97bb-473e-8e76-fa559faa7d0d  | test_pipe  | @s3/ingestion-test  | s3."ingestion-test".pipe_sink_table  | main  | 14  | CSV  | `{"DATE_FORMAT":"YYYY-MM-DD\"T\"HH24:MI:SS.FFF","RECORD_DELIMITER":"\n","FIELD_DELIMITER":","}`  | STOPPED_STORAGE_LOCATION_ALTERED  | Resource not found at path @s3/ingestion-test  | AWS_SQS  | arn:aws:sqs:us-west-2:123243142826:data_ingestion_queue  | 2024-08-05T13:39:41.167Z  | 2024-08-05T13:39:41.167Z  | dremio  | dremio  |  
-## Columns[​](/reference/sql/system-tables/pipes#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | pipe_id  | varchar  | The unique identifier of the autoingest pipe.  |  
@@ -58,13 +59,13 @@ FROM sys.pipes
 | last_updated_by  | varchar  | The user who last updated the pipe definition.  |  
 Was this page helpful?
 [Previous SYS.PIPE_SUMMARY](/reference/sql/system-tables)[Next SYS.PRIVILEGES](/reference/sql/system-tables/privileges)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.PIPE_SUMMARY](/reference/sql/system-tables)[Next SYS.PRIVILEGES](/reference/sql/system-tables/privileges)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fpipes%2F&_biz_t=1777950693563&_biz_i=SYS.PIPES%20%7C%20Dremio%20Documentation&_biz_n=725&rnd=434103&cdn_o=a&_biz_z=1777950693563)
+!

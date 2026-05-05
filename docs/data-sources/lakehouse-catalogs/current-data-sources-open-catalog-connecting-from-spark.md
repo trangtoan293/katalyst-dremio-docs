@@ -1,5 +1,6 @@
 ---
 url: /data-sources/open-catalog/connecting-from-spark
+slug: /data-sources/open-catalog/connecting-from-spark
 title: "Connect to Open Catalog from Apache Spark | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64210.071394666
@@ -20,9 +21,9 @@ When using Spark, you can choose the following methods to authenticate with Drem
 
 
 You also need additional client-side work to enable Spark to properly authenticate with Dremio. These settings are discussed in the respective sections below.
-## Prerequisites[​](/data-sources/open-catalog/connecting-from-spark#prerequisites "Direct link to Prerequisites")
-  * [Enable Dremio Personal Access Tokens (PATs)](/security/authentication/personal-access-tokens#enabling-the-use-of-pats).
-  * Configure Spark to use Iceberg 1.9+. If you can’t upgrade to 1.9, refer to the instructions on [authenticating with Iceberg versions older than 1.9](/data-sources/open-catalog/connecting-from-spark#using-dremio-pat-for-authentication-with-iceberg-versions-older-than-19).
+## Prerequisites​
+  * [Enable Dremio Personal Access Tokens (PATs)](/security/authentication/personal-access-tokens).
+  * Configure Spark to use Iceberg 1.9+. If you can’t upgrade to 1.9, refer to the instructions on authenticating with Iceberg versions older than 1.9.
   * Add the required libraries to the `spark-sql` command using the `--packages` option:
     * Iceberg Spark runtime, e.g. `iceberg-spark-runtime-4.0_2.13-1.10.1.jar` (from 
     * Iceberg AWS S3 bundle, e.g. `iceberg-aws-bundle-1.10.1.jar` (from `iceberg-gcp-bundle` for Google Cloud Storage or `iceberg-azure-bundle` for Azure Blob Storage.
@@ -46,11 +47,11 @@ spark-sql ... --conf spark.sql.catalog.polaris.header.X-Iceberg-Access-Delegatio
 ```
 
 **Note:** Ensure that the warehouse is set to `default`, as this is the warehouse used by Open Catalog.
-## Authenticating with Dremio Using Dremio PAT[​](/data-sources/open-catalog/connecting-from-spark#authenticating-with-dremio-using-dremio-pat "Direct link to Authenticating with Dremio Using Dremio PAT")
-Use this method if you want to use Spark with Dremio [internal users](/security/authentication/users#local-users). This method follows a two-step process:
-### Step 1: Create a Dremio PAT[​](/data-sources/open-catalog/connecting-from-spark#step-1-create-a-dremio-pat "Direct link to Step 1: Create a Dremio PAT")
-Select a user that will be used to authenticate Spark jobs and [create a Dremio PAT](/security/authentication/personal-access-tokens#creating-a-pat) for that user. Then, use the section below to configure Spark to use PAT.
-### Step 2: Configure Spark to Use a Personal Access Token to Access Open Catalog[​](/data-sources/open-catalog/connecting-from-spark#step-2-configure-spark-to-use-a-personal-access-token-to-access-open-catalog "Direct link to Step 2: Configure Spark to Use a Personal Access Token to Access Open Catalog")
+## Authenticating with Dremio Using Dremio PAT​
+Use this method if you want to use Spark with Dremio [internal users](/security/authentication/users). This method follows a two-step process:
+### Step 1: Create a Dremio PAT​
+Select a user that will be used to authenticate Spark jobs and [create a Dremio PAT](/security/authentication/personal-access-tokens) for that user. Then, use the section below to configure Spark to use PAT.
+### Step 2: Configure Spark to Use a Personal Access Token to Access Open Catalog​
 Below is an example Spark configuration that would allow Spark to connect to Open Catalog with Iceberg REST, using a Personal Access Token (PAT) for authentication:
 Spark with PAT authentication
 
@@ -79,18 +80,18 @@ spark-sql \
 ```
 
 “dremio” as a Client ID is not used for actual authentication. It can be any string. `DREMIO_PAT` represents the Dremio Personal Access Token (PAT).
-## Authenticating with Dremio Using OAuth2 (External Identity Provider)[​](/data-sources/open-catalog/connecting-from-spark#authenticating-with-dremio-using-oauth2-external-identity-provider "Direct link to Authenticating with Dremio Using OAuth2 \(External Identity Provider\)")
+## Authenticating with Dremio Using OAuth2 (External Identity Provider)​")
 Use this method if you want to use Spark with users defined in an external identity provider, e.g., Keycloak.
-### Step 1: Configure Dremio to Use OAuth2 to Authenticate Spark[​](/data-sources/open-catalog/connecting-from-spark#step-1-configure-dremio-to-use-oauth2-to-authenticate-spark "Direct link to Step 1: Configure Dremio to Use OAuth2 to Authenticate Spark")
+### Step 1: Configure Dremio to Use OAuth2 to Authenticate Spark​
 First, [establish trust](/security/authentication/application-authentication/external-token) between Dremio and your identity provider. Go to **Settings** &gt; **External Token Providers** , then add a new provider as shown below.
-![](https://docs.dremio.com/images/dremio-catalog-keycloak-example.png)
+!
   * The audience must match the `aud` claim in the external JWT.
   * The value to set for “User Claim Mapping” depends on the IdP. It should point to the token claim that contains the value of the username that Dremio should use to map external users to internal users.
   * “Issuer URL” should point to the root URL of the IdP that will be used to authenticate Spark clients.
   * "JWKS URL" should point to the URL of the IdP's JWKS endpoint. If not provided, Dremio will retrieve it from `{issuerUrl}/.well-known/openid-configuration`.
 
 
-### Step 2: Configure Spark to Use OAuth2[​](/data-sources/open-catalog/connecting-from-spark#step-2-configure-spark-to-use-oauth2 "Direct link to Step 2: Configure Spark to Use OAuth2")
+### Step 2: Configure Spark to Use OAuth2​
 Below is an example of how you can use Spark to connect to Open Catalog, using an external IdP for user authentication. A summary of the process is below:
   1. Spark obtains a user-specific JSON Web Token (JWT) from an OAuth2 server (usually the IdP).
   2. Spark connects to Dremio and exchanges the JWT for a Dremio OAuth access token.
@@ -133,7 +134,7 @@ spark-sql \
   * The `catalog` scope in `token-exchange.subject-token.scope` must match a configured scope in Keycloak.
 
 
-## Using Dremio PAT for Authentication with Iceberg Versions Older Than 1.9[​](/data-sources/open-catalog/connecting-from-spark#using-dremio-pat-for-authentication-with-iceberg-versions-older-than-19 "Direct link to Using Dremio PAT for Authentication with Iceberg Versions Older Than 1.9")
+## Using Dremio PAT for Authentication with Iceberg Versions Older Than 1.9​
 If you are using a version of Iceberg older than 1.9, a custom step is required to run the OAuth2 token exchange flow against Dremio in order to obtain an access token, since versions of Iceberg below 1.9 do not include the `curl` for simplicity:
 Obtain an access token via token exchange
 
@@ -150,7 +151,7 @@ Extract the access token from the output of the token exchange flow. The below e
   * It is also possible to obtain the access token via a custom IdP, but this is more challenging technically. Please contact Dremio for more information if this use case is required.
 
 
-### Configure Spark to Use an OAuth Token[​](/data-sources/open-catalog/connecting-from-spark#configure-spark-to-use-an-oauth-token "Direct link to Configure Spark to Use an OAuth Token")
+### Configure Spark to Use an OAuth Token​
 Below is an example Spark configuration that would allow Spark to connect to Open Catalog with the Iceberg REST API, using an OAuth token for authentication:
 Spark with OAuth token (Iceberg pre-1.9)
 
@@ -172,13 +173,13 @@ spark-sql \
 
 Was this page helpful?
 [Previous Open Catalog](/data-sources/open-catalog)[Next Connect to Open Catalog from Apache Kafka Connect](/data-sources/open-catalog/connecting-from-kafka-connect)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Open Catalog](/data-sources/open-catalog)[Next Connect to Open Catalog from Apache Kafka Connect](/data-sources/open-catalog/connecting-from-kafka-connect)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fopen-catalog%2Fconnecting-from-spark%2F&_biz_t=1777950530115&_biz_i=Connect%20to%20Open%20Catalog%20from%20Apache%20Spark%20%7C%20Dremio%20Documentation&_biz_n=403&rnd=634632&cdn_o=a&_biz_z=1777950530116)
+!

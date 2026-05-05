@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/information-schema/catalogs
+slug: /reference/sql/information-schema/catalogs
 title: "INFORMATION_SCHEMA.CATALOGS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64264.047891875
@@ -23,11 +24,11 @@ FROM INFORMATION_SCHEMA.CATALOGS
 
 ```
 
-## Example Output[​](/reference/sql/information-schema/catalogs#example-output "Direct link to Example Output")  
+## Example Output​  
 | CATALOG_NAME  | CATALOG_DESCRIPTION  | CATALOG_CONNECT  |  
 | --- | --- | --- |  
 | DREMIO  | The internal metadata used by Dremio  | _empty_  |  
-## Fields[​](/reference/sql/information-schema/catalogs#fields "Direct link to Fields")  
+## Fields​  
 | Field  | Data Type  | Description  |  
 | --- | --- | --- |  
 | CATALOG_NAME  | varchar  | The name of the catalog, which is always DREMIO.  |  
@@ -35,12 +36,12 @@ FROM INFORMATION_SCHEMA.CATALOGS
 | CATALOG_CONNECT  | varchar  | The connection permissions to the catalog that contains metadata information. This is an inherited field and is always empty.  |  
 Was this page helpful?
 [Previous Information Schema](/reference/sql/information-schema)[Next INFORMATION_SCHEMA.COLUMNS](/reference/sql/information-schema/columns)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Information Schema](/reference/sql/information-schema)[Next INFORMATION_SCHEMA.COLUMNS](/reference/sql/information-schema/columns)

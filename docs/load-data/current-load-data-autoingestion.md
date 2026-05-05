@@ -1,5 +1,6 @@
 ---
 url: /load-data/autoingestion
+slug: /load-data/autoingestion
 title: "Autoingest Data into Apache Iceberg | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64061.346273875
@@ -14,15 +15,15 @@ On this page
 # Autoingest Data into Apache Iceberg Enterprise
 You can use autoingest pipes to automatically ingest data into Apache Iceberg tables.
 Autoingest pipes are objects in Dremio that represent event-driven [ingestion pipelines](https://www.dremio.com/wiki/ingestion-pipelines/), which collect and load data into a centralized data repository for further analysis and utilization. Event-driven ingestion, or autoingestion, occurs when a new file is added to a specified cloud storage location, which sets off an event in Dremio to copy the new file into an Iceberg table. Dremio automatically ingests the file with [micro-batch processing](https://www.dremio.com/wiki/micro-batch-processing/), loading files in small, predefined batches at regular intervals.
-  * **File Deduplication** : [File deduplication](https://www.dremio.com/wiki/deduplication/) eliminates copies of files and enhances storage utilization. Dremio's autoingest pipes provide file deduplication by ensuring that your pipe loads semantics only once and preventing files with the same name from loading in a given time period (the [DEDUPE_LOOKBACK_PERIOD](/load-data/autoingestion#autoingest-pipe-operation)).
-  * **Event-Based Execution of COPY INTO** : After a new file is added in the [source location](/load-data/autoingestion#autoingest-pipe-operation), an event is sent to Dremio to run a [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table) statement. Ingested files are processed in [micro-batches](https://www.dremio.com/wiki/micro-batch-processing/) to optimize user resources and ensure that the data is efficiently loaded into Dremio.
+  * **File Deduplication** : [File deduplication](https://www.dremio.com/wiki/deduplication/) eliminates copies of files and enhances storage utilization. Dremio's autoingest pipes provide file deduplication by ensuring that your pipe loads semantics only once and preventing files with the same name from loading in a given time period (the DEDUPE_LOOKBACK_PERIOD).
+  * **Event-Based Execution of COPY INTO** : After a new file is added in the source location, an event is sent to Dremio to run a [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table) statement. Ingested files are processed in [micro-batches](https://www.dremio.com/wiki/micro-batch-processing/) to optimize user resources and ensure that the data is efficiently loaded into Dremio.
   * **Execution Monitoring and Error Handling** : For common issues that can occur with data pipelines, such as single rows that do not conform to the target table schema or read permissions being revoked on the source, Dremio takes the appropriate action to alert the user and suggest potential solutions.
   * **Efficient Batching for Optimal Engine Utilization** : When implementing an event-based loading system, users often execute a load command for every file immediately after the file is added to cloud storage. This frequent loading increases the likelihood that Iceberg file sizes will be smaller than the optimal size and the engine will be overutilized. Both of these issues result in higher total cost of ownership because they require running [OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table) jobs more frequently to compact Iceberg tables, which uses engine resources inefficiently. Dremio’s autoingest pipes efficiently organize requests into micro-batches that minimize the cost of loading data and maintain acceptable [latency](https://www.dremio.com/wiki/latency/) in a data lifecycle.
 
 
 Autoingest pipes can only ingest data from Amazon S3 sources in Dremio.
-## Autoingest Pipe Operation[​](/load-data/autoingestion#autoingest-pipe-operation "Direct link to Autoingest Pipe Operation")
-When you use the [CREATE PIPE](/reference/sql/commands/create-pipe) SQL command to create an autoingest pipe, use the following parameters to define the pipe's behavior. Read [Configuring an Autoingest Pipe](/load-data/autoingestion#configuring-an-autoingest-pipe) for examples that show how to use these parameters.
+## Autoingest Pipe Operation​
+When you use the [CREATE PIPE](/reference/sql/commands/create-pipe) SQL command to create an autoingest pipe, use the following parameters to define the pipe's behavior. Read Configuring an Autoingest Pipe for examples that show how to use these parameters.
 Syntax for CREATE PIPE
 
 ```
@@ -45,16 +46,16 @@ CREATE PIPE [ IF NOT EXISTS ] <pipe_name>
 | NOTIFICATION_QUEUE_REFERENCE  | Required parameter that specifies the unique identifier of the event notification queue.  |  
 | [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)  | Required parameter that specifies the target table and expected file format.  |  
 | @&lt;storage-location-name&gt;  | Required parameter that specifies the storage directory where new files are loaded. Autoingest pipes can load from a hierarchical directory structure, but they do not load file paths or Hive partition columns that are embedded in the file paths.  |  
-## Configuring an Autoingest Pipe[​](/load-data/autoingestion#configuring-an-autoingest-pipe "Direct link to Configuring an Autoingest Pipe")
+## Configuring an Autoingest Pipe​
 Follow the steps in this section to configure an autoingest pipe.
-### Prerequisites[​](/load-data/autoingestion#prerequisites "Direct link to Prerequisites")
+### Prerequisites​
 For the configuration, you will need to address the following prerequisites:
   * Use an [Amazon S3 bucket](/data-sources/object/s3)
   * Enable 
   * Route event notifications to an 
 
 
-### Step 1: Create an Iceberg Table[​](/load-data/autoingestion#step-1-create-an-iceberg-table "Direct link to Step 1: Create an Iceberg Table")
+### Step 1: Create an Iceberg Table​
 You can create the table in any catalog, although the table schema must match the expected schema for all files in the cloud storage source. See the example below:
 Example of creating an Iceberg table
 
@@ -65,7 +66,7 @@ CREATE TABLE Pipe_sink
 ```
 
 If a file has at least one record that does not match the schema, Dremio skips the entire file. To check the file load status, see [`sys.copy_file_history`](/reference/sql/system-tables/copy-file-history).
-### Step 2: Create an Autoingest Pipe[​](/load-data/autoingestion#step-2-create-an-autoingest-pipe "Direct link to Step 2: Create an Autoingest Pipe")
+### Step 2: Create an Autoingest Pipe​
 When you use the CREATE PIPE command to create an autoingest pipe, you must use a preconfigured data source in Dremio that allows for ingesting files, which is used as the `@`storage_location_name`` in the COPY INTO statement. In this source, you can specify the folder or its subfolders by adding `/`folder_name``. Any new files that are added to the specified folder or its subdirectories are loaded into the target table.
 The following example shows how to create an autoingest pipe for an Amazon S3 source:
 Example of creating a pipe
@@ -81,21 +82,21 @@ CREATE PIPE Example_pipe
 ```
 
 The `NOTIFICATION_QUEUE_REFERENCE` is the Amazon Resource Name (ARN) of the SQS queue where S3 event notifications are sent.
-### Step 3: Add New Files to Your Amazon S3 Source[​](/load-data/autoingestion#step-3-add-new-files-to-your-amazon-s3-source "Direct link to Step 3: Add New Files to Your Amazon S3 Source")
+### Step 3: Add New Files to Your Amazon S3 Source​
 Now that you have established connectivity between your SQS queue and Dremio, the autoingest pipe will run every time you add new files to the source.
 For other autoingest pipe commands, see [ALTER PIPE](/reference/sql/commands/alter-pipe), [DESCRIBE PIPE](/reference/sql/commands/describe-pipe), and [DROP PIPE](/reference/sql/commands/drop-pipe).
-## Recommendations[​](/load-data/autoingestion#recommendations "Direct link to Recommendations")
-### Iceberg Optimization[​](/load-data/autoingestion#iceberg-optimization "Direct link to Iceberg Optimization")
+## Recommendations​
+### Iceberg Optimization​
 If a pipe is operating frequently, you may need to run [OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table) to compact small data files in your Iceberg table. The frequency of maintenance depends on the incoming file size and load frequency.
 Was this page helpful?
 [Previous Load Data](/load-data)[Next Clustering](/load-data/clustering)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Load Data](/load-data)[Next Clustering](/load-data/clustering)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fload-data%2Fautoingestion%2F&_biz_t=1777950382283&_biz_i=Autoingest%20Data%20into%20Apache%20Iceberg%20%7C%20Dremio%20Documentation&_biz_n=140&rnd=482212&cdn_o=a&_biz_z=1777950382283)
+!

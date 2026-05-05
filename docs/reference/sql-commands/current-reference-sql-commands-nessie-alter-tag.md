@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/nessie/alter-tag
+slug: /reference/sql/commands/nessie/alter-tag
 title: "ALTER TAG | Dremio Enterprise Documentation"
 depth: 5
 crawled_at: 65347.267798875
@@ -25,7 +26,7 @@ ALTER TAG <tag_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/nessie/alter-tag#parameters "Direct link to Parameters")
+## Parameters​
 `tag_name` String
 The name of the tag that you are assigning a new reference to.
 * * *
@@ -40,7 +41,7 @@ Specifies a reference to assign a tag from.
 * * *
 IN `source_name` String Optional
 The name of the source that you want to assign a tag. If not specified, the current source in the query context is used.
-## Examples[​](/reference/sql/commands/nessie/alter-tag#examples "Direct link to Examples")
+## Examples​
 Assign the tag to a specific commit
 
 ```
@@ -76,13 +77,13 @@ ALTER TAG myTag
 
 Was this page helpful?
 [Previous ALTER BRANCH](/reference/sql/commands/nessie/alter-branch)[Next CREATE BRANCH](/reference/sql/commands/nessie/create-branch)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ALTER BRANCH](/reference/sql/commands/nessie/alter-branch)[Next CREATE BRANCH](/reference/sql/commands/nessie/create-branch)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fnessie%2Falter-tag%2F&_biz_t=1777951667298&_biz_i=ALTER%20TAG%20%7C%20Dremio%20Documentation&_biz_n=2713&rnd=63973&cdn_o=a&_biz_z=1777951667299)
+!

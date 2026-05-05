@@ -1,5 +1,6 @@
 ---
 url: /data-products/discover/bookmarks
+slug: /data-products/discover/bookmarks
 title: "Star Objects | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64033.252544458
@@ -20,20 +21,20 @@ To star an object:
 
 ![This is a screenshot showing how to star a dataset for the Starred list.](https://docs.dremio.com/images/starring-catalog-objects.png)
 To unstar an object, click the Star icon again.
-## Limits[​](/data-products/discover/bookmarks#limits "Direct link to Limits")
+## Limits​
   * Starring is different from pinning items. You can only pin spaces and sources on the Datasets page, and pinned items are not saved if you open a new browser or clear the cache.
   * Starring is not supported for datasets in a Nessie repository.
 
 
 Was this page helpful?
 [Previous View Metadata of a Dataset](/data-products/discover/metadata)[Next Explore Using AI Agent](/data-products/ai-agent)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous View Metadata of a Dataset](/data-products/discover/metadata)[Next Explore Using AI Agent](/data-products/ai-agent)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-products%2Fdiscover%2Fbookmarks%2F&_biz_t=1777950353248&_biz_i=Star%20Objects%20%7C%20Dremio%20Documentation&_biz_n=70&rnd=396982&cdn_o=a&_biz_z=1777950353249)
+!

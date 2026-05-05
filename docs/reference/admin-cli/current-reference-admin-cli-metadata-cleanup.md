@@ -1,17 +1,18 @@
 ---
 url: /reference/admin-cli/metadata-cleanup
+slug: /reference/admin-cli/metadata-cleanup
 title: "Clean Metadata | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64230.8096655
 ---
 
-[Skip to main content](/reference/admin-cli/metadata-cleanup#__docusaurus_skipToContent_fallback)
+Skip to main content
 [![Dremio Documentation Home Page](https://docs.dremio.com/images/Dremio-wordmark-light.svg) **Documentation**](/)
-[](/dremio-cloud)
-[](/)
+
+
 [current [26.x]](/reference/admin-cli/metadata-cleanup)
   * [current [26.x]](/reference/admin-cli/metadata-cleanup)
-  * [25.x](/25.x)
+  * 25.x
 
 
 [Start for Free](https://www.dremio.com/get-started/)
@@ -34,7 +35,7 @@ Search`⌘``K`
       * [Encrypt Credentials](/reference/admin-cli/encryption)
       * [Export and Import PATs](/reference/admin-cli/export-import-pat)
       * [Export Profiles](/reference/admin-cli/export-profiles)
-      * [Clean Metadata](/reference/admin-cli/metadata-cleanup)
+      * Clean Metadata
       * [Perform Nessie Maintenance](/reference/admin-cli/nessie-maintenance)
       * [Remove Duplicate Roles](/reference/admin-cli/remove-roles)
       * [Repair ACLS](/reference/admin-cli/repair-acls)
@@ -57,14 +58,14 @@ Version: current [26.x]
 On this page
 # Clean Metadata
 This topic provides usage information for the `dremio-admin clean` CLI command.
-Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/#using-the-dremio-admin-cli-on-kubernetes) before putting anything learned on this page into practice on such a deployment.
-## Requirements[​](/reference/admin-cli/metadata-cleanup#requirements "Direct link to Requirements")
+Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/) before putting anything learned on this page into practice on such a deployment.
+## Requirements​
   * Only run this command if instructed by Dremio Support.
   * Perform a backup before running the command (see [Backup](/reference/admin-cli/backup) for more information).
   * Shut down all cluster nodes completely before running the command.
 
 
-## Syntax[​](/reference/admin-cli/metadata-cleanup#syntax "Direct link to Syntax")
+## Syntax​
 Clean command syntax
 
 ```
@@ -72,8 +73,8 @@ dremio-admin clean <options>
 
 ```
 
-You must specify at least one [option](/reference/admin-cli/metadata-cleanup#options). If you do not specify any options, the command opens the metadata store, but does not perform any operations. In this case, it just returns the message `No operation requested.`
-## Options[​](/reference/admin-cli/metadata-cleanup#options "Direct link to Options")
+You must specify at least one option. If you do not specify any options, the command opens the metadata store, but does not perform any operations. In this case, it just returns the message `No operation requested.`
+## Options​
 Clean command options
 
 ```
@@ -101,9 +102,9 @@ Clean command options
 ```
 
 If you do not specify any options, the output of the `dremio-admin clean` command is a report of metadata store statistics.
-## Examples[​](/reference/admin-cli/metadata-cleanup#examples "Direct link to Examples")
+## Examples​
 This section provides examples for using the `dremio-admin clean` command.
-### Compact Metadata[​](/reference/admin-cli/metadata-cleanup#compact-metadata "Direct link to Compact Metadata")
+### Compact Metadata​
 Compacts metadata store entries.
 Compact metadata store entries
 
@@ -113,7 +114,7 @@ dremio-admin clean --compact
 
 ```
 
-### Delete Orphaned Entries[​](/reference/admin-cli/metadata-cleanup#delete-orphaned-entries "Direct link to Delete Orphaned Entries")
+### Delete Orphaned Entries​
 Deletes orphaned metadata store entries.
 Delete orphaned metadata store entries
 
@@ -123,7 +124,7 @@ dremio-admin clean --delete-orphans
 
 ```
 
-### Delete Jobs[​](/reference/admin-cli/metadata-cleanup#delete-jobs "Direct link to Delete Jobs")
+### Delete Jobs​
 Deletes jobs, profiles, and temporary dataset versions older than the specified threshold days. If no threshold is specified, items older than the default number of days (2147483647) will be deleted. Using the default threshold will effectively not delete anything. It is recommended that you use a reasonable value (e.g., 7, 14, 30, etc.).
 Delete jobs
 
@@ -133,7 +134,7 @@ dremio-admin clean --max-job-days=7
 
 ```
 
-### Re-index Data[​](/reference/admin-cli/metadata-cleanup#re-index-data "Direct link to Re-index Data")
+### Re-index Data​
 Re-index data.
 Re-index data
 
@@ -143,7 +144,7 @@ dremio-admin clean --reindex-data
 
 ```
 
-### Delete Orphaned Profiles[​](/reference/admin-cli/metadata-cleanup#delete-orphaned-profiles "Direct link to Delete Orphaned Profiles")
+### Delete Orphaned Profiles​
 Delete orphaned Dremio job profiles.
 Delete orphaned job profiles
 
@@ -153,7 +154,7 @@ dremio-admin clean --delete-orphan-profiles
 
 ```
 
-### Delete Orphaned Dataset Versions[​](/reference/admin-cli/metadata-cleanup#delete-orphaned-dataset-versions "Direct link to Delete Orphaned Dataset Versions")
+### Delete Orphaned Dataset Versions​
 This command is available in Dremio 19.6.3+, 19.8.0+, 20.4.0+, 21.2.0+, and 22.0.0+.
 Deletes dataset versions that Dremio is not using that are older than the specified threshold days. If no threshold is specified, dataset versions older than the default number of days (2147483647) will be deleted. Using the default threshold will effectively not delete anything. It is recommended that you use a reasonable value (e.g., 7, 14, 30, etc.).
 Delete orphaned dataset versions
@@ -164,7 +165,7 @@ dremio-admin clean --delete-orphan-datasetversions=7
 
 ```
 
-### Multiple Options[​](/reference/admin-cli/metadata-cleanup#multiple-options "Direct link to Multiple Options")
+### Multiple Options​
 Running individual clean commands with a single option per command makes it easier to inspect the impact of each action. However, you can run the clean command with more than one option at a time.
 For example, the following command compacts metadata, deletes jobs older than 7 days, and deletes orphaned dataset versions older than 7 days:
 Use multiple options
@@ -175,7 +176,7 @@ dremio-admin clean --compact --max-job-days=7 --delete-orphan-datasetversions=7
 
 ```
 
-### Report Metadata Statistics[​](/reference/admin-cli/metadata-cleanup#report-metadata-statistics "Direct link to Report Metadata Statistics")
+### Report Metadata Statistics​
 If you do not specify any options, the output of the `clean` command is statistics about the metadata store. The statistics include estimated key count, estimated total in-memory size, and total file size for different categories of objects in the store. Running the `clean` command without options is a read operation and will **not** clean metadata.
 Report metadata store statistics
 
@@ -186,27 +187,27 @@ dremio-admin clean
 
 Was this page helpful?
 [Previous Export Profiles](/reference/admin-cli/export-profiles)[Next Perform Nessie Maintenance](/reference/admin-cli/nessie-maintenance)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Export Profiles](/reference/admin-cli/export-profiles)[Next Perform Nessie Maintenance](/reference/admin-cli/nessie-maintenance)
-  * [Requirements](/reference/admin-cli/metadata-cleanup#requirements)
-  * [Syntax](/reference/admin-cli/metadata-cleanup#syntax)
-  * [Options](/reference/admin-cli/metadata-cleanup#options)
-  * [Examples](/reference/admin-cli/metadata-cleanup#examples)
-    * [Compact Metadata](/reference/admin-cli/metadata-cleanup#compact-metadata)
-    * [Delete Orphaned Entries](/reference/admin-cli/metadata-cleanup#delete-orphaned-entries)
-    * [Delete Jobs](/reference/admin-cli/metadata-cleanup#delete-jobs)
-    * [Re-index Data](/reference/admin-cli/metadata-cleanup#re-index-data)
-    * [Delete Orphaned Profiles](/reference/admin-cli/metadata-cleanup#delete-orphaned-profiles)
-    * [Delete Orphaned Dataset Versions](/reference/admin-cli/metadata-cleanup#delete-orphaned-dataset-versions)
-    * [Multiple Options](/reference/admin-cli/metadata-cleanup#multiple-options)
-    * [Report Metadata Statistics](/reference/admin-cli/metadata-cleanup#report-metadata-statistics)
+  * Requirements
+  * Syntax
+  * Options
+  * Examples
+    * Compact Metadata
+    * Delete Orphaned Entries
+    * Delete Jobs
+    * Re-index Data
+    * Delete Orphaned Profiles
+    * Delete Orphaned Dataset Versions
+    * Multiple Options
+    * Report Metadata Statistics
 
 
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)

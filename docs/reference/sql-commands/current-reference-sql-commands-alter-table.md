@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/alter-table
+slug: /reference/sql/commands/alter-table
 title: "ALTER TABLE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.060692666
@@ -59,7 +60,7 @@ ALTER TABLE <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/alter-table#parameters "Direct link to Parameters")
+## Parameters​
 `table_name` String
 The name of the table that you want to alter.
 * * *
@@ -280,7 +281,7 @@ DROP REFLECTION String Optional
 Drops the specified Reflection defined on the table.
 * * *
 REFRESH REFLECTIONS String Optional
-For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections#triggering-refreshes-by-using-the-reflection-api-the-catalog-api-or-an-sql-command).
+For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections).
 * * *
 ROUTE REFLECTIONS TO {'{'})'{'{'})'{'}'}) DEFAULT QUEUE | QUEUE {'{'})'{'{'})'{'}'}) `queue_name` | `queue_uuid` {'{'})'{'}'}'{'}'} {'{'})'{'}'}'{'}'} String
 Use the queue name or unique identifier to specify the queue on which to run jobs that create and refresh Reflections that are defined on the table. If a queue name or unique identifier is not specified, the default queue is used. You can also directly specify the default queue.
@@ -307,7 +308,7 @@ ADD partitions the table data on the values in a single column or by using one o
 Example: truncate(10, i) produces 0, 10, 20, and so on.
 
  |  
-## Examples[​](/reference/sql/commands/alter-table#examples "Direct link to Examples")
+## Examples​
 Add Primary Key for an Iceberg table
 
 ```
@@ -571,13 +572,13 @@ ALTER TABLE sales_data
 
 Was this page helpful?
 [Previous ALTER SPACE](/reference/sql/commands/alter-space)[Next ALTER VIEW](/reference/sql/commands/alter-view)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ALTER SPACE](/reference/sql/commands/alter-space)[Next ALTER VIEW](/reference/sql/commands/alter-view)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Falter-table%2F&_biz_t=1777950569849&_biz_i=ALTER%20TABLE%20%7C%20Dremio%20Documentation&_biz_n=483&rnd=962572&cdn_o=a&_biz_z=1777950569850)
+!

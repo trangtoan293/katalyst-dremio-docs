@@ -1,5 +1,6 @@
 ---
 url: /client-applications/thoughtspot
+slug: /client-applications/thoughtspot
 title: "ThoughtSpot | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64032.981252458
@@ -13,11 +14,11 @@ Version: current [26.x]
 On this page
 # ThoughtSpot
 You can use 
-## Supported Versions[​](/client-applications/thoughtspot#supported-versions "Direct link to Supported Versions")
+## Supported Versions​
 Dremio supports ThoughtSpot cloud 8.3 and ThoughtSpot software 7.2.1.
-## Supported Authentication Methods[​](/client-applications/thoughtspot#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
 You can use your Dremio username and password.
-## Creating a Connection[​](/client-applications/thoughtspot#creating-a-connection "Direct link to Creating a Connection")
+## Creating a Connection​
 While you're using the connection, the data fields that you create, modify, and delete in Dremio are reflected as table columns in ThoughtSpot. To account for new or outdated fields, you will need to go back into the data connection to check or uncheck the columns that you want added or removed on the Select Tables page.
   1. Log into ThoughtSpot.
   2. Go to **Data** &gt; **Connections** &gt; **Add Connection**.
@@ -40,13 +41,13 @@ e. In the **Password** field, enter your password.
 
 Was this page helpful?
 [Previous Tableau](/client-applications/tableau)[Next Drivers](/client-applications/drivers)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Tableau](/client-applications/tableau)[Next Drivers](/client-applications/drivers)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fthoughtspot%2F&_biz_t=1777950352662&_biz_i=ThoughtSpot%20%7C%20Dremio%20Documentation&_biz_n=66&rnd=122446&cdn_o=a&_biz_z=1777950352663)
+!

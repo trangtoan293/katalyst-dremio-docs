@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/data-types/mappings/mysql
+slug: /reference/sql/data-types/mappings/mysql
 title: "MySQL Data Types | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64263.664088
@@ -59,13 +60,13 @@ Dremio supports MySQL data types, as shown in the following table which provides
 | YEAR  | INTEGER  |  
 Was this page helpful?
 [Previous MongoDB Data Types](/reference/sql/data-types/mappings/mongo)[Next Oracle Data Types](/reference/sql/data-types/mappings/oracle)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous MongoDB Data Types](/reference/sql/data-types/mappings/mongo)[Next Oracle Data Types](/reference/sql/data-types/mappings/oracle)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fdata-types%2Fmappings%2Fmysql%2F&_biz_t=1777950582998&_biz_i=MySQL%20Data%20Types%20%7C%20Dremio%20Documentation&_biz_n=511&rnd=750113&cdn_o=a&_biz_z=1777950582999)
+!

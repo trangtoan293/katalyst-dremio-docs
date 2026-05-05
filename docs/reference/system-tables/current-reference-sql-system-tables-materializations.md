@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/materializations
+slug: /reference/sql/system-tables/materializations
 title: "SYS.MATERIALIZATIONS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.936613458
@@ -23,7 +24,7 @@ FROM sys.materializations
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/materializations#example-output "Direct link to Example Output")  
+## Example Output​  
 | reflection_id  | materialization_id  | created  | expires  | size_bytes  | series_id  | init_refresh_job_id  | series_ordinal  | join_analysis  | state  | failure_msg  | data_partitions  | last_refresh_from_pds  | last_refresh_finished  | last_refresh_duration_millis  | refresh_decision  | is_stale  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 3f652a0d-af99-4069-a78f-37e3232a79be  | 17d01a44-f659-4354-8153-34a6a4abab0f  | 2023-01-11T19:56:36.626  | 3022-05-14T19:56:36.623  | 18275  | 1673466996777  | 1c40eb8b-0687-6a17-0bb8-7bd163b8f300  | 0  | {'{'})'{'{'})'{'}'})"joinTables":[{'{'})'{'{'})'{'}'})"tableId":0,"tableSchemaPath":["@  | DONE  | NONE  |   | 2023-01-11T19:56:36.623  | 2023-01-11T19:58:46.946  | 130323  | Full Refresh.  
@@ -53,7 +54,7 @@ No existing refresh, doing an initial full refresh.  | false  |
 Anchor dataset "Samples (23)"."samples.dremio.com"."NYC-taxi-trips" has been updated from snapshot 1135195534096685603 to snapshot 2542422561267259273  | false  |  
 | 9ba24fd3-840d-4045-a635-6d2ed92d03df  | e6bb8887-3de1-4eae-838d-b08d5c0c1e1d  | 2022-07-15T05:50:43.844  | 3021-11-15T05:43:33.792  | 8861  | 1657864244001  | 1d2effcb-a77b-ed4a-9aae-b09eefe7b400  | 0  | {'{'})'{'{'})'{'}'})"joinTables":[{'{'})'{'{'})'{'}'})"tableId":1,"tableSchemaPath":["__accelerator","24b9b51f-424c-4478-bd1f-0667cb4e99bd  | ""DX46904""]{'{'})'{'}'}'{'}'}]{'{'})'{'}'}'{'}'}"  | DONE  | NONE  |   | 2022-07-15T05:43:33.792  | 2022-07-15T05:52:54.174  | Full Refresh.  
 No existing refresh, doing an initial full refresh.  | true  |  
-## Columns[​](/reference/sql/system-tables/materializations#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | reflection_id  | varchar  | The UUID of the Reflection that was refreshed.  |  
@@ -82,13 +83,13 @@ No existing refresh, doing an initial full refresh.  | true  |
 | is_stale  | boolean  | If the materialization is stale. Staleness indicates whether the data of the materialization is out-of-sync with its base tables, because they have been updated since the materialization was last refreshed. This flag applies only to materializations whose Reflections are built exclusively on Iceberg tables.  |  
 Was this page helpful?
 [Previous SYS.JOBS_RECENT](/reference/sql/system-tables)[Next SYS.MEMBERSHIP](/reference/sql/system-tables/membership)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.JOBS_RECENT](/reference/sql/system-tables)[Next SYS.MEMBERSHIP](/reference/sql/system-tables/membership)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fmaterializations%2F&_biz_t=1777950693489&_biz_i=SYS.MATERIALIZATIONS%20%7C%20Dremio%20Documentation&_biz_n=722&rnd=790224&cdn_o=a&_biz_z=1777950693489)
+!

@@ -1,5 +1,6 @@
 ---
 url: /security/authentication/identity-providers/oidc
+slug: /security/authentication/identity-providers/oidc
 title: "OpenID | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64076.015570833
@@ -15,9 +16,9 @@ Version: current [26.x]
 On this page
 # OpenID Identity Providers Enterprise
 This topic describes the configuration of Dremio for Single Sign-On (SSO) using an OpenID Connect (OIDC) identity provider. OpenID-based SSO handles authentication only; it does not query or retrieve user group memberships from the identity provider. User and group information is provisioned via [SCIM](/security/authentication/identity-providers/scim).
-## Requirements[​](/security/authentication/identity-providers/oidc#requirements "Direct link to Requirements")
+## Requirements​
 Your IDP may require Dremio's web URL to use HTTPS to configure SSO. Check with your IDP documentation.
-## Configuring OpenID[​](/security/authentication/identity-providers/oidc#configuring-openid "Direct link to Configuring OpenID")
+## Configuring OpenID​
 When registering an application in the OpenID provider of your choice, you will need to register one or two Dremio redirect URIs.
   * To configure SSO connections to Dremio, register a Dremio redirect URL:
     * Without a load balancer, register the URL: `https://<dremio-host>:9047/sso`, where `<dremio-host>` is the hostname or IP address of your Dremio coordinator node.
@@ -29,18 +30,18 @@ When registering an application in the OpenID provider of your choice, you will 
     * If your Dremio cluster uses encryption: `https://<dremio-host>:9047/oauth/callback`
 
 
-## Configuring Dremio for OpenID[​](/security/authentication/identity-providers/oidc#configuring-dremio-for-openid "Direct link to Configuring Dremio for OpenID")
+## Configuring Dremio for OpenID​
 To configure Dremio to use an OpenID provider, perform the following steps:
-  1. Create a new `oauth.json` file that contains the configuration for your OpenID provider. See the [OpenID Properties](/security/authentication/identity-providers/oidc#openid-properties) below.
+  1. Create a new `oauth.json` file that contains the configuration for your OpenID provider. See the OpenID Properties below.
   2. Adding your configuration:
      * Kubernetes
      * Standalone
-    1. Update the `coordinator.web.auth.type` configuration in your `values-overrides.yaml` with the value `oauth`. See the configuration of [Identity Providers](/deploy-dremio/configuring-kubernetes#identity-provider).
+    1. Update the `coordinator.web.auth.type` configuration in your `values-overrides.yaml` with the value `oauth`. See the configuration of [Identity Providers](/deploy-dremio/configuring-kubernetes).
     2. Add the `oauth.json` file to your Dremio deployment. This can be done in one of two ways:
 **Method 1 (Preferred)**
-Add the content of your JSON file into your `values-override.yaml` via the `ssoFile` option. This method is detailed in the [Identity Provider](/deploy-dremio/configuring-kubernetes#identity-provider) section.
+Add the content of your JSON file into your `values-override.yaml` via the `ssoFile` option. This method is detailed in the [Identity Provider](/deploy-dremio/configuring-kubernetes) section.
 **Method 2**
-Perform a `helm install` with the `--set-file coordinator.web.auth.ssoFile=<your-local-path>/oauth.json` option indicating the location of the `oauth.json` file from step 1. See [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes#step-1-deploy-dremio) for additional information.
+Perform a `helm install` with the `--set-file coordinator.web.auth.ssoFile=<your-local-path>/oauth.json` option indicating the location of the `oauth.json` file from step 1. See [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes) for additional information.
     1. Edit the `dremio.conf` file, and add the following properties:
 Example Dremio Services Configuration 
 
@@ -56,7 +57,7 @@ services: {
     2. Copy the modified `dremio.conf` and `oauth.json` files to every coordinator node in the Dremio cluster. The location of the `oauth.json` file is relative to the `/conf` directory. The path to the file can be absolute; the file can live anywhere in the system.
 
 
-## OpenID Properties[​](/security/authentication/identity-providers/oidc#openid-properties "Direct link to OpenID Properties")
+## OpenID Properties​
 The `oauth.json` file contains the following properties about the OIDC provider.
 Example Configuration for OIDC 
 
@@ -92,19 +93,19 @@ OpenID providers are defined using the following properties:
 
  |  
 | `scope`  | A space-delimited list of scopes provided by the OpenID provider. `openid` scope is always required, other scopes can vary by provider.  |  
-## Configuring Dremio for Hybrid OpenID+LDAP[​](/security/authentication/identity-providers/oidc#configuring-dremio-for-hybrid-openidldap "Direct link to Configuring Dremio for Hybrid OpenID+LDAP")
+## Configuring Dremio for Hybrid OpenID+LDAP​
 Dremio supports hybrid OIDC authentication with LDAP authorization (OIDC+LDAP), which allows you to authenticate users with an OIDC provider and fetch user information, groups, and group memberships from LDAP. First, Dremio authenticates users with OIDC. From the OIDC flow, Dremio extracts the username from the ID token. Then, Dremio searches for the username and its group membership in LDAP.
 Users cannot log in to Dremio using their LDAP usernames and passwords. Username and password logins only work for local users. Follow these steps to configure OIDC+LDAP:
-  1. Create a new `config.json` file that contains your configuration for your OpenID provider with LDAP. See the [OAuth+LDAP Properies](/security/authentication/identity-providers/oidc#oauthldap-properties) below.
+  1. Create a new `config.json` file that contains your configuration for your OpenID provider with LDAP. See the OAuth+LDAP Properies below.
   2. Adding your configuration:
      * Kubernetes
      * Standalone
-    1. Update the `coordinator.web.auth.type` configuration in your `values-overrides.yaml` with the value `oauth+ldap`. See the configuration of [Identity Providers](/deploy-dremio/configuring-kubernetes#identity-provider) for additional information.
+    1. Update the `coordinator.web.auth.type` configuration in your `values-overrides.yaml` with the value `oauth+ldap`. See the configuration of [Identity Providers](/deploy-dremio/configuring-kubernetes) for additional information.
     2. Add the `config.json` file to your Dremio deployment. This can be done in one of two ways:
 **Method 1 (Preferred)**
-Add the content of your JSON file into your `values-override.yaml` via the `ssoFile` option. This method is detailed in the [Identity Provider](/deploy-dremio/configuring-kubernetes#identity-provider) section.
+Add the content of your JSON file into your `values-override.yaml` via the `ssoFile` option. This method is detailed in the [Identity Provider](/deploy-dremio/configuring-kubernetes) section.
 **Method 2**
-Perform a `helm install` with the `--set-file coordinator.web.auth.ssoFile=<your-local-path>/config.json` option indicating the location of the `config.json`. See [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes#step-1-deploy-dremio) for additional information.
+Perform a `helm install` with the `--set-file coordinator.web.auth.ssoFile=<your-local-path>/config.json` option indicating the location of the `config.json`. See [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes) for additional information.
     1. Edit the `dremio.conf` file, and add the following properties:
 Example Dremio Services Configuration 
 
@@ -120,10 +121,10 @@ services: {
     2. Copy the modified `dremio.conf` and `config.json` files to every coordinator node in the Dremio cluster. The location of the `config.json` file is relative to the `/conf` directory. The path to the file can be absolute; the file can live anywhere in the system.
 
 
-## OAuth+LDAP Properties[​](/security/authentication/identity-providers/oidc#oauthldap-properties "Direct link to OAuth+LDAP Properties")
+## OAuth+LDAP Properties​
 The `config.json` file for OAuth+LDAP is a combination of OAuth and LDAP configurations.
-  * The properties in the `oAuthConfig` section are described above in [OpenID Properties](/security/authentication/identity-providers/oidc#openid-properties).
-  * The properties in the `ldapConfig` section are described in [LDAP Properties](/security/authentication/identity-providers/ldap#ldap-properties).
+  * The properties in the `oAuthConfig` section are described above in OpenID Properties.
+  * The properties in the `ldapConfig` section are described in [LDAP Properties](/security/authentication/identity-providers/ldap).
 
 Example of Combined OAuth and LDAP Configuration 
 
@@ -172,15 +173,15 @@ Attribute-Based Configuration Example
 ```
 
 If the OIDC authentication and LDAP search are successful, Dremio creates a user account with the specified username. If OIDC authentication is successful but the username does not exist in LDAP, the user will be unable to log in to Dremio.
-The [LDAP `userFilter` property](/security/authentication/identity-providers/ldap#using-userfilter) works with OIDC+LDAP. You can also use the OIDC application configuration in your identity provider to limit who can authenticate to Dremio.
+The [LDAP `userFilter` property](/security/authentication/identity-providers/ldap) works with OIDC+LDAP. You can also use the OIDC application configuration in your identity provider to limit who can authenticate to Dremio.
 Was this page helpful?
 [Previous Microsoft Entra ID](/security/authentication/identity-providers/microsoft-entra-id)[Next SCIM](/security/authentication/identity-providers/scim)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Microsoft Entra ID](/security/authentication/identity-providers/microsoft-entra-id)[Next SCIM](/security/authentication/identity-providers/scim)

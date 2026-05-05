@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/dremio-config/dremio-env
+slug: /deploy-dremio/other-options/standalone/dremio-config/dremio-env
 title: "Dremio Environment Configuration | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64211.229314583
@@ -8,8 +9,8 @@ crawled_at: 64211.229314583
   * [Dremio Enterprise Home](/)
   * [Deploy Dremio](/deploy-dremio)
   * [Other Options](/deploy-dremio/other-options)
-  * [Dremio with Your Infrastructure](/deploy-dremio/other-options/standalone)
-  * [Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
+  * Dremio with Your Infrastructure
+  * Cluster Configuration
   * Environment
 
 Version: current [26.x]
@@ -137,11 +138,11 @@ Template `dremio-env` configuration file
 
 ```
 
-## Memory[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#memory "Direct link to Memory")
+## Memory​
 The `dremio-env` file is the configuration file for specifying memory, Java options, and log directories. When this configuration file is customized, it must be updated on all cluster nodes.
-### Overall System Memory[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#overall-system-memory "Direct link to Overall System Memory")
+### Overall System Memory​
 During installation, Dremio Enterprise automatically determines the amount of system memory available and allocates it between heap and direct memory, depending on the Dremio node type.
-### Maximum Memory[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#maximum-memory "Direct link to Maximum Memory")
+### Maximum Memory​
 As you monitor the performance of your query workloads, you might want to adjust the amount of memory allocated on your nodes. If you see queries failing on an instance that's running out of memory, increasing the amount of memory that Dremio is able to consume may solve your problem.
 Consult with Dremio Support before making adjustments. Dremio recommends configuring the maximum memory size, which allows Dremio to automatically determine the best allocation between HEAP and DIRECT memory depending on the node type. Based on your workloads, Dremio Support might advise you to adjust the maximum memory available using the `DREMIO_MAX_MEMORY_SIZE_MB` parameter, or to configure heap and direct memory directly instead of maximum memory.
 To modify the default maximum memory, change the following property:
@@ -152,7 +153,7 @@ DREMIO_MAX_MEMORY_SIZE_MB=16384
 
 ```
 
-### Heap and Direct Memory[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#heap-and-direct-memory "Direct link to Heap and Direct Memory")
+### Heap and Direct Memory​
 By default, `DREMIO_MAX_HEAP_MEMORY_SIZE_MB` and `DREMIO_MAX_DIRECT_MEMORY_SIZE_MB` are set as follows.
 On coordinator nodes:
   * If `DREMIO_MAX_MEMORY_SIZE_MB` is ≥18 GB, Heap is 16 GB and Direct uses the remaining.
@@ -186,7 +187,7 @@ DREMIO_MAX_DIRECT_MEMORY_SIZE_MB=16384
 ```
 
 For the `DREMIO_MAX_DIRECT_MEMORY_SIZE_MB` allocation, be sure to leave at least 1-2 GB of memory for the OS.
-### Heap Monitor[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#heap-monitor "Direct link to Heap Monitor")
+### Heap Monitor​
 To prevent JVM failures due to a lack of heap memory, Dremio's heap monitor kills queries if the JVM's heap utilisation stays above the threshold of 85%, even after a full garbage collection. On an executor node, the heap monitor evaluates currently running queries and kills as many needed to release approximately 25% of the memory heap. If necessary, the heap monitor runs again to kill more queries. On a coordinator node, the heap monitor cancels all queries in the planning phase. The feature is enabled by default.
 The [query profile](/admin/monitoring/jobs/viewing-query-profiles) for a query killed by a heap monitor on an executor node contains the following error:
 Example Memory Limits Exceeded Message 
@@ -211,7 +212,7 @@ Dremio recommends trying the following suggestions, in order, if the heap monito
   4. Increase the number of executor nodes.
 
 
-## Logs and PID[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#logs-and-pid "Direct link to Logs and PID")
+## Logs and PID​
 To customize where the Dremio logs and PID information are written:
   1. Create new Log and PID directories. For example: `/var/log/dremio` and `/var/run/dremio`.
   2. Uncomment the Log and PID variables in the template file and provide the new location. For example:
@@ -225,7 +226,7 @@ DREMIO_PID_DIR=/var/run/dremio
 
 
 
-## Non-ISO-8859-1 Literals[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-env#non-iso-8859-1-literals "Direct link to Non-ISO-8859-1 Literals")
+## Non-ISO-8859-1 Literals​
 Queries that contain non-ISO-8859-1 literals, such as the euro sign, '€', are supported. To configure Dremio to support UTF-8 or UTF-16 literals:
   1. Stop Dremio.
   2. Set the DREMIO_JAVA_SERVER_EXTRA_OPTS property
@@ -247,14 +248,14 @@ DREMIO_JAVA_SERVER_EXTRA_OPTS='-Dsaffron.default.charset=UTF-16 -Dsaffron.defaul
 
 
 Was this page helpful?
-[Previous High Availability](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config)[Next System Requirements](/deploy-dremio/other-options/standalone/system-requirements)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous High AvailabilityNext System Requirements
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous High Availability](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config)[Next System Requirements](/deploy-dremio/other-options/standalone/system-requirements)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fother-options%2Fstandalone%2Fdremio-config%2Fdremio-env%2F&_biz_t=1777950533643&_biz_i=Dremio%20Environment%20Configuration%20%7C%20Dremio%20Enterprise%20Documentation&_biz_n=412&rnd=795353&cdn_o=a&_biz_z=1777950533643)
+Previous High AvailabilityNext System Requirements
+!

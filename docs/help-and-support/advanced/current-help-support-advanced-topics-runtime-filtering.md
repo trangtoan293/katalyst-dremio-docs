@@ -1,5 +1,6 @@
 ---
 url: /help-support/advanced-topics/runtime-filtering
+slug: /help-support/advanced-topics/runtime-filtering
 title: "Runtime Filtering | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64060.676203375
@@ -34,13 +35,13 @@ WHERE c.signup_date ≥ DATE ‘2023-12-01’
 This query will have effective runtime filtering because it only considers customers who have signed up since December 2023, so the set of join key values in the filter will be relatively small. Also, the query only concerns orders made on the same day a customer signed up, so entire `order_date` partitions in `sales` will be filtered out.
 Was this page helpful?
 [Previous Refreshing Metadata](/help-support/advanced-topics/metadata-caching)[Next S3 on Amazon EMR Configuration](/help-support/advanced-topics/hive-s3)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Refreshing Metadata](/help-support/advanced-topics/metadata-caching)[Next S3 on Amazon EMR Configuration](/help-support/advanced-topics/hive-s3)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fhelp-support%2Fadvanced-topics%2Fruntime-filtering%2F&_biz_t=1777950380498&_biz_i=Runtime%20Filtering%20%7C%20Dremio%20Documentation&_biz_n=130&rnd=515695&cdn_o=a&_biz_z=1777950380499)
+!

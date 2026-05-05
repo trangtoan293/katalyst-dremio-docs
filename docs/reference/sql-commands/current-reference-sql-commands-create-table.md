@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/create-table
+slug: /reference/sql/commands/create-table
 title: "CREATE TABLE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.545302041
@@ -32,7 +33,7 @@ CREATE TABLE [ IF NOT EXISTS ] <table_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/create-table#parameters "Direct link to Parameters")
+## Parameters​
 IF NOT EXISTS Optional
 Causes Dremio to run the statement only if a table with the same name in the same path does not already exist.
 * * *
@@ -149,7 +150,7 @@ The name of the column that you want to sort the table by. Sorts each Parquet fi
 * * *
 TBLPROPERTIES ( '`property_name`' = '`property_value`' [ , ... ] )
 Sets one or more table properties for controlling the behavior of the table. Applies only to Iceberg tables. See [Properties of Apache Iceberg Tables](/developer/data-formats/apache-iceberg/table-properties) for a list of the supported properties.
-## Examples[​](/reference/sql/commands/create-table#examples "Direct link to Examples")
+## Examples​
 Create an Iceberg table in an Amazon S3 data source
 
 ```
@@ -191,13 +192,13 @@ CREATE TABLE sales_records
 
 Was this page helpful?
 [Previous CREATE SPACE](/reference/sql/commands/create-space)[Next CREATE TABLE AS](/reference/sql/commands/create-table-as)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CREATE SPACE](/reference/sql/commands/create-space)[Next CREATE TABLE AS](/reference/sql/commands/create-table-as)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fcreate-table%2F&_biz_t=1777950571449&_biz_i=CREATE%20TABLE%20%7C%20Dremio%20Documentation&_biz_n=493&rnd=779938&cdn_o=a&_biz_z=1777950571449)
+!

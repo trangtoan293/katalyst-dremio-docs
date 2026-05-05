@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/TO_DATE
+slug: /reference/sql/sql-functions/functions/TO_DATE
 title: "TO_DATE | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64072.796178166
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Date/Time](/reference/sql/sql-functions), [Conversion](/reference/sql/sql-functions)
 # TO_DATE
 Converts the input expressions to the corresponding date.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### TO_DATE(_in_ timestamp) → date[​](/reference/sql/sql-functions#to_datein-timestamp--date "Direct link to to_datein-timestamp--date")
+## Syntax
+### TO_DATE(_in_ timestamp) → date[​](/reference/sql/sql-functions)
   * in: The date is extracted from the timestamp.
 
 
@@ -31,7 +32,7 @@ SELECT TO_DATE(TIMESTAMP '2022-05-17 19:15:00.000')
 
 ```
 
-### TO_DATE(_numeric_expression_ int32) → date[​](/reference/sql/sql-functions#to_datenumeric_expression-int32--date "Direct link to to_datenumeric_expression-int32--date")
+### TO_DATE(_numeric_expression_ int32) → date[​](/reference/sql/sql-functions)
   * numeric_expression: A Unix epoch timestamp.
 
 
@@ -44,7 +45,7 @@ SELECT TO_DATE(1640131200)
 
 ```
 
-### TO_DATE(_numeric_expression_ float) → date[​](/reference/sql/sql-functions#to_datenumeric_expression-float--date "Direct link to to_datenumeric_expression-float--date")
+### TO_DATE(_numeric_expression_ float) → date[​](/reference/sql/sql-functions)
   * numeric_expression: A Unix epoch timestamp.
 
 
@@ -57,7 +58,7 @@ SELECT TO_DATE(1665131223.69)
 
 ```
 
-### TO_DATE(_numeric_expression_ int64) → date[​](/reference/sql/sql-functions#to_datenumeric_expression-int64--date "Direct link to to_datenumeric_expression-int64--date")
+### TO_DATE(_numeric_expression_ int64) → date[​](/reference/sql/sql-functions)
   * numeric_expression: A Unix epoch timestamp.
 
 
@@ -70,9 +71,9 @@ SELECT TO_DATE(1640131200)
 
 ```
 
-### TO_DATE(_string_expression_ varchar, _format_ varchar, _replaceErrorWithNull_ int32) → date[​](/reference/sql/sql-functions#to_datestring_expression-varchar-format-varchar-replaceerrorwithnull-int32--date "Direct link to to_datestring_expression-varchar-format-varchar-replaceerrorwithnull-int32--date")
+### TO_DATE(_string_expression_ varchar, _format_ varchar, _replaceErrorWithNull_ int32) → date[​](/reference/sql/sql-functions)
   * string_expression: The string from which to extract the date.
-  * format: String to specify [format](/reference/sql/sql-functions#datetime-formatting) of the date.
+  * format: String to specify [format](/reference/sql/sql-functions) of the date.
   * replaceErrorWithNull: If 0, the function will fail when given malformed input. If 1, the function will return NULL when given the malformed input.
 
 
@@ -85,9 +86,9 @@ SELECT TO_DATE('2022-07-22.23', 'YYYY-MM-DD', 1)
 
 ```
 
-### TO_DATE(_string_expression_ varchar, _format_ varchar) → date[​](/reference/sql/sql-functions#to_datestring_expression-varchar-format-varchar--date "Direct link to to_datestring_expression-varchar-format-varchar--date")
+### TO_DATE(_string_expression_ varchar, _format_ varchar) → date[​](/reference/sql/sql-functions)
   * string_expression: String from which to extract the date.
-  * format: String to specify [format](/reference/sql/sql-functions#datetime-formatting) of the date.
+  * format: String to specify [format](/reference/sql/sql-functions) of the date.
 
 
 **Examples**
@@ -99,7 +100,7 @@ SELECT TO_DATE('05/24/22', 'MM/DD/YY')
 
 ```
 
-### TO_DATE(_numeric_expression_ double) → date[​](/reference/sql/sql-functions#to_datenumeric_expression-double--date "Direct link to to_datenumeric_expression-double--date")
+### TO_DATE(_numeric_expression_ double) → date[​](/reference/sql/sql-functions)
   * numeric_expression: A Unix epoch timestamp.
 
 
@@ -114,12 +115,12 @@ SELECT TO_DATE(1665131223.69)
 
 Was this page helpful?
 [Previous TO_CHAR](/reference/sql/sql-functions)[Next TO_HEX](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous TO_CHAR](/reference/sql/sql-functions)[Next TO_HEX](/reference/sql/sql-functions)

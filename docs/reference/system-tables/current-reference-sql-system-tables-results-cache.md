@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/results-cache
+slug: /reference/sql/system-tables/results-cache
 title: "SYS.RESULTS_CACHE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64378.054982541
@@ -23,12 +24,12 @@ FROM sys.results_cache
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/results-cache#example-output "Direct link to Example Output")  
+## Example Output​  
 | cache_key  | job_id  | created_timestamp  | last_access_timestamp  | cache_location  | file_size_kb  | cache_status  | message  | user  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | a1b2c3d4-e5f6-7890-abcd-ef1234567890  | 1e011d6d-722e-7cc6-2b99-ec4c36b1d400  | 2024-03-15 10:23:45.123  | 2024-03-15 11:05:12.456  | /results/a1b2c3d4  | 128  | READY  | _empty text_  |   |  
 | b2c3d4e5-f6a7-8901-bcde-f12345678901  | 2f122e7e-833f-8dd7-3caa-fd5d47c2e511  | 2024-03-15 09:10:00.000  | 2024-03-15 09:10:00.000  | /results/b2c3d4e5  | 512  | ERROR_RETRYABLE  | Unable to cache query result because query result exceeds limit. Current limit: 20MB  |   |  
-## Columns[​](/reference/sql/system-tables/results-cache#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | cache_key  | varchar  | The unique identifier for the cached result.  |  
@@ -48,12 +49,12 @@ FROM sys.results_cache
 | user  | varchar  | The username of the user who ran the query that produced the cached result.  |  
 Was this page helpful?
 [Previous SYS.REFLECTIONS](/reference/sql/system-tables/reflections)[Next SYS.ROLES](/reference/sql/system-tables/roles)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.REFLECTIONS](/reference/sql/system-tables/reflections)[Next SYS.ROLES](/reference/sql/system-tables/roles)

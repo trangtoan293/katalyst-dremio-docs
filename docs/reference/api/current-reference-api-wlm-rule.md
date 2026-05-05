@@ -1,5 +1,6 @@
 ---
 url: /reference/api/wlm/rule
+slug: /reference/api/wlm/rule
 title: "Rule | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64243.99249625
@@ -72,18 +73,18 @@ Rule Object
 
 ```
 
-## Rule Attributes[​](/reference/api/wlm/rule#rule-attributes "Direct link to Rule Attributes")
+## Rule Attributes​
 tag String
 Unique identifier of the version of the rule. Dremio changes the tag whenever a rule changes and uses the tag to ensure that PUT requests apply to the most recent version of the rules.
 Example: VmqwaZ90VY4=
 * * *
-[rules](/reference/api/wlm/rule#attributes-of-objects-in-the-rules-array) Array of Object
+rules Array of Object
 List of rule objects in the Dremio instance.
 * * *
-[defaultRule](/reference/api/wlm/rule#attributes-of-the-defaultrule-object) Object
+defaultRule Object
 Information about the default rule for queries. Dremio applies the default rule to queries that do not meet the conditions for any other rule.
 Example: {'{'})'{'{'})'{'}'})"name": "All Other Queries","action": "REJECT","id": "8df37560-68c5-45a6-8e1f-4ee2e8438f81"{'{'})'{'}'}'{'}'}
-#### Attributes of Objects in the `rules` Array[​](/reference/api/wlm/rule#attributes-of-objects-in-the-rules-array "Direct link to attributes-of-objects-in-the-rules-array")
+#### Attributes of Objects in the `rules` Array​
 name String
 User-provided name for the rule.
 Example: High Cost Reflections
@@ -112,7 +113,7 @@ Example: PLACE
 id String (UUID)
 Unique identifier of the rule, in UTC format.
 Example: fa1ec87d-923b-414c-9064-e079f39f5c49
-#### Attributes of the `defaultRule` Object[​](/reference/api/wlm/rule#attributes-of-the-defaultrule-object "Direct link to attributes-of-the-defaultrule-object")
+#### Attributes of the `defaultRule` Object​
 name String
 User-provided name for the default rule.
 Example: All Other Queries
@@ -137,7 +138,7 @@ Example: REJECT
 id String (UUID)
 Unique identifier of the default rule.
 Example: 8df37560-68c5-45a6-8e1f-4ee2e8438f81
-## Create or Update a Rule[​](/reference/api/wlm/rule#create-or-update-a-rule "Direct link to Create or Update a Rule")
+## Create or Update a Rule​
 Create or update a WLM rule.
 In the WLM API, you interact with the ruleset in the rules array rather than individual rules themselves. To add or update an individual rule, you must include the entire rules array in the request body. It is not necessary to specify the ID for the rule you want to delete in the request URL.
 Method and URL
@@ -147,19 +148,19 @@ PUT /api/v3/wlm/rule
 
 ```
 
-### Parameters[​](/reference/api/wlm/rule#parameters "Direct link to Parameters")
+### Parameters​
 tag Body String
 Unique identifier of the rules instance. Dremio uses the tag to ensure that PUT requests apply to the most recent version of the rules. Omit if you are creating rules for the organization for the first time.
 Example: VmqwaZ90VY4=
 * * *
-[rules](/reference/api/wlm/rule#parameters-of-objects-in-the-rules-array) Body Array of Object
+rules Body Array of Object
 List of rule objects in the Dremio instance. To add or update an individual rule, you must include the entire rules array in the request body.
 Example:
 * * *
-[defaultRule](/reference/api/wlm/rule#parameters-of-the-defaultrule-object) Body Object
+defaultRule Body Object
 Information about the default rule for queries. Dremio applies the default rule to queries that do not meet the conditions for any other rule. To add or update an individual rule, you must include the defaultRule object in the request body.
 Example: {'{'})'{'{'})'{'}'})"name": "All Other Queries","action": "REJECT","id": "8df37560-68c5-45a6-8e1f-4ee2e8438f81"{'{'})'{'}'}'{'}'}
-#### Parameters of Objects in the `rules` Array[​](/reference/api/wlm/rule#parameters-of-objects-in-the-rules-array "Direct link to parameters-of-objects-in-the-rules-array")
+#### Parameters of Objects in the `rules` Array​
 name Body String
 User-provided name for the rule.
 Example: DevOps and Engineering
@@ -184,7 +185,7 @@ action Body Integer Optional
 Action the rule should take for queries that match the rule conditions. Default is `PLACE`.
 Enum: PLACE, REJECT
 Example: PLACE
-#### Parameters of the `defaultRule` Object[​](/reference/api/wlm/rule#parameters-of-the-defaultrule-object "Direct link to parameters-of-the-defaultrule-object")
+#### Parameters of the `defaultRule` Object​
 name Body String
 User-provided name for the default rule.
 Example: All Other Queries
@@ -276,7 +277,7 @@ curl -X PUT 'https://{hostname}/api/v3/wlm/rule' \
 
 ```
 
-### Example Response[​](/reference/api/wlm/rule#example-response "Direct link to Example Response")
+### Example Response​
 
 ```
 {  
@@ -401,7 +402,7 @@ curl -X PUT 'https://{hostname}/api/v3/wlm/rule' \
 
 ```
 
-### Example Response[​](/reference/api/wlm/rule#example-response-1 "Direct link to Example Response")
+### Example Response​
 
 ```
 {  
@@ -457,7 +458,7 @@ curl -X PUT 'https://{hostname}/api/v3/wlm/rule' \
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/rule#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -471,7 +472,7 @@ curl -X PUT 'https://{hostname}/api/v3/wlm/rule' \
 409 Conflict   
   
 
-## Retrieve All Rules[​](/reference/api/wlm/rule#retrieve-all-rules "Direct link to Retrieve All Rules")
+## Retrieve All Rules​
 Retrieve all WLM rules.
 Method and URL
 
@@ -480,7 +481,7 @@ GET /api/v3/wlm/rule
 
 ```
 
-### Example[​](/reference/api/wlm/rule#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -554,7 +555,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/rule#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -566,7 +567,7 @@ Response
 500 Internal Server Error   
   
 
-## Delete a Rule[​](/reference/api/wlm/rule#delete-a-rule "Direct link to Delete a Rule")
+## Delete a Rule​
 Delete a WLM rule from the ruleset.
 In the WLM API, you interact with the ruleset in the rules array rather than individual rules themselves. To delete a rule, send a PUT request that omits the rule from the rules array. It is not necessary to specify the ID for the rule you want to delete in the request URL.
 The default rule can be updated but cannot be deleted.
@@ -577,8 +578,8 @@ PUT /api/v3/wlm/rule/
 
 ```
 
-This example request demonstrates how to remove the `DevOps and Engineering` rule added in the [Create or Update a Rule](/reference/api/wlm/rule#create-or-update-a-rule) example:
-### Example[​](/reference/api/wlm/rule#example-1 "Direct link to Example")
+This example request demonstrates how to remove the `DevOps and Engineering` rule added in the Create or Update a Rule example:
+### Example​
 Request
 
 ```
@@ -694,7 +695,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/rule#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -708,13 +709,13 @@ Response
 
 Was this page helpful?
 [Previous Queue](/reference/api/wlm/queue)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Queue](/reference/api/wlm/queue)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fwlm%2Frule%2F&_biz_t=1777950564232&_biz_i=Rule%20%7C%20Dremio%20Documentation&_biz_n=473&rnd=818085&cdn_o=a&_biz_z=1777950564233)
+!

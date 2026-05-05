@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/BIT_LENGTH
+slug: /reference/sql/sql-functions/functions/BIT_LENGTH
 title: "BIT_LENGTH | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64294.424912041
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Binary](/reference/sql/sql-functions)
 # BIT_LENGTH
 Returns the length of the bits of the input expression.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### BIT_LENGTH(_expression_ binary, varchar) → integer[​](/reference/sql/sql-functions#bit_lengthexpression-binary-varchar--integer "Direct link to bit_lengthexpression-binary-varchar--integer")
+## Syntax
+### BIT_LENGTH(_expression_ binary, varchar) → integer[​](/reference/sql/sql-functions)
   * expression: A binary or varchar expression.
 
 
@@ -57,12 +58,12 @@ SELECT BIT_LENGTH(NULL)
 
 Was this page helpful?
 [Previous BIT_AND](/reference/sql/sql-functions)[Next BIT_OR](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous BIT_AND](/reference/sql/sql-functions)[Next BIT_OR](/reference/sql/sql-functions)

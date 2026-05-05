@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/MINDIR
+slug: /reference/sql/sql-functions/functions/MINDIR
 title: "MINDIR | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64337.715617041
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Directory](/reference/sql/sql-functions)
 # MINDIR
 Returns the name of a subdirectory of a table in HDFS. The subdirectory has the name that ranks lowest in case-sensitive alphanumeric order.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### MINDIR('dfs', '`path_of_parent_directory`') → `name_of_subdirectory`[​](/reference/sql/sql-functions#mindirdfs-path_of_parent_directory--name_of_subdirectory "Direct link to MINDIR\('dfs', '`path_of_parent_directory`'\) → `name_of_subdirectory`")
+## Syntax
+### MINDIR('dfs', '`path_of_parent_directory`') → `name_of_subdirectory`[​](/reference/sql/sql-functions) → `name_of_subdirectory`")
   * dfs: Specifies that the table data is in an HDFS filesystem.
   * `path_of_parent_directory`: The full path of the directory in which the table data is stored.
   * `name_of_subdirectory`: The name of the subdirectory.
@@ -72,12 +73,12 @@ SELECT * FROM dfs."/tmp/querylogs" WHERE dir0 = MINDIR('dfs','/tmp/querylogs')
 
 Was this page helpful?
 [Previous MIN](/reference/sql/sql-functions)[Next MINUTE](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous MIN](/reference/sql/sql-functions)[Next MINUTE](/reference/sql/sql-functions)

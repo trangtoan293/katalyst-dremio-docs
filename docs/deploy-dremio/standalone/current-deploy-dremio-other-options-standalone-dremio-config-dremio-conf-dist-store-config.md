@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config
+slug: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config
 title: "Configuring Distributed Storage | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64053.872989208
@@ -8,16 +9,16 @@ crawled_at: 64053.872989208
   * [Dremio Enterprise Home](/)
   * [Deploy Dremio](/deploy-dremio)
   * [Other Options](/deploy-dremio/other-options)
-  * [Dremio with Your Infrastructure](/deploy-dremio/other-options/standalone)
-  * [Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
-  * [Services](/deploy-dremio/other-options/standalone/dremio-config)
+  * Dremio with Your Infrastructure
+  * Cluster Configuration
+  * Services
   * Distributed Storage
 
 Version: current [26.x]
 On this page
 # Configuring Distributed Storage
 The location of distributed storage is defined by the `paths.dist` property in `dremio.conf`. This property must be updated in `dremio.conf` on all nodes.
-## Amazon S3[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#amazon-s3 "Direct link to Amazon S3")
+## Amazon S3​
 Before configuring Amazon S3 as Dremio's distributed storage:
   * Perform a test by adding the same bucket as a Dremio source and verify the connection.
   * Ensure that the following minimum policy requirements for storing Reflections are provided:
@@ -57,7 +58,7 @@ Minimum privilege policy
 
 
 
-### Configuring Dremio for Amazon S3[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#configuring-dremio-for-amazon-s3 "Direct link to Configuring Dremio for Amazon S3")
+### Configuring Dremio for Amazon S3​
 Before configuring, create a storage root directory first to use for the `dremio.conf` and **core-site.xml** files. To configure S3 for distributed storage:
   1. Change the distributed property in the `dremio.conf` file.
 Configuration of S3 bucket as the dist store
@@ -149,7 +150,7 @@ Use an AWS access key and secret key that has access to the S3 bucket. The `fs.s
   3. Copy `core-site.xml` to under Dremio's configuration directory (same as `dremio.conf`) on all nodes.
 
 
-### Configuring KMS Encryption Enterprise [​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#configuring-kms-encryption-enterprise- "Direct link to configuring-kms-encryption-enterprise-")
+### Configuring KMS Encryption Enterprise ​
 Before configuring AWS Key Management Store (KMS) as Dremio's distributed storage, create a storage root directory to use for the `dremio.conf` and `core-site.xml` files.
 To configure Dremio to use KMS encryption for Amazon S3:
   1. Change the distributed property in the `dremio.conf` file.
@@ -188,7 +189,7 @@ paths: {
   3. Copy `core-site.xml` to under Dremio's configuration directory (same as `dremio.conf`) on all nodes.
 
 
-### Configuring Dremio for Minio[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#configuring-dremio-for-minio "Direct link to Configuring Dremio for Minio")
+### Configuring Dremio for Minio​
 Minio can be used as a distributed store for both unencrypted and SSL/TLS connections. Before configuring Minio as Dremio's distributed storage, create a storage root directory to use for the `dremio.conf` and `core-site.xml` files.
 To configure Minio as a distributed store:
   1. Ensure that the provided root directory(bucket) is already created in Minio server.
@@ -257,9 +258,9 @@ For example: `dist: "dremioS3:///dremio"`
   4. Copy the file to under Dremio's configuration directory (same as `dremio.conf`) on all nodes.
 
 
-#### Troubleshooting[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#troubleshooting "Direct link to Troubleshooting")
+#### Troubleshooting​
 The default directory is `/tmp/hadoop-dremio/s3a`, if you do not have enough space, you may encounter errors like `DiskErrorException: No space available in any of the local directories.` As an alternative option, in the `core-site.xml` file, add or change the `fs.s3a.buffer.dir` setting to a directory of your choice (any directory with ample space and write permissions for Dremio). This should resolve writing to the default `/tmp` directory. Until you restart the executors, you'll see that the directory is not used for buffering.
-## Azure Storage[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#azure-storage "Direct link to Azure Storage")
+## Azure Storage​
 The Azure Storage is the foundation for the ADLS Gen2 service. See [Azure Storage](/data-sources/object/azure-storage) for more information.
 Soft delete for blobs is not supported for Azure Storage accounts. Soft delete should be disabled to establish a successful connection.
 To set up configuration for distributed storage:
@@ -313,7 +314,7 @@ You can provide the URI of an Azure Key Vault secret as the value for the `dremi
   3. Copy the `core-site.xml` file to the Dremio's configuration directory location
 
 
-### Configuring OAuth 2.0[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#configuring-oauth-20 "Direct link to Configuring OAuth 2.0")
+### Configuring OAuth 2.0​
 To enable distributed storage with OAuth 2.0, update the `core-site.xml` file. The `dremio.azure.clientSecret` property can be encrypted using the `dremio-admin encrypt` [CLI command](/reference/admin-cli/encryption). The encrypted value produced with the `encrypt` command must be prefixed with `dremio+` (for example, `dremio+secret:1.812WZLVORD26pwyAg8qKtQqw9Te8Xom5mdkSMmR_U4`).
 You can provide the URI of an Azure Key Vault secret as the value for the `dremio.azure.clientSecret` property. Add `dremio+azure-key-vault+` as a prefix to the secret URI (for example, `dremio+azure-key-vault+https://myvault.vault.azure.net/secrets/mysecret`). Dremio connects to Azure Key Vault to fetch the secret to use for the shared access key and does not store the fetched secret. To use Azure Key Vault, you must deploy Dremio on [Azure AKS](/deploy-dremio/deploy-on-kubernetes) and complete the [Requirements for Authenticating with Azure Key Vault](/data-sources/object/azure-storage).
 See the following sample information for reference:
@@ -366,7 +367,7 @@ See the following sample information for reference:
 
 ```
 
-### Configuring OAuth 2.0 with Azure Government Cloud[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#configuring-oauth-20-with-azure-government-cloud "Direct link to Configuring OAuth 2.0 with Azure Government Cloud")
+### Configuring OAuth 2.0 with Azure Government Cloud​
 To use OAuth 2.0 authentication with Azure Government cloud platform, add the following property to the `core-site.xml`:
 `core-site.xml` Additional Parameter for OAuth 2.0 with Azure Government Cloud
 
@@ -379,7 +380,7 @@ To use OAuth 2.0 authentication with Azure Government cloud platform, add the fo
 
 ```
 
-### Azure Government[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#azure-government "Direct link to Azure Government")
+### Azure Government​
 To configure the Azure Storage data source to access data on the Azure Government Cloud platform, add the `fs.azure.endpoint` property to the `core-site.xml` file along with the general Azure Storage properties and copy the `core-site.xml` file to the Dremio's configuration directory location on all nodes.
 `core-site.xml` Additional Parameter for Azure Storage V2 on Azure Government Cloud 
 
@@ -403,8 +404,8 @@ To configure the Azure Storage data source to access data on the Azure Governmen
 
 ```
 
-This configuration is done in addition to the configuration done via the UI. See [Azure Storage](/data-sources/object/azure-storage#azure-government) for more information.
-## Google Cloud Storage[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#google-cloud-storage "Direct link to Google Cloud Storage")
+This configuration is done in addition to the configuration done via the UI. See [Azure Storage](/data-sources/object/azure-storage) for more information.
+## Google Cloud Storage​
 Google Cloud Storage (GCS) is a globally distributed object storage service provided by Google Cloud Platform. See [Google Cloud Storage](/data-sources/object/gcs) for more information.
 Before configuring GCS as Dremio's distributed storage, create a storage root directory to use for the `dremio.conf` and `core-site.xml` files.
 To set up configuration for distributed storage:
@@ -497,7 +498,7 @@ Or, you can also use a client ID and secret for configuring the distributed stor
 
 
 
-## HDFS[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#hdfs "Direct link to HDFS")
+## HDFS​
 Before configuring HDFS as Dremio's distributed storage, test adding the same cluster as a Dremio source and verify the connection.
 The following are `dremio.conf` file changes:
 Configuration for HDFS
@@ -510,11 +511,11 @@ paths: {
 ```
 
 When deploying on [Hadoop using YARN](/deploy-dremio/other-options/yarn-hadoop), Dremio automatically copies this option to all nodes, so this only needs to be configured manually on coordinator nodes.
-### Name Node HA[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#name-node-ha "Direct link to Name Node HA")
+### Name Node HA​
 If Name Node HA is enabled, when specifying distributed storage (`paths.dist` in `dremio.conf`), path should be specific using `fs.defaultFS` value instead of the active name node. (e.g. ``value_for_fs_defaultFS``/path)
 `fs.defaultFS` value can be found in `core-site.xml` (typically found under `/etc/hadoop/conf`).
 As per [Hadoop using YARN deployment guide](/deploy-dremio/other-options/yarn-hadoop), ensure that you've copied `core-site.xml`, `hdfs-site.xml`, and `yarn-site.xml` (typically under `/etc/hadoop/conf`) files into Dremio's `conf` directory.
-## NAS[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#nas "Direct link to NAS")
+## NAS​
 Network Attached Storage (NAS) is a device that serves files via a network using a protocol such as NFS. Dremio supports the NFS protocol with NAS.
 To configure NAS as Dremio's distributed storage, add the distributed path to the `dremio.conf` file:
 Configuration for NFS dist store 
@@ -527,7 +528,7 @@ paths: {
 
 ```
 
-## Relocating Distributed Storage and Metadata[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#relocating-distributed-storage-and-metadata "Direct link to Relocating Distributed Storage and Metadata")
+## Relocating Distributed Storage and Metadata​
 Dremio supports relocating the distributed storage and metadata of Parquet tables (internal Iceberg tables). If you utilize Parquet tables with unlimited splits, this feature enables you to reconfigure the distributed storage and metadata to move to a new location, eliminating the need to forget and repromote your tables.
 Distributed storage relocation is supported only within the same source type. For example, you can move your distributed storage from one S3 bucket to another S3 bucket, but you cannot relocate from a NAS source to an S3 bucket.
 Distributed storage relocation does not currently support Reflections.
@@ -550,17 +551,17 @@ The steps for moving metadata will vary according to your distributed storage so
      * **NAS:** Use your computer's internal GUID or command line.
 
 
-### Troubleshooting[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config#troubleshooting-1 "Direct link to Troubleshooting")
+### Troubleshooting​
 If your Dremio instance is in an invalid homestate after completing the steps above, try restarting Dremio again to pick up the path relocation changes.
 Was this page helpful?
-[Previous Metadata Storage](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/metadata-store-config)[Next Cloud Cache](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/cloud-cache-config)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous Metadata StorageNext Cloud Cache
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous Metadata Storage](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/metadata-store-config)[Next Cloud Cache](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/cloud-cache-config)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fother-options%2Fstandalone%2Fdremio-config%2Fdremio-conf%2Fdist-store-config%2F&_biz_t=1777950373925&_biz_i=Configuring%20Distributed%20Storage%20%7C%20Dremio%20Documentation&_biz_n=113&rnd=863438&cdn_o=a&_biz_z=1777950373925)
+Previous Metadata StorageNext Cloud Cache
+!

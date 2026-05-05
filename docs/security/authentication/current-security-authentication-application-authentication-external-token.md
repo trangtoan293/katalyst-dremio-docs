@@ -1,5 +1,6 @@
 ---
 url: /security/authentication/application-authentication/external-token
+slug: /security/authentication/application-authentication/external-token
 title: "External Token Providers | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64386.041243791
@@ -14,11 +15,11 @@ crawled_at: 64386.041243791
 Version: current [26.x]
 On this page
 # External Token Providers Enterprise
-External token providers are OIDC identity providers that issue [Dremio token exchange](/reference/api/oauth-token#exchange-an-external-jwt) to obtain an OAuth access token used to create connections to Dremio.
-![](https://docs.dremio.com/assets/images/token-flowchart-7badc94d022760d37f480ecb5fee43ec.png)
+External token providers are OIDC identity providers that issue [Dremio token exchange](/reference/api/oauth-token) to obtain an OAuth access token used to create connections to Dremio.
+!
 The OIDC external token provider does not need to be the same identity provider used by the Dremio console for SSO. The provider requires an application registration specifying the OAuth authorization flow to be used between the external token provider and the client to obtain the JWT that will be sent to Dremio.
 This page outlines the steps for configuring an external token provider so Dremio can interpret and validate the JWTs issued by your provider.
-## JSON Web Tokens (JWT)[​](/security/authentication/application-authentication/external-token#json-web-tokens-jwt "Direct link to JSON Web Tokens \(JWT\)")
+## JSON Web Tokens (JWT)​")
 A JSON web token (JWT) is an 
 The 
 Example: External JWT Claims from Microsoft Entra ID 
@@ -32,10 +33,10 @@ Example: External JWT Claims from Microsoft Entra ID
 
 ```
 
-## Defining an External Token Provider[​](/security/authentication/application-authentication/external-token#defining-an-external-token-provider "Direct link to Defining an External Token Provider")
+## Defining an External Token Provider​
 Dremio requires the following values to configure an external token provider.
 The examples below are specific to configuring Dremio when the external token provider is Microsoft Entra ID. Your identity provider will require additional configuration of a client application registration that depends on the OAuth authorization flow used between your client and your provider. To configure your application registration, consult your identity provider documentation.
-### Audience[​](/security/authentication/application-authentication/external-token#audience "Direct link to Audience")
+### Audience​
 The audience value identifies the intended recipients of the external JWT. It can generally be an array of case-sensitive strings or URI values. The audience is contained in the `aud` claim in the external JWT.
 When using Microsoft Entra ID, the audience can be the Application ID assigned to your app in the Microsoft Entra ID portal or the resource URI. In v2.0 tokens, this value is always the 
 Example Audience Claim with Microsoft Entra ID Application ID
@@ -45,7 +46,7 @@ Example Audience Claim with Microsoft Entra ID Application ID
 
 ```
 
-### User Claim Mapping[​](/security/authentication/application-authentication/external-token#user-claim-mapping "Direct link to User Claim Mapping")
+### User Claim Mapping​
 The user claim mapping identifies the claim in the external JWT that contains the Dremio username.
 When using Microsoft Entra ID authentication, Dremio usernames must align with the 
 When a user is added to a Power BI workspace, the user's identity is also represented by the 
@@ -58,7 +59,7 @@ Example: UPN Claim from Microsoft Entra ID
 ```
 
 The `user claim mapping` field of the external token provider requires the name of the claim used in the JWT, which in this case is `upn`.
-### Issuer URL[​](/security/authentication/application-authentication/external-token#issuer-url "Direct link to Issuer URL")
+### Issuer URL​
 The issuer URL identifies the identity provider that issued the JWT. It is contained in the external JWT's `iss` claim. When using Microsoft Entra ID, 
 Example Issuer Claim with Microsoft Entra ID
 
@@ -67,7 +68,7 @@ Example Issuer Claim with Microsoft Entra ID
 
 ```
 
-### JWKS URL[​](/security/authentication/application-authentication/external-token#jwks-url "Direct link to JWKS URL")
+### JWKS URL​
 The JWKS URL is an endpoint that hosts the `{issuer URL}/.well-known/openid-configuration`.
 For Microsoft Entra ID, the `https://login.microsoftonline.com/{tenant_id}/discovery/v2.0/keys`.
 Example: JWKS URL from Microsoft Entra ID
@@ -77,34 +78,34 @@ https://login.microsoftonline.com/58a43618-7933-4e0d-906e-1c1a2a867ad6/discovery
 
 ```
 
-## Managing External Token Providers[​](/security/authentication/application-authentication/external-token#managing-external-token-providers "Direct link to Managing External Token Providers")
-The Dremio administrator or a user with the [CONFIGURE SECURITY](/security/rbac/privileges#system-privileges) privilege can view and manage external token providers in Dremio.
-### Viewing External Token Providers[​](/security/authentication/application-authentication/external-token#viewing-external-token-providers "Direct link to Viewing External Token Providers")
+## Managing External Token Providers​
+The Dremio administrator or a user with the [CONFIGURE SECURITY](/security/rbac/privileges) privilege can view and manage external token providers in Dremio.
+### Viewing External Token Providers​
 To view external token providers:
   1. In the Dremio console, click ![This is the Settings icon.](https://docs.dremio.com/images/green-settings-icon.png) on the left in the side navigation bar.
   2. In the Settings sidebar, click **External Token Providers**. The External Token Providers page lists the external token providers configured for Dremio.
 
 
-### Adding an External Token Provider[​](/security/authentication/application-authentication/external-token#adding-an-external-token-provider "Direct link to Adding an External Token Provider")
+### Adding an External Token Provider​
 To add an external token provider:
   1. In the Dremio console, click ![This is the Settings icon.](https://docs.dremio.com/images/green-settings-icon.png) in the side navigation bar.
   2. In the Settings sidebar, click **External Token Providers**.
   3. Click **Add Provider** at the top-right corner of the External Token Providers page.
-  4. In the **Add Provider** dialog, complete the configuration using the fields described in [Defining an External Token Provider](/security/authentication/application-authentication/external-token#defining-an-external-token-provider) above.
+  4. In the **Add Provider** dialog, complete the configuration using the fields described in Defining an External Token Provider above.
   5. Click **Add**.
 
 
 When you add an external token provider, Dremio automatically enables it. To deactivate it, toggle the Enabled switch on the External Token Providers page.
 Each external token provider must use a different combination of issuer and audience. If multiple external token providers share the same issuer and audience, authentication will fail regardless of whether the token providers are enabled.
-### Editing an External Token Provider[​](/security/authentication/application-authentication/external-token#editing-an-external-token-provider "Direct link to Editing an External Token Provider")
+### Editing an External Token Provider​
 To edit an external token provider:
   1. In the Dremio console, click ![This is the Settings icon.](https://docs.dremio.com/images/green-settings-icon.png) in the side navigation bar.
   2. In the Settings sidebar, click **External Token Providers**.
   3. On the External Token Providers page, find the row for the external token provider you want to edit and click ![This is the Edit icon.](https://docs.dremio.com/images/icons/edit.png) at the right side of the row.
-  4. In the **Edit Provider** dialog, click **Edit**. Update the values using the fields described in [Defining an External Token Provider](/security/authentication/application-authentication/external-token#defining-an-external-token-provider) above.
+  4. In the **Edit Provider** dialog, click **Edit**. Update the values using the fields described in Defining an External Token Provider above.
 
 
-### Deleting an External Token Provider[​](/security/authentication/application-authentication/external-token#deleting-an-external-token-provider "Direct link to Deleting an External Token Provider")
+### Deleting an External Token Provider​
 To delete an external token provider:
   1. In the Dremio console, click ![This is the Settings icon.](https://docs.dremio.com/images/green-settings-icon.png) in the side navigation bar.
   2. In the Settings sidebar, click **External Token Providers**.
@@ -112,8 +113,8 @@ To delete an external token provider:
   4. In the **Delete External Provider** dialog, click **Delete**.
 
 
-## Using the External Token Provider[​](/security/authentication/application-authentication/external-token#using-the-external-token-provider "Direct link to Using the External Token Provider")
-### Retrieving an External JWT[​](/security/authentication/application-authentication/external-token#retrieving-an-external-jwt "Direct link to Retrieving an External JWT")
+## Using the External Token Provider​
+### Retrieving an External JWT​
 This sample application uses the 
   * `client_id` is the 
   * `app_redirect_url` or `https://myapp.com/auth/callback` or `http://localhost:3000/auth/callback`. The redirect URI is defined in the Microsoft Entra ID application registration for the client.
@@ -161,16 +162,16 @@ else:
 
 ```
 
-### External JWT Exchange[​](/security/authentication/application-authentication/external-token#external-jwt-exchange "Direct link to External JWT Exchange")
-The client must use the Dremio `/oauth/token` REST API to [exchange the JWT for an OAuth access token](/reference/api/oauth-token#exchange-an-external-jwt).
+### External JWT Exchange​
+The client must use the Dremio `/oauth/token` REST API to [exchange the JWT for an OAuth access token](/reference/api/oauth-token).
 Was this page helpful?
 [Previous Microsoft Power BI](/security/authentication/application-authentication/power-bi-aad-config)[Next Personal Access Tokens](/security/authentication/personal-access-tokens)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Microsoft Power BI](/security/authentication/application-authentication/power-bi-aad-config)[Next Personal Access Tokens](/security/authentication/personal-access-tokens)

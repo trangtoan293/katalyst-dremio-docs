@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/information-schema/tables
+slug: /reference/sql/information-schema/tables
 title: "INFORMATION_SCHEMA.\"TABLES\" | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64264.230760416
@@ -24,7 +25,7 @@ FROM INFORMATION_SCHEMA."TABLES"
 
 ```
 
-## Example Output[​](/reference/sql/information-schema/tables#example-output "Direct link to Example Output")  
+## Example Output​  
 | TABLE_CATALOG  | TABLE_SCHEMA  | TABLE_NAME  | TABLE_TYPE  |  
 | --- | --- | --- | --- |  
 | DREMIO  | INFORMATION_SCHEMA  | CATALOGS  | SYSTEM_TABLE  |  
@@ -37,7 +38,7 @@ FROM INFORMATION_SCHEMA."TABLES"
 | DREMIO  | Samples.samples.dremio.com  | SF weather 2018-2019.csv  | TABLE  |  
 | DREMIO  | Samples.samples.dremio.com  | SF_incidents2016.json  | TABLE  |  
 | DREMIO  | sys.cache  | datasets  | SYSTEM_TABLE  |  
-## Fields[​](/reference/sql/information-schema/tables#fields "Direct link to Fields")  
+## Fields​  
 | Field  | Data Type  | Description  |  
 | --- | --- | --- |  
 | TABLE_CATALOG  | varchar  | Name of the catalog, which is always DREMIO.  |  
@@ -47,12 +48,12 @@ FROM INFORMATION_SCHEMA."TABLES"
 Enum: SYSTEM_TABLE, TABLE, VIEW  |  
 Was this page helpful?
 [Previous INFORMATION_SCHEMA.SCHEMATA](/reference/sql/information-schema/schemata)[Next INFORMATION_SCHEMA.VIEWS](/reference/sql/information-schema/views)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous INFORMATION_SCHEMA.SCHEMATA](/reference/sql/information-schema/schemata)[Next INFORMATION_SCHEMA.VIEWS](/reference/sql/information-schema/views)

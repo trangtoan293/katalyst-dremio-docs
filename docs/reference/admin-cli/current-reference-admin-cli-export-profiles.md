@@ -1,5 +1,6 @@
 ---
 url: /reference/admin-cli/export-profiles
+slug: /reference/admin-cli/export-profiles
 title: "Export Profiles | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64230.021263583
@@ -20,8 +21,8 @@ The export-profiles option supports 3 modes:
   * Offline (dremio should not be running)
 
 
-Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/#using-the-dremio-admin-cli-on-kubernetes) before putting anything learned on this page into practice on such a deployment.
-## Syntax[​](/reference/admin-cli/export-profiles#syntax "Direct link to Syntax")
+Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/) before putting anything learned on this page into practice on such a deployment.
+## Syntax​
 Syntax for export-profiles command
 
 ```
@@ -29,7 +30,7 @@ Syntax for export-profiles command
 
 ```
 
-## Options[​](/reference/admin-cli/export-profiles#options "Direct link to Options")  
+## Options​  
 | Parameter  | Description  |  
 | --- | --- |  
 | -h, --help  | Shows usage.  |  
@@ -45,9 +46,9 @@ Syntax for export-profiles command
 | --format  | Format in which profiles should be exported. `.json` and `.zip` (default) are supported.  |  
 | -l, --local-attach  | Attach locally to Dremio JVM to authenticate user. Not compatible with user/password options. Default value is `false`.  |  
 | -o, --offline  | Append this option to use offline export. Default value is `false`.  |  
-## Examples[​](/reference/admin-cli/export-profiles#examples "Direct link to Examples")
+## Examples​
 The following examples show default, local-attach, and offline mode usage.
-### Default mode[​](/reference/admin-cli/export-profiles#default-mode "Direct link to Default mode")
+### Default mode​
 The default mode requires the following:
   * Dremio is running
   * user & password are required. If not provided in cli, will be prompted.
@@ -78,7 +79,7 @@ Export completed. Jobs processed: 0, profiles processed: 0, profiles skipped: 0
 
 ```
 
-### Local-attach mode[​](/reference/admin-cli/export-profiles#local-attach-mode "Direct link to Local-attach mode")
+### Local-attach mode​
 The local-attach mode requires the following:
   * Dremio is running. (the user & password are not required)
   * The `-l` or `--local-attach` option is required.
@@ -93,7 +94,7 @@ Local-attach mode command
 
 **output message**  
 The output message is available in `server.out` since in local attach mode we attach to main process.
-### Offline mode[​](/reference/admin-cli/export-profiles#offline-mode "Direct link to Offline mode")
+### Offline mode​
 The offline mode requires the following:
   * Dremio is _**not**_ running (the user & password are not required)
   * The `-o` or `--offline` option is required
@@ -108,14 +109,14 @@ Offline mode command
 **output message**  
 The output message is available on console.
 Was this page helpful?
-[Previous Export and Import PATs](/reference/admin-cli/export-import-pat)[Next Clean Metadata](/reference/admin-cli/metadata-cleanup)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Previous Export and Import PATs](/reference/admin-cli/export-import-pat)Next Clean Metadata
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous Export and Import PATs](/reference/admin-cli/export-import-pat)[Next Clean Metadata](/reference/admin-cli/metadata-cleanup)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fadmin-cli%2Fexport-profiles%2F&_biz_t=1777950551267&_biz_i=Export%20Profiles%20%7C%20Dremio%20Documentation&_biz_n=448&rnd=215979&cdn_o=a&_biz_z=1777950551268)
+[Previous Export and Import PATs](/reference/admin-cli/export-import-pat)Next Clean Metadata
+!

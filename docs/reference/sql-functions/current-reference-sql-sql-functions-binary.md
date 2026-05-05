@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/BINARY
+slug: /reference/sql/sql-functions/BINARY
 title: "Binary | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64264.72880425
@@ -27,12 +28,12 @@ Version: current [26.x]
 | [UNHEX](/reference/sql/sql-functions)  | Converts the hexadecimal number into the bytes represented by a number.  |  
 Was this page helpful?
 [Previous AI](/reference/sql/sql-functions)[Next Bitwise](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous AI](/reference/sql/sql-functions)[Next Bitwise](/reference/sql/sql-functions)

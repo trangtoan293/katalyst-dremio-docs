@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/reflection-dependencies
+slug: /reference/sql/system-tables/reflection-dependencies
 title: "SYS.REFLECTION_DEPENDENCIES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64373.248748041
@@ -24,7 +25,7 @@ FROM sys.reflection_dependencies
 ```
 
 In Dremio 20+, the `sys.dependencies` table has been renamed to `sys.reflection_dependencies`.
-## Example Output[​](/reference/sql/system-tables/reflection-dependencies#example-output "Direct link to Example Output")  
+## Example Output​  
 | reflection_id  | dependency_id  | dependency_type  | dependency_path  |  
 | --- | --- | --- | --- |  
 | 58ef99d2-ac06-4886-b76f-da729b872db0  | be2f17da-6c09-4eb9-9fba-db5a76d6d773  | DATASET  | [@dremio, nested_nested1]  |  
@@ -33,7 +34,7 @@ In Dremio 20+, the `sys.dependencies` table has been renamed to `sys.reflection_
 | 31e1a2ec-4815-4efb-805d-00c427d00077  | 2ece1ecb-e436-46c1-97dd-ffe50d2d96b2  | DATASET  | [Samples, samples.dremio.com, zips.json]  |  
 | 4d42481b-802a-437d-a1c9-9a9dd8d9be03  | 432d5845-b258-4268-b6ab-7681c9afa184  | DATASET  | [@dremio, test_parquet]  |  
 | 9fca062d-9ef0-4ece-aae2-00eb9d3ae4d6  | 90a00924-80af-47f2-b2bb-4e5bc2d482ff  | Reflection  | []  |  
-## Columns[​](/reference/sql/system-tables/reflection-dependencies#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | reflection_id  | varchar  | The UUID to identify the Reflection.  |  
@@ -49,13 +50,13 @@ Enum: `DATASET`, `REFLECTION`  |
 | dependency_path  | varchar  | The path of the object, if it is a table. If the object is another Reflection, the path is empty.  |  
 Was this page helpful?
 [Previous SYS.PRIVILEGES](/reference/sql/system-tables/privileges)[Next SYS.REFLECTIONS](/reference/sql/system-tables/reflections)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.PRIVILEGES](/reference/sql/system-tables/privileges)[Next SYS.REFLECTIONS](/reference/sql/system-tables/reflections)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fprivileges%2F&_biz_t=1777950693521&_biz_i=SYS.PRIVILEGES%20%7C%20Dremio%20Documentation&_biz_n=723&rnd=621561&cdn_o=a&_biz_z=1777950693530)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Freflection-dependencies%2F&_biz_t=1777950693530&_biz_i=SYS.REFLECTION_DEPENDENCIES%20%7C%20Dremio%20Documentation&_biz_n=724&rnd=452531&cdn_o=a&_biz_z=1777950693530)
+!!

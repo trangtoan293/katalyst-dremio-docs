@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/tables
+slug: /reference/sql/commands/tables
 title: "Tables | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.397851666
@@ -16,11 +17,11 @@ On this page
 # Table SQL Statements
 Tables can be created in filesystem sources types. In addition, if tables are created in a source, they can also be altered and dropped.
 The following SQL commands are documented on this page:
-  * [DESCRIBE TABLE](/reference/sql/commands/tables#describe-table)
-  * [DROP TABLE](/reference/sql/commands/tables#drop-table)
+  * DESCRIBE TABLE
+  * DROP TABLE
 
 
-## Querying Tables[​](/reference/sql/commands/tables#querying-tables "Direct link to Querying Tables")
+## Querying Tables​
 Querying a source table
 
 ```
@@ -90,7 +91,7 @@ JOIN "orders.parquet" ON c = o_orderkey
 
 ```
 
-## DESCRIBE TABLE[​](/reference/sql/commands/tables#describe-table "Direct link to DESCRIBE TABLE")
+## DESCRIBE TABLE​
 The `DESCRIBE TABLE` command is used to provide high-level information regarding the overall column properties of an existing dataset.
 Dremio `DESCRIBE` supports all filesystem source types and relies upon a user's existing privileges to access and describe a table or view.
 DESCRIBE TABLE syntax
@@ -100,7 +101,7 @@ DESCRIBE TABLE table_name;
 
 ```
 
-### Example[​](/reference/sql/commands/tables#example "Direct link to Example")
+### Example​
 Describing a table
 
 ```
@@ -117,7 +118,7 @@ DESCRIBE TABLE taxistats
 | tip_amount  | DOUBLE  | YES  | 53  | null  | []  | []  | null  |  
 | total_amount  | DOUBLE  | YES  | 53  | null  | []  | []  | null  |  
 The cells containing a '[]' indicate "empty" values.
-### Columns[​](/reference/sql/commands/tables#columns "Direct link to Columns")  
+### Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | COLUMN_NAME  | string  | The name of the column in the table.  |  
@@ -128,7 +129,7 @@ The cells containing a '[]' indicate "empty" values.
 | EXTENDED_PROPERTIES  | array  | Additional properties, if any, that have been set on the column.  |  
 | MASKING_POLICY  | string  | The masking policy, if any, that is set on the column.  |  
 | SORT_ORDER_PRIORITY  | integer  | Indicates the sort order of the columns that are used for sorting, if the CREATE TABLE command that created the table used the LOCALSORT BY clause or if the table was altered by an ALTER TABLE command that used the LOCALSORT BY clause. For example, if a table was altered, and the clause `LOCALSORT BY (colA, colB)` was used, the table is sorted by colA and then by colB, the value for colA is 1, while the value for colB is 2. The lower the number, the higher the priority.  |  
-## DROP TABLE[​](/reference/sql/commands/tables#drop-table "Direct link to DROP TABLE")
+## DROP TABLE​
 Tables can be dropped _only_ if they have been created on a filesystem source and if you have permission.
 Syntax
 
@@ -154,12 +155,12 @@ Limitations include:
 
 Was this page helpful?
 [Previous Sources](/reference/sql/commands/sources)[Next User-Defined Functions](/reference/sql/commands/functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Sources](/reference/sql/commands/sources)[Next User-Defined Functions](/reference/sql/commands/functions)

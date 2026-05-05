@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/LAST_DAY
+slug: /reference/sql/sql-functions/functions/LAST_DAY
 title: "LAST_DAY | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64324.328869375
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Date/Time](/reference/sql/sql-functions)
 # LAST_DAY
 Returns the last day of the month for the specified date or timestamp.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### LAST_DAY(_date_timestamp_expression_ string) → date[​](/reference/sql/sql-functions#last_daydate_timestamp_expression-string--date "Direct link to last_daydate_timestamp_expression-string--date")
+## Syntax
+### LAST_DAY(_date_timestamp_expression_ string) → date[​](/reference/sql/sql-functions)
   * date_timestamp_expression: A `DATE` or `TIMESTAMP` expression.
 
 
@@ -44,17 +45,17 @@ LIMIT 3
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 The return value is always a date regardless of whether `date_timestamp_expression` is a date or a timestamp.
 Was this page helpful?
 [Previous LAG](/reference/sql/sql-functions)[Next LAST_QUERY_ID](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous LAG](/reference/sql/sql-functions)[Next LAST_QUERY_ID](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FIS__NOT__FALSE%2F&_biz_t=1777950644044&_biz_i=Dremio%20Documentation&_biz_n=619&rnd=871633&cdn_o=a&_biz_z=1777950644144)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FLAST_DAY%2F&_biz_t=1777950644144&_biz_i=LAST_DAY%20%7C%20Dremio%20Documentation&_biz_n=620&rnd=830065&cdn_o=a&_biz_z=1777950644145)
+!!

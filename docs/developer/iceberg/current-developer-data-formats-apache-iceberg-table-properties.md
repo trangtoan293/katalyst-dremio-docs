@@ -1,5 +1,6 @@
 ---
 url: /developer/data-formats/apache-iceberg/table-properties
+slug: /developer/data-formats/apache-iceberg/table-properties
 title: "Supported Properties of Apache Iceberg Tables | Dremio Documentation"
 depth: 4
 crawled_at: 64777.11590175
@@ -47,14 +48,14 @@ You can use the following table properties to configure aspects of Apache Iceber
 In cases where Dremio has a support key for a feature covered by a table property, Dremio uses the table property instead of the support key.
 Dremio also uses the Iceberg default value for table properties that are not set. See Iceberg's documentation for the full list of [SHOW TBLPROPERTIES](/reference/sql/commands/show-table-properties).
 Was this page helpful?
-[Previous Rolling Back Tables](/developer/data-formats/apache-iceberg/rolling-back)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous Rolling Back Tables
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous Rolling Back Tables](/developer/data-formats/apache-iceberg/rolling-back)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeveloper%2Fdata-formats%2Fapache-iceberg%2Ftable-properties%2F&_biz_t=1777951098358&_biz_i=Supported%20Properties%20of%20Apache%20Iceberg%20Tables%20%7C%20Dremio%20Documentation&_biz_n=1519&rnd=686127&cdn_o=a&_biz_z=1777951098358)
+Previous Rolling Back Tables
+!

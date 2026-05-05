@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/elasticsearch
+slug: /data-sources/databases/elasticsearch
 title: "Elasticsearch | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64040.389527458
@@ -15,20 +16,20 @@ On this page
 # Elasticsearch
 This topic describes how to configure Elasticsearch as a source in Dremio.
 If your organization upgrades to Elasticsearch v7.0+, you will need to remove and re-add it as a source in Dremio.
-### Compatibility[​](/data-sources/databases/elasticsearch#compatibility "Direct link to Compatibility")
+### Compatibility​
 Supported Versions:
   * Elasticsearch versions 7.x, 8.x, and 9.x (8.x and 9.x in version 7 compatibility mode)
   * Pushdown Scripting Support: Painless
 
 
-### Metadata Concepts[​](/data-sources/databases/elasticsearch#metadata-concepts "Direct link to Metadata Concepts")
+### Metadata Concepts​
 In order to plan and execute queries, Dremio captures and stores Elastic metadata in Dremio’s internal metadata database to efficiently plan and execute queries. This captured metadata is broken into two broad categories:
   * **Dataset Discovery** : Names of available Indices, Mappings and Aliases. This information is required to expose databases and tables in the Dremio UI and BI tool connections.
   * **Dataset Details** : Complete information including definition of mapping, sampled schema and shard locations. This information is required to complete a query against a particular table.
 
 
 Dremio will interact with the `/_cluster/state/metadata` api to understand the nature of the objects inside your Elasticsearch install. From this API endpoint, Dremio can learn metadata about each of these object type. By default, Dataset Discovery has an hourly refresh interval. Additionally, Dataset Details has an hourly refresh interval for Elastic tables that have been queried at least once.
-### Accessing Objects[​](/data-sources/databases/elasticsearch#accessing-objects "Direct link to Accessing Objects")
+### Accessing Objects​
 The Dremio Elastic Connector is designed to provide a consistent and understandable view of Elastic Indices and Mappings, through the use of a two level hierarchy. In Dremio, these two levels can be thought of as database and table. Elastic Indices and Aliases are exposed as databases and each mapping within those index or alias is exposed as a table.
 Dremio also supports exposing data inside Elastic aliases. In Dremio, aliases and indices are not visually distinguished and a user can easily interact with either entity. Additionally, Dremio understands filtered aliases and will correctly apply those filters as part of its operations.
 Dremio also allows users access to Elastic’s capability to expose synthetic tables through wildcards and comma separated lists. A user can use wildcards in both the name of the database (index) or the name of the table (mapping). This is done by modifying the from clause in a standard SQL query. Once that query is executed, if Elastic recognizes the name, those entities will show up in the product as additional datasets available for query and access (and will be maintained and secured like any other table). If you want to have Dremio forget about those entities, an administrator can use `ALTER TABLE `TABLE` FORGET METADATA` to remove those synthetic entities.
@@ -41,9 +42,9 @@ SELECT * from elastic."feb"."big,small"
 
 ```
 
-### Execution Metadata[​](/data-sources/databases/elasticsearch#execution-metadata "Direct link to Execution Metadata")
+### Execution Metadata​
 When Dremio executes queries against Elastic, it usually parallelizes the query to interact with each shard in your Elastic cluster to move data as quickly as possible back to Dremio. Dremio does this by probing the `/`indexOrAlias`/_search_shards` API.
-### List Promotion Rules[​](/data-sources/databases/elasticsearch#list-promotion-rules "Direct link to List Promotion Rules")
+### List Promotion Rules​
 Elastic does not distinguish between scalar and list of scalars but Dremio does. In order to ensure the best possible user experience, Dremio uses the schema analysis phases outlined above to expose the final user schema. To simplify things, once Dremio detects at least one field with a list of scalars, it exposes all records for that field as a list of scalars. This allows users to avoid having to deal with union types. An example:
   * Elastic mapping is defined as field ‘A’ and type integer.
   * Records 1-4 exist and each have a single integer for field ‘A’.
@@ -53,21 +54,21 @@ Elastic does not distinguish between scalar and list of scalars but Dremio does.
 
 
 Dremio does this promotion both at initial sampling time and during execution. If during execution Dremio discovers a value for a field that is of scalar type is actually a list type, Dremio will learn this schema and re-execute the query.
-### Special Handling for Geoshape[​](/data-sources/databases/elasticsearch#special-handling-for-geoshape "Direct link to Special Handling for Geoshape")
+### Special Handling for Geoshape​
 Geoshape is a special type in the Elastic ecosystem. This is because has a different schema depending on which type is exposed. Despite this, they are all represented at the type system level as a single type. In this situation, Dremio exposes the Geoshape type and specifically its potential coordinates fields as a group of union fields supporting from 1 to 4-dimensional double arrays to reflect the various types of Elastic geoshapes.
-### Mapping Consistency and Schema Learning[​](/data-sources/databases/elasticsearch#mapping-consistency-and-schema-learning "Direct link to Mapping Consistency and Schema Learning")
+### Mapping Consistency and Schema Learning​
 In some cases, it is possible that Dremio will query an index and find a schema change that was previously unknown to Dremio (different type for field or new field). In both cases, Dremio will do a two step verification process to correctly learn the new schema. Dremio maintains a mapping checksum for all identified schemas. When it encounters an unexpected change, it will first verify that the canonical schema from Elastic is consistent with Dremio’s previously known mapping. If it is, Dremio will follow its standard promotion rules. If it is not, Dremio will halt execution and request the user to use the `ALTER TABLE `TABLE` REFRESH METADATA`  
 operation to have Dremio immediately reread the updated Elastic mapping information. Note, this is an optional step as the mapping will also be updated on the schedule defined for automated metadata updates.
-### Discovery of New Fields[​](/data-sources/databases/elasticsearch#discovery-of-new-fields "Direct link to Discovery of New Fields")
+### Discovery of New Fields​
 As part of the Dataset Details refresh, Dremio will automatically reload all Elastic mappings to learn about any new fields. Each time this happens, Dremio will resample and update its understanding of schema.
-### Mapping Merging[​](/data-sources/databases/elasticsearch#mapping-merging "Direct link to Mapping Merging")
+### Mapping Merging​
 If you compose a query that includes multiple mappings, Dremio will do its best to merge those mappings. Mappings are merged on a field by field basis. Mappings can be merged if at least one of the following is true:
   1. Fields with overlapping positions are the same type (`mapping1.a::int` and `mapping2.a::int`)
   2. Fields are in non-overlapping positions (`mapping1.a::int` versus `mapping2.b::float`)
 
 
 When Dremio merges a mapping, it does so linearly, inheriting the initial field order based on the first index queried.
-### Elastic Pushdowns[​](/data-sources/databases/elasticsearch#elastic-pushdowns "Direct link to Elastic Pushdowns")
+### Elastic Pushdowns​
 Dremio supports multiple types of pushdowns for different Elastic version and configuration combinations including:
   * Predicate (e.g. x &lt; 5) pushdowns using Elastic queries
   * Lucene search queries using the `CONTAINS` syntax (starting from 5.3.x)
@@ -77,7 +78,7 @@ Dremio supports multiple types of pushdowns for different Elastic version and co
   * Support for converting many arbitrary expressions and ~50 common functions through the use of Groovy (ES2) or Painless (ES5+) scripts for use in both filter and aggregate expressions.
 
 
-### Expression and Function Pushdowns[​](/data-sources/databases/elasticsearch#expression-and-function-pushdowns "Direct link to Expression and Function Pushdowns")
+### Expression and Function Pushdowns​
 Dremio supports pushing down the following expressions and functions:  
 | Type  | Expression/Function  |  
 | --- | --- |  
@@ -124,10 +125,10 @@ Dremio supports pushing down the following expressions and functions:
 | Numeric  |  SIN  |  
 | Numeric  |  COS  |  
 | Numeric  |  TAN  |  
-### How Dremio Decides What To Pushdown[​](/data-sources/databases/elasticsearch#how-dremio-decides-what-to-pushdown "Direct link to How Dremio Decides What To Pushdown")
+### How Dremio Decides What To Pushdown​
 Dremio works hard to pushdown as many operations as possible to Elastic to try to provide the highest performance experience. Dremio is also focused on maintaining a consistent SQL experience for users who may not understand Elastic or its APIs. As such, Dremio is very focused on providing a correct SQL experience. This includes respecting null semantics through the use of missing aggregation, expression evaluation consistency, correct aggregation semantics on analyzed fields, etc. Dremio also works well with Groovy and Painless to pushdown many more types of operations. It will work without scripts enabled but it is strongly recommended to enable scripts.
 Given the nature of Elastic’s API, Dremio utilizes the following pieces of functionality to provide a SQL experience: Bucket Aggregations, Pipeline Aggregations, Filter Aggregations and searches using Elastic Query DSL.
-### Script Construction[​](/data-sources/databases/elasticsearch#script-construction "Direct link to Script Construction")
+### Script Construction​
 Dremio builds custom Groovy (ES2) or Painless (ES5) scripts to interact with Elastic. Because of the many small differences in these languages (type handling, dynamic dispatch, type coercion, function signatures, primitive handling, etc), these scripts are different for each version of Elasticsearch. These scripts utilize Elastic’s doc values columnar capability where possible but also rely on `_source` fields for certain operations (e.g. aggregations on analyzed fields for example). As Dremio analyzes a user’s SQL expression, it decomposes the expression into a script that can be understood by Elastic’s scripting capability.
 There are many situations where Dremio uses an expression that might at first be unexpected. These are because of the nature of some of Elastic apis. Some examples behaviors that Dremio does to ensure correct results:
   * Dremio uses _source fields for accessing IP addresses when aggregating or filtering in ES2 because the type has changed between ES2 and ES5
@@ -138,7 +139,7 @@ There are many situations where Dremio uses an expression that might at first be
   * Dremio won’t pushdown operations against nested fields. This is because nested fields are stored out of line of the core document (not in the original document’s doc values) and have semantics inconsistent with traditional SQL aggregation. (Dremio is exploring future work to expose this through enhancements to the language.) Note that Dremio also doesn’t use `_source` field scripts to interact with nested documents because they are exposed as arrays of values and suffer from the canonicalization issue described above.
 
 
-### Debugging and Logging[​](/data-sources/databases/elasticsearch#debugging-and-logging "Direct link to Debugging and Logging")
+### Debugging and Logging​
 If you want to better understand how Dremio is interacting with your Elastic cluster, you can enable Dremio Elastic logging on each Dremio node. This will record each response and request to the Elastic cluster, including a portion of each message body.
 You can do this by adding the following configuration to your `conf/logback.xml` file on all nodes:
 Configuration for conf/logback.xml file
@@ -163,7 +164,7 @@ Configuration for conf/logback.xml file
 
 ```
 
-### Working with Elasticsearch and x-pack[​](/data-sources/databases/elasticsearch#working-with-elasticsearch-and-x-pack "Direct link to Working with Elasticsearch and x-pack")
+### Working with Elasticsearch and x-pack​
 If your Elasticsearch source uses Shield, then your Elasticsearch user account must have the 'monitor' privilege at the cluster level (an admin user has this by default). In addition, for each index you want to query upon, your user account need to have the 'read' and 'view_index_metadata' privilleges as well. Both privilleges are included in 'all'.
 The following is an example to set up a role 'dremio' with necessary privilleges to access 'test_schema_1' index:
 Grant privileges to 'dremio' role
@@ -183,7 +184,7 @@ POST /_xpack/security/role/dremio
 
 ```
 
-### Working with Elasticsearch and Shield[​](/data-sources/databases/elasticsearch#working-with-elasticsearch-and-shield "Direct link to Working with Elasticsearch and Shield")
+### Working with Elasticsearch and Shield​
 If your Elasticsearch source uses Shield, then your Elasticsearch user account must have the 'monitor' privilege at the cluster level (an admin user has this by default). If your account lacks the 'monitor' privilege, and you don't have access to an admin user, you can create a new account with 'monitor' by following these steps:
   * Log in to a search node, go the Elasticsearch install's home directory, and open the file ./config/shield located inside.
   * Append this text, which gives monitor privileges to an Elasticsearch index called `books` for any user with the `dremio_user` role:
@@ -223,12 +224,12 @@ scp -r ./config/shield root@<other-es-node>:<elastic-install-dir>/config
 
 
 
-## Configuring Elasticsearch as a Source[​](/data-sources/databases/elasticsearch#configuring-elasticsearch-as-a-source "Direct link to Configuring Elasticsearch as a Source")
+## Configuring Elasticsearch as a Source​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select **Elasticsearch**.
 
 
-### General[​](/data-sources/databases/elasticsearch#general "Direct link to General")
+### General​
 **Name**
 Specify the name you want to use for the Elasticsearch data source in Dremio. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
 **Connection**
@@ -249,7 +250,7 @@ Specify the name you want to use for the Elasticsearch data source in Dremio. Th
       * [HashiCorp Vault](/security/secrets-management/hashicorp-vault): Select your HashiCorp secrets engine from the dropdown and enter the password reference in the required format.
 
 
-### Advanced Options[​](/data-sources/databases/elasticsearch#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 Select or deselect the checkboxes to configure settings for the following options:
   * Show hidden indices that start with a dot (.)
   * Use Painless scripting with Elasticsearch 5.0+ (experimental)
@@ -273,34 +274,34 @@ Under **Encryption** , choose a Validation Mode option:
   * Do not validate certificate or hostname
 
 
-### Reflection Refresh[​](/data-sources/databases/elasticsearch#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
   * **Refresh Settings** : Select whether to never refresh Reflections; refresh at an interval based on hours, days, or weeks; or refresh at the specified schedule.
   * **Expire Settings** : Select whether Reflections should never expire or expire at an interval based on hours, days, or weeks.
 
 
-### Metadata[​](/data-sources/databases/elasticsearch#metadata "Direct link to Metadata")
+### Metadata​
 Under **Dataset Handling** , select or deselect the checkbox to specify whether Dremio should remove dataset definitions if underlying data is unavailable.
 Under **Metadata Refresh** :
   * Dataset Discovery: Specify the refresh interval to use for the names of top-level source objects such as tables.
   * Dataset Details: Specify refresh and expiration intervals for the metadata Dremio needs for query planning, such as information on fields, types, shards, statistics and locality.
 
 
-### Privileges[​](/data-sources/databases/elasticsearch#privileges "Direct link to Privileges")
+### Privileges​
 On the Privileges tab, you can grant privileges to specific users or roles. See [Access Controls](/security/rbac) for additional information about privileges.
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
   3. Click **Save** after setting the configuration.
 
 
-## Updating an Elasticsearch Source[​](/data-sources/databases/elasticsearch#updating-an-elasticsearch-source "Direct link to Updating an Elasticsearch Source")
+## Updating an Elasticsearch Source​
 To update an Elasticsearch source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
-  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see [Configuring Elasticsearch as a Source](/data-sources/databases/elasticsearch#configuring-elasticsearch-as-a-source).
+  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see Configuring Elasticsearch as a Source.
   4. Click **Save**.
 
 
-## Deleting an Elasticsearch Source[​](/data-sources/databases/elasticsearch#deleting-an-elasticsearch-source "Direct link to Deleting an Elasticsearch Source")
+## Deleting an Elasticsearch Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 To delete an Elasticsearch source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -310,19 +311,19 @@ To delete an Elasticsearch source, perform these steps:
 
 
 Deleting a source causes all downstream views that depend on objects in the source to break.
-## For More Information[​](/data-sources/databases/elasticsearch#for-more-information "Direct link to For More Information")
+## For More Information​
   * See [Elasticsearch Data Types](/reference/sql/data-types/mappings/elasticsearch) for information about mapping to Dremio data types.
 
 
 Was this page helpful?
 [Previous Dremio Cluster](/data-sources/databases/dremio)[Next Google BigQuery](/data-sources/databases/google-bigquery)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Dremio Cluster](/data-sources/databases/dremio)[Next Google BigQuery](/data-sources/databases/google-bigquery)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Felasticsearch%2F&_biz_t=1777950359919&_biz_i=Elasticsearch%20%7C%20Dremio%20Documentation&_biz_n=86&rnd=159543&cdn_o=a&_biz_z=1777950359919)
+!

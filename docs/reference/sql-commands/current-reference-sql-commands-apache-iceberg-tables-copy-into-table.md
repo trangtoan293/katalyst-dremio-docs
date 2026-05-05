@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/apache-iceberg-tables/copy-into-table
+slug: /reference/sql/commands/apache-iceberg-tables/copy-into-table
 title: "COPY INTO | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64250.808176333
@@ -17,7 +18,7 @@ On this page
 # COPY INTO
 You can load data from CSV, JSON, or Parquet files that are in a source into an existing Apache Iceberg table.
 For information about how the `COPY INTO `table`` operation works, as well as the supported storage locations and requirements, see [Copying Data Into Apache Iceberg Tables](/developer/data-formats/apache-iceberg/copying-data-into-tables).
-## Syntax[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#syntax "Direct link to Syntax")
+## Syntax​
 Syntax
 
 ```
@@ -79,7 +80,7 @@ parquet_options
 
 ```
 
-## Parameters[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#parameters "Direct link to Parameters")
+## Parameters​
 `table_name` String
 The name of the table, which can also include the necessary qualifier if the table is not in the current context. Example: `Samples.'samples.dremio.com'.'NYC-taxi-trips'`
 * * *
@@ -124,18 +125,18 @@ The format of the file or files to copy data from.
 
 You can use uncompressed or compressed CSV and JSON files. Compressed files must be in the gzip format, using the .gz extension, or in the bzip2 format, using the .bz2 extension.
 * * *
-[csv_options](/reference/sql/commands/apache-iceberg-tables/copy-into-table#csv-format-options) String
+csv_options String
 Options that describe the formats and other characteristics of the source `CSV` file or files.
 * * *
-[json_options](/reference/sql/commands/apache-iceberg-tables/copy-into-table#json-format-options) String
+json_options String
 Options that describe the formats and other characteristics of the source `JSON` file or files.
 * * *
-[parquet_options](/reference/sql/commands/apache-iceberg-tables/copy-into-table#parquet-format-options) String
+parquet_options String
 Options that describe the formats and other characteristics of the source `PARQUET` file or files.
 Only the `ON ERROR` option is supported for Parquet source files.
-### CSV Format Options[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#csv-format-options "Direct link to CSV Format Options")
+### CSV Format Options​
 DATE_FORMAT '`string`' String Optional
-String that defines the format of date values in the data files to be loaded. If a value is not specified, YYYY-MM-DD is used. See [Date/Time Formatting](/reference/sql/sql-functions#datetime-formatting) for additional formatting options.
+String that defines the format of date values in the data files to be loaded. If a value is not specified, YYYY-MM-DD is used. See [Date/Time Formatting](/reference/sql/sql-functions) for additional formatting options.
 * * *
 EMPTY_AS_NULL [ '`boolean`' ] String Optional
 Boolean that specifies whether an empty string is considered a NULL field or an empty string. If a value is not specified, `TRUE` is used.
@@ -161,12 +162,12 @@ Specifies that the COPY INTO operation should continue if it encounters an error
 Every record that cannot be parsed in a CSV file is rejected; however, all records that can be parsed in the file are processed. The exception is that, if the currently parsed element exceeds the configured field size limit (which is configured by `limits.single_field_size_bytes`), the rest of the file is rejected.
 When the copy operation is complete, the output displays the number of records loaded into the Iceberg table and the number of rejected records.
 If there is at least one rejected record, you can query the system table [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) to find out information about the job that ran the COPY INTO operation.
-To obtain information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To obtain information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
   * 'skip_file'  
 Specifies that the COPY INTO operation should stop processing the input file at the first error it encounters.
 The 'skip_file' option requires extra processing on the input files, regardless of the number of errors the input files contain. As a result, the 'skip_file' option is slower than the 'abort' and 'continue' options. Skipping large files due to a small number of errors can delay the COPY INTO operation.
 The first potential error is registered in the [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) system table, which you can query to get information about the job that ran the COPY INTO operation.
-To get information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To get information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
 The 'skip_file' option differs from the 'continue' option as follows:
     * The 'skip_file' option does not insert any rows from an input file that contains an error, whereas the 'continue' option may insert correct rows.
     * The 'skip_file' option only registers the first error in an input file and stops processing, whereas the 'continue' option may register several errors in the same file.
@@ -183,16 +184,16 @@ SKIP_LINES `n` Integer Optional
 Number of lines to ignore at the beginning of each input file. If no value is given, no lines are skipped. Must be a non-negative integer. If SKIP_LINES `n` is specified and EXTRACT_HEADER is also set to `TRUE`, the n+1 line in the file is considered to be the header.
 * * *
 TIME_FORMAT '`string`' String Optional
-String that defines the format of time values in the data files to be loaded. If a value is not specified, HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions#datetime-formatting) for additional formatting options.
+String that defines the format of time values in the data files to be loaded. If a value is not specified, HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions) for additional formatting options.
 * * *
 TIMESTAMP_FORMAT '`string`' String Optional
-String that defines the format of timestamp values in the data files to be loaded. If a value is not specified, YYYY-MM-DD HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions#datetime-formatting) for additional formatting options.
+String that defines the format of timestamp values in the data files to be loaded. If a value is not specified, YYYY-MM-DD HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions) for additional formatting options.
 * * *
 TRIM_SPACE [ '`boolean`' ] String Optional
 Boolean that specifies whether or not to remove leading and trailing white space from strings. The default is FALSE.
-### JSON Format Options[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#json-format-options "Direct link to JSON Format Options")
+### JSON Format Options​
 DATE_FORMAT '`string`' String Optional
-String that defines the format of date values in the data files to be loaded. If a value is not specified, YYYY-MM-DD is used. See [Date/Time Formatting](/reference/sql/sql-functions#datetime-formatting) for additional formatting options.
+String that defines the format of date values in the data files to be loaded. If a value is not specified, YYYY-MM-DD is used. See [Date/Time Formatting](/reference/sql/sql-functions) for additional formatting options.
 * * *
 EMPTY_AS_NULL [ '`boolean`' ] String Optional
 Boolean that specifies whether an empty string is considered a NULL field or an empty string. If a value is not specified, `TRUE` is used.
@@ -209,12 +210,12 @@ Specifies that the COPY INTO operation should continue if it encounters an error
 If a record in a JSON file cannot be parsed, that record and all subsequent records in the file are rejected.
 When the copy operation is complete, the output displays the number of records loaded into the Iceberg table and the number of rejected records.
 If there is at least one rejected record, you can query the system table [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) to find out information about the job that ran the COPY INTO operation.
-To obtain information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use [the `copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To obtain information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use [the `copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
   * 'skip_file'  
 Specifies that the COPY INTO operation should stop processing the input file at the first error it encounters.
 The 'skip_file' option requires extra processing on the input files, regardless of the number of errors the input files contain. As a result, the 'skip_file' option is slower than the 'abort' and 'continue' options. Skipping large files due to a small number of errors can delay the COPY INTO operation.
 The first potential error is registered in the [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) system table, which you can query to get information about the job that ran the COPY INTO operation.
-To get information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To get information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
 The 'skip_file' option differs from the 'continue' option as follows:
     * The 'skip_file' option does not insert any rows from an input file that contains an error, whereas the 'continue' option may insert correct rows.
     * The 'skip_file' option only registers the first error in an input file and stops processing, whereas the 'continue' option may register several errors in the same file.
@@ -222,15 +223,15 @@ The 'skip_file' option differs from the 'continue' option as follows:
 
 * * *
 TIME_FORMAT '`string`' String Optional
-String that defines the format of time values in the data files to be loaded. If a value is not specified, HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions#datetime-formatting) for additional formatting options.
+String that defines the format of time values in the data files to be loaded. If a value is not specified, HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions) for additional formatting options.
 * * *
 TIMESTAMP_FORMAT '`string`' String Optional
-String that defines the format of timestamp values in the data files to be loaded. If a value is not specified, YYYY-MM-DD HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions#datetime-formatting) for additional formatting options.
+String that defines the format of timestamp values in the data files to be loaded. If a value is not specified, YYYY-MM-DD HH24:MI:SS.FFF is used. See [Date/Time Formatting](/reference/sql/sql-functions) for additional formatting options.
 * * *
 TRIM_SPACE [ '`boolean`' ] String Optional
 Boolean that specifies whether or not to remove leading and trailing white space from strings. The default is `FALSE`.
 * * *
-### PARQUET Format Options[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#parquet-format-options "Direct link to PARQUET Format Options")
+### PARQUET Format Options​
 ON_ERROR {'{'})'{'{'})'{'}'}) 'abort' | 'skip_file' {'{'})'{'}'}'{'}'} String Optional
 Specifies what to do if an error is encountered during the loading process.
   * 'abort'  
@@ -239,15 +240,15 @@ Specifies that the COPY INTO operation should immediately abort if it encounters
 Specifies that the COPY INTO operation should stop processing the input file at the first error it encounters.
 The 'skip_file' option requires extra processing on the input files, regardless of the number of errors the input files contain. As a result, the 'skip_file' option is slower than the 'abort' option. Skipping large files due to a small number of errors can delay the COPY INTO operation.
 The first potential error is registered in the [`sys.copy_errors_history`](/reference/sql/system-tables/copy-errors-history) system table, which you can query to get information about the job that ran the COPY INTO operation.
-To get information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands#querying-information-about-rejected-records-in-files-used-by-a-copy-into-operation-for-which-on_error-was-set-to-continue-or-skip_file) in a `SELECT` command, specifying the job ID and the name of the target table.
+To get information about rejected records in particular files, query the `sys.copy_errors_history` system table to obtain the ID of the job that ran the COPY INTO operation. Then, use the [`copy_errors()` function](/reference/sql/commands) in a `SELECT` command, specifying the job ID and the name of the target table.
 
 
-## Output[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#output "Direct link to Output")
+## Output​
 The command returns this output:  
 | Column name  | Description  |  
 | --- | --- |  
 | Rows Inserted  | The number of rows loaded from the source data files.  |  
-## Examples[​](/reference/sql/commands/apache-iceberg-tables/copy-into-table#examples "Direct link to Examples")
+## Examples​
 Copying the data from all files present in a folder
 
 ```
@@ -401,14 +402,14 @@ COPY INTO cast_tb(col1, col2, col3)
 ```
 
 Was this page helpful?
-[Previous SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)[Next DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Previous SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)Next DELETE
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)[Next DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fcreate-space%2F&_biz_t=1777950570990&_biz_i=CREATE%20SPACE%20%7C%20Dremio%20Documentation&_biz_n=490&rnd=17447&cdn_o=a&_biz_z=1777950570999)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fapache-iceberg-tables%2Fcopy-into-table%2F&_biz_t=1777950570998&_biz_i=COPY%20INTO%20%7C%20Dremio%20Documentation&_biz_n=491&rnd=141734&cdn_o=a&_biz_z=1777950570999)
+[Previous SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)Next DELETE
+!!

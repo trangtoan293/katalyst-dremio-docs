@@ -1,5 +1,6 @@
 ---
 url: /reference/admin-cli/export-import-pat
+slug: /reference/admin-cli/export-import-pat
 title: "Export and Import PATs | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64229.607557583
@@ -15,10 +16,10 @@ On this page
 # Export and Import Personal Access Tokens (PATs) Enterprise
 Administrators who have access to hosts in a Dremio cluster can migrate personal access tokens (PATs) from one cluster to another using the `dremio-admin export-pats` and `dremio-admin import-pats` commands.
 Dremio does not maintain PATs in plaintext. Instead, Dremio uses a secure hashing algorithm to maintain the signatures of secrets. For this reason, the exported data is sensitive but not secret. Administrators may choose to encrypt the exported data using a passphrase. Administrators are responsible for securely transmitting the PAT file to the new cluster (for example, using SSH) and safe disposal of the PAT file and any copies after use.
-Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/#using-the-dremio-admin-cli-on-kubernetes) before putting anything learned on this page into practice on such a deployment.
-## Requirements[​](/reference/admin-cli/export-import-pat#requirements "Direct link to Requirements")
+Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/) before putting anything learned on this page into practice on such a deployment.
+## Requirements​
 Both the cluster from which you export the PATs and the cluster to which you import the PATs must have the same list of users. That is, usernames for all users must be the same in both clusters. To ensure that the usernames are identical, configure the same authentication mechanism for both clusters, including the list of local users.
-## Export Syntax[​](/reference/admin-cli/export-import-pat#export-syntax "Direct link to Export Syntax")
+## Export Syntax​
 Export syntax
 
 ```
@@ -46,7 +47,7 @@ Export options command output
 
 ```
 
-## Import Syntax[​](/reference/admin-cli/export-import-pat#import-syntax "Direct link to Import Syntax")
+## Import Syntax​
 Import syntax
 
 ```
@@ -77,9 +78,9 @@ Import options command output
 
 ```
 
-## Migrate PATs[​](/reference/admin-cli/export-import-pat#migrate-pats "Direct link to Migrate PATs")
+## Migrate PATs​
   1. Log in to the main coordinator on the old cluster (the cluster from which you want to export the PATs).
-  2. [Shut down](/help-support/advanced-topics/start-stop/#commands-for-all-deployments) all nodes. The cluster must be offline to export PATs.
+  2. [Shut down](/help-support/advanced-topics/start-stop/) all nodes. The cluster must be offline to export PATs.
   3. Export the cluster's PATs to a file:
 Export cluster PATs
 
@@ -106,7 +107,7 @@ Exported PATs: PATExportStats{exportedPATCount=3, userDoesNotExistCount=0, token
 
   5. Securely transmit the PAT file from the main coordinator in the old cluster to the main coordinator in the new cluster (the cluster to which you want to import the PATs).
   6. Log in to the main coordinator on the new cluster.
-  7. [Shut down](/help-support/advanced-topics/start-stop/#commands-for-all-deployments) all nodes. The cluster must be offline to import PATs.
+  7. [Shut down](/help-support/advanced-topics/start-stop/) all nodes. The cluster must be offline to import PATs.
   8. Import the PATs from the PAT file:
 Import cluster PATs
 
@@ -156,13 +157,13 @@ Import cluster PATs with ignore-failures argument
 
 Was this page helpful?
 [Previous Encrypt Credentials](/reference/admin-cli/encryption)[Next Export Profiles](/reference/admin-cli/export-profiles)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Encrypt Credentials](/reference/admin-cli/encryption)[Next Export Profiles](/reference/admin-cli/export-profiles)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fadmin-cli%2Fexport-import-pat%2F&_biz_t=1777950549750&_biz_i=Export%20and%20Import%20PATs%20%7C%20Dremio%20Documentation&_biz_n=439&rnd=734723&cdn_o=a&_biz_z=1777950549750)
+!

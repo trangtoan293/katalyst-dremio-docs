@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/FLATTEN
+slug: /reference/sql/sql-functions/functions/FLATTEN
 title: "FLATTEN | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64316.611485958
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Semi-Structured Data](/reference/sql/sql-functions)
 # FLATTEN
 Explodes compound values into multiple rows. The FLATTEN function takes a `LIST` column and produces a lateral view (that is, an inline view that contains correlation referring to other tables that precede it in the FROM clause).
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### FLATTEN(_expression_ list) → list[​](/reference/sql/sql-functions#flattenexpression-list--list "Direct link to flattenexpression-list--list")
+## Syntax
+### FLATTEN(_expression_ list) → list[​](/reference/sql/sql-functions)
   * expression: The expression that will be unpacked into rows. The expression must be of data type `LIST`.
 
 
@@ -33,7 +34,7 @@ SELECT FLATTEN(CONVERT_FROM ('["Ford", "BMW", "Fiat"]', 'json'))
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 The FLATTEN function eliminates rows from the result set if the target column contains an empty array or is null.  
   
 If the target column is an array of standard datatypes such as INT or VARCHAR, you can use the UNION operator to cast NULL as that datatype and include all rows in the result set. For example:  
@@ -49,12 +50,12 @@ FLATTEN is not supported for empty lists.
 If the query fails, you may need to run a `SELECT` statement with `CONVERT_FROM` first to check the schema and ensure the target column is a `LIST`.
 Was this page helpful?
 [Previous FIRST_VALUE](/reference/sql/sql-functions)[Next FLOOR](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous FIRST_VALUE](/reference/sql/sql-functions)[Next FLOOR](/reference/sql/sql-functions)

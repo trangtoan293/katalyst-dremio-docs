@@ -2,7 +2,7 @@
   "label": "Version",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Version"
+    "type": "doc",
+    "id": "release-notes/version/current-release-notes-version-250-release"
   }
 }

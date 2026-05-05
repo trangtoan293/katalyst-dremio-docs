@@ -2,7 +2,7 @@
   "label": "Well",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Well"
+    "type": "doc",
+    "id": "help-and-support/well/current-help-support-well-architected-framework"
   }
 }

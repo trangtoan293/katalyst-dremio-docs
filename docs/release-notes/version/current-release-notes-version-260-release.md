@@ -1,5 +1,6 @@
 ---
 url: /release-notes/version-260-release
+slug: /release-notes/version-260-release
 title: "26.x Release Notes | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64076.224482625
@@ -13,8 +14,8 @@ Version: current [26.x]
 On this page
 # 26.x Release Notes
 Releases are listed in reverse order, starting with the latest release of Dremio 26.x.
-## 26.1.7 (May 2026) Enterprise[​](/release-notes/version-260-release#2617-may-2026-enterprise "Direct link to 2617-may-2026-enterprise")
-### Improvements and Fixes[​](/release-notes/version-260-release#improvements-and-fixes "Direct link to Improvements and Fixes")
+## 26.1.7 (May 2026) Enterprise​
+### Improvements and Fixes​
   * Fixed 4 important vulnerabilities within Apache Polaris used by Dremio's Open Catalog:
     * CVE-2026-42809: Fixed an issue where an authenticated low-privileged user could abuse Polaris staged table creation to mint broad temporary storage credentials for an attacker-chosen location before Polaris validated that location. 
 DX-119578
@@ -26,8 +27,8 @@ DX-119949
 DX-119952
 
 
-## 26.1.6 (April 2026) Enterprise[​](/release-notes/version-260-release#2616-april-2026-enterprise "Direct link to 2616-april-2026-enterprise")
-### Improvements and Fixes[​](/release-notes/version-260-release#improvements-and-fixes-1 "Direct link to Improvements and Fixes")
+## 26.1.6 (April 2026) Enterprise​
+### Improvements and Fixes​
   * Fixed a memory leak in `TableFunctionPOP` where Apache Arrow buffers allocated during row processing were not released when a query was cancelled between output batches. 
 DX-116853
   * Fixed an issue where writing an Apache Iceberg table with positional deletes to a REST catalog source could fail when running `DELETE`, `UPDATE`, or `MERGE` queries. 
@@ -125,7 +126,7 @@ DX-116889
 DX-116441
 
 
-#### Helm Chart (3.2.6)[​](/release-notes/version-260-release#helm-chart-326 "Direct link to Helm Chart \(3.2.6\)")
+#### Helm Chart (3.2.6)​")
   * Upgraded the MongoDB Operator to resolve TLS and cert-manager compatibility issues. This update requires a CRD upgrade before deploying. 
 DX-115916
   * Upgraded the embedded MongoDB version to 8.0.17-6. 
@@ -138,9 +139,9 @@ DX-116492
 DX-116650
 
 
-## 26.1.5 (March 2026) Enterprise[​](/release-notes/version-260-release#2615-march-2026-enterprise "Direct link to 2615-march-2026-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates "Direct link to General Updates")
+## 26.1.5 (March 2026) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue where inline metadata refresh queries could cause all queries to stall during query planning. 
 DX-114871
   * Fixed an issue where a service user's client secret could be used to obtain an access token for a different service user via the OAuth client credentials grant. 
@@ -155,7 +156,7 @@ DX-115106
 DX-114323
 
 
-#### APP[​](/release-notes/version-260-release#app "Direct link to APP")
+#### APP​
   * Fixed an issue on the Jobs page where a user's first and last names were displayed in the **User** column instead of their username. The column now shows the username, consistent with job search and user filter behavior. 
 DX-114835
   * Fixed an issue where the Support Settings page became unresponsive after enabling AI functions. Refreshing the page now works as expected. 
@@ -166,7 +167,7 @@ DX-105356
 DX-101147
 
 
-#### SQL[​](/release-notes/version-260-release#sql "Direct link to SQL")
+#### SQL​
   * Fixed an issue with the `CREATE VIEW` SQL command failing when referenced views are out of sync with source tables. 
 DX-115610
   * Fixed an intermittent corruption issue with `ListVector` that could occur in hash joins involving `LIST` or `MAP` data types. 
@@ -191,14 +192,14 @@ DX-105395
 DX-90863
 
 
-#### Helm Chart (3.2.5)[​](/release-notes/version-260-release#helm-chart-325 "Direct link to Helm Chart \(3.2.5\)")
+#### Helm Chart (3.2.5)​")
   * Added support for configurable `annotations` and `podAnnotations` on all Helm chart hooks and jobs. 
 DX-114821
 
 
-## 26.1.4 (February 2026) Enterprise[​](/release-notes/version-260-release#2614-february-2026-enterprise "Direct link to 2614-february-2026-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-1 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-1 "Direct link to General Updates")
+## 26.1.4 (February 2026) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Added support for a user-configurable inactivity timeout to end idle sessions automatically. 
 DX-12390
   * Support has been added for configuring different user group mapping providers per Hive source. This can be set in each Hive source’s **Connection Properties** field using the `hadoop.security.group.mapping` property. 
@@ -217,17 +218,17 @@ DX-109745
 DX-112719
 
 
-#### API[​](/release-notes/version-260-release#api "Direct link to API")
+#### API​
   * Fixed an issue where the `GET /api/v3/job/{id}/results` endpoint could fail with deserialization errors for result files larger than 2 GB. 
 DX-110160
 
 
-#### APP[​](/release-notes/version-260-release#app-1 "Direct link to APP")
+#### APP​
   * Fixed an issue with looking up service users in the Roles Members search box in the Dremio console. 
 DX-110082
 
 
-#### SQL[​](/release-notes/version-260-release#sql-1 "Direct link to SQL")
+#### SQL​
   * Fixed an issue where Parquet filter pushdown incorrectly dropped negative and zero values when converting `DOUBLE` to `FLOAT` filters, causing silent incorrect query results. 
 DX-113966
   * Improved query performance by automatically simplifying filter conditions on `COALESCE` and `CASE` expressions, enabling more efficient filter pushdown. 
@@ -240,9 +241,9 @@ DX-68132
 DX-113795
 
 
-## 26.1.3 (January 2026) Enterprise[​](/release-notes/version-260-release#2613-january-2026-enterprise "Direct link to 2613-january-2026-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-2 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-2 "Direct link to General Updates")
+## 26.1.3 (January 2026) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue that prevented the client credentials OAuth grant from succeeding when the correct client ID and client secret were provided in the expected URL-encoded form via HTTP basic authentication. 
 DX-112990
   * Fixed an issue where S3 connections using an HTTP proxy could ignore the proxy or use the wrong scheme/port due to incorrect proxy SSL configuration handling. 
@@ -257,7 +258,7 @@ DX-110662
 DX-112491
 
 
-#### APP[​](/release-notes/version-260-release#app-2 "Direct link to APP")
+#### APP​
   * Drafted content in the editor of the chat window is now stored while expanding and collapsing Dremio's AI Agent chat panel. 
 DX-112161
   * Fixed an issue where the SQL editor could display unusable tabs that appeared to be stuck loading. 
@@ -272,7 +273,7 @@ DX-112445
 DX-113239
 
 
-#### SQL[​](/release-notes/version-260-release#sql-2 "Direct link to SQL")
+#### SQL​
   * Added support for common sub-expression elimination (CSE) in filter pushdowns. 
 DX-105913
   * Resolved an issue that could lead to a Dremio process abort during query execution involving the Hash Partition Sender operator. 
@@ -295,14 +296,14 @@ DX-108757
 DX-113610
 
 
-## 26.1.2 (December 2025) Enterprise[​](/release-notes/version-260-release#2612-december-2025-enterprise "Direct link to 2612-december-2025-enterprise")
-### What's New[​](/release-notes/version-260-release#whats-new "Direct link to What's New")
+## 26.1.2 (December 2025) Enterprise​
+### What's New​
   * Added [`ENCRYPT`](/reference/sql/sql-functions) and [`DECRYPT`](/reference/sql/sql-functions) as new SQL functions. These functions are recommended as replacements for `AES_ENCRYPT` and `AES_DECRYPT`, which are now deprecated and will be removed in a future Dremio release.
 DX-108149
 
 
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-3 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-3 "Direct link to General Updates")
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue where Iceberg table write operations could create invalid Parquet files when nullability checks were disabled in Dremio, leading to `DATA_READ ERROR` failures during subsequent queries. 
 DX-111290
   * Fixed an issue where sources in a broken state could not be reconfigured. 
@@ -315,7 +316,7 @@ DX-112409
 DX-111606
 
 
-#### APP[​](/release-notes/version-260-release#app-3 "Direct link to APP")
+#### APP​
   * Fixed an issue in which the Catalog Usage on the Monitor page in the Dremio console failed to load due to an error processing queries containing a `LIST_FILES` function call. 
 DX-112418
   * Catalog search results with matching column name are now case insensitive. 
@@ -328,8 +329,8 @@ DX-112292
 DX-112327
 
 
-#### SQL[​](/release-notes/version-260-release#sql-3 "Direct link to SQL")
-  * Fixed the `SUBSTR(string_expression varchar, pattern varchar) → varchar` function so that the behavior matches the [`SUBSTR`](/reference/sql/sql-functions#substrstring_expression-varchar-pattern-varchar--varchar) documentation. Now `SUBSTRING(string_expression varchar, pattern varchar) → varchar` function has a clearer error message that it is not supported. 
+#### SQL​
+  * Fixed the `SUBSTR(string_expression varchar, pattern varchar) → varchar` function so that the behavior matches the [`SUBSTR`](/reference/sql/sql-functions) documentation. Now `SUBSTRING(string_expression varchar, pattern varchar) → varchar` function has a clearer error message that it is not supported. 
 DX-105174
   * Previously there was an incorrect code example for using the new AI attributes within engine routing. Now the code example properly shows how to use the new `query_has_attribute` function. 
 DX-111871
@@ -347,33 +348,33 @@ DX-111901
 DX-111114
 
 
-#### Helm Chart (3.2.2)[​](/release-notes/version-260-release#helm-chart-322 "Direct link to Helm Chart \(3.2.2\)")
+#### Helm Chart (3.2.2)​")
   * Upgraded the Percona Server MongoDB version to 8.0.16-5. 
 DX-108448
 
 
-## 26.1.1 (December 2025) Enterprise[​](/release-notes/version-260-release#2611-december-2025-enterprise "Direct link to 2611-december-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-4 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-4 "Direct link to General Updates")
+## 26.1.1 (December 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Updated the `dremio-enterprise` image repo in Quay.io to allow quicker access to our new AI features and avoid customer segmentation by JDK. The `dremio-enterprise` image repo now contains images using JDK 21, so you no longer need to leverage the specific JDK 21 repo in Quay.io. 
 DX-112393
   * Enabled the Helm chart template property: `catalog.storage.location` to support multiple buckets. 
 DX-112243
 
 
-#### APP[​](/release-notes/version-260-release#app-4 "Direct link to APP")
+#### APP​
   * Fixed an issue where the Jobs page was unable to load post-upgrade if there is a job in the list that has a results cache hit. 
 DX-112291
 
 
-#### Helm Chart (3.2.1)[​](/release-notes/version-260-release#helm-chart-321 "Direct link to Helm Chart \(3.2.1\)")
+#### Helm Chart (3.2.1)​")
   * Enabled the Helm chart template property: `catalog.storage.location` to support multiple buckets. 
 DX-112243
 
 
-## 26.1.0 (November 2025) Enterprise[​](/release-notes/version-260-release#2610-november-2025-enterprise "Direct link to 2610-november-2025-enterprise")
-### What's New[​](/release-notes/version-260-release#whats-new-1 "Direct link to What's New")
-#### General Updates[​](/release-notes/version-260-release#general-updates-5 "Direct link to General Updates")
+## 26.1.0 (November 2025) Enterprise​
+### What's New​
+#### General Updates​
   * Discover, analyze, and visualize your data using natural language with [Dremio's AI Agent](/data-products/ai-agent). Use [AI functions](/reference/sql/sql-functions) `AI_GENERATE`, `AI_CLASSIFY`, and `AI_COMPLETE` to integrate LLMs directly into SQL workflows and query unstructured data. Extend functionality to external agents with the Dremio MCP Server, providing secure connections to AI chat clients like Claude and ChatGPT. 
 DX-110044, DX-97048, DX-105441
   * [Usage-based billing](/admin/licensing/usage) is now available. Pay for what you use, with support for both online and offline deployments. 
@@ -391,7 +392,7 @@ DX-107870, DX-107914
   * Route MCP, AI Agent, and AI functions queries to specific engines using new [Workload Management](/admin/workloads/workload-management) functionality.
 
 
-#### SQL[​](/release-notes/version-260-release#sql-4 "Direct link to SQL")
+#### SQL​
   * With column nullability enforcement, you can be assured on write operations that your data conforms to the table DDL. This simplifies the data quality experience by failing on write operations when something fails to match the expected DDL. 
 DX-97179
   * Added new [`SET QUEUE`](/reference/sql/commands/set-queue) and [`SET TAG`](/reference/sql/commands/set-tag) commands that allow users to explicitly select an execution engine or set a routing tag for subsequent queries in a session, providing greater flexibility and optimized resource utilization for specific workloads. 
@@ -400,8 +401,8 @@ DX-54799
 DX-105001, DX-104306
 
 
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-5 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-6 "Direct link to General Updates")
+### Improvements and Issues Fixed​
+#### General Updates​
   * Changed the data type for `queried_datasets` and `scanned_datasets` in `sys.jobs` and `sys.jobs_recent` from `VARCHAR` to `ARRAY`VARCHAR``, making them easier to script against and parse. 
 DX-99139
   * The "Enterprise Catalog" and "Dremio Catalog" has been renamed to "Open Catalog". 
@@ -445,7 +446,7 @@ DX-106278
 DX-106860, DX-108635
   * Improved the Dremio engine to handle a large number of expressions efficiently. The dependency graph of expression splits is now sorted topologically. 
 DX-34931
-  * For legacy engines, Columnar Cloud Cache (C3) is now enabled by default and can only be disabled on a per-engine basis using [engine overrides](/deploy-dremio/configuring-kubernetes#engine-overrides). However, legacy engine satefulsets must be deleted prior to performing the upgrade to Dremio 26.1.0 in order to apply the C3 fix. 
+  * For legacy engines, Columnar Cloud Cache (C3) is now enabled by default and can only be disabled on a per-engine basis using [engine overrides](/deploy-dremio/configuring-kubernetes). However, legacy engine satefulsets must be deleted prior to performing the upgrade to Dremio 26.1.0 in order to apply the C3 fix. 
 DX-106331
   * Fixed a missing header for SSE-C and asynchronous reader when using S3-compatible storage. 
 DX-65718
@@ -543,7 +544,7 @@ DX-109777, DX-107753
     * `s3_plugin.s3_v1_client_threw`
     * `s3_plugin.s3_v2_client_threw`
 DX-104509
-  * Upgraded the Amazon OpenSearch operator to 2.8.0 with Dremio-specific customizations. This upgrade addressed CVEs and other issues in the operator. To complete the upgrade, the associated CRDs must also be updated. See [Upgrade Procedure](/admin/admin-dremio-kubernetes/upgrade/#upgrade-procedure) for the steps. 
+  * Upgraded the Amazon OpenSearch operator to 2.8.0 with Dremio-specific customizations. This upgrade addressed CVEs and other issues in the operator. To complete the upgrade, the associated CRDs must also be updated. See [Upgrade Procedure](/admin/admin-dremio-kubernetes/upgrade/) for the steps. 
 DX-105403
   * Updated Amazon OpenSearch to 3.1.0 to address potential security issues. 
 DX-105301
@@ -583,7 +584,7 @@ DX-102976
     * DX-98114
 
 
-#### APP[​](/release-notes/version-260-release#app-5 "Direct link to APP")
+#### APP​
   * Hovering over an error icon on the Pod Activity page in the Dremio console now displays the error message as a tooltip.
 DX-108128
   * Running multiple queries on the Edit Dataset page will now work as expected. 
@@ -645,7 +646,7 @@ DX-107813
 
 The **Enable asynchronous access when possible** and **Enable asynchronous access for Parquet datasets** checkboxes have been removed from the advanced options in the source configuration dialog to simplify setup and ensure optimal performance. 
 DX-98546
-#### API[​](/release-notes/version-260-release#api-1 "Direct link to API")
+#### API​
   * Fixed an issue for the Catalog API where `READ METADATA` wasn't being respected to retrieve lineage information about a dataset. 
 DX-106489
   * Dremio catalog privileges are now respected for the graph endpoint in the Catalog API. 
@@ -656,7 +657,7 @@ DX-107490
 DX-106894
 
 
-#### SQL[​](/release-notes/version-260-release#sql-5 "Direct link to SQL")
+#### SQL​
   * Dremio table maintenance now utilizes file size distributions and thresholds to intelligently group and compact files, delivering dramatically faster `OPTIMIZE TABLE` results with much lower compute cost. These operations are now optimized to avoid excessive computation and write operations by filtering for partitions that require optimization.
 DX-105105, DX-99412
   * Improved memory and performance on compaction (`OPTIMIZE TABLE`) for tables containing position and/or equality deletes. 
@@ -827,12 +828,12 @@ DX-104226
 DX-104745
 
 
-#### Helm Chart (3.2.0)[​](/release-notes/version-260-release#helm-chart-320 "Direct link to Helm Chart \(3.2.0\)")
+#### Helm Chart (3.2.0)​")
   * This update enables automated backups of Dremio's Open Catalog metadata stored in MongoDB. Users can backup their catalog information without downtime; enabling data resiliency from system failures. 
 DX-104782
   * Added a mandatory `region` field to the `distStorage` S3 and S3-compatible configuration to support the new MongoDB hot backup. 
 DX-108806
-  * For legacy engines, Columnar Cloud Cache (C3) is now enabled by default and can only be disabled on a per-engine basis using [engine overrides](/deploy-dremio/configuring-kubernetes#engine-overrides). However, legacy engine satefulsets must be deleted prior to performing the upgrade to Dremio 26.1.0 in order to apply the C3 fix. 
+  * For legacy engines, Columnar Cloud Cache (C3) is now enabled by default and can only be disabled on a per-engine basis using [engine overrides](/deploy-dremio/configuring-kubernetes). However, legacy engine satefulsets must be deleted prior to performing the upgrade to Dremio 26.1.0 in order to apply the C3 fix. 
 DX-106331
   * Added additional init containers for the new engines. This was done to allow for customer-managed certificates to be loaded onto the engines. 
 DX-106278
@@ -842,7 +843,7 @@ DX-106860, DX-108635
 DX-107901
   * `priorityClassName` is now supported for all pods except `opensearch-cluster-security-config-update`, `opensearch-bootstrap` and `dremio-mongodb-cluster`. 
 DX-106779
-  * Upgraded the OpenSearch operator to 2.8.0 with Dremio-specific customizations. This upgrade addressed CVEs and other issues in the operator. To complete the upgrade, the associated CRDs must also be updated. See [Upgrade Procedure](/admin/admin-dremio-kubernetes/upgrade/#upgrade-procedure) for the steps. 
+  * Upgraded the OpenSearch operator to 2.8.0 with Dremio-specific customizations. This upgrade addressed CVEs and other issues in the operator. To complete the upgrade, the associated CRDs must also be updated. See [Upgrade Procedure](/admin/admin-dremio-kubernetes/upgrade/) for the steps. 
 DX-105403
   * All Dremio versions are now using JDK version 21 by default. 
 DX-106970
@@ -850,9 +851,9 @@ DX-106970
 DX-110301
 
 
-## 26.0.10 (January 2026) Enterprise[​](/release-notes/version-260-release#26010-january-2026-enterprise "Direct link to 26010-january-2026-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-6 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-7 "Direct link to General Updates")
+## 26.0.10 (January 2026) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue where Dremio was blocking the usage of fields named `file_path` and `pos` in Iceberg v2 tables using positional deletes via merge on read. 
 DX-111113
   * Key-pair authentication on Snowflake sources now supports custom connection properties. 
@@ -867,14 +868,14 @@ DX-112409
 DX-112491
 
 
-#### APP[​](/release-notes/version-260-release#app-6 "Direct link to APP")
+#### APP​
   * Previously a user could run into orphaned loading tabs in the Dremio console. Now when using the SQL editor, users shouldn't be able to see orphaned tabs. 
 DX-112920
-  * Fixed the `SUBSTR(string_expression varchar, pattern varchar) → varchar` function so that the behavior matches the [`SUBSTR`](/reference/sql/sql-functions#substrstring_expression-varchar-pattern-varchar--varchar) documentation. Now `SUBSTRING(string_expression varchar, pattern varchar) → varchar` function has a clearer error message that it is not supported. 
+  * Fixed the `SUBSTR(string_expression varchar, pattern varchar) → varchar` function so that the behavior matches the [`SUBSTR`](/reference/sql/sql-functions) documentation. Now `SUBSTRING(string_expression varchar, pattern varchar) → varchar` function has a clearer error message that it is not supported. 
 DX-105174
 
 
-#### SQL[​](/release-notes/version-260-release#sql-6 "Direct link to SQL")
+#### SQL​
   * Fixed an issue where the presence of multiple `LEAD` functions partitioned on the same columns could lead to incorrect results. 
 DX-111114
   * Fixed a compilation error in Snowflake sources when using `ILIKE` function with an escape character. 
@@ -891,21 +892,21 @@ DX-111686
 DX-111734
 
 
-#### Helm Chart (3.1.8)[​](/release-notes/version-260-release#helm-chart-318 "Direct link to Helm Chart \(3.1.8\)")
+#### Helm Chart (3.1.8)​")
   * Upgraded the Percona Server MongoDB version to 8.0.16-5. 
 DX-108448
 
 
-## 26.0.9 (December 2025) Enterprise[​](/release-notes/version-260-release#2609-december-2025-enterprise "Direct link to 2609-december-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-7 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-8 "Direct link to General Updates")
+## 26.0.9 (December 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Added support for connecting Microsoft OneLake Iceberg catalogs to Dremio via the generic Iceberg REST Catalog source. 
 DX-110596
   * The Elastic plugin now supports Elasticsearch versions 8 and 9 in version 7 compatibility mode. New features from versions 8 and 9 are not supported. 
 DX-108871, DX-108947
 
 
-#### SQL[​](/release-notes/version-260-release#sql-7 "Direct link to SQL")
+#### SQL​
   * Fixed an issue where the position delete files for Apache Iceberg v2 tables were not sorted by 'file_path' and 'pos' during merge-on-read `DELETE` operations on tables with an Iceberg-defined sort order. 
 DX-111304
   * Fixed an issue where queries would fail with the error `Unable to coerce from the file's data type "null" to the column's data type` when reading Mongo collections if schema discovery was disabled and fields containing empty arrays were encountered. 
@@ -918,21 +919,21 @@ DX-111953
 DX-110651
 
 
-#### Helm Chart (3.1.7)[​](/release-notes/version-260-release#helm-chart-317 "Direct link to Helm Chart \(3.1.7\)")
+#### Helm Chart (3.1.7)​")
   * Enabled automated backups of the Dremio Enterprise Catalog metadata stored in MongoDB. Users can back up their catalog information without downtime, enabling data resiliency from system failures. 
 DX-104782
 
 
-## 26.0.8 (October 2025) Enterprise[​](/release-notes/version-260-release#2608-october-2025-enterprise "Direct link to 2608-october-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-8 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-9 "Direct link to General Updates")
+## 26.0.8 (October 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Improved upgrade performance when many Reflections or infinite split metadata entries are present.
 DX-109388
   * Fixed an issue where the main coordinator failed to initialize already-running engines after a restart, preventing queries from accessing sources. 
 DX-108628
 
 
-#### SQL[​](/release-notes/version-260-release#sql-8 "Direct link to SQL")
+#### SQL​
   * Fixed a divide by zero error that occurred during push project pass join optimization. 
 DX-108367
   * Fixed an issue where a table created in an Iceberg REST catalog via a `CREATE TABLE AS` statement would appear unpartitioned even though a `PARTITION BY` statement was included in the query. 
@@ -945,14 +946,14 @@ DX-105511
 DX-109105
 
 
-#### Helm Chart (3.1.6)[​](/release-notes/version-260-release#helm-chart-316 "Direct link to Helm Chart \(3.1.6\)")
+#### Helm Chart (3.1.6)​")
   * Updated container dependencies to eliminate numerous CVEs identified in system libraries that were not exploitable as the affected libraries were either unused by the operating system or not accessible to the application layer. 
 DX-110151
 
 
-## 26.0.7 (October 2025) Enterprise[​](/release-notes/version-260-release#2607-october-2025-enterprise "Direct link to 2607-october-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-9 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-10 "Direct link to General Updates")
+## 26.0.7 (October 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue where backups would fail with a "checksum error" after a backup was restored. 
 DX-102352
   * Improved performance of metadata refresh operations on Parquet datasets by eliminating redundant S3 API calls. 
@@ -963,9 +964,9 @@ DX-107239
 DX-108263
 
 
-## 26.0.6 (September 2025) Enterprise[​](/release-notes/version-260-release#2606-september-2025-enterprise "Direct link to 2606-september-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-10 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-11 "Direct link to General Updates")
+## 26.0.6 (September 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Updated the Snowflake JDBC driver to version 3.26.1 to fix an issue where queries returning large result sets (2000+ rows) would fail with "No trusted certificate found" errors in Kubernetes deployments. 
 DX-107880
   * Fixed an issue with the MongoDB plugin where, if Dremio started up and couldn't reach a previously configured MongoDB source, a connection resource leak could occur, often leading to high resource usage. 
@@ -976,13 +977,13 @@ DX-106936
 DX-108128
 
 
-#### Helm Chart (3.1.4)[​](/release-notes/version-260-release#helm-chart-314 "Direct link to Helm Chart \(3.1.4\)")
+#### Helm Chart (3.1.4)​")
   * Updated container dependencies to eliminate numerous CVEs identified in system libraries that were not exploitable as the affected libraries were either unused by the operating system or not accessible to the application layer.
 
 
-## 26.0.5 (September 2025) Enterprise[​](/release-notes/version-260-release#2605-september-2025-enterprise "Direct link to 2605-september-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-11 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-12 "Direct link to General Updates")
+## 26.0.5 (September 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue where the `isAdjustToUTC` flag was not preserved when writing `TIMESTAMP` columns to Parquet, ensuring correct time zone handling. 
 DX-107677
   * Resolved duplicated "process_start_time_seconds" metric in Prometheus "/metrics" endpoint that could break scrapers. 
@@ -991,9 +992,9 @@ DX-105362
 DX-107933
 
 
-## 26.0.4 (September 2025) Enterprise[​](/release-notes/version-260-release#2604-september-2025-enterprise "Direct link to 2604-september-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-12 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-13 "Direct link to General Updates")
+## 26.0.4 (September 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Improved query results cleanup in PDFS for queries that run on executors by reducing unnecessary network calls. 
 DX-106968
   * Removed the schema parameter from Snowflake source definitions to align with Snowflake's native behavior. 
@@ -1007,29 +1008,29 @@ DX-107401
 DX-107554
 
 
-#### APP[​](/release-notes/version-260-release#app-7 "Direct link to APP")
+#### APP​
   * Fixed an issue where nested namespaces in Iceberg REST Catalogs, Open Catalogs, Snowflake Open Catalogs, and Unity Catalogs are not visible in the Dremio console. 
 DX-104543
   * Preferences will now appear under the Settings for Dremio Community Edition. 
 DX-103853
 
 
-#### SQL[​](/release-notes/version-260-release#sql-9 "Direct link to SQL")
+#### SQL​
   * Fixed a bug where window functions like `avg` and `stddev_pop` were returning indeterminate results. 
 DX-105597
   * Fixed a performance regression seen in ranking window functions. 
 DX-105693
 
 
-#### Helm Chart (3.1.2)[​](/release-notes/version-260-release#helm-chart-312 "Direct link to Helm Chart \(3.1.2\)")
+#### Helm Chart (3.1.2)​")
   * Updated container dependencies to eliminate numerous CVEs identified in system libraries that were not exploitable as the affected libraries were either unused by the operating system or not accessible to the application layer.
   * Fixed the `ActiveProcessorCount` calculation when using statically defined engines. 
 DX-107901
 
 
-## 26.0.3 (August 2025) Enterprise[​](/release-notes/version-260-release#2603-august-2025-enterprise "Direct link to 2603-august-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-13 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-14 "Direct link to General Updates")
+## 26.0.3 (August 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Fixed an issue in `IcebergDeleteFileAggTableFunction` that caused `equalityId`'s to be `null`, resulting in failures when tables included both position and equality deletes. The function now correctly handles mixed delete file types. 
 DX-106012
   * Fixed a `NullPointerException` that could occur when querying a table in [AWS Glue Data Catalog](/data-sources/lakehouse-catalogs/aws-glue-catalog) with an empty `SerDeInfo` field. 
@@ -1056,19 +1057,19 @@ DX-106679
 DX-105883
 
 
-#### APP[​](/release-notes/version-260-release#app-8 "Direct link to APP")
+#### APP​
   * Improved the responsiveness of the query cancellation, even in cases of queries with a large number of expressions. 
 DX-105803
   * Fixed an issue that caused the Dremio console to become unresponsive. 
 DX-104748
 
 
-#### SQL[​](/release-notes/version-260-release#sql-10 "Direct link to SQL")
+#### SQL​
   * Fixed issue when casting a `DECIMAL` from `VARCHAR`, which in some cases, caused a SIGSEGV error if the value was not a number. 
 DX-97570
 
 
-#### Helm Chart (3.1.1)[​](/release-notes/version-260-release#helm-chart-311 "Direct link to Helm Chart \(3.1.1\)")
+#### Helm Chart (3.1.1)​")
   * Fixed an issue where the OpenSearch cluster delete hook was ignoring the tolerations configuration. 
 DX-105759
   * By default, OpenSearch pods will not deploy on the same host nodes to enhance resiliency. 
@@ -1080,9 +1081,9 @@ DX-105709
 DX-105380
 
 
-## 26.0.2 (July 2025) Enterprise[​](/release-notes/version-260-release#2602-july-2025-enterprise "Direct link to 2602-july-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-14 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-15 "Direct link to General Updates")
+## 26.0.2 (July 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * Deploying Dremio to Kubernetes with OpenShift is now supported and documented in [Deploy Dremio on Kubernetes](/deploy-dremio/deploy-on-kubernetes) and [Configuring Your Values](/deploy-dremio/configuring-kubernetes), which now include OpenShift-specific instructions.
   * Fixed a rare issue with Iceberg Data Manipulation Language (DML) queries writing null results on some rows that shouldn't, which happened with DML statements that contained a target and source table. This issue occurred on Merge on Read (MoR) and Copy on Write (CoW) DML configurations. 
 DX-105013
@@ -1147,7 +1148,7 @@ DX-97572
 DX-93284
 
 
-#### APP[​](/release-notes/version-260-release#app-9 "Direct link to APP")
+#### APP​
   * Fixed a bug where the search was not displaying in the join wizard. 
 DX-105286
   * Fixed an issue in the Monitor page that no longer shows a negative number for jobs accelerated by Manual Reflections for dates older than the current date. 
@@ -1172,7 +1173,7 @@ DX-89182
 DX-100977
 
 
-#### SQL[​](/release-notes/version-260-release#sql-11 "Direct link to SQL")
+#### SQL​
   * Fixed an issue where long-running `INSERT` queries on Iceberg REST tables could hang if vended credentials are used. 
 DX-105372
   * Fixed an issue that dramatically slowed down Data Manipulation Language (DML) queries that contained both a target and source table. 
@@ -1185,14 +1186,14 @@ DX-103559
 DX-103395
 
 
-### Known Issues[​](/release-notes/version-260-release#known-issues "Direct link to Known Issues")
+### Known Issues​
   * On Google Cloud Platform with Kubernetes clusters running kernel 6.6.87+, some queries may fail with a `ChannelClosedException`. Since tests on kernel 6.6.72+ do not show the issue, use clusters with kernel 6.6.72+ as a workaround. 
 DX-105455
 
 
-## 26.0.1 (June 2025) Enterprise[​](/release-notes/version-260-release#2601-june-2025-enterprise "Direct link to 2601-june-2025-enterprise")
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-15 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-16 "Direct link to General Updates")
+## 26.0.1 (June 2025) Enterprise​
+### Improvements and Issues Fixed​
+#### General Updates​
   * You can now specify columns for both sorting and partitioning in Reflections when the partitioning scheme uses a transformation. 
 DX-103022
   * Updated 
@@ -1263,10 +1264,10 @@ DX-102535
 DX-68682
 
 
-#### APP[​](/release-notes/version-260-release#app-10 "Direct link to APP")
+#### APP​
   * When saving an existing view into a new view (Save as View), the owner used to be the owner of the existing view. This fix changed the owner to be the user who created the new view. 
 DX-102562
-  * Fixed the **Copy** button when hovering the space name on the [Datasets page](/get-started/quick_tour/#datasets-page) to behave like the **Copy Path** button when hovering the listed items in the space. 
+  * Fixed the **Copy** button when hovering the space name on the Datasets page to behave like the **Copy Path** button when hovering the listed items in the space. 
 DX-100298
   * Resolved an issue on the Monitoring page where the Y-axis ordering for some charts was improperly ordered. 
 DX-100091
@@ -1278,19 +1279,19 @@ DX-102767
 DX-99034
   * Clicking on a Reflection in search results now opens the Reflections dialog in advanced mode. 
 DX-102084
-  * Fixed an issue while hovering over folders in the **Data** panel of the [SQL Runner](/get-started/quick_tour/#sql-runner) that showed "Dataset not found.", and now correctly displays the resource. 
+  * Fixed an issue while hovering over folders in the **Data** panel of the SQL Runner that showed "Dataset not found.", and now correctly displays the resource. 
 DX-102548
   * Fixed an issue where wiki content was not showing for folders in search results. 
 DX-101117
   * Fixed an issue where the sources on the Lineage tab would be orphaned if they were supposed to be connected to a dataset marked "Unknown". 
 DX-102551
-  * Fixed an issue where the **CPU by node** graph in [Resources](/admin/monitoring/#resources-enterprise) may be missing some colors if there are more than 8 nodes displayed. 
+  * Fixed an issue where the **CPU by node** graph in [Resources](/admin/monitoring/) may be missing some colors if there are more than 8 nodes displayed. 
 DX-100593
   * Fixed an issue in which the **Save as** option for views returned an error when the dataset version history for the view had been corrupted. 
 DX-101506
   * Fixed an issue on the Lineage tab when right-clicking on a lineage node would navigate the lineage graph. 
 DX-101878
-  * If, while [viewing engine details](/deploy-dremio/managing-engines-kubernetes#viewing-engine-details), that engine is deleted, it now displays a message stating that the engine no longer exists instead of showing an error. 
+  * If, while [viewing engine details](/deploy-dremio/managing-engines-kubernetes), that engine is deleted, it now displays a message stating that the engine no longer exists instead of showing an error. 
 DX-103313
   * Fixed a bug in the new lineage UI that causes the source not to render when the user only has inherited `READ_METADATA` permission from the source. 
 DX-103914
@@ -1303,7 +1304,7 @@ DX-102144
 DX-103534
 
 
-#### SQL[​](/release-notes/version-260-release#sql-12 "Direct link to SQL")
+#### SQL​
   * Optimized `SELECT COUNT(*)` to use Iceberg metadata instead of scanning the entire Iceberg table to return the total number of rows. 
 DX-101826
   * Optimized `MIN`/`MAX` aggregations on Iceberg tables to read from column metadata when possible. 
@@ -1338,12 +1339,12 @@ DX-103907
 DX-102840
 
 
-## 26.0.0 (April 2025)[​](/release-notes/version-260-release#2600-april-2025 "Direct link to 26.0.0 \(April 2025\)")
-### What's New[​](/release-notes/version-260-release#whats-new-2 "Direct link to What's New")
-#### General Updates[​](/release-notes/version-260-release#general-updates-17 "Direct link to General Updates")
+## 26.0.0 (April 2025)​")
+### What's New​
+#### General Updates​
   * [Autonomous Reflections](/acceleration/autonomous-reflections) automatically creates and manages Reflections, accelerating query performance and optimizing data accessibility. This enables users to derive faster insights, scale effortlessly, and make data-driven decisions. 
 DX-89558
-  * Dremio now supports [results cache](/acceleration#results-cache) management and eviction without having to rely on the time-to-live (TTL) policy of the cache storage. The results are stored in a distributed storage configured via `dremio.conf`. If you are upgrading from 25.1, you must manually remove any existing TTL policy configured. Queries accelerated by the results cache now display a lightning bolt icon and indicate a cache hit on the Job Details page. 
+  * Dremio now supports [results cache](/acceleration) management and eviction without having to rely on the time-to-live (TTL) policy of the cache storage. The results are stored in a distributed storage configured via `dremio.conf`. If you are upgrading from 25.1, you must manually remove any existing TTL policy configured. Queries accelerated by the results cache now display a lightning bolt icon and indicate a cache hit on the Job Details page. 
 DX-101298, DX-94850
   * Dremio supports the creation, modification, introspection, and deletion of Kubernetes-based engines via the Dremio console or the Engine Management API. Engines are T-shirt sized and can be set up to automatically start and stop, i.e., they can automatically start up as needed by queries and stop after an idle time without queries. Dremio allows setting guardrails and timeouts for the engine lifecycle via the Dremio console or the Engine Management API. For more details, see [Managing Engines](/deploy-dremio/managing-engines-kubernetes). 
 DX-97061
@@ -1353,9 +1354,9 @@ DX-97022
 DX-96982, DX-96991, DX-96989, DX-96988, DX-96907, DX-97113, DX-97955, DX-100986, DX-101757
   * You can now use [clustering](/load-data/clustering) as a straightforward and effective alternative to partitioning. Clustering simplifies processes and helps ensure fast queries on Apache Iceberg tables. 
 DX-92001
-  * [Parameterized prepared statements](/client-applications/drivers/arrow-flight-sql-jdbc-driver#parameterized-queries-with-prepared-statements) are supported for Arrow Flight SQL JDBC to prevent SQL injection and to enable users to leverage client tools that support parameterized prepared statements. This update supports `SELECT` statements. 
+  * [Parameterized prepared statements](/client-applications/drivers/arrow-flight-sql-jdbc-driver) are supported for Arrow Flight SQL JDBC to prevent SQL injection and to enable users to leverage client tools that support parameterized prepared statements. This update supports `SELECT` statements. 
 DX-10013, DX-89042
-  * Dremio now supports the OAuth2.0 token exchange endpoint, which allows client applications to set up external OAuth [authentication](/security/authentication#username-and-password) for ODBC, JDBC, Arrow Flight, and REST API requests. 
+  * Dremio now supports the OAuth2.0 token exchange endpoint, which allows client applications to set up external OAuth [authentication](/security/authentication) for ODBC, JDBC, Arrow Flight, and REST API requests. 
 DX-95730
   * Dremio now supports a generic [Iceberg REST Catalog](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) as a source, which includes vended credentials. This would allow you to connect to Iceberg catalogs over the Iceberg REST API. This source is located within the **Lakehouse Catalogs**. 
 DX-102149, DX-98996, DX-98713, DX-100065
@@ -1369,7 +1370,7 @@ DX-93897, DX-47285
 DX-93897
 
 
-#### APP[​](/release-notes/version-260-release#app-11 "Direct link to APP")
+#### APP​
   * Added a new Engines page in the Dremio console for [managing engines and executors in Kubernetes deployments](/deploy-dremio/managing-engines-kubernetes) where users can create, set an idle time, and easily delete engines. 
 DX-99357
   * The [Lineage](/data-products/govern/lineage) tab has been updated to give a more modern and improved user experience, allowing users to customize the layers of information shown on the lineage nodes. Lineage is supported for the Open Catalog (powered by Polaris), Unity, and all Iceberg REST Catalogs. 
@@ -1378,13 +1379,13 @@ DX-96716, DX-97045, DX-97065
 DX-96145, DX-93754, DX-97047
 
 
-#### SQL[​](/release-notes/version-260-release#sql-13 "Direct link to SQL")
+#### SQL​
   * Added support for `COPY INTO` transformations with CSV input type, extended `COPY INTO` syntax to enable simple [transformations during a data load](/developer/data-formats/apache-iceberg/copy-into-transformations), and added `EMPTY_AS_NULL` functionality with `COPY INTO` transformations. Note: `EMPTY_AS_NULL` is evaluated only on the CSV input data, not on any function result or subresult. 
 DX-96995, DX-96064, DX-90263
 
 
-### Improvements and Issues Fixed[​](/release-notes/version-260-release#improvements-and-issues-fixed-16 "Direct link to Improvements and Issues Fixed")
-#### General Updates[​](/release-notes/version-260-release#general-updates-18 "Direct link to General Updates")
+### Improvements and Issues Fixed​
+#### General Updates​
   * Improved the performance of AWS Glue Data Catalog table reads. 
 DX-96290
   * Following Microsoft's official retirement of Azure Data Lake Storage Gen1 last year (Feb 2024), Dremio has officially removed the Azure Data Lake Storage Gen1 Storage source from its product. 
@@ -1550,7 +1551,7 @@ DX-97429
 DX-99736, DX-104173
 
 
-#### APP[​](/release-notes/version-260-release#app-12 "Direct link to APP")
+#### APP​
   * Removed **Any** as an option from the engine selector in the Queues tab because it bypassed engine routing, sending queries to run on all executors across all engines and causing unpredictable behavior. This also prevented consistent engine scaling; if all engines were off, it was unclear which should scale up. For queues previously set to **Any** , the value will now be reassigned to a random available engine and remain fixed to it. If no engine is available, an error is returned, and you must update the queue. 
 DX-100443
   * Implemented new look and feel for logging in to the Dremio console. 
@@ -1591,7 +1592,7 @@ DX-97221
 DX-101308
 
 
-#### SQL[​](/release-notes/version-260-release#sql-14 "Direct link to SQL")
+#### SQL​
   * The [`SHOW TBLPROPERTIES`](/reference/sql/commands/show-table-properties) SQL command will now return the format version for Iceberg tables. 
 DX-87471
   * The vacuum log `vacuum.json` file will now capture detailed information about scanning and deletion through `VACUUM TABLE` and `VACUUM CATALOG` SQL commands. 
@@ -1636,7 +1637,7 @@ DX-97963, DX-18632
 DX-83189
   * Fixed the [`PARSE_URL`](/reference/sql/sql-functions) SQL function to handle URLs longer than 256 characters. 
 DX-100691
-  * Fixed an issue that could occur with class compilation when using a literal value in a [window function](/reference/sql/sql-functions#window-functions). 
+  * Fixed an issue that could occur with class compilation when using a literal value in a [window function](/reference/sql/sql-functions). 
 DX-100466
   * Fixed a stack overflow issue with queries containing a long list of constants in a `WHERE IN` clause. 
 DX-98414
@@ -1655,7 +1656,7 @@ DX-99689
 
 
 DX-99413, DX-100951
-### Breaking Changes[​](/release-notes/version-260-release#breaking-changes "Direct link to Breaking Changes")
+### Breaking Changes​
   * Enforced Reflection count guardrail so new Reflections cannot be created if there are already 500 or more active Reflections. 
 DX-94627
   * Because the Arrow caching feature for Reflections has been deprecated, any remaining references to Arrow cache for Reflections have been removed, such as in the `sys.reflections` system table and APIs. 
@@ -1664,10 +1665,10 @@ DX-53451
 DX-64438
 
 
-### Known Issues[​](/release-notes/version-260-release#known-issues-1 "Direct link to Known Issues")
-  * [Open Catalog](/security/rbac/privileges#open-catalog-privileges) does not inherit role-based access control (RBAC) privileges that have been granted at the system level. Instead, you need to grant RBAC privileges directly on the Open Catalog. 
+### Known Issues​
+  * [Open Catalog](/security/rbac/privileges) does not inherit role-based access control (RBAC) privileges that have been granted at the system level. Instead, you need to grant RBAC privileges directly on the Open Catalog. 
 DX-101932
-  * You cannot drop tables and views through the Dremio console for Open Catalog, Snowflake Open Catalog, and Iceberg REST Catalog sources. Instead, you must use the [`DROP TABLE`](/reference/sql/commands/tables#drop-table) or [`DROP VIEW`](/reference/sql/commands/drop-view) SQL commands. 
+  * You cannot drop tables and views through the Dremio console for Open Catalog, Snowflake Open Catalog, and Iceberg REST Catalog sources. Instead, you must use the [`DROP TABLE`](/reference/sql/commands/tables) or [`DROP VIEW`](/reference/sql/commands/drop-view) SQL commands. 
 DX-102380
   * If a user only has the `USAGE` and `SELECT` privileges on a table and tries to run an `INSERT` operation on that table, Dremio currently returns a false positive error message that says the table has been updated, but nothing actually happens. 
 DX-102429
@@ -1679,13 +1680,13 @@ DX-104821
 
 Was this page helpful?
 [Previous Release Notes](/release-notes)[Next 25.x Release Notes](/release-notes/version-250-release)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Release Notes](/release-notes)[Next 25.x Release Notes](/release-notes/version-250-release)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Frelease-notes%2Fversion-260-release%2F&_biz_t=1777950396867&_biz_i=26.x%20Release%20Notes%20%7C%20Dremio%20Documentation&_biz_n=159&rnd=919056&cdn_o=a&_biz_z=1777950396867)
+!

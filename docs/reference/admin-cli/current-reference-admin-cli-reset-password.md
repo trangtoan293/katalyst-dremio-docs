@@ -1,5 +1,6 @@
 ---
 url: /reference/admin-cli/reset-password
+slug: /reference/admin-cli/reset-password
 title: "Reset Password | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64236.172420833
@@ -13,14 +14,14 @@ crawled_at: 64236.172420833
 Version: current [26.x]
 On this page
 # Reset Password
-Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/#using-the-dremio-admin-cli-on-kubernetes) before putting anything learned on this page into practice on such a deployment.
-## Requirements[​](/reference/admin-cli/reset-password#requirements "Direct link to Requirements")
+Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/) before putting anything learned on this page into practice on such a deployment.
+## Requirements​
   * Shut down all cluster nodes completely before running the command.
   * This command is run on the main node.
   * The first character in the password must not be a special character. You can use a special character for any character in the password _except_ the first character.
 
 
-## Syntax[​](/reference/admin-cli/reset-password#syntax "Direct link to Syntax")
+## Syntax​
 Reset password command
 
 ```
@@ -30,7 +31,7 @@ Reset password command
 
 ```
 
-## Options[​](/reference/admin-cli/reset-password#options "Direct link to Options")
+## Options​
 To obtain a list of options on the command line:
 List reset password command options
 
@@ -53,7 +54,7 @@ Reset password command options output
 ```
 
 If the `--password` option is specified without a value, the utility prompts for one interactively.
-## Example[​](/reference/admin-cli/reset-password#example "Direct link to Example")
+## Example​
 This following example resets the password for `user123`.
 Reset password example
 
@@ -62,7 +63,7 @@ Reset password example
 
 ```
 
-## Steps to Reset a Password[​](/reference/admin-cli/reset-password#steps-to-reset-a-password "Direct link to Steps to Reset a Password")
+## Steps to Reset a Password​
   1. Make sure all cluster nodes are shut down.
   2. On the main node, run the following command:
 Reset password
@@ -86,12 +87,12 @@ Password changed
 
 Was this page helpful?
 [Previous Repair ACLS](/reference/admin-cli/repair-acls)[Next Restore Dremio](/reference/admin-cli/restore)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Repair ACLS](/reference/admin-cli/repair-acls)[Next Restore Dremio](/reference/admin-cli/restore)

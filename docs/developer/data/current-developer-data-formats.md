@@ -1,5 +1,6 @@
 ---
 url: /developer/data-formats
+slug: /developer/data-formats
 title: "File and Table Formats | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64054.402554458
@@ -26,13 +27,13 @@ Currently, ORC files can be read only from a metastore source, such as Hive or G
 
 Was this page helpful?
 [Previous Visual Studio Code](/developer/vs-code)[Next Apache Iceberg](/developer/data-formats/apache-iceberg)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Visual Studio Code](/developer/vs-code)[Next Apache Iceberg](/developer/data-formats/apache-iceberg)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeveloper%2Fdata-formats%2Ftable%2F&_biz_t=1777950375307&_biz_i=Formatting%20Data%20to%20a%20Table%20%7C%20Dremio%20Documentation&_biz_n=121&rnd=26254&cdn_o=a&_biz_z=1777950375316)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeveloper%2Fdata-formats%2F&_biz_t=1777950375316&_biz_i=File%20and%20Table%20Formats%20%7C%20Dremio%20Documentation&_biz_n=122&rnd=886921&cdn_o=a&_biz_z=1777950375316)
+!!

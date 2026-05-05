@@ -2,7 +2,7 @@
   "label": "Data Types",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Data Types"
+    "type": "doc",
+    "id": "reference/data-types/current-reference-sql-data-types"
   }
 }

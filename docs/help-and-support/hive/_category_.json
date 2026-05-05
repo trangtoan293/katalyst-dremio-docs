@@ -2,7 +2,7 @@
   "label": "Hive",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Hive"
+    "type": "doc",
+    "id": "help-and-support/hive/current-help-support-advanced-topics-hive-s3"
   }
 }

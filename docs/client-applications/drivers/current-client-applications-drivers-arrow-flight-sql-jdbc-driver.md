@@ -1,5 +1,6 @@
 ---
 url: /client-applications/drivers/arrow-flight-sql-jdbc-driver
+slug: /client-applications/drivers/arrow-flight-sql-jdbc-driver
 title: "Arrow Flight SQL JDBC | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64026.313125666
@@ -17,8 +18,8 @@ The Arrow Flight SQL JDBC driver is an open-source driver that is based on the s
 This driver solves a problem that is common to many BI tools that access databases through JDBC. These tools bundle a different JDBC driver for each type of database they support, because each of these databases has their own proprietary driver. Bundling multiple JDBC drivers for multiple databases can be difficult to maintain, and responding to support issues for multiple drivers can be costly. Now, provided that a database has an Apache Arrow Flight SQL endpoint enabled, the JDBC driver can connect to it.
 This driver is developed and maintained by the Apache Arrow community. For full technical documentation, see Apache's [Arrow Flight SQL JDBC Release Notes](/release-notes/arrow-flight-sql-jdbc).
 This driver is licensed under 
-Query planning is done on the specified node. To distribute query planning for JDBC connections, configure [secondary coordinator nodes](/deploy-dremio/other-options/standalone/dremio-config#dremio-coordinators) for your deployment.
-## Prerequisites[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#prerequisites "Direct link to Prerequisites")
+Query planning is done on the specified node. To distribute query planning for JDBC connections, configure secondary coordinator nodes for your deployment.
+## Prerequisites​
   * Apache Arrow Flight SQL JDBC driver 19.0.0
   * Dremio 26.1 or later
   * One of the following operating systems: Windows, MacOS, or Linux
@@ -34,18 +35,18 @@ Java 11+ Requirement
 
 
 
-## Supported Authentication Methods[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
   * Use the username and password of the Dremio account that you want to connect with.
   * Use a username and personal access token (PAT).
   * Use an OAuth Access Token
 
 
-### Username and Password[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#username-and-password "Direct link to Username and Password")
+### Username and Password​
 Pass a username and password with the `user` and `password` properties.
-### Personal Access Tokens Enterprise[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#personal-access-tokens-enterprise "Direct link to personal-access-tokens-enterprise")
-Pass a username and personal access token (PAT) with the `user` and `password` properties. You must URL-encode PATs that you include in JDBC URLs. To encode a PAT locally on your system, you can follow the steps in [URL-encoding Values](/client-applications/drivers/arrow-flight-sql-jdbc-driver#url-encoding-values). See [Personal Access Tokens](/security/authentication/personal-access-tokens) for enabling and creating PATs.
-Dremio recommends [authenticating with OAuth](/client-applications/drivers/arrow-flight-sql-jdbc-driver#authenticate-with-oauth) to improve security by reducing the risk of compromised passwords or personal access tokens.
-### OAuth Access Tokens Enterprise[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#oauth-access-tokens-enterprise "Direct link to oauth-access-tokens-enterprise")
+### Personal Access Tokens Enterprise​
+Pass a username and personal access token (PAT) with the `user` and `password` properties. You must URL-encode PATs that you include in JDBC URLs. To encode a PAT locally on your system, you can follow the steps in URL-encoding Values. See [Personal Access Tokens](/security/authentication/personal-access-tokens) for enabling and creating PATs.
+Dremio recommends authenticating with OAuth to improve security by reducing the risk of compromised passwords or personal access tokens.
+### OAuth Access Tokens Enterprise​
 You can create a connection with a previously issued OAuth access token by configuring the following properties:
   * `token` property with the value of the OAuth access token.
   * `user` property with the empty string `""` to default to the username included in the access token. If the username is configured in the property value, it must match the username in the access token.
@@ -65,11 +66,11 @@ jdbc_arrow_flight_conn = jaydebeapi.connect("org.apache.arrow.driver.jdbc.ArrowF
 ```
 
 You can obtain OAuth access tokens from Dremio by using client credentials, a local or LDAP username and password, a PAT, an external JWT, or user impersonation. For the API request details, see [OAuth Token](/reference/api/oauth-token).
-## Authenticate with OAuth[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#authenticate-with-oauth "Direct link to Authenticate with OAuth")
+## Authenticate with OAuth​
 You can configure the Arrow Flight SQL JDBC driver to request OAuth access tokens directly from Dremio when you open a connection. Pass the `oauth.*` values as JDBC connection properties instead of encoding them in the JDBC URL.
 You can find runnable Java examples for client credentials, token exchange, and user impersonation in the `arrow-flight-client-examples` repository.
-### Use Client Credentials[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#use-client-credentials "Direct link to Use Client Credentials")
-Before you begin, create a [service user](/security/authentication/users#service-users) and generate an [OAuth client secret](/security/authentication/users#generate-an-oauth-client-secret). For the token request details, see [Obtain Tokens via Client ID and Client Secret](/reference/api/oauth-token#obtain-tokens-via-client-id-and-client-secret).
+### Use Client Credentials​
+Before you begin, create a [service user](/security/authentication/users) and generate an [OAuth client secret](/security/authentication/users). For the token request details, see [Obtain Tokens via Client ID and Client Secret](/reference/api/oauth-token).
 Authenticate with client credentials
 
 ```
@@ -90,10 +91,10 @@ jdbc_arrow_flight_conn = jaydebeapi.connect("org.apache.arrow.driver.jdbc.ArrowF
 
 ```
 
-### Use Token Exchange[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#use-token-exchange "Direct link to Use Token Exchange")
+### Use Token Exchange​
 You can use token exchange when your application already has an external JWT or a PAT. Configure the common token exchange properties, then set the subject token values to match the credential you are exchanging.
   * For external JWT setup, see [External Token Providers](/security/authentication/application-authentication/external-token).
-  * For PAT exchange details, see [Exchange a PAT](/reference/api/oauth-token#exchange-a-pat).
+  * For PAT exchange details, see [Exchange a PAT](/reference/api/oauth-token).
 
 Authenticate with token exchange using an external JWT
 
@@ -135,8 +136,8 @@ jdbc_arrow_flight_conn = jaydebeapi.connect("org.apache.arrow.driver.jdbc.ArrowF
 
 ```
 
-### Use User Impersonation[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#use-user-impersonation "Direct link to Use User Impersonation")
-You can use token exchange with inbound impersonation to obtain an OAuth access token for a target user. Before you begin, configure an [inbound impersonation policy](/security/rbac/inbound-impersonation) and make sure the proxy user has a PAT to use as the actor token. For the token request details, see [Exchange a PAT with User Impersonation](/reference/api/oauth-token#exchange-a-pat-with-user-impersonation).
+### Use User Impersonation​
+You can use token exchange with inbound impersonation to obtain an OAuth access token for a target user. Before you begin, configure an [inbound impersonation policy](/security/rbac/inbound-impersonation) and make sure the proxy user has a PAT to use as the actor token. For the token request details, see [Exchange a PAT with User Impersonation](/reference/api/oauth-token).
 Authenticate with user impersonation
 
 ```
@@ -159,7 +160,7 @@ jdbc_arrow_flight_conn = jaydebeapi.connect("org.apache.arrow.driver.jdbc.ArrowF
 
 ```
 
-## OAuth Connection Properties[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#oauth-connection-properties "Direct link to OAuth Connection Properties")
+## OAuth Connection Properties​
 You can use the following `oauth.*` properties with the Arrow Flight SQL JDBC driver when connecting to Dremio.  
 | Property  | Required  | Description  |  
 | --- | --- | --- |  
@@ -172,7 +173,7 @@ You can use the following `oauth.*` properties with the Arrow Flight SQL JDBC dr
 | `oauth.exchange.subjectTokenType`  | For `token_exchange`  | The type of subject token. Use `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth:token-type:dremio:personal-access-token`, or `urn:ietf:params:oauth:token-type:dremio:subject` for user impersonation.  |  
 | `oauth.exchange.actorToken`  | For user impersonation  | The proxy user's PAT used to request a token for the target user.  |  
 | `oauth.exchange.actorTokenType`  | For user impersonation  | The actor token type. For Dremio user impersonation, use `urn:ietf:params:oauth:token-type:dremio:personal-access-token`.  |  
-## Connecting to Databases[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#connecting-to-databases "Direct link to Connecting to Databases")
+## Connecting to Databases​
   * Use this template to create a direct connection to a database that has enabled an Apache Arrow Flight SQL endpoint:
 Create direct connection to database
 
@@ -193,16 +194,16 @@ jdbc:arrow-flight-sql://<Dremio_coordinator>:32010[/?schema=<optional_schema>][&
 
     * ``Dremio_coordinator``: The hostname or IP address of the coordinator node in your Dremio cluster.
     * ``optional_schema``: The name of the schema (datasource or space, including child paths, such as `myDatasource.folder1` and `mySpace.folder1.folder2`) to use by default when a schema is not specified in a query.
-    * ``properties``: A list of JDBC properties. Values must be URL-encoded. See [URL-encoding Values](/client-applications/drivers/arrow-flight-sql-jdbc-driver#url-encoding-values) for suggested steps.
+    * ``properties``: A list of JDBC properties. Values must be URL-encoded. See URL-encoding Values for suggested steps.
 
 
-## Downloading the Driver[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#downloading-the-driver "Direct link to Downloading the Driver")
+## Downloading the Driver​
 To download the driver, go to [Apache Arrow Flight SQL JDBC](https://www.dremio.com/drivers/jdbc/).
-## Integrating the driver[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#integrating-the-driver "Direct link to Integrating the driver")
+## Integrating the driver​
 To integrate the driver into your development environment, add it to your classpath.
-## Name of the Class[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#name-of-the-class "Direct link to Name of the Class")
+## Name of the Class​
 The name of the class is `org.apache.arrow.driver.jdbc.ArrowFlightJdbcDriver`.
-## JDBC Properties for Dremio Wire Encryption[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#jdbc-properties-for-dremio-wire-encryption "Direct link to JDBC Properties for Dremio Wire Encryption")
+## JDBC Properties for Dremio Wire Encryption​
 If you are setting up encrypted communication between your JDBC client applications and the Dremio server, use the SSL JDBC connection parameters and fully qualified hostname to configure the JDBC connection string and connect to Dremio.
 This driver does not yet support disabling host verification.  
 | Properties  | Value  | Required  | Description  |  
@@ -219,13 +220,13 @@ If not provided, the default Java truststore is used (usually `$JAVA_HOME/lib/se
 | `useSystemTrustStore`  |  `true` or `false`  | [Optional]  | By default, the value is `true`. Bypasses trustStoreType and automatically picks the correct Truststore based on the operating system: Keychain on MacOS, `trustStorePassword` property to pass the password of the truststore. Here is an example of a connection string for Linux:   
 `jdbc:arrow-flight-sql://localhost:32010?trustStorePassword=Pc0_lL'Opjn$vSDcv:%Q0@@buc`  |  
 | `trustStorePassword`  | string  | [Optional]  | Password to the truststore.  |  
-## Optional Advanced JDBC Driver Properties[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#optional-advanced-jdbc-driver-properties "Direct link to Optional Advanced JDBC Driver Properties")  
+## Optional Advanced JDBC Driver Properties​  
 | Parameter  | Value  | Description  |  
 | --- | --- | --- |  
-| `routing_queue`  | string  | Specifies the queue to use for processing queries while a connection is open. For more information, see [Connection Tagging and Direct Routing Configuration](/admin/workloads/workload-management/#connection-tagging-and-direct-routing-configuration).  |  
-| `routing_tag`  | string  | When this parameter is set, the specified tag is associated with all queries executed within a session. Rules can check for the presence of a tag with the function `tag()`. For more information, see [Connection Tagging and Direct Routing Configuration](/admin/workloads/workload-management/#connection-tagging-and-direct-routing-configuration).  |  
-## Parameterized Queries with Prepared Statements[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#parameterized-queries-with-prepared-statements "Direct link to Parameterized Queries with Prepared Statements")
-Prepared statements allow you to dynamically pass parameters to SQL statements using placeholders, ensuring safer execution by separating the statement structure from the parameter values. With a prepared statement, set the (`?`) parameters at runtime using [set methods](/client-applications/drivers/arrow-flight-sql-jdbc-driver#supported-data-types-and-set-methods) to set different values in your `SELECT` statements and DML commands (`INSERT`, `UPDATE`, `DELETE`, `MERGE`).
+| `routing_queue`  | string  | Specifies the queue to use for processing queries while a connection is open. For more information, see [Connection Tagging and Direct Routing Configuration](/admin/workloads/workload-management/).  |  
+| `routing_tag`  | string  | When this parameter is set, the specified tag is associated with all queries executed within a session. Rules can check for the presence of a tag with the function `tag()`. For more information, see [Connection Tagging and Direct Routing Configuration](/admin/workloads/workload-management/).  |  
+## Parameterized Queries with Prepared Statements​
+Prepared statements allow you to dynamically pass parameters to SQL statements using placeholders, ensuring safer execution by separating the statement structure from the parameter values. With a prepared statement, set the (`?`) parameters at runtime using set methods to set different values in your `SELECT` statements and DML commands (`INSERT`, `UPDATE`, `DELETE`, `MERGE`).
 To use parameterized queries with prepared statements, follow these steps:
   1. Use the `prepareStatement()` method to define a statement with parameters, which act as placeholders for dynamic values.
   2. Set the values by replacing each parameter with a value using the appropriate set methods.
@@ -252,7 +253,7 @@ int rowsUpdated = preparedStatement.executeUpdate();
 
 ```
 
-### Supported Data Types and Set Methods[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#supported-data-types-and-set-methods "Direct link to Supported Data Types and Set Methods")  
+### Supported Data Types and Set Methods​  
 | **Column Data Type**  | **Supported Set Methods**  |  
 | --- | --- |  
 | Integer  |  `setInt()`, `setShort()`, `setNull()`  |  
@@ -268,9 +269,9 @@ int rowsUpdated = preparedStatement.executeUpdate();
 | Timestamp  |  `setTimestamp()`, `setNull()`  |  
 | Date  | `setNull()`  |  
 | VarBinary  |  `setBytes()`, `setNull()`  |  
-### Limitations[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#limitations "Direct link to Limitations")
+### Limitations​
 The JDBC client does not support the `setDate()` method due to mismatched date encoding formats between the Arrow Flight JDBC client and Dremio.
-## Managing Workloads[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#managing-workloads "Direct link to Managing Workloads")
+## Managing Workloads​
 Dremio administrators can use the Arrow Flight server endpoint to [manage query workloads](/admin/workloads/workload-management) by adding the following properties to connections created by Flight clients:  
 | Flight Client Property  | Description  |  
 | --- | --- |  
@@ -278,14 +279,14 @@ Dremio administrators can use the Arrow Flight server endpoint to [manage query 
 | `ROUTING_QUEUE`  | Name of the workload management queue. Used only during authentication.  |  
 | `ROUTING_TAG`  | Tag name associated with all queries executed within a Flight session. Used only during authentication.  |  
 | `SCHEMA`  | Default schema path to the dataset that the user wants to query.  |  
-## URL-encoding Values[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#url-encoding-values "Direct link to URL-encoding Values")
+## URL-encoding Values​
 To encode a personal access token (PAT) or property value locally on your system, you can follow these steps:
   1. In a browser window, right-click an empty area of the page and select **Inspect**.
   2. Click **Console**.
   3. Type `encodeURIComponent("<PAT-or-value>")`, where `<PAT-or-value>` is the personal access token that you obtained from Dremio or the value of a supported JDBC property. The URL-encoded PAT or value appears on the next line. You can highlight it and copy it to your clipboard.
 
 
-## Differences between the Arrow Flight SQL JDBC Driver and the Legacy Dremio JDBC Driver[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#differences-between-the-arrow-flight-sql-jdbc-driver-and-the-legacy-dremio-jdbc-driver "Direct link to Differences between the Arrow Flight SQL JDBC Driver and the Legacy Dremio JDBC Driver")
+## Differences between the Arrow Flight SQL JDBC Driver and the Legacy Dremio JDBC Driver​
 The Arrow Flight SQL JDBC driver differs from the Dremio JDBC driver (legacy) in the following:
   * Requires Java 11+.
   * Supports `ResultSet.getBoolean()` on `varchar` columns in which boolean values are represented as these strings: "0", "1", "true", "false".
@@ -303,7 +304,7 @@ The Dremio JDBC driver (legacy) uses String representations of these types.
 
 
 Calling `DatabaseMetadata.getCatalog()` when connected to Dremio returns empty. Other `DatabaseMetadata` methods return null values in the `TABLE_CAT` column. This is expected behavior because Dremio does not have a catalog.
-## Supported Conversions from Dremio Datatypes to JDBC Datatypes[​](/client-applications/drivers/arrow-flight-sql-jdbc-driver#supported-conversions-from-dremio-datatypes-to-jdbc-datatypes "Direct link to Supported Conversions from Dremio Datatypes to JDBC Datatypes")  
+## Supported Conversions from Dremio Datatypes to JDBC Datatypes​  
 | **DREMIO TYPE**  | **JDBCARROW TYPE**  |  
 | --- | --- |  
 | BIGINT  | Int  |  
@@ -327,13 +328,13 @@ Calling `DatabaseMetadata.getCatalog()` when connected to Dremio returns empty. 
 | VARCHAR  | Utf8  |  
 Was this page helpful?
 [Previous Drivers](/client-applications/drivers)[Next Arrow Flight SQL ODBC](/client-applications/drivers/arrow-flight-sql-odbc-driver)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Drivers](/client-applications/drivers)[Next Arrow Flight SQL ODBC](/client-applications/drivers/arrow-flight-sql-odbc-driver)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fbusiness-objects%2F&_biz_t=1777950347003&_biz_i=SAP%20Business%20Objects%20%7C%20Dremio%20Documentation&_biz_n=55&rnd=164535&cdn_o=a&_biz_z=1777950347024)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fdrivers%2Farrow-flight-sql-jdbc-driver%2F&_biz_t=1777950347024&_biz_i=Arrow%20Flight%20SQL%20JDBC%20%7C%20Dremio%20Documentation&_biz_n=56&rnd=457600&cdn_o=a&_biz_z=1777950347025)
+!!

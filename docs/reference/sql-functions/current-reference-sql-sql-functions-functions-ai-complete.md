@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/AI_COMPLETE
+slug: /reference/sql/sql-functions/functions/AI_COMPLETE
 title: "AI_COMPLETE | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.6266545
@@ -17,8 +18,8 @@ On this page
 **Categories** : [AI](/reference/sql/sql-functions)
 # AI_COMPLETE
 Specialized form of `AI_GENERATE` for creative text generation and summaries, returned as `VARCHAR`.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### AI_COMPLETE( [_model_name_ VARCHAR,] _prompt_ VARCHAR ) → VARCHAR[​](/reference/sql/sql-functions#ai_complete-model_name-varchar-prompt-varchar---varchar "Direct link to ai_complete-model_name-varchar-prompt-varchar---varchar")
+## Syntax
+### AI_COMPLETE( [_model_name_ VARCHAR,] _prompt_ VARCHAR ) → VARCHAR[​](/reference/sql/sql-functions)
   * model_name (optional): Model specification in format `modelProvider.modelName` (e.g., `gpt.4o`). `modelProvider` is the user-defined name for model provider configuration added in the preferences section. `modelName` is one of the models supported and provided by that provider. If not provided, uses the default model for the organization.
   * prompt: Completion instruction for the LLM. Natural language text describing what you want the model to generate.
 
@@ -39,7 +40,7 @@ SELECT dish_name,
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 • Optimized for creative text generation and summaries that return a single text response.  
   
 • Always returns `VARCHAR` data type.  
@@ -49,13 +50,13 @@ SELECT dish_name,
 • Model specification format: `modelProvider.modelName` (e.g., `gpt.4o`).
 Was this page helpful?
 [Previous AI_CLASSIFY](/reference/sql/sql-functions)[Next AI_GENERATE](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous AI_CLASSIFY](/reference/sql/sql-functions)[Next AI_GENERATE](/reference/sql/sql-functions)
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)

@@ -2,7 +2,7 @@
   "label": "Discover",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Discover"
+    "type": "doc",
+    "id": "data-products/discover/current-data-products-discover"
   }
 }

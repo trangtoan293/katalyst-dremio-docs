@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/nessie/merge-branch
+slug: /reference/sql/commands/nessie/merge-branch
 title: "MERGE BRANCH | Dremio Enterprise Documentation"
 depth: 5
 crawled_at: 65349.56795225
@@ -25,7 +26,7 @@ MERGE BRANCH <source_branch_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/nessie/merge-branch#parameters "Direct link to Parameters")
+## Parameters​
 `source_branch_name` String
 The name of the branch that you want to merge into your target branch. If a target branch is not specified, the source branch is merged into the current branch you are in.
 * * *
@@ -34,7 +35,7 @@ The name of the branch that is the target for the merge. If you do not use this 
 * * *
 IN `source_name` String Optional
 The name of the source. If not specified, the current source in the query context is used.
-## Examples[​](/reference/sql/commands/nessie/merge-branch#examples "Direct link to Examples")
+## Examples​
 Merge a branch you specify into the current reference branch
 
 ```
@@ -53,12 +54,12 @@ MERGE BRANCH myBranch
 
 Was this page helpful?
 [Previous DROP TAG](/reference/sql/commands/nessie/drop-tag)[Next SHOW BRANCHES](/reference/sql/commands/nessie/show-branches)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DROP TAG](/reference/sql/commands/nessie/drop-tag)[Next SHOW BRANCHES](/reference/sql/commands/nessie/show-branches)

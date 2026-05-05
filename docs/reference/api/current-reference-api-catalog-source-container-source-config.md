@@ -1,5 +1,6 @@
 ---
 url: /reference/api/catalog/source/container-source-config
+slug: /reference/api/catalog/source/container-source-config
 title: "Source Configuration | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64238.4176145
@@ -17,7 +18,7 @@ On this page
 # Source Configuration
 Dremio supports a variety of source types, and the available parameters of the `config` object differ among the source types. This page provides examples of the `config` object for each supported source type and descriptions of the `config` object's parameters that are available for each source type.
 The source object contains the same parameters for all source types _except_ for the parameters of the `config` object. Read the [Source](/reference/api/catalog/source) page for information about the parameters all source types have in common.
-## Amazon OpenSearch Service[​](/reference/api/catalog/source/container-source-config#amazon-opensearch-service "Direct link to Amazon OpenSearch Service")
+## Amazon OpenSearch Service​
   * Dremio source type: `AMAZONELASTIC`
   * See [Amazon OpenSearch Service](/data-sources/databases/opensearch) for additional information.
 
@@ -50,7 +51,7 @@ Amazon OpenSearch Service Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters "Direct link to Parameters")
+### Parameters​
 scriptsEnabled Body Boolean Optional
 If Dremio should use script pushdowns, set to `true` (default). Otherwise, set to `false`.
 Example: true
@@ -128,7 +129,7 @@ Example: true
 regionName Body String Optional
 Name of the AWS region to use to overwrite the default region for your AWS account. Required if `overwriteRegion` is set to `true`.
 Example: US_WEST_1
-## Amazon Redshift[​](/reference/api/catalog/source/container-source-config#amazon-redshift "Direct link to Amazon Redshift")
+## Amazon Redshift​
   * Dremio source type: `REDSHIFT`
   * See [Amazon Redshift](/data-sources/databases/redshift) for additional information.
 
@@ -156,7 +157,7 @@ Amazon Redshift Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-1 "Direct link to Parameters")
+### Parameters​
 connectionString Body String
 JDBC connection string for the Redshift database.
 Example: jdbc:redshift://testing-redshift-cluster.r57mkjay4utq.us-west-2.redshift.amazonaws.com:5439/support
@@ -210,7 +211,7 @@ Example: 60
 queryTimeoutSec Body Integer
 Maximum time to allow for query execution, in seconds. When the query timeout expires, the connection returns to an idle state. Default is `0`.
 Example: 0
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples "Direct link to Authentication Examples")
+### Authentication Examples​
 No authentication required
 
 ```
@@ -262,7 +263,7 @@ EKS Pod Identity
 
 ```
 
-## Amazon S3[​](/reference/api/catalog/source/container-source-config#amazon-s3 "Direct link to Amazon S3")
+## Amazon S3​
   * Dremio source type: `S3`
   * See [Amazon S3](/data-sources/object/s3) for additional information.
 
@@ -304,7 +305,7 @@ Amazon S3 Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-2 "Direct link to Parameters")
+### Parameters​
 accessKey Body String
 AWS access key. Required for credentialType `ACCESS_KEY`.
 Example: EXAMPLE78HT89VS4YJEL
@@ -371,14 +372,14 @@ Enum: ICEBERG, PARQUET
 Example: ICEBERG
 * * *
 isPartitionInferenceEnabled Body Boolean Optional
-To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table#partition-column-inference).
+To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table).
 Example: false
 * * *
 credentialType Body String Optional
 Type of credential for Dremio to use to connect to the source.
 Enum: NONE, EC2_METADATA, ACCESS_KEY, AWS_PROFILE, POD_IDENTITY
 Example: ACCESS_KEY
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-1 "Direct link to Authentication Examples")
+### Authentication Examples​
 EC2 Metadata
 
 ```
@@ -429,7 +430,7 @@ EKS Pod Identity with optional assumed IAM role
 
 ```
 
-## AWS Glue Data Catalog[​](/reference/api/catalog/source/container-source-config#aws-glue-data-catalog "Direct link to AWS Glue Data Catalog")
+## AWS Glue Data Catalog​
   * Dremio source type: `AWSGLUE`
   * See [AWS Glue Data Catalog](/data-sources/lakehouse-catalogs/aws-glue-catalog) for additional information.
 
@@ -461,7 +462,7 @@ AWS Glue Data Catalog Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-3 "Direct link to Parameters")
+### Parameters​
 regionNameSelection Body String
 AWS region where the AWS Glue Data Catalog is located.
 Valid Values: AF_SOUTH_1, AP_EAST_1, AP_NORTHEAST_1, AP_NORTHEAST_2, AP_NORTHEAST_3, AP_SOUTHEAST_1, AP_SOUTHEAST_2, AP_SOUTHEAST_3, AP_SOUTHEAST_4, AP_SOUTH_1, AP_SOUTH_2, CA_CENTRAL_1, CN_NORTHWEST_1, CN_NORTH_1, EU_CENTRAL_1, EU_CENTRAL_2, EU_NORTH_1, EU_SOUTH_1, EU_SOUTH_2, EU_WEST_1, EU_WEST_2, EU_WEST_3, IL_CENTRAL_1, ME_CENTRAL_1, ME_SOUTH_1, SA_EAST_1, US_EAST_1, US_EAST_2, US_GOV_EAST_1, US_GOV_WEST_1, US_WEST_1, US_WEST_2
@@ -521,7 +522,7 @@ allowedDatabases Body Array of String
 A list of the databases that users of Dremio are allowed to access. Present the names in a comma-separated list. Databases entered must be valid. Misspelled or non-existent databases will not appear in the resulting source.
 If one or more databases are added or removed from the list, the change takes effect immediately.
 Example: ["sales","finance"]
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-2 "Direct link to Authentication Examples")
+### Authentication Examples​
 EC2 Metadata
 
 ```
@@ -572,7 +573,7 @@ EKS Pod Identity with optional assumed IAM role
 
 ```
 
-## Azure Storage[​](/reference/api/catalog/source/container-source-config#azure-storage "Direct link to Azure Storage")
+## Azure Storage​
   * Dremio source type: `AZURE_STORAGE`
   * See [Azure Storage](/data-sources/object/azure-storage) for additional information.
 
@@ -603,7 +604,7 @@ Azure Storage Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-4 "Direct link to Parameters")
+### Parameters​
 accountKind Body String
 Type of Azure Storage account.
 Enum: STORAGE_V1, STORAGE_V2
@@ -664,9 +665,9 @@ Connection properties for the source. Each object in the propertyList includes t
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "dremio.azure.mode","value": "STORAGE_V2"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 isPartitionInferenceEnabled Body Boolean Optional
-To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table#partition-column-inference).
+To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table).
 Example: false
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-3 "Direct link to Authentication Examples")
+### Authentication Examples​
 Microsoft Entra ID
 
 ```
@@ -679,7 +680,7 @@ Microsoft Entra ID
 
 ```
 
-## Open Catalog (External)[​](/reference/api/catalog/source/container-source-config#open-catalog-external "Direct link to Open Catalog \(External\)")
+## Open Catalog (External)​")
   * Dremio source type: `DREMIO_CATALOG_EXTERNAL_V1`
   * See [Open Catalog (External)](/data-sources/lakehouse-catalogs/open-catalog-external) for additional information.
 
@@ -709,7 +710,7 @@ Open Catalog (External) Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-5 "Direct link to Parameters")
+### Parameters​
 dremioCatalogEndpoint Body String
 The endpoint for the Open Catalog on another Dremio installation.
 Example: 
@@ -744,7 +745,7 @@ Example: false
 maxCacheSpacePct Body Integer Optional
 Maximum percentage of the total available cache space to use on any single executor node. Used only when isCachingEnabled is set to `true`. Minimum is `1`. Maximum is `100` (default).
 Example: 100
-## Dremio-to-Dremio[​](/reference/api/catalog/source/container-source-config#dremio-to-dremio "Direct link to Dremio-to-Dremio")
+## Dremio-to-Dremio​
   * Dremio source type: `DREMIOTODREMIO`
   * See [Connecting to Another Dremio Cluster](/data-sources/databases/dremio) for additional information.
 
@@ -774,7 +775,7 @@ Dremio-to-Dremio Connector Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-6 "Direct link to Parameters")
+### Parameters​
 hostType Body String
 Connection method to use. To connect directly to a coordinator node of the cluster, use `DIRECT`. To connect to an external ZooKeeper instance that coordinates the nodes of the cluster, use `ZOOKEEPER`.
 Enum: DIRECT, ZOOKEEPER
@@ -819,7 +820,7 @@ Example: 0
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "disableCertificateVerification","value": "false"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-## Elasticsearch[​](/reference/api/catalog/source/container-source-config#elasticsearch "Direct link to Elasticsearch")
+## Elasticsearch​
   * Dremio source type: `ELASTIC`
   * See [Elasticsearch](/data-sources/databases/elasticsearch) for additional information.
 
@@ -853,7 +854,7 @@ Elasticsearch Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-7 "Direct link to Parameters")
+### Parameters​
 scriptsEnabled Body Boolean Optional
 If Dremio should use script pushdowns, set to `true` (default). Otherwise, set to `false`.
 Example: true
@@ -899,7 +900,7 @@ forceDoublePrecision Body Boolean Optional
 To force precision for double values, set to `true`. Otherwise, set to `false` (default).
 Example: false
 * * *
-[hostList](/reference/api/catalog/source/container-source-config#parameters-of-objects-in-the-hostlist-array) Body Array of Object
+hostList Body Array of Object
 Information about Elasticsearch hosts. Each object in the hostList includes the hostname and the corresponding port for the host.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"hostname": "172.25.0.208","port": 9200{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
@@ -923,7 +924,7 @@ Example: false
 useWhitelist Body Boolean Optional
 To query only the hosts specified in the hostList, set to `true`. Otherwise, set to `false` (default).
 Example: false
-#### Parameters of Objects in the `hostList` Array[​](/reference/api/catalog/source/container-source-config#parameters-of-objects-in-the-hostlist-array "Direct link to parameters-of-objects-in-the-hostlist-array")
+#### Parameters of Objects in the `hostList` Array​
 hostname Body String Optional
 Name of the host to use to connect to the Elasticsearch source.
 Example: 172.25.0.208
@@ -931,7 +932,7 @@ Example: 172.25.0.208
 port Body Integer Optional
 Port to use with the specified hostname to connect to the Elasticsearch source. Default is `9200`.
 Example: 9200
-## Google BigQuery[​](/reference/api/catalog/source/container-source-config#google-bigquery "Direct link to Google BigQuery")
+## Google BigQuery​
   * Dremio source type: `BIGQUERY`
   * See [Google BigQuery](/data-sources/databases/google-bigquery) for additional information.
 
@@ -956,7 +957,7 @@ Google BigQuery Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-8 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 Google BigQuery hostname. Expected value is `https://www.googleapis.com/bigquery/v2`.
 * * *
@@ -1015,7 +1016,7 @@ Example: 0
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "deferPrepares","value": "true"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-## Google Cloud Storage[​](/reference/api/catalog/source/container-source-config#google-cloud-storage "Direct link to Google Cloud Storage")
+## Google Cloud Storage​
   * Dremio source type: `GCS`
   * See [Google Cloud Storage](/data-sources/object/gcs) for additional information.
 
@@ -1046,7 +1047,7 @@ Google Cloud Storage Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-9 "Direct link to Parameters")
+### Parameters​
 projectId Body String
 Project ID for the Google Cloud Storage project.
 Example: dremio-4321
@@ -1098,9 +1099,9 @@ Connection properties for the source. Each object in the propertyList includes t
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "dremio.gcs.clientEmail","value": "
 * * *
 isPartitionInferenceEnabled Body Boolean Optional
-To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table#partition-column-inference).
+To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table).
 Example: false
-## Hadoop Distributed File System (HDFS)[​](/reference/api/catalog/source/container-source-config#hadoop-distributed-file-system-hdfs "Direct link to Hadoop Distributed File System \(HDFS\)")
+## Hadoop Distributed File System (HDFS)​")
   * Dremio source type: `HDFS`
   * See [HDFS](/data-sources/object/hdfs) for additional information.
 
@@ -1132,7 +1133,7 @@ HDFS Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-10 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 HDFS NameNode hostname to use to connect to the HDFS source.
 Example: 172.23.0.208
@@ -1176,7 +1177,7 @@ Enum: ICEBERG, PARQUET
 Example: ICEBERG
 * * *
 isPartitionInferenceEnabled Body Boolean Optional
-To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table#partition-column-inference).
+To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, see [Partition Column Inference](/developer/data-formats/table).
 Example: false
 * * *
 impersonationUserDelegationMode Body String Optional
@@ -1191,7 +1192,7 @@ Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "dfs.c
 vdsAccessDelegationEnabled Body Boolean Optional
 To use the view owner as the impersonated username when enableImpersonation is enabled, set to `true` (default). To use the user who submits the query as the impersonated username, set to `false`.
 Example: true
-## Hive 2[​](/reference/api/catalog/source/container-source-config#hive-2 "Direct link to Hive 2")
+## Hive 2​
   * Dremio source type: `HIVE`
   * See [Hive](/data-sources/lakehouse-catalogs/hive) for additional information.
 
@@ -1230,7 +1231,7 @@ Hive 2 Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-11 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 IP address for the Hive metastore host.
 Example: 172.23.0.208
@@ -1297,7 +1298,7 @@ Example: AS_IS
 vdsAccessDelegationEnabled Body Boolean Optional
 To use the view owner as the impersonated username when enableImpersonation is enabled, set to `true` (default). To use the user who submits the query as the impersonated username, set to `false`.
 Example: true
-## Hive 3[​](/reference/api/catalog/source/container-source-config#hive-3 "Direct link to Hive 3")
+## Hive 3​
   * Dremio source type: `HIVE3`
   * See [Hive](/data-sources/lakehouse-catalogs/hive) for additional information.
 
@@ -1336,7 +1337,7 @@ Hive 3 Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-12 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 IP address for the Hive metastore host.
 Example: 172.23.0.177
@@ -1403,7 +1404,7 @@ Example: AS_IS
 vdsAccessDelegationEnabled Body Boolean Optional
 To use the view owner as the impersonated username when enableImpersonation is enabled, set to `true` (default). To use the user who submits the query as the impersonated username, set to `false`.
 Example: true
-## IBM Db2[​](/reference/api/catalog/source/container-source-config#ibm-db2 "Direct link to IBM Db2")
+## IBM Db2​
   * Dremio source type: `DB2`
   * See [IBM Db2](/data-sources/databases/ibm-db2) for additional information.
 
@@ -1432,7 +1433,7 @@ IBM Db2 Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-13 "Direct link to Parameters")
+### Parameters​
 database Body String
 IBM Db2 database for Dremio to use.
 Example: tpch
@@ -1472,7 +1473,7 @@ Example: 0
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "deferPrepares","value": "true"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-## Iceberg REST Catalog[​](/reference/api/catalog/source/container-source-config#iceberg-rest-catalog "Direct link to Iceberg REST Catalog")
+## Iceberg REST Catalog​
   * Dremio source type: `RESTCATALOG`
   * See [Iceberg REST Catalog](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) for additional information on all supported catalogs from this connector, including Apache Polaris OSS, Nessie with Iceberg REST, AWS Glue Iceberg REST, S3 Tables, Confluent Tableflow, and [Microsoft OneLake](/data-sources/lakehouse-catalogs/onelake).
 
@@ -1524,14 +1525,14 @@ Iceberg REST Catalog Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-14 "Direct link to Parameters")
+### Parameters​
 propertyList Body Array of Object Optional
-Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property. For a complete list of the catalog properties required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/iceberg-rest-catalog#advanced-options) on the Iceberg REST Catalog page.
-The parameters needed will vary by the catalog to which you are connecting. The example above captures how to connect to a Polaris catalog using S3 storage and credentials. Examples of supported configurations can be found at [Supported Configurations](/data-sources/lakehouse-catalogs/iceberg-rest-catalog#supported-configurations).
+Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property. For a complete list of the catalog properties required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) on the Iceberg REST Catalog page.
+The parameters needed will vary by the catalog to which you are connecting. The example above captures how to connect to a Polaris catalog using S3 storage and credentials. Examples of supported configurations can be found at [Supported Configurations](/data-sources/lakehouse-catalogs/iceberg-rest-catalog).
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.s3a.aws.credentials.provider","value": "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 secretPropertyList Body Array of Object Optional
-Additional connection properties for the source. The values are kept masked in the Credentials section of the Advanced Options page of the Source Settings dialog in the Dremio console. Each object includes the name of the property and the corresponding value to use and to keep secret. To keep the secret secure, Dremio returns the secretPropertyList value as `$DREMIO_EXISTING_VALUE$` in API responses. For a complete list of the catalog credentials required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/iceberg-rest-catalog#advanced-options) on the Iceberg REST Catalog page.
+Additional connection properties for the source. The values are kept masked in the Credentials section of the Advanced Options page of the Source Settings dialog in the Dremio console. Each object includes the name of the property and the corresponding value to use and to keep secret. To keep the secret secure, Dremio returns the secretPropertyList value as `$DREMIO_EXISTING_VALUE$` in API responses. For a complete list of the catalog credentials required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/iceberg-rest-catalog) on the Iceberg REST Catalog page.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.s3a.access.key","value": "$DREMIO_EXISTING_VALUE$"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 enableAsync Body Boolean Optional
@@ -1561,7 +1562,7 @@ Example: ["sales","finance"]
 isRecursiveAllowedNamespaces Body Boolean Optional
 If allowedNamespaces include their whole subtrees, set to `true` (default). Otherwise, set to `false`.
 Example: true
-## Microsoft Azure Data Explorer[​](/reference/api/catalog/source/container-source-config#microsoft-azure-data-explorer "Direct link to Microsoft Azure Data Explorer")
+## Microsoft Azure Data Explorer​
   * Dremio source type: `ADX`
   * See [Azure Data Explorer](/data-sources/databases/azure-data-explorer) for additional information.
 
@@ -1584,7 +1585,7 @@ Microsoft Azure Data Explorer Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-15 "Direct link to Parameters")
+### Parameters​
 clusterUri Body String
 URI for the Microsoft Entra ID tenant used by Dremio.
 Example: 
@@ -1631,7 +1632,7 @@ Example: 60
 queryTimeoutSec Body Integer Optional
 Maximum time to allow for query execution, in seconds. When the query timeout expires, the connection returns to an idle state. Default is `0`.
 Example: 0
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-4 "Direct link to Authentication Examples")
+### Authentication Examples​
 Microsoft Entra ID Application
 
 ```
@@ -1654,7 +1655,7 @@ Azure Managed Identity
 
 ```
 
-## Microsoft Azure Synapse Analytics[​](/reference/api/catalog/source/container-source-config#microsoft-azure-synapse-analytics "Direct link to Microsoft Azure Synapse Analytics")
+## Microsoft Azure Synapse Analytics​
   * Dremio source type: `SYNAPSE`
   * See [Microsoft Azure Synapse Analytics](/data-sources/databases/azure-synapse-analytics) for additional information.
 
@@ -1686,7 +1687,7 @@ Microsoft Azure Synapse Analytics Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-16 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 Microsoft Azure Synapse Analytics hostname.
 Example: synapsedata.sql.azuresynapse.net
@@ -1764,7 +1765,7 @@ Example: dedicatedpool
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "applicationIntent","value": "ReadWrite"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-5 "Direct link to Authentication Examples")
+### Authentication Examples​
 No authentication required
 
 ```
@@ -1795,7 +1796,7 @@ Azure Managed Identity
 
 ```
 
-## Microsoft SQL Server[​](/reference/api/catalog/source/container-source-config#microsoft-sql-server "Direct link to Microsoft SQL Server")
+## Microsoft SQL Server​
   * Dremio source type: `MSSQL`
   * See [Microsoft SQL Server](/data-sources/databases/sql-server) for additional information.
 
@@ -1827,7 +1828,7 @@ Microsoft SQL Server Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-17 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 Microsoft SQL Server hostname.
 Example: 172.25.0.10
@@ -1905,7 +1906,7 @@ Example: false
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "applicationIntent","value": "ReadWrite"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-6 "Direct link to Authentication Examples")
+### Authentication Examples​
 No authentication required
 
 ```
@@ -1936,9 +1937,9 @@ Azure Managed Identity
 
 ```
 
-## MongoDB[​](/reference/api/catalog/source/container-source-config#mongodb "Direct link to MongoDB")
+## MongoDB​
   * Dremio source type: `MONGO`
-  * See [MongoDB](/data-sources/databases/mongo) for additional information.
+  * See MongoDB for additional information.
 
 MongoDB Source config Object
 
@@ -1971,8 +1972,8 @@ MongoDB Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-18 "Direct link to Parameters")
-[hostList](/reference/api/catalog/source/container-source-config#parameters-of-objects-in-the-hostlist-array-1) Body Array of Object
+### Parameters​
+hostList Body Array of Object
 Information about MongoDB hosts. Each object in the hostList includes the hostname and the corresponding port for the host.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"hostname": "172.23.0.208","port": 27017{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
@@ -2025,7 +2026,7 @@ Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "maxPo
 useCaseInsensitiveFieldNames Body Boolean Optional
 To treat field names as case-insensitive, set to `true`. Otherwise, set to `false` (default). If set to `true`, Dremio records all known variations of a field name when learning the schema and uses them when pushing an operation down to MongoDB.
 Example: false
-#### Parameters of Objects in the `hostList` Array[​](/reference/api/catalog/source/container-source-config#parameters-of-objects-in-the-hostlist-array-1 "Direct link to parameters-of-objects-in-the-hostlist-array-1")
+#### Parameters of Objects in the `hostList` Array​
 hostname Body String
 Name of the host to use to connect to the MongoDB source. If MongoDB is sharded, use the mongos host. Otherwise, use the mongod host.
 Example: 172.23.0.208
@@ -2033,7 +2034,7 @@ Example: 172.23.0.208
 port Body Integer
 Port to use with the specified hostname to connect to the MongoDB source. Default is `27017`.
 Example: 27017
-## MySQL[​](/reference/api/catalog/source/container-source-config#mysql "Direct link to MySQL")
+## MySQL​
   * Dremio source type: `MYSQL`
   * See [MySQL](/data-sources/databases/mysql) for additional information.
 
@@ -2063,7 +2064,7 @@ MySQL Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-19 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 Name of the host to use to connect to the mySQL source.
 Example: rdbms-linux-20221031.c.dremio-4321.internal
@@ -2108,7 +2109,7 @@ Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "DataS
 queryTimeoutSec Body Integer Optional
 Maximum time to allow for query execution, in seconds. When the query timeout expires, the connection returns to an idle state. Default is `0`.
 Example: 0
-#### Parameters of Objects in the `propertyList` Array[​](/reference/api/catalog/source/container-source-config#parameters-of-objects-in-the-propertylist-array "Direct link to parameters-of-objects-in-the-propertylist-array")
+#### Parameters of Objects in the `propertyList` Array​
 name Body String Optional
 Name of the connection property.
 Example: DataSource
@@ -2116,7 +2117,7 @@ Example: DataSource
 value Body String Optional
 Value for the connection property.
 Example: sales2021
-## Nessie[​](/reference/api/catalog/source/container-source-config#nessie "Direct link to Nessie")
+## Nessie​
   * Dremio source type: `NESSIE`
   * See [Nessie](/data-sources/lakehouse-catalogs/nessie) for additional information.
 
@@ -2147,7 +2148,7 @@ Nessie Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-20 "Direct link to Parameters")
+### Parameters​
 nessieEndpoint Body String
 IP address and port that you have set up for your Nessie server.
 Example: 
@@ -2268,7 +2269,7 @@ Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.s3
 secure Body Boolean Optional
 If set to enable a secure connection with SSL encryption between the Amazon S3 bucket and Dremio, the value is `true` (default). Otherwise, the value is `false`.
 Example: true
-## Network-attached Storage (NAS)[​](/reference/api/catalog/source/container-source-config#network-attached-storage-nas "Direct link to Network-attached Storage \(NAS\)")
+## Network-attached Storage (NAS)​")
   * Dremio source type: `NAS`
   * See [NAS](/data-sources/object/nas) for additional information.
 
@@ -2285,7 +2286,7 @@ NAS Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-21 "Direct link to Parameters")
+### Parameters​
 path Body String
 Path on the filesystem to use as the root for the source. The path must be accessible on all nodes.
 Example: /home/dremio/
@@ -2296,9 +2297,9 @@ Enum: ICEBERG, PARQUET
 Example: ICEBERG
 * * *
 isPartitionInferenceEnabled Body Boolean Optional
-To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, read [Partition Column Inference](/developer/data-formats/table#partition-column-inference).
+To enable partition column inference, set to `true`. Otherwise, set to `false` (default). For more information, read [Partition Column Inference](/developer/data-formats/table).
 Example: false
-## Oracle[​](/reference/api/catalog/source/container-source-config#oracle "Direct link to Oracle")
+## Oracle​
   * Dremio source type: `ORACLE`
   * See [Oracle](/data-sources/databases/oracle) for additional information.
 
@@ -2335,7 +2336,7 @@ Oracle Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-22 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 Oracle hostname.
 Example: 172.25.0.10
@@ -2413,7 +2414,7 @@ Example: 0
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "connect_timeout","value": "0"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-7 "Direct link to Authentication Examples")
+### Authentication Examples​
 No authentication required
 
 ```
@@ -2457,7 +2458,7 @@ Using Kerberos
 
 ```
 
-## PostgreSQL[​](/reference/api/catalog/source/container-source-config#postgresql "Direct link to PostgreSQL")
+## PostgreSQL​
   * Dremio source type: `POSTGRES`
   * See [PostgreSQL](/data-sources/databases/postgres) for additional information.
 
@@ -2489,7 +2490,7 @@ PostgreSQL Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-23 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 PostgreSQL hostname.
 Example: 172.25.0.10
@@ -2554,7 +2555,7 @@ Example: 0
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "connect_timeout","value": "10&application_name=myapp"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-8 "Direct link to Authentication Examples")
+### Authentication Examples​
 No authentication required
 
 ```
@@ -2575,7 +2576,7 @@ Master credentials
 
 ```
 
-## SAP HANA[​](/reference/api/catalog/source/container-source-config#sap-hana "Direct link to SAP HANA")
+## SAP HANA​
   * Dremio source type: `SAPHANA`
   * See [Configuring SAP HANA as a Source](/data-sources/databases/sap-hana) for additional information.
 
@@ -2597,7 +2598,7 @@ SAP HANA Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-24 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 The SAP HANA hostname. This can be a fully qualified domain name or an IP address.
 Example: sap://hanaserver1.company.com
@@ -2638,7 +2639,7 @@ propertyList Body Array of Object Optional
 Connection properties for the source. Each object in propertyList includes the name of the property and the corresponding value to use for the property. For SAP HANA, see the list of supported 
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "connectTimeout","value": "0"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-## Snowflake[​](/reference/api/catalog/source/container-source-config#snowflake "Direct link to Snowflake")
+## Snowflake​
   * Dremio source type: `SNOWFLAKE`
   * See [Snowflake](/data-sources/databases/snowflake) for additional information.
 
@@ -2669,7 +2670,7 @@ Snowflake Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-25 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 The Snowflake host name.
 Example: 
@@ -2731,7 +2732,7 @@ Example: data:,!3RoX$=w72G=e%G64p#ozm
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "loginTimeout","value": "60"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-9 "Direct link to Authentication Examples")
+### Authentication Examples​
 Login-password authentication
 
 ```
@@ -2755,7 +2756,7 @@ Key-pair authentication
 
 ```
 
-## Snowflake Open Catalog[​](/reference/api/catalog/source/container-source-config#snowflake-open-catalog "Direct link to Snowflake Open Catalog")
+## Snowflake Open Catalog​
   * Dremio source type: `SNOWFLAKEOPENCATALOG`
   * See [Snowflake Open Catalog](/data-sources/lakehouse-catalogs/snowflake-open) for additional information.
 
@@ -2799,13 +2800,13 @@ Snowflake Open Catalog Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-26 "Direct link to Parameters")
+### Parameters​
 propertyList Body Array of Object Optional
-Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property. For a complete list of the catalog properties required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/snowflake-open#advanced-options) on the Snowflake Open Catalog page.
+Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property. For a complete list of the catalog properties required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/snowflake-open) on the Snowflake Open Catalog page.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.s3a.aws.credentials.provider","value": "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 secretPropertyList Body Array of Object Optional
-Additional connection properties for the source. The values are kept masked in the Credentials section of the Advanced Options page of the Source Settings dialog in the Dremio console. Each object includes the name of the property and the corresponding value to use and to keep secret. To keep the secret secure, Dremio returns the secretPropertyList value as `$DREMIO_EXISTING_VALUE$` in API responses. For a complete list of the catalog credentials required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/snowflake-open#advanced-options) on the Snowflake Open Catalog page.
+Additional connection properties for the source. The values are kept masked in the Credentials section of the Advanced Options page of the Source Settings dialog in the Dremio console. Each object includes the name of the property and the corresponding value to use and to keep secret. To keep the secret secure, Dremio returns the secretPropertyList value as `$DREMIO_EXISTING_VALUE$` in API responses. For a complete list of the catalog credentials required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/snowflake-open) on the Snowflake Open Catalog page.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.s3a.access.key","value": "$DREMIO_EXISTING_VALUE$"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 enableAsync Body Boolean Optional
@@ -2851,7 +2852,7 @@ Plaintext snowflakeOpenCatalogClientSecret values must be prefixed with `data:,`
 snowflakeOpenCatalogScope Body String Optional
 The OAuth 2.0 scope limit specifying the principal role that is allowed access to the Snowflake Open Catalog.
 Example: PRINCIPAL_ROLE:ALL
-## Teradata[​](/reference/api/catalog/source/container-source-config#teradata "Direct link to Teradata")
+## Teradata​
   * Dremio source type: `TERADATA`
   * See [Teradata](/data-sources/databases/teradata) for additional information.
 
@@ -2882,7 +2883,7 @@ Teradata Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-27 "Direct link to Parameters")
+### Parameters​
 hostname Body String
 Teradata hostname.
 Example: teradata.drem.io
@@ -2930,7 +2931,7 @@ Example: 0
 propertyList Body Array of Object Optional
 Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "maxPoolSize","value": "10"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-## Unity Catalog[​](/reference/api/catalog/source/container-source-config#unity-catalog "Direct link to Unity Catalog")
+## Unity Catalog​
   * Dremio source type: `UNITY`
   * See [Unity Catalog](/data-sources/lakehouse-catalogs/unity) for additional information.
 
@@ -2975,13 +2976,13 @@ Unity Catalog config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-28 "Direct link to Parameters")
+### Parameters​
 propertyList Body Array of Object Optional
-Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property. For a complete list of the catalog properties required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/unity#advanced-options) on the Unity Catalog page.
+Connection properties for the source. Each object in the propertyList includes the name of the property and the corresponding value to use for the property. For a complete list of the catalog properties required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/unity) on the Unity Catalog page.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.s3a.aws.credentials.provider","org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 secretPropertyList Body Array of Object Optional
-Additional connection properties for the source. The values are kept masked in the Credentials section of the Advanced Options page of the Source Settings dialog in the Dremio console. Each object includes the name of the property and the corresponding value to use and to keep secret. To keep the secret secure, Dremio returns the secretPropertyList value as `$DREMIO_EXISTING_VALUE$` in API responses. For a complete list of the catalog credentials required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/unity#advanced-options) on the Unity Catalog page.
+Additional connection properties for the source. The values are kept masked in the Credentials section of the Advanced Options page of the Source Settings dialog in the Dremio console. Each object includes the name of the property and the corresponding value to use and to keep secret. To keep the secret secure, Dremio returns the secretPropertyList value as `$DREMIO_EXISTING_VALUE$` in API responses. For a complete list of the catalog credentials required for storage authentication, see [Advanced Options](/data-sources/lakehouse-catalogs/unity) on the Unity Catalog page.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "fs.azure.account.key","value": "70SPup32UsIZaA6c2n6bf3rQONTD6Zn6OqvcUhBy"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
 enableAsync Body Boolean Optional
@@ -3044,7 +3045,7 @@ Type of authentication to allow Dremio to connect to the Microsoft SQL Server so
 unityCatalog Body String
 Name of the Unity Catalog.
 Example: unity_catalog
-### Authentication Examples[​](/reference/api/catalog/source/container-source-config#authentication-examples-10 "Direct link to Authentication Examples")
+### Authentication Examples​
 Master credentials 
 
 ```
@@ -3067,7 +3068,7 @@ Microsoft Entra ID Application
 
 ```
 
-## Vertica[​](/reference/api/catalog/source/container-source-config#vertica "Direct link to Vertica")
+## Vertica​
   * Dremio source type: `VERTICA`
   * See [Vertica](/data-sources/databases/vertica) for additional information.
 
@@ -3096,7 +3097,7 @@ Vertica Source config Object
 
 ```
 
-### Parameters[​](/reference/api/catalog/source/container-source-config#parameters-29 "Direct link to Parameters")
+### Parameters​
 database Body String
 Default Vertica database for Dremio to use.
 Example: vertica
@@ -3138,13 +3139,13 @@ Connection properties for the source. Each object in the propertyList includes t
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "LoginTimeout","value": "30&application_name=myapp"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 Was this page helpful?
 [Previous Source](/reference/api/catalog/source)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Source](/reference/api/catalog/source)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fcatalog%2Fsource%2Fcontainer-source-config%2F&_biz_t=1777950558250&_biz_i=Source%20Configuration%20%7C%20Dremio%20Documentation&_biz_n=462&rnd=523327&cdn_o=a&_biz_z=1777950558250)
+!

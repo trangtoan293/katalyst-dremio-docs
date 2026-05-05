@@ -1,5 +1,6 @@
 ---
 url: /help-support/advanced-topics/gandiva
+slug: /help-support/advanced-topics/gandiva
 title: "Gandiva-based Execution | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64222.680347583
@@ -21,7 +22,7 @@ By compiling expressions to native code rather than interpreting them, Gandiva:
 
 
 Many Gandiva functions are pre-compiled into LLVM IR (intermediate representation) to minimize per-query compilation overhead.
-## Supported Functions[​](/help-support/advanced-topics/gandiva/#supported-functions "Direct link to Supported Functions")
+## Supported Functions[​](/help-support/advanced-topics/gandiva/)
 If you use a combination of supported and non-supported functions, the code generation uses both Java and Gandiva splits.  
 | Function Type  | Supported Functions  |  
 | --- | --- |  
@@ -38,13 +39,13 @@ Relational: &lt;, &gt;, &lt;=, &gt;=, ==  |
 | Conversion  | base64, binary, binary_string, bit_length, castbigint, castdate, castfloat4, castfloat8, casttime, castvarchar, convert_from, from_hex, hex, to_hex, unbase64, unhex  |  
 Was this page helpful?
 [Previous Dremio Preferences](/help-support/advanced-topics/dremio-preferences)[Next Hash Aggregation Spilling](/help-support/advanced-topics/hash-agg-spilling)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Dremio Preferences](/help-support/advanced-topics/dremio-preferences)[Next Hash Aggregation Spilling](/help-support/advanced-topics/hash-agg-spilling)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fhelp-support%2Fadvanced-topics%2Fgandiva%2F&_biz_t=1777950542573&_biz_i=Gandiva-based%20Execution%20%7C%20Dremio%20Documentation&_biz_n=425&rnd=203540&cdn_o=a&_biz_z=1777950542574)
+!

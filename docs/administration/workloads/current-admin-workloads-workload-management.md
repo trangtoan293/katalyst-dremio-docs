@@ -1,5 +1,6 @@
 ---
 url: /admin/workloads/workload-management
+slug: /admin/workloads/workload-management
 title: "Workload Management | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64026.025198333
@@ -22,10 +23,10 @@ This capability is particularly important in Dremio clusters that are deployed i
   * Predictable and efficient utilization of cluster resources.
 
 
-### Homogeneous Environment[​](/admin/workloads/workload-management/#homogeneous-environment "Direct link to Homogeneous Environment")
+### Homogeneous Environment[​](/admin/workloads/workload-management/)
 Workload management works optimally in a homogeneous environment in terms of memory. That is, when each node in the Dremio cluster has the same amount of memory.
 If you have a heterogeneous environment (nodes in a Dremio cluster have different amounts of memory), you should plan for the lowest common denominator (lowest amount of memory associated with a node).
-## How Workload Management Works[​](/admin/workloads/workload-management/#how-workload-management-works "Direct link to How Workload Management Works")
+## How Workload Management Works[​](/admin/workloads/workload-management/)
 To access WLM, click the Settings (gear) icon near the bottom of the side navigation bar, and then click **Queues**.
 You set up WLM by:
   1. Creating queues with different criteria depending on how you want to manage your jobs.
@@ -36,15 +37,15 @@ You set up WLM by:
 
 The following diagram shows a basic WLM flow when a job query is submitted where Rule1 assigns job queries to Queue1, Rule2 to Queue2, Rule3 to Queue3, and so on. Rule4 indicates that any specified rule and/or all other queries can be rejected.
 _The rule conditions that a job query matches determines the queue to which the job query is sent._
-![](https://docs.dremio.com/assets/images/wlm-flow-21b62373088be9e75494e9d667c2d260.png)
-## Queues[​](/admin/workloads/workload-management/#queues "Direct link to Queues")
+!
+## Queues[​](/admin/workloads/workload-management/)
 Dremio allows you to define job queues, to which queries can be assigned, based on defined rules. You can also add new queues, edit existing queues, or remove queues.
   * If you add a new queue, you can customize the queue with the following configuration options.
   * If you edit an existing queue, all of the options are available for modification as when you add a new queue.
   * If you delete a queue, Dremio prompts you to confirm your choice before deleting the queue.
 
 
-### Default Queues[​](/admin/workloads/workload-management/#default-queues "Direct link to Default Queues")
+### Default Queues[​](/admin/workloads/workload-management/)
 Dremio provides the following generic queues as a starting point for customization:  
 | Rule Name  | Description  |  
 | --- | --- |  
@@ -58,12 +59,12 @@ Concurrency limit: 5  |
 Concurrency limit: 25  |  
 | High Cost Reflections  | CPU priority: Low   
 Concurrency limit: 1  |  
-### Queue and Job Limits[​](/admin/workloads/workload-management/#queue-and-job-limits "Direct link to Queue and Job Limits")
+### Queue and Job Limits[​](/admin/workloads/workload-management/)
 If you set up concurrency limits, ensure that you allocated job limits accordingly. For example, if you allow multiple concurrent jobs and if the total limit for each job is higher than the queue limit, then a job may fail if memory is consumed by other concurrent jobs.
-## Rules[​](/admin/workloads/workload-management/#rules "Direct link to Rules")
+## Rules[​](/admin/workloads/workload-management/)
 Rules allow you to specify conditions that WLM uses to either assign a query to a queue or reject a query. Rules are applied in order, the first rule that a query matches determines the action taken.
 You can create custom rules, use the provided rule templates, or modify the provided rule templates.
-### Rule Configuration Options[​](/admin/workloads/workload-management/#rule-configuration-options "Direct link to Rule Configuration Options")  
+### Rule Configuration Options[​](/admin/workloads/workload-management/)  
 | Category  | Option  | Description  |  
 | --- | --- | --- |  
 | Overview  | Name  | Name of the job queue.  |  
@@ -91,10 +92,10 @@ Disabled by default.  |
 | Routing Tags  | Tag Name  | A JDBC connection parameter can be used to set a tag for rule processing. When the JDBC connection property `ROUTING_TAG = <Tag Name>` is set, the specified tag value is associated with all queries executed within that connection's session. Rules can check for the presence of a tag with the function tag().  
   
 Routing tags are distinct from the tags used for version control in the API and the tags you can add to datasets as labels that allow sorting.  |  
-## Rule Examples[​](/admin/workloads/workload-management/#rule-examples "Direct link to Rule Examples")
+## Rule Examples[​](/admin/workloads/workload-management/)
 You can use Dremio SQL syntax to specify rules to target particular jobs.
 The following are the types of rules that can be created along with examples.
-### User[​](/admin/workloads/workload-management/#user "Direct link to User")
+### User[​](/admin/workloads/workload-management/)
 Create a rule that identifies the user that triggers the job.
 Create rule that identifies user
 
@@ -103,7 +104,7 @@ USER in ('JRyan','PDirk','CPhillips')
 
 ```
 
-### Group Membership[​](/admin/workloads/workload-management/#group-membership "Direct link to Group Membership")
+### Group Membership[​](/admin/workloads/workload-management/)
 Create a rule that identifies if the user that triggers the job is part of a particular group.
 Create rule that identifies whether user belongs to a specified group
 
@@ -112,7 +113,7 @@ is_member('MarketingOps') OR is_member('Engineering')
 
 ```
 
-### Query Label[​](/admin/workloads/workload-management/#query-label "Direct link to Query Label")
+### Query Label[​](/admin/workloads/workload-management/)
 Create a rule that routes queries to specific queues if they are running the `COPY INTO `table`` or `OPTIMIZE` SQL command. The allowed values are `COPY` for queries that run the `COPY INTO `table`` SQL command and `OPTIMIZATION` for queries that run the `OPTIMIZE` SQL command.
 Create a rule for the `COPY INTO` SQL command
 
@@ -128,8 +129,8 @@ query_label() IN ('OPTIMIZATION')
 
 ```
 
-Here is an example of a rule in the New Rule dialog: ![](https://docs.dremio.com/assets/images/query-label-example-rule-ee3b781488dc47ad465f0955bbc1069f.png)
-### Query Attributes[​](/admin/workloads/workload-management/#query-attributes "Direct link to Query Attributes")
+Here is an example of a rule in the New Rule dialog: !
+### Query Attributes[​](/admin/workloads/workload-management/)
 Query attributes enable routing rules that direct queries to specific engines based on their characteristics.
 Dremio supports the following query attributes:  
 | Query Attribute  | Description  |  
@@ -158,7 +159,7 @@ query_has_attribute('DREMIO_MCP') AND query_has_attribute('AI_FUNCTIONS')
 
 ```
 
-### Query Type[​](/admin/workloads/workload-management/#query-type "Direct link to Query Type")
+### Query Type[​](/admin/workloads/workload-management/)
 Create a rule depending on the type of query. The types of queries can be identified by the following categories:  
 | Query Type  | Description  |  
 | --- | --- |  
@@ -180,7 +181,7 @@ query_type() IN ('Flight', 'UI Run')
 
 ```
 
-### Query Plan Cost[​](/admin/workloads/workload-management/#query-plan-cost "Direct link to Query Plan Cost")
+### Query Plan Cost[​](/admin/workloads/workload-management/)
 To find the cost of a query, navigate to: **Job Profile** &gt; **Raw Profile** &gt; **Resource Allocation** &gt; **Query Cost**
 Create rule that routes jobs based on query cost
 
@@ -189,7 +190,7 @@ query_cost() > 1000000
 
 ```
 
-### Tag[​](/admin/workloads/workload-management/#tag "Direct link to Tag")
+### Tag[​](/admin/workloads/workload-management/)
 Create a rule that routes jobs based on a routing tag.
 Create rule that routes jobs based on routing tag
 
@@ -198,7 +199,7 @@ tag() = 'ProductionDashboardQueue'
 
 ```
 
-### Date and Time[​](/admin/workloads/workload-management/#date-and-time "Direct link to Date and Time")
+### Date and Time[​](/admin/workloads/workload-management/)
 Create a rule that routes a job based on the time it was triggered. Use Dremio SQL Functions.
 Create rule that routes jobs based on time triggered
 
@@ -208,7 +209,7 @@ BETWEEN 9 AND 18
 
 ```
 
-### Combined Conditions[​](/admin/workloads/workload-management/#combined-conditions "Direct link to Combined Conditions")
+### Combined Conditions[​](/admin/workloads/workload-management/)
 Create rules based on multiple conditions.
 The following example routes a job depending on user, group membership, query type, query cost, tag, and the time of day that it was triggered.
 Create rule based on user, group, job type, query cost, tag, and time triggered
@@ -226,7 +227,7 @@ AND EXTRACT(HOUR FROM CURRENT_TIME)
 
 ```
 
-### Default Rules[​](/admin/workloads/workload-management/#default-rules "Direct link to Default Rules")
+### Default Rules[​](/admin/workloads/workload-management/)
 Dremio provides the following generic rules as a starting point for customization.  
 | Order  | Rule Name  | Available Query Types  | Rule  | Queue Name  |  
 | --- | --- | --- | --- | --- |  
@@ -237,59 +238,59 @@ Dremio provides the following generic rules as a starting point for customizatio
 | 5  | High Cost Reflections  | Reflections  | `query_type() = 'Reflections' AND query_cost() >= 30000000`  | High Cost Reflections  |  
 | 6  | All Other Queries  |   |   | Reject  |  
 The default setup covers all query types. When setting your own custom rules, ensure that all query types are taken into account. Otherwise, you may experience unexpected behavior when using Dremio.
-## Viewing All Rules[​](/admin/workloads/workload-management/#viewing-all-rules "Direct link to Viewing All Rules")
+## Viewing All Rules[​](/admin/workloads/workload-management/)
 To view all rules:
   1. Click the Settings (gear) icon from the side navigation bar.
   2. Click **Engine Routing** from the sidebar menu to see the list of engine routing rules.
 
 
-## Adding a Rule[​](/admin/workloads/workload-management/#adding-a-rule "Direct link to Adding a Rule")
+## Adding a Rule[​](/admin/workloads/workload-management/)
 To add a rule:
   1. On the Engine Routing page, click **+ Add Rule** in the top left.
   2. In the **New Rule** dialog, for **Rule Name** , enter a name.
-  3. For **Conditions** , enter the routing condition. See [Rules](/admin/workloads/workload-management/#rules) for supported conditions.
+  3. For **Conditions** , enter the routing condition. See [Rules](/admin/workloads/workload-management/) for supported conditions.
   4. For **Action** , complete one of the following options:
 a. If you want to route the jobs that meet the conditions to a particular queue, select the **Route to queue** option. Then use the queue selector to choose the queue.
 b. If you want to reject the jobs that meet the conditions, select the **Reject** option.
   5. Click **Add**.
 
 
-## Editing a Rule[​](/admin/workloads/workload-management/#editing-a-rule "Direct link to Editing a Rule")
+## Editing a Rule[​](/admin/workloads/workload-management/)
 To edit a rule:
   1. On the Engine Routing page, click the Edit Rule (pencil) icon that appears next to the rule.
   2. In the **Edit Rule** dialog, for **Rule Name** , enter a name.
-  3. For **Conditions** , enter the routing condition. See [Rules](/admin/workloads/workload-management/#rules) for supported conditions.
+  3. For **Conditions** , enter the routing condition. See [Rules](/admin/workloads/workload-management/) for supported conditions.
   4. For **Action** , complete one of the following options:
 a. If you want to route the jobs that meet the conditions to a particular queue, select the **Route to queue** option. Then use the queue selector to choose the queue.
 b. If you want to reject the jobs that meet the conditions, select the **Reject** option.
   5. Click **Save**.
 
 
-## Deleting a Rule[​](/admin/workloads/workload-management/#deleting-a-rule "Direct link to Deleting a Rule")
+## Deleting a Rule[​](/admin/workloads/workload-management/)
 To delete a rule:
   1. On the Engine Routing page, click the Delete Rule (trash) icon that appears next to the rule.
 You must have at least one rule to route queries to a particular queue.
   2. In the **Delete Rule** dialog, click **Delete** to confirm.
 
 
-## Per Session Configuration[​](/admin/workloads/workload-management/#per-session-configuration "Direct link to Per Session Configuration")
+## Per Session Configuration[​](/admin/workloads/workload-management/)
 JDBC and ODBC sessions are held open. This means you can set the session properties once, and they will remain in effect for the lifetime of the session. In contrast, the SQL Runner in the Dremio console does not maintain an open session, so you will need to reset the session properties after you run a query or execute a preview. This behavior applies to all session properties defined in SQL with the `SET` keyword.
-### SET QUEUE[​](/admin/workloads/workload-management/#set-queue "Direct link to SET QUEUE")
+### SET QUEUE[​](/admin/workloads/workload-management/)
 The [`SET QUEUE`](/reference/sql/commands/set-queue) SQL command is used to specify the queue to direct subsequent queries in the current session. When using `SET QUEUE`, WLM rules and direct routing connection properties are bypassed, and queries are routed directly to the specified queue. The [`RESET QUEUE`](/reference/sql/commands/reset-queue) command clears the session-level queue override, reverting query routing to follow the Workload Management (WLM) rules or any direct routing connection property if set.
 This is the Dremio Software equivalent of `SET ENGINE` from Dremio Cloud. `SET ENGINE` is not supported in Dremio Software.
-### SET TAG[​](/admin/workloads/workload-management/#set-tag "Direct link to SET TAG")
+### SET TAG[​](/admin/workloads/workload-management/)
 The [`SET TAG`](/reference/sql/commands/set-tag) SQL command is used to specify routing tag for subsequent queries in the current session. If a `ROUTING_TAG` connection property is already set for the session, `SET TAG` will override it. When setting routing tag using `SET TAG`, make sure you have a previously defined WLM routing rule that routes queries based on that routing tag. The [`RESET TAG`](/reference/sql/commands/reset-tag) command clears the session-level routing tag override, reverting query routing to follow the WLM rules or any direct routing connection property if set.
-## Direct Routing[​](/admin/workloads/workload-management/#direct-routing "Direct link to Direct Routing")
+## Direct Routing[​](/admin/workloads/workload-management/)
 Direct routing is used to specify the queue to direct queries to for a given ODBC or JDBC session. With direct routing, WLM rules are not considered, and instead, queries are routed directly to the specified queue on a per-session basis.
 To use direct routing, add the connection property `ROUTING_QUEUE = <WLM Queue Name>` to the ODBC or JDBC session parameters when connecting to Dremio. When set, all queries for the session are automatically routed to the specified WLM queue and the engine selected for that queue.
 To disable tag routing, set the Dremio support key `dremio.wlm.direct_routing` to false. Direct routing is enabled by default.
 You can use an SQL command to route jobs for refreshing Reflections directly to specified queues. See [Reflections](/reference/sql/commands/acceleration) in the SQL reference.
-## Connection Tagging and Direct Routing Configuration[​](/admin/workloads/workload-management/#connection-tagging-and-direct-routing-configuration "Direct link to Connection Tagging and Direct Routing Configuration")
+## Connection Tagging and Direct Routing Configuration[​](/admin/workloads/workload-management/)
 Routing tags are configured by setting the `ROUTING_TAG = <Tag Name>` parameter for a given connection to the desired tag name.
 Similarly, direct routing is configured by setting the `ROUTING_QUEUE = <Queue Name>` parameter for a given connection to the desired WLM queue.
-### JDBC Session Configuration[​](/admin/workloads/workload-management/#jdbc-session-configuration "Direct link to JDBC Session Configuration")
+### JDBC Session Configuration[​](/admin/workloads/workload-management/)
 To configure JDBC sessions add the `ROUTING_TAG` or `ROUTING_QUEUE` parameter to the JDBC connection URL. For example: `jdbc:arrow-flight-sql://localhost:32010?ROUTING_TAG=TagA` or `jdbc:arrow-flight-sql://localhost:32010?ROUTING_QUEUE=PreviewQueue`
-### ODBC Session Configuration[​](/admin/workloads/workload-management/#odbc-session-configuration "Direct link to ODBC Session Configuration")
+### ODBC Session Configuration[​](/admin/workloads/workload-management/)
 Configure ODBC sessions as follows:
 _Windows Sessions_
 Add the `ROUTING_TAG` or `ROUTING_QUEUE` parameter to the `AdvancedProperties` parameter in the ODBC DSN field.
@@ -298,11 +299,11 @@ _Mac OS Sessions_
   2. Add the `ROUTING_TAG` or `ROUTING_QUEUE` parameter to the `AdvancedProperties` parameter in the user's DSN located at `~/Library/ODBC/odbc.ini`
 
 
-#### Tableau .tds File Configuration[​](/admin/workloads/workload-management/#tableau-tds-file-configuration "Direct link to Tableau .tds File Configuration")
+#### Tableau .tds File Configuration[​](/admin/workloads/workload-management/)
 Add the `ROUTING_TAG` or `ROUTING_QUEUE` parameter to the `odbc-connect-string-extras` parameter in the .tds file. After adding an example configuration is: `odbc-connect-string-extras="AUTHENTICATIONTYPE=Basic Authentication;CONNECTIONTYPE=Direct;HOST=localhost;AdvancedProperties=ROUTING_QUEUE=PreviewQueue"`
-## Multi-Cluster Isolation[​](/admin/workloads/workload-management/#multi-cluster-isolation "Direct link to Multi-Cluster Isolation")
+## Multi-Cluster Isolation[​](/admin/workloads/workload-management/)
 Multi-cluster isolation allows you to isolate your workload by grouping nodes into virtual clusters.
-### Setup and Configuration[​](/admin/workloads/workload-management/#setup-and-configuration "Direct link to Setup and Configuration")
+### Setup and Configuration[​](/admin/workloads/workload-management/)
 To isolate a job, set up YARN provisioning with a Cluster Name and Queue specified and configured:
   1. Navigate to **Admin &gt; Cluster &gt; Provisioning**, click **Add New** , and click the YARN icon.
   2. Set up your provisioned node in addition to specifying the following:
@@ -316,21 +317,21 @@ c. Workers
 
 
 You can also configure Multi-cluster Isolation in `dremio.conf` using the services tag.
-### Viewing and Assigning[​](/admin/workloads/workload-management/#viewing-and-assigning "Direct link to Viewing and Assigning")
+### Viewing and Assigning[​](/admin/workloads/workload-management/)
   * To view the activity, navigate to **Node Activity**.
   * To assign or un-assign a node as an executor node, navigate to **Node Activity &gt; Actions**.
 
 
-## Best Practices for Workload Management[​](/admin/workloads/workload-management/#best-practices-for-workload-management "Direct link to Best Practices for Workload Management")
+## Best Practices for Workload Management[​](/admin/workloads/workload-management/)
 Because every query workload is different, engine sizing often depends on several factors, such as the complexity of queries, number of concurrent users, data sources, dataset size, table formats, and specific business requirements for latency and cost. WLM ensures reliable query performance by choosing adequately sized engines for each workload type, configuring engines, and implementing query routing rules to segregate and route query workload type to appropriate engines.
 This section describes best practices for creating and using Dremio engines in conjunction with WLM to obtain reliable query performance with Dremio.
-### Configuration Models[​](/admin/workloads/workload-management/#configuration-models "Direct link to Configuration Models")
+### Configuration Models[​](/admin/workloads/workload-management/)
 You can deploy Dremio using either of the following configuration models:
   * Single-engine configuration using virtual machines on premises to execute all query workloads.
   * Multi-engine configuration deployed in Kubernetes that separates workloads into multiple engines created to fit the needs of a workload type. Dremio recommends using Kubernetes because it enables reliability and durability by segregating workload based on type while maximizing resource efficiency through engine autoscaling.
 
 
-#### Single-Engine Configuration[​](/admin/workloads/workload-management/#single-engine-configuration "Direct link to Single-Engine Configuration")
+#### Single-Engine Configuration[​](/admin/workloads/workload-management/)
 In a single-engine configuration, a large engine is created to execute the most complex query workload while meeting latency requirements. Simple query workloads, which normally do not require many resources, do not use system resources efficiently when executed on large engines. Combining two workloads with vastly different resource requirements, such as ad hoc workloads and strict low-latency BI dashboards, may cause noisy neighbor issues, resulting in inconsistent query performance and a poor experience for dashboard users who expect low latency.
 To address the noisy neighbor problem, Dremio recommends that you establish queues to horizontally slice engine capacity across different workloads. You can set limits and virtual boundaries on queues to control concurrency and resources consumed by workload types.
 Dremio recommends the following settings for single-engine configuration:
@@ -349,7 +350,7 @@ The combined queue memory limits for all queues should be between 100% and 120% 
   * Dremio's memory arbiter functionality manages memory efficiently across concurrent queries using spillable operators to mitigate direct memory-related errors. For this reason, we do not recommend setting a job memory limit. If you do set a job memory limit, Dremio honors it, so the limit could affect memory arbiter functionality if it is set too low.
 
 
-#### Multi-Engine Configuration[​](/admin/workloads/workload-management/#multi-engine-configuration "Direct link to Multi-Engine Configuration")
+#### Multi-Engine Configuration[​](/admin/workloads/workload-management/)
 In Kubernetes deployments, we recommend segregating identical workload types (for example, based on complexity or business unit) into engines to prevent noisy neighbor issues that affect performance reliability. Create engines that are adequately sized for a workload type to meet SLA and budget constraints. WLM tuning is relatively straightforward in multi-engine configuration deployments because engines process queries of a similar type and the deployment model prevents resource hotspots.
 Kubernetes is optimal for deploying Dremio in production because Dremio can autoscale in Kubernetes deployments, so you can achieve a high level of dependability and durability in queries with efficient resource utilization.
 Dremio recommends the following settings for multi-engine configuration:
@@ -362,7 +363,7 @@ Create a separate engine with one or two nodes to redirect metadata queries for 
   * Dremio's memory arbiter functionality manages memory efficiently across concurrent queries using spillable operators to mitigate direct memory-related errors. For this reason, we do not recommend setting a job memory limit. If you do set a job memory limit, Dremio honors it, so the limit could affect memory arbiter functionality if it is set too low.
 
 
-### Workload Routing[​](/admin/workloads/workload-management/#workload-routing "Direct link to Workload Routing")
+### Workload Routing[​](/admin/workloads/workload-management/)
 Route queries to queues using routing rules. The table below lists queues and parameters for an out-of-the-box Dremio installation.  
 | Queue Name  | CPU Priority  | Concurrency Limit  |  
 | --- | --- | --- |  
@@ -371,7 +372,7 @@ Route queries to queues using routing rules. The table below lists queues and pa
 | Low Cost Reflections  | Background  | 10  |  
 | Low Cost User Queries  | Medium  | 100  |  
 | UI Previews  | Critical  | 100  |  
-You may use existing out-of-the-box queues or [create new queues](/reference/api/wlm/queue#create-a-queue) and route queries based on your workloads and business requirements by [creating routing rules](/reference/api/wlm/rule#create-or-update-a-rule). Your customized routing rules can combine factors including User, Group Membership, Job Type, Query Cost, Date and Time, Query Label (for lakehouse queries), and ROUTING_TAG (tags; for JDBC and ODBC connections). You can also use the ROUTING_QUEUE option to configure direct routing for JDBC and ODBC connections. Read [Rule Examples](/admin/workloads/workload-management/#rule-examples) for more information.
+You may use existing out-of-the-box queues or [create new queues](/reference/api/wlm/queue) and route queries based on your workloads and business requirements by [creating routing rules](/reference/api/wlm/rule). Your customized routing rules can combine factors including User, Group Membership, Job Type, Query Cost, Date and Time, Query Label (for lakehouse queries), and ROUTING_TAG (tags; for JDBC and ODBC connections). You can also use the ROUTING_QUEUE option to configure direct routing for JDBC and ODBC connections. Read [Rule Examples](/admin/workloads/workload-management/) for more information.
 The following table lists example routing rules based on query_type, query_label, and tags:  
 | Order  | Rule Name  | Rule  | Engine  |  
 | --- | --- | --- | --- |  
@@ -382,17 +383,17 @@ The following table lists example routing rules based on query_type, query_label
 | 5  | Lakehouse Queries  | `query_label() IN ('COPY','DML','CTAS', 'OPTIMIZATION')`  | Lakehouse  |  
 | 6  | All Other Queries  | All other queries  | Ad hoc  |  
 Query cost, as computed by the query planner based on estimates to compare two query plans, is not a reliable indicator of query complexity. Cost may fluctuate for similar queries as the datasets evolve, filter conditions change, and query plans are optimized between Dremio releases. We do not recommend using query cost to predict query duration.
-### Using the sys.jobs_recent` System Table[​](/admin/workloads/workload-management/#using-the-sysjobs_recent-system-table "Direct link to Using the sys.jobs_recent` System Table")
+### Using the sys.jobs_recent` System Table[​](/admin/workloads/workload-management/)
 The [`sys.jobs_recent`](/reference/sql/system-tables) system table contains metadata for recent jobs, including time statistics, cost, and queues. You can use the data in the `sys.jobs_recent` system table to evaluate the effectiveness of WLM settings and make adjustments.
 Was this page helpful?
 [Previous Queue Routing](/admin/workloads/queue-routing)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Queue Routing](/admin/workloads/queue-routing)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fadmin%2Fworkloads%2Fworkload-management%2F&_biz_t=1777950345634&_biz_i=Workload%20Management%20%7C%20Dremio%20Documentation&_biz_n=49&rnd=116515&cdn_o=a&_biz_z=1777950345635)
+!

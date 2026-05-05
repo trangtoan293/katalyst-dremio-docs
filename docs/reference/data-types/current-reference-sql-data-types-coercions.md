@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/data-types/coercions
+slug: /reference/sql/data-types/coercions
 title: "Coercions | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.488166958
@@ -30,7 +31,7 @@ Notes about the Supported and Unsupported Coercions tables:
   * VARCHAR: represents STRING
 
 
-For additional information about the DECIMAL-to-DECIMAL conversion shown in the tables, see [DECIMAL-to-DECIMAL Coercions](/reference/sql/data-types/coercions#decimal-to-decimal-coercions)
+For additional information about the DECIMAL-to-DECIMAL conversion shown in the tables, see DECIMAL-to-DECIMAL Coercions
 Table 1: Supported and Unsupported Coercions for File-formatted Sources ![Supported and Unsupported Coercions for File-formatted Sources](https://docs.dremio.com/assets/images/table-supported-coercions-b78a45f7e4abe4fb3348514afe2845f8.png)
 Table 2: Supported and Unsupported Coercions for Apache Hive ORC Datasets ![Supported and Unsupported Coercions for Apache Hive ORC Datasets](https://docs.dremio.com/assets/images/table-supported-coercions-hive-cad0a3a316b72a309338d8137757bb3a.png)
 For Apache Hive and AWS Glue sources with Parquet datasets, Dremio supports the following coercions:
@@ -40,7 +41,7 @@ For Apache Hive and AWS Glue sources with Parquet datasets, Dremio supports the 
   * VARCHAR to VARCHAR[N], which truncates VARCHAR to the specified [N] limit
 
 
-## DECIMAL-to-DECIMAL Coercions[​](/reference/sql/data-types/coercions#decimal-to-decimal-coercions "Direct link to DECIMAL-to-DECIMAL Coercions")
+## DECIMAL-to-DECIMAL Coercions​
 Since decimals can have different scales and precision, Dremio supports DECIMAL-to-DECIMAL coercions. Decimal coercion support is provided in the following DECIMAL-to-DECIMAL Overflow/Truncation Behavior table.
 The following symbols are used in the DECIMAL-to-DECIMAL Overflow/Truncation table:
   * Precision (p): represents the number of digits in the value/cell.
@@ -50,9 +51,9 @@ The following symbols are used in the DECIMAL-to-DECIMAL Overflow/Truncation tab
 Table 3: DECIMAL-to-DECIMAL Overflow/Truncation Behavior  
 | Source/File Data Type  | Table Schema  | Description  | On Overflow  | On Truncation  |  
 | --- | --- | --- | --- | --- |  
-| Decimal  | Decimal  | [Conversion between any DECIMAL type is supported, including decreasing the `p` or `s`. Checks that are added during runtime help to detect overflow.  | 0.0  | Rounds up to the nearest half  |  
+| Decimal  | Decimal  | Conversion between any DECIMAL type is supported, including decreasing the `p` or `s`. Checks that are added during runtime help to detect overflow.  | 0.0  | Rounds up to the nearest half  |  
 Implicit conversions/coercions are not currently supported for filesystem and MongoDB sources.
-## DECIMAL-to-DECIMAL Schema Learning[​](/reference/sql/data-types/coercions#decimal-to-decimal-schema-learning "Direct link to DECIMAL-to-DECIMAL Schema Learning")
+## DECIMAL-to-DECIMAL Schema Learning[​
 When source files contain decimal values using a different scale or precision from the table’s definition - `Decimal (p, s)` - Dremio will update the table’s decimal definition according to the following logic through schema learning if possible, or otherwise attempt to coerce the source decimal values to the table’s definition.
 Logic used for the schema learning option, where `d` = decimal, `p` = precision, and `s` = scale:
   * `d1`, `p1`, `s1` - The decimal type in file 1 with a given `p` and `s`
@@ -82,7 +83,7 @@ If the resulting precision is greater than 38, it is reduced to 38, and the corr
   * This result causes truncation on read since the fractional part will not contain enough spaces for the original scale.
 
 
-## Type Coercion When Copying Data from CSV or JSON Files Into Apache Iceberg Tables[​](/reference/sql/data-types/coercions#type-coercion-when-copying-data-from-csv-or-json-files-into-apache-iceberg-tables "Direct link to Type Coercion When Copying Data from CSV or JSON Files Into Apache Iceberg Tables")
+## Type Coercion When Copying Data from CSV or JSON Files Into Apache Iceberg Tables​
 These data-type coercions are supported when the [`COPY INTO `table`` SQL command](/reference/sql/commands/apache-iceberg-tables/copy-into-table) is used to copy data from source files into Iceberg tables:  
 | Source Data Type  | Target Dremio Data Type  |  
 | --- | --- |  
@@ -95,12 +96,12 @@ These data-type coercions are supported when the [`COPY INTO `table`` SQL comman
 Although the TIMESTAMP data type is supported as a target schema data type, TIMESTAMP with time zone is not supported.
 Was this page helpful?
 [Previous Time Zone Support](/reference/sql/data-types/time-zone-support)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Time Zone Support](/reference/sql/data-types/time-zone-support)

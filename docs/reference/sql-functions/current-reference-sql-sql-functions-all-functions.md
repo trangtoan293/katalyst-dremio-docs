@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/ALL_FUNCTIONS
+slug: /reference/sql/sql-functions/ALL_FUNCTIONS
 title: "All Functions | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.7203645
@@ -285,13 +286,13 @@ Version: current [26.x]
 | [YEAR](/reference/sql/sql-functions)  | Extracts the year for a given date or timestamp.  |  
 Was this page helpful?
 [Previous SQL Functions](/reference/sql/sql-functions)[Next Aggregate](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SQL Functions](/reference/sql/sql-functions)[Next Aggregate](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2FALL_FUNCTIONS%2F&_biz_t=1777950389319&_biz_i=All%20Functions%20%7C%20Dremio%20Documentation&_biz_n=148&rnd=532123&cdn_o=a&_biz_z=1777950389320)
+!

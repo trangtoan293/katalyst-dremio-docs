@@ -1,5 +1,6 @@
 ---
 url: /admin/monitoring/jobs/view-profiles
+slug: /admin/monitoring/jobs/view-profiles
 title: "Viewing Profiles | Dremio Enterprise Documentation"
 depth: 5
 crawled_at: 65340.125062291
@@ -21,8 +22,8 @@ To navigate to a raw profile:
   3. At the top of the next page, click the Raw Profile tab to open a raw profile of the job in a separate dialog. The associated raw profile pop-up shows a variety of information for review.
 
 
-## Views[​](/admin/monitoring/jobs/view-profiles/#views "Direct link to Views")
-Within the Raw Profile dialog, you can analyze the [Job Metrics](/admin/monitoring/jobs/view-profiles/#job-metrics) based on the following views:  
+## Views[​](/admin/monitoring/jobs/view-profiles/)
+Within the Raw Profile dialog, you can analyze the [Job Metrics](/admin/monitoring/jobs/view-profiles/) based on the following views:  
 | View  | Description  |  
 | --- | --- |  
 | Query  | Shows the selected query statement and job metrics. See if your SQL query is what you were expecting and the query is run against the source data.  |  
@@ -48,17 +49,17 @@ This view is useful for determining whether exceptions or matches are occurring.
 
  |  
 | Error  | (If applicable) Shows information about an error. The Failure Node is always the coordinator node and the server name inside the error message is the actual affected node.  |  
-## Job Metrics[​](/admin/monitoring/jobs/view-profiles/#job-metrics "Direct link to Job Metrics")
+## Job Metrics[​](/admin/monitoring/jobs/view-profiles/)
 Each view displays the following metrics:
-  * **[Job Summary](/admin/monitoring/jobs/view-profiles/#job-summary)**
-  * **[State Durations](/admin/monitoring/jobs/view-profiles/#state-durations)**
-  * **[Threads](/admin/monitoring/jobs/view-profiles/#threads)**
-  * **[Resource Allocation](/admin/monitoring/jobs/view-profiles/#resource-allocation)**
-  * **[Nodes](/admin/monitoring/jobs/view-profiles/#nodes)**
-  * **[Operators](/admin/monitoring/jobs/view-profiles/#operators)**
+  * **[Job Summary](/admin/monitoring/jobs/view-profiles/)**
+  * **[State Durations](/admin/monitoring/jobs/view-profiles/)**
+  * **[Threads](/admin/monitoring/jobs/view-profiles/)**
+  * **[Resource Allocation](/admin/monitoring/jobs/view-profiles/)**
+  * **[Nodes](/admin/monitoring/jobs/view-profiles/)**
+  * **[Operators](/admin/monitoring/jobs/view-profiles/)**
 
 
-### Job Summary[​](/admin/monitoring/jobs/view-profiles/#job-summary "Direct link to Job Summary")
+### Job Summary[​](/admin/monitoring/jobs/view-profiles/)
 The job summary information includes:
   * Job State
   * Coordinator Name
@@ -67,7 +68,7 @@ The job summary information includes:
   * Total Query Time
 
 
-### State Durations[​](/admin/monitoring/jobs/view-profiles/#state-durations "Direct link to State Durations")
+### State Durations[​](/admin/monitoring/jobs/view-profiles/)
 The length of time (in milliseconds) for each of the job states:
   * Pending
   * Metadata Retrieval
@@ -79,8 +80,8 @@ The length of time (in milliseconds) for each of the job states:
   * Running
 
 
-For descriptions of the job states, see [Job States and Statuses](/admin/monitoring/jobs/#job-states-and-statuses).
-### Threads[​](/admin/monitoring/jobs/view-profiles/#threads "Direct link to Threads")
+For descriptions of the job states, see [Job States and Statuses](/admin/monitoring/jobs/).
+### Threads[​](/admin/monitoring/jobs/view-profiles/)
 The Threads section provides an overview table and a major fragment block for each major fragment. Each row in the Overview table provides the number of minor fragment that Dremio parallelized from each major fragment, as well as aggregate time and memory metrics for the minor fragments.
 In particular, the following metrics are useful:
   * Setup Time – Time opening and closing of files.
@@ -91,7 +92,7 @@ In particular, the following metrics are useful:
 
 
 Major fragment blocks correspond to a row in the Overview table. You can expand the blocks to see metrics for all of the minor fragment that were parallelized from each major fragment, including the host on which each minor fragment ran. Each row in the major fragment table presents the fragment state, time metrics, memory metrics, and aggregate input metrics of each minor fragment.
-### Resource Allocation[​](/admin/monitoring/jobs/view-profiles/#resource-allocation "Direct link to Resource Allocation")
+### Resource Allocation[​](/admin/monitoring/jobs/view-profiles/)
 The Resource Allocation section shows the following details for managed resources and workloads:
   * Queue Name
   * Queue ID
@@ -102,9 +103,9 @@ The Resource Allocation section shows the following details for managed resource
   * Query Type
 
 
-### Nodes[​](/admin/monitoring/jobs/view-profiles/#nodes "Direct link to Nodes")
+### Nodes[​](/admin/monitoring/jobs/view-profiles/)
 The Nodes section includes host name, resource waiting time, and peak memory.
-### Operators[​](/admin/monitoring/jobs/view-profiles/#operators "Direct link to Operators")
+### Operators[​](/admin/monitoring/jobs/view-profiles/)
 The Operators section shows aggregate metrics for each operator within a major fragment that performed relational operations during query execution.
 **Operator Overview Table**
 The following table lists descriptions for each column in the Operator Overview table:  
@@ -142,13 +143,13 @@ When viewing operation details, the following are observable:
 
 Was this page helpful?
 [Previous Visual Profile](/admin/monitoring/jobs/viewing-query-profiles)[Next Uploading Profile Data](/admin/monitoring/jobs/view-profiles/uploading-profile-data)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Visual Profile](/admin/monitoring/jobs/viewing-query-profiles)[Next Uploading Profile Data](/admin/monitoring/jobs/view-profiles/uploading-profile-data)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeveloper%2Fdata-formats%2Fapache-iceberg%2Ftable-maintenance-optimization%2Fautomated-maintenance%2F&_biz_t=1777951659979&_biz_i=Automated%20Maintenance%20with%20the%20Open%20Catalog%20%7C%20Dremio%20Documentation&_biz_n=2700&rnd=529444&cdn_o=a&_biz_z=1777951659985)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fadmin%2Fmonitoring%2Fjobs%2Fview-profiles%2F&_biz_t=1777951659984&_biz_i=Viewing%20Profiles%20%7C%20Dremio%20Documentation&_biz_n=2701&rnd=199114&cdn_o=a&_biz_z=1777951659985)
+!!

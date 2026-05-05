@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/alter-folder
+slug: /reference/sql/commands/alter-folder
 title: "ALTER FOLDER | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64248.834205041
@@ -15,7 +16,7 @@ Version: current [26.x]
 On this page
 # ALTER FOLDER
 Route refresh jobs for all Reflections on datasets that are in a folder to a specific queue. For more information, see [Queue Routing](/admin/workloads/queue-routing).
-## Syntax[​](/reference/sql/commands/alter-folder#syntax "Direct link to Syntax")
+## Syntax​
 Syntax
 
 ```
@@ -24,13 +25,13 @@ ALTER FOLDER <folder_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/alter-folder#parameters "Direct link to Parameters")
+## Parameters​
 `folder_name` String
 The name of the folder where you want to route refresh jobs.
 * * *
 ROUTE REFLECTIONS TO {'{'})'{'{'})'{'}'}) DEFAULT QUEUE | QUEUE {'{'})'{'{'})'{'}'}) `queue_name` | `queue_uuid` {'{'})'{'}'}'{'}'} {'{'})'{'}'}'{'}'} String
 Use the queue name or unique identifier to specify the queue on which to run jobs that create and refresh Reflections that are defined on the dataset. If a queue name or unique identifier is not specified, the default queue is used. You can also directly specify the default queue.
-## Examples[​](/reference/sql/commands/alter-folder#examples "Direct link to Examples")
+## Examples​
 Alter a folder to route Reflections to the default queue
 
 ```
@@ -49,12 +50,12 @@ ALTER FOLDER myFolder
 
 Was this page helpful?
 [Previous SELECT](/reference/sql/commands)[Next ALTER PIPE](/reference/sql/commands/alter-pipe)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SELECT](/reference/sql/commands)[Next ALTER PIPE](/reference/sql/commands/alter-pipe)

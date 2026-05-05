@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/data-types/mappings/amazon-redshift
+slug: /reference/sql/data-types/mappings/amazon-redshift
 title: "Amazon Redshift Data Types | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64258.669385833
@@ -45,12 +46,12 @@ Dremio supports Amazon Redshift data types, as shown in the following table whic
 | VARCHAR  | VARCHAR  |  
 Was this page helpful?
 [Previous Mappings for External Sources](/reference/sql/data-types/mappings)[Next IBM Db2 Data Types](/reference/sql/data-types/mappings/db2)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Mappings for External Sources](/reference/sql/data-types/mappings)[Next IBM Db2 Data Types](/reference/sql/data-types/mappings/db2)

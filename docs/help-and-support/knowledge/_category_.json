@@ -2,7 +2,7 @@
   "label": "Knowledge",
   "position": 4,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Knowledge"
+    "type": "doc",
+    "id": "help-and-support/knowledge/current-help-support-knowledge-base"
   }
 }

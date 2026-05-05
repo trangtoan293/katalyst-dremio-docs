@@ -1,5 +1,6 @@
 ---
 url: /data-products/discover/semantic-search
+slug: /data-products/discover/semantic-search
 title: "Searching for Dremio Objects | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64039.077634458
@@ -42,12 +43,12 @@ You can also use Advanced Search to filter results down to get recently updated 
 
 Was this page helpful?
 [Previous Discover Data](/data-products/discover)[Next View Metadata of a Dataset](/data-products/discover/metadata)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Discover Data](/data-products/discover)[Next View Metadata of a Dataset](/data-products/discover/metadata)

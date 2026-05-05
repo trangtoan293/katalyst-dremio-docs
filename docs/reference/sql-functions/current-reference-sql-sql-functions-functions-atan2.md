@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ATAN2
+slug: /reference/sql/sql-functions/functions/ATAN2
 title: "ATAN2 | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64287.333966375
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Math](/reference/sql/sql-functions)
 # ATAN2
 Computes the Arctangent (inverse Tangent) of the ratio of its two arguments.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ATAN2(_y_ NUMERIC, _x_ NUMERIC) → DOUBLE[​](/reference/sql/sql-functions#atan2y-numeric-x-numeric--double "Direct link to atan2y-numeric-x-numeric--double")
+## Syntax
+### ATAN2(_y_ NUMERIC, _x_ NUMERIC) → DOUBLE[​](/reference/sql/sql-functions)
   * y: Floating-point input value for the y-coordinate, in the range (negative-infinity:positive-infinity).
   * x: Floating-point input value for the x-coordinate, in the range (negative-infinity:positive-infinity).
 
@@ -66,13 +67,13 @@ SELECT ATAN2(0.0,0.0)
 
 Was this page helpful?
 [Previous ATAN](/reference/sql/sql-functions)[Next AVG](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ATAN](/reference/sql/sql-functions)[Next AVG](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FATAN2%2F&_biz_t=1777950607180&_biz_i=ATAN2%20%7C%20Dremio%20Documentation&_biz_n=559&rnd=541928&cdn_o=a&_biz_z=1777950607180)
+!

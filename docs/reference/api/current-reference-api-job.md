@@ -1,5 +1,6 @@
 ---
 url: /reference/api/job
+slug: /reference/api/job
 title: "Job | Dremio Enterprise Documentation"
 depth: 5
 crawled_at: 65345.949491541
@@ -14,7 +15,7 @@ Version: current [26.x]
 On this page
 # Job
 Use the Job API to get information about a specific job and cancel a running job.
-To retrieve results for a specific job, use the [Job Results](/reference/api/job) endpoint.
+To retrieve results for a specific job, use the Job Results endpoint.
 Job Object
 
 ```
@@ -48,7 +49,7 @@ Job Object
 
 ```
 
-## Job Attributes[​](/reference/api/job#job-attributes "Direct link to Job Attributes")
+## Job Attributes​
 jobState String
 The job's status. Values `COMPLETED`, `CANCELED`, and `FAILED` are final; other values are considered in running state.
 Enum: NOT_SUBMITTED, STARTING, RUNNING, COMPLETED, CANCELED, FAILED, CANCELLATION_REQUESTED, PLANNING, PENDING, METADATA_RETRIEVAL, QUEUED, ENGINE_START, EXECUTION_PLANNING, INVALID_STATE
@@ -70,7 +71,7 @@ endedAt String
 Date and time when the job ended, in UTC format.
 Example: 2022-12-09T20:16:19.939Z
 * * *
-[acceleration](/reference/api/job#attributes-of-the-acceleration-object) Object
+acceleration Object
 For jobs with applicable Reflections, provides more information about the Reflections and their relationships to the job. For jobs that do not have applicable Reflections, the response does not include the acceleration object.
 * * *
 queryType String
@@ -97,10 +98,10 @@ Example: 2022-12-09T20:16:16.162Z
 cancellationReason String
 For canceled jobs, the reason for the cancellation. For all other jobs, the cancellationReason value is empty.
 Example: Query was cancelled due to low memory.
-#### Attributes of the `acceleration` Object[​](/reference/api/job#attributes-of-the-acceleration-object "Direct link to attributes-of-the-acceleration-object")
-[reflectionRelationships](/reference/api/job#attributes-of-objects-in-the-reflectionrelationships-array) Array of Object
+#### Attributes of the `acceleration` Object​
+reflectionRelationships Array of Object
 Information about the dataset, Reflection, and type of relationship for each applicable Reflection.
-#### Attributes of Objects in the `reflectionRelationships` Array[​](/reference/api/job#attributes-of-objects-in-the-reflectionrelationships-array "Direct link to attributes-of-objects-in-the-reflectionrelationships-array")
+#### Attributes of Objects in the `reflectionRelationships` Array​
 datasetId String (UUID)
 Unique identifier of the dataset associated with the Reflection.
 Example: 596c489c-7949-485b-92a9-c32a4cb51fa2
@@ -113,7 +114,7 @@ relationship String
 Type of relationship between the Reflection and the job.
 Enum: CONSIDERED, MATCHED, CHOSEN
 Example: MATCHED
-## Retrieve a Job[​](/reference/api/job#retrieve-a-job "Direct link to Retrieve a Job")
+## Retrieve a Job​
 Retrieve the specified job.
 Method and URL
 
@@ -122,11 +123,11 @@ GET /api/v3/job/{id}
 
 ```
 
-### Parameters[​](/reference/api/job#parameters "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the job to retrieve. Get the job ID from responses to [SQL API](/reference/api/sql) requests.
 Example: 6j6c34cf-9drf-b07a-5ab7-abea69a66d00
-### Example Request[​](/reference/api/job#example-request "Direct link to Example Request")
+### Example Request​
 
 ```
 curl -X GET 'https://{hostname}/api/v3/job/6j6c34cf-9drf-b07a-5ab7-abea69a66d00' \  
@@ -224,7 +225,7 @@ Example Response for a RUNNING Job
 
 ```
 
-### Response Status Codes[​](/reference/api/job#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -234,7 +235,7 @@ Example Response for a RUNNING Job
 404 Not Found   
   
 
-## Cancel a Running Job[​](/reference/api/job#cancel-a-running-job "Direct link to Cancel a Running Job")
+## Cancel a Running Job​
 Cancel the specified running job.
 Canceling a job does not delete the job object. You can still retrieve job objects for canceled jobs.
 Method and URL
@@ -244,7 +245,7 @@ POST /api/v3/job/{id}/cancel
 
 ```
 
-### Parameters[​](/reference/api/job#parameters-1 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the job to cancel. Get the job ID from responses to [SQL API](/reference/api/sql) requests.
 Example: 6j6c34cf-9drf-b07a-5ab7-abea69a66d00
@@ -264,7 +265,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/job#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 400 Bad Request   
@@ -275,13 +276,13 @@ No response
   
 
 Was this page helpful?
-[Previous External Token Providers](/reference/api/external-token-providers)[Next Job Results](/reference/api/job)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Previous External Token Providers](/reference/api/external-token-providers)Next Job Results
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous External Token Providers](/reference/api/external-token-providers)[Next Job Results](/reference/api/job)
+[Previous External Token Providers](/reference/api/external-token-providers)Next Job Results

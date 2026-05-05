@@ -2,7 +2,7 @@
   "label": "Access Control",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Access Control"
+    "type": "doc",
+    "id": "security/access-control/current-security-rbac"
   }
 }

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/DENSE_RANK
+slug: /reference/sql/sql-functions/functions/DENSE_RANK
 title: "DENSE_RANK | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64310.78001775
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Window](/reference/sql/sql-functions)
 # DENSE_RANK
 Returns the rank of the current row within its partition and ordering. Rows that are equal will have the same rank.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### DENSE_RANK() OVER ( [PARTITION BY partition_expression] [ORDER BY order_expression]) → bigint[​](/reference/sql/sql-functions#dense_rank-over--partition-by-partition_expression-order-by-order_expression--bigint "Direct link to DENSE_RANK\(\) OVER \( \[PARTITION BY partition_expression\] \[ORDER BY order_expression\]\) → bigint")
+## Syntax
+### DENSE_RANK() OVER ( [PARTITION BY partition_expression] [ORDER BY order_expression]) → bigint[​](/reference/sql/sql-functions) OVER \( \[PARTITION BY partition_expression\] \[ORDER BY order_expression\]\) → bigint")
   * partition_expression (optional): An expression that groups rows into partitions.
   * order_expression: An expression that specifies the order of the rows within each partition.
 
@@ -43,12 +44,12 @@ FROM Samples."samples.dremio.com"."SF_incidents2016.json"
 
 Was this page helpful?
 [Previous DEGREES](/reference/sql/sql-functions)[Next E](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DEGREES](/reference/sql/sql-functions)[Next E](/reference/sql/sql-functions)

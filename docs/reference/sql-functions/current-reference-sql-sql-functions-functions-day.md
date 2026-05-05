@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/DAY
+slug: /reference/sql/sql-functions/functions/DAY
 title: "DAY | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64310.157812291
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Date/Time](/reference/sql/sql-functions)
 # DAY
 Returns the day of month of the date or timestamp.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### DAY(_date_timestamp_expression_ string) → bigint[​](/reference/sql/sql-functions#daydate_timestamp_expression-string--bigint "Direct link to daydate_timestamp_expression-string--bigint")
+## Syntax
+### DAY(_date_timestamp_expression_ string) → bigint[​](/reference/sql/sql-functions)
   * date_timestamp_expression: A `DATE` or `TIMESTAMP` expression.
 
 
@@ -44,16 +45,16 @@ LIMIT 3
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 The function name is a Dremio keyword and must be enclosed in double quotes (`"DAY"`). This function is identical to the function [`DAYOFMONTH`](/reference/sql/sql-functions).
 Was this page helpful?
 [Previous DATE_TRUNC](/reference/sql/sql-functions)[Next DAYOFMONTH](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DATE_TRUNC](/reference/sql/sql-functions)[Next DAYOFMONTH](/reference/sql/sql-functions)

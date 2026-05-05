@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/acceleration
+slug: /reference/sql/commands/acceleration
 title: "Reflections | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64248.808291666
@@ -38,7 +39,7 @@ ALTER { DATASET | TABLE | VIEW } <dataset_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/acceleration#parameters "Direct link to Parameters")
+## Parameters​
 `dataset_name` String
 The name of the table or view.
 * * *
@@ -82,7 +83,7 @@ DROP REFLECTION String Optional
 Drops the specified Reflection defined on the table.
 * * *
 REFRESH Reflections String Optional
-For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections#triggering-refreshes-by-using-the-reflection-api-the-catalog-api-or-an-sql-command).
+For information about the refresh action performed, see [Triggering Refreshes by Using the Reflection API, the Catalog API, or an SQL Command](/acceleration/manual-reflections/refreshing-reflections).
 * * *
 ROUTE Reflections TO {'{'})'{'{'})'{'}'}) DEFAULT QUEUE | QUEUE {'{'})'{'{'})'{'}'}) `queue_name` | `queue_uuid` {'{'})'{'}'}'{'}'} {'{'})'{'}'}'{'}'} String
 Specify the queue on which to run jobs that refresh Reflections defined on the dataset. Use either the name or UUID of the queue. If neither a name nor a UUID is specified, the default queue is used. You can also directly specify the default queue. For more information, see [Queue Routing](/admin/workloads/queue-routing).
@@ -98,8 +99,8 @@ ADD partitions the table data on the values in a single column or by using one o
   * `truncate( `length`, `col` )`: Partition by truncated value. Strings are truncated to the specified length. Integer and biginteger values are truncated to bins (for example: `truncate(10, i)` produces 0, 10, 20, and so on).
 
 
-For more information about partitioning Reflections, see [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/#horizontally-partition-reflections-that-have-many-rows) and [Partition Reflections to Allow for Partition-Based Incremental Refreshes](/help-support/well-architected-framework/performance/#partition-reflections-to-allow-for-partition-based-incremental-refreshes).
-## Setting Reflection Hints[​](/reference/sql/commands/acceleration#setting-reflection-hints "Direct link to Setting Reflection Hints")
+For more information about partitioning Reflections, see [Horizontally Partition Reflections that Have Many Rows](/help-support/well-architected-framework/performance/) and [Partition Reflections to Allow for Partition-Based Incremental Refreshes](/help-support/well-architected-framework/performance/).
+## Setting Reflection Hints​
 You can use Reflection hints to influence the process of determining which Reflections are substituted for tables and views to accelerate queries. For more information, see [Influencing the Choice of Reflections Used to Satisfy Queries](/acceleration/manual-reflections/using-reflection-hints).
 Syntax for setting hint for a session
 
@@ -117,7 +118,7 @@ SELECT /*+ <reflection_hint>  */ <column_name1>, <column_name2>
 
 ```
 
-## Examples[​](/reference/sql/commands/acceleration#examples "Direct link to Examples")
+## Examples​
 Create a raw Reflection that sorts customers by last name and partitions them by country
 
 ```
@@ -195,12 +196,12 @@ ALTER VIEW "View 3" ROUTE Reflections TO DEFAULT QUEUE;
 
 Was this page helpful?
 [Previous Privileges](/reference/sql/commands/rbac)[Next Roles](/reference/sql/commands/roles)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Privileges](/reference/sql/commands/rbac)[Next Roles](/reference/sql/commands/roles)

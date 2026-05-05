@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/nessie/create-tag
+slug: /reference/sql/commands/nessie/create-tag
 title: "CREATE TAG | Dremio Enterprise Documentation"
 depth: 5
 crawled_at: 65347.627016208
@@ -25,7 +26,7 @@ CREATE TAG [ IF NOT EXISTS ] <tag_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/nessie/create-tag#parameters "Direct link to Parameters")
+## Parameters​
 [ IF NOT EXISTS ] Optional
 If you include this optional clause, the command runs regardless of whether the tag exists and you receive a summary indicating whether the tag could be created. If this clause is not specified, the command fails if the tag to be created already exists.
 * * *
@@ -43,7 +44,7 @@ Specifies the reference where you want the new tag to be created from. When this
 * * *
 IN `source_name` String Optional
 The name of the source that you want to create a tag in. If not specified, the current source in the query context is used.
-## Examples[​](/reference/sql/commands/nessie/create-tag#examples "Direct link to Examples")
+## Examples​
 Create a tag
 
 ```
@@ -70,13 +71,13 @@ CREATE TAG myTag
 
 Was this page helpful?
 [Previous CREATE FOLDER](/reference/sql/commands/nessie/create-folder)[Next DROP BRANCH](/reference/sql/commands/nessie/drop-branch)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CREATE FOLDER](/reference/sql/commands/nessie/create-folder)[Next DROP BRANCH](/reference/sql/commands/nessie/drop-branch)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fnessie%2Fcreate-tag%2F&_biz_t=1777951667740&_biz_i=CREATE%20TAG%20%7C%20Dremio%20Documentation&_biz_n=2717&rnd=707836&cdn_o=a&_biz_z=1777951667740)
+!

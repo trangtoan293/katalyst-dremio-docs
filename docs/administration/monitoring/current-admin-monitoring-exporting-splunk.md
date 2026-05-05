@@ -1,5 +1,6 @@
 ---
 url: /admin/monitoring/exporting/splunk
+slug: /admin/monitoring/exporting/splunk
 title: "Splunk | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64193.952550375
@@ -103,12 +104,12 @@ b. For *nix systems, go to `$SPLUNK_HOME/bin` and run this command: Command to r
 
 Was this page helpful?
 [Previous Datadog](/admin/monitoring/exporting/datadog)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Datadog](/admin/monitoring/exporting/datadog)

@@ -1,5 +1,6 @@
 ---
 url: /security/rbac/inbound-impersonation
+slug: /security/rbac/inbound-impersonation
 title: "Inbound Impersonation | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64389.555805208
@@ -15,16 +16,16 @@ On this page
 # Inbound Impersonation Enterprise
 Inbound impersonation allows users to run queries from clients like DBeaver and Tableau on objects in Dremio data sources under their own Dremio usernames. When you configure inbound impersonation, a proxy user that represents the client can authenticate to the data source through the target user's connection. When the proxy user runs queries, Dremio evaluates the target user's privileges against the required privileges. If the target user has the correct privileges for the queries from the proxy user, Dremio runs the queries as the proxy user.
 Dremio supports inbound impersonation for Java Database Connectivity (JDBC) connections for Hadoop Distributed File System (HDFS) and Hive sources as well as for Dremio-to-Dremio sources.
-For HDFS and Hive sources, before you define an inbound impersonation policy, you must configure impersonation for the [HDFS](/data-sources/object/hdfs#impersonation) or [Hive](/data-sources/lakehouse-catalogs/hive#impersonation) source. You must also enable impersonation in the General and Advanced Options when you configure the connection to your [HDFS](/data-sources/object/hdfs#general) or [Hive](/data-sources/lakehouse-catalogs/hive#general-options) source in Dremio.
-For Dremio-to-Dremio sources, you must enable impersonation in the Advanced Options when you configure the connection to your [Dremio](/data-sources/databases/dremio#advanced-options) source.
-## Prerequisite[​](/security/rbac/inbound-impersonation#prerequisite "Direct link to Prerequisite")
+For HDFS and Hive sources, before you define an inbound impersonation policy, you must configure impersonation for the [HDFS](/data-sources/object/hdfs) or [Hive](/data-sources/lakehouse-catalogs/hive) source. You must also enable impersonation in the General and Advanced Options when you configure the connection to your [HDFS](/data-sources/object/hdfs) or [Hive](/data-sources/lakehouse-catalogs/hive) source in Dremio.
+For Dremio-to-Dremio sources, you must enable impersonation in the Advanced Options when you configure the connection to your [Dremio](/data-sources/databases/dremio) source.
+## Prerequisite​
 Ensure that you have a Dremio-version-4.0-or-later cluster installed and accessible.
-## Policy Definition Methods[​](/security/rbac/inbound-impersonation#policy-definition-methods "Direct link to Policy Definition Methods")
+## Policy Definition Methods​
 To configure inbound impersonation, a member of the ADMIN role in Dremio must define an inbound impersonation policy that authorizes proxy users to submit queries on behalf of target users.
-Defining an inbound impersonation policy requires setting the value of the `exec.impersonation.inbound_policies` support key to a specification that lists the proxy and target users and groups for the policy. You can set the policy by [SQL query](/security/rbac/inbound-impersonation#set-policy-by-sql-query) or by [manually adding the support key](/security/rbac/inbound-impersonation#manually-set-policy-with-a-support-key).
+Defining an inbound impersonation policy requires setting the value of the `exec.impersonation.inbound_policies` support key to a specification that lists the proxy and target users and groups for the policy. You can set the policy by SQL query or by manually adding the support key.
 In the specification, `proxy_principals` are the users and groups that represent the client application. The `proxy_principals` can submit Dremio queries on behalf of the `target_principals`, which are the users and groups that are impersonated. A single specification can name users, groups, or a combination of users and groups as `proxy_principals` and `target_principals`.
-Proxy and target principals can be [internal](/security/authentication/users#local-users) or [external](/security/authentication/users#user-types) users or [external](/security/rbac/roles#external) groups. Dremio does not support using [internal](/security/rbac/roles#internal) roles as proxy or target principals.
-### Set Policy by SQL Query[​](/security/rbac/inbound-impersonation#set-policy-by-sql-query "Direct link to Set Policy by SQL Query")
+Proxy and target principals can be [internal](/security/authentication/users) or [external](/security/authentication/users) users or [external](/security/rbac/roles) groups. Dremio does not support using [internal](/security/rbac/roles) roles as proxy or target principals.
+### Set Policy by SQL Query​
 Use the following syntax and template to set the `exec.impersonation.inbound_policies` support key value by SQL query:
 Syntax and Specification Template for SQL Query
 
@@ -62,7 +63,7 @@ ALTER SYSTEM SET "exec.impersonation.inbound_policies"='[
 
 ```
 
-### Manually Set Policy with a Support Key[​](/security/rbac/inbound-impersonation#manually-set-policy-with-a-support-key "Direct link to Manually Set Policy with a Support Key")
+### Manually Set Policy with a Support Key​
 To set the `exec.impersonation.inbound_policies` support key by manually adding it in the Dremio console:
   1. Click ![This is the Settings icon.](https://docs.dremio.com/images/green-settings-icon.png) in the left navigation bar.
   2. Click **Support** in the sidebar.
@@ -107,7 +108,7 @@ Specification Template for Impersonation Policy
   5. Click **Save**.
 
 
-## Example Configuration[​](/security/rbac/inbound-impersonation#example-configuration "Direct link to Example Configuration")
+## Example Configuration​
 In this scenario:
   * The LDAP service includes a group named `ldapGroup` with members `a.alice` and `b.bob`.
   * The LDAP service includes a user named `tpcds_service` that represents DBeaver. The `tpcds_service` user does not belong to any groups.
@@ -141,7 +142,7 @@ If `tpcds_service` should impersonate only a specific member of `ldapGroup`, suc
 
 
 The user `a.alice` can now log in to DBeaver and run Dremio queries against the Hive source as `a.alice`.
-## Confirming an Inbound Impersonation Policy[​](/security/rbac/inbound-impersonation#confirming-an-inbound-impersonation-policy "Direct link to Confirming an Inbound Impersonation Policy")
+## Confirming an Inbound Impersonation Policy​
 Use this SQL command to confirm whether an inbound impersonation policy is set:
 SQL Query for Confirming an Inbound Impersonation Policy
 
@@ -152,7 +153,7 @@ WHERE  name = 'exec.impersonation.inbound_policies'
 
 ```
 
-## Deleting an Inbound Impersonation Policy[​](/security/rbac/inbound-impersonation#deleting-an-inbound-impersonation-policy "Direct link to Deleting an Inbound Impersonation Policy")
+## Deleting an Inbound Impersonation Policy​
 To delete the inbound impersonation policy by SQL query, run the following query in the SQL Runner:
 SQL Query for Deleting an Inbound Impersonation Policy
 
@@ -170,13 +171,13 @@ To delete the inbound impersonation policy by manually resetting the `exec.imper
 
 Was this page helpful?
 [Previous Role Management](/security/rbac/roles)[Next Integrations](/security/integrations)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Role Management](/security/rbac/roles)[Next Integrations](/security/integrations)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fsecurity%2Frbac%2Finbound-impersonation%2F&_biz_t=1777950711107&_biz_i=Inbound%20Impersonation%20%7C%20Dremio%20Documentation&_biz_n=757&rnd=825419&cdn_o=a&_biz_z=1777950711107)
+!

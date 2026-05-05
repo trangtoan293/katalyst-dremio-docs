@@ -1,5 +1,6 @@
 ---
 url: /client-applications/alteryx-designer
+slug: /client-applications/alteryx-designer
 title: "Alteryx Designer | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64025.910052416
@@ -13,15 +14,15 @@ Version: current [26.x]
 On this page
 # Alteryx Designer
 You can use Alteryx Designer to quickly prepare, blend, conform, and analyze data from datasets in Dremio.
-## Supported Versions[​](/client-applications/alteryx-designer#supported-versions "Direct link to Supported Versions")
+## Supported Versions​
 Alteryx Designer 10.6+
-## Prerequisites[​](/client-applications/alteryx-designer#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
   * Ensure that your operating system is 64-bit Windows 10 or later.
   * Download, install, and configure the [Arrow Flight SQL ODBC driver](/client-applications/drivers/arrow-flight-sql-odbc-driver).
   * If you want to authenticate to Dremio by using a personal access token (PAT), rather than by using a password, generate a PAT. See [Personal Access Tokens](/security/authentication/personal-access-tokens) for the steps.
 
 
-## Selecting Dremio as a Data Source[​](/client-applications/alteryx-designer#selecting-dremio-as-a-data-source "Direct link to Selecting Dremio as a Data Source")
+## Selecting Dremio as a Data Source​
   1. In Alteryx Designer, select **File** &gt; **New Workflow**.
   2. Drag the **Input Data** tool from the tool palette on to the workflow canvas.
   3. In the configuration properties for Input Data, click the arrow on the right side of the **Connect a File or Database** field.
@@ -48,13 +49,13 @@ You can now browse and query datasets that are in Dremio.
 If you are using an Arrow Flight SQL ODBC driver, it only supports a single connection, and to load multiple tables (or datasets), you should do it sequentially. Otherwise, if you try to do it in parallel, the driver raises an error.
 Was this page helpful?
 [Previous Connect Client Applications](/client-applications)[Next Apache Superset](/client-applications/superset)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Connect Client Applications](/client-applications)[Next Apache Superset](/client-applications/superset)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Falteryx-designer%2F&_biz_t=1777950345368&_biz_i=Alteryx%20Designer%20%7C%20Dremio%20Documentation&_biz_n=47&rnd=977280&cdn_o=a&_biz_z=1777950345369)
+!

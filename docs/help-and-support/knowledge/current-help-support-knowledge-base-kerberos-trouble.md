@@ -1,5 +1,6 @@
 ---
 url: /help-support/knowledge-base/kerberos-trouble
+slug: /help-support/knowledge-base/kerberos-trouble
 title: "Kerberos Setup and Troubleshooting | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64228.335485041
@@ -14,7 +15,7 @@ Version: current [26.x]
 On this page
 # Kerberos Setup and Troubleshooting
 This section provides a Knowledge Base article on Kerberos setup and troubleshooting.
-## Dremio Configuration for a Kerberized Cluster[​](/help-support/knowledge-base/kerberos-trouble/#dremio-configuration-for-a-kerberized-cluster "Direct link to Dremio Configuration for a Kerberized Cluster")
+## Dremio Configuration for a Kerberized Cluster[​](/help-support/knowledge-base/kerberos-trouble/)
 When a customer runs a kerberized cluster (like CDH, HDP), the following configuration must be done on the Dremio-side. This configuration is required to add a Kerberized HDFS or Hive data source.
   1. Create a Kerberos principal for the Dremio service user. This is the user that runs Dremio on the Hadoop cluster.
   2. Generate a Keytab file for the Dremio Kerberos principal.
@@ -41,7 +42,7 @@ Properties to add to core-site.xml file
 
 
 &gt; Even if impersonation is turned off and the service user Dremio is running and present on all the Hadoop nodes, Kerberos by default turns on impersonation so proxy settings have to be defined.
-## Issue #1[​](/help-support/knowledge-base/kerberos-trouble/#issue-1 "Direct link to Issue #1")
+## Issue #1[​](/help-support/knowledge-base/kerberos-trouble/)
 _**Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)**_
 _**Resolution:**_ The Keytab either has wrong permissions or ownership. Even the keytab has the right permission, check all directories above the file recursively and make sure the owner (usually Dremio service user) can read the file.
 Issue #1
@@ -138,7 +139,7 @@ Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism 
 
 ```
 
-## Issue #2[​](/help-support/knowledge-base/kerberos-trouble/#issue-2 "Direct link to Issue #2")
+## Issue #2[​](/help-support/knowledge-base/kerberos-trouble/)
 _**java.io.IOException: Can't get Master Kerberos principal for use as renewer**_
 _**Resolution**_ : Symlink/Copy the following xml files from the Hadoop nodes to the Dremio configuration directory:  
 core-site.xml, yarn-site.xml, hdfs-site.xml, mapred-site.xml.
@@ -159,7 +160,7 @@ Caused by: java.io.IOException: Can't get Master Kerberos principal for use as r
 
 ```
 
-## Issue #3[​](/help-support/knowledge-base/kerberos-trouble/#issue-3 "Direct link to Issue #3")
+## Issue #3[​](/help-support/knowledge-base/kerberos-trouble/)
 _**(java.io.IOException) org.apache.hadoop.security.authentication.client.AuthenticationException: Authentication failed, status: 403, message: Forbidden org.apache.hadoop.crypto.key.kms.KMSClientProvider.createConnection():551**_
 _**Resolution:**_ From the stack, it is evident that the in addition to the Kerberized HDFS cluster, it is also encrypted. To access an encrypted HDFS cluster proxy settings need to be entered into kms-site.xml
 Settings for kms-site.xml file
@@ -487,7 +488,7 @@ com.dremio.sabot.task.slicing.SlicingThread(SlicingThread.java:71)
 
 ```
 
-## Issue #4[​](/help-support/knowledge-base/kerberos-trouble/#issue-4 "Direct link to Issue #4")
+## Issue #4[​](/help-support/knowledge-base/kerberos-trouble/)
 _**(java.io.IOException) org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytab: Login failure for**_
 _**Resolution:**_ The KDC location is stored in the krb5.conf folder. Java, by default, looks for this file in the locations shown in the table below dependent upon the OS.  
 | Operating System  | Default Location  |  
@@ -537,17 +538,17 @@ Caused by: sun.security.krb5.KrbException: Generic error (description in e-text)
 
 ```
 
-## Issue #5[​](/help-support/knowledge-base/kerberos-trouble/#issue-5 "Direct link to Issue #5")
+## Issue #5[​](/help-support/knowledge-base/kerberos-trouble/)
 _**Connecting to a secured Hive cluster and an unsecured Hive cluster at the same time does not work**_
 This might not be possible because of the security settings in core-site.xml. Details will be completed once tested.
 Was this page helpful?
 [Previous Kubernetes Troubleshooting](/help-support/knowledge-base/k8s-trouble)[Next Enabling Dremio Ranger SSL with Kerberos](/help-support/knowledge-base/ranger-ssl-kerberos)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Kubernetes Troubleshooting](/help-support/knowledge-base/k8s-trouble)[Next Enabling Dremio Ranger SSL with Kerberos](/help-support/knowledge-base/ranger-ssl-kerberos)

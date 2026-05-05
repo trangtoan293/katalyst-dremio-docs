@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/jobs
+slug: /reference/sql/system-tables/jobs
 title: "SYS.JOBS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.57471175
@@ -23,11 +24,11 @@ FROM sys.jobs
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/jobs#example-output "Direct link to Example Output")  
+## Example Output​  
 | job_id  | status  | query_type  | user_name  | queried_datasets  | scanned_datasets  | attempt_count  | submitted_ts  | attempt_started_ts  | metadata_retrieval_ts  | planning_start_ts  | query_enqueued_ts  | engine_start_ts  | execution_planning_ts  | execution_start_ts  | final_state_ts  | submitted_epoch_millis  | attempt_started_epoch_millis  | metadata_retrieval_epoch_millis  | planning_start_epoch_millis  | query_enqueued_epoch_millis  | engine_start_epoch_millis  | execution_planning_epoch_millis  | execution_start_epoch_millis  | final_state_epoch_millis  | planner_estimated_cost  | rows_scanned  | bytes_scanned  | rows_returned  | bytes_returned  | accelerated  | queue_name  | engine  | error_msg  | query  | is_profile_incomplete  | execution_allocated_bytes  | execution_cpu_time_millis  | rule_name  | rule_content  | rule_action  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 1d3091b1-d0be-0169-8ace-e43f562c7000  | RUNNING  | UI_RUN  | dremio  | [sys.jobs]  | _empty text_  | 1  | 2022-07-14 01:15:57.782  | 2022-07-14 01:15:57.781  | 2022-07-14 01:15:57.782  | 2022-07-14 01:15:57.789  | 2022-07-14 01:15:57.840  | 2022-07-14 01:15:57.840  | 2022-07-14 01:15:57.876  | 2022-07-14 01:15:57.881  | 1970-01-01 00:00:00.000  | 1657761357782  | 1657761357781  | 1657761357782  | 1657761357789  | 1657761357840  | 1657761357840  | 1657761357876  | 1657761357881  | 0  | 3.8150000035E9  | 0  | 0  | 0  | 0  | false  | Low Cost User Queries  | _empty text_  | _empty text_  | SELECT * FROM sys.jobs  | false  | 0  | 0  | UI Previews  | query_type() = 'UI Previews'  | PLACE  |  
-## Columns[​](/reference/sql/system-tables/jobs#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | job_id  | varchar  | The UUID to identify the job.  |  
@@ -76,13 +77,13 @@ Enum: `ACCELERATOR_CREATE`, `ACCELERATOR_DROP`, `ACCELERATOR_EXPLAIN`, `FLIGHT`,
 | rule_action  | varchar  | The `REJECT` or `PLACE` action taken by the routing rule (available as of Dremio 25.2.19+).  |  
 Was this page helpful?
 [Previous SYS.ENGINES](/reference/sql/system-tables/engines)[Next SYS.JOBS_RECENT](/reference/sql/system-tables)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.ENGINES](/reference/sql/system-tables/engines)[Next SYS.JOBS_RECENT](/reference/sql/system-tables)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fjobs%2F&_biz_t=1777950692559&_biz_i=SYS.JOBS%20%7C%20Dremio%20Documentation&_biz_n=719&rnd=155594&cdn_o=a&_biz_z=1777950692560)
+!

@@ -27,8 +27,8 @@ const FeatureGroups: FeatureGroup[] = [
     ),
     links: [
       {label: 'Get Started with Dremio', href: '/get-started'},
-      {label: 'Deploying to Kubernetes', href: '/get-started/current-get-started-kubernetes-trial'},
-      {label: 'Quick Tour of the Console', href: '/get-started/current-get-started-quick-tour'},
+      {label: 'Deploying to Kubernetes', href: '/get-started/kubernetes-trial'},
+      {label: 'Quick Tour of the Console', href: '/get-started/quick_tour'},
     ],
   },
   {
@@ -43,8 +43,8 @@ const FeatureGroups: FeatureGroup[] = [
     ),
     links: [
       {label: 'Manage Sources', href: '/data-sources'},
-      {label: 'Amazon S3', href: '/data-sources/object-storage/current-data-sources-object-s3'},
-      {label: 'Azure Storage', href: '/data-sources/object-storage/current-data-sources-object-azure-storage'},
+      {label: 'Amazon S3', href: '/data-sources/object/s3'},
+      {label: 'Azure Storage', href: '/data-sources/object/azure-storage'},
     ],
   },
   {
@@ -59,8 +59,8 @@ const FeatureGroups: FeatureGroup[] = [
     ),
     links: [
       {label: 'Connect Client Applications to Dremio', href: '/client-applications'},
-      {label: 'Microsoft Power BI', href: '/client-applications/general/current-client-applications-microsoft-power-bi'},
-      {label: 'Tableau', href: '/client-applications/bi-tools/current-client-applications-tableau'},
+      {label: 'Microsoft Power BI', href: '/client-applications/microsoft-power-bi'},
+      {label: 'Tableau', href: '/client-applications/tableau'},
     ],
   },
   {
@@ -75,9 +75,9 @@ const FeatureGroups: FeatureGroup[] = [
       </svg>
     ),
     links: [
-      {label: 'Discover Data', href: '/data-products/discover/current-data-products-discover'},
-      {label: 'Develop Data Products', href: '/data-products/general/current-data-products-develop'},
-      {label: 'Accelerate Queries', href: '/reflections'},
+      {label: 'Discover Data', href: '/data-products/discover'},
+      {label: 'Develop Data Products', href: '/data-products/develop'},
+      {label: 'Accelerate Queries', href: '/acceleration'},
     ],
   },
   {
@@ -90,9 +90,9 @@ const FeatureGroups: FeatureGroup[] = [
       </svg>
     ),
     links: [
-      {label: 'Well-Architected Framework', href: '/administration'},
-      {label: 'Security & Compliance', href: '/security/compliance/current-security-compliance'},
-      {label: 'Monitoring', href: '/administration/monitoring/current-admin-monitoring'},
+      {label: 'Well-Architected Framework', href: '/admin'},
+      {label: 'Security & Compliance', href: '/security/compliance'},
+      {label: 'Monitoring', href: '/admin/monitoring'},
     ],
   },
   {
@@ -105,9 +105,9 @@ const FeatureGroups: FeatureGroup[] = [
       </svg>
     ),
     links: [
-      {label: 'API Reference', href: '/reference/api/current-reference-api-catalog'},
-      {label: 'SQL Reference', href: '/reference/sql-functions/current-reference-sql-sql-functions-all-functions'},
-      {label: 'Data Types', href: '/reference/data-types/current-reference-sql-data-types'},
+      {label: 'API Reference', href: '/reference/api/catalog'},
+      {label: 'SQL Reference', href: '/reference/sql/sql-functions'},
+      {label: 'Data Types', href: '/reference/sql/data-types'},
     ],
   },
 ];

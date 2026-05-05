@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/tables
+slug: /reference/sql/system-tables/tables
 title: "SYS.\"TABLES\" | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64378.231571833
@@ -24,7 +25,7 @@ FROM sys."tables"
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/tables#example-output "Direct link to Example Output")  
+## Example Output​  
 | table_id  | source_id  | table_name  | schema_id  | path  | tag  | type  | format_type  | approx_statistics_allowed  | created  | owner_id  | owner_type  | masking_policies  | row_access_policies  | clustering_keys  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 5d78cc0a-dc43-0319-ad01-f4a4990ccada  | 6ae7ed51-449b-4826-8745-af31602d1f90  | PoliceIncidents  | 063ca5a3-be0e-766c-8f6f-d59ada26b0cf  | [testsource, FolderA, v1]  | 00001-983af174-4d55-4556-b36f-fde125672f1e  | NESSIE_TABLE  | ICEBERG  | false  | 2023-12-01 17:23:20.204  | $unowned$  | $unowned$  | []  | []  | _empty text_  |  
@@ -35,7 +36,7 @@ FROM sys."tables"
 | 448136c0-65d0-4182-af42-3f2015acec1d  | 7c8f019b-2e48-4d40-8a2f-038dae416dc4  | VIEWS  | _empty text_  | [INFORMATION_SCHEMA, VIEWS]  | DzR2AE93Xi0=  | SYSTEM_TABLE  | _empty text_  | false  | 2021-12-08 15:47:51.987  | $unowned$  | $unowned$  | []  | []  | _empty text_  |  
 | eb5e9ee9-dbd7-40a8-b48a-5aa0170383fd  | bd02d9ed-9a1e-4fba-b59b-d0d74b6d7232  | NYC-taxi-trips  | 8e7d637e-dc4f-4372-83cc-08e51bc81cc7  | [Samples, samples.dremio.com, NYC-taxi-trips]  | 1wa3yogWHHM=  | PHYSICAL_DATASET  | PARQUET  | false  | 2021-12-10 06:56:55.364  | $unowned$  | $unowned$  | [function_name: ""@dremio".long_dist" args: "trip_distance" column_name: "distance_mi"]  | []  | _empty text_  |  
 | a0f0edb3-b333-4c8e-880c-2d89648113f9  | bd02d9ed-9a1e-4fba-b59b-d0d74b6d7232  | zips.json  | 8e7d637e-dc4f-4372-83cc-08e51bc81cc7  | [Samples, samples.dremio.com, zips.json]  | rFfpVH9umtQ=  | PHYSICAL_DATASET  | JSON  | false  | 2022-01-05 22:10:42.528  | $unowned$  | $unowned$  | []  | []  | _empty text_  |  
-## Columns[​](/reference/sql/system-tables/tables#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | table_id  | varchar  | The UUID to identify the table.  |  
@@ -58,12 +59,12 @@ Enum: USER_OWNER, ROLE_OWNER, $unowned$  |
 | clustering_keys  | varchar  | The clustering columns defined in the table DDL.  |  
 Was this page helpful?
 [Previous SYS.ROLES](/reference/sql/system-tables/roles)[Next SYS.TIMEZONE_NAMES](/reference/sql/system-tables/timezone-names)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.ROLES](/reference/sql/system-tables/roles)[Next SYS.TIMEZONE_NAMES](/reference/sql/system-tables/timezone-names)

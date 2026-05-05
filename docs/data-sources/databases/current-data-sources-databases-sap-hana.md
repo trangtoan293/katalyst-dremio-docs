@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/sap-hana
+slug: /data-sources/databases/sap-hana
 title: "SAP HANA | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64040.541022833
@@ -14,13 +15,13 @@ Version: current [26.x]
 On this page
 # SAP HANA Enterprise
 Dremio supports connecting to SAP HANA directly via username and password. The connector was tested against 
-## Requirements[​](/data-sources/databases/sap-hana#requirements "Direct link to Requirements")
+## Requirements​
 To connect to SAP HANA, you need:
   * SAP HANA 2.0
   * SAP username and password
 
 
-## Dremio Configuration[​](/data-sources/databases/sap-hana#dremio-configuration "Direct link to Dremio Configuration")
+## Dremio Configuration​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select the source.
 The new source dialog box appears, which contains the following tabs:
@@ -32,7 +33,7 @@ The new source dialog box appears, which contains the following tabs:
 Refer to the following sections for guidance on how to edit each tab.
 
 
-### General[​](/data-sources/databases/sap-hana#general "Direct link to General")
+### General​
 To configure the source connection:
   1. For **Name** , enter the name to identify the database in Dremio. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
 
@@ -52,14 +53,14 @@ To configure the source connection:
        * [Azure Key Vault](/security/secrets-management/azure-key-vault): Provide the URI for the Azure Key Vault secret that stores the Vertica password. The URI format is `https://`vault_name`.vault.azure.net/secrets/`secret_name`` (for example, `https://myvault.vault.azure.net/secrets/mysecret`).
 To use Azure Key Vault as your application secret store, you must:
          * [Deploy Dremio on Azure](/get-started/cluster-deployments/deployment-models/azure-deployments).
-         * Complete the [Requirements for Authenticating with Azure Key Vault](/data-sources/object/azure-storage#requirements-for-authenticating-with-azure-key-vault).
-It is not necessary to restart the Dremio coordinator when you rotate secrets stored in Azure Key Vault. Read [Requirements for Secrets Rotation](/data-sources/object/azure-storage#requirements-for-secrets-rotation) for more information.
+         * Complete the [Requirements for Authenticating with Azure Key Vault](/data-sources/object/azure-storage).
+It is not necessary to restart the Dremio coordinator when you rotate secrets stored in Azure Key Vault. Read [Requirements for Secrets Rotation](/data-sources/object/azure-storage) for more information.
        * [AWS Secrets Manager](/security/secrets-management/aws-secrets-manager): Provide the Amazon Resource Name (ARN) for the AWS Secrets Manager secret that holds the password, which is available in the AWS web console or using command line tools.
        * [HashiCorp Vault](/security/secrets-management/hashicorp-vault): Choose the HashiCorp secrets engine you're using from the dropdown menu and enter the secret reference for the password in the correct format in the provided field.
 Sources containing a large number of files or tables may take longer to be added. During this time, the source name is grayed out and shows a spinner icon, indicating the source is being added. Once complete, the source becomes accessible.
 
 
-### Advanced Options[​](/data-sources/databases/sap-hana#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 Set the advanced configuration options for your database:
   * **Record fetch size** : Number of records to fetch at once. Set to `0` to have Dremio automatically decide. By default, this is set to `10`.
   * **Maximum idle connections** : The total number of connections allowed to be idle at a given time. By default, this is set to `8`.
@@ -69,7 +70,7 @@ Set the advanced configuration options for your database:
   * **Connection Properties** : Connection properties and values for the data source.
 
 
-### Reflection Refresh[​](/data-sources/databases/sap-hana#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
 Set the policy that controls how often Reflections are refreshed or expired, using the following options:
   * **Never refresh** : Select to prevent automatic Reflection refresh; otherwise, the default is to refresh automatically.
   * **Refresh every** : How often to refresh Reflections, specified in hours, days or weeks. This option is ignored if **Never refresh** is selected.
@@ -78,7 +79,7 @@ Set the policy that controls how often Reflections are refreshed or expired, usi
   * **Expire after** : The time limit after which Reflections expire and are removed from Dremio, specified in hours, days or weeks. This option is ignored if **Never expire** is selected.
 
 
-### Metadata[​](/data-sources/databases/sap-hana#metadata "Direct link to Metadata")
+### Metadata​
 Set the following metadata options:
   * **Remove dataset definitions if underlying data is unavailable** : Checked by default. If this box is _not_ checked and the underlying files under a folder are removed or the folder/source is not accessible, Dremio does not remove the dataset definitions. This option is useful in cases when files are temporarily deleted and put back in place with new sets of files.
   * **Data Discovery** : Set the time interval for fetching top-level source object names such as databases and tables. You can choose to set the **Fetch every** frequency to fetch object names in minutes, hours, days, or weeks. The default frequency to fetch object names is 1 hour.
@@ -88,7 +89,7 @@ Set the following metadata options:
     * **Expire after** : Set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.
 
 
-### Privileges[​](/data-sources/databases/sap-hana#privileges "Direct link to Privileges")
+### Privileges​
 To grant privileges to specific users or roles:
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
@@ -96,7 +97,7 @@ To grant privileges to specific users or roles:
 
 
 See [Access Control](/security/rbac) for additional information about privileges.
-## Predicate Pushdowns[​](/data-sources/databases/sap-hana#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Dremio delegates the execution of these expressions and functions to the database being queried, often dramatically improving query performance. It can also offload entire SQL queries that include one or more of these expressions and functions.
 `%`, `*`, `+`, `-`, `/`  
 `<`, `<=`, `<>`, `=`, `>`, `>=`, `!=`  
@@ -187,8 +188,8 @@ UCASE
 UPPER  
 YEAR  
 
-## Data Source Management[​](/data-sources/databases/sap-hana#data-source-management "Direct link to Data Source Management")
-### Updating the Source[​](/data-sources/databases/sap-hana#updating-the-source "Direct link to Updating the Source")
+## Data Source Management​
+### Updating the Source​
 To update the source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the dropdown.
@@ -196,7 +197,7 @@ To update the source:
   4. Click **Save**.
 
 
-### Deleting the Source[​](/data-sources/databases/sap-hana#deleting-the-source "Direct link to Deleting the Source")
+### Deleting the Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the `ADMIN` role can delete the source.
 To delete the source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -209,17 +210,17 @@ To delete the source, perform these steps:
   * Sources containing a large number of files or tables may take longer to be removed. During this time, the source name is grayed out and shows a spinner icon, indicating the source is being removed. Once complete, the source disappears.
 
 
-## Querying the SAP HANA Source Directly[​](/data-sources/databases/sap-hana#querying-the-sap-hana-source-directly "Direct link to Querying the SAP HANA Source Directly")
+## Querying the SAP HANA Source Directly​
 Dremio users can run pass queries through Dremio to run on your database. Doing so can sometimes decrease query execution times. For more information, see [Querying Relational-Database Sources Directly](/help-support/advanced-topics/external-queries).
 Was this page helpful?
 [Previous PostgreSQL](/data-sources/databases/postgres)[Next Snowflake](/data-sources/databases/snowflake)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous PostgreSQL](/data-sources/databases/postgres)[Next Snowflake](/data-sources/databases/snowflake)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Fsap-hana%2F&_biz_t=1777950360632&_biz_i=SAP%20HANA%20%7C%20Dremio%20Documentation&_biz_n=90&rnd=529496&cdn_o=a&_biz_z=1777950360632)
+!

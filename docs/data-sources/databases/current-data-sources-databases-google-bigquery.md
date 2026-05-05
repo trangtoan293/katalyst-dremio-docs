@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/google-bigquery
+slug: /data-sources/databases/google-bigquery
 title: "Google BigQuery | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64040.320204958
@@ -14,22 +15,22 @@ Version: current [26.x]
 On this page
 # Google BigQuery Enterprise
 Dremio supports connecting to Google BigQuery as an external source. The connector uses Google service account keys for authentication. To learn more about creating and managing service account keys, see 
-## Requirements[​](/data-sources/databases/google-bigquery#requirements "Direct link to Requirements")
+## Requirements​
 To connect to Google BigQuery, you need:
   * Google BigQuery
   * Source configuration for authentication
 
 
-## User Impersonation[​](/data-sources/databases/google-bigquery#user-impersonation "Direct link to User Impersonation")
+## User Impersonation​
 Dremio supports authentication using Google Workforce Identity Pool impersonation, which allows external identities to securely access BigQuery datasets without requiring a dedicated Google service account for each user.
 Reflections are not supported on data sources with user impersonation enabled to ensure that all security and governance policies defined in the underlying data source are enforced. Reflections created prior to enabling user impersonation must be manually dropped, as they will fail to refresh once impersonation is active.
-### Prerequisites[​](/data-sources/databases/google-bigquery#prerequisites "Direct link to Prerequisites")
+### Prerequisites​
 Before configuring a Bigquery source with user impersonation, ensure you have:
   * Access to a Google Cloud Organization
   * An Organization Admin role (`roles/iam.organizationAdmin`) or Workforce Pool Admin role (`roles/iam.workforcePoolAdmin`) within that organization
 
 
-### Configure Google Workforce Identity Pool[​](/data-sources/databases/google-bigquery#configure-google-workforce-identity-pool "Direct link to Configure Google Workforce Identity Pool")
+### Configure Google Workforce Identity Pool​
 In the following steps, you will configure Google Cloud to recognize and verify assertions (signed JWTs) sent from Dremio. Google uses Dremio’s public key to validate the digital signatures of these assertions. Creating a Workforce Identity Pool establishes trust between Google Cloud and Dremio for OAuth-based authentication.
 To allow federated identities from your Workforce Identity Pool to execute BigQuery jobs, you must assign the BigQuery Job User role (`roles/bigquery.jobUser`) at the project level. This allows federated users to submit and manage their own query and load jobs within the project.
 To set up your Google Workforce Identity Pool:
@@ -123,7 +124,7 @@ gcloud projects add-iam-policy-binding <project-id> \
 
 
 
-## Dremio Configuration[​](/data-sources/databases/google-bigquery#dremio-configuration "Direct link to Dremio Configuration")
+## Dremio Configuration​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select the source.
 The new source dialog box appears, which contains the following tabs:
@@ -135,7 +136,7 @@ The new source dialog box appears, which contains the following tabs:
 Refer to the following sections for guidance on how to edit each tab.
 
 
-### General[​](/data-sources/databases/google-bigquery#general "Direct link to General")
+### General​
 To configure the source connection:
   1. For **Name** , enter the name to identify the database in Dremio. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
 
@@ -159,7 +160,7 @@ b. If you choose **Workforce Identity Federation** , complete the following:
 
 
 Sources containing a large number of files or tables may take longer to be added. During this time, the source name is grayed out and shows a spinner icon, indicating the source is being added. Once complete, the source becomes accessible.
-### Advanced Options[​](/data-sources/databases/google-bigquery#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 Set the advanced configuration options for your database:
   * **Record fetch size** : Number of records to fetch at once. Set to `0` to have Dremio automatically decide. By default, this is set to `10`.
   * **Maximum idle connections** : The total number of connections allowed to be idle at a given time. By default, this is set to `8`.
@@ -169,7 +170,7 @@ Set the advanced configuration options for your database:
   * **Connection Properties** : Connection properties and values for the data source.
 
 
-### Reflection Refresh[​](/data-sources/databases/google-bigquery#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
 Set the policy that controls how often Reflections are refreshed or expired, using the following options:
   * **Never refresh** : Select to prevent automatic Reflection refresh; otherwise, the default is to refresh automatically.
   * **Refresh every** : How often to refresh Reflections, specified in hours, days or weeks. This option is ignored if **Never refresh** is selected.
@@ -178,7 +179,7 @@ Set the policy that controls how often Reflections are refreshed or expired, usi
   * **Expire after** : The time limit after which Reflections expire and are removed from Dremio, specified in hours, days or weeks. This option is ignored if **Never expire** is selected.
 
 
-### Metadata[​](/data-sources/databases/google-bigquery#metadata "Direct link to Metadata")
+### Metadata​
 Set the following metadata options:
   * **Remove dataset definitions if underlying data is unavailable** : Checked by default. If this box is _not_ checked and the underlying files under a folder are removed or the folder/source is not accessible, Dremio does not remove the dataset definitions. This option is useful in cases when files are temporarily deleted and put back in place with new sets of files.
   * **Data Discovery** : Set the time interval for fetching top-level source object names such as databases and tables. You can choose to set the **Fetch every** frequency to fetch object names in minutes, hours, days, or weeks. The default frequency to fetch object names is 1 hour.
@@ -188,7 +189,7 @@ Set the following metadata options:
     * **Expire after** : Set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.
 
 
-### Privileges[​](/data-sources/databases/google-bigquery#privileges "Direct link to Privileges")
+### Privileges​
 To grant privileges to specific users or roles:
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
@@ -196,7 +197,7 @@ To grant privileges to specific users or roles:
 
 
 See [Access Control](/security/rbac) for additional information about privileges.
-## Predicate Pushdowns[​](/data-sources/databases/google-bigquery#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Dremio delegates the execution of these expressions and functions to the database being queried, often dramatically improving query performance. It can also offload entire SQL queries that include one or more of these expressions and functions.
 `*`, `+`, `-`, `/`, `%`  
 `<`, `<=`, `<>`, `=`, `>`, `>=`, `!=`  
@@ -302,8 +303,8 @@ Dremio delegates the execution of these expressions and functions to the databas
 `UPPER`  
 `YEAR`  
 
-## Data Source Management[​](/data-sources/databases/google-bigquery#data-source-management "Direct link to Data Source Management")
-### Updating the Source[​](/data-sources/databases/google-bigquery#updating-the-source "Direct link to Updating the Source")
+## Data Source Management​
+### Updating the Source​
 To update the source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the dropdown.
@@ -311,7 +312,7 @@ To update the source:
   4. Click **Save**.
 
 
-### Deleting the Source[​](/data-sources/databases/google-bigquery#deleting-the-source "Direct link to Deleting the Source")
+### Deleting the Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the `ADMIN` role can delete the source.
 To delete the source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -324,17 +325,17 @@ To delete the source, perform these steps:
   * Sources containing a large number of files or tables may take longer to be removed. During this time, the source name is grayed out and shows a spinner icon, indicating the source is being removed. Once complete, the source disappears.
 
 
-## Querying the Google BigQuery Source Directly[​](/data-sources/databases/google-bigquery#querying-the-google-bigquery-source-directly "Direct link to Querying the Google BigQuery Source Directly")
+## Querying the Google BigQuery Source Directly​
 Dremio users can run pass queries through Dremio to run on your database. Doing so can sometimes decrease query execution times. For more information, see [Querying Relational-Database Sources Directly](/help-support/advanced-topics/external-queries).
 Was this page helpful?
 [Previous Elasticsearch](/data-sources/databases/elasticsearch)[Next IBM Db2](/data-sources/databases/ibm-db2)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Elasticsearch](/data-sources/databases/elasticsearch)[Next IBM Db2](/data-sources/databases/ibm-db2)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Fdremio%2F&_biz_t=1777950359817&_biz_i=Dremio%20Cluster%20%7C%20Dremio%20Documentation&_biz_n=84&rnd=579102&cdn_o=a&_biz_z=1777950359888)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Fgoogle-bigquery%2F&_biz_t=1777950359888&_biz_i=Google%20BigQuery%20%7C%20Dremio%20Documentation&_biz_n=85&rnd=262062&cdn_o=a&_biz_z=1777950359888)
+!!

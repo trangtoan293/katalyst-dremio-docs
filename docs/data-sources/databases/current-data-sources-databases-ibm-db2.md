@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/ibm-db2
+slug: /data-sources/databases/ibm-db2
 title: "IBM Db2 | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64040.195747666
@@ -15,14 +16,14 @@ On this page
 # IBM Db2
 You can add Db2 databases as sources to Dremio.
 See [IBM Db2 Data Types](/reference/sql/data-types/mappings/db2) for information about mapping to Dremio data types.
-## Limitations[​](/data-sources/databases/ibm-db2#limitations "Direct link to Limitations")
+## Limitations​
 Only IBM Db2 for Linux, UNIX, and Windows is supported.
-## Configuring IBM Db2 as a Source[​](/data-sources/databases/ibm-db2#configuring-ibm-db2-as-a-source "Direct link to Configuring IBM Db2 as a Source")
+## Configuring IBM Db2 as a Source​
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select **IBM Db2**.
 
 
-### General Options[​](/data-sources/databases/ibm-db2#general-options "Direct link to General Options")
+### General Options​
   1. In the **Name** field, specify the name by which you want the Db2 source to appear in the **Databases** section. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
   2. Under **Connection** , follow these steps:
     1. In the **Host** field, specify the hostname or IP address of the database to connect to.
@@ -35,14 +36,14 @@ Only IBM Db2 for Linux, UNIX, and Windows is supported.
      * [HashiCorp Vault](/security/secrets-management/hashicorp-vault): Select your HashiCorp secrets engine from the dropdown and enter the password reference in the required format.
 
 
-### Advanced Options[​](/data-sources/databases/ibm-db2#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 On the Advanced Options page, you can set values for these non-required options:  
 | Option  | Description  |  
 | --- | --- |  
 | **Maximum Idle Connections**  | The total number of connections allowed to be idle at a given time. The default maximum idle connections is 8.  |  
 | **Connection Idle Time**  | The amount of time (in seconds) allowed for a connection to remain idle before the connection is terminated. The default connection idle time is 60 seconds.  |  
 | **Query Timeout**  | The amount of time (in seconds) allowed to wait for the results of a query. If this time expires, the connection being used is returned to an idle state.  |  
-### Reflection Refresh Options[​](/data-sources/databases/ibm-db2#reflection-refresh-options "Direct link to Reflection Refresh Options")
+### Reflection Refresh Options​
 On the Reflection Refresh page, set the policy that controls how often Reflections are scheduled to be refreshed automatically, as well as the time limit after which Reflections expire and are removed.   
   
   
@@ -52,14 +53,14 @@ On the Reflection Refresh page, set the policy that controls how often Reflectio
 | **Refresh every**  | How often to refresh Reflections, specified in hours, days or weeks. This option is ignored if **Never refresh** is selected.  |  
 | **Never expire**  | Select to prevent Reflections from expiring, default is to automatically expire after the time limit below.  |  
 | **Expire after**  | The time limit after which Reflections expire and are removed from Dremio, specified in hours, days or weeks. This option is ignored if **Never expire** is selected.  |  
-### Metadata Options[​](/data-sources/databases/ibm-db2#metadata-options "Direct link to Metadata Options")
+### Metadata Options​
 On the Metadata page, you can configure settings to refresh metadata and handle datasets.
-#### Dataset Handling[​](/data-sources/databases/ibm-db2#dataset-handling "Direct link to Dataset Handling")
+#### Dataset Handling​
 These are the optional **Dataset Handling** parameters.  
 | Parameter  | Description  |  
 | --- | --- |  
 | **Remove dataset definitions if underlying data is unavailable**  | By default, Dremio removes dataset definitions if underlying data is unavailable. Useful when files are temporarily deleted and added back in the same location with new sets of files.  |  
-#### Metadata Refresh[​](/data-sources/databases/ibm-db2#metadata-refresh "Direct link to Metadata Refresh")
+#### Metadata Refresh​
 These are the optional **Metadata Refresh** parameters:
   * **Dataset Discovery** : The refresh interval for fetching top-level source object names such as databases and tables. Set the time interval using this parameter.  
 | Parameter  | Description  |  
@@ -73,22 +74,22 @@ These are the optional **Metadata Refresh** parameters:
 | **Expire after**  | You can choose to set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.  |  
 
 
-### Privileges[​](/data-sources/databases/ibm-db2#privileges "Direct link to Privileges")
+### Privileges​
 On the Privileges tab, you can grant privileges to specific users or roles. See [Access Controls](/security/rbac) for additional information about privileges. All privileges are optional.
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
   2. For the users or roles in the **USERS/ROLES** table, toggle the checkmark for each privilege you want to grant on the Dremio source that is being created.
   3. Click **Save** after setting the configuration.
 
 
-## Updating an IBM Db2 Source[​](/data-sources/databases/ibm-db2#updating-an-ibm-db2-source "Direct link to Updating an IBM Db2 Source")
+## Updating an IBM Db2 Source​
 To update an IBM Db2 source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
-  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see [Configuring IBM Db2 as a Source](/data-sources/databases/ibm-db2#configuring-ibm-db2-as-a-source).
+  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see Configuring IBM Db2 as a Source.
   4. Click **Save**.
 
 
-## Deleting an IBM Db2 Source[​](/data-sources/databases/ibm-db2#deleting-an-ibm-db2-source "Direct link to Deleting an IBM Db2 Source")
+## Deleting an IBM Db2 Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 To delete an IBM Db2 source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -98,7 +99,7 @@ To delete an IBM Db2 source, perform these steps:
 
 
 Deleting a source causes all downstream views that depend on objects in the source to break.
-## Predicate Pushdowns[​](/data-sources/databases/ibm-db2#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Dremio delegates the execution of these expressions and functions to the database being queried, often dramatically improving query performance. It can also offload entire SQL queries that include one or more of these expressions and functions.
 `||`, `AND`, `OR`  
 `=`, `+`, `-`, `/`, `*`  
@@ -177,17 +178,17 @@ TRUNC
 TRUNCATE  
 UPPER  
 
-## Running Queries Directly on IBM Db2 Through Dremio[​](/data-sources/databases/ibm-db2#running-queries-directly-on-ibm-db2-through-dremio "Direct link to Running Queries Directly on IBM Db2 Through Dremio")
+## Running Queries Directly on IBM Db2 Through Dremio​
 Dremio users can run pass queries through Dremio to run on IBM Db2. Doing so can sometimes decrease query execution times. For more information, see [Querying Relational-Database Sources Directly](/help-support/advanced-topics/external-queries).
 Was this page helpful?
 [Previous Google BigQuery](/data-sources/databases/google-bigquery)[Next Microsoft Azure Data Explorer](/data-sources/databases/azure-data-explorer)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Google BigQuery](/data-sources/databases/google-bigquery)[Next Microsoft Azure Data Explorer](/data-sources/databases/azure-data-explorer)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Fibm-db2%2F&_biz_t=1777950359761&_biz_i=IBM%20Db2%20%7C%20Dremio%20Documentation&_biz_n=83&rnd=864145&cdn_o=a&_biz_z=1777950359762)
+!

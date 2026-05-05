@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/REGEXP_LIKE
+slug: /reference/sql/sql-functions/functions/REGEXP_LIKE
 title: "REGEXP_LIKE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64345.025449708
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions), [Regular Expressions](/reference/sql/sql-functions)
 # REGEXP_LIKE
 Returns whether a string matches a regular expression.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### REGEXP_LIKE(_input_ string, _regex_ string) → boolean[​](/reference/sql/sql-functions#regexp_likeinput-string-regex-string--boolean "Direct link to regexp_likeinput-string-regex-string--boolean")
+## Syntax
+### REGEXP_LIKE(_input_ string, _regex_ string) → boolean[​](/reference/sql/sql-functions)
   * input: The string to test.
   * regex: The Perl-compatible regular expression (PCRE) to use for the test. Must be a literal.
 
@@ -47,16 +48,16 @@ LIMIT 5
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 This function is identical to the function [`REGEXP_MATCHES`](/reference/sql/sql-functions).
 Was this page helpful?
 [Previous REGEXP_EXTRACT](/reference/sql/sql-functions)[Next REGEXP_MATCHES](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous REGEXP_EXTRACT](/reference/sql/sql-functions)[Next REGEXP_MATCHES](/reference/sql/sql-functions)

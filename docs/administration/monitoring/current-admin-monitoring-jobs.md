@@ -1,5 +1,6 @@
 ---
 url: /admin/monitoring/jobs
+slug: /admin/monitoring/jobs
 title: "Viewing Jobs | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64025.554668041
@@ -15,16 +16,16 @@ On this page
 # Viewing Jobs
 All jobs run in Dremio are listed on a separate page, showing the job ID, type, status, and other attributes.
 To navigate to the Jobs page, click ![This is the icon that represents the Jobs page.](https://docs.dremio.com/images/cloud/jobs-page-icon.png) in the side navigation bar.
-## Search Filters and Columns[​](/admin/monitoring/jobs/#search-filters-and-columns "Direct link to Search Filters and Columns")
+## Search Filters and Columns[​](/admin/monitoring/jobs/)
 By default, the Jobs page lists the jobs run within the last 30 days and the jobs are filtered by **UI, External Tools** job types. To change these defaults for your account, you can filter on values and manage columns directly on the Jobs page, as shown in this image:
 ![This is a screenshot showing the main components of the Jobs page.](https://docs.dremio.com/images/jobs-ui-map.png)
 a. **Search Jobs** by typing the username or job ID.
 b. **Start Time** allows you to pick the date and time at which the job began.
-c. **Status** represents one or more job states. For descriptions, see [Job States and Statuses](/admin/monitoring/jobs/#job-states-and-statuses).
-d. **Attribute** includes Accelerator, AI agent, AI function, Downloads, External Tools, Internal, MCP, and UI. For descriptions, see Query Types in the [Job Attributes](/admin/monitoring/jobs/#job-attributes).
+c. **Status** represents one or more job states. For descriptions, see [Job States and Statuses](/admin/monitoring/jobs/).
+d. **Attribute** includes Accelerator, AI agent, AI function, Downloads, External Tools, Internal, MCP, and UI. For descriptions, see Query Types in the [Job Attributes](/admin/monitoring/jobs/).
 e. **User** can be searched by typing the username or checking the box next to the username in the dropdown.
 f. **Manage Columns** by checking the boxes next to additional columns that you want to see in the Jobs list. The grayed out checkboxes show the columns that are required by default. You can also rearrange the column order by clicking directly on a column to drag and drop.
-## Job Attributes[​](/admin/monitoring/jobs/#job-attributes "Direct link to Job Attributes")
+## Job Attributes[​](/admin/monitoring/jobs/)
 Each job has the following attributes, which can appear as columns in the list of jobs:  
 | Attribute  | Description  |  
 | --- | --- |  
@@ -57,15 +58,15 @@ Each job has the following attributes, which can appear as columns in the list o
 | Rows Scanned  | Number of input records.  |  
 | SQL  | The SQL query that was submitted for the job.  |  
 | Start Time  | The date and time which the job began.  |  
-| Status  | An icon that represents one or more job states. This column is automatically shown at the start of each row. For descriptions, see [Job states and statuses](/admin/monitoring/jobs/#job-states-and-statuses).  |  
+| Status  | An icon that represents one or more job states. This column is automatically shown at the start of each row. For descriptions, see [Job states and statuses](/admin/monitoring/jobs/).  |  
 | User  | Username of the user who ran the query and initiated the job.  |  
-## Job States and Statuses[​](/admin/monitoring/jobs/#job-states-and-statuses "Direct link to Job States and Statuses")
+## Job States and Statuses[​](/admin/monitoring/jobs/)
 Each job passes through a sequence of states until it is complete, though the sequence can be interrupted if a query is canceled or if there is an error during a state. In this diagram, the states that a job passes through are in white, and the possible end states are in dark gray.
-![](https://docs.dremio.com/assets/images/job-states-d8a1b49d0b4cef93a610cd185648e268.png)
+!
 This table lists the statuses that the UI lets you filter on and shows how they map to the states:  
 | Icon  | Status  | State  | Description  |  
 | --- | --- | --- | --- |  
-| ![](https://docs.dremio.com/images/cloud/setup-icon.png)  | Setup  | Pending  | Represents a state where the query is waiting to be scheduled on the query pool.  |  
+| !  | Setup  | Pending  | Represents a state where the query is waiting to be scheduled on the query pool.  |  
 | Metadata Retrieval  | Represents a state where metadata schema is retrieved and the SQL command is parsed.  |  
 | Planning  | Represents a state where the following are done: 
   * Physical and logical planning
@@ -75,15 +76,15 @@ This table lists the statuses that the UI lets you filter on and shows how they 
   * Pick the engine associated with the query to run the query.
 
  |  
-| ![](https://docs.dremio.com/images/cloud/engine-start-icon.png)  | Engine Start  | Engine Start  | Represents a state where the engine starts if it has stopped. If the engine is stopped, it takes time to restart for the executors to be active. If the engine is already started, then this state does not have a duration.   |  
-| ![](https://docs.dremio.com/images/cloud/queued-icon.png)  | Queued  | Queued  | Represents a state where a job is queued. Each queue has a limit of concurrent queries. If the queries in progress exceed the concurrency limit, the query should wait in the queue until the jobs in progress complete.   |  
-| ![](https://docs.dremio.com/images/cloud/running-icon.png)  | Running  | Execution Planning  | Represents a state where executor nodes are selected from the chosen engine to run the query, and work is distributed to each executor.   |  
+| !  | Engine Start  | Engine Start  | Represents a state where the engine starts if it has stopped. If the engine is stopped, it takes time to restart for the executors to be active. If the engine is already started, then this state does not have a duration.   |  
+| !  | Queued  | Queued  | Represents a state where a job is queued. Each queue has a limit of concurrent queries. If the queries in progress exceed the concurrency limit, the query should wait in the queue until the jobs in progress complete.   |  
+| !  | Running  | Execution Planning  | Represents a state where executor nodes are selected from the chosen engine to run the query, and work is distributed to each executor.   |  
 | Running  | Represents a state where executor nodes execute and complete the fragments assigned to them. Typically, most queries spend more time in this state.   |  
 | Starting  | Represents a state where the query is starting up.  |  
-| ![](https://docs.dremio.com/images/cloud/canceled-icon.png)  | Canceled  | Canceled  | Represents a terminal state that indicates that the query is canceled by the user or an intervention in the system.   |  
-| ![](https://docs.dremio.com/images/cloud/completed-icon.png)  | Completed  | Completed  | Represents a terminal state that indicates that the query is successfully completed.   |  
-| ![](https://docs.dremio.com/images/cloud/failed-icon.png)  | Failed  | Failed  | Represents a terminal state that indicates that the query has failed due to an error.  |  
-## View Job Details[​](/admin/monitoring/jobs/#view-job-details "Direct link to View Job Details")
+| !  | Canceled  | Canceled  | Represents a terminal state that indicates that the query is canceled by the user or an intervention in the system.   |  
+| !  | Completed  | Completed  | Represents a terminal state that indicates that the query is successfully completed.   |  
+| !  | Failed  | Failed  | Represents a terminal state that indicates that the query has failed due to an error.  |  
+## View Job Details[​](/admin/monitoring/jobs/)
 You can view the details of a specific job by viewing the Overview, SQL, Visual Profile, and Raw Profile tabs on the Job Details page.
 To navigate to the job details:
   1. Click ![Jobs page icon](https://docs.dremio.com/images/cloud/jobs-page-icon.png) in the side navigation bar.
@@ -91,16 +92,16 @@ To navigate to the job details:
   3. The Job Details page then replaces the list of jobs.
 
 
-## Explain Job[​](/admin/monitoring/jobs/#explain-job "Direct link to Explain Job")
+## Explain Job[​](/admin/monitoring/jobs/)
 Use the **Explain Job** option on the Job Details page to analyze job performance and identify opportunities for optimization. From the Job Details page, click **Explain Job** to prompt the AI Agent to review the job’s query profile, planning, and execution details to compare with the AI Agent’s internal understanding of optimal performance characteristics. The AI Agent generates a detailed analysis that highlights key performance metrics such as data skew, memory usage, threading efficiency, and network utilization. Based on this assessment, it recommends potential optimizations to improve performance and resource utilization. You can continue the conversation with the AI Agent to explore the job in greater depth or reference additional job IDs to extend the investigation and compare results.
 Was this page helpful?
 [Previous Monitoring](/admin/monitoring)[Next Overview](/admin/monitoring/jobs/overview)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Monitoring](/admin/monitoring)[Next Overview](/admin/monitoring/jobs/overview)

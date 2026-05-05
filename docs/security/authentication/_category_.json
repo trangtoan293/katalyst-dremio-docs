@@ -2,7 +2,7 @@
   "label": "Authentication",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Authentication"
+    "type": "doc",
+    "id": "security/authentication/current-security-authentication"
   }
 }

@@ -2,7 +2,7 @@
   "label": "Integrations",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Integrations"
+    "type": "doc",
+    "id": "security/integrations/current-security-integrations"
   }
 }

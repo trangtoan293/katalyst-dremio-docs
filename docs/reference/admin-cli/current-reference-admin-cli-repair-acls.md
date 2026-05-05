@@ -1,5 +1,6 @@
 ---
 url: /reference/admin-cli/repair-acls
+slug: /reference/admin-cli/repair-acls
 title: "Repair ACLS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64234.950411333
@@ -15,13 +16,13 @@ On this page
 # Repair ACLS
 This topic describes the Dremio CLI command, `dremio-admin repair-acls` which is used to repair access control lists of sources, spaces, and datasets.
 This command identifies and outputs entities that are missing ACLs.
-Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/#using-the-dremio-admin-cli-on-kubernetes) before putting anything learned on this page into practice on such a deployment.
-## Requirements[​](/reference/admin-cli/repair-acls#requirements "Direct link to Requirements")
+Be sure you read [Using the Dremio Admin CLI on Kubernetes](/admin/admin-dremio-kubernetes/) before putting anything learned on this page into practice on such a deployment.
+## Requirements​
   * Shut down all cluster nodes completely before running the command.
   * the `repair-acls` command is run on the main node.
 
 
-## Syntax[​](/reference/admin-cli/repair-acls#syntax "Direct link to Syntax")
+## Syntax​
 Syntax for repair-acls command
 
 ```
@@ -29,7 +30,7 @@ Syntax for repair-acls command
 
 ```
 
-## Options[​](/reference/admin-cli/repair-acls#options "Direct link to Options")
+## Options​
 To obtain a list of restore options on the command line:
 Get a list of options for repair-acls command
 
@@ -50,7 +51,7 @@ Output for repair-acls options
 
 ```
 
-## Example: Show Entities with Missing ACLs[​](/reference/admin-cli/repair-acls#example-show-entities-with-missing-acls "Direct link to Example: Show Entities with Missing ACLs")
+## Example: Show Entities with Missing ACLs​
 The following example shows 3 entities with missing ACLs.
 Example command for entities with missing ACLs
 
@@ -65,7 +66,7 @@ Found 3 datasets with no default ACL configured.
 
 ```
 
-## Example: Set Default ACLs[​](/reference/admin-cli/repair-acls#example-set-default-acls "Direct link to Example: Set Default ACLs")
+## Example: Set Default ACLs​
 The following example sets default ACLs for entities that are missing an ACL.
 Example command for setting default ACLs
 
@@ -76,13 +77,13 @@ Example command for setting default ACLs
 
 Was this page helpful?
 [Previous Remove Duplicate Roles](/reference/admin-cli/remove-roles)[Next Reset Password](/reference/admin-cli/reset-password)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Remove Duplicate Roles](/reference/admin-cli/remove-roles)[Next Reset Password](/reference/admin-cli/reset-password)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fadmin-cli%2Frepair-acls%2F&_biz_t=1777950554653&_biz_i=Repair%20ACLS%20%7C%20Dremio%20Documentation&_biz_n=450&rnd=425714&cdn_o=a&_biz_z=1777950554653)
+!

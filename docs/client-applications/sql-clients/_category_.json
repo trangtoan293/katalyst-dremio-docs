@@ -2,7 +2,7 @@
   "label": "Sql Clients",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Sql Clients"
+    "type": "doc",
+    "id": "client-applications/sql-clients/current-client-applications-dbeaver"
   }
 }

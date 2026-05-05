@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/deploy-on-kubernetes
+slug: /deploy-dremio/deploy-on-kubernetes
 title: "Deploy Dremio on Kubernetes | Dremio Documentation"
 depth: 1
 crawled_at: 64000.471683875
@@ -14,7 +15,7 @@ On this page
 # Deploy Dremio on Kubernetes
 You can follow these instructions to deploy Dremio on Kubernetes provisioned through a cloud provider or running in an on-premises environment.
 If you are using an **Enterprise Edition free trial** , go to [Get Started with the Enterprise Edition Free Trial](/get-started/kubernetes-trial).
-## Prerequisites[​](/deploy-dremio/deploy-on-kubernetes#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
 Before deploying Dremio on Kubernetes, ensure you have the following:
   * A hosted Kubernetes environment to deploy and manage the Dremio cluster.  
 Each Dremio release is tested against 
@@ -25,7 +26,7 @@ Each Dremio release is tested against
   * The ability to connect to 
 
 
-### Additional Prerequisites for the Enterprise Edition[​](/deploy-dremio/deploy-on-kubernetes#additional-prerequisites-for-the-enterprise-edition "Direct link to Additional Prerequisites for the Enterprise Edition")
+### Additional Prerequisites for the Enterprise Edition​
 For the Enterprise Edition, you must:
   * Create an account on   
 To get access, contact your Dremio account executive or Dremio Support.
@@ -33,12 +34,12 @@ If your internet access doesn't allow reaching Dremio's OCI repository in Quay.i
   * Get a valid license key issued by Dremio to put in the Helm chart. To obtain the license, refer to [Licensing](/admin/licensing).
 
 
-### Additional Prerequisites for the OpenShift[​](/deploy-dremio/deploy-on-kubernetes#additional-prerequisites-for-the-openshift "Direct link to Additional Prerequisites for the OpenShift")
+### Additional Prerequisites for the OpenShift​
 Before deploying Dremio onto OpenShift, you additionally need the following:
   * Have the OpenShift `oc` CLI command configured and authenticated. For the installation instructions, see 
 
 
-#### Node Tuning for OpenSearch on OpenShift[​](/deploy-dremio/deploy-on-kubernetes#node-tuning-for-opensearch-on-openshift "Direct link to Node Tuning for OpenSearch on OpenShift")
+#### Node Tuning for OpenSearch on OpenShift​
 OpenSearch requires the `vm.max_map_count` kernel parameter to be set to at least **262144**.
 This parameter controls the maximum number of memory map areas a process can have, and OpenSearch uses memory-mapped files extensively for performance.
 Without this setting, OpenSearch pods will fail to start with errors related to virtual memory limits.
@@ -77,7 +78,7 @@ oc apply -f tuned-opensearch.yaml
 
 ```
 
-## Step 1: Deploy Dremio[​](/deploy-dremio/deploy-on-kubernetes#step-1-deploy-dremio "Direct link to Step 1: Deploy Dremio")
+## Step 1: Deploy Dremio​
 To deploy the Dremio cluster in Kubernetes, do the following:
   1. Configure your values to deploy Dremio to Kubernetes in the file `values-overrides.yaml`. For that, go to [Configuring Your Values to Deploy Dremio to Kubernetes](/deploy-dremio/configuring-kubernetes) and get back here to continue with the deployment.
   2. On your terminal, start the deployment by installing Dremio's Helm chart:
@@ -165,7 +166,7 @@ oc logs deployment/dremio-master
 
 
 
-## Step 2: Connecting to Dremio[​](/deploy-dremio/deploy-on-kubernetes#step-2-connecting-to-dremio "Direct link to Step 2: Connecting to Dremio")
+## Step 2: Connecting to Dremio​
 Now that you've installed the Helm chart and deployed Dremio on Kubernetes, the next step is connecting to Dremio, where you have the following options:
   * Dremio Console
   * OpenShift Route
@@ -173,7 +174,7 @@ Now that you've installed the Helm chart and deployed Dremio on Kubernetes, the 
   * BI Tools via Apache Arrow Flight
 
 
-To connect to Dremio via [the Dremio console](/get-started/quick_tour), run the following command to use the `services dremio-client` in Kubernetes to find the host for the Dremio console:
+To connect to Dremio via the Dremio console, run the following command to use the `services dremio-client` in Kubernetes to find the host for the Dremio console:
 
 ```
 $ kubectl get services dremio-client  
@@ -253,13 +254,13 @@ If you want to change the exposed port on the load balancer, change the value of
 
 Was this page helpful?
 [Previous Kubernetes Environments](/deploy-dremio/kubernetes-environments)[Next Configuring Your Values](/deploy-dremio/configuring-kubernetes)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Kubernetes Environments](/deploy-dremio/kubernetes-environments)[Next Configuring Your Values](/deploy-dremio/configuring-kubernetes)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcloud%2F&_biz_t=1777950321939&_biz_i=Dremio%20Cloud%20Classic%20Documentation&_biz_n=9&rnd=95734&cdn_o=a&_biz_z=1777950321999)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fdeploy-on-kubernetes%2F&_biz_t=1777950321999&_biz_i=Deploy%20Dremio%20on%20Kubernetes%20%7C%20Dremio%20Documentation&_biz_n=10&rnd=315425&cdn_o=a&_biz_z=1777950321999)
+!!

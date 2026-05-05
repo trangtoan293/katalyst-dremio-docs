@@ -2,7 +2,7 @@
   "label": "Licensing",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Licensing"
+    "type": "doc",
+    "id": "administration/licensing/current-admin-licensing"
   }
 }

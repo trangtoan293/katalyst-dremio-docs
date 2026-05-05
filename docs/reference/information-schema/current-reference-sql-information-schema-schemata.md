@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/information-schema/schemata
+slug: /reference/sql/information-schema/schemata
 title: "INFORMATION_SCHEMA.SCHEMATA | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64264.020319208
@@ -23,7 +24,7 @@ FROM INFORMATION_SCHEMA.SCHEMATA
 
 ```
 
-## Example Output[​](/reference/sql/information-schema/schemata#example-output "Direct link to Example Output")  
+## Example Output​  
 | CATALOG_NAME  | SCHEMA_NAME  | SCHEMA_OWNER  | TYPE  | IS_MUTABLE  |  
 | --- | --- | --- | --- | --- |  
 | DREMIO  | $scratch  | `owner`  | SIMPLE  | NO  |  
@@ -36,7 +37,7 @@ FROM INFORMATION_SCHEMA.SCHEMATA
 | DREMIO  | sys.cache  | `owner`  | SIMPLE  | NO  |  
 | DREMIO  | test  | `owner`  | SIMPLE  | NO  |  
 | DREMIO  | Weather  | `owner`  | SIMPLE  | NO  |  
-## Fields[​](/reference/sql/information-schema/schemata#fields "Direct link to Fields")  
+## Fields​  
 | Field  | Data Type  | Description  |  
 | --- | --- | --- |  
 | CATALOG_NAME  | varchar  | Name of the catalog, which is always DREMIO.  |  
@@ -46,13 +47,13 @@ FROM INFORMATION_SCHEMA.SCHEMATA
 | IS_MUTABLE  | varchar  | The value in this column is YES if the schema can be modified. NO if it's immutable.  |  
 Was this page helpful?
 [Previous INFORMATION_SCHEMA.COLUMNS](/reference/sql/information-schema/columns)[Next INFORMATION_SCHEMA."TABLES"](/reference/sql/information-schema/tables)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous INFORMATION_SCHEMA.COLUMNS](/reference/sql/information-schema/columns)[Next INFORMATION_SCHEMA."TABLES"](/reference/sql/information-schema/tables)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Finformation-schema%2Fschemata%2F&_biz_t=1777950583628&_biz_i=INFORMATION_SCHEMA.SCHEMATA%20%7C%20Dremio%20Documentation&_biz_n=517&rnd=561613&cdn_o=a&_biz_z=1777950583628)
+!

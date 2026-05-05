@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config
+slug: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config
 title: "High Availability | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64209.774968458
@@ -8,9 +9,9 @@ crawled_at: 64209.774968458
   * [Dremio Enterprise Home](/)
   * [Deploy Dremio](/deploy-dremio)
   * [Other Options](/deploy-dremio/other-options)
-  * [Dremio with Your Infrastructure](/deploy-dremio/other-options/standalone)
-  * [Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
-  * [Services](/deploy-dremio/other-options/standalone/dremio-config)
+  * Dremio with Your Infrastructure
+  * Cluster Configuration
+  * Services
   * High Availability
 
 Version: current [26.x]
@@ -25,7 +26,7 @@ Dremio clusters can be made highly available by configuring one active and multi
   * A shared network drive is used to ensure that all nodes can access system metadata. The locking support on the network drive as well as on Dremio's metadata store ensures there is only one active Dremio coordinator process.
 
 
-## How HA Failover Works[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#how-ha-failover-works "Direct link to How HA Failover Works")
+## How HA Failover Works​
 When the active coordinator node fails:
   1. Dremio processes detect the failure, based on a set ZooKeeper timeout, and elect a new Dremio coordinator node. In the case of a failure, Dremio processes terminate themselves automatically.
   2. The new coordinator node, already on standby, completes the startup using the metadata on the network drive.
@@ -38,27 +39,27 @@ After HA failover is complete:
 
 
 To see if a coordinator node is active, ping the node.
-### Example: HA Failover[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#example-ha-failover "Direct link to Example: HA Failover")
+### Example: HA Failover​
 Two (2) coordinator nodes (NodeA and NodeB) are configured (with main coordinator roles) and started.
   * NodeA starts and NodeB remains waiting on standby until the current main disappears.
   * _NodeB is passive and not available until NodeA goes down._
   * When NodeA goes down, NodeB completes the startup process and the other cluster nodes switch their main coordinator node interaction from NodeA to NodeB.
 
 
-## Web Application HA & Load Balancing[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#web-application-ha--load-balancing "Direct link to Web Application HA & Load Balancing")
+## Web Application HA & Load Balancing​
 Dremio's web application can be made highly available by leveraging more than one coordinator node and a reverse proxy/load balancer.
 All web clients connect to a single endpoint rather than directly connecting to an individual coordinator node. These connections are then distributed across available coordinator nodes.
-## ODBC/JDBC HA & Load Balancing[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#odbcjdbc-ha--load-balancing "Direct link to ODBC/JDBC HA & Load Balancing")
-Dremio recommends that ODBC and JDBC drivers connect to a [ZooKeeper quorum](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config) rather than a specific node in your deployment. Dremio then plans queries and routes them to an available coordinator node.
-To distribute query planning for ODBC and JDBC connections, configure [secondary coordinator nodes](/deploy-dremio/other-options/standalone/dremio-config#configuring-basic-services) for your deployment.
-## Configuring High Availability[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#configuring-high-availability "Direct link to Configuring High Availability")
+## ODBC/JDBC HA & Load Balancing​
+Dremio recommends that ODBC and JDBC drivers connect to a ZooKeeper quorum rather than a specific node in your deployment. Dremio then plans queries and routes them to an available coordinator node.
+To distribute query planning for ODBC and JDBC connections, configure secondary coordinator nodes for your deployment.
+## Configuring High Availability​
 To configure Dremio for high availability, ensure the prerequisites are met and then perform the following:
   1. Configure Dremio including Dremio services, external metadata storage, and external zookeeper quorum.
   2. Start up the Dremio coordinator nodes.
   3. Start up the Dremio executor nodes.
 
 
-### Prerequisites[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#prerequisites "Direct link to Prerequisites")
+### Prerequisites​
   * Network drive (NFS) with locking support for Dremio's metadata store.
     * Ensure that the store is high-speed, low latency (for spilling operations purposes).
     * Ensure that all Dremio coordinator nodes have read/write access to the shared network drive.
@@ -67,7 +68,7 @@ To configure Dremio for high availability, ensure the prerequisites are met and 
   * (Optional) 
 
 
-### Step 1: Configure Dremio[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#step-1-configure-dremio "Direct link to Step 1: Configure Dremio")
+### Step 1: Configure Dremio​
 To configure Dremio, modify the `dremio.conf` file on all the coordinator and executor nodes in the Dremio cluster. The following must be configured:
   * Two (2) or more coordinator nodes with the main coordinator role.
   * One (1) or more nodes with the executor role (preferably 3 or more).
@@ -104,7 +105,7 @@ zookeeper: "<host1>:2181,<host2>:2181"
 
 ```
 
-### Step 2: Start the Coordinator Nodes[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#step-2-start-the-coordinator-nodes "Direct link to Step 2: Start the Coordinator Nodes")
+### Step 2: Start the Coordinator Nodes​
 Start the first coordinator node, then the second coordinator node, and so on. See [Start, Stop, and Status](/help-support/advanced-topics/start-stop) for more information.
 For example, if two (2) coordinator nodes (NodeA and NodeB) are configured where NodeA is started first and NodeB is started second, then the following occurs:
   * NodeA starts and is the active node.
@@ -113,9 +114,9 @@ For example, if two (2) coordinator nodes (NodeA and NodeB) are configured where
   * When NodeA goes down, NodeB completes the startup process and the other cluster nodes switch their coordinator node interaction from NodeA to NodeB.
 
 
-### Step 3: Start the Executor Nodes[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#step-3-start-the-executor-nodes "Direct link to Step 3: Start the Executor Nodes")
+### Step 3: Start the Executor Nodes​
 To start the executor nodes, start Dremio on each executor node in any order. See [Start, Stop, and Status](/help-support/advanced-topics/start-stop) for more information.
-### Web Application HA & Load Balancing[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#web-application-ha--load-balancing-1 "Direct link to Web Application HA & Load Balancing")
+### Web Application HA & Load Balancing​
 Dremio's web application can be made highly available by leveraging more than one coordinator node and a reverse proxy/load balancer.
 All web clients connect to a the load balancer rather than directly connecting to an individual coordinator node. The load balancer distributes these connections to the current active main node.
 In the following sample `nginx.conf` configuration, all Dremio coordinator nodes are added as `upstream` servers and are proxied through the `nginx` server.
@@ -171,19 +172,19 @@ http {
 ```
 
 See the 
-### Troubleshooting[​](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config#troubleshooting "Direct link to Troubleshooting")
+### Troubleshooting​
 If HA fails when the network is brought down on the running main node, there may be an issue with the mount. For data consistency, your NFS should be mounted as a hard mount. For example:  
 Example NFS mount
 `mount -t nfs -o rw,hard,sync,nointr,vers=4,proto=tcp `server`:`share` <mount path>`
 Was this page helpful?
-[Previous ZooKeeper](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config)[Next Environment](/deploy-dremio/other-options/standalone/dremio-config/dremio-env)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous ZooKeeperNext Environment
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous ZooKeeper](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config)[Next Environment](/deploy-dremio/other-options/standalone/dremio-config/dremio-env)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fother-options%2Fstandalone%2Fdremio-config%2Fdremio-conf%2Fhigh-availability-config%2F&_biz_t=1777950529745&_biz_i=High%20Availability%20%7C%20Dremio%20Documentation&_biz_n=400&rnd=704197&cdn_o=a&_biz_z=1777950529745)
+Previous ZooKeeperNext Environment
+!

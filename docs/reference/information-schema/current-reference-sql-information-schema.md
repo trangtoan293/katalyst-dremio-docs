@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/information-schema
+slug: /reference/sql/information-schema
 title: "Information Schema | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.507852958
@@ -23,12 +24,12 @@ The following views can be queried to return metadata for the respective catalog
 | [INFORMATION_SCHEMA.VIEWS](/reference/sql/information-schema/views)  | The metadata for views in a project.  |  
 Was this page helpful?
 [Previous System Tables](/reference/sql/system-tables)[Next INFORMATION_SCHEMA.CATALOGS](/reference/sql/information-schema/catalogs)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous System Tables](/reference/sql/system-tables)[Next INFORMATION_SCHEMA.CATALOGS](/reference/sql/information-schema/catalogs)

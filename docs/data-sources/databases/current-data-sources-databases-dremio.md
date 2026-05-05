@@ -1,5 +1,6 @@
 ---
 url: /data-sources/databases/dremio
+slug: /data-sources/databases/dremio
 title: "Dremio Cluster | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64040.288859875
@@ -16,7 +17,7 @@ On this page
 You can add a Dremio Enterprise cluster as a data source. Such a cluster is referred to as a _data-source cluster_. The Dremio cluster that you add it to is referred to as a _querying cluster_.
 Only Dremio Enterprise can serve as a data-source cluster. Using Dremio Cloud as a data-source cluster is not supported.
 A data-source cluster gives a querying cluster access to one or more data sources, such as Amazon S3, Hive, and Postgres, that are connected to the data-source cluster. Dremio treats the connected Dremio cluster as any other supported data source. The data sources that are connected to the data-source cluster are represented as schemas. From a querying cluster, you can drill down into the schemas to see source datasets. You can then promote source datasets to tables, create Reflections and views on those tables, and views on the views, and so on.
-## Example[​](/data-sources/databases/dremio#example "Direct link to Example")
+## Example​
 In this diagram, there are two Dremio Enterprise clusters: **Dremio_1** and **Dremio_2**. Suppose that you wanted to access **DataSource_2** from **Dremio_1**. To do so, you would add **Dremio_2** as a data source to **Dremio_1**. In fact, you could add any number of Dremio Enterprise clusters as data sources.
 ![Connecting one Dremio Enterprise cluster to another](https://docs.dremio.com/images/D-to-D-intro.png)
 In the UI for **Dremio_1** , **Dremio_2** is listed under **Sources** &gt; **Databases**. If you were to select **Dremio_2** there, you would see the folder **DataSource_2**. Double-clicking that folder would show a list of the folders or schemas in that data source.
@@ -33,8 +34,8 @@ And while business users run queries through the querying-cluster, other busines
   * Querying across more than one region or more than one cloud vendor might increase query latency. Querying across cloud vendors also might result in egress charges from cloud vendors. For example, in this diagram **DataSource_1** is using one cloud vendor, while **DataSource_2** is using a different cloud vendor. Queries from **Dremio_1** across **Dremio_2** and **Dremio_3** against those two data sources might incur egress charges from the cloud vendors.
 
 ![Federating data across cloud vendors can incur egress charges.](https://docs.dremio.com/images/D-to-D-federation-4.png)
-Dremio recommends full TLS wire encryption on querying clusters and data-source clusters. For more information, see the configuration of TLS for [Dremio on Kubernetes](/deploy-dremio/configuring-kubernetes#transport-level-security) or [Dremio standalone clusters](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config#full-wire-encryption-enterprise).
-## User Impersonation[​](/data-sources/databases/dremio#user-impersonation "Direct link to User Impersonation")
+Dremio recommends full TLS wire encryption on querying clusters and data-source clusters. For more information, see the configuration of TLS for [Dremio on Kubernetes](/deploy-dremio/configuring-kubernetes) or Dremio standalone clusters.
+## User Impersonation​
 When you connect a querying cluster to a data-source cluster, you provide the username and password of an account on the data-source cluster. By default, queries that run from the querying cluster against the data-source cluster run under the username of that account.
 You can instead allow users running queries from the querying cluster to run them under their own usernames on the data-source cluster. For example, User 1 on the querying cluster Dremio 1 can run queries as User 1 on the data-source cluster. User 1 must have an account on the data-source cluster, and that account must use the same username. User impersonation (also known as _inbound impersonation_) must be set up on the data-source cluster. The policy for user impersonation would look like this:
 Example policy
@@ -58,20 +59,20 @@ ALTER SYSTEM SET "exec.impersonation.inbound_policies"='[
 ```
 
 See [Inbound Impersonation](/security/rbac/inbound-impersonation) for more information.
-## Limitation[​](/data-sources/databases/dremio#limitation "Direct link to Limitation")
+## Limitation​
 You cannot query columns that use complex data types, such as LIST, STRUCT, and MAP. Columns of complex data types do not appear in result sets.
-## Prerequisites[​](/data-sources/databases/dremio#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
   * You must have a username and password for the account on a data-source cluster to use for connections from the querying cluster.
   * The querying cluster and data-source clusters must all be at version 23.1 or later.
 
 
-## Configuring Another Dremio Enterprise Cluster as a Source[​](/data-sources/databases/dremio#configuring-another-dremio-enterprise-cluster-as-a-source "Direct link to Configuring Another Dremio Enterprise Cluster as a Source")
+## Configuring Another Dremio Enterprise Cluster as a Source​
 If the cluster that you are connecting to has a self-signed certificate, ensure that the cluster that you are connecting from has a copy of that certificate in its truststore.
   1. On the Datasets page, to the right of **Sources** in the left panel, click ![This is the Add Source icon.](https://docs.dremio.com/images/icons/plus.png).
   2. In the Add Data Source dialog, under **Databases** , select **Dremio**.
 
 
-### General Options[​](/data-sources/databases/dremio#general-options "Direct link to General Options")
+### General Options​
   1. In the **Name** field, specify the name by which you want the data-source cluster to appear in the **Databases** section. The name cannot include the following special characters: `/`, `:`, `[`, or `]`.
   2. Under **Connection** , specify how you want to connect to the data-source cluster.
      * **Direct** : Connect directly to a coordinator node of the cluster.
@@ -85,7 +86,7 @@ If the cluster that you are connecting to has a self-signed certificate, ensure 
      * [HashiCorp Vault](/security/secrets-management/hashicorp-vault): Select your HashiCorp secrets engine from the dropdown and enter the secret reference in the required format.
 
 
-### Advanced Options[​](/data-sources/databases/dremio#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 On the Advanced Options page, you can set values for these non-required options:  
 | Option  | Description  |  
 | --- | --- |  
@@ -93,7 +94,7 @@ On the Advanced Options page, you can set values for these non-required options:
 | **Connection Idle Time**  | The amount of time (in seconds) allowed for a connection to remain idle before the connection is terminated. The default connection idle time is 60 seconds.  |  
 | **Query Timeout**  | The amount of time (in seconds) allowed to wait for the results of a query. If this time expires, the connection being used is returned to an idle state.  |  
 | **User Impersonation**  | Allows users to run queries on the data-source cluster under their own user IDs, not the user ID for the account used to authenticate with the data-source cluster. Inbound impersonation must be configured on the data-source cluster. See [Inbound Impersonation](/security/rbac/inbound-impersonation).  |  
-### Reflection Refresh Options[​](/data-sources/databases/dremio#reflection-refresh-options "Direct link to Reflection Refresh Options")
+### Reflection Refresh Options​
 On the Reflection Refresh page, set the policy that controls how often Reflections are scheduled to be refreshed automatically, as well as the time limit after which Reflections expire and are removed.  
 | Option  | Description  |  
 | --- | --- |  
@@ -101,14 +102,14 @@ On the Reflection Refresh page, set the policy that controls how often Reflectio
 | **Refresh every**  | How often to refresh Reflections, specified in hours, days or weeks. This option is ignored if **Never refresh** is selected.  |  
 | **Never expire**  | Select to prevent Reflections from expiring, default is to automatically expire after the time limit below.  |  
 | **Expire after**  | The time limit after which Reflections expire and are removed from Dremio, specified in hours, days or weeks. This option is ignored if **Never expire** is selected.  |  
-### Metadata Options[​](/data-sources/databases/dremio#metadata-options "Direct link to Metadata Options")
+### Metadata Options​
 On the Metadata page, you can configure settings to refresh metadata and handle datasets.
-#### Dataset Handling[​](/data-sources/databases/dremio#dataset-handling "Direct link to Dataset Handling")
+#### Dataset Handling​
 These are the optional **Dataset Handling** parameters.  
 | Parameter  | Description  |  
 | --- | --- |  
 | **Remove dataset definitions if underlying data is unavailable**  | By default, Dremio removes dataset definitions if underlying data is unavailable. Useful when files are temporarily deleted and added back in the same location with new sets of files.  |  
-#### Metadata Refresh[​](/data-sources/databases/dremio#metadata-refresh "Direct link to Metadata Refresh")
+#### Metadata Refresh​
 These are the optional **Metadata Refresh** parameters:
   * **Dataset Discovery** : The refresh interval for fetching top-level source object names such as databases and tables. Set the time interval using this parameter.  
 | Parameter  | Description  |  
@@ -122,7 +123,7 @@ These are the optional **Metadata Refresh** parameters:
 | **Expire after**  | You can choose to set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.  |  
 
 
-### Privileges[​](/data-sources/databases/dremio#privileges "Direct link to Privileges")
+### Privileges​
 On the Privileges tab, you can grant privileges to specific users or roles. See [Access Controls](/security/rbac) for additional information about privileges.
 All privileges are optional.
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
@@ -130,15 +131,15 @@ All privileges are optional.
   3. Click **Save** after setting the configuration.
 
 
-## Updating a Dremio Source[​](/data-sources/databases/dremio#updating-a-dremio-source "Direct link to Updating a Dremio Source")
+## Updating a Dremio Source​
 To update a Dremio source:
   1. On the Datasets page, under **Databases** in the panel on the left, find the name of the source you want to update.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
-  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see [Configuring Another Dremio Enterprise Cluster as a Source](/data-sources/databases/dremio#configuring-another-dremio-enterprise-cluster-as-a-source).
+  3. In the **Source Settings** dialog, edit the settings you wish to update. Dremio does not support updating the source name. For information about the settings options, see Configuring Another Dremio Enterprise Cluster as a Source.
   4. Click **Save**.
 
 
-## Deleting a Dremio Source[​](/data-sources/databases/dremio#deleting-a-dremio-source "Direct link to Deleting a Dremio Source")
+## Deleting a Dremio Source​
 If the source is in a bad state (for example, Dremio cannot authenticate to the source or the source is otherwise unavailable), only users who belong to the ADMIN role can delete the source.
 To delete a Dremio source, perform these steps:
   1. On the Datasets page, click **Sources** &gt; **Databases** in the panel on the left.
@@ -148,7 +149,7 @@ To delete a Dremio source, perform these steps:
 
 
 Deleting a source causes all downstream views that depend on objects in the source to break.
-## Predicate Pushdowns[​](/data-sources/databases/dremio#predicate-pushdowns "Direct link to Predicate Pushdowns")
+## Predicate Pushdowns​
 Querying clusters offload these operations to data-source clusters. Data-source clusters either process these operations or offload them to their connected data sources.
 `&&`, `||`, `!`, `AND`, `OR`  
 `+`, `-`, `/`, `*`, `%`  
@@ -242,17 +243,17 @@ UPPER
 VAR_POP  
 VAR_SAMP  
 
-## Related Information[​](/data-sources/databases/dremio#related-information "Direct link to Related Information")
+## Related Information​
 [ZooKeeper](/what-is-dremio/architecture)
 Was this page helpful?
 [Previous Apache Druid](/data-sources/databases/apache-druid)[Next Elasticsearch](/data-sources/databases/elasticsearch)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Apache Druid](/data-sources/databases/apache-druid)[Next Elasticsearch](/data-sources/databases/elasticsearch)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdata-sources%2Fdatabases%2Fdremio%2F&_biz_t=1777950359817&_biz_i=Dremio%20Cluster%20%7C%20Dremio%20Documentation&_biz_n=84&rnd=579102&cdn_o=a&_biz_z=1777950359818)
+!

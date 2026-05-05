@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/managing-engines-kubernetes
+slug: /deploy-dremio/managing-engines-kubernetes
 title: "Managing Engines in Kubernetes &lt;Chip&gt;Enterprise&lt;/Chip&gt; | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64053.1206785
@@ -12,7 +13,7 @@ crawled_at: 64053.1206785
 Version: current [26.x]
 On this page
 # Managing Engines in Kubernetes Enterprise
-This feature is for Enterprise Edition only. For Community Edition, see [Configuration of Classic Engines](/deploy-dremio/configuring-kubernetes#configuration-of-classic-engines).
+This feature is for Enterprise Edition only. For Community Edition, see [Configuration of Classic Engines](/deploy-dremio/configuring-kubernetes).
 Dremio supports the ability to provision multiple separate execution engines in Kubernetes from a Dremio main coordinator node, and automatically start and stop based on workload requirements at runtime. This provides several benefits, including:
   * Creating a new engine doesn't require restarting Dremio, which enables administrators to achieve workload isolation efficiently.
   * When creating a new engine, you can use Kubernetes metadata to label engines to keep track of resources.
@@ -26,27 +27,27 @@ To manage your engines, open the Engines page as follows:
   3. Select **Engines**.
 
 ![Engines page under Project Settings listing all engines.](https://docs.dremio.com/images/settings/engine/settings-engines.png)
-## Monitoring Engines[​](/deploy-dremio/managing-engines-kubernetes#monitoring-engines "Direct link to Monitoring Engines")
+## Monitoring Engines​
 You can monitor the status and properties of your engines on the Engines page.
 ![Engines page under Project Settings showing all the current engines and their statuses.](https://docs.dremio.com/images/settings/engine/settings-engines-monitoring.png)
 Each engine has the following information available:
-  * **Name** - The name of the engine, which you can click to see its details. See the section about [Viewing Engine Details](/deploy-dremio/managing-engines-kubernetes#viewing-engine-details).
+  * **Name** - The name of the engine, which you can click to see its details. See the section about Viewing Engine Details.
   * **Size** - The size configured for the engine.
-  * **Status** - The engine status. For more information, see the section in this topic about [Engine Statuses](/deploy-dremio/managing-engines-kubernetes#engine-statuses).
+  * **Status** - The engine status. For more information, see the section in this topic about Engine Statuses.
   * **Auto start/stop** - Whether the engine has auto start/stop enabled for autoscaling.
   * **Idle period** - The idle time to auto stop when the engine has **Auto start/stop** enabled.
   * **Queues** - Query queues routed to the engine.
   * **Labels** - Labels associated with the engine.
 
 
-## Performing Actions on Engines[​](/deploy-dremio/managing-engines-kubernetes#performing-actions-on-engines "Direct link to Performing Actions on Engines")
-While [monitoring engines](/deploy-dremio/managing-engines-kubernetes#monitoring-engines), you have actions you can perform on each engine through the icons displayed on the right-hand side when hovering over the engine row.
+## Performing Actions on Engines​
+While monitoring engines, you have actions you can perform on each engine through the icons displayed on the right-hand side when hovering over the engine row.
 ![Engines page showing the icons with the actions for each engine.](https://docs.dremio.com/images/settings/engine/settings-engines-actions.png)
-### Stopping/Starting an Engine[​](/deploy-dremio/managing-engines-kubernetes#stoppingstarting-an-engine "Direct link to Stopping/Starting an Engine")
+### Stopping/Starting an Engine​
 You can click ![The stop engine icon](https://docs.dremio.com/images/icons/engine-stop.png)/![The start engine icon](https://docs.dremio.com/images/icons/engine-start.png) to stop/start an engine manually at any time. Stopping an engine will cause running queries to fail while new queries will remain queued, which can also fail by timeout if the engine isn't started. To prevent query failures, reroute queries to another engine, and stop the engine only when no queries are running or queued for the engine.
 You can enable **autoscaling on an engine** to make it stop automatically after an idle time without queries and start again automatically when new queries are issued, all without any human intervention.
-Autoscaling is configured when you [add an engine](/deploy-dremio/managing-engines-kubernetes#adding-an-engine) or [edit an engine](/deploy-dremio/managing-engines-kubernetes#editing-the-engine-settings):
-#### Stopping All Engines[​](/deploy-dremio/managing-engines-kubernetes#stopping-all-engines "Direct link to Stopping All Engines")
+Autoscaling is configured when you add an engine or edit an engine:
+#### Stopping All Engines​
 Some complex operations, like upgrading or uninstalling Dremio, require all engines to be stopped beforehand. You can stop engines manually one by one as described above, or automate the procedure using the [Engine Management API](/reference/api/engine-management) to stop all engines. Expand the sample below of a bash script executing the necessary endpoints to stop all engines.
 Sample bash script to stop all engines
 
@@ -81,7 +82,7 @@ echo "All engines processed."
 
 ```
 
-### Editing the Engine Settings[​](/deploy-dremio/managing-engines-kubernetes#editing-the-engine-settings "Direct link to Editing the Engine Settings")
+### Editing the Engine Settings​
 You can click ![The edit engine icon](https://docs.dremio.com/images/icons/engine-edit.png) to edit the engine settings. After saving the new settings, the engine may restart, causing running queries to fail and new queries to be queued.
 ![Edit engine showing the general settings.](https://docs.dremio.com/images/settings/engine/settings-engine-edit.png)
 The name of the engine must follow these rules:
@@ -92,13 +93,13 @@ The name of the engine must follow these rules:
   * Must be unique and not previously used for any existing or deleted engines.
 
 
-### Deleting an Engine[​](/deploy-dremio/managing-engines-kubernetes#deleting-an-engine "Direct link to Deleting an Engine")
+### Deleting an Engine​
 You can click ![The delete engine icon](https://docs.dremio.com/images/icons/engine-delete.png) to delete an engine. Deleting an engine will cause running, queued, and new queries to fail. To prevent query failures, you can reroute queries to another engine, and only delete when no more queries are running or queued for the engine.
-## Viewing Engine Details[​](/deploy-dremio/managing-engines-kubernetes#viewing-engine-details "Direct link to Viewing Engine Details")
-While [monitoring engines](/deploy-dremio/managing-engines-kubernetes#monitoring-engines), if you need to know more details about engines, click the engine's name to view all the information about it.
+## Viewing Engine Details​
+While monitoring engines, if you need to know more details about engines, click the engine's name to view all the information about it.
 ![Engine details page showing all the information about the engine.](https://docs.dremio.com/images/settings/engine/settings-engine-details.png)
-On this page, you will also find a set of buttons at the top to [delete the engine](/deploy-dremio/managing-engines-kubernetes#deleting-an-engine), [stop/start the engine](/deploy-dremio/managing-engines-kubernetes#stoppingstarting-an-engine), and [edit the engine settings](/deploy-dremio/managing-engines-kubernetes#editing-the-engine-settings).
-## Sizes[​](/deploy-dremio/managing-engines-kubernetes#sizes "Direct link to Sizes")
+On this page, you will also find a set of buttons at the top to delete the engine, stop/start the engine, and edit the engine settings.
+## Sizes​
 Dremio provides nine engine T-shirt sizes, each with two CPU options: 14 or 30. From XSmall and larger, the size setting determines the number of executors in an engine. The remaining 2XSmall size runs a single executor at half scale. For consumption-based billing, DCUs and CPUs have a one-to-one relationship; therefore, the total number of CPUs across an engine equals the DCUs. See the table below as a guide:  
 | Engine Size  | Executors  | Memory per Executor  | DCUs - 14 CPU  | DCUs - 30 CPU  |  
 | --- | --- | --- | --- | --- |  
@@ -111,7 +112,7 @@ Dremio provides nine engine T-shirt sizes, each with two CPU options: 14 or 30. 
 | 2XLarge  | 16  | 120 GB  | 224  | 480  |  
 | 3XLarge  | 24  | 120 GB  | 336  | 720  |  
 | 4XLarge  | 32  | 120 GB  | 448  | 960  |  
-## Adding an Engine[​](/deploy-dremio/managing-engines-kubernetes#adding-an-engine "Direct link to Adding an Engine")
+## Adding an Engine​
 You can create more engines by clicking **Add Engine** at the top-right corner of the Engines page.
 ![The general settings to add a new engine.](https://docs.dremio.com/images/settings/engine/settings-new-engine.png)
 In the New engine dialog, do the following:
@@ -125,7 +126,7 @@ The name of the engine must follow these rules:
        * Must be unique and not previously used for any existing or deleted engines.
     2. **CPU** - Select the number of CPUs per executor pod.
     3. **Size** - Select the size of the engine.
-    4. **Automatically start/stop** - If checked, the engine automatically stops after the specified idle time and automatically starts when new queries are issued to the engine. If not checked, the engine only stops and starts through manual intervention. By default, this setting is checked and the engine stops automatically after `15 min` of idle time. For more information, see the section [Stopping/Starting an Engine](/deploy-dremio/managing-engines-kubernetes#stoppingstarting-an-engine).
+    4. **Automatically start/stop** - If checked, the engine automatically stops after the specified idle time and automatically starts when new queries are issued to the engine. If not checked, the engine only stops and starts through manual intervention. By default, this setting is checked and the engine stops automatically after `15 min` of idle time. For more information, see the section Stopping/Starting an Engine.
     5. (Optional) Expand **Advanced Options** for further settings.
 ![The advanced options to add a new engine.](https://docs.dremio.com/images/settings/engine/settings-new-engine-advanced-options.png)
 Fill out the advanced options as follows:
@@ -153,7 +154,7 @@ The engine annotation must follow these rules:
 
 The newly added engine will be displayed in the listed engines.
 ![Engines page showing the current engines, which now includes the newly added engine.](https://docs.dremio.com/images/settings/engine/settings-new-engine-added.png)
-## Engine Statuses[​](/deploy-dremio/managing-engines-kubernetes#engine-statuses "Direct link to Engine Statuses")
+## Engine Statuses​
 The following table describes each engine status:  
 | Status  | Icon  | Description  |  
 | --- | --- | --- |  
@@ -163,7 +164,7 @@ The following table describes each engine status:
 | Stopped  | ![The stopped engine icon](https://docs.dremio.com/images/icons/engine-stopped.png)  | The engine is stopped. New queries will remain queued, which can fail by timeout if the engine isn't started.  |  
 | Recovering  | ![The recovering engine icon](https://docs.dremio.com/images/icons/engine-recovering.png)  | The engine is recovering. New queries will remain queued, which can fail by timeout if the engine doesn't recover.  |  
 | Failed  | ![The failed engine icon](https://docs.dremio.com/images/icons/engine-failed.png)  | The engine failed. New queries will remain queued, which can fail by timeout if the engine doesn't start.  |  
-## Related Topics[​](/deploy-dremio/managing-engines-kubernetes#related-topics "Direct link to Related Topics")
+## Related Topics​
   * [Engine Management API](/reference/api/engine-management) - The API to manage your engines using REST API calls.
   * [sys.engines](/reference/sql/system-tables/engines) - The system table to query for information about your engines.
   * [Audit Logs](/security/auditing) - Audit logs for your engines.
@@ -171,13 +172,13 @@ The following table describes each engine status:
 
 Was this page helpful?
 [Previous Configuring Your Values](/deploy-dremio/configuring-kubernetes)[Next Other Options](/deploy-dremio/other-options)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Configuring Your Values](/deploy-dremio/configuring-kubernetes)[Next Other Options](/deploy-dremio/other-options)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fmanaging-engines-kubernetes%2F&_biz_t=1777950373464&_biz_i=Managing%20Engines%20in%20Kubernetes%20%3CChip%3EEnterprise%3C%2FChip%3E%20%7C%20Dremio%20Documentation&_biz_n=112&rnd=276088&cdn_o=a&_biz_z=1777950373464)
+!

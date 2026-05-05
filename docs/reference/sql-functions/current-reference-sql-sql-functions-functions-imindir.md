@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/IMINDIR
+slug: /reference/sql/sql-functions/functions/IMINDIR
 title: "IMINDIR | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64317.532200375
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Directory](/reference/sql/sql-functions)
 # IMINDIR
 Returns the name of a subdirectory of a table in HDFS. The subdirectory has the name that ranks lowest in case-insensitive alphanumeric order.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### IMINDIR('dfs', '`path_of_parent_directory`') → `name_of_subdirectory`[​](/reference/sql/sql-functions#imindirdfs-path_of_parent_directory--name_of_subdirectory "Direct link to IMINDIR\('dfs', '`path_of_parent_directory`'\) → `name_of_subdirectory`")
+## Syntax
+### IMINDIR('dfs', '`path_of_parent_directory`') → `name_of_subdirectory`[​](/reference/sql/sql-functions) → `name_of_subdirectory`")
   * dfs: Specifies that the table data is in an HDFS filesystem.
   * `path_of_parent_directory`: The full path of the directory in which the table data is stored.
   * `name_of_subdirectory`: The name of the subdirectory.
@@ -61,13 +62,13 @@ SELECT * FROM dfs."/tmp/querylogs" WHERE dir0 = IMINDIR('dfs','/tmp/querylogs')
 
 Was this page helpful?
 [Previous IMAXDIR](/reference/sql/sql-functions)[Next INITCAP](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous IMAXDIR](/reference/sql/sql-functions)[Next INITCAP](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FIMINDIR%2F&_biz_t=1777950638336&_biz_i=IMINDIR%20%7C%20Dremio%20Documentation&_biz_n=611&rnd=378400&cdn_o=a&_biz_z=1777950638336)
+!

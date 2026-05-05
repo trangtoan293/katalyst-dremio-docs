@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ARRAY_AGG
+slug: /reference/sql/sql-functions/functions/ARRAY_AGG
 title: "ARRAY_AGG | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64279.472678125
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Aggregate](/reference/sql/sql-functions), [Semi-Structured Data](/reference/sql/sql-functions)
 # ARRAY_AGG
 Aggregates the provided expression into an array.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ARRAY_AGG ( [ DISTINCT ] _expression_ ) → array[​](/reference/sql/sql-functions#array_agg---distinct--expression---array "Direct link to array_agg---distinct--expression---array")
+## Syntax
+### ARRAY_AGG ( [ DISTINCT ] _expression_ ) → array[​](/reference/sql/sql-functions)
   * expression: An expression of any primitive type to aggregate into an array.
 
 
@@ -32,7 +33,7 @@ SELECT ARRAY_AGG(name) FROM <catalog-name>.people;
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 • ARRAY_AGG is similar to PIVOT in the SELECT command but for a single column.  
   
 • The `DISTINCT` keyword removes duplicate values from _expression_.  
@@ -46,13 +47,13 @@ SELECT ARRAY_AGG(name) FROM <catalog-name>.people;
 • The elements in the returned array are not listed in any particular order.
 Was this page helpful?
 [Previous ARRAYS_OVERLAP](/reference/sql/sql-functions)[Next ARRAY_APPEND](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ARRAYS_OVERLAP](/reference/sql/sql-functions)[Next ARRAY_APPEND](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FARRAY_AGG%2F&_biz_t=1777950598924&_biz_i=ARRAY_AGG%20%7C%20Dremio%20Documentation&_biz_n=545&rnd=981301&cdn_o=a&_biz_z=1777950598925)
+!

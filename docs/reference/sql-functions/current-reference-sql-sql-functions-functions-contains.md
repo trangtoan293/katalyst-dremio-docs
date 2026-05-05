@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/CONTAINS
+slug: /reference/sql/sql-functions/functions/CONTAINS
 title: "CONTAINS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64302.140908125
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions)
 # CONTAINS
 Returns documents matching the provided Lucene expression.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### CONTAINS(_luceneExpression_ varchar) → dataset[​](/reference/sql/sql-functions#containsluceneexpression-varchar--dataset "Direct link to containsluceneexpression-varchar--dataset")
+## Syntax
+### CONTAINS(_luceneExpression_ varchar) → dataset[​](/reference/sql/sql-functions)
   * luceneExpression: The Lucene expression to use as a search term.
 
 
@@ -39,16 +40,16 @@ SELECT column1 from ElasticSearchSource.index1."_doc" WHERE CONTAINS(column1:dre
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
-This function can only be used with [Elasticsearch](/data-sources/databases/elasticsearch#elastic-pushdowns) sources. At its simplest, the Lucene expression can be a list of words, such as `CONTAINS( dremio sql)`. If no field names are specified, Dremio searches across all the fields in the document. To specify field names, use `CONTAINS(`col1`:`search_term` AND `col2`:`search_term`)`.
+## Usage Notes[​](/reference/sql/sql-functions)
+This function can only be used with [Elasticsearch](/data-sources/databases/elasticsearch) sources. At its simplest, the Lucene expression can be a list of words, such as `CONTAINS( dremio sql)`. If no field names are specified, Dremio searches across all the fields in the document. To specify field names, use `CONTAINS(`col1`:`search_term` AND `col2`:`search_term`)`.
 Was this page helpful?
 [Previous CONCAT_WS](/reference/sql/sql-functions)[Next CONVERT_FROM](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CONCAT_WS](/reference/sql/sql-functions)[Next CONVERT_FROM](/reference/sql/sql-functions)

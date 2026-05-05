@@ -1,5 +1,6 @@
 ---
 url: /reference/bulletins
+slug: /reference/bulletins
 title: "Security Bulletins | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64068.297172375
@@ -32,12 +33,12 @@ Security bulletins include the following information:
 | [2023-07-22-01](/reference/bulletins/2023-07-22-01)  | Vulnerability  | Medium  | Security Update  | Potential unintended user access to restricted data as a result of previously-executed cached plans.  |  
 Was this page helpful?
 [Previous SQL Reference](/reference/sql)[Next 2025-04-21-01](/reference/bulletins/2025-04-21-01)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SQL Reference](/reference/sql)[Next 2025-04-21-01](/reference/bulletins/2025-04-21-01)

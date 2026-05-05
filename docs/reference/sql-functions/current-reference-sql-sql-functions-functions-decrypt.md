@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/DECRYPT
+slug: /reference/sql/sql-functions/functions/DECRYPT
 title: "DECRYPT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64310.86678125
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Cryptography](/reference/sql/sql-functions)
 # DECRYPT
 Decrypts data using AES decryption with various modes, including `AES-ECB`, `AES-CBC`, and `AES-GCM`. Supports `PKCS7` padding or no padding options. For `AES-GCM` mode, verifies the authentication tag.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### DECRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR) → VARBINARY[​](/reference/sql/sql-functions#decryptdata-varbinary-key-varbinary-mode-varchar--varbinary "Direct link to decryptdata-varbinary-key-varbinary-mode-varchar--varbinary")
+## Syntax
+### DECRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR) → VARBINARY[​](/reference/sql/sql-functions)
   * data: The encrypted data to decrypt.
   * key: The decryption key. Must be 16, 24, or 32 bytes.
   * mode: The decryption mode. Supported modes: `AES-ECB` (defaults to `PKCS7` padding), `AES-ECB-PKCS7`, `AES-ECB-NONE`, `AES-CBC` (defaults to `PKCS7` padding), `AES-CBC-PKCS7`, `AES-CBC-NONE`, `AES-GCM`.
@@ -40,7 +41,7 @@ FROM
 
 ```
 
-### DECRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions#decryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary--varbinary "Direct link to decryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary--varbinary")
+### DECRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions)
   * data: The encrypted data to decrypt.
   * key: The decryption key. Must be 16, 24, or 32 bytes.
   * mode: The decryption mode. Supported modes: `AES-ECB` (defaults to `PKCS7` padding), `AES-ECB-PKCS7`, `AES-ECB-NONE`, `AES-CBC` (defaults to `PKCS7` padding), `AES-CBC-PKCS7`, `AES-CBC-NONE`, `AES-GCM`.
@@ -64,7 +65,7 @@ FROM
 
 ```
 
-### DECRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY, _aad_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions#decryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary-aad-varbinary--varbinary "Direct link to decryptdata-varbinary-key-varbinary-mode-varchar-iv-varbinary-aad-varbinary--varbinary")
+### DECRYPT(_data_ VARBINARY, _key_ VARBINARY, _mode_ VARCHAR, _iv_ VARBINARY, _aad_ VARBINARY) → VARBINARY[​](/reference/sql/sql-functions)
   * data: The encrypted data to decrypt.
   * key: The decryption key. Must be 16, 24, or 32 bytes.
   * mode: Must be `AES-GCM`
@@ -90,7 +91,7 @@ FROM
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
   * Ciphertext created with `AES_ENCRYPT` can be decrypted with `DECRYPT` in `AES-ECB` mode and does not need to be recreated with `ENCRYPT` unless a stronger cipher mode is required.
   * Retrieve keys at runtime rather than hardcoding them in queries.
   * Rotate keys periodically according to your organization's security policies.
@@ -100,12 +101,12 @@ FROM
 
 Was this page helpful?
 [Previous DAYOFYEAR](/reference/sql/sql-functions)[Next DEGREES](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DAYOFYEAR](/reference/sql/sql-functions)[Next DEGREES](/reference/sql/sql-functions)

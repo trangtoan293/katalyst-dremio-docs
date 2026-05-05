@@ -16,16 +16,16 @@ On this page
 # Recommendations
 Use the Recommendations API to get job-based recommendations and get and create usage-based Reflections that can accelerate your queries.
 Getting **job-based recommendations** requires making the following two API requests:
-  1. [Submit the job IDs of jobs that have run SQL queries](/reference/api/reflections/reflection-recommendations#submit-job-ids). These are job IDs of the queries for which you want to retrieve recommendations in further requests. This request returns the job ID to use in the second request.
-  2. [Retrieve job-based recommendations for Reflections](/reference/api/reflections/reflection-recommendations#retrieve-job-based-recommendations) that can accelerate your queries. Use the job ID that was returned in your first request to make the request for recommendations.
+  1. [Submit the job IDs of jobs that have run SQL queries](/reference/api/reflections/reflection-recommendations). These are job IDs of the queries for which you want to retrieve recommendations in further requests. This request returns the job ID to use in the second request.
+  2. [Retrieve job-based recommendations for Reflections](/reference/api/reflections/reflection-recommendations) that can accelerate your queries. Use the job ID that was returned in your first request to make the request for recommendations.
 
 
 Creating Reflections from **usage-based recommendations** requires making the following two API requests:
-  1. [Retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations) for Reflections. This request returns the parameters to use in the body of the second request.
-  2. [Create Reflections from usage-based recommendations](/reference/api/reflections/reflection-recommendations#create-reflections-from-usage-based-recommendations) that can accelerate your queries from the usage-based recommendations. Use the recommendation ID and Reflection request body that were returned in your first request to create the Reflections.
+  1. [Retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations) for Reflections. This request returns the parameters to use in the body of the second request.
+  2. [Create Reflections from usage-based recommendations](/reference/api/reflections/reflection-recommendations) that can accelerate your queries from the usage-based recommendations. Use the recommendation ID and Reflection request body that were returned in your first request to create the Reflections.
 
 
-The [`POST /api/v3/reflection/recommendations` endpoint](/reference/api/reflections/reflection-recommendations#retrieve-recommendations-deprecated) is deprecated. In its place, use the job-based and usage-based endpoints described on this page to retrieve and refresh Reflection recommendations.
+The [`POST /api/v3/reflection/recommendations` endpoint](/reference/api/reflections/reflection-recommendations) is deprecated. In its place, use the job-based and usage-based endpoints described on this page to retrieve and refresh Reflection recommendations.
 Recommendation Object (Raw Reflection)
 
 ```
@@ -132,25 +132,25 @@ Recommendation Object (Aggregation Reflection)
 
 ```
 
-## Recommendation Attributes[​](/reference/api/reflections/reflection-recommendations#recommendation-attributes "Direct link to Recommendation Attributes")
-[data](/reference/api/reflections/reflection-recommendations#attributes-of-objects-in-the-data-array) Array of Object
+## Recommendation Attributes[​](/reference/api/reflections/reflection-recommendations)
+[data](/reference/api/reflections/reflection-recommendations) Array of Object
 List of recommended Reflection objects for the submitted job IDs.
 * * *
 canAlterReflections Boolean
 If the columns in the recommended Reflection can be edited, added, and removed, `true`. Otherwise, `false`.
 Example: true
-#### Attributes of Objects in the `data` Array[​](/reference/api/reflections/reflection-recommendations#attributes-of-objects-in-the-data-array "Direct link to attributes-of-objects-in-the-data-array")
-[viewRequestBody](/reference/api/reflections/reflection-recommendations#attributes-of-the-viewrequestbody-object) Object
-The fields to include in a request to the [Catalog API](/reference/api/catalog/view#create-a-view) to create the view on which to define the recommended Reflection.
+#### Attributes of Objects in the `data` Array[​](/reference/api/reflections/reflection-recommendations)
+[viewRequestBody](/reference/api/reflections/reflection-recommendations) Object
+The fields to include in a request to the [Catalog API](/reference/api/catalog/view) to create the view on which to define the recommended Reflection.
 * * *
 viewRequestEndpoint String
-The endpoint to use when submitting a request to the [Catalog API](/reference/api/catalog/view#create-a-view) to create the view on which to define the recommended Reflection.
+The endpoint to use when submitting a request to the [Catalog API](/reference/api/catalog/view) to create the view on which to define the recommended Reflection.
 * * *
-[reflectionRequestBody](/reference/api/reflections/reflection-recommendations#attributes-of-the-reflectionrequestbody-object) Object
-The fields to include in a request to the [Reflection API](/reference/api/reflections#create-a-reflection) to create the recommended Reflection.
+[reflectionRequestBody](/reference/api/reflections/reflection-recommendations) Object
+The fields to include in a request to the [Reflection API](/reference/api/reflections) to create the recommended Reflection.
 * * *
 reflectionRequestEndpoint String
-The endpoint to use when submitting the request to the [Reflection API](/reference/api/reflections#create-a-reflection) to create the recommended Reflection.
+The endpoint to use when submitting the request to the [Reflection API](/reference/api/reflections) to create the recommended Reflection.
 * * *
 jobIds Array of String
 The job IDs of the queries for which the Reflection recommendations are given.
@@ -175,7 +175,7 @@ Example: 10.43
 avgImprovementMs Double
 The likely average improvement, in milliseconds, for each query if you implement the recommended Reflection. For example, if the avgImprovementMs value is 5400, implementing the recommended Reflection is likely to save an average of 5400 milliseconds for each query that uses the Reflection.
 Example: 7196
-#### Attributes of the `viewRequestBody` Object[​](/reference/api/reflections/reflection-recommendations#attributes-of-the-viewrequestbody-object "Direct link to attributes-of-the-viewrequestbody-object")
+#### Attributes of the `viewRequestBody` Object[​](/reference/api/reflections/reflection-recommendations)
 entityType String
 Type of catalog entity. For views, the entityType is `dataset`.
 * * *
@@ -188,9 +188,9 @@ Example: ["azure_3","table_2"]
 * * *
 sql String
 For aggregation Reflections, the SQL query to use to create the view. For default raw Reflections, the sql value `--Default Raw Reflection`; creating a view is unnecessary because raw recommendations are given only for existing views.
-#### Attributes of the `reflectionRequestBody` Object[​](/reference/api/reflections/reflection-recommendations#attributes-of-the-reflectionrequestbody-object "Direct link to attributes-of-the-reflectionrequestbody-object")
+#### Attributes of the `reflectionRequestBody` Object[​](/reference/api/reflections/reflection-recommendations)
 type String
-Reflection type. For details, read [Types of Reflections](/acceleration#types).
+Reflection type. For details, read [Types of Reflections](/acceleration).
 Enum: RAW, AGGREGATION
 Example: AGGREGATION
 * * *
@@ -224,9 +224,9 @@ Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passe
 * * *
 entityType String
 Type of entity. For Reflection objects, the entityType is `reflection`.
-## Submit Job IDs[​](/reference/api/reflections/reflection-recommendations#submit-job-ids "Direct link to Submit Job IDs")
+## Submit Job IDs[​](/reference/api/reflections/reflection-recommendations)
 Submit the job IDs of queries for which you want to request Reflection recommendations.
-The response includes objects that contain an id attribute and value for each job ID you submit. Use these id values to [retrieve recommendations for Reflections](/reference/api/reflections/reflection-recommendations#retrieve-job-based-recommendations) to accelerate the queries.
+The response includes objects that contain an id attribute and value for each job ID you submit. Use these id values to [retrieve recommendations for Reflections](/reference/api/reflections/reflection-recommendations) to accelerate the queries.
 Method and URL
 
 ```
@@ -234,11 +234,11 @@ POST /api/v3/reflection/recommendations/job-based/
 
 ```
 
-### Parameters[​](/reference/api/reflections/reflection-recommendations#parameters "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections/reflection-recommendations)
 jobIds Body Array of String
 The job IDs of the queries for which you want to request Reflection recommendations. To get the job IDs, use the [SQL API](/reference/api/sql) or find them on the [Jobs page](/admin/monitoring/jobs) in the Dremio console. Use a comma-separated list to submit multiple job IDs.
 Example: ["a7efcd50-791a-48e8-bb05-391b4411e66b"]
-### Example[​](/reference/api/reflections/reflection-recommendations#example "Direct link to Example")
+### Example[​](/reference/api/reflections/reflection-recommendations)
 Request
 
 ```
@@ -260,7 +260,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections/reflection-recommendations#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections/reflection-recommendations)
 200 OK   
   
 400 Bad Request   
@@ -272,13 +272,13 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve Job-Based Recommendations[​](/reference/api/reflections/reflection-recommendations#retrieve-job-based-recommendations "Direct link to Retrieve Job-Based Recommendations")
-Retrieve job-based recommended Reflections to accelerate the queries whose [job IDs you submitted](/reference/api/reflections/reflection-recommendations#submit-job-ids).
+## Retrieve Job-Based Recommendations[​](/reference/api/reflections/reflection-recommendations)
+Retrieve job-based recommended Reflections to accelerate the queries whose [job IDs you submitted](/reference/api/reflections/reflection-recommendations).
   * For default raw Reflections, each recommendation comprises the path to the view on which to define the Reflection and the parameters to use in a request to create the Reflection.
   * For aggregation Reflections, each recommendation comprises the parameters to use in a request to create a view on which to define the recommended Reflection and the parameters to use in a request to create the Reflection.
 
 
-After you retrieve the recommended Reflections for your queries, use the [Catalog API](/reference/api/catalog/view#creating-a-view) to create the recommended views. Then, use the [Reflection API](/reference/api/reflections#creating-a-reflection) to create the desired Reflections.
+After you retrieve the recommended Reflections for your queries, use the [Catalog API](/reference/api/catalog/view) to create the recommended views. Then, use the [Reflection API](/reference/api/reflections) to create the desired Reflections.
 Before submitting Catalog API requests to create the recommended views for aggregation Reflections, create a folder named `recommended_view`. In your Catalog API requests, the `path` parameter must include the full path to the `recommended_view` folder. If you prefer to use a different folder name, replace `recommended_view` with your folder name in the `path` parameter when making the Catalog API request.
 Method and URL
 
@@ -287,11 +287,11 @@ GET /api/v3/reflection/recommendations/job-based/{id}/results/
 
 ```
 
-### Parameters[​](/reference/api/reflections/reflection-recommendations#parameters-1 "Direct link to Parameters")
+### Parameters[​](/reference/api/reflections/reflection-recommendations)
 id Path String
-The id value returned in the response to your request to [submit the job ID or IDs](/reference/api/reflections/reflection-recommendations#submit-job-ids) of the queries for which you want to retrieve recommended Reflections.
+The id value returned in the response to your request to [submit the job ID or IDs](/reference/api/reflections/reflection-recommendations) of the queries for which you want to retrieve recommended Reflections.
 Example: 13ffb629-9f0e-4265-97df-99bf0d425813
-### Example[​](/reference/api/reflections/reflection-recommendations#example-1 "Direct link to Example")
+### Example[​](/reference/api/reflections/reflection-recommendations)
 Request
 
 ```
@@ -351,7 +351,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections/reflection-recommendations#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections/reflection-recommendations)
 200 OK   
   
 400 Bad Request   
@@ -363,8 +363,8 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations "Direct link to Retrieve Usage-Based Recommendations")
-Retrieve usage-based Reflection recommendations. The response includes the `reflectionRequestBody` and `recommendationId` attributes to use as body parameters in your request to [create usage-based Reflections](/reference/api/reflections/reflection-recommendations#create-reflections-from-usage-based-recommendations).
+## Retrieve Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations)
+Retrieve usage-based Reflection recommendations. The response includes the `reflectionRequestBody` and `recommendationId` attributes to use as body parameters in your request to [create usage-based Reflections](/reference/api/reflections/reflection-recommendations).
 Method and URL
 
 ```
@@ -372,7 +372,7 @@ GET /api/v3/reflection/recommendations/usage-based/
 
 ```
 
-### Example[​](/reference/api/reflections/reflection-recommendations#example-2 "Direct link to Example")
+### Example[​](/reference/api/reflections/reflection-recommendations)
 Request
 
 ```
@@ -437,7 +437,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections/reflection-recommendations#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections/reflection-recommendations)
 200 OK   
   
 400 Bad Request   
@@ -447,9 +447,9 @@ Response
 500 Internal Server Error   
   
 
-## Create Reflections from Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations#create-reflections-from-usage-based-recommendations "Direct link to Create Reflections from Usage-Based Recommendations")
-Create Reflections to accelerate queries using the [usage-based recommendations](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations) that you retrieved.
-You must [retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations) to get the parameters you need for this request.
+## Create Reflections from Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations)
+Create Reflections to accelerate queries using the [usage-based recommendations](/reference/api/reflections/reflection-recommendations) that you retrieved.
+You must [retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations) to get the parameters you need for this request.
 Method and URL
 
 ```
@@ -457,16 +457,16 @@ POST /api/v3/reflection/recommendations/usage-based/
 
 ```
 
-### Parameters[​](/reference/api/reflections/reflection-recommendations#parameters-2 "Direct link to Parameters")
-[reflection](/reference/api/reflections/reflection-recommendations#parameters-of-the-reflection-object) Body Object
-Information about the usage-based Reflection to create. The Reflection object includes the contents of the reflectionRequestBody included in the response for requests to [retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations).
+### Parameters[​](/reference/api/reflections/reflection-recommendations)
+[reflection](/reference/api/reflections/reflection-recommendations) Body Object
+Information about the usage-based Reflection to create. The Reflection object includes the contents of the reflectionRequestBody included in the response for requests to [retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations).
 **NOTE** : If desired, you may change the name of the Reflection by changing the value for the Reflection.name parameter in the body of your request. Dremio ignores any changes to the values of other parameters in the Reflection object.
 * * *
 recommendationId Body String
-Identifier for the usage-based recommendation you want to use to create Reflections. The recommendationId is included in the response for requests to [retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations).
+Identifier for the usage-based recommendation you want to use to create Reflections. The recommendationId is included in the response for requests to [retrieve usage-based recommendations](/reference/api/reflections/reflection-recommendations).
 Example: prodFolder.cost_based
 * * *
-#### Parameters of the `reflection` Object[​](/reference/api/reflections/reflection-recommendations#parameters-of-the-reflection-object "Direct link to parameters-of-the-reflection-object")
+#### Parameters of the `reflection` Object[​](/reference/api/reflections/reflection-recommendations)
 type Body String
 Reflection [type](/acceleration). Value must be `RAW`.
 * * *
@@ -501,7 +501,7 @@ Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"name": "passe
 * * *
 entityType Body String
 Type of entity. For Reflection objects, the entityType is `reflection`.
-### Example[​](/reference/api/reflections/reflection-recommendations#example-3 "Direct link to Example")
+### Example[​](/reference/api/reflections/reflection-recommendations)
 Request
 
 ```
@@ -578,7 +578,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/reflections/reflection-recommendations#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections/reflection-recommendations)
 200 OK   
   
 400 Bad Request   
@@ -588,9 +588,9 @@ Response
 500 Internal Server Error   
   
 
-## Refresh Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations#refresh-usage-based-recommendations "Direct link to Refresh Usage-Based Recommendations")
+## Refresh Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations)
 Process collected data about view usage, clear existing usage-based recommendations, and generate new usage-based recommendations.
-Use the usage-based endpoints to [retrieve](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations) and [create](/reference/api/reflections/reflection-recommendations#create-reflections-from-usage-based-recommendations) Reflections based on the refreshed recommendations this endpoint creates.
+Use the usage-based endpoints to [retrieve](/reference/api/reflections/reflection-recommendations) and [create](/reference/api/reflections/reflection-recommendations) Reflections based on the refreshed recommendations this endpoint creates.
 Method and URL
 
 ```
@@ -598,7 +598,7 @@ POST /api/v3/reflection/recommendations/usage-based/refresh/
 
 ```
 
-### Example Request[​](/reference/api/reflections/reflection-recommendations#example-request "Direct link to Example Request")
+### Example Request[​](/reference/api/reflections/reflection-recommendations)
 
 ```
 curl -X POST 'https://{hostname}/api/v3/reflection/recommendations/usage-based/refresh/' \  
@@ -607,8 +607,8 @@ curl -X POST 'https://{hostname}/api/v3/reflection/recommendations/usage-based/r
 
 ```
 
-This endpoint returns an empty response body with a `202 Accepted` response status code. Dremio updates the recommendations asynchronously, so it may take several minutes before you can [retrieve](/reference/api/reflections/reflection-recommendations#retrieve-usage-based-recommendations) the updated recommendations.
-### Response Status Codes[​](/reference/api/reflections/reflection-recommendations#response-status-codes-4 "Direct link to Response Status Codes")
+This endpoint returns an empty response body with a `202 Accepted` response status code. Dremio updates the recommendations asynchronously, so it may take several minutes before you can [retrieve](/reference/api/reflections/reflection-recommendations) the updated recommendations.
+### Response Status Codes[​](/reference/api/reflections/reflection-recommendations)
 202 Accepted   
   
 
@@ -621,7 +621,7 @@ This endpoint returns an empty response body with a `202 Accepted` response stat
 500 Internal Server Error   
   
 
-## Delete Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations#delete-usage-based-recommendations "Direct link to Delete Usage-Based Recommendations")
+## Delete Usage-Based Recommendations[​](/reference/api/reflections/reflection-recommendations)
 Delete all collected usage data and all current Reflection recommendations.
 We recommend deleting recommendations only when troubleshooting.
 Method and URL
@@ -631,7 +631,7 @@ DELETE /api/v3/reflection/recommendations/usage-based/
 
 ```
 
-### Example Request[​](/reference/api/reflections/reflection-recommendations#example-request-1 "Direct link to Example Request")
+### Example Request[​](/reference/api/reflections/reflection-recommendations)
 
 ```
 curl -X DELETE 'https://{hostname}/api/v3/reflection/recommendations/usage-based/' \  
@@ -641,7 +641,7 @@ curl -X DELETE 'https://{hostname}/api/v3/reflection/recommendations/usage-based
 ```
 
 This endpoint returns an empty response body with a `202 Accepted` response status code. Dremio deletes the recommendations asynchronously, so it may take several minutes for the deletion to complete.
-### Response Status Codes[​](/reference/api/reflections/reflection-recommendations#response-status-codes-5 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api/reflections/reflection-recommendations)
 202 Accepted   
   
 
@@ -654,10 +654,10 @@ This endpoint returns an empty response body with a `202 Accepted` response stat
 500 Internal Server Error   
   
 
-## Retrieve Recommendations (Deprecated)[​](/reference/api/reflections/reflection-recommendations#retrieve-recommendations-deprecated "Direct link to Retrieve Recommendations \(Deprecated\)")
-The [`POST /api/v3/reflection/recommendations` endpoint](/reference/api/reflections/reflection-recommendations#retrieve-recommendations-deprecated) described in this section is deprecated. In its place, use the [job-based and usage-based](/reference/api/reflections/reflection-recommendations) endpoints to retrieve and refresh Reflection recommendations.
+## Retrieve Recommendations (Deprecated)[​](/reference/api/reflections/reflection-recommendations)")
+The [`POST /api/v3/reflection/recommendations` endpoint](/reference/api/reflections/reflection-recommendations) described in this section is deprecated. In its place, use the [job-based and usage-based](/reference/api/reflections/reflection-recommendations) endpoints to retrieve and refresh Reflection recommendations.
 Use the Recommendations API to submit job IDs of jobs that ran SQL queries, and receive recommendations for aggregation Reflections that can accelerate those queries.
-For more information, see [Sending Requests to the Recommendations API](/reference/api/reflections/reflection-recommendations#submit-job-ids).
+For more information, see [Sending Requests to the Recommendations API](/reference/api/reflections/reflection-recommendations).
 Recommendation Object
 
 ```
@@ -705,7 +705,7 @@ Recommendation Object
 
 ```
 
-#### Recommendation Attributes (Deprecated)[​](/reference/api/reflections/reflection-recommendations#recommendation-attributes-deprecated "Direct link to Recommendation Attributes \(Deprecated\)")
+#### Recommendation Attributes (Deprecated)[​](/reference/api/reflections/reflection-recommendations)")
 viewRequestBody Array of Object
 The fields that you can include in a request to the Catalog API for creating the view on which to define the recommended aggregation Reflection.
 For descriptions of these fields, see [View](/reference/api/catalog/view).
@@ -725,7 +725,7 @@ The IDs of the jobs that ran the queries for which the recommendation is given.
 * * *
 canAlterReflections String
 Indicates whether the columns in the Reflection can be edited, and whether columns can be added or removed.
-#### Request Recommendations (Deprecated)[​](/reference/api/reflections/reflection-recommendations#request-recommendations-deprecated "Direct link to Request Recommendations \(Deprecated\)")
+#### Request Recommendations (Deprecated)[​](/reference/api/reflections/reflection-recommendations)")
 This endpoint is deprecated. In its place, use the [job-based and usage-based](/reference/api/reflections/reflection-recommendations) endpoints to retrieve and refresh Reflection recommendations.
 Request recommended aggregation Reflections to accelerate the queries associated with the provided job ID or IDs.
 Method and URL
@@ -735,10 +735,10 @@ POST /api/v3/reflection/recommendations
 
 ```
 
-##### Parameters (Deprecated)[​](/reference/api/reflections/reflection-recommendations#parameters-deprecated "Direct link to Parameters \(Deprecated\)")
+##### Parameters (Deprecated)[​](/reference/api/reflections/reflection-recommendations)")
 jobIds Body Array of String
 A list of the job IDs of jobs that have run the SQL commands that you want to receive one or more recommended Reflections for.
-### Example Request[​](/reference/api/reflections/reflection-recommendations#example-request-2 "Direct link to Example Request")
+### Example Request[​](/reference/api/reflections/reflection-recommendations)
 
 ```
 curl -X POST 'https://{hostname}/api/v3/reflection/recommendations' \  
@@ -756,13 +756,13 @@ curl -X POST 'https://{hostname}/api/v3/reflection/recommendations' \
 
 Was this page helpful?
 [Previous Reflection](/reference/api/reflections)[Next Reflection Summary](/reference/api/reflections/reflection-summary)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Reflection](/reference/api/reflections)[Next Reflection Summary](/reference/api/reflections/reflection-summary)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Freflections%2Freflection-recommendations%2F&_biz_t=1777950561972&_biz_i=Recommendations%20%7C%20Dremio%20Documentation&_biz_n=469&rnd=61753&cdn_o=a&_biz_z=1777950561972)
+!

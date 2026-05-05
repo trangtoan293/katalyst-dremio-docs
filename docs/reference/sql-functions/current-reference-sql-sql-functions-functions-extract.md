@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/EXTRACT
+slug: /reference/sql/sql-functions/functions/EXTRACT
 title: "EXTRACT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64311.032763041
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Date/Time](/reference/sql/sql-functions)
 # EXTRACT
 Extracts the specified time unit from the specified date, time, or timestamp.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### EXTRACT(_time_unit_ KEYWORD, _date_time_expression_ DATE, TIME, TIMESTAMP) → INTEGER[​](/reference/sql/sql-functions#extracttime_unit-keyword-date_time_expression-date-time-timestamp--integer "Direct link to extracttime_unit-keyword-date_time_expression-date-time-timestamp--integer")
+## Syntax
+### EXTRACT(_time_unit_ KEYWORD, _date_time_expression_ DATE, TIME, TIMESTAMP) → INTEGER[​](/reference/sql/sql-functions)
   * time_unit: The time unit to extract from the date, time, or timestamp. Valid values are EPOCH, YEAR, MONTH, DAY, HOUR, MINUTE, or SECOND.
   * date_time_expression: The date, time, or timestamp from which to extract the specified time unit.
 
@@ -74,13 +75,13 @@ SELECT EXTRACT(EPOCH FROM CAST('2021-03-22' AS DATE))
 
 Was this page helpful?
 [Previous EXP](/reference/sql/sql-functions)[Next FACTORIAL](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous EXP](/reference/sql/sql-functions)[Next FACTORIAL](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FEXTRACT%2F&_biz_t=1777950630688&_biz_i=EXTRACT%20%7C%20Dremio%20Documentation&_biz_n=600&rnd=871287&cdn_o=a&_biz_z=1777950630689)
+!

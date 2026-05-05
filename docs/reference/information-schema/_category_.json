@@ -2,7 +2,7 @@
   "label": "Information Schema",
   "position": 9,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Information Schema"
+    "type": "doc",
+    "id": "reference/information-schema/current-reference-sql-information-schema"
   }
 }

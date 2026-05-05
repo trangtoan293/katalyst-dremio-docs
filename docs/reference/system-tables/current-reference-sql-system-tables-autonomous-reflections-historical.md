@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/autonomous-reflections-historical
+slug: /reference/sql/system-tables/autonomous-reflections-historical
 title: "SYS.HISTORY.AUTONOMOUS_REFLECTIONS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.382408041
@@ -23,12 +24,12 @@ FROM sys.history.autonomous_reflections
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/autonomous-reflections-historical#example-output "Direct link to Example Output")  
+## Example Output​  
 | reflectionName  | reflection_id  | createdAt  | reflectionType  | enabled  | operationSource  | changeContent  | datasetId  | datasetName  | operationType  | autonomous  | score  | avgDailyAcceleratedCount  | avgDailyImprovementInMs  | avgImprovementFactor  | benefitsScoreDesc  | reason  | viewSql  | sqlType  | beforeImage  | key  | datasetPath  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | AutoRef_Dataset_9a48f54a-d241-46cf-9e71-ae25642cf22c_aggregation  | 4390b0f5-0a0d-4b23-9a96-d9e9c5427baf  | 1748883691293  | AGGREGATION  | true  | REST  | "CREATE VIEW "__system_managed_views"."Dataset_9a48f54a-d241-46cf-9e71-ae25642cf22c" AS SELECT "NYC-taxi-trips-iceberg"."fare_amount" AS "F0[fare_amount]", "NYC-taxi-trips-iceberg"."passenger_count" AS "F1[passenger_count]"\nFROM "Samples"."samples.dremio.com"."NYC-taxi-trips-iceberg"\n ; ALTER DATASET "__system_managed_views"."Dataset_9a48f54a-d241-46cf-9e71-ae25642cf22c" CREATE AGGREGATE Reflection "agg_336b6cd6-9ade-4657-b685-4450c4dca951" USING DIMENSIONS ("F1[passenger_count]") MEASURES ("F0[fare_amount]" (SUM))  | aa0b4932-e51d-4fed-93bf-e03b4a9b0a02  | Dataset_9a48f54a-d241-46cf-9e71-ae25642cf22c  | ADD  | true  | 42.47425033306188  | 5.0  | 22366.980051424373  | 10.00000020692081  | FAIR  | CREATE autonomous Reflection in Autonomous Mode  | CREATE autonomous Reflection in Autonomous Mode","viewSql":"CREATE VIEW "__system_managed_views"."Dataset_9a48f54a-d241-46cf-9e71-ae25642cf22c" AS SELECT "NYC-taxi-trips-iceberg"."fare_amount" AS "F0[fare_amount]", "NYC-taxi-trips-iceberg"."passenger_count" AS "F1[passenger_count]"\nFROM "Samples"."samples.dremio.com"."NYC-taxi-trips-iceberg"\n  | CREATE_Reflection  | false  | 4390b0f5-0a0d-4b23-9a96-d9e9c5427baf_CREATE_Reflection  | ["__system_managed_views","Dataset_9a48f54a-d241-46cf-9e71-ae25642cf22c"]  |  
 | AutoRef_v1_raw  | 68bd2902-ad85-4793-ab6d-4f425b798775  | 1748883691257  | RAW  | true  | REST  | --Default Raw Reflection ; ALTER DATASET test.v1 CREATE RAW Reflection "raw_2311879c-79c4-4477-a1ed-6b4c999165bc" USING DISPLAY ("passenger_count", "EXPR$1")  | 8984be51-cd00-43f7-95e3-918eeabc51db  | v1  | ADD  | true  | 42.47425033306188  | 5.0  | 22366.980051424373  | 10.00000020692081  | FAIR  | CREATE autonomous Reflection in Autonomous Mode  | --Default Raw Reflection  | CREATE_Reflection  | false  | 68bd2902-ad85-4793-ab6d-4f425b798775_CREATE_Reflection  | ["test","v1"]  |  
-## Columns[​](/reference/sql/system-tables/autonomous-reflections-historical#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | reflectionName  | varchar  | Names the Autonomous Reflection.  |  
@@ -55,12 +56,12 @@ FROM sys.history.autonomous_reflections
 | datasetPath  | varchar  | Shows the path to the dataset associated with the Autonomous Reflection.  |  
 Was this page helpful?
 [Previous System Tables](/reference/sql/system-tables)[Next SYS.COPY_ERRORS_HISTORY](/reference/sql/system-tables/copy-errors-history)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous System Tables](/reference/sql/system-tables)[Next SYS.COPY_ERRORS_HISTORY](/reference/sql/system-tables/copy-errors-history)

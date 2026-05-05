@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/BITWISE_OR
+slug: /reference/sql/sql-functions/functions/BITWISE_OR
 title: "BITWISE_OR | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64294.148645041
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Bitwise](/reference/sql/sql-functions)
 # BITWISE_OR
 Returns the bitwise OR of two operands.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### BITWISE_OR(_op1_ NUMERIC, _op2_ NUMERIC) → NUMERIC[​](/reference/sql/sql-functions#bitwise_orop1-numeric-op2-numeric--numeric "Direct link to bitwise_orop1-numeric-op2-numeric--numeric")
+## Syntax
+### BITWISE_OR(_op1_ NUMERIC, _op2_ NUMERIC) → NUMERIC[​](/reference/sql/sql-functions)
   * op1: First operand.
   * op2: Second operand.
 
@@ -42,12 +43,12 @@ SELECT BITWISE_OR(1, 2)
 
 Was this page helpful?
 [Previous BITWISE_NOT](/reference/sql/sql-functions)[Next BITWISE_XOR](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous BITWISE_NOT](/reference/sql/sql-functions)[Next BITWISE_XOR](/reference/sql/sql-functions)

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/data-types
+slug: /reference/sql/data-types
 title: "Data Types | Dremio Enterprise Documentation"
 depth: 1
 crawled_at: 64004.738942875
@@ -20,10 +21,10 @@ The following topics related to data types are covered:
   * [Coercions Support](/reference/sql/data-types/coercions): Details how data types are coerced when there is a mismatch between the source file and the table.
 
 
-## Summary of Supported Data Types in Dremio[​](/reference/sql/data-types#summary-of-supported-data-types-in-dremio "Direct link to Summary of Supported Data Types in Dremio")
+## Summary of Supported Data Types in Dremio​
 Dremio supports the following SQL data types.
-### Numeric Data Types[​](/reference/sql/data-types#numeric-data-types "Direct link to Numeric Data Types")
-#### DECIMAL[​](/reference/sql/data-types#decimal "Direct link to DECIMAL")
+### Numeric Data Types​
+#### DECIMAL​
 A DECIMAL type has precision (p) and scale (s): DECIMAL(p,s). Precision is the total number of digits. Scale is the number of digits to the right of the decimal point. When you're working with DECIMAL types, you can choose to specify the precision and scale by using the format (p,s).
 Both precision and scale must contain positive numbers. The maximum precision value is 38. The scale value must be equal to or smaller than the precision. The default precision value is 38, and the default scale value is 0.
 When you perform arithmetic on DECIMAL types that have different precision and/or scale, the return value will have sufficient precision and scale to hold the result of the operation. The following are decimal limitations in Dremio:
@@ -34,33 +35,33 @@ When you perform arithmetic on DECIMAL types that have different precision and/o
   * **Example:** 987.65 is a DECIMAL(5, 2) value
 
 
-#### INT[​](/reference/sql/data-types#int "Direct link to INT")
+#### INT​
   * A 4-byte signed integer. The supported range is from -2147483648 to 2147483647.
   * **Example:** 5135
 
 
-#### BIGINT[​](/reference/sql/data-types#bigint "Direct link to BIGINT")
+#### BIGINT​
   * An 8-byte signed integer. The supported range is from -9223372036854775808 to 9223372036854775807.
   * **Example:** -749826542587
 
 
-#### FLOAT[​](/reference/sql/data-types#float "Direct link to FLOAT")
+#### FLOAT​
   * A 4-byte single-precision floating point. A FLOAT provides six decimal digits of precision.
   * **Example:** 123.123456
 
 
-#### DOUBLE[​](/reference/sql/data-types#double "Direct link to DOUBLE")
+#### DOUBLE​
   * 8-byte double-precision floating point. A DOUBLE provides 15 decimal digits of precision.
   * **Example:** 123.123456789012345
 
 
-### String & Binary Data Types[​](/reference/sql/data-types#string--binary-data-types "Direct link to String & Binary Data Types")
-#### VARCHAR[​](/reference/sql/data-types#varchar "Direct link to VARCHAR")
+### String & Binary Data Types​
+#### VARCHAR​
   * VARCHAR stands for variable-length character string. VARCHAR supports only UTF-8 encoded values. The maximum length is constrained by a 16 MB row limit.
   * **Example:** 18852367854
 
 
-#### VARBINARY[​](/reference/sql/data-types#varbinary "Direct link to VARBINARY")
+#### VARBINARY​
 VARBINARY stands for variable-length binary string. The maximum length is constrained by a 16 MB row limit. The value must be entered as a string value.
 VARBINARY Example
 
@@ -70,13 +71,13 @@ SELECT CAST ('help' as VARBINARY)
 
 ```
 
-### Boolean Data Type[​](/reference/sql/data-types#boolean-data-type "Direct link to Boolean Data Type")
-#### BOOLEAN[​](/reference/sql/data-types#boolean "Direct link to BOOLEAN")
+### Boolean Data Type​
+#### BOOLEAN​
   * The supported values for BOOLEAN include true, false, and null.
   * **Example:** TRUE, FALSE, and NULL
 
 
-### Date & Time Data Types[​](/reference/sql/data-types#date--time-data-types "Direct link to Date & Time Data Types")
+### Date & Time Data Types​
 Dremio supports the following formatting elements:  
 | Format Element  | Description  | Example Output  |  
 | --- | --- | --- |  
@@ -101,13 +102,13 @@ Dremio supports the following formatting elements:
 | FFF  | Milliseconds  | 121  |  
 | TZD  | Timezone abbreviation  | UTC, PST  |  
 | TZO  | Timezone offset  | +02:00, -0800  |  
-#### DATE[​](/reference/sql/data-types#date "Direct link to DATE")
+#### DATE​
   * A date value that enables you to calculate and store consistent information about the date of the events and transactions.
 When using a string literal for the date, yyyy-mm-dd is the only supported format. To use a different format, use the [TO_DATE()](/reference/sql/sql-functions) function.
   * **Example:** DATE ‘2000-01-01’
 
 
-#### TIME[​](/reference/sql/data-types#time "Direct link to TIME")
+#### TIME​
   * Identifies the time of day, which enables you to calculate and store consistent information about the time of the events and transactions.
 When using a string literal for the time, HH24:MI:SS.sss and HH24:MI:SS are the only supported formats. To use a different format, use the [TO_TIME()](/reference/sql/sql-functions) function.
   * **Examples:**
@@ -115,7 +116,7 @@ When using a string literal for the time, HH24:MI:SS.sss and HH24:MI:SS are the 
     * TIME ‘17:30:50’
 
 
-#### TIMESTAMP[​](/reference/sql/data-types#timestamp "Direct link to TIMESTAMP")
+#### TIMESTAMP​
   * Represents an absolute point in time with millisecond precision without a time zone. Timestamps are truncated to the nearest millisecond. For more information, see [Time Zone Support](/reference/sql/data-types/time-zone-support).
   * **Examples:**
     * TIMESTAMP ‘2000-01-01 01:30:50’
@@ -125,7 +126,7 @@ When using a string literal for the time, HH24:MI:SS.sss and HH24:MI:SS are the 
     * TIMESTAMP ‘2000-01-01 17:30:50.123’
 
 
-#### INTERVAL[​](/reference/sql/data-types#interval "Direct link to INTERVAL")
+#### INTERVAL​
   * Intervals are used to represent a measure of time. Dremio supports the two available types of intervals: year-month, which stores the year and month (YYYY-MM); and day-time (DD HH:MM:SS), which stores the days, hours, minutes, and seconds.
   * The following forms are supported:
     * DAY HOUR:MINUTE:SECOND:MILLISECOND - For example, INTERVAL '3' DAY
@@ -142,8 +143,8 @@ When using a string literal for the time, HH24:MI:SS.sss and HH24:MI:SS are the 
       * INTERVAL ‘1-5’ YEAR TO MONTH
 
 
-### Semi-structured Data Types[​](/reference/sql/data-types#semi-structured-data-types "Direct link to Semi-structured Data Types")
-#### STRUCT[​](/reference/sql/data-types#struct "Direct link to STRUCT")
+### Semi-structured Data Types​
+#### STRUCT​
   * Used to represent collections of key-value pairs. Keys are non-empty, case-insensitive strings, and values can be of any type. The example shows the required format for a query where the key (city) must be enclosed in [ ] and the column (address) is a STRUCT data type.
 Dremio does not have STRUCT literals, but you can get the same result using CONVERT_FROM and JSON strings. For example:
 
@@ -156,7 +157,7 @@ SELECT CONVERT_FROM('{"name":"Gnarly", "age":7, "car":null}', 'json')
   * **Example:** `SELECT address['city'] FROM customerTable`
 
 
-#### LIST[​](/reference/sql/data-types#list "Direct link to LIST")
+#### LIST​
   * Used to represent a list of arbitrary size, where the index is a non-negative integer and values can be of any single type. The example shows the required format for a query where the index (100) must be enclosed in [ ] and the column (OrderHistoryTable) is a LIST data type.
 Dremio has LIST literals using the ARRAY keyword. For example:
 
@@ -169,7 +170,7 @@ SELECT ARRAY[1, 2, 3];
   * **Example:** `SELECT customerOrders[100] FROM OrderHistoryTable`
 
 
-#### MAP[​](/reference/sql/data-types#map "Direct link to MAP")
+#### MAP​
   * The MAP type is a collection of key-value pairs. MAP keys are case-insensitive strings. All values in a given map have the same type. For example, `map<string, int>` represents a mapping where the keys are strings and the values are integers. To retrieve the value of a MAP element, use `column['key']`
 MAP Syntax
 
@@ -186,12 +187,12 @@ For information about the SQL functions that are available for MAP expressions, 
 
 Was this page helpful?
 [Previous SQL Reference](/reference/sql)[Next Mappings for External Sources](/reference/sql/data-types/mappings)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SQL Reference](/reference/sql)[Next Mappings for External Sources](/reference/sql/data-types/mappings)

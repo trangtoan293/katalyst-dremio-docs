@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/users
+slug: /reference/sql/system-tables/users
 title: "SYS.USERS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64378.71642125
@@ -23,13 +24,13 @@ FROM sys.users
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/users#example-output "Direct link to Example Output")  
+## Example Output​  
 | user_id  | user_name  | first_name  | last_name  | status  | user_type  | created  | owner_id  | owner_type  | created_by  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 1ebd39a7-d571-4edb-b113-206eb263c775  | test.user  | Test  | User  | active  | EXTERNAL  | 2021-12-10 04:43:50.902  | _empty text_  | user  | AUTO_SYNC  |  
 | 80702009-37c5-454c-93f2-ec41ea1722ed  | dremio.admin  | Gnarly  | _empty text_  | active  | LOCAL  | 2021-12-10 04:54:13.093  | _empty text_  | user  | LOCAL  |  
 | 5aabeeae-8d3b-4dcc-ba04-051e5b08b11a  | test.user2  | _empty text_  | _empty text_  | invited  | EXTERNAL  | 2021-10-05 18:07:32.377  | _empty text_  | user  | SCIM  |  
-## Columns[​](/reference/sql/system-tables/users#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | user_id  | varchar  | The UUID to identify the user.  |  
@@ -48,13 +49,13 @@ Enum: `user`, `role`  |
 Enum: `LOCAL`, `AUTO_SYNC`, `SCIM`  |  
 Was this page helpful?
 [Previous SYS.USER_DEFINED_FUNCTIONS](/reference/sql/system-tables/user-defined-functions)[Next SYS.VERSION](/reference/sql/system-tables/version)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.USER_DEFINED_FUNCTIONS](/reference/sql/system-tables/user-defined-functions)[Next SYS.VERSION](/reference/sql/system-tables/version)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Ftable-functions%2Frecommend-reflections%2F&_biz_t=1777950699123&_biz_i=SYS.RECOMMEND_REFLECTIONS%20%7C%20Dremio%20Documentation&_biz_n=731&rnd=43929&cdn_o=a&_biz_z=1777950699146)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Fusers%2F&_biz_t=1777950699145&_biz_i=SYS.USERS%20%7C%20Dremio%20Documentation&_biz_n=732&rnd=326371&cdn_o=a&_biz_z=1777950699146)
+!!

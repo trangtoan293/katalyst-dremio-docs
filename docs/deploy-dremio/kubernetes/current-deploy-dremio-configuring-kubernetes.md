@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/configuring-kubernetes
+slug: /deploy-dremio/configuring-kubernetes
 title: "Configuring Your Values to Deploy Dremio to Kubernetes | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64051.23750225
@@ -15,9 +16,9 @@ On this page
 `values.yaml`.
 Dremio recommends configuring your deployment values in a separate `.yaml` file since it will allow simpler updates to the latest version of the Helm chart by copying the separate configuration file across Helm chart updates.
 If you are using an **Enterprise Edition free trial** , you don't need to do all the configurations described on this page. Instead, follow the configuration steps described in [Get Started with the Enterprise Edition Free Trial](/get-started/kubernetes-trial).
-## Configure Your Values[​](/deploy-dremio/configuring-kubernetes#configure-your-values "Direct link to Configure Your Values")
+## Configure Your Values​
 To configure your deployment values, do the following:
-  1. Get the `values-overrides.yaml` configuration file and save it locally. [Click here](/downloads/values-overrides.yaml) to download the file.
+  1. Get the `values-overrides.yaml` configuration file and save it locally. Click here to download the file.
 The `values-overrides.yaml` configuration file
 
 ```
@@ -133,12 +134,12 @@ service:
 ```
 
   2. Edit the `values-overrides.yaml` file to configure your values. See the following sections for details on each configuration option:
-     * [License](/deploy-dremio/configuring-kubernetes#license)
-     * [Pull Secret](/deploy-dremio/configuring-kubernetes#pull-secret)
-     * [Coordinator](/deploy-dremio/configuring-kubernetes#coordinator)
-     * [Coordinator's Distributed Storage](/deploy-dremio/configuring-kubernetes#coordinators-distributed-storage)
-     * [Open Catalog](/deploy-dremio/configuring-kubernetes#open-catalog)
-     * [Advanced Values Configurations](/deploy-dremio/configuring-kubernetes#configuring-your-values---advanced)
+     * License
+     * Pull Secret
+     * Coordinator
+     * Coordinator's Distributed Storage
+     * Open Catalog
+     * Advanced Values Configurations
 In all code examples, `...` denotes additional values that have been omitted.
 Group all values associated with a given parent key in the YAML under a single instance of that parent, for example:
 Do
@@ -168,7 +169,7 @@ Please note the parent relationships at the top of each YAML snippet and subsequ
 
 
 Once done with the configuration, deploy Dremio to Kubernetes. See how in [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes).
-### License[​](/deploy-dremio/configuring-kubernetes#license "Direct link to License")
+### License​
 Provide your license key. To obtain a license, see [Licensing](/admin/licensing).  
 Add this configuration under the parent, as shown in the following example:
 Configuration of the license key
@@ -180,7 +181,7 @@ dremio:
 
 ```
 
-### Pull Secret[​](/deploy-dremio/configuring-kubernetes#pull-secret "Direct link to Pull Secret")
+### Pull Secret​
 Provide the secret used to pull the images from Quay.io as follows:
   1. Log in to **Account Settings** in the drop-down menu.
   2. Click **Generate Encrypted Password** , type your password, and click **Verify**.
@@ -196,9 +197,9 @@ imagePullSecrets:
 
 
 
-### Coordinator[​](/deploy-dremio/configuring-kubernetes#coordinator "Direct link to Coordinator")
-#### Resource Configuration[​](/deploy-dremio/configuring-kubernetes#resource-configuration "Direct link to Resource Configuration")
-Configure the volume size, resources limits, and resources requests. To configure these values, see [Recommended Resources Configuration](/deploy-dremio/configuring-kubernetes#recommended-resources-configuration).
+### Coordinator​
+#### Resource Configuration​
+Configure the volume size, resources limits, and resources requests. To configure these values, see Recommended Resources Configuration.
 Add this configuration under the parents, as shown in the following example:
 Configuration of the coordinator's resources with example values
 
@@ -213,13 +214,13 @@ coordinator:
 
 ```
 
-#### Identity Provider[​](/deploy-dremio/configuring-kubernetes#identity-provider "Direct link to Identity Provider")
+#### Identity Provider​
 Optionally, you can configure authentication via an identity provider. Each type of identity provider requires an additional configuration file provided during Dremio's deployment.
 Select the authentication `type`, and follow the corresponding link for instructions on how to create the associated configuration file:
-  * `azuread` - See how to [configure Microsoft Entra ID with user and group lookup](/security/authentication/identity-providers/microsoft-entra-id#configuring-microsoft-entra-id).
+  * `azuread` - See how to [configure Microsoft Entra ID with user and group lookup](/security/authentication/identity-providers/microsoft-entra-id).
   * `ldap` - See how to [configure Dremio for LDAP](/security/authentication/identity-providers/ldap).
-  * `oauth` - See how to [configure Dremio for OpenID](/security/authentication/identity-providers/oidc#configuring-dremio-for-openid).
-  * `oauth+ldap` - See how to [configure Dremio for Hybrid OpenID+LDAP](/security/authentication/identity-providers/oidc#configuring-dremio-for-hybrid-openidldap).
+  * `oauth` - See how to [configure Dremio for OpenID](/security/authentication/identity-providers/oidc).
+  * `oauth+ldap` - See how to [configure Dremio for Hybrid OpenID+LDAP](/security/authentication/identity-providers/oidc).
 
 
 Add this configuration under the parents, as shown in the following example:
@@ -261,9 +262,9 @@ coordinator:
 ```
 
 For examples for the other types, see [Identity Providers](/security/authentication/identity-providers)
-This is not the only configuration file that can be embedded inside the `values-overrides.yaml` file. However, these are generally used for advanced configurations. For more information, see [Additional Configuration](/deploy-dremio/configuring-kubernetes#additional-configuration).
-#### Transport Level Security[​](/deploy-dremio/configuring-kubernetes#transport-level-security "Direct link to Transport Level Security")
-Optionally enable the desired level of Transport Level Security (TLS) by setting `enabled: true` for client, Arrow Flight, or web TLS. To provide the TLS secret, see [Creating a TLS Secret](/deploy-dremio/configuring-kubernetes#creating-a-tls-secret).
+This is not the only configuration file that can be embedded inside the `values-overrides.yaml` file. However, these are generally used for advanced configurations. For more information, see Additional Configuration.
+#### Transport Level Security​
+Optionally enable the desired level of Transport Level Security (TLS) by setting `enabled: true` for client, Arrow Flight, or web TLS. To provide the TLS secret, see Creating a TLS Secret.
 Add this configuration under the parent, as shown in the following example:
 Configuration of TLS for the coordinator
 
@@ -285,9 +286,9 @@ coordinator:
 
 ```
 
-If Web TLS is enabled, see [Configuring Open Catalog when the Coordinator Web is Using TLS](/deploy-dremio/configuring-kubernetes#configuring-open-catalog-when-the-coordinator-web-is-using-tls).
-### Coordinator's Distributed Storage[​](/deploy-dremio/configuring-kubernetes#coordinators-distributed-storage "Direct link to Coordinator's Distributed Storage")
-This is where Dremio stores metadata, Reflections, uploaded files, and backups. A distributed store is required for Dremio to be operational. The supported types are Amazon S3 or S3-compatible storage, Azure Storage, and Google Cloud Storage (GCS). For examples of configurations, see [Configuring the Distributed Storage](/deploy-dremio/configuring-kubernetes#configuring-the-distributed-storage).
+If Web TLS is enabled, see Configuring Open Catalog when the Coordinator Web is Using TLS.
+### Coordinator's Distributed Storage​
+This is where Dremio stores metadata, Reflections, uploaded files, and backups. A distributed store is required for Dremio to be operational. The supported types are Amazon S3 or S3-compatible storage, Azure Storage, and Google Cloud Storage (GCS). For examples of configurations, see Configuring the Distributed Storage.
 Add this configuration under the parent, as shown in the following example:
 Configuration of the coordinator's distributed storage
 
@@ -298,9 +299,9 @@ distStorage:
 
 ```
 
-### Open Catalog[​](/deploy-dremio/configuring-kubernetes#open-catalog "Direct link to Open Catalog")
+### Open Catalog​
 The configuration for the Open Catalog has several options:
-  * Configuring storage for the Open Catalog is mandatory since this is the location where Iceberg tables created in the catalog will be written. For configuring the storage, see [Configuring Storage for the Open Catalog](/deploy-dremio/configuring-kubernetes#configuring-storage-for-the-open-catalog).
+  * Configuring storage for the Open Catalog is mandatory since this is the location where Iceberg tables created in the catalog will be written. For configuring the storage, see Configuring Storage for the Open Catalog.
 Add this configuration under the parent, as shown in the following example:
 Configuration of storage for the Open Catalog
 
@@ -337,7 +338,7 @@ catalog:
 
 ```
 
-  * (Optional) Use Transport Level Security (TLS) for external access to require clients connecting to the Open Catalog from outside the namespace to use TLS. To configure it, see [Configuring TLS for Open Catalog External Access](/deploy-dremio/configuring-kubernetes#configuring-tls-for-open-catalog-external-access).
+  * (Optional) Use Transport Level Security (TLS) for external access to require clients connecting to the Open Catalog from outside the namespace to use TLS. To configure it, see Configuring TLS for Open Catalog External Access.
 Add this configuration under the parent, as shown in the following example:
 Configuration of TLS for external access to the Open Catalog
 
@@ -352,7 +353,7 @@ catalog:
 
 ```
 
-  * (Optional) If Dremio coordinator web access is using TLS, additional configuration is necessary. To configure it, see [Configuring Open Catalog When the Coordinator Web is Using TLS](/deploy-dremio/configuring-kubernetes#configuring-open-catalog-when-the-coordinator-web-is-using-tls).
+  * (Optional) If Dremio coordinator web access is using TLS, additional configuration is necessary. To configure it, see Configuring Open Catalog When the Coordinator Web is Using TLS.
 Add this configuration under the parent, as shown in the following example:
 Configuration of the Open Catalog when the coordinator web access is using TLS
 
@@ -370,12 +371,12 @@ catalog:
 
 Save the `values-overrides.yaml` file.
 Once done with the configuration, deploy Dremio to Kubernetes. See how in the topic [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes).
-## Configuring Your Values - Advanced[​](/deploy-dremio/configuring-kubernetes#configuring-your-values---advanced "Direct link to Configuring Your Values - Advanced")
-### OpenShift[​](/deploy-dremio/configuring-kubernetes#openshift "Direct link to OpenShift")
-OpenShift has additional prerequisites that must be applied before installing Dremio. For more information, see [Deploy on Kubernetes - Prerequisites](/deploy-dremio/deploy-on-kubernetes#prerequisites).
+## Configuring Your Values - Advanced​
+### OpenShift​
+OpenShift has additional prerequisites that must be applied before installing Dremio. For more information, see [Deploy on Kubernetes - Prerequisites](/deploy-dremio/deploy-on-kubernetes).
 To deploy successfully on OpenShift, you must deploy with two override files. The YAML file you've been using to this point (`values-overrides.yaml`), and an additional YAML file mentioned below (`openshift-overrides.yaml`) with security settings required by OpenShift per its default configuration. Both can be provided in a single Helm install command.
-Get the `openshift-overrides.yaml` configuration file and save it locally. [Click here](/downloads/values-openshift-overrides.yaml) to download the file.
-### Dremio Platform Images[​](/deploy-dremio/configuring-kubernetes#dremio-platform-images "Direct link to Dremio Platform Images")
+Get the `openshift-overrides.yaml` configuration file and save it locally. Click here to download the file.
+### Dremio Platform Images​
 The Dremio platform requires 18 images when running fully featured. All images are published by Dremio to our Quay and are listed below. If you want to use a private mirror of our repository, add the snippets below to `values-overrides.yaml` to repoint to your own.
 Dremio Platform Images
 If creating a private mirror, use the same repository names and tags from 
@@ -520,7 +521,7 @@ telemetry:
 
 ```
 
-### Scale-out Coordinators[​](/deploy-dremio/configuring-kubernetes#scale-out-coordinators "Direct link to Scale-out Coordinators")
+### Scale-out Coordinators​
 Dremio can scale to support high-concurrency use cases through scaling coordinators. Multiple stateless coordinators rely on the primary coordinator to manage Dremio's state, enabling Dremio to support many more concurrent users. These scale-out coordinators are intended for high query throughput and are not applicable for standby or disaster recovery. While scale-out coordinators generally reduce the load on the primary coordinator, the primary coordinator's vCPU request should be increased for every two scale-outs added to avoid negatively impacting performance.
 Perform this configuration in this section of the file, where count refers to the number of scale-outs. A count of 0 will provision only the primary coordinator:
 Configuration of scale-out coordinators with an example value
@@ -532,8 +533,8 @@ coordinator:
 
 ```
 
-When using scale-out coordinators, the load balancer session affinity should be enhanced. See: [Advanced Load Balancer Configuration](/deploy-dremio/configuring-kubernetes#advanced-load-balancer-configuration).
-### Configuring Kubernetes Pod Metadata (including Node Selector)[​](/deploy-dremio/configuring-kubernetes#configuring-kubernetes-pod-metadata-including-node-selector "Direct link to Configuring Kubernetes Pod Metadata \(including Node Selector\)")
+When using scale-out coordinators, the load balancer session affinity should be enhanced. See: Advanced Load Balancer Configuration.
+### Configuring Kubernetes Pod Metadata (including Node Selector)​")
 It's possible to add metadata both globally and to each of the StatefulSets (coordinators, classic engines, ZooKeeper, etc.), including configuring a node selector for pods to use specific node pools.
 Define these values with caution and foreknowledge of expected entries because any misconfiguration may result in Kubernetes being unable to schedule your pods.
 Use the following options to add metadata:
@@ -761,7 +762,7 @@ opensearchOperator:
 
 ```
 
-### Configuring Pods Priority[​](/deploy-dremio/configuring-kubernetes#configuring-pods-priority "Direct link to Configuring Pods Priority")
+### Configuring Pods Priority​
 You can configure the priority of Dremio pods through priority classes. First, define the priority class, as shown in the following example:
 Definition of a `high-priority` priority class
 
@@ -896,7 +897,7 @@ kubectl get pods -o custom-columns="NAME:.metadata.name,PRIORITY_CLASS:.spec.pri
 
 ```
 
-### Configuring Extra Environment Variables[​](/deploy-dremio/configuring-kubernetes#configuring-extra-environment-variables "Direct link to Configuring Extra Environment Variables")
+### Configuring Extra Environment Variables​
 Optionally, you can define extra environment variables to be passed to either coordinators or executors. This can be done by adding the configuration under the parents as shown in the following examples:
 Configuration of extra environment variables for the coordinator
 
@@ -920,9 +921,9 @@ executor:
 
 ```
 
-Environment variables defined as shown will be applied to Executors of both [Classic Engines](/deploy-dremio/configuring-kubernetes#configuration-of-classic-engines) and [New Engines](/deploy-dremio/managing-engines-kubernetes).
-### Advanced Load Balancer Configuration[​](/deploy-dremio/configuring-kubernetes#advanced-load-balancer-configuration "Direct link to Advanced Load Balancer Configuration")
-Dremio will create a public load balancer by default, and the Dremio Client service will provide an external IP to connect to Dremio. For more information, see [Connecting to the Dremio Console](/deploy-dremio/deploy-on-kubernetes#step-2-connecting-to-dremio).
+Environment variables defined as shown will be applied to Executors of both Classic Engines and [New Engines](/deploy-dremio/managing-engines-kubernetes).
+### Advanced Load Balancer Configuration​
+Dremio will create a public load balancer by default, and the Dremio Client service will provide an external IP to connect to Dremio. For more information, see [Connecting to the Dremio Console](/deploy-dremio/deploy-on-kubernetes).
   * **Private Cluster** - For private Kubernetes clusters (no public endpoint), set `internalLoadBalancer: true`. Add this configuration under the parent as shown in the following example:
 Configuration of an internal load balancer
 
@@ -946,7 +947,7 @@ service:
 ```
 
 This can be helpful if DNS is configured to expect Dremio to have a specific IP.
-  * **Session Affinity** - If leveraging [scale-out coordinators](/deploy-dremio/configuring-kubernetes#scale-out-coordinators), set this to `ClientIP`, otherwise leave unset. Add this configuration under the parent as shown in the following example:
+  * **Session Affinity** - If leveraging scale-out coordinators, set this to `ClientIP`, otherwise leave unset. Add this configuration under the parent as shown in the following example:
 Configuration of session affinity for scale-out coordinators
 
 ```
@@ -959,7 +960,7 @@ service:
 
 
 
-#### Additional Load Balancer Configuration for Amazon EKS in Auto Mode[​](/deploy-dremio/configuring-kubernetes#additional-load-balancer-configuration-for-amazon-eks-in-auto-mode "Direct link to Additional Load Balancer Configuration for Amazon EKS in Auto Mode")
+#### Additional Load Balancer Configuration for Amazon EKS in Auto Mode​
 If deploying Dremio to Amazon EKS (Elastic Kubernetes Service) in Auto Mode, you need to add service annotations for the load balancer to start (for more information, see 
 Configuration of service annotations for Amazon EKS in Auto Mode
 
@@ -972,7 +973,7 @@ service:
 
 ```
 
-### Advanced TLS Configuration for OpenSearch[​](/deploy-dremio/configuring-kubernetes#advanced-tls-configuration-for-opensearch "Direct link to Advanced TLS Configuration for OpenSearch")
+### Advanced TLS Configuration for OpenSearch​
 Dremio generates Transport Level Security (TLS) certificates by default for OpenSearch, and they are rotated monthly. However, if you want to have your own, you need to create two secrets containing the relevant certificates. The format of the secrets is different from the other TLS secrets shown on this page, and the `tls.crt`, `tls.key`, and `ca.crt` files must be in PEM format. Use the example below as a reference to create your secrets:
 Run kubetcl to create two secrets for your own TLS certificates for OpenSearch
 
@@ -996,7 +997,7 @@ opensearch:
 
 ```
 
-### Advanced Configuration of Engines[​](/deploy-dremio/configuring-kubernetes#advanced-configuration-of-engines "Direct link to Advanced Configuration of Engines")
+### Advanced Configuration of Engines​
 Dremio's default resource offset is `reserve-2-8`, where the first value represents 2 vCPUs and the second represents 8 GB of RAM. If you need to change this default for your created engines, add the following snippet to `values-overrides.yaml` and set the `defaultOffset` to one of the configurable offsets listed below, which are available out of the box:
   * `reserve-0-0`
   * `reserve-2-4`
@@ -1016,7 +1017,7 @@ engine:
 
 ```
 
-#### Extra Java Start Options[​](/deploy-dremio/configuring-kubernetes#extra-java-start-options "Direct link to Extra Java Start Options")
+#### Extra Java Start Options​
 Some specialized use cases require additional Java start options or modifications to the default configuration, such as the settings for HDFS keytabs or heap management. These options apply to all engines, and the following example shows how to add them:
 Configuration of extra Java start options for engines
 
@@ -1037,7 +1038,7 @@ engine:
 
 ```
 
-### Configuration of Classic Engines[​](/deploy-dremio/configuring-kubernetes#configuration-of-classic-engines "Direct link to Configuration of Classic Engines")
+### Configuration of Classic Engines​
   * You should only use classic engines if the new ones introduced in Dremio 26.0 are not appropriate for your use case. Classic and new engines are not intended to be used side by side.
   * Classic engines will not auto-start/auto-stop, which is only possible with the new engines.
 
@@ -1064,7 +1065,7 @@ executor:
 
 ```
 
-#### Engine Overrides[​](/deploy-dremio/configuring-kubernetes#engine-overrides "Direct link to Engine Overrides")
+#### Engine Overrides​
 Engine overrides are primarily used in conjunction with classic engines to modify the configuration of one or more named engines. By default, every engine inside the `engines` list under `executor` will be the same. The values set under `executor` act as the default for all engines. Thus, the engine overrides do not need to be exhaustive.
 Configuration of overrides for an engine named 'small'
 
@@ -1080,7 +1081,7 @@ engineOverride:
 ```
 
 Engine overrides can also be used with the new engines, but only to disable the Cloud Columnar Cache (C3) option. C3 is enabled by default on all new engines, but you can choose to disable it if needed.
-### Telemetry[​](/deploy-dremio/configuring-kubernetes#telemetry "Direct link to Telemetry")
+### Telemetry​
 [Telemetry](/admin/service-telemetry-kubernetes) egress is enabled by default. These metrics provide visibility into various components and services, ensuring optimal performance and reliability. To disable egress, add the following to your `values-override.yaml`:
 Configuration to disable telemetry
 
@@ -1091,8 +1092,8 @@ telemetry:
 
 ```
 
-### Logging[​](/deploy-dremio/configuring-kubernetes#logging "Direct link to Logging")
-By default, Dremio enables logging with a pre-defined volume size, which you can check in the `values.yaml` file by [downloading Dremio's Helm chart](/deploy-dremio/configuring-kubernetes#downloading-dremios-helm-charts). To override the default configuration, add the following to your `values-overrides.yaml`:
+### Logging​
+By default, Dremio enables logging with a pre-defined volume size, which you can check in the `values.yaml` file by downloading Dremio's Helm chart. To override the default configuration, add the following to your `values-overrides.yaml`:
 Configuration of logging
 
 ```
@@ -1106,9 +1107,9 @@ dremio:
 
 ```
 
-### Disabling Parts of the Deployment[​](/deploy-dremio/configuring-kubernetes#disabling-parts-of-the-deployment "Direct link to Disabling Parts of the Deployment")
+### Disabling Parts of the Deployment​
 You can disable some components of the Dremio platform if their functionality does not pertain to your use case. Dremio's functionality will continue to work if any of these components described in this section are disabled.
-#### Semantic Search[​](/deploy-dremio/configuring-kubernetes#semantic-search "Direct link to Semantic Search")
+#### Semantic Search​
 To disable Semantic Search, add this configuration under the parent as shown in the following example:
 Configuration to disable Semantic Search
 
@@ -1119,7 +1120,7 @@ opensearch:
 
 ```
 
-### Configure a Custom Cluster DNS Domain[​](/deploy-dremio/configuring-kubernetes#configure-a-custom-cluster-dns-domain "Direct link to Configure a Custom Cluster DNS Domain")
+### Configure a Custom Cluster DNS Domain​
 If you are using a custom Kubernetes cluster DNS domain, you need to set the custom DNS for Dremio. By default, Dremio uses `cluster.local`. To override the default configuration, add the following to your `values-overrides.yaml`:
 Configuration of custom DNS
 
@@ -1130,10 +1131,10 @@ cluster:
 ```
 
 For the given DNS pattern, the example custom domain will result in the following: `[pod].[service].[namespace].svc.custom.domain`
-## Additional Configuration[​](/deploy-dremio/configuring-kubernetes#additional-configuration "Direct link to Additional Configuration")
-Dremio has several configuration and binary files to define the behavior for [enabling authentication via an identity provider](/deploy-dremio/configuring-kubernetes#identity-provider), logging, connecting to Hive, etc. During the deployment, these files are combined and used to create a `values-override.yaml` configuration file.
-To inspect Dremio's configuration files or perform a more complex operation not shown here, see [Downloading Dremio's Helm Charts](/deploy-dremio/configuring-kubernetes#downloading-dremios-helm-charts).
-### Additional Config Files[​](/deploy-dremio/configuring-kubernetes#additional-config-files "Direct link to Additional Config Files")
+## Additional Configuration​
+Dremio has several configuration and binary files to define the behavior for enabling authentication via an identity provider, logging, connecting to Hive, etc. During the deployment, these files are combined and used to create a `values-override.yaml` configuration file.
+To inspect Dremio's configuration files or perform a more complex operation not shown here, see Downloading Dremio's Helm Charts.
+### Additional Config Files​
 Use the `configFiles` option to add configuration files to your Dremio deployment. You can add multiple files, each of which is a key-value pair. The key is the file name, and the value is the file content. These can be TXT, XML, or JSON files. For example, here is how to embed the configuration for Hashicorp Vault, followed by a separate example file:
 Configuration of additional configuration files with example JSONs
 
@@ -1160,7 +1161,7 @@ dremio:
 
 ```
 
-### Additional Config Variables[​](/deploy-dremio/configuring-kubernetes#additional-config-variables "Direct link to Additional Config Variables")
+### Additional Config Variables​
 Use the `dremioConfExtraOptions` option to add new variables to your Dremio deployment. For example, here is how to enable Transport Layer Security (TLS) between executors and coordinators, leveraging auto-generated self-signed certificates.
 Configuration of additional configuration variables with an example to enable TLS
 
@@ -1173,7 +1174,7 @@ dremio:
 
 ```
 
-### Additional Java Truststore[​](/deploy-dremio/configuring-kubernetes#additional-java-truststore "Direct link to Additional Java Truststore")
+### Additional Java Truststore​
 Use the `trustStore` option under `advancedConfigs` to provide the password and content of a Java truststore file. The content must be base64-encoded. To extract the encoded content, you can use `cat truststore.jks | base64`. Add this configuration under the parents as shown in the following example:
 Configuration of an additional Java truststore with a truststore password
 
@@ -1187,7 +1188,7 @@ dremio:
 
 ```
 
-### Additional Config Binary Files[​](/deploy-dremio/configuring-kubernetes#additional-config-binary-files "Direct link to Additional Config Binary Files")
+### Additional Config Binary Files​
 Use the `configBinaries` option to provide binary configuration files. Provided content must be base64-encoded. Add this configuration under the parents as shown in the following example:
 Configuration of additional binary configuration files
 
@@ -1199,7 +1200,7 @@ dremio:
 
 ```
 
-### Hive[​](/deploy-dremio/configuring-kubernetes#hive "Direct link to Hive")
+### Hive​
 Use the `hive2ConfigFiles` option to configure Hive 2. Add this configuration under the parents as shown in the following example:
 Configuration of Hive 2 with an example for the `hive-site.xml` file
 
@@ -1238,10 +1239,10 @@ dremio:
 
 ```
 
-### PostgreSQL[​](/deploy-dremio/configuring-kubernetes#postgresql "Direct link to PostgreSQL")
-Dremio offers an option to authenticate with PostgreSQL databases using Kerberos. This approach uses Java's JAAS framework to consume credentials from a Kerberos ticket cache. See [Kerberos Authentication for PostgreSQL](/data-sources/databases/postgres#kerberos-authentication-for-postgresql).
-## References[​](/deploy-dremio/configuring-kubernetes#references "Direct link to References")
-### Recommended Resources Configuration[​](/deploy-dremio/configuring-kubernetes#recommended-resources-configuration "Direct link to Recommended Resources Configuration")
+### PostgreSQL​
+Dremio offers an option to authenticate with PostgreSQL databases using Kerberos. This approach uses Java's JAAS framework to consume credentials from a Kerberos ticket cache. See [Kerberos Authentication for PostgreSQL](/data-sources/databases/postgres).
+## References​
+### Recommended Resources Configuration​
 The table in this section contains the recommended values for resources requests and volume size to configure Dremio components. In the `values-overrides.yaml` file, set the following values:
 Configuration of resources in Dremio components
 
@@ -1405,7 +1406,7 @@ telemetry:
 
 ```
 
-### Creating a TLS Secret[​](/deploy-dremio/configuring-kubernetes#creating-a-tls-secret "Direct link to Creating a TLS Secret")
+### Creating a TLS Secret​
 If you have enabled Transport Layer Security (TLS) in your `values-overrides.yaml`, the corresponding secrets must be created before deploying Dremio. To create a secret, run the following command:
 Run kubectl to create a TLS secret
 
@@ -1415,8 +1416,8 @@ kubectl create secret tls <your-tls-secret-name> --key privkey.pem --cert cert.p
 ```
 
 For more information, see 
-TLS for OpenSearch requires a secret of a different makeup. See [Advanced TLS Configuration for OpenSearch](/deploy-dremio/configuring-kubernetes#advanced-tls-configuration-for-opensearch).
-### Configuring the Distributed Storage[​](/deploy-dremio/configuring-kubernetes#configuring-the-distributed-storage "Direct link to Configuring the Distributed Storage")
+TLS for OpenSearch requires a secret of a different makeup. See Advanced TLS Configuration for OpenSearch.
+### Configuring the Distributed Storage​
 Dremio’s distributed store uses scalable and fault-tolerant storage, and it is configured as follows:
   1. In the `values-overrides.yaml` file, find the section with `distStorage:` and `type:`
 Configuration of the distributed storage
@@ -1571,7 +1572,7 @@ Where:
   * `extraProperties` - Additional parameters to configure the distributed storage in the generated `core-site.xml` file. Important for S3-compatible and customer-managed KMS encryption.
 
 
-EKS Pod Identities allow for Kubernetes service accounts to be associated with an IAM role. Dremio, in turn, can use this IAM role to retrieve the credentials to authenticate. As both the coordinators and engines require access to distributed storage, both of their `ServiceAccounts` must be associated with an IAM role with sufficient access rights. By default, their `ServiceAccounts` are `dremio-coordinator`, `dremio-engine-executor` for [New Engines](/deploy-dremio/managing-engines-kubernetes), and (optional) `dremio-executor` for [Classic Engines](/deploy-dremio/configuring-kubernetes#configuration-of-classic-engines).
+EKS Pod Identities allow for Kubernetes service accounts to be associated with an IAM role. Dremio, in turn, can use this IAM role to retrieve the credentials to authenticate. As both the coordinators and engines require access to distributed storage, both of their `ServiceAccounts` must be associated with an IAM role with sufficient access rights. By default, their `ServiceAccounts` are `dremio-coordinator`, `dremio-engine-executor` for [New Engines](/deploy-dremio/managing-engines-kubernetes), and (optional) `dremio-executor` for Classic Engines.
 Add the configuration under the parent as shown in the following example:
 AWS profile authentication for the distributed storage
 
@@ -1813,7 +1814,7 @@ Where:
 
 
 When using a GCS bucket on Google Kubernetes Engine (GKE), we recommend enabling **Workload Identity** and configuring a Kubernetes service account for Dremio with an associated workload identity that has access to the GCS bucket.
-### Configuring Storage for the Open Catalog[​](/deploy-dremio/configuring-kubernetes#configuring-storage-for-the-open-catalog "Direct link to Configuring Storage for the Open Catalog")
+### Configuring Storage for the Open Catalog​
 To use the Open Catalog, configure the storage settings based on your storage provider (for example, Amazon S3, Azure Storage, or Google Cloud Storage). This configuration is required to enable support for vended credentials and to allow access to the table metadata necessary for Iceberg table operations.
   1. In the `values-overrides.yaml` file, find the section to configure your storage provider under the parents, as shown in the following example:
 Configuration of the storage for the Open Catalog
@@ -1849,14 +1850,14 @@ catalog:
 
 ```
 
-When configuring a list of URIs, the catalog base URI must be the first element, and it is immutable. For an existing cluster that needs additional storage locations, update the `catalog.storage.location` parameter list in Helm to include the additional locations and run a Helm upgrade. See [Multiple Storage Locations](/data-sources/open-catalog#multiple-storage-locations) for additional information.
+When configuring a list of URIs, the catalog base URI must be the first element, and it is immutable. For an existing cluster that needs additional storage locations, update the `catalog.storage.location` parameter list in Helm to include the additional locations and run a Helm upgrade. See [Multiple Storage Locations](/data-sources/open-catalog) for additional information.
   2. To configure it, select the tab for your storage provider, and follow the steps:
      * Amazon S3
      * S3-compatible
      * Azure Storage
      * Google Cloud Storage
 To use the Open Catalog with Amazon S3, do the following:
-    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog#configure-storage-access). Creating a Kubernetes secret may be required.
+    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog). Creating a Kubernetes secret may be required.
     2. Configure the Open Catalog in the `values-overrides.yaml` file as follows:
 Configuration of the storage for the Open Catalog in Amazon S3
 
@@ -1877,7 +1878,7 @@ catalog:
 
     3. If using EKS Pod Identities, ensure the catalog's Kubernetes `ServiceAccount`, which is `dremio-catalog-server` by default, is associated with the `userArn` which you also provided above.
 To use the Open Catalog with S3-compatible storage, do the following:
-    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog#configure-storage-access). Creating a Kubernetes secret is required.
+    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog). Creating a Kubernetes secret is required.
     2. For this step, select the tab for whether the S3-compatible storage has STS support or not, and follow the instructions:
        * Has STS support
        * No STS support
@@ -1923,7 +1924,7 @@ catalog:
 ```
 
 To use the Open Catalog with Azure Storage, do the following:
-    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog#configure-storage-access).
+    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog).
     2. Configure the Open Catalog in the `values-overrides.yaml` file as follows:
 Configuration of the storage for the Open Catalog in Azure Storage 
 
@@ -1941,7 +1942,7 @@ catalog:
 ```
 
 To use the Open Catalog with Google Cloud Storage (GCS), do the following:
-    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog#configure-storage-access).
+    1. Configure the access to the storage, as described in [Configure Storage Access](/data-sources/open-catalog).
     2. Configure the Open Catalog in the `values-overrides.yaml` file as follows:
 Configuration of the storage for the Open Catalog in Google Cloud Storage
 
@@ -1958,9 +1959,9 @@ catalog:
 
 
 
-### Configuring TLS for Open Catalog External Access[​](/deploy-dremio/configuring-kubernetes#configuring-tls-for-open-catalog-external-access "Direct link to Configuring TLS for Open Catalog External Access")
+### Configuring TLS for Open Catalog External Access​
 For clients connecting to the Open Catalog from outside the namespace, Transport Layer Security (TLS) can be enabled for Open Catalog external access as follows:
-  1. Enable external access with TLS and provide the TLS secret. See the section [Creating a TLS Secret](/deploy-dremio/configuring-kubernetes#creating-a-tls-secret).
+  1. Enable external access with TLS and provide the TLS secret. See the section Creating a TLS Secret.
   2. In the `values-overrides.yaml` file, find the Open Catalog configuration section:
 Configuration section for the Open Catalog
 
@@ -1986,7 +1987,7 @@ catalog:
 
 
 
-### Configuring Open Catalog When the Coordinator Web is Using TLS[​](/deploy-dremio/configuring-kubernetes#configuring-open-catalog-when-the-coordinator-web-is-using-tls "Direct link to Configuring Open Catalog When the Coordinator Web is Using TLS")
+### Configuring Open Catalog When the Coordinator Web is Using TLS​
 When the Dremio coordinator uses Transport Layer Security (TLS)for Web access (i.e., when `coordinator.web.tls` is set to `true`), the Open Catalog external access must be configured appropriately, or client authentication will fail. For that, configure the Open Catalog as follows:
   1. In the `values-overrides.yaml` file, find the Open Catalog configuration section:
 Configuration section for the Open Catalog
@@ -2027,7 +2028,7 @@ catalog:
 
 
 
-## Downloading Dremio's Helm Charts[​](/deploy-dremio/configuring-kubernetes#downloading-dremios-helm-charts "Direct link to Downloading Dremio's Helm Charts")
+## Downloading Dremio's Helm Charts​
 You can download Dremio's Helm charts to implement advanced configurations beyond those outlined in this topic.
 However, please proceed with caution. Modifications made without a clear understanding can lead to unexpected behavior and compromise the Dremio Support team's ability to provide effective assistance.
 To ensure success, Dremio recommends engaging with the Professional Services team through your Account Executive or Customer Success Manager. Please note that such engagements may require additional time and could involve consulting fees.
@@ -2045,7 +2046,7 @@ Where:
 
 The command creates a new local directory called `dremio-helm` containing the Helm charts.
 For more information on the command, see 
-### Overriding Additional Values[​](/deploy-dremio/configuring-kubernetes#overriding-additional-values "Direct link to Overriding Additional Values")
+### Overriding Additional Values​
 After completing the `helm pull`:
   1. Find the `values.yaml` file, open it, and check the configurations you want to override.
   2. Copy what you want to override from the `values.yaml` to `values-overrides.yaml` and configure the file with your values.
@@ -2053,18 +2054,18 @@ After completing the `helm pull`:
 
 
 Once done with the configuration, deploy Dremio to Kubernetes via the OCI Repo. See how in [Deploying Dremio to Kubernetes](/deploy-dremio/deploy-on-kubernetes).
-### Manual Modifications to Deployment Files[​](/deploy-dremio/configuring-kubernetes#manual-modifications-to-deployment-files "Direct link to Manual Modifications to Deployment Files")
+### Manual Modifications to Deployment Files​
 For modifications in these files to take effect, you need to install Dremio using a local version of the Helm charts. Thus, the `helm install` command must reference a local folder, not the OCI repo like Quay. For more information and sample commands, see 
-After completing the `helm pull`, you can edit the charts directly. This may be necessary to add deployment-specific modifications not catered for in the [Additional Configuration](/deploy-dremio/configuring-kubernetes#additional-configuration) section. These would typically require modifications to files in the `/config` directory. Any customizations to your Dremio environment are propagated to all the pods when installing or upgrading the deployment.
+After completing the `helm pull`, you can edit the charts directly. This may be necessary to add deployment-specific modifications not catered for in the Additional Configuration section. These would typically require modifications to files in the `/config` directory. Any customizations to your Dremio environment are propagated to all the pods when installing or upgrading the deployment.
 Was this page helpful?
 [Previous Deploy on Kubernetes](/deploy-dremio/deploy-on-kubernetes)[Next Managing Engines](/deploy-dremio/managing-engines-kubernetes)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Deploy on Kubernetes](/deploy-dremio/deploy-on-kubernetes)[Next Managing Engines](/deploy-dremio/managing-engines-kubernetes)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fconfiguring-kubernetes%2F&_biz_t=1777950371422&_biz_i=Configuring%20Your%20Values%20to%20Deploy%20Dremio%20to%20Kubernetes%20%7C%20Dremio%20Documentation&_biz_n=108&rnd=985778&cdn_o=a&_biz_z=1777950371423)
+!

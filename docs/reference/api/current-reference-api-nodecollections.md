@@ -1,5 +1,6 @@
 ---
 url: /reference/api/nodeCollections
+slug: /reference/api/nodeCollections
 title: "Node Collections | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64238.12047175
@@ -16,7 +17,7 @@ On this page
 Use the Node Collections API to deny access to Dremio cluster nodes and retrieve the currently denied nodes for the Dremio instance.
 The Node Collections API does not have a corresponding Node Collection object. The endpoints return a list of the currently denied nodes in the response.
 You must be a member of the Dremio ADMIN role to send requests to the Node Collections API.
-## Deny Nodes[​](/reference/api#deny-nodes "Direct link to Deny Nodes")
+## Deny Nodes[​](/reference/api)
 Deny access to the specified Dremio cluster nodes.
 Method and URL
 
@@ -27,7 +28,7 @@ POST /api/v3/nodeCollections/blacklist
 
 The request body is a comma-separated list of the names for the nodes that you want to deny, including any currently denied nodes that should remain denied. Format the request body as an array of string, with each node name in double quotes. Use a comma to separate each node name in the list.
 Any nodes omitted from the request body, including currently denied nodes, will be allowed.
-### Example[​](/reference/api#example "Direct link to Example")
+### Example[​](/reference/api)
 Request
 
 ```
@@ -48,7 +49,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api)
 200 OK   
   
 401 Unauthorized   
@@ -56,7 +57,7 @@ Response
 404 Not Found   
   
 
-## Retrieve Denied Nodes[​](/reference/api#retrieve-denied-nodes "Direct link to Retrieve Denied Nodes")
+## Retrieve Denied Nodes[​](/reference/api)
 Invalidate the LDAP authorization for a specific user or group by ID.
 Method and URL
 
@@ -65,7 +66,7 @@ GET /api/v3/nodeCollections/blacklist
 
 ```
 
-### Example[​](/reference/api#example-1 "Direct link to Example")
+### Example[​](/reference/api)
 Request
 
 ```
@@ -85,7 +86,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api)
 200 OK   
   
 401 Unauthorized   
@@ -93,7 +94,7 @@ Response
 404 Not Found   
   
 
-## Allow All Nodes[​](/reference/api#allow-all-nodes "Direct link to Allow All Nodes")
+## Allow All Nodes[​](/reference/api)
 Allow access to all Dremio cluster nodes.
 Method and URL
 
@@ -103,7 +104,7 @@ POST /api/v3/nodeCollections/blacklist
 ```
 
 To allow all nodes, send an empty array in the request body.
-### Example[​](/reference/api#example-2 "Direct link to Example")
+### Example[​](/reference/api)
 Request
 
 ```
@@ -121,7 +122,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes[​](/reference/api)
 200 OK   
   
 401 Unauthorized   
@@ -131,16 +132,16 @@ Response
 
 Was this page helpful?
 [Previous LDAP User Cache](/reference/api/ldap-authorization)[Next OAuth Token](/reference/api/oauth-token)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous LDAP User Cache](/reference/api/ldap-authorization)[Next OAuth Token](/reference/api/oauth-token)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2FnodeCollections%2F&_biz_t=1777950560314&_biz_i=Node%20Collections%20%7C%20Dremio%20Documentation&_biz_n=464&rnd=444557&cdn_o=a&_biz_z=1777950560314)
+!
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)
 ## Privacy Preference Center
 When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.   

@@ -1,5 +1,6 @@
 ---
 url: /reference/api/wlm/queue
+slug: /reference/api/wlm/queue
 title: "Queue | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64243.527858833
@@ -72,10 +73,10 @@ Queue Object
 
 ```
 
-## Queue Attributes[​](/reference/api/wlm/queue#queue-attributes "Direct link to Queue Attributes")
-[data](/reference/api/wlm/queue#attributes-of-objects-in-the-data-array) Array of Object
+## Queue Attributes​
+data Array of Object
 List of queue objects in the Dremio instance.
-#### Attributes of Objects in the `data` Array[​](/reference/api/wlm/queue#attributes-of-objects-in-the-data-array "Direct link to attributes-of-objects-in-the-data-array")
+#### Attributes of Objects in the `data` Array​
 id String (UUID)
 Unique identifier of the queue, in UTC format.
 Example: 1990e713-3cd2-458c-89e1-68995c2c1047
@@ -115,7 +116,7 @@ Example: 300000
 engineId String
 Name of the execution engine to which the queue's queries are routed. If you do not specify an engineId, the queue's queries run on any engine that is available at the time of execution. The engineID attribute is omitted from the queue object if no engine is specified.
 Example: DATA
-## Create a Queue[​](/reference/api/wlm/queue#create-a-queue "Direct link to Create a Queue")
+## Create a Queue​
 Create a WLM queue.
 Method and URL
 
@@ -124,7 +125,7 @@ POST /api/v3/wlm/queue
 
 ```
 
-### Parameters[​](/reference/api/wlm/queue#parameters "Direct link to Parameters")
+### Parameters​
 name Body String
 User-provided name for the queue.
 Example: High Cost Reflections
@@ -157,7 +158,7 @@ Example: 300000
 engineId Body String Optional
 Name of the execution engine to which the queue's queries should be routed. If you do not specify an engineId, the queue's queries run on any engine that is available at the time of execution.
 Example: DATA
-### Example[​](/reference/api/wlm/queue#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -195,7 +196,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/queue#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -211,7 +212,7 @@ Response
 409 Conflict   
   
 
-## Retrieve All Queues[​](/reference/api/wlm/queue#retrieve-all-queues "Direct link to Retrieve All Queues")
+## Retrieve All Queues​
 Retrieve all WLM queues.
 Method and URL
 
@@ -220,7 +221,7 @@ GET /api/v3/wlm/queue
 
 ```
 
-### Example[​](/reference/api/wlm/queue#example-1 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -287,7 +288,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/queue#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -299,7 +300,7 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve a Queue by ID[​](/reference/api/wlm/queue#retrieve-a-queue-by-id "Direct link to Retrieve a Queue by ID")
+## Retrieve a Queue by ID​
 Retrieve a specific WLM queue by the queue's ID.
 Method and URL
 
@@ -308,11 +309,11 @@ GET /api/v3/wlm/queue/{id}
 
 ```
 
-### Parameters[​](/reference/api/wlm/queue#parameters-1 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the queue you want to retrieve, in UTC format.
 Example: 1990e713-3cd2-458c-89e1-68995c2c1047
-### Example[​](/reference/api/wlm/queue#example-2 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -340,7 +341,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/queue#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -352,7 +353,7 @@ Response
 500 Internal Server Error   
   
 
-## Retrieve a Queue by Name[​](/reference/api/wlm/queue#retrieve-a-queue-by-name "Direct link to Retrieve a Queue by Name")
+## Retrieve a Queue by Name​
 Retrieve a specific WLM queue by the queue's name.
 Method and URL
 
@@ -361,11 +362,11 @@ GET /api/v3/wlm/queue/by-name/{name}
 
 ```
 
-### Parameters[​](/reference/api/wlm/queue#parameters-2 "Direct link to Parameters")
+### Parameters​
 name Path String
 Name for the queue you want to retrieve. If the queue name includes special characters for a URL, such as spaces, use URL encoding to replace the special characters with their UTF-8-equivalent characters. For example, "Dremio University" should be `Dremio%20University` in the URL path.
 Example: High%20Cost%20Reflections
-### Example[​](/reference/api/wlm/queue#example-3 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -393,7 +394,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/queue#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -405,7 +406,7 @@ Response
 500 Internal Server Error   
   
 
-## Update a Queue[​](/reference/api/wlm/queue#update-a-queue "Direct link to Update a Queue")
+## Update a Queue​
 Update the specified WLM queue.
 Method and URL
 
@@ -414,7 +415,7 @@ PUT /api/v3/wlm/queue/{id}
 
 ```
 
-### Parameters[​](/reference/api/wlm/queue#parameters-3 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the queue you want to update, in UTC format.
 Example: 1990e713-3cd2-458c-89e1-68995c2c1047
@@ -455,7 +456,7 @@ Example: 300000
 engineId Body String
 Name of the execution engine to which the queue's queries should be routed. If you do not specify an engineId, the queue's queries run on any engine that is available at the time of execution.
 Example: DATA
-### Example[​](/reference/api/wlm/queue#example-4 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -494,7 +495,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/queue#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -510,7 +511,7 @@ Response
 500 Internal Server Error   
   
 
-## Delete a Queue[​](/reference/api/wlm/queue#delete-a-queue "Direct link to Delete a Queue")
+## Delete a Queue​
 Delete the specified WLM queue.
 Method and URL
 
@@ -519,11 +520,11 @@ DELETE /api/v3/wlm/queue/{id}
 
 ```
 
-### Parameters[​](/reference/api/wlm/queue#parameters-4 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the queue that you want to delete, in UTC format.
 Example: 1990e713-3cd2-458c-89e1-68995c2c1047
-### Example[​](/reference/api/wlm/queue#example-5 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -540,7 +541,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/wlm/queue#response-status-codes-5 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -556,13 +557,13 @@ No response
 
 Was this page helpful?
 [Previous Workload Management](/reference/api/wlm)[Next Rule](/reference/api/wlm/rule)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Workload Management](/reference/api/wlm)[Next Rule](/reference/api/wlm/rule)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fwlm%2Fqueue%2F&_biz_t=1777950564191&_biz_i=Queue%20%7C%20Dremio%20Documentation&_biz_n=472&rnd=139246&cdn_o=a&_biz_z=1777950564191)
+!

@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/CORR
+slug: /reference/sql/sql-functions/functions/CORR
 title: "CORR | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64302.290771458
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Aggregate](/reference/sql/sql-functions)
 # CORR
 Calculates the Pearson correlation coefficient of the values expression1 and expression2. The function name must be enclosed in double quotes ("CORR").
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### CORR(_expression1_ numeric, _expression2_ numeric) → double[​](/reference/sql/sql-functions#correxpression1-numeric-expression2-numeric--double "Direct link to correxpression1-numeric-expression2-numeric--double")
+## Syntax
+### CORR(_expression1_ numeric, _expression2_ numeric) → double[​](/reference/sql/sql-functions)
   * expression1: An expression that evaluates to a numeric type. This parameter is the dependent value.
   * expression2: An expression that evaluates to a numeric type. This parameter is the independent value.
 
@@ -50,13 +51,13 @@ LIMIT 5
 
 Was this page helpful?
 [Previous CONVERT_TO](/reference/sql/sql-functions)[Next COS](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous CONVERT_TO](/reference/sql/sql-functions)[Next COS](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FCORR%2F&_biz_t=1777950621162&_biz_i=CORR%20%7C%20Dremio%20Documentation&_biz_n=580&rnd=93898&cdn_o=a&_biz_z=1777950621162)
+!

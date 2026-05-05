@@ -1,5 +1,6 @@
 ---
 url: /reference/api/catalog/user-defined-function
+slug: /reference/api/catalog/user-defined-function
 title: "User-Defined Function | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64236.695834958
@@ -62,7 +63,7 @@ User-Defined Function Object
 
 ```
 
-## User-Defined Function Attributes[​](/reference/api/catalog/user-defined-function#user-defined-function-attributes "Direct link to User-Defined Function Attributes")
+## User-Defined Function Attributes​
 entityType String
 Type of the catalog object. For user-defined functions, the entityType is `function`.
 * * *
@@ -103,25 +104,25 @@ returnType String
 The [data type](/reference/sql/data-types) of the result that the function returns (for scalar functions) or of each column that the function returns, separated by commas (for tabular functions).
 Example: "name" CHARACTER VARYING, "email" CHARACTER VARYING, "order_date" DATE
 * * *
-[accessControlList](/reference/api/catalog/user-defined-function#attributes-of-the-accesscontrollist-object) Object
+accessControlList Object
 Enterprise only. Information about users and roles with access to the user-defined function and the specific privileges each user or role has. May include an array of users, an array of roles, or both, depending on the configured access and privileges. The accessControlList array is empty if function-specific access control privileges are not set.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "737a038f-c6cd-4fd3-a77a-59f692727ba5","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "0f2d94e0-bb5e-4c03-8c6f-62d379d10889","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
 * * *
 permissions Array of String
-Enterprise-only. List of the privileges that you have on the user-defined function. Only appears in the response if the request URL includes the `permissions` query parameter. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges#user-defined-function-udf-privileges).
+Enterprise-only. List of the privileges that you have on the user-defined function. Only appears in the response if the request URL includes the `permissions` query parameter. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges).
 * * *
-[owner](/reference/api/catalog/user-defined-function#attributes-of-the-owner-object) Object
+owner Object
 Information about the user-defined function's owner.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"ownerId": "4740ab48-39c6-434c-9086-8f6e52e65349","ownerType": "USER"{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
-#### Attributes of the `accessControlList` Object[​](/reference/api/catalog/user-defined-function#attributes-of-the-accesscontrollist-object "Direct link to attributes-of-the-accesscontrollist-object")
-[users](/reference/api/catalog/user-defined-function#attributes-of-objects-in-the-users-and-roles-arrays) Array of Object
+#### Attributes of the `accessControlList` Object​
+users Array of Object
 Enterprise only. List of users with access to the user-defined function and the specific privileges each user has.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "737a038f-c6cd-4fd3-a77a-59f692727ba5", "permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/user-defined-function#attributes-of-objects-in-the-users-and-roles-arrays) Array of Object
+roles Array of Object
 Enterprise only. List of roles whose members have access to the user-defined function and the specific privileges each role has.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "0f2d94e0-bb5e-4c03-8c6f-62d379d10889", "permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-#### Attributes of the `owner` Object[​](/reference/api/catalog/user-defined-function#attributes-of-the-owner-object "Direct link to attributes-of-the-owner-object")
+#### Attributes of the `owner` Object​
 ownerId String (UUID)
 Unique identifier of the user-defined function's owner.
 Example: 4740ab48-39c6-434c-9086-8f6e52e65349
@@ -130,16 +131,16 @@ ownerType String
 Type of owner of the user-defined function.
 Enum: USER, ROLE
 Example: USER
-#### Attributes of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/user-defined-function#attributes-of-objects-in-the-users-and-roles-arrays "Direct link to attributes-of-objects-in-the-users-and-roles-arrays")
+#### Attributes of Objects in the `users` and `roles` Arrays​
 id String
 Enterprise only. Unique identifier of the user or role with access to the user-defined function.
 Example: 4740ab48-39c6-434c-9086-8f6e52e65349
 * * *
 permissions Array of String
-Enterprise only. List of privileges the user or role has on the user-defined function. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges#user-defined-function-udf-privileges).
+Enterprise only. List of privileges the user or role has on the user-defined function. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges).
 Enum: ALTER, EXECUTE, MANAGE_GRANTS, OWNERSHIP
 Example: ["ALTER","EXECUTE"]
-## Create a User-Defined Function[​](/reference/api/catalog/user-defined-function#create-a-user-defined-function "Direct link to Create a User-Defined Function")
+## Create a User-Defined Function​
 Create a new user-defined function.
 Method and URL
 
@@ -148,7 +149,7 @@ POST /api/v3/catalog
 
 ```
 
-### Parameters[​](/reference/api/catalog/user-defined-function#parameters "Direct link to Parameters")
+### Parameters​
 entityType Body String
 Type of the catalog object. For user-defined functions, the entityType is `function`.
 * * *
@@ -173,27 +174,27 @@ returnType Body String
 The [data type](/reference/sql/data-types) of each column that the user-defined function should return.
 Example: name VARCHAR, email VARCHAR, order_date DATE
 * * *
-[accessControlList](/reference/api/catalog/user-defined-function#parameters-of-the-accesscontrollist-object) Body Object Optional
+accessControlList Body Object Optional
 Enterprise only. Object used to specify which users and roles should have access to the user-defined function and the specific privileges each user or role should have. May include an array of users, an array of roles, or both. Omit if you do not want to configure function-specific access control privileges.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "737a038f-c6cd-4fd3-a77a-59f692727ba5","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "0f2d94e0-bb5e-4c03-8c6f-62d379d10889","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
-#### Parameters of the `accessControlList` Object[​](/reference/api/catalog/user-defined-function#parameters-of-the-accesscontrollist-object "Direct link to parameters-of-the-accesscontrollist-object")
-[users](/reference/api/catalog/user-defined-function#parameters-of-objects-in-the-users-and-roles-arrays) Body Array of Object Optional
+#### Parameters of the `accessControlList` Object​
+users Body Array of Object Optional
 Enterprise only. List of users who should have access to the user-defined function and the specific privileges each user should have.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "737a038f-c6cd-4fd3-a77a-59f692727ba5","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/user-defined-function#parameters-of-objects-in-the-users-and-roles-arrays) Body Array of Object Optional
+roles Body Array of Object Optional
 Enterprise only. List of roles whose members should have access to the user-defined function and the specific privileges each role should have.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "0f2d94e0-bb5e-4c03-8c6f-62d379d10889","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-##### Parameters of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/user-defined-function#parameters-of-objects-in-the-users-and-roles-arrays "Direct link to parameters-of-objects-in-the-users-and-roles-arrays")
+##### Parameters of Objects in the `users` and `roles` Arrays​
 id Body String Optional
 Enterprise only. Unique identifier of the user or role who should have access to the user-defined function.
 Example: 737a038f-c6cd-4fd3-a77a-59f692727ba5
 * * *
 permissions Body Array of String Optional
-Enterprise only. List of privileges the user or role should have on the user-defined function. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges#user-defined-function-udf-privileges).
+Enterprise only. List of privileges the user or role should have on the user-defined function. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges).
 Enum: ALTER, EXECUTE, MANAGE_GRANTS, OWNERSHIP
 Example: ["ALTER","EXECUTE"]
-### Example[​](/reference/api/catalog/user-defined-function#example "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -282,7 +283,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/user-defined-function#response-status-codes "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -292,7 +293,7 @@ Response
 409 Conflict   
   
 
-## Retrieve a User-Defined Function by ID[​](/reference/api/catalog/user-defined-function#retrieve-a-user-defined-function-by-id "Direct link to Retrieve a User-Defined Function by ID")
+## Retrieve a User-Defined Function by ID​
 Retrieve a user-defined function and information about its contents by specifying the function's ID.
 Method and URL
 
@@ -301,15 +302,15 @@ GET /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/user-defined-function#parameters-1 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the user-defined function that you want to retrieve.
 Example: 1568aa06-4eac-48cf-bc30-2aa3053c2840
 * * *
 include Query String Optional
-Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
-### Example[​](/reference/api/catalog/user-defined-function#example-1 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -366,7 +367,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/user-defined-function#response-status-codes-1 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -376,7 +377,7 @@ Response
 404 Not Found   
   
 
-## Retrieve a User-Defined Function by Path[​](/reference/api/catalog/user-defined-function#retrieve-a-user-defined-function-by-path "Direct link to Retrieve a User-Defined Function by Path")
+## Retrieve a User-Defined Function by Path​
 Retrieve a user-defined function and information about its contents by specifying the function's path.
 Method and URL
 
@@ -385,15 +386,15 @@ GET /api/v3/catalog/by-path/{path}
 
 ```
 
-### Parameters[​](/reference/api/catalog/user-defined-function#parameters-2 "Direct link to Parameters")
+### Parameters​
 path Path String
 Path of the user-defined function within Dremio. The path consists of the source or space, followed by any folder and subfolders, followed by the name of the function itself. Separate each level of the path with a forward slash.
 Example: team_folder/test_subfolder/filter_domain_orderdates
 * * *
 include Query String Optional
-Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api#include-and-exclude-query-parameters).
+Include a non-default attribute in the response. The available value for the include query parameter is `permissions`. For more information, read [include and exclude Query Parameters](/reference/api).
 Example: ?include=permissions
-### Example[​](/reference/api/catalog/user-defined-function#example-2 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -450,7 +451,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/user-defined-function#response-status-codes-2 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 401 Unauthorized   
@@ -460,7 +461,7 @@ Response
 404 Not Found   
   
 
-## Update a User-Defined Function[​](/reference/api/catalog/user-defined-function#update-a-user-defined-function "Direct link to Update a User-Defined Function")
+## Update a User-Defined Function​
 Update the specified user-defined function.
 Method and URL
 
@@ -469,7 +470,7 @@ PUT /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/user-defined-function#parameters-3 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the user-defined function that you want to update.
 Example: 1568aa06-4eac-48cf-bc30-2aa3053c2840
@@ -506,27 +507,27 @@ returnType Body String
 The [data type](/reference/sql/data-types) of each column that the user-defined function should return.
 Example: name VARCHAR, email VARCHAR, phone_number VARCHAR, order_date DATE
 * * *
-[accessControlList](/reference/api/catalog/user-defined-function#parameters-of-the-accesscontrollist-object-1) Body String Optional
+accessControlList Body String Optional
 Enterprise only. Object used to specify which users and roles should have access to the user-defined function and the specific privileges each user or role should have. If you omit the accessControlList object in a PUT request, Dremio removes all existing user and role access settings from the function. To keep existing user and role access settings while making other updates, duplicate the existing accessControlList array in the PUT request.
 Example: {'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"users": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "737a038f-c6cd-4fd3-a77a-59f692727ba5","permissions": ["ALTER","EXECUTE", "MANAGE_GRANTS"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}],"roles": [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "0f2d94e0-bb5e-4c03-8c6f-62d379d10889","permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}
-#### Parameters of the `accessControlList` Object[​](/reference/api/catalog/user-defined-function#parameters-of-the-accesscontrollist-object-1 "Direct link to parameters-of-the-accesscontrollist-object-1")
-[users](/reference/api/catalog/user-defined-function#parameters-of-objects-in-the-users-and-roles-arrays-1) Body Array of Object Optional
+#### Parameters of the `accessControlList` Object​
+users Body Array of Object Optional
 Enterprise only. List of users who should have access to the user-defined function and the specific privileges each user should have. If you omit the users object in a PUT request, Dremio removes all existing user access settings from the function. To keep existing user access settings while making other updates, duplicate the existing users array in the PUT request.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "737a038f-c6cd-4fd3-a77a-59f692727ba5", "permissions": ["ALTER","EXECUTE", "MANAGE_GRANTS"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
 * * *
-[roles](/reference/api/catalog/user-defined-function#parameters-of-objects-in-the-users-and-roles-arrays-1) Body Array of Object Optional
+roles Body Array of Object Optional
 Enterprise only. List of roles whose members should have access to the user-defined function and the specific privileges each role should have. If you omit the roles object in a PUT request, Dremio removes all existing role access settings from the function. To keep existing role access settings while making other updates, duplicate the existing roles array in the PUT request.
 Example: [{'{'}'{'{'}'{'}'})'{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'})"id": "0f2d94e0-bb5e-4c03-8c6f-62d379d10889", "permissions": ["ALTER","EXECUTE"]{'{'}'{'{'}'{'}'})'{'{'}'{'}'}'{'}'}'{'{'}'{'}'}'{'}'}]
-##### Parameters of Objects in the `users` and `roles` Arrays[​](/reference/api/catalog/user-defined-function#parameters-of-objects-in-the-users-and-roles-arrays-1 "Direct link to parameters-of-objects-in-the-users-and-roles-arrays-1")
+##### Parameters of Objects in the `users` and `roles` Arrays​
 id Body String Optional
 Enterprise only. Unique identifier of the user or role who should have access to the user-defined function.
 Example: 737a038f-c6cd-4fd3-a77a-59f692727ba5
 * * *
 permissions Body Array of String Optional
-Enterprise only. List of privileges the user or role should have on the user-defined function. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges#user-defined-function-udf-privileges).
+Enterprise only. List of privileges the user or role should have on the user-defined function. For more information, read [User-Defined Function (UDF) Privileges](/security/rbac/privileges).
 Enum: ALTER, EXECUTE, MANAGE_GRANTS, OWNERSHIP
 Example: ["ALTER","EXECUTE", "MANAGE_GRANTS"]
-### Example[​](/reference/api/catalog/user-defined-function#example-3 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -619,7 +620,7 @@ Response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/user-defined-function#response-status-codes-3 "Direct link to Response Status Codes")
+### Response Status Codes​
 200 OK   
   
 400 Bad Request   
@@ -631,7 +632,7 @@ Response
 404 Not Found   
   
 
-## Delete a User-Defined Function[​](/reference/api/catalog/user-defined-function#delete-a-user-defined-function "Direct link to Delete a User-Defined Function")
+## Delete a User-Defined Function​
 Delete the specified user-defined function.
 Method and URL
 
@@ -640,11 +641,11 @@ DELETE /api/v3/catalog/{id}
 
 ```
 
-### Parameters[​](/reference/api/catalog/user-defined-function#parameters-4 "Direct link to Parameters")
+### Parameters​
 id Path String (UUID)
 Unique identifier of the user-defined function that you want to delete.
 Example: 1568aa06-4eac-48cf-bc30-2aa3053c2840
-### Example[​](/reference/api/catalog/user-defined-function#example-4 "Direct link to Example")
+### Example​
 Request
 
 ```
@@ -661,7 +662,7 @@ No response
 
 ```
 
-### Response Status Codes[​](/reference/api/catalog/user-defined-function#response-status-codes-4 "Direct link to Response Status Codes")
+### Response Status Codes​
 204 No Content   
   
 
@@ -679,13 +680,13 @@ No response
 
 Was this page helpful?
 [Previous Table](/reference/api/catalog/table)[Next View](/reference/api/catalog/view)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Table](/reference/api/catalog/table)[Next View](/reference/api/catalog/view)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fapi%2Fcatalog%2Fuser-defined-function%2F&_biz_t=1777950556465&_biz_i=User-Defined%20Function%20%7C%20Dremio%20Documentation&_biz_n=456&rnd=96755&cdn_o=a&_biz_z=1777950556465)
+!

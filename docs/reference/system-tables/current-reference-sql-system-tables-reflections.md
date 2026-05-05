@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/reflections
+slug: /reference/sql/system-tables/reflections
 title: "SYS.REFLECTIONS | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64372.477661333
@@ -23,7 +24,7 @@ FROM sys.reflections
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/reflections#example-output "Direct link to Example Output")  
+## Example Output​  
 | reflection_id  | reflection_name  | type  | created_at  | updated_at  | status  | dataset_id  | dataset_name  | dataset_type  | sort_columns  | partition_columns  | distribution_columns  | dimensions  | measures  | display_columns  | external_Reflection  | num_failures  | last_failure_message  | last_failure_stack  | arrow_cache  | refresh_status  | acceleration_status  | record_count  | current_footprint_bytes  | total_footprint_bytes  | last_refresh_duration_millis  | last_refresh_from_table  | refresh_method  | available_until  | considered_count  | matched_count  | accelerated_count  | reflection_mode  | last_refresh_decision  | last_refresh_finished  |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 76b42fc7-7f81-451a-a24c-646cdd99cd52  | Raw Reflection  | RAW  | 2023-02-22 19:56:04  | 2023-02-22 19:56:04  | FAILED  | 78097c46-bdef-42cd-8265-89cb763368ce  | Regions  | VIRTUAL_DATASET  |   |   |   |   |   | "pickup_datetime, passenger_count, trip_distance_mi, fare_amount, tip_amount, total_amount"  |   | 3  |   |   | FALSE  | GIVEN_UP  | NONE  | -1  | 0  | 0  | -1  | 2024-03-18 20:42:07.175  | FULL  | 1970-01-01 0:00:00  | 0  | 0  | 0  | Manual  | No changes were detected in dependencies since the last refresh. The reflection will not be updated. Dependencies:  
@@ -36,7 +37,7 @@ No existing refresh, doing an initial full refresh.  | 2025-12-03 16:22:42.079  
 Anchor dataset Samples."samples.dremio.com"."SF weather 2018-2019" has been updated from snapshot 4149401083380936712 to snapshot 1587124389305949441  | 2025-12-02 11:43:18.660  |  
 | 85278d59-5daf-4583-809c-1164766ee425  | Raw Reflection  | RAW  | 2023-07-15 0:35:28  | 2023-07-15 0:35:28  | FAILED  | 031256b0-f935-41df-af67-0a8b85c02965  | "Samples.""samples.dremio.com"".""SF weather 2018-2019.csv"""  | PHYSICAL_DATASET_SOURCE_FILE  |   |   |   |   |   | "A, B, C, D, E, F, G, H, I, J, K, L"  |   | 3  |   |   | FALSE  | GIVEN_UP  | NONE  | -1  | 0  | 0  | -1  | 1970-01-01 00:00:00.000  | FULL  | 1970-01-01 0:00:00  | 0  | 0  | 0  | Manual  | Full Refresh.  
 No existing refresh, doing an initial full refresh.  | 2025-12-03 16:23:01.093  |  
-## Columns[​](/reference/sql/system-tables/reflections#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | accelerated_count  | integer  | Number of jobs accelerated by the Reflection.  |  
@@ -75,13 +76,13 @@ No existing refresh, doing an initial full refresh.  | 2025-12-03 16:23:01.093  
 | last_refresh_finished  | timestamp  | UTC timestamp of when the last Reflection refresh job attempt finished, regardless of the job state.  |  
 Was this page helpful?
 [Previous SYS.REFLECTION_DEPENDENCIES](/reference/sql/system-tables/reflection-dependencies)[Next SYS.RESULTS_CACHE](/reference/sql/system-tables/results-cache)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS.REFLECTION_DEPENDENCIES](/reference/sql/system-tables/reflection-dependencies)[Next SYS.RESULTS_CACHE](/reference/sql/system-tables/results-cache)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsystem-tables%2Freflections%2F&_biz_t=1777950693748&_biz_i=SYS.REFLECTIONS%20%7C%20Dremio%20Documentation&_biz_n=726&rnd=947686&cdn_o=a&_biz_z=1777950693748)
+!

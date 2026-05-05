@@ -2,7 +2,7 @@
   "label": "Audit Logging",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Audit Logging"
+    "type": "doc",
+    "id": "security/audit-logging/current-security-auditing"
   }
 }

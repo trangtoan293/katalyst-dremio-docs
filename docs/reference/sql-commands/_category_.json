@@ -2,7 +2,7 @@
   "label": "Sql Commands",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Sql Commands"
+    "type": "doc",
+    "id": "reference/sql-commands/current-reference-sql-commands"
   }
 }

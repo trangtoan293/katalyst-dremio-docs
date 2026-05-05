@@ -1,17 +1,18 @@
 ---
 url: /reference/sql/commands/drop-space
+slug: /reference/sql/commands/drop-space
 title: "DROP SPACE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64251.565641333
 ---
 
-[Skip to main content](/reference/sql/commands/drop-space#__docusaurus_skipToContent_fallback)
+Skip to main content
 [![Dremio Documentation Home Page](https://docs.dremio.com/images/Dremio-wordmark-light.svg) **Documentation**](/)
-[](/dremio-cloud)
-[](/)
+
+
 [current [26.x]](/reference/sql/commands/drop-space)
   * [current [26.x]](/reference/sql/commands/drop-space)
-  * [25.x](/25.x)
+  * 25.x
 
 
 [Start for Free](https://www.dremio.com/get-started/)
@@ -51,7 +52,7 @@ Search`⌘``K`
         * [CREATE VIEW](/reference/sql/commands/create-view)
         * [DESCRIBE PIPE](/reference/sql/commands/describe-pipe)
         * [DROP PIPE](/reference/sql/commands/drop-pipe)
-        * [DROP SPACE](/reference/sql/commands/drop-space)
+        * DROP SPACE
         * [DROP VIEW](/reference/sql/commands/drop-view)
         * [Privileges](/reference/sql/commands/rbac)
         * [Reflections](/reference/sql/commands/acceleration)
@@ -97,11 +98,11 @@ DROP SPACE <space_name>
 
 ```
 
-## Parameters[​](/reference/sql/commands/drop-space#parameters "Direct link to Parameters")
+## Parameters​
 `space_name` String
 The name of the space that you are deleting.
 * * *
-## Examples[​](/reference/sql/commands/drop-space#examples "Direct link to Examples")
+## Examples​
 Drop a space
 
 ```
@@ -111,17 +112,17 @@ DROP SPACE my_space
 
 Was this page helpful?
 [Previous DROP PIPE](/reference/sql/commands/drop-pipe)[Next DROP VIEW](/reference/sql/commands/drop-view)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous DROP PIPE](/reference/sql/commands/drop-pipe)[Next DROP VIEW](/reference/sql/commands/drop-view)
-  * [Parameters](/reference/sql/commands/drop-space#parameters)
-  * [Examples](/reference/sql/commands/drop-space#examples)
+  * Parameters
+  * Examples
 
 
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)

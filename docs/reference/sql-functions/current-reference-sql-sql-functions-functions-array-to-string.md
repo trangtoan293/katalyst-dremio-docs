@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/ARRAY_TO_STRING
+slug: /reference/sql/sql-functions/functions/ARRAY_TO_STRING
 title: "ARRAY_TO_STRING | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64286.915207125
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Conversion](/reference/sql/sql-functions), [Semi-Structured Data](/reference/sql/sql-functions)
 # ARRAY_TO_STRING
 Returns a string of the values from the input array, with the values separated by the specified delimiter string.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### ARRAY_TO_STRING(_arr_ LIST, _delimiter_ VARCHAR) → VARCHAR[​](/reference/sql/sql-functions#array_to_stringarr-list-delimiter-varchar--varchar "Direct link to array_to_stringarr-list-delimiter-varchar--varchar")
+## Syntax
+### ARRAY_TO_STRING(_arr_ LIST, _delimiter_ VARCHAR) → VARCHAR[​](/reference/sql/sql-functions)
   * arr: The source array.
   * delimiter: The string to place between each element in the array.
 
@@ -42,13 +43,13 @@ SELECT ARRAY_TO_STRING(array_col, ',')
 
 Was this page helpful?
 [Previous ARRAY_SUM](/reference/sql/sql-functions)[Next ASCII](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous ARRAY_SUM](/reference/sql/sql-functions)[Next ASCII](/reference/sql/sql-functions)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fsql-functions%2Ffunctions%2FARRAY_TO_STRING%2F&_biz_t=1777950606487&_biz_i=Dremio%20Documentation&_biz_n=554&rnd=356691&cdn_o=a&_biz_z=1777950606487)
+!

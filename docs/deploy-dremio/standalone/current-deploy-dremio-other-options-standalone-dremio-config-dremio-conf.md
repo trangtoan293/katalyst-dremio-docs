@@ -1,5 +1,6 @@
 ---
 url: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf
+slug: /deploy-dremio/other-options/standalone/dremio-config/dremio-conf
 title: "Dremio Services Configuration | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64054.726329208
@@ -8,8 +9,8 @@ crawled_at: 64054.726329208
   * [Dremio Enterprise Home](/)
   * [Deploy Dremio](/deploy-dremio)
   * [Other Options](/deploy-dremio/other-options)
-  * [Dremio with Your Infrastructure](/deploy-dremio/other-options/standalone)
-  * [Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)
+  * Dremio with Your Infrastructure
+  * Cluster Configuration
   * Services
 
 Version: current [26.x]
@@ -256,9 +257,9 @@ registration.publish-host: ""
 
 ```
 
-## Configuring Basic Services[​](/deploy-dremio/other-options/standalone/dremio-config#configuring-basic-services "Direct link to Configuring Basic Services")
+## Configuring Basic Services​
 The Dremio `services` property determines whether the node is enabled with the main coordinator, secondary coordinator, or executor role. Each node in the Dremio cluster must be configure accordingly.
-### Dremio Coordinators[​](/deploy-dremio/other-options/standalone/dremio-config#dremio-coordinators "Direct link to Dremio Coordinators")
+### Dremio Coordinators​
 To configure a coordinator node with the main coordinator role, use the following Dremio services configuration.
 Coordinator configuration 
 
@@ -271,7 +272,7 @@ services: {
 
 ```
 
-Configure multiple secondary coordinator nodes to improve concurrency and distribute query planning for ODBC and JDBC client requests to your deployment. To distribute queries across your deployment, Dremio recommends that you also [configure ZooKeeper](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config).
+Configure multiple secondary coordinator nodes to improve concurrency and distribute query planning for ODBC and JDBC client requests to your deployment. To distribute queries across your deployment, Dremio recommends that you also configure ZooKeeper.
 Secondary coordinator nodes run ODBC and JDBC queries only from clients that connect to the secondary coordinator either directly or with a load balancer.
 Run metadata commands only on the main coordinator, not on secondary coordinators, unless you are working with Iceberg tables or [unlimited splits](/help-support/advanced-topics/metadata-caching) are enabled on the cluster.
 To enable this feature for YARN-based and standalone deployments, add the following Dremio services configuration to the `dremio.conf` file on each secondary coordinator node in your cluster and restart your deployment:
@@ -289,7 +290,7 @@ services: {
 
 When using authentication providers (LDAP, Microsoft Entra ID, OAuth), you must copy both the authentication configuration file (e.g., `ad.json`, `azuread.json`, `oauth.json`) and add the authentication settings to `dremio.conf` on every secondary coordinator. A common mistake is copying the authentication file but forgetting to add the `coordinator.web.auth.type` and `coordinator.web.auth.config` properties to the `dremio.conf` file.
 Dremio recommends a maximum of five secondary coordinator nodes for a deployment. Dremio deployments on Azure ARM do not support secondary coordinator nodes.
-### Executors[​](/deploy-dremio/other-options/standalone/dremio-config#executors "Direct link to Executors")
+### Executors​
 To configure an executor node, use the following Dremio services configuration.
 Executor configuration
 
@@ -302,11 +303,11 @@ services: {
 
 ```
 
-## Additional Configuration[​](/deploy-dremio/other-options/standalone/dremio-config#additional-configuration "Direct link to Additional Configuration")
+## Additional Configuration​
 Dremio provides configuration to customize the behavior of services attributes.  
 | Feature  | Description  | Example  |  
 | --- | --- | --- |  
-| [ Metadata Store ](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/metadata-store-config)  | Manages and optimizes metadata to enable fast query performance and efficient data access. Dremio track datasets, table schemas, indexes, and query execution details through its metadata store.   | 
+|  Metadata Store   | Manages and optimizes metadata to enable fast query performance and efficient data access. Dremio track datasets, table schemas, indexes, and query execution details through its metadata store.   | 
 ```
 paths: {  
   local: ${DREMIO_HOME}"/data"   
@@ -314,7 +315,7 @@ paths: {
 
 ```
  |  
-| [ Distributed Store ](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/dist-store-config)  |  Responsible for storing metadata, query profiles, and shared resources across the cluster.   | 
+|  Distributed Store   |  Responsible for storing metadata, query profiles, and shared resources across the cluster.   | 
 ```
 paths: {  
   dist: "dremioS3:///<bucket_name>/"   
@@ -322,7 +323,7 @@ paths: {
 
 ```
  |  
-| [ Cloud Cache ](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/cloud-cache-config)  |  A caching layer that improves query performance by storing frequently accessed data on executors, thus minimizing the need to repeatedly fetch data from remote object storage like cloud buckets.   | 
+|  Cloud Cache   |  A caching layer that improves query performance by storing frequently accessed data on executors, thus minimizing the need to repeatedly fetch data from remote object storage like cloud buckets.   | 
 ```
 services: {  
   executor.cache: {  
@@ -333,7 +334,7 @@ services: {
 
 ```
  |  
-| [ Wire Encryption](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config)  |  Configures Transport Layer Security (TLS) between Dremio nodes and with clients in several optional configurations to fit your security requirements.   | 
+|  Wire Encryption  |  Configures Transport Layer Security (TLS) between Dremio nodes and with clients in several optional configurations to fit your security requirements.   | 
 ```
 services: {  
   coordinator.web.ssl: {  
@@ -344,13 +345,13 @@ services: {
 
 ```
  |  
-| [ Apache Zookeeper](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/zookeeper-config)  |  ZooKeeper provides coordination and service discovery in distributed deployments, especially in multi-coordinator, multi-executor setups.   | 
+|  Apache Zookeeper  |  ZooKeeper provides coordination and service discovery in distributed deployments, especially in multi-coordinator, multi-executor setups.   | 
 ```
 zookeeper: "masterA:2181"  
 
 ```
  |  
-| [ High Availability ](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/high-availability-config)  |  Dremio achieves high availability in a standalone environment by configuring one active and multiple backup coordinator nodes as standbys.   | 
+|  High Availability   |  Dremio achieves high availability in a standalone environment by configuring one active and multiple backup coordinator nodes as standbys.   | 
 ```
 services: {  
   coordinator: {  
@@ -362,14 +363,14 @@ services: {
 ```
  |  
 Was this page helpful?
-[Previous Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)[Next Metadata Storage](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/metadata-store-config)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+Previous Cluster ConfigurationNext Metadata Storage
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
-[Previous Cluster Configuration](/deploy-dremio/other-options/standalone/dremio-config)[Next Metadata Storage](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/metadata-store-config)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fdeploy-dremio%2Fother-options%2Fstandalone%2Fdremio-config%2Fdremio-conf%2F&_biz_t=1777950374331&_biz_i=Dremio%20Services%20Configuration%20%7C%20Dremio%20Documentation&_biz_n=115&rnd=135593&cdn_o=a&_biz_z=1777950374332)
+Previous Cluster ConfigurationNext Metadata Storage
+!

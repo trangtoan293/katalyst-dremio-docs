@@ -1,5 +1,6 @@
 ---
 url: /data-sources/open-catalog
+slug: /data-sources/open-catalog
 title: "Open Catalog | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64048.38709575
@@ -20,43 +21,43 @@ Dremio's built-in lakehouse catalog is built on [automates data maintenance oper
 
 
 This page provides instructions for configuring the Open Catalog. If you would like to connect to Open Catalogs deployed in other Dremio instances, see [Open Catalog (External)](/data-sources/lakehouse-catalogs/open-catalog-external).
-## Prerequisites[​](/data-sources/open-catalog#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
 Before you configure Open Catalog, make sure you do the following:
-  * Configure access to your storage provider, as described in [Configure Storage Access](/data-sources/open-catalog#configure-storage-access).
-  * Configure the settings of your storage provider in Dremio's Helm chart, as described in [Configuring Storage for the Open Catalog](/deploy-dremio/configuring-kubernetes#configuring-storage-for-the-open-catalog).
+  * Configure access to your storage provider, as described in Configure Storage Access.
+  * Configure the settings of your storage provider in Dremio's Helm chart, as described in [Configuring Storage for the Open Catalog](/deploy-dremio/configuring-kubernetes).
 
 
 These configurations are required to enable support for vended credentials and to allow access to the table metadata necessary for Iceberg table operations.
-## Configure the Open Catalog[​](/data-sources/open-catalog#configure-the-open-catalog "Direct link to Configure the Open Catalog")
+## Configure the Open Catalog​
 To configure Open Catalog:
   * When creating the first Open Catalog, select **Add an Open Catalog**. Add a **Name** for the catalog. This name is immutable after the catalog has been created.
   * When configuring an existing Open Catalog, right-click on your catalog and select **Settings** from the dropdown.
 
 
-### Storage[​](/data-sources/open-catalog#storage "Direct link to Storage")
+### Storage​
   1. The **Default storage URI** field displays the default storage location you configured in [Dremio's Helm chart](/deploy-dremio/configuring-kubernetes).
   2. Use the **Storage access** field to configure your preferred authentication method. Open Catalog supports two types of credentials for authentication:
      * **Use credential vending (Recommended)** : When credential vending is enabled, the catalog issues temporary, scoped credentials to the query engine on demand, reducing the risk of unauthorized data access compared to long-lived master credentials.
      * **Use master storage credentials** : The credentials authenticate access to all storage URIs within this catalog. These credentials ensure all resources are accessible through a single authentication method. This should be used if STS is unavailable or the vended credentials mechanism is disabled. Select the object storage provider that hosts the location specified in the **Default storage URI** field:
-     * **AWS** – Select **AWS** for Amazon S3 and S3-compatible storage. You can refer to the Dremio documentation for connecting to [Amazon S3](/data-sources/object/s3#configuring-amazon-s3-as-a-source), which is also applicable here. When selecting to assume an IAM role, ensure that the [role policy grants access](/data-sources/open-catalog#configure-storage-access) to the bucket or folder specified in the **Default storage URI** field.
-     * **Azure** – Select **Azure** for Azure Blob Storage. You can refer to the Dremio documentation for connecting to [Azure Storage](/data-sources/object/azure-storage#configuring-azure-storage-as-a-source), which is also applicable here.
-     * **Google Cloud Storage** – Select **Google** for Google Cloud Storage (GCS). You can refer to the Dremio documentation for connecting to [GCS](/data-sources/object/gcs#configuring-gcs-as-a-source), which is also applicable here.
+     * **AWS** – Select **AWS** for Amazon S3 and S3-compatible storage. You can refer to the Dremio documentation for connecting to [Amazon S3](/data-sources/object/s3), which is also applicable here. When selecting to assume an IAM role, ensure that the role policy grants access to the bucket or folder specified in the **Default storage URI** field.
+     * **Azure** – Select **Azure** for Azure Blob Storage. You can refer to the Dremio documentation for connecting to [Azure Storage](/data-sources/object/azure-storage), which is also applicable here.
+     * **Google Cloud Storage** – Select **Google** for Google Cloud Storage (GCS). You can refer to the Dremio documentation for connecting to [GCS](/data-sources/object/gcs), which is also applicable here.
   3. Enter any required storage connection properties in the **Connection Properties** field. Refer to the Advanced Options section for your storage provider (Amazon S3, Azure, or GCS) for available properties.
 
 
-### Advanced Options[​](/data-sources/open-catalog#advanced-options "Direct link to Advanced Options")
+### Advanced Options​
 To set advanced options:
   1. Under **Cache Options** , review the following table and edit the options to meet your needs.  
 | Cache Option  | Description  |  
 | --- | --- |  
-| **Enable local caching when possible**  | Selected by default. Along with asynchronous access for cloud caching, local caching can improve query performance. See [Cloud Columnar Cache](/what-is-dremio/architecture#cloud-columnar-cache) for details.  |  
+| **Enable local caching when possible**  | Selected by default. Along with asynchronous access for cloud caching, local caching can improve query performance. See [Cloud Columnar Cache](/what-is-dremio/architecture) for details.  |  
 | **Max percent of total available cache space to use when possible**  | Specifies the disk quota, as a percentage, that a source can use on any single executor node only when local caching is enabled. The default is 100 percent of the total disk space available on the mount point provided for caching. You can either manually enter a percentage in the value field or use the arrows to the far right to adjust the percentage.  |  
   2. Under **Table maintenance** , manage settings for [automated table maintenance operations](/developer/data-formats/apache-iceberg/table-maintenance-optimization/automated-maintenance):
      * **Enable auto optimization** : Compacts small files into larger files. Clusters data if Iceberg clustering keys are set on the table.
      * **Enable table cleanup** : Deletes expired snapshots and orphaned metadata files.
 
 
-### Reflection Refresh[​](/data-sources/open-catalog#reflection-refresh "Direct link to Reflection Refresh")
+### Reflection Refresh​
 You can set the policy that controls how often Reflections are scheduled to be refreshed automatically, as well as the time limit after which Reflections expire and are removed. See the following options:  
 | Option  | Description  |  
 | --- | --- |  
@@ -65,14 +66,14 @@ You can set the policy that controls how often Reflections are scheduled to be r
 | **Set refresh schedule**  | Specify the daily or weekly schedule.  |  
 | **Never expire**  | Select to prevent Reflections from expiring. The default is to automatically expire after the time limit below.  |  
 | **Expire after**  | The time limit after which Reflections expire and are removed from Dremio, specified in hours, days, or weeks. This option is ignored if **Never expire** is selected.  |  
-### Metadata[​](/data-sources/open-catalog#metadata "Direct link to Metadata")
+### Metadata​
 Specifying metadata options is handled with the following settings:
-#### Dataset Handling[​](/data-sources/open-catalog#dataset-handling "Direct link to Dataset Handling")
+#### Dataset Handling​
   * Remove dataset definitions if the underlying data is unavailable (default).
   * If this box is _not_ checked and the underlying files under a folder are removed or the folder/source is not accessible, Dremio does not remove the dataset definitions. This option is useful in cases when files are temporarily deleted and put back in place with new sets of files.
 
 
-#### Metadata Refresh[​](/data-sources/open-catalog#metadata-refresh "Direct link to Metadata Refresh")
+#### Metadata Refresh​
 These are the optional **Metadata Refresh** parameters:
   * **Dataset Discovery** : The refresh interval for fetching top-level source object names, such as databases and tables. Set the time interval using this parameter.  
 | Parameter  | Description  |  
@@ -86,7 +87,7 @@ These are the optional **Metadata Refresh** parameters:
 | **Expire after**  | You can choose to set the expiry time of dataset details in minutes, hours, days, or weeks. The default expiry time of dataset details is 3 hours.  |  
 
 
-### Privileges[​](/data-sources/open-catalog#privileges "Direct link to Privileges")
+### Privileges​
 You have the option to grant privileges to specific users or roles. See [Access Control](/security/rbac) for additional information about privileges.
 To grant access to a user or role:
   1. For **Privileges** , enter the user name or role name that you want to grant access to and click the **Add to Privileges** button. The added user or role is displayed in the **USERS/ROLES** table.
@@ -94,7 +95,7 @@ To grant access to a user or role:
   3. Click **Save** after setting the configuration.
 
 
-## Configure Storage Access[​](/data-sources/open-catalog#configure-storage-access "Direct link to Configure Storage Access")
+## Configure Storage Access​
 To configure access to storage, select your storage provider below and follow the steps:
   * Amazon S3
   * S3-compatible
@@ -102,7 +103,7 @@ To configure access to storage, select your storage provider below and follow th
   * Google Cloud Storage
 
 
-### S3 and STS Access via IAM Role (Preferred)[​](/data-sources/open-catalog#s3-and-sts-access-via-iam-role-preferred "Direct link to S3 and STS Access via IAM Role \(Preferred\)")
+### S3 and STS Access via IAM Role (Preferred)​")
   1. Create an Identity and Access Management (IAM) user or use an existing IAM user for Open Catalog.
   2. Create an IAM policy that grants access to your S3 location. For example:
 Example of a policy
@@ -179,7 +180,7 @@ Replace the following values with the ones obtained in the previous steps:
        * ``dremio_catalog_external_id`` - The external ID that was created in the third step.
 
 
-### S3 and STS Access via Access Key[​](/data-sources/open-catalog#s3-and-sts-access-via-access-key "Direct link to S3 and STS Access via Access Key")
+### S3 and STS Access via Access Key​
   1. In the Dremio console, select **Use master storage credentials** when adding Open Catalog.
   2. The access keys must have permissions to access the bucket and the STS server.
   3. Create a Kubernetes secret named `catalog-server-s3-storage-creds` to access the configured location. Here is an example for S3 using an access key and secret key:
@@ -198,8 +199,8 @@ kubectl create secret generic catalog-server-s3-storage-creds \
 
 
   1. The access keys must have permissions to access the bucket.
-    1. To use [vended credentials](/data-sources/open-catalog#storage), the access key must also have access to an STS server.
-    2. If you cannot leverage an STS server, when setting up the catalog for the first time in the Dremio console, you must select [master storage credentials](/data-sources/open-catalog#storage).
+    1. To use vended credentials, the access key must also have access to an STS server.
+    2. If you cannot leverage an STS server, when setting up the catalog for the first time in the Dremio console, you must select master storage credentials.
   2. Create a Kubernetes secret named `catalog-server-s3-storage-creds` to access the configured location. Here is an example for S3 using an access key and secret key:
 Run kubectl to create the Kubernetes secret
 
@@ -267,7 +268,7 @@ kubectl create secret generic catalog-server-gcs-storage-creds --from-file=<file
 
 
 
-## Update an Open Catalog Source[​](/data-sources/open-catalog#update-an-open-catalog-source "Direct link to Update an Open Catalog Source")
+## Update an Open Catalog Source​
 To update an Open Catalog source:
   1. On the Datasets page, in the panel on the left, find the name of the Open Catalog source you want to edit.
   2. Right-click the source name and select **Settings** from the list of actions. Alternatively, click the source name and then the ![The Settings icon](https://docs.dremio.com/images/settings-icon.png) at the top right corner of the page.
@@ -275,16 +276,16 @@ To update an Open Catalog source:
   4. Click **Save**. Once you have configured Open Catalog, the Catalog REST APIs are accessible via `http://{DREMIO_ADDRESS}:8181/api/catalog`, where `DREMIO_ADDRESS` is the IP address of your Dremio cluster.
 
 
-## Multiple Storage Locations[​](/data-sources/open-catalog#multiple-storage-locations "Direct link to Multiple Storage Locations")
+## Multiple Storage Locations​
 Open Catalog supports the simultaneous use of multiple storage locations for catalog objects. You can create folders in a single Open Catalog instance, each mapped to its own storage location. The path to each folder's storage **Uniform Resource Identifier (URI)** is configured during creation of the catalog folder. Each folder can:
   * Inherit its URI from its parent folder or the catalog itself.
   * Use a custom URI that points to another storage location.
 
 
 The storage URI for any folder is the root path to the folder, starting with the last explicit URI in the path.
-### Storage URI Example[​](/data-sources/open-catalog#storage-uri-example "Direct link to Storage URI Example")
+### Storage URI Example​
 The diagram below depicts an Open Catalog with two namespaces `NS1` and `NS2`, where their underlying folders, `NS3` and `NS5`, utilize custom storage URIs:
-![](https://docs.dremio.com/images/open-catalog-storage-uris.png)
+!
 In this example:
   1. TBL1 is stored at ``Custom_URI_1`/NS3/TBL1`
   2. TBL2 is stored at ``Custom_URI_1`/NS3/TBL2`
@@ -292,9 +293,9 @@ In this example:
   4. TBL4 is stored at ``Base_Storage_URI`/NS2/TBL4`
 
 
-### Configure Storage[​](/data-sources/open-catalog#configure-storage "Direct link to Configure Storage")
-A folder's storage URI must be a child path of one of the catalog-level storage URIs defined in the Helm chart. The `catalog.storage.location` parameter in the Helm chart should list only the common base URIs that will serve as roots for folder storage locations. See [Configuring Storage for the Open Catalog](/deploy-dremio/configuring-kubernetes#configuring-storage-for-the-open-catalog) for additional information.
-### Configure Storage URIs[​](/data-sources/open-catalog#configure-storage-uris "Direct link to Configure Storage URIs")
+### Configure Storage​
+A folder's storage URI must be a child path of one of the catalog-level storage URIs defined in the Helm chart. The `catalog.storage.location` parameter in the Helm chart should list only the common base URIs that will serve as roots for folder storage locations. See [Configuring Storage for the Open Catalog](/deploy-dremio/configuring-kubernetes) for additional information.
+### Configure Storage URIs​
   1. Select Open Catalog, then click **New Folder** in the top-right corner. Provide a name for the folder and its storage URI:
      * Select **Use inherited storage URI** to inherit the URI of the parent folder or top-level catalog, appended with this folder name.
      * Select **Use custom storage URI** to select a custom URI from the list contained in `catalog.storage.location`.
@@ -303,13 +304,13 @@ A folder's storage URI must be a child path of one of the catalog-level storage 
 
 Was this page helpful?
 [Previous Manage Sources](/data-sources)[Next Connect to Open Catalog from Apache Spark](/data-sources/open-catalog/connecting-from-spark)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Manage Sources](/data-sources)[Next Connect to Open Catalog from Apache Spark](/data-sources/open-catalog/connecting-from-spark)
 ![Company Logo](https://cdn.cookielaw.org/logos/static/ot_company_logo.png)

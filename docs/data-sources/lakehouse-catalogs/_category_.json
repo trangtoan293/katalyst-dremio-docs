@@ -2,7 +2,7 @@
   "label": "Lakehouse Catalogs",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Dremio documentation - Lakehouse Catalogs"
+    "type": "doc",
+    "id": "data-sources/lakehouse-catalogs/current-data-sources-lakehouse-catalogs"
   }
 }

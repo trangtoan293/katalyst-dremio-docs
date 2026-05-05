@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/system-tables/timezone-names
+slug: /reference/sql/system-tables/timezone-names
 title: "SYS.TIMEZONE_NAMES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64378.264318791
@@ -23,7 +24,7 @@ FROM sys.timezone_names
 
 ```
 
-## Example Output[​](/reference/sql/system-tables/timezone-names#example-output "Direct link to Example Output")
+## Example Output​
 This is a random sampling of the `sys.timezone_names` table. The table contains a compelete list of timezones.  
 | timezone_name  | tz_offset  | offset_daylight_savings  | is_daylight_savings  |  
 | --- | --- | --- | --- |  
@@ -39,7 +40,7 @@ This is a random sampling of the `sys.timezone_names` table. The table contains 
 | US/Pacific  | -08:00  | -07:00  | true  |  
 | UTC  | +00:00  | +00:00  | false  |  
 | Universal  | +00:00  | +00:00  | false  |  
-## Columns[​](/reference/sql/system-tables/timezone-names#columns "Direct link to Columns")  
+## Columns​  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
 | timezone_name  | varchar  | The name of the timezone.  |  
@@ -48,12 +49,12 @@ This is a random sampling of the `sys.timezone_names` table. The table contains 
 | is_daylight_savings  | boolean  |  `true` if the timezone honors daylight savings; `false` otherwise.  |  
 Was this page helpful?
 [Previous SYS."TABLES"](/reference/sql/system-tables/tables)[Next SYS.USER_DEFINED_FUNCTIONS](/reference/sql/system-tables/user-defined-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SYS."TABLES"](/reference/sql/system-tables/tables)[Next SYS.USER_DEFINED_FUNCTIONS](/reference/sql/system-tables/user-defined-functions)

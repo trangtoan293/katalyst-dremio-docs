@@ -1,5 +1,6 @@
 ---
 url: /client-applications/microstrategy
+slug: /client-applications/microstrategy
 title: "Microstrategy Workstation | Dremio Enterprise Documentation"
 depth: 2
 crawled_at: 64033.113623
@@ -12,22 +13,22 @@ crawled_at: 64033.113623
 Version: current [26.x]
 On this page
 # Microstrategy Workstation
-## Supported Versions[​](/client-applications/microstrategy#supported-versions "Direct link to Supported Versions")
+## Supported Versions​
 Microstrategy Workstation 2021 Update 9 and later.
-## Supported Authentication Methods[​](/client-applications/microstrategy#supported-authentication-methods "Direct link to Supported Authentication Methods")
+## Supported Authentication Methods​
   * Use a Dremio username and password.
   * Use a Dremio username and a personal access token (PAT) that you obtained from Dremio.
 
 
-## Prerequisites[​](/client-applications/microstrategy#prerequisites "Direct link to Prerequisites")
+## Prerequisites​
   * Download the [Arrow Flight SQL JDBC driver](https://www.dremio.com/drivers/jdbc/) and move the `.jar` file to one of these locations:
     * On Windows: `C:\Program Files (x86)\Common Files\MicroStrategy\JDBC`
     * On Linux: `/opt/mstr/MicroStrategy/install/JDBC`
-  * If you want to authenticate your connection to Dremio by using a PAT, see [Creating a PAT](/security/authentication/personal-access-tokens#creating-a-pat) for the steps to obtain one.
+  * If you want to authenticate your connection to Dremio by using a PAT, see [Creating a PAT](/security/authentication/personal-access-tokens) for the steps to obtain one.
   * In Microstrategy Workstation, select **Help** &gt; **Enable New Data Import Experience**.
 
 
-## Creating an Environment-level Integration with Dremio[​](/client-applications/microstrategy#creating-an-environment-level-integration-with-dremio "Direct link to Creating an Environment-level Integration with Dremio")
+## Creating an Environment-level Integration with Dremio​
 You can create an integration with Dremio that can be used in more than one dossier.
   1. In Microstrategy Workstation, connect to the environment that you plan to use.
   2. Under **Administration** on the left side of the screen, click the + sign to the right of **Data Sources**.
@@ -47,8 +48,8 @@ You can create an integration with Dremio that can be used in more than one doss
       5. If you clicked **Add New Database Login** in the previous step, specify the name to associate with the credentials, and then follow either of these steps:
          * Specify the username and password of the Dremio account to use.
          * Specify the username of the Dremio account to use and a PAT, which you can paste into the **Password** field.
-    3. (Optional) In the **Advanced** section, set additional properties for Microstrategy Workstation to use when connecting to Dremio. See [Optional Advanced JDBC Driver Properties](/client-applications/drivers/arrow-flight-sql-jdbc-driver#optional-advanced-jdbc-driver-properties) for a list of the properties that you can use.
-    4. (Optional) In the **Security** section, toggle on the **Use TLS Encryption** switch if the Dremio cluster is configured to encrypt communication between it and JDBC clients. For more information, see the configuration of client TLS for [Dremio on Kubernetes](/deploy-dremio/configuring-kubernetes#transport-level-security) or [Dremio standalone clusters](/deploy-dremio/other-options/standalone/dremio-config/dremio-conf/wire-encryption-config#arrow-flight-and-arrow-flight-sql-jdbc-and-odbc-enterprise).
+    3. (Optional) In the **Advanced** section, set additional properties for Microstrategy Workstation to use when connecting to Dremio. See [Optional Advanced JDBC Driver Properties](/client-applications/drivers/arrow-flight-sql-jdbc-driver) for a list of the properties that you can use.
+    4. (Optional) In the **Security** section, toggle on the **Use TLS Encryption** switch if the Dremio cluster is configured to encrypt communication between it and JDBC clients. For more information, see the configuration of client TLS for [Dremio on Kubernetes](/deploy-dremio/configuring-kubernetes) or Dremio standalone clusters.
     5. (Optional) In the **Properties** section, specify non-default values for various properties of the connection.
     6. Click **Save**.
   6. In the Add Data Source - Dremio dialog, follow these steps:
@@ -59,13 +60,13 @@ You can create an integration with Dremio that can be used in more than one doss
 You can now select this database connection when you create dossiers.
 Was this page helpful?
 [Previous Microsoft Power BI](/client-applications/microsoft-power-bi)[Next Preset](/client-applications/preset)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Microsoft Power BI](/client-applications/microsoft-power-bi)[Next Preset](/client-applications/preset)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fthoughtspot%2F&_biz_t=1777950352662&_biz_i=ThoughtSpot%20%7C%20Dremio%20Documentation&_biz_n=66&rnd=122446&cdn_o=a&_biz_z=1777950352694)![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fclient-applications%2Fmicrostrategy%2F&_biz_t=1777950352693&_biz_i=Microstrategy%20Workstation%20%7C%20Dremio%20Documentation&_biz_n=67&rnd=717914&cdn_o=a&_biz_z=1777950352694)
+!!

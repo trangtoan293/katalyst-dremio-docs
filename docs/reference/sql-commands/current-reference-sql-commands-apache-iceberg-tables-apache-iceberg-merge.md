@@ -1,17 +1,18 @@
 ---
 url: /reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge
+slug: /reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge
 title: "MERGE | Dremio Enterprise Documentation"
 depth: 4
 crawled_at: 64798.26531625
 ---
 
-[Skip to main content](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#__docusaurus_skipToContent_fallback)
+Skip to main content
 [![Dremio Documentation Home Page](https://docs.dremio.com/images/Dremio-wordmark-light.svg) **Documentation**](/)
-[](/dremio-cloud)
-[](/)
+
+
 [current [26.x]](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
   * [current [26.x]](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
-  * [25.x](/25.x/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
+  * 25.x
 
 
 [Start for Free](https://www.dremio.com/get-started/)
@@ -36,14 +37,14 @@ Search`⌘``K`
       * [SQL Commands](/reference/sql/commands)
         * [SQL Commands for Apache Iceberg Tables](/reference/sql/commands/apache-iceberg-tables)
           * [COPY INTO](/reference/sql/commands/apache-iceberg-tables/copy-into-table)
-          * [DELETE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-delete)
-          * [DROP](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-drop)
+          * DELETE
+          * DROP
           * [INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)
-          * [MERGE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge)
+          * MERGE
           * [OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table)
           * [ROLLBACK](/reference/sql/commands/apache-iceberg-tables/rollback-table)
           * [TRUNCATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-truncate)
-          * [UPDATE](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-update)
+          * UPDATE
           * [VACUUM TABLE](/reference/sql/commands/apache-iceberg-tables/vacuum-table)
         * [SQL Commands for Nessie](/reference/sql/commands/nessie)
         * [SELECT](/reference/sql/commands)
@@ -61,7 +62,7 @@ Search`⌘``K`
         * [CREATE VIEW](/reference/sql/commands/create-view)
         * [DESCRIBE PIPE](/reference/sql/commands/describe-pipe)
         * [DROP PIPE](/reference/sql/commands/drop-pipe)
-        * [DROP SPACE](/reference/sql/commands/drop-space)
+        * DROP SPACE
         * [DROP VIEW](/reference/sql/commands/drop-view)
         * [Privileges](/reference/sql/commands/rbac)
         * [Reflections](/reference/sql/commands/acceleration)
@@ -120,7 +121,7 @@ MERGE INTO <target_table_name>
 ```
 
 `UPDATE SET *` and `INSERT *` were introduced in version 23.0.
-## Parameters[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#parameters "Direct link to Parameters")
+## Parameters​
 `target_table_name` String
 The path and name of the table into which you want to merge data.
 * * *
@@ -163,8 +164,8 @@ Equivalent to INSERT (column_name1 [, ...]) VALUES (source.col1 [, source.col2 .
 INSERT [ (`column_name` [, ...]) ] VALUES (expression [, ...]) String
 Specifies the values to insert into the columns of a new row of the target table when a source row matching the search condition does not match a row in the target table.
 Make sure the columns adhere to `NOT NULL` constraints specified in the table definition, or else the `MERGE` command fails with an error message.
-## Examples[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#examples "Direct link to Examples")
-### Example 1[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#example-1 "Direct link to Example 1")
+## Examples​
+### Example 1​
 Step 1: Create and load the tables.
 
 ```
@@ -196,7 +197,7 @@ The resulting content of the target table:
 | 1  | Value 2  |  
 | 2  | Original value  |  
 | 3  | Value 1  |  
-### Example 2[​](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#example-2 "Direct link to Example 2")
+### Example 2​
 Step 1: Create and load the tables.
 
 ```
@@ -230,19 +231,19 @@ The resulting content of the target table:
 | 3  | Value A  | Value B  |  
 Was this page helpful?
 [Previous INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)[Next OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous INSERT](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-insert)[Next OPTIMIZE TABLE](/reference/sql/commands/apache-iceberg-tables/optimize-table)
-  * [Parameters](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#parameters)
-  * [Examples](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#examples)
-    * [Example 1](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#example-1)
-    * [Example 2](/reference/sql/commands/apache-iceberg-tables/apache-iceberg-merge#example-2)
+  * Parameters
+  * Examples
+    * Example 1
+    * Example 2
 
 
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Freference%2Fsql%2Fcommands%2Fapache-iceberg-tables%2Fapache-iceberg-merge%2F&_biz_t=1777951118520&_biz_i=MERGE%20%7C%20Dremio%20Documentation&_biz_n=1563&rnd=203287&cdn_o=a&_biz_z=1777951118521)
+!

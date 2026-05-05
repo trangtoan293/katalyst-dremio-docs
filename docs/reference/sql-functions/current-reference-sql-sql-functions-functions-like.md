@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/LIKE
+slug: /reference/sql/sql-functions/functions/LIKE
 title: "LIKE | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64324.555891583
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions)
 # LIKE
 Tests whether an expression matches one or more patterns. Comparisons are case-sensitive.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-###  _expression_ [ NOT ] LIKE _pattern_ → boolean[​](/reference/sql/sql-functions#expression--not--like-pattern--boolean "Direct link to expression--not--like-pattern--boolean")
+## Syntax
+###  _expression_ [ NOT ] LIKE _pattern_ → boolean[​](/reference/sql/sql-functions)
   * expression: The expression to compare.
   * NOT (optional): A keyword that inverts the return value.
   * pattern: The pattern that is compared to the expression.
@@ -41,7 +42,7 @@ SELECT 'pancake' NOT LIKE '%cake'
 
 ```
 
-###  _expression_ [ NOT ] LIKE _pattern_ ESCAPE _escape_character_ → boolean[​](/reference/sql/sql-functions#expression--not--like-pattern-escape-escape_character--boolean "Direct link to expression--not--like-pattern-escape-escape_character--boolean")
+###  _expression_ [ NOT ] LIKE _pattern_ ESCAPE _escape_character_ → boolean[​](/reference/sql/sql-functions)
   * expression: The expression to compare.
   * NOT (optional): A keyword that inverts the return value.
   * pattern: The pattern that is compared to the expression.
@@ -65,7 +66,7 @@ SELECT '%SalesData%/Users/Jane' NOT LIKE '/%SalesData/%//Users/%' ESCAPE '/'
 
 ```
 
-###  _expression_ [ NOT ] LIKE {'{'})'{'{'})'{'}'}) ANY | SOME | ALL {'{'})'{'}'}'{'}'} ( [ _pattern_ [, ...] ] ) → boolean[​](/reference/sql/sql-functions#expression--not--like--any--some--all----pattern------boolean "Direct link to expression--not--like--any--some--all----pattern------boolean")
+###  _expression_ [ NOT ] LIKE {'{'})'{'{'})'{'}'}) ANY | SOME | ALL {'{'})'{'}'}'{'}'} ( [ _pattern_ [, ...] ] ) → boolean[​](/reference/sql/sql-functions)
   * expression: A `STRING` expression.
   * NOT (optional): A keyword that inverts the return value.
   * ANY or SOME or ALL (optional): Keywords indicating whether the expression must match at least one pattern or must match all patterns.
@@ -123,12 +124,12 @@ SELECT 'Spark' NOT LIKE ANY ('_park', '_mart')
 
 Was this page helpful?
 [Previous LEVENSHTEIN](/reference/sql/sql-functions)[Next LISTAGG](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous LEVENSHTEIN](/reference/sql/sql-functions)[Next LISTAGG](/reference/sql/sql-functions)

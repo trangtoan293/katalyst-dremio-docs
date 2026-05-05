@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/MD5
+slug: /reference/sql/sql-functions/functions/MD5
 title: "MD5 | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64337.273684875
@@ -17,8 +18,8 @@ On this page
 **Categories** : [Cryptography](/reference/sql/sql-functions)
 # MD5
 Computes the MD5 hash value of a string.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### MD5(_expression_ varchar) → varchar[​](/reference/sql/sql-functions#md5expression-varchar--varchar "Direct link to md5expression-varchar--varchar")
+## Syntax
+### MD5(_expression_ varchar) → varchar[​](/reference/sql/sql-functions)
   * expression: The string to hash.
 
 
@@ -33,12 +34,12 @@ SELECT MD5('Dremio')
 
 Was this page helpful?
 [Previous MAXDIR](/reference/sql/sql-functions)[Next MEDIAN](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous MAXDIR](/reference/sql/sql-functions)[Next MEDIAN](/reference/sql/sql-functions)

@@ -1,5 +1,6 @@
 ---
 url: /admin/monitoring/exporting/aws-azure-storage
+slug: /admin/monitoring/exporting/aws-azure-storage
 title: "Amazon S3 and Azure Blob Storage | Dremio Documentation"
 depth: 4
 crawled_at: 64770.956860625
@@ -15,7 +16,7 @@ Version: current [26.x]
 On this page
 # Integrating with Amazon S3 and Azure Blob Storage
 You can use 
-## Retrieving from Dremio Cluster[​](/admin/monitoring/exporting/aws-azure-storage/#retrieving-from-dremio-cluster "Direct link to Retrieving from Dremio Cluster")
+## Retrieving from Dremio Cluster[​](/admin/monitoring/exporting/aws-azure-storage/)
 To upload logs to Amazon S3 or Azure Blob Storage, complete these steps:
   1. Install 
   2. Create a configuration file in the ``FLUENT_BIT_HOME`/etc/fluent-bit` directory such as `dremio_fluent-bit.conf`, using the following example to append the Input sections:
@@ -126,7 +127,7 @@ fluent-bit -c dremio_fluent-bit.conf
 
 ```
 
-## Retrieving from Kubernetes[​](/admin/monitoring/exporting/aws-azure-storage/#retrieving-from-kubernetes "Direct link to Retrieving from Kubernetes")
+## Retrieving from Kubernetes[​](/admin/monitoring/exporting/aws-azure-storage/)
 When Dremio is deployed on a Kubernetes cluster, all logs are written to the container's console simultaneously.
 To upload these logs to Amazon S3 or Azure Blob Storage, complete these steps:
   1. Install 
@@ -176,13 +177,13 @@ helm upgrade --install fluent-bit fluent/fluent-bit -f dremio-fluentbit.values.y
 
 Was this page helpful?
 [Previous Exporting Logs](/admin/monitoring/exporting)[Next Datadog](/admin/monitoring/exporting/datadog)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous Exporting Logs](/admin/monitoring/exporting)[Next Datadog](/admin/monitoring/exporting/datadog)
-![](https://cdn.bizible.com/ipv?_biz_r=&_biz_h=800054037&_biz_u=6cd305d62a4c402de07902b3246ffbbc&_biz_l=https%3A%2F%2Fdocs.dremio.com%2Fcurrent%2Fadmin%2Fmonitoring%2Fexporting%2Faws-azure-storage%2F&_biz_t=1777951091550&_biz_i=Amazon%20S3%20and%20Azure%20Blob%20Storage%20%7C%20Dremio%20Documentation&_biz_n=1504&rnd=378080&cdn_o=a&_biz_z=1777951091550)
+!

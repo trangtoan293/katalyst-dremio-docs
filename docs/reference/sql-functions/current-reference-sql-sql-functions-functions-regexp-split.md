@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/sql-functions/functions/REGEXP_SPLIT
+slug: /reference/sql/sql-functions/functions/REGEXP_SPLIT
 title: "REGEXP_SPLIT | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64345.065375625
@@ -17,8 +18,8 @@ On this page
 **Categories** : [String](/reference/sql/sql-functions), [Regular Expressions](/reference/sql/sql-functions)
 # REGEXP_SPLIT
 Splits an input string by using a regular expression according to a keyword and an integer value.
-## Syntax[​](/reference/sql/sql-functions#syntax "Direct link to Syntax")
-### REGEXP_SPLIT(_input_ string, _regex_ string, _keyword_ string, _integer_ integer) → array[​](/reference/sql/sql-functions#regexp_splitinput-string-regex-string-keyword-string-integer-integer--array "Direct link to regexp_splitinput-string-regex-string-keyword-string-integer-integer--array")
+## Syntax
+### REGEXP_SPLIT(_input_ string, _regex_ string, _keyword_ string, _integer_ integer) → array[​](/reference/sql/sql-functions)
   * input: The string that you want to split by means of the regular expression.
   * regex: The regular expression to use to split the string.
   * keyword: The keyword that determines where or how many times to use the regular expression to split the string. Can be FIRST, LAST, INDEX, or ALL.
@@ -82,7 +83,7 @@ SELECT REGEXP_SPLIT('REGULAR AIR', 'R', 'ALL', 4) AS R_LESS_SHIPMENT_TYPE
 
 ```
 
-## Usage Notes[​](/reference/sql/sql-functions#usage-notes "Direct link to Usage Notes")
+## Usage Notes[​](/reference/sql/sql-functions)
 You can choose from these keywords: 
 
 FIRST
@@ -98,12 +99,12 @@ ALL
     Specifies to split the string as many times as indicated by the integer value. All subsequent matches of the regular expression are ignored.
 Was this page helpful?
 [Previous REGEXP_REPLACE](/reference/sql/sql-functions)[Next REPEAT](/reference/sql/sql-functions)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous REGEXP_REPLACE](/reference/sql/sql-functions)[Next REPEAT](/reference/sql/sql-functions)

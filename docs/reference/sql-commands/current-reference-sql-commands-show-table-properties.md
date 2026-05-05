@@ -1,5 +1,6 @@
 ---
 url: /reference/sql/commands/show-table-properties
+slug: /reference/sql/commands/show-table-properties
 title: "SHOW TBLPROPERTIES | Dremio Enterprise Documentation"
 depth: 3
 crawled_at: 64256.905307208
@@ -16,17 +17,17 @@ On this page
 # SHOW TBLPROPERTIES
 Displays the table properties that are set for an Apache Iceberg table.
 See [Properties of Apache Iceberg Tables](/developer/data-formats/apache-iceberg/table-properties) for a list of the supported properties.
-## Syntax[​](/reference/sql/commands/show-table-properties#syntax "Direct link to Syntax")
+## Syntax​
 
 ```
 SHOW TBLPROPERTIES <table_name>  
 
 ```
 
-## Parameter[​](/reference/sql/commands/show-table-properties#parameter "Direct link to Parameter")
+## Parameter​
 `table_name` String
 The path and name of the Iceberg table with the properties that you want to display.
-## Output[​](/reference/sql/commands/show-table-properties#output "Direct link to Output")
+## Output​
 The output displays a table composed of these two columns:  
 | Column  | Data Type  | Description  |  
 | --- | --- | --- |  
@@ -34,12 +35,12 @@ The output displays a table composed of these two columns:
 | table_property_value  | CHARACTER VARYING  | The value of the property  |  
 Was this page helpful?
 [Previous SHOW CREATE VIEW](/reference/sql/commands/show-create-view)[Next Sources](/reference/sql/commands/sources)
-[Dremio Editions](/editions)
-[Dremio Cloud Classic](/dremio-cloud)
+[Dremio Editions](https://www.dremio.com/editions)
+[Dremio Cloud Classic](https://www.dremio.com/dremio-cloud)
 [Dremio University](https://university.dremio.com)
-[Shared Responsibility Models](/responsibility)
+[Shared Responsibility Models](https://www.dremio.com/responsibility)
 [Dremio Community](https://community.dremio.com)
 [Support Portal](https://support.dremio.com)
-[Data Privacy](/data-privacy)[LLM? Read llms.txt](/llms.txt)
+[Data Privacy](https://www.dremio.com/data-privacy)[LLM? Read llms.txt](https://www.dremio.com/llms.txt)
 Copyright © 2026 Dremio, Inc.
 [Previous SHOW CREATE VIEW](/reference/sql/commands/show-create-view)[Next Sources](/reference/sql/commands/sources)

@@ -8,16 +8,20 @@ import {SearchEntries, type SearchEntry} from '@site/src/data/searchIndex';
 
 import styles from './search.module.css';
 
-const EmptySearchSuggestions = SearchEntries.filter((entry) =>
+const EnterpriseSearchEntries = SearchEntries.filter(
+  (entry) => entry.section !== 'Dremio Cloud' && entry.section !== 'Sonar',
+);
+
+const EmptySearchSuggestions = EnterpriseSearchEntries.filter((entry) =>
   [
     '/get-started',
     '/data-sources',
     '/client-applications',
-    '/data-products/general/current-data-products',
-    '/administration',
-    '/reference/sql-functions/current-reference-sql-sql-functions-all-functions',
+    '/data-products',
+    '/admin',
+    '/reference/sql/sql-functions',
     '/security',
-    '/reference/api/current-reference-api-catalog',
+    '/reference/api/catalog',
   ].includes(entry.href),
 );
 
@@ -63,7 +67,7 @@ export default function SearchPage(): ReactNode {
       return EmptySearchSuggestions;
     }
 
-    return SearchEntries.map((entry) => ({
+    return EnterpriseSearchEntries.map((entry) => ({
       entry,
       score: getSearchScore(entry, query),
     }))
@@ -94,7 +98,7 @@ export default function SearchPage(): ReactNode {
               autoFocus
             />
             <datalist id="search-suggestions">
-              {SearchEntries.slice(0, 80).map((entry) => (
+              {EnterpriseSearchEntries.slice(0, 80).map((entry) => (
                 <option key={entry.href} value={entry.title} />
               ))}
             </datalist>
